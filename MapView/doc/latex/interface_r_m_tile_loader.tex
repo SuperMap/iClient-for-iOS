@@ -1,0 +1,222 @@
+\hypertarget{interface_r_m_tile_loader}{\section{R\-M\-Tile\-Loader类 参考}
+\label{interface_r_m_tile_loader}\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-Tile\-Loader.\-h$>$}
+
+类 R\-M\-Tile\-Loader 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_r_m_tile_loader}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_loader_a8e4e2f252f22b31c93405217973bb23e}{clear\-Loaded\-Bounds}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_loader_af26f3ef09cbb40b42966ee4d9d51b70f}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_tile_loader_ae73f660c88ceccefe692b7a357553fcf}{init}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_tile_loader_aeca249f0baab8e2602fa2a7f32eb9cf7}{init\-With\-Content\-:}
+\begin{DoxyCompactList}\small\item\em Designated initialiser. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_tile_loader_a82306905799fd3d0b727929da3f86cc5}{move\-By\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_loader_a814fd7676d653b3afde5430053b03308}{reload}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_loader_a9aafa2e0654e75cd584165b506f40e15}{reset}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_r_m_tile_loader_af6718f00229bc4e407d81e249dc38d9d}{screen\-Is\-Loaded}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_loader_aca7724c7960c2c015f7f47f49deaaa55}{set\-Suppress\-Loading\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_loader_a228550af511b4824f829ced899c27188}{update\-Loaded\-Images}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_loader_a53a37459285c76a2ad068c7e14767b98}{zoom\-By\-Factor\-:near\-:}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} $\ast$ \hyperlink{interface_r_m_tile_loader_a34f9cbfb19977aaab0af4ae2411d78f5}{content}
+\item 
+\hyperlink{struct_r_m_tile_rect}{R\-M\-Tile\-Rect} \hyperlink{interface_r_m_tile_loader_af70c80db2e48f8bbab5c316634dbd23c}{loaded\-Tiles}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+C\-G\-Rect \hyperlink{interface_r_m_tile_loader_a09cbc2e2aaac4bcd928499fd1ca6e78d}{loaded\-Bounds}
+\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_tile_loader_a6544e37d349c348bbcb60af607880852}{loaded\-Zoom}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_tile_loader_a91d1084745308ffb237b900c2a4aca77}{suppress\-Loading}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_tile_loader_a8e4e2f252f22b31c93405217973bb23e}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!clear\-Loaded\-Bounds@{clear\-Loaded\-Bounds}}
+\index{clear\-Loaded\-Bounds@{clear\-Loaded\-Bounds}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{clear\-Loaded\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) clear\-Loaded\-Bounds 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_loader_a8e4e2f252f22b31c93405217973bb23e}
+
+
+参考自 init\-With\-Content\-:, reload, R\-M\-Map\-Contents\-::set\-Frame\-: , 以及 R\-M\-Map\-Contents\-::zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:.
+
+\hypertarget{interface_r_m_tile_loader_af26f3ef09cbb40b42966ee4d9d51b70f}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_loader_af26f3ef09cbb40b42966ee4d9d51b70f}
+\hypertarget{interface_r_m_tile_loader_ae73f660c88ceccefe692b7a357553fcf}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!init@{init}}
+\index{init@{init}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_loader_ae73f660c88ceccefe692b7a357553fcf}
+
+
+参考自 init\-With\-Content\-:.
+
+\hypertarget{interface_r_m_tile_loader_aeca249f0baab8e2602fa2a7f32eb9cf7}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!init\-With\-Content\-:@{init\-With\-Content\-:}}
+\index{init\-With\-Content\-:@{init\-With\-Content\-:}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{init\-With\-Content\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Content\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Map\-Contents} $\ast$)}]{contents}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_loader_aeca249f0baab8e2602fa2a7f32eb9cf7}
+
+
+Designated initialiser. 
+
+\hypertarget{interface_r_m_tile_loader_a82306905799fd3d0b727929da3f86cc5}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!move\-By\-:@{move\-By\-:}}
+\index{move\-By\-:@{move\-By\-:}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{move\-By\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-By\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Size)}]{delta}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_loader_a82306905799fd3d0b727929da3f86cc5}
+
+
+参考自 R\-M\-Map\-Contents\-::move\-By\-:.
+
+\hypertarget{interface_r_m_tile_loader_a814fd7676d653b3afde5430053b03308}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!reload@{reload}}
+\index{reload@{reload}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{reload}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) reload 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_loader_a814fd7676d653b3afde5430053b03308}
+
+
+参考自 R\-M\-Map\-Contents\-::set\-Center\-Projected\-Point\-: , 以及 R\-M\-Map\-Contents\-::set\-Tile\-Source\-:.
+
+\hypertarget{interface_r_m_tile_loader_a9aafa2e0654e75cd584165b506f40e15}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!reset@{reset}}
+\index{reset@{reset}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) reset 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_loader_a9aafa2e0654e75cd584165b506f40e15}
+
+
+参考自 R\-M\-Map\-Contents\-::set\-Tile\-Source\-:.
+
+\hypertarget{interface_r_m_tile_loader_af6718f00229bc4e407d81e249dc38d9d}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!screen\-Is\-Loaded@{screen\-Is\-Loaded}}
+\index{screen\-Is\-Loaded@{screen\-Is\-Loaded}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{screen\-Is\-Loaded}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) screen\-Is\-Loaded 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_loader_af6718f00229bc4e407d81e249dc38d9d}
+
+
+参考自 update\-Loaded\-Images.
+
+\hypertarget{interface_r_m_tile_loader_aca7724c7960c2c015f7f47f49deaaa55}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!set\-Suppress\-Loading\-:@{set\-Suppress\-Loading\-:}}
+\index{set\-Suppress\-Loading\-:@{set\-Suppress\-Loading\-:}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{set\-Suppress\-Loading\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Suppress\-Loading\-: 
+\begin{DoxyParamCaption}
+\item[{(B\-O\-O\-L)}]{suppress}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_loader_aca7724c7960c2c015f7f47f49deaaa55}
+
+
+参考自 R\-M\-Map\-Contents\-::init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-: , 以及 R\-M\-Map\-Contents\-::init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_tile_loader_a228550af511b4824f829ced899c27188}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!update\-Loaded\-Images@{update\-Loaded\-Images}}
+\index{update\-Loaded\-Images@{update\-Loaded\-Images}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{update\-Loaded\-Images}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) update\-Loaded\-Images 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_loader_a228550af511b4824f829ced899c27188}
+
+
+参考自 move\-By\-:, reload, R\-M\-Map\-Contents\-::set\-Frame\-:, set\-Suppress\-Loading\-:, zoom\-By\-Factor\-:near\-: , 以及 R\-M\-Map\-Contents\-::zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:.
+
+\hypertarget{interface_r_m_tile_loader_a53a37459285c76a2ad068c7e14767b98}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}}
+\index{zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{zoom\-By\-Factor\-:near\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-By\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{center}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_loader_a53a37459285c76a2ad068c7e14767b98}
+
+
+参考自 R\-M\-Map\-Contents\-::set\-Meters\-Per\-Pixel\-:, R\-M\-Map\-Contents\-::zoom\-By\-Factor\-:near\-: , 以及 R\-M\-Map\-Contents\-::zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:.
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_tile_loader_a34f9cbfb19977aaab0af4ae2411d78f5}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!content@{content}}
+\index{content@{content}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{content}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Map\-Contents}$\ast$) content\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_tile_loader_a34f9cbfb19977aaab0af4ae2411d78f5}
+
+
+参考自 init\-With\-Content\-:, screen\-Is\-Loaded , 以及 update\-Loaded\-Images.
+
+\hypertarget{interface_r_m_tile_loader_af70c80db2e48f8bbab5c316634dbd23c}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!loaded\-Tiles@{loaded\-Tiles}}
+\index{loaded\-Tiles@{loaded\-Tiles}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{loaded\-Tiles}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Rect}) loaded\-Tiles\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_tile_loader_af70c80db2e48f8bbab5c316634dbd23c}
+
+
+参考自 init\-With\-Content\-:, reset , 以及 update\-Loaded\-Images.
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_tile_loader_a09cbc2e2aaac4bcd928499fd1ca6e78d}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!loaded\-Bounds@{loaded\-Bounds}}
+\index{loaded\-Bounds@{loaded\-Bounds}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{loaded\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-G\-Rect) loaded\-Bounds\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_r_m_tile_loader_a09cbc2e2aaac4bcd928499fd1ca6e78d}
+
+
+参考自 clear\-Loaded\-Bounds, move\-By\-:, screen\-Is\-Loaded, update\-Loaded\-Images , 以及 zoom\-By\-Factor\-:near\-:.
+
+\hypertarget{interface_r_m_tile_loader_a6544e37d349c348bbcb60af607880852}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!loaded\-Zoom@{loaded\-Zoom}}
+\index{loaded\-Zoom@{loaded\-Zoom}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{loaded\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) loaded\-Zoom\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_r_m_tile_loader_a6544e37d349c348bbcb60af607880852}
+
+
+参考自 screen\-Is\-Loaded , 以及 update\-Loaded\-Images.
+
+\hypertarget{interface_r_m_tile_loader_a91d1084745308ffb237b900c2a4aca77}{\index{R\-M\-Tile\-Loader@{R\-M\-Tile\-Loader}!suppress\-Loading@{suppress\-Loading}}
+\index{suppress\-Loading@{suppress\-Loading}!RMTileLoader@{R\-M\-Tile\-Loader}}
+\subsubsection[{suppress\-Loading}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) suppress\-Loading\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_tile_loader_a91d1084745308ffb237b900c2a4aca77}
+
+
+参考自 init\-With\-Content\-:, set\-Suppress\-Loading\-: , 以及 update\-Loaded\-Images.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_tile_loader_8h}{R\-M\-Tile\-Loader.\-h}\item 
+Map/\hyperlink{_r_m_tile_loader_8m}{R\-M\-Tile\-Loader.\-m}\end{DoxyCompactItemize}

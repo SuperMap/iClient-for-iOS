@@ -1,0 +1,86 @@
+\hypertarget{_r_m_map_contents_8m}{\section{Map/\-R\-M\-Map\-Contents.m 文件参考}
+\label{_r_m_map_contents_8m}\index{Map/\-R\-M\-Map\-Contents.\-m@{Map/\-R\-M\-Map\-Contents.\-m}}
+}
+{\ttfamily \#import \char`\"{}R\-M\-Global\-Constants.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Map\-Contents.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Map\-View.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Foundation.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Projection.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Mercator\-To\-Screen\-Projection.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Mercator\-To\-Tile\-Projection.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Tile\-Source.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Tile\-Loader.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Tile\-Image\-Set.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Open\-Street\-Map\-Source.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Core\-Animation\-Renderer.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Cached\-Tile\-Source.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Layer\-Collection.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Marker\-Manager.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Marker.\-h\char`\"{}}\\*
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+category \hyperlink{category_r_m_map_contents_07_private_methods_08}{R\-M\-Map\-Contents(\-Private\-Methods)}
+\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_r_m_map_contents_8m_ac7b0708b9cabd65ca03c823889571960}{ki\-Phone\-Milimeteres\-Per\-Pixel}~.\-1543
+\item 
+\#define \hyperlink{_r_m_map_contents_8m_a8636a5852ee309ef3a53489db2c2a815}{k\-Zoom\-Animation\-Animation\-Time}~0.\-1f
+\item 
+\#define \hyperlink{_r_m_map_contents_8m_ae06184a0665aae55cc12f3c8bd59a74e}{k\-Zoom\-Animation\-Step\-Time}~0.\-03f
+\item 
+\#define \hyperlink{_r_m_map_contents_8m_a543c0903086f0ca9058fcdad9975d0ff}{k\-Zoom\-Rect\-Pixel\-Buffer}~50
+\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+static B\-O\-O\-L \hyperlink{_r_m_map_contents_8m_a0a98245d2fbabdc63b7373a900151efa}{\-\_\-perform\-Expensive\-Operations} = Y\-E\-S
+\item 
+B\-O\-O\-L \hyperlink{_r_m_map_contents_8m_abce5b5d865b01d9855f38530e517fd14}{delegate\-Has\-Region\-Update}
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\hypertarget{_r_m_map_contents_8m_ac7b0708b9cabd65ca03c823889571960}{\index{R\-M\-Map\-Contents.\-m@{R\-M\-Map\-Contents.\-m}!ki\-Phone\-Milimeteres\-Per\-Pixel@{ki\-Phone\-Milimeteres\-Per\-Pixel}}
+\index{ki\-Phone\-Milimeteres\-Per\-Pixel@{ki\-Phone\-Milimeteres\-Per\-Pixel}!RMMapContents.m@{R\-M\-Map\-Contents.\-m}}
+\subsubsection[{ki\-Phone\-Milimeteres\-Per\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}\#define ki\-Phone\-Milimeteres\-Per\-Pixel~.\-1543}}\label{_r_m_map_contents_8m_ac7b0708b9cabd65ca03c823889571960}
+\hypertarget{_r_m_map_contents_8m_a8636a5852ee309ef3a53489db2c2a815}{\index{R\-M\-Map\-Contents.\-m@{R\-M\-Map\-Contents.\-m}!k\-Zoom\-Animation\-Animation\-Time@{k\-Zoom\-Animation\-Animation\-Time}}
+\index{k\-Zoom\-Animation\-Animation\-Time@{k\-Zoom\-Animation\-Animation\-Time}!RMMapContents.m@{R\-M\-Map\-Contents.\-m}}
+\subsubsection[{k\-Zoom\-Animation\-Animation\-Time}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Zoom\-Animation\-Animation\-Time~0.\-1f}}\label{_r_m_map_contents_8m_a8636a5852ee309ef3a53489db2c2a815}
+
+
+参考自 R\-M\-Map\-Contents\-::zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:.
+
+\hypertarget{_r_m_map_contents_8m_ae06184a0665aae55cc12f3c8bd59a74e}{\index{R\-M\-Map\-Contents.\-m@{R\-M\-Map\-Contents.\-m}!k\-Zoom\-Animation\-Step\-Time@{k\-Zoom\-Animation\-Step\-Time}}
+\index{k\-Zoom\-Animation\-Step\-Time@{k\-Zoom\-Animation\-Step\-Time}!RMMapContents.m@{R\-M\-Map\-Contents.\-m}}
+\subsubsection[{k\-Zoom\-Animation\-Step\-Time}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Zoom\-Animation\-Step\-Time~0.\-03f}}\label{_r_m_map_contents_8m_ae06184a0665aae55cc12f3c8bd59a74e}
+
+
+参考自 R\-M\-Map\-Contents\-::zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:.
+
+\hypertarget{_r_m_map_contents_8m_a543c0903086f0ca9058fcdad9975d0ff}{\index{R\-M\-Map\-Contents.\-m@{R\-M\-Map\-Contents.\-m}!k\-Zoom\-Rect\-Pixel\-Buffer@{k\-Zoom\-Rect\-Pixel\-Buffer}}
+\index{k\-Zoom\-Rect\-Pixel\-Buffer@{k\-Zoom\-Rect\-Pixel\-Buffer}!RMMapContents.m@{R\-M\-Map\-Contents.\-m}}
+\subsubsection[{k\-Zoom\-Rect\-Pixel\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Zoom\-Rect\-Pixel\-Buffer~50}}\label{_r_m_map_contents_8m_a543c0903086f0ca9058fcdad9975d0ff}
+
+
+参考自 R\-M\-Map\-Contents\-::zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:.
+
+
+
+\subsection{变量说明}
+\hypertarget{_r_m_map_contents_8m_a0a98245d2fbabdc63b7373a900151efa}{\index{R\-M\-Map\-Contents.\-m@{R\-M\-Map\-Contents.\-m}!\-\_\-perform\-Expensive\-Operations@{\-\_\-perform\-Expensive\-Operations}}
+\index{\-\_\-perform\-Expensive\-Operations@{\-\_\-perform\-Expensive\-Operations}!RMMapContents.m@{R\-M\-Map\-Contents.\-m}}
+\subsubsection[{\-\_\-perform\-Expensive\-Operations}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-L \-\_\-perform\-Expensive\-Operations = Y\-E\-S\hspace{0.3cm}{\ttfamily [static]}}}\label{_r_m_map_contents_8m_a0a98245d2fbabdc63b7373a900151efa}
+
+
+参考自 R\-M\-Map\-Contents\-::perform\-Expensive\-Operations , 以及 R\-M\-Map\-Contents\-::set\-Perform\-Expensive\-Operations\-:.
+
+\hypertarget{_r_m_map_contents_8m_abce5b5d865b01d9855f38530e517fd14}{\index{R\-M\-Map\-Contents.\-m@{R\-M\-Map\-Contents.\-m}!delegate\-Has\-Region\-Update@{delegate\-Has\-Region\-Update}}
+\index{delegate\-Has\-Region\-Update@{delegate\-Has\-Region\-Update}!RMMapContents.m@{R\-M\-Map\-Contents.\-m}}
+\subsubsection[{delegate\-Has\-Region\-Update}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-L delegate\-Has\-Region\-Update}}\label{_r_m_map_contents_8m_abce5b5d865b01d9855f38530e517fd14}
+
+
+参考自 R\-M\-Map\-Contents\-::set\-Tiles\-Update\-Delegate\-: , 以及 R\-M\-Map\-Contents\-::tiles\-Updated\-Region\-:.
+

@@ -1,0 +1,169 @@
+\hypertarget{interface_r_m_tile_cache_source}{\section{R\-M\-Tile\-Cache\-Source类 参考}
+\label{interface_r_m_tile_cache_source}\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}}
+}
+
+
+brief Subclass of \hyperlink{interface_r_m_abstract_mercator_web_source}{R\-M\-Abstract\-Mercator\-Web\-Source} for access to a fully-\/seeded Tile\-Cache source.  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-Tile\-Cache\-Source.\-h$>$}
+
+类 R\-M\-Tile\-Cache\-Source 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.425076cm]{interface_r_m_tile_cache_source}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_r_m_tile_cache_source_a1991da8b9143df226620c9283792dab0}{init}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_tile_cache_source_a5f243f44edfd85f3a7d392e5167fef15}{init\-With\-T\-S\-Url\-:zoom\-Adj\-:file\-Type\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_source_adc0c3fa292e6dd1fc59534be0d9eea26}{long\-Attribution}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_source_a851d9a72047bd81351ec5dacb618c09f}{long\-Description}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_source_a700f4bcc6a9bbffb852d01eb425f8cfb}{short\-Attribution}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_source_a9d81b865c2a4ebb2757f2c1871fb6183}{short\-Name}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_source_a56bc01bcf515d76f547f84d79f9773e9}{tile\-U\-R\-L\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_source_a0fc37a76b0161717c4bf0de4a03d5fe0}{unique\-Tilecache\-Key}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_source_aaefb15155c82f992802db53a7f4c5ef2}{url\-For\-Tile\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_source_af79808cc8d2de870bcfe7ff7624fa4c2}{zeropad\-::}
+\end{DoxyCompactItemize}
+\subsection*{额外继承的成员函数}
+
+
+\subsection{详细描述}
+brief Subclass of \hyperlink{interface_r_m_abstract_mercator_web_source}{R\-M\-Abstract\-Mercator\-Web\-Source} for access to a fully-\/seeded Tile\-Cache source. 
+
+Tile\-Cache directory zoom levels do not necessarily correspond to the internal zoom levels of route-\/me. That is, route-\/me's default zoom level of 0 is comprised of 4 tiles (2x2), while a Tile\-Cache source could be constructed of some other power of 2, such as 64 tiles (8x8). When itializing a Tile\-Cache source with init\-With\-T\-S\-U\-R\-L\-:zoom\-Adj\-:file\-Type, zoom\-Adj must be equal to the power of 2 that corresponds to the number of tiles on one axis your Tile\-Cache directory. Therefore, given the previous example of 64 tiles from 8 tiles on each axis, zoom\-Adj = 3, as 2$^\wedge$3 = 8. 
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_tile_cache_source_a1991da8b9143df226620c9283792dab0}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!init@{init}}
+\index{init@{init}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_source_a1991da8b9143df226620c9283792dab0}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a88bc1ea00a789381d77ae50e0eaec732}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+
+
+参考自 init\-With\-T\-S\-Url\-:zoom\-Adj\-:file\-Type\-:.
+
+\hypertarget{interface_r_m_tile_cache_source_a5f243f44edfd85f3a7d392e5167fef15}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!init\-With\-T\-S\-Url\-:zoom\-Adj\-:file\-Type\-:@{init\-With\-T\-S\-Url\-:zoom\-Adj\-:file\-Type\-:}}
+\index{init\-With\-T\-S\-Url\-:zoom\-Adj\-:file\-Type\-:@{init\-With\-T\-S\-Url\-:zoom\-Adj\-:file\-Type\-:}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{init\-With\-T\-S\-Url\-:zoom\-Adj\-:file\-Type\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-T\-S\-Url\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{tile\-Cache\-Url}
+\item[{zoomAdj:(N\-S\-Integer)}]{adj}
+\item[{fileType:(N\-S\-String$\ast$)}]{type}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_source_a5f243f44edfd85f3a7d392e5167fef15}
+
+
+参考自 init.
+
+\hypertarget{interface_r_m_tile_cache_source_adc0c3fa292e6dd1fc59534be0d9eea26}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!long\-Attribution@{long\-Attribution}}
+\index{long\-Attribution@{long\-Attribution}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{long\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_source_adc0c3fa292e6dd1fc59534be0d9eea26}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a77313c2d697428dd994a6e0cf07a256f}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_cache_source_a851d9a72047bd81351ec5dacb618c09f}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!long\-Description@{long\-Description}}
+\index{long\-Description@{long\-Description}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{long\-Description}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Description 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_source_a851d9a72047bd81351ec5dacb618c09f}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a9c1c86280c6fa05e4e82502822fcfd10}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_cache_source_a700f4bcc6a9bbffb852d01eb425f8cfb}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!short\-Attribution@{short\-Attribution}}
+\index{short\-Attribution@{short\-Attribution}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{short\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_source_a700f4bcc6a9bbffb852d01eb425f8cfb}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a6be24cea169d058b5eefd7572bedc366}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_cache_source_a9d81b865c2a4ebb2757f2c1871fb6183}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!short\-Name@{short\-Name}}
+\index{short\-Name@{short\-Name}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{short\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_source_a9d81b865c2a4ebb2757f2c1871fb6183}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a3e6c6ef18250ce14317373db9df1fc85}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_cache_source_a56bc01bcf515d76f547f84d79f9773e9}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}}
+\index{tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{tile\-U\-R\-L\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-U\-R\-L\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_source_a56bc01bcf515d76f547f84d79f9773e9}
+
+
+重载 \hyperlink{protocol_r_m_abstract_mercator_web_source-p_ae5c62f0fed7dcdfd78aa9582bdec9b4b}{$<$\-R\-M\-Abstract\-Mercator\-Web\-Source$>$} .
+
+\hypertarget{interface_r_m_tile_cache_source_a0fc37a76b0161717c4bf0de4a03d5fe0}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!unique\-Tilecache\-Key@{unique\-Tilecache\-Key}}
+\index{unique\-Tilecache\-Key@{unique\-Tilecache\-Key}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{unique\-Tilecache\-Key}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) unique\-Tilecache\-Key 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_source_a0fc37a76b0161717c4bf0de4a03d5fe0}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_acf45b84d8f39ef7fcc2a92a2e320a9a2}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_cache_source_aaefb15155c82f992802db53a7f4c5ef2}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!url\-For\-Tile\-:@{url\-For\-Tile\-:}}
+\index{url\-For\-Tile\-:@{url\-For\-Tile\-:}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{url\-For\-Tile\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) url\-For\-Tile\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_source_aaefb15155c82f992802db53a7f4c5ef2}
+
+
+参考自 tile\-U\-R\-L\-:.
+
+\hypertarget{interface_r_m_tile_cache_source_af79808cc8d2de870bcfe7ff7624fa4c2}{\index{R\-M\-Tile\-Cache\-Source@{R\-M\-Tile\-Cache\-Source}!zeropad\-::@{zeropad\-::}}
+\index{zeropad\-::@{zeropad\-::}!RMTileCacheSource@{R\-M\-Tile\-Cache\-Source}}
+\subsubsection[{zeropad\-::}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) zeropad\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Integer)}]{number}
+\item[{:(N\-S\-Integer)}]{length}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_source_af79808cc8d2de870bcfe7ff7624fa4c2}
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_tile_cache_source_8h}{R\-M\-Tile\-Cache\-Source.\-h}\item 
+Map/\hyperlink{_r_m_tile_cache_source_8m}{R\-M\-Tile\-Cache\-Source.\-m}\end{DoxyCompactItemize}

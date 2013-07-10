@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>Map/RMSMTileProjection.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_95c9c9bead5808cc0bb4e78e340041f8.html">Map</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RMSMTileProjection.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_r_m_s_m_tile_projection_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  RMSMTileProjection.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  MapView</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by iclient on 13-6-9.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="_r_m_mercator_to_tile_projection_8h.html">RMMercatorToTileProjection.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="_r_m_s_m_layer_info_8h.html" title="SuperMap iServer MapService地图服务属性类 ">RMSMLayerInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_r_m_projection.html" title="Objective-C wrapper for PROJ4 map projection definitions. ">RMProjection</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_tile_projection.html">   16</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_r_m_s_m_tile_projection.html">RMSMTileProjection</a> : NSObject&lt;<a class="code" href="protocol_r_m_mercator_to_tile_projection-p.html" title="A tile projection is a projection which turns mercators into tile coordinates. ">RMMercatorToTileProjection</a>&gt;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_tile_projection.html#af52e70bac54d3c9c229f38850dfaa195">   18</a></span>&#160;        NSUInteger <a class="code" href="interface_r_m_s_m_tile_projection.html#ad7bfc790b1fbb0f87c9dd3708bba7ca7" title="Maximum zoom for which our tile server stores images. ">maxZoom</a>, <a class="code" href="interface_r_m_s_m_tile_projection.html#af52e70bac54d3c9c229f38850dfaa195">minZoom</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_tile_projection.html#a441495eb7464318f709e32b3ba889ab7">   21</a></span>&#160;        <a class="code" href="struct_r_m_projected_rect.html" title="location and size, in projected meters, paralleling CGRect ">RMProjectedRect</a> <a class="code" href="interface_r_m_s_m_tile_projection.html#a441495eb7464318f709e32b3ba889ab7" title="projected bounds of the planet, in meters ">planetBounds</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_tile_projection.html#a879a1a2b92a2a00b75d55953df996ce3">   24</a></span>&#160;        NSUInteger <a class="code" href="interface_r_m_s_m_tile_projection.html#a879a1a2b92a2a00b75d55953df996ce3" title="Normally 256. This class assumes tiles are square. ">tileSideLength</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_tile_projection.html#ad254771d183309cf4caced68e589da2c">   32</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="interface_r_m_s_m_tile_projection.html#ad254771d183309cf4caced68e589da2c" title="The deal is, we have a scale which stores how many mercator gradiants per pixel in the image...">scaleFactor</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_tile_projection.html#a9f1a037cccec0d7e4de974b541bce0ee">   33</a></span>&#160;    <a class="code" href="interface_r_m_s_m_layer_info.html" title="地图服务属性类 RMSMLayerInfo仅针对SuperMap iServer发布的服务，通过RMSMLayerInfo，可以方便的验证该地图服务是否可链接，获取该地图服务所需要的基本属性信息（该地图...">RMSMLayerInfo</a>* <a class="code" href="interface_r_m_s_m_tile_projection.html#a9f1a037cccec0d7e4de974b541bce0ee">m_pInfo</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_tile_projection.html#a3010dfce00c774103e1e13008cedfae9">   34</a></span>&#160;    NSMutableArray* <a class="code" href="interface_r_m_s_m_tile_projection.html#a3010dfce00c774103e1e13008cedfae9">m_dResolutions</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;- (id) initFromProjection:(<a class="code" href="interface_r_m_projection.html" title="Objective-C wrapper for PROJ4 map projection definitions. ">RMProjection</a>*)projection tileSideLength:(NSUInteger)tileSideLength maxZoom: (NSUInteger) aMaxZoom minZoom: (NSUInteger) aMinZoom info:(<a class="code" href="interface_r_m_s_m_layer_info.html" title="地图服务属性类 RMSMLayerInfo仅针对SuperMap iServer发布的服务，通过RMSMLayerInfo，可以方便的验证该地图服务是否可链接，获取该地图服务所需要的基本属性信息（该地图...">RMSMLayerInfo</a>*) info resolutions:(NSMutableArray*) dResolutions;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;- (void) setTileSideLength: (NSUInteger) aTileSideLength;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;- (void) setMinZoom: (NSUInteger) aMinZoom;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;- (void) setMaxZoom: (NSUInteger) aMaxZoom;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2013年 七月 10日 星期三 16:14:55使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

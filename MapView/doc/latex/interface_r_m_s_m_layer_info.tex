@@ -1,0 +1,240 @@
+\hypertarget{interface_r_m_s_m_layer_info}{\section{R\-M\-S\-M\-Layer\-Info类 参考}
+\label{interface_r_m_s_m_layer_info}\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}}
+}
+
+
+地图服务属性类 R\-M\-S\-M\-Layer\-Info仅针对\-Super\-Map i\-Server发布的服务，通过\-R\-M\-S\-M\-Layer\-Info，可以方便的验证该地图服务是否可链接，获取该地图服务所需要的基本属性信息（该地图的地理范围，坐标单位，地球半径，dpi） \par
+ 使用范例如下：  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-S\-M\-Layer\-Info.\-h$>$}
+
+类 R\-M\-S\-M\-Layer\-Info 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_r_m_s_m_layer_info}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(int) -\/ \hyperlink{interface_r_m_s_m_layer_info_a13c6bea3bc48c7380250a1a552a0c88a}{calculate\-Dpi\-:rvbheight\-:rv\-Width\-:rc\-Height\-:scale\-:}
+\begin{DoxyCompactList}\small\item\em 计算当前地图服务\-D\-P\-I \end{DoxyCompactList}\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_s_m_layer_info_a0d4c0633c9f593b8bbb9bb8c08e0458f}{get\-Scale\-From\-Resolution\-Dpi\-:}
+\begin{DoxyCompactList}\small\item\em 通过当前\-D\-P\-I和分辨率获取比例尺 \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_s_m_layer_info_aa03d08cb65294f63ceb1bc1b87134b9c}{initialize}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_s_m_layer_info_ae8fc51c3bb7ccdf367d059feb1df7457}{init\-With\-Tile\-:linkurl\-:}
+\begin{DoxyCompactList}\small\item\em 初始化地图服务 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{interface_r_m_s_m_layer_info_ae59e4397d7cdc04e4d3a186cf7f8c19c}{datum\-Axis}
+\item 
+int \hyperlink{interface_r_m_s_m_layer_info_a4f0a8078ba4d84c1eab544e0667d0872}{dpi}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_r_m_s_m_layer_info_a440f798ca882b5d5772018e3ef0558bf}{name}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_r_m_s_m_layer_info_a7406807133af7ad0ce73440c382413f4}{unit}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{interface_r_m_s_m_layer_info_af25c14ce763ab15bff3a1fa972f336bb}{d\-Height}
+\begin{DoxyCompactList}\small\item\em 当前地图地理范围的高度 \end{DoxyCompactList}\item 
+double \hyperlink{interface_r_m_s_m_layer_info_a13807ccd8a6c9fbae7b6871c50e866cf}{d\-Width}
+\begin{DoxyCompactList}\small\item\em 当前地图地理范围的宽度 \end{DoxyCompactList}\item 
+C\-L\-Location\-Coordinate2\-D \hyperlink{interface_r_m_s_m_layer_info_ae5ab0f196f3230eb4799999fcf91a006}{m\-\_\-pnt\-Org}
+\begin{DoxyCompactList}\small\item\em 当前地图左上角点坐标位置 \end{DoxyCompactList}\item 
+N\-S\-String $\ast$ \hyperlink{interface_r_m_s_m_layer_info_ac4aefcf958b2ba03724dc84c1c667126}{smurl}
+\begin{DoxyCompactList}\small\item\em 当前地图服务的url地址 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+地图服务属性类 R\-M\-S\-M\-Layer\-Info仅针对\-Super\-Map i\-Server发布的服务，通过\-R\-M\-S\-M\-Layer\-Info，可以方便的验证该地图服务是否可链接，获取该地图服务所需要的基本属性信息（该地图的地理范围，坐标单位，地球半径，dpi） \par
+ 使用范例如下： 
+
+
+\begin{DoxyCode}
+\textcolor{comment}{//字符串为SuperMap iServer地图服务的url链接}
+NSString *mapUrl = \textcolor{stringliteral}{@"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China"};
+\textcolor{comment}{//创建地图服务配置信息，参数为地图名和链接地址}
+\hyperlink{interface_r_m_s_m_layer_info}{RMSMLayerInfo}* info = [[\hyperlink{interface_r_m_s_m_layer_info}{RMSMLayerInfo} alloc] initWithTile:\textcolor{stringliteral}{@"China"} linkurl:mapUrl
+      ];
+\end{DoxyCode}
+ 通过如上的方法，你可以获取该地图服务的配置信息，方便地图服务的创建和加载 
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_s_m_layer_info_a13c6bea3bc48c7380250a1a552a0c88a}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!calculate\-Dpi\-:rvbheight\-:rv\-Width\-:rc\-Height\-:scale\-:@{calculate\-Dpi\-:rvbheight\-:rv\-Width\-:rc\-Height\-:scale\-:}}
+\index{calculate\-Dpi\-:rvbheight\-:rv\-Width\-:rc\-Height\-:scale\-:@{calculate\-Dpi\-:rvbheight\-:rv\-Width\-:rc\-Height\-:scale\-:}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{calculate\-Dpi\-:rvbheight\-:rv\-Width\-:rc\-Height\-:scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) calculate\-Dpi\-: 
+\begin{DoxyParamCaption}
+\item[{(double)}]{view\-Bounds\-Width}
+\item[{rvbheight:(double)}]{view\-Bounds\-Height}
+\item[{rvWidth:(int)}]{n\-Width}
+\item[{rcHeight:(int)}]{n\-Height}
+\item[{scale:(double)}]{d\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_s_m_layer_info_a13c6bea3bc48c7380250a1a552a0c88a}
+
+
+计算当前地图服务\-D\-P\-I 
+
+
+\begin{DoxyParams}{参数}
+{\em view\-Bounds\-Width} & 视口地理宽度 \\
+\hline
+{\em view\-Bounds\-Height} & 视口地理高度 \\
+\hline
+{\em n\-Width} & 视口像素宽度 \\
+\hline
+{\em n\-Height} & 视口像素高度 \\
+\hline
+{\em d\-Scale} & 对应的比例尺\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+当前地图\-D\-P\-I 
+\end{DoxyReturn}
+
+
+参考自 init\-With\-Tile\-:linkurl\-:.
+
+\hypertarget{interface_r_m_s_m_layer_info_a0d4c0633c9f593b8bbb9bb8c08e0458f}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!get\-Scale\-From\-Resolution\-Dpi\-:@{get\-Scale\-From\-Resolution\-Dpi\-:}}
+\index{get\-Scale\-From\-Resolution\-Dpi\-:@{get\-Scale\-From\-Resolution\-Dpi\-:}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{get\-Scale\-From\-Resolution\-Dpi\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) get\-Scale\-From\-Resolution\-Dpi\-: 
+\begin{DoxyParamCaption}
+\item[{(double)}]{d\-Resolution}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_s_m_layer_info_a0d4c0633c9f593b8bbb9bb8c08e0458f}
+
+
+通过当前\-D\-P\-I和分辨率获取比例尺 
+
+
+\begin{DoxyParams}{参数}
+{\em d\-Resolution} & 分辨率\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+当前比例尺 
+\end{DoxyReturn}
+
+
+参考自 R\-M\-S\-M\-Tile\-Source\-::init\-With\-Info\-: , 以及 R\-M\-S\-M\-Tile\-Source\-::init\-With\-Info\-:resolutions\-:.
+
+\hypertarget{interface_r_m_s_m_layer_info_aa03d08cb65294f63ceb1bc1b87134b9c}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!initialize@{initialize}}
+\index{initialize@{initialize}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) initialize 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_layer_info_aa03d08cb65294f63ceb1bc1b87134b9c}
+\hypertarget{interface_r_m_s_m_layer_info_ae8fc51c3bb7ccdf367d059feb1df7457}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!init\-With\-Tile\-:linkurl\-:@{init\-With\-Tile\-:linkurl\-:}}
+\index{init\-With\-Tile\-:linkurl\-:@{init\-With\-Tile\-:linkurl\-:}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{init\-With\-Tile\-:linkurl\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Tile\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{layer\-Name}
+\item[{linkurl:(N\-S\-String$\ast$)}]{url}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_s_m_layer_info_ae8fc51c3bb7ccdf367d059feb1df7457}
+
+
+初始化地图服务 
+
+
+\begin{DoxyParams}{参数}
+{\em layer\-Name} & 地图名称 \\
+\hline
+{\em url} & 地图服务的url地址\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回地图服务属性类 
+\end{DoxyReturn}
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_s_m_layer_info_ae59e4397d7cdc04e4d3a186cf7f8c19c}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!datum\-Axis@{datum\-Axis}}
+\index{datum\-Axis@{datum\-Axis}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{datum\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) datum\-Axis\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_layer_info_ae59e4397d7cdc04e4d3a186cf7f8c19c}
+
+
+参考自 calculate\-Dpi\-:rvbheight\-:rv\-Width\-:rc\-Height\-:scale\-:, get\-Scale\-From\-Resolution\-Dpi\-: , 以及 init\-With\-Tile\-:linkurl\-:.
+
+\hypertarget{interface_r_m_s_m_layer_info_a4f0a8078ba4d84c1eab544e0667d0872}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!dpi@{dpi}}
+\index{dpi@{dpi}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{dpi}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) dpi\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_layer_info_a4f0a8078ba4d84c1eab544e0667d0872}
+
+
+参考自 get\-Scale\-From\-Resolution\-Dpi\-: , 以及 init\-With\-Tile\-:linkurl\-:.
+
+\hypertarget{interface_r_m_s_m_layer_info_a440f798ca882b5d5772018e3ef0558bf}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!name@{name}}
+\index{name@{name}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) name\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_layer_info_a440f798ca882b5d5772018e3ef0558bf}
+
+
+参考自 init\-With\-Tile\-:linkurl\-:.
+
+\hypertarget{interface_r_m_s_m_layer_info_a7406807133af7ad0ce73440c382413f4}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!unit@{unit}}
+\index{unit@{unit}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{unit}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) unit\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_layer_info_a7406807133af7ad0ce73440c382413f4}
+
+
+参考自 calculate\-Dpi\-:rvbheight\-:rv\-Width\-:rc\-Height\-:scale\-:, get\-Scale\-From\-Resolution\-Dpi\-: , 以及 init\-With\-Tile\-:linkurl\-:.
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_s_m_layer_info_af25c14ce763ab15bff3a1fa972f336bb}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!d\-Height@{d\-Height}}
+\index{d\-Height@{d\-Height}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{d\-Height}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (double) d\-Height\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_s_m_layer_info_af25c14ce763ab15bff3a1fa972f336bb}
+
+
+当前地图地理范围的高度 
+
+
+
+参考自 R\-M\-S\-M\-Tile\-Source\-::init\-With\-Info\-:, init\-With\-Tile\-:linkurl\-: , 以及 R\-M\-S\-M\-Tile\-Source\-::projection.
+
+\hypertarget{interface_r_m_s_m_layer_info_a13807ccd8a6c9fbae7b6871c50e866cf}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!d\-Width@{d\-Width}}
+\index{d\-Width@{d\-Width}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{d\-Width}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (double) d\-Width\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_s_m_layer_info_a13807ccd8a6c9fbae7b6871c50e866cf}
+
+
+当前地图地理范围的宽度 
+
+
+
+参考自 R\-M\-S\-M\-Tile\-Source\-::init\-With\-Info\-:, init\-With\-Tile\-:linkurl\-: , 以及 R\-M\-S\-M\-Tile\-Source\-::projection.
+
+\hypertarget{interface_r_m_s_m_layer_info_ae5ab0f196f3230eb4799999fcf91a006}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!m\-\_\-pnt\-Org@{m\-\_\-pnt\-Org}}
+\index{m\-\_\-pnt\-Org@{m\-\_\-pnt\-Org}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{m\-\_\-pnt\-Org}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-L\-Location\-Coordinate2\-D) m\-\_\-pnt\-Org\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_s_m_layer_info_ae5ab0f196f3230eb4799999fcf91a006}
+
+
+当前地图左上角点坐标位置 
+
+
+
+参考自 init\-With\-Tile\-:linkurl\-: , 以及 R\-M\-S\-M\-Tile\-Source\-::projection.
+
+\hypertarget{interface_r_m_s_m_layer_info_ac4aefcf958b2ba03724dc84c1c667126}{\index{R\-M\-S\-M\-Layer\-Info@{R\-M\-S\-M\-Layer\-Info}!smurl@{smurl}}
+\index{smurl@{smurl}!RMSMLayerInfo@{R\-M\-S\-M\-Layer\-Info}}
+\subsubsection[{smurl}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) smurl\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_s_m_layer_info_ac4aefcf958b2ba03724dc84c1c667126}
+
+
+当前地图服务的url地址 
+
+
+
+参考自 init\-With\-Tile\-:linkurl\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_s_m_layer_info_8h}{R\-M\-S\-M\-Layer\-Info.\-h}\item 
+Map/\hyperlink{_r_m_s_m_layer_info_8m}{R\-M\-S\-M\-Layer\-Info.\-m}\end{DoxyCompactItemize}

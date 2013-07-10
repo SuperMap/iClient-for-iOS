@@ -1,0 +1,86 @@
+\hypertarget{interface_join_item}{\section{Join\-Item类 参考}
+\label{interface_join_item}\index{Join\-Item@{Join\-Item}}
+}
+
+
+连接信息类。\par
+ 该类用于定义矢量数据集与外部表的连接信息。 外部表可以为另一个矢量数据集（其中纯属性数据集中没有空间几何信息） 所对应的 D\-B\-M\-S(Database Management System，数据库管理系统)表， 也可以是用户自建的业务表。需要注意的是，矢量数据集与外部表必须属于同一数据源。 用于连接两个表的字段的名称不一定相同，但类型必须一致。  
+
+
+
+
+{\ttfamily \#import $<$Join\-Item.\-h$>$}
+
+类 Join\-Item 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_join_item}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_join_item_ae6b4f0aecf479050c8cf18170d754554}{init}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-Mutable\-Dictionary $\ast$) -\/ \hyperlink{interface_join_item_a65aa7b6f8fcc79b10406687c599faede}{to\-N\-S\-Dictionary}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_join_item_a19fdae54d25724191c1f1a253d8283c5}{foreign\-Table\-Name}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_join_item_a2dfc110b26f4cf48aeae6cee0c1686ec}{join\-Filter}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_join_item_a6aa4f1788a48780bf34a84fa58253057}{join\-Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+连接信息类。\par
+ 该类用于定义矢量数据集与外部表的连接信息。 外部表可以为另一个矢量数据集（其中纯属性数据集中没有空间几何信息） 所对应的 D\-B\-M\-S(Database Management System，数据库管理系统)表， 也可以是用户自建的业务表。需要注意的是，矢量数据集与外部表必须属于同一数据源。 用于连接两个表的字段的名称不一定相同，但类型必须一致。 
+
+\subsection{Method Documentation}
+\hypertarget{interface_join_item_ae6b4f0aecf479050c8cf18170d754554}{\index{Join\-Item@{Join\-Item}!init@{init}}
+\index{init@{init}!JoinItem@{Join\-Item}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_join_item_ae6b4f0aecf479050c8cf18170d754554}
+\hypertarget{interface_join_item_a65aa7b6f8fcc79b10406687c599faede}{\index{Join\-Item@{Join\-Item}!to\-N\-S\-Dictionary@{to\-N\-S\-Dictionary}}
+\index{to\-N\-S\-Dictionary@{to\-N\-S\-Dictionary}!JoinItem@{Join\-Item}}
+\subsubsection[{to\-N\-S\-Dictionary}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Dictionary $\ast$) to\-N\-S\-Dictionary 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_join_item_a65aa7b6f8fcc79b10406687c599faede}
+
+
+\subsection{属性说明}
+\hypertarget{interface_join_item_a19fdae54d25724191c1f1a253d8283c5}{\index{Join\-Item@{Join\-Item}!foreign\-Table\-Name@{foreign\-Table\-Name}}
+\index{foreign\-Table\-Name@{foreign\-Table\-Name}!JoinItem@{Join\-Item}}
+\subsubsection[{foreign\-Table\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) foreign\-Table\-Name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [copy]}}}\label{interface_join_item_a19fdae54d25724191c1f1a253d8283c5}
+
+
+参考自 init.
+
+\hypertarget{interface_join_item_a2dfc110b26f4cf48aeae6cee0c1686ec}{\index{Join\-Item@{Join\-Item}!join\-Filter@{join\-Filter}}
+\index{join\-Filter@{join\-Filter}!JoinItem@{Join\-Item}}
+\subsubsection[{join\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) join\-Filter\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [copy]}}}\label{interface_join_item_a2dfc110b26f4cf48aeae6cee0c1686ec}
+
+
+参考自 init.
+
+\hypertarget{interface_join_item_a6aa4f1788a48780bf34a84fa58253057}{\index{Join\-Item@{Join\-Item}!join\-Type@{join\-Type}}
+\index{join\-Type@{join\-Type}!JoinItem@{Join\-Item}}
+\subsubsection[{join\-Type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) join\-Type\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [copy]}}}\label{interface_join_item_a6aa4f1788a48780bf34a84fa58253057}
+
+
+参考自 init.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_join_item_8h}{Join\-Item.\-h}\item 
+Map/\hyperlink{_join_item_8m}{Join\-Item.\-m}\end{DoxyCompactItemize}

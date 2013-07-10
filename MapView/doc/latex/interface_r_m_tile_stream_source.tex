@@ -1,0 +1,228 @@
+\hypertarget{interface_r_m_tile_stream_source}{\section{R\-M\-Tile\-Stream\-Source类 参考}
+\label{interface_r_m_tile_stream_source}\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-Tile\-Stream\-Source.\-h$>$}
+
+类 R\-M\-Tile\-Stream\-Source 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.425076cm]{interface_r_m_tile_stream_source}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_r_m_tile_stream_source_a4128501d7122d3f849ccc33ba735d28c}{covers\-Full\-World}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_stream_source_a211ce6db8a319dab3d1089954b5d0f3a}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_tile_stream_source_a3bb9f28c43e44033393e2ce86a2b2546}{init\-With\-Info\-:}
+\item 
+(id) -\/ \hyperlink{interface_r_m_tile_stream_source_ae8b1b0f6c820adf5680fa799b918ad6a}{init\-With\-Reference\-U\-R\-L\-:}
+\item 
+(\hyperlink{struct_r_m_spherical_trapezium}{R\-M\-Spherical\-Trapezium}) -\/ \hyperlink{interface_r_m_tile_stream_source_a483efb3bdcc1dad1a464506b94e39d78}{latitude\-Longitude\-Bounding\-Box}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4}{R\-M\-Tile\-Stream\-Layer\-Type}) -\/ \hyperlink{interface_r_m_tile_stream_source_a55be836cda5d0582aa152d278885eac2}{layer\-Type}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_stream_source_a1e63208e7270ba2d75b01c67c32c4e91}{legend}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_stream_source_aa977502a8d80f3abcea6669c0cbb2fe7}{long\-Attribution}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_stream_source_a791cffd82b75f0c9853f2ed49aa635f4}{long\-Description}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(float) -\/ \hyperlink{interface_r_m_tile_stream_source_ad126cd46e17ef5ad95a6cf0533e17fe0}{max\-Zoom}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(float) -\/ \hyperlink{interface_r_m_tile_stream_source_a8a0c7a44fb2d194d2685c1f26187e6e5}{min\-Zoom}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_stream_source_af29e760b684cfb520dbbd8f5f0f41686}{short\-Attribution}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_stream_source_a059871decc3a5ad1a72d70b691b343b7}{short\-Name}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_stream_source_ae4c4f099f3f2d43081accc1de9d2c5a8}{tile\-U\-R\-L\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_tile_stream_source_ab121a1455447ad90239e7f4ca78ce9a3}{unique\-Tilecache\-Key}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-Dictionary $\ast$ \hyperlink{interface_r_m_tile_stream_source_a0304faf958b601e366543a53936e1ea6}{info\-Dictionary}
+\end{DoxyCompactItemize}
+\subsection*{额外继承的成员函数}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_tile_stream_source_a4128501d7122d3f849ccc33ba735d28c}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!covers\-Full\-World@{covers\-Full\-World}}
+\index{covers\-Full\-World@{covers\-Full\-World}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{covers\-Full\-World}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) covers\-Full\-World 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_stream_source_a4128501d7122d3f849ccc33ba735d28c}
+\hypertarget{interface_r_m_tile_stream_source_a211ce6db8a319dab3d1089954b5d0f3a}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_a211ce6db8a319dab3d1089954b5d0f3a}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a24301a2a9dd3c5839d0884251713c2e5}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_stream_source_a3bb9f28c43e44033393e2ce86a2b2546}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!init\-With\-Info\-:@{init\-With\-Info\-:}}
+\index{init\-With\-Info\-:@{init\-With\-Info\-:}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{init\-With\-Info\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Info\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary $\ast$)}]{info}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_stream_source_a3bb9f28c43e44033393e2ce86a2b2546}
+
+
+参考自 init\-With\-Reference\-U\-R\-L\-:.
+
+\hypertarget{interface_r_m_tile_stream_source_ae8b1b0f6c820adf5680fa799b918ad6a}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!init\-With\-Reference\-U\-R\-L\-:@{init\-With\-Reference\-U\-R\-L\-:}}
+\index{init\-With\-Reference\-U\-R\-L\-:@{init\-With\-Reference\-U\-R\-L\-:}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{init\-With\-Reference\-U\-R\-L\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Reference\-U\-R\-L\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-R\-L $\ast$)}]{reference\-U\-R\-L}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_stream_source_ae8b1b0f6c820adf5680fa799b918ad6a}
+\hypertarget{interface_r_m_tile_stream_source_a483efb3bdcc1dad1a464506b94e39d78}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!latitude\-Longitude\-Bounding\-Box@{latitude\-Longitude\-Bounding\-Box}}
+\index{latitude\-Longitude\-Bounding\-Box@{latitude\-Longitude\-Bounding\-Box}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{latitude\-Longitude\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Spherical\-Trapezium}) latitude\-Longitude\-Bounding\-Box 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_a483efb3bdcc1dad1a464506b94e39d78}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_ae43425d7f2ade06fd2e3bdf34a8b083a}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+
+
+参考自 covers\-Full\-World.
+
+\hypertarget{interface_r_m_tile_stream_source_a55be836cda5d0582aa152d278885eac2}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!layer\-Type@{layer\-Type}}
+\index{layer\-Type@{layer\-Type}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{layer\-Type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Stream\-Layer\-Type}) layer\-Type 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_stream_source_a55be836cda5d0582aa152d278885eac2}
+\hypertarget{interface_r_m_tile_stream_source_a1e63208e7270ba2d75b01c67c32c4e91}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!legend@{legend}}
+\index{legend@{legend}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{legend}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) legend 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_stream_source_a1e63208e7270ba2d75b01c67c32c4e91}
+\hypertarget{interface_r_m_tile_stream_source_aa977502a8d80f3abcea6669c0cbb2fe7}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!long\-Attribution@{long\-Attribution}}
+\index{long\-Attribution@{long\-Attribution}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{long\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_aa977502a8d80f3abcea6669c0cbb2fe7}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a77313c2d697428dd994a6e0cf07a256f}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_stream_source_a791cffd82b75f0c9853f2ed49aa635f4}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!long\-Description@{long\-Description}}
+\index{long\-Description@{long\-Description}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{long\-Description}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Description 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_a791cffd82b75f0c9853f2ed49aa635f4}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a9c1c86280c6fa05e4e82502822fcfd10}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_stream_source_ad126cd46e17ef5ad95a6cf0533e17fe0}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!max\-Zoom@{max\-Zoom}}
+\index{max\-Zoom@{max\-Zoom}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{max\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) max\-Zoom 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_ad126cd46e17ef5ad95a6cf0533e17fe0}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a95d5287d9e661ba2e6c319fe9615c703}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_stream_source_a8a0c7a44fb2d194d2685c1f26187e6e5}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!min\-Zoom@{min\-Zoom}}
+\index{min\-Zoom@{min\-Zoom}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{min\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) min\-Zoom 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_a8a0c7a44fb2d194d2685c1f26187e6e5}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_ae2767e8347256d6cc5eb88aec30fd97c}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_stream_source_af29e760b684cfb520dbbd8f5f0f41686}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!short\-Attribution@{short\-Attribution}}
+\index{short\-Attribution@{short\-Attribution}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{short\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_af29e760b684cfb520dbbd8f5f0f41686}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a6be24cea169d058b5eefd7572bedc366}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+
+
+参考自 long\-Attribution.
+
+\hypertarget{interface_r_m_tile_stream_source_a059871decc3a5ad1a72d70b691b343b7}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!short\-Name@{short\-Name}}
+\index{short\-Name@{short\-Name}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{short\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_a059871decc3a5ad1a72d70b691b343b7}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a3e6c6ef18250ce14317373db9df1fc85}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_tile_stream_source_ae4c4f099f3f2d43081accc1de9d2c5a8}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}}
+\index{tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{tile\-U\-R\-L\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-U\-R\-L\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_ae4c4f099f3f2d43081accc1de9d2c5a8}
+
+
+重载 \hyperlink{protocol_r_m_abstract_mercator_web_source-p_ae5c62f0fed7dcdfd78aa9582bdec9b4b}{$<$\-R\-M\-Abstract\-Mercator\-Web\-Source$>$} .
+
+\hypertarget{interface_r_m_tile_stream_source_ab121a1455447ad90239e7f4ca78ce9a3}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!unique\-Tilecache\-Key@{unique\-Tilecache\-Key}}
+\index{unique\-Tilecache\-Key@{unique\-Tilecache\-Key}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{unique\-Tilecache\-Key}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) unique\-Tilecache\-Key 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_stream_source_ab121a1455447ad90239e7f4ca78ce9a3}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_acf45b84d8f39ef7fcc2a92a2e320a9a2}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_tile_stream_source_a0304faf958b601e366543a53936e1ea6}{\index{R\-M\-Tile\-Stream\-Source@{R\-M\-Tile\-Stream\-Source}!info\-Dictionary@{info\-Dictionary}}
+\index{info\-Dictionary@{info\-Dictionary}!RMTileStreamSource@{R\-M\-Tile\-Stream\-Source}}
+\subsubsection[{info\-Dictionary}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Dictionary $\ast$) info\-Dictionary\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [retain]}}}\label{interface_r_m_tile_stream_source_a0304faf958b601e366543a53936e1ea6}
+
+
+参考自 dealloc, init\-With\-Info\-: , 以及 layer\-Type.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_tile_stream_source_8h}{R\-M\-Tile\-Stream\-Source.\-h}\item 
+Map/\hyperlink{_r_m_tile_stream_source_8m}{R\-M\-Tile\-Stream\-Source.\-m}\end{DoxyCompactItemize}

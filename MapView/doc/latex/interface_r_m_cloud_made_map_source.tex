@@ -1,0 +1,231 @@
+\hypertarget{interface_r_m_cloud_made_map_source}{\section{R\-M\-Cloud\-Made\-Map\-Source类 参考}
+\label{interface_r_m_cloud_made_map_source}\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}}
+}
+
+
+Subclass of \hyperlink{interface_r_m_abstract_mercator_web_source}{R\-M\-Abstract\-Mercator\-Web\-Source} for access to Cloud\-Made's commercial-\/grade tile servers.  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-Cloud\-Made\-Map\-Source.\-h$>$}
+
+类 R\-M\-Cloud\-Made\-Map\-Source 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.425076cm]{interface_r_m_cloud_made_map_source}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_r_m_cloud_made_map_source_ac1f36511f1261c96378989182fbdc724}{init}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_cloud_made_map_source_a604b3cd4b99894be4269193e9f860a83}{init\-With\-Access\-Key\-:style\-Number\-:}
+\begin{DoxyCompactList}\small\item\em designated initializer \end{DoxyCompactList}\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cloud_made_map_source_a591d36a1e1d2d5d5024a568339542b5e}{long\-Attribution}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cloud_made_map_source_a0f04c8a09c3d1a9f25dcd4f45af2934b}{long\-Description}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_r_m_cloud_made_map_source_a049018aa73338e739b40aa1c2aac811d}{read\-Token\-From\-File}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_cloud_made_map_source_a8e94aaa198d58bcf380dd9671bd063f8}{request\-Token}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cloud_made_map_source_a24b31ad20954e02ffde188c4a008d2e8}{short\-Attribution}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cloud_made_map_source_a5e956b126886325f16f34684d974262c}{short\-Name}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cloud_made_map_source_a25ff631fb042ace3eae48132f484a88e}{tile\-U\-R\-L\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cloud_made_map_source_aae477f125ad88298f778b14b079a7bbb}{unique\-Tilecache\-Key}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(N\-S\-String $\ast$) + \hyperlink{interface_r_m_cloud_made_map_source_a472e70ed7bd9c453f9c536bccec94ef3}{path\-For\-Saved\-Access\-Token}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_r_m_cloud_made_map_source_a4efefbc741e320d977cf04e9a96e02d0}{access\-Key}
+\begin{DoxyCompactList}\small\item\em unique key identifying a particular developer/\-Cloud\-Made licensee. \end{DoxyCompactList}\item 
+N\-S\-String $\ast$ \hyperlink{interface_r_m_cloud_made_map_source_ac3deb46e005ea4bdf67c0e32b4ab7406}{access\-Token}
+\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_cloud_made_map_source_a8fb92e3c3ae01146bc6a02bb437caec1}{cloudmade\-Style\-Number}
+\begin{DoxyCompactList}\small\item\em see \href{http://maps.cloudmade.com/}{\tt http\-://maps.\-cloudmade.\-com/} to sample the various Cloud\-Made image styles \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Subclass of \hyperlink{interface_r_m_abstract_mercator_web_source}{R\-M\-Abstract\-Mercator\-Web\-Source} for access to Cloud\-Made's commercial-\/grade tile servers. 
+
+Provides key-\/based access to tiles from Cloud\-Made's servers. This is Open Street Map data, but rendered much more nicely, in your choice of stylings. See \href{http://www.cloudmade.com/}{\tt http\-://www.\-cloudmade.\-com/} for licensing terms and fees. 
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_cloud_made_map_source_ac1f36511f1261c96378989182fbdc724}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!init@{init}}
+\index{init@{init}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_ac1f36511f1261c96378989182fbdc724}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a88bc1ea00a789381d77ae50e0eaec732}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+
+
+参考自 init\-With\-Access\-Key\-:style\-Number\-:.
+
+\hypertarget{interface_r_m_cloud_made_map_source_a604b3cd4b99894be4269193e9f860a83}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!init\-With\-Access\-Key\-:style\-Number\-:@{init\-With\-Access\-Key\-:style\-Number\-:}}
+\index{init\-With\-Access\-Key\-:style\-Number\-:@{init\-With\-Access\-Key\-:style\-Number\-:}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{init\-With\-Access\-Key\-:style\-Number\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Access\-Key\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{developer\-Access\-Key}
+\item[{styleNumber:(N\-S\-U\-Integer)}]{style\-Number}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cloud_made_map_source_a604b3cd4b99894be4269193e9f860a83}
+
+
+designated initializer 
+
+
+
+参考自 init.
+
+\hypertarget{interface_r_m_cloud_made_map_source_a591d36a1e1d2d5d5024a568339542b5e}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!long\-Attribution@{long\-Attribution}}
+\index{long\-Attribution@{long\-Attribution}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{long\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_a591d36a1e1d2d5d5024a568339542b5e}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a77313c2d697428dd994a6e0cf07a256f}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_cloud_made_map_source_a0f04c8a09c3d1a9f25dcd4f45af2934b}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!long\-Description@{long\-Description}}
+\index{long\-Description@{long\-Description}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{long\-Description}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Description 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_a0f04c8a09c3d1a9f25dcd4f45af2934b}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a9c1c86280c6fa05e4e82502822fcfd10}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_cloud_made_map_source_a472e70ed7bd9c453f9c536bccec94ef3}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!path\-For\-Saved\-Access\-Token@{path\-For\-Saved\-Access\-Token}}
+\index{path\-For\-Saved\-Access\-Token@{path\-For\-Saved\-Access\-Token}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{path\-For\-Saved\-Access\-Token}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-String $\ast$) path\-For\-Saved\-Access\-Token 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_a472e70ed7bd9c453f9c536bccec94ef3}
+
+
+参考自 read\-Token\-From\-File , 以及 request\-Token.
+
+\hypertarget{interface_r_m_cloud_made_map_source_a049018aa73338e739b40aa1c2aac811d}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!read\-Token\-From\-File@{read\-Token\-From\-File}}
+\index{read\-Token\-From\-File@{read\-Token\-From\-File}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{read\-Token\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) read\-Token\-From\-File 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_a049018aa73338e739b40aa1c2aac811d}
+
+
+参考自 request\-Token.
+
+\hypertarget{interface_r_m_cloud_made_map_source_a8e94aaa198d58bcf380dd9671bd063f8}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!request\-Token@{request\-Token}}
+\index{request\-Token@{request\-Token}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{request\-Token}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) request\-Token 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_a8e94aaa198d58bcf380dd9671bd063f8}
+
+
+参考自 init\-With\-Access\-Key\-:style\-Number\-:.
+
+\hypertarget{interface_r_m_cloud_made_map_source_a24b31ad20954e02ffde188c4a008d2e8}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!short\-Attribution@{short\-Attribution}}
+\index{short\-Attribution@{short\-Attribution}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{short\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_a24b31ad20954e02ffde188c4a008d2e8}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a6be24cea169d058b5eefd7572bedc366}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_cloud_made_map_source_a5e956b126886325f16f34684d974262c}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!short\-Name@{short\-Name}}
+\index{short\-Name@{short\-Name}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{short\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_a5e956b126886325f16f34684d974262c}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_a3e6c6ef18250ce14317373db9df1fc85}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+\hypertarget{interface_r_m_cloud_made_map_source_a25ff631fb042ace3eae48132f484a88e}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}}
+\index{tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{tile\-U\-R\-L\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-U\-R\-L\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_a25ff631fb042ace3eae48132f484a88e}
+
+
+重载 \hyperlink{protocol_r_m_abstract_mercator_web_source-p_ae5c62f0fed7dcdfd78aa9582bdec9b4b}{$<$\-R\-M\-Abstract\-Mercator\-Web\-Source$>$} .
+
+\hypertarget{interface_r_m_cloud_made_map_source_aae477f125ad88298f778b14b079a7bbb}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!unique\-Tilecache\-Key@{unique\-Tilecache\-Key}}
+\index{unique\-Tilecache\-Key@{unique\-Tilecache\-Key}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{unique\-Tilecache\-Key}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) unique\-Tilecache\-Key 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cloud_made_map_source_aae477f125ad88298f778b14b079a7bbb}
+
+
+重载 \hyperlink{interface_r_m_abstract_mercator_web_source_acf45b84d8f39ef7fcc2a92a2e320a9a2}{R\-M\-Abstract\-Mercator\-Web\-Source} .
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_cloud_made_map_source_a4efefbc741e320d977cf04e9a96e02d0}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!access\-Key@{access\-Key}}
+\index{access\-Key@{access\-Key}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{access\-Key}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) access\-Key\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_cloud_made_map_source_a4efefbc741e320d977cf04e9a96e02d0}
+
+
+unique key identifying a particular developer/\-Cloud\-Made licensee. 
+
+See \href{http://developers.cloudmade.com/projects}{\tt http\-://developers.\-cloudmade.\-com/projects} to obtain a Cloud\-Made A\-P\-I key. 
+
+参考自 init\-With\-Access\-Key\-:style\-Number\-:.
+
+\hypertarget{interface_r_m_cloud_made_map_source_ac3deb46e005ea4bdf67c0e32b4ab7406}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!access\-Token@{access\-Token}}
+\index{access\-Token@{access\-Token}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{access\-Token}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) access\-Token\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_cloud_made_map_source_ac3deb46e005ea4bdf67c0e32b4ab7406}
+
+
+参考自 read\-Token\-From\-File, request\-Token , 以及 tile\-U\-R\-L\-:.
+
+\hypertarget{interface_r_m_cloud_made_map_source_a8fb92e3c3ae01146bc6a02bb437caec1}{\index{R\-M\-Cloud\-Made\-Map\-Source@{R\-M\-Cloud\-Made\-Map\-Source}!cloudmade\-Style\-Number@{cloudmade\-Style\-Number}}
+\index{cloudmade\-Style\-Number@{cloudmade\-Style\-Number}!RMCloudMadeMapSource@{R\-M\-Cloud\-Made\-Map\-Source}}
+\subsubsection[{cloudmade\-Style\-Number}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) cloudmade\-Style\-Number\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_cloud_made_map_source_a8fb92e3c3ae01146bc6a02bb437caec1}
+
+
+see \href{http://maps.cloudmade.com/}{\tt http\-://maps.\-cloudmade.\-com/} to sample the various Cloud\-Made image styles 
+
+
+
+参考自 init\-With\-Access\-Key\-:style\-Number\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_cloud_made_map_source_8h}{R\-M\-Cloud\-Made\-Map\-Source.\-h}\item 
+Map/\hyperlink{_r_m_cloud_made_map_source_8m}{R\-M\-Cloud\-Made\-Map\-Source.\-m}\end{DoxyCompactItemize}

@@ -1,0 +1,265 @@
+\hypertarget{interface_r_m_projection}{\section{R\-M\-Projection类 参考}
+\label{interface_r_m_projection}\index{R\-M\-Projection@{R\-M\-Projection}}
+}
+
+
+Objective-\/\-C wrapper for P\-R\-O\-J4 map projection definitions.  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-Projection.\-h$>$}
+
+类 R\-M\-Projection 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_r_m_projection}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{struct_r_m_projected_point}{R\-M\-Projected\-Point}) -\/ \hyperlink{interface_r_m_projection_a46f6e09a03a1383d82b3ef347db52f12}{constrain\-Point\-To\-Bounds\-:}
+\begin{DoxyCompactList}\small\item\em applies \#wrap\-Point\-Horizontally to a\-Point, and then clamps northing (Y coordinate) to projection's planet\-Bounds \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_projection_a6502b343dac3ea98da4cff9ba3298feb}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_projection_abd5003857d513518eea0cd6760f54ccd}{init}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_projection_a7295b2382970d7dfe8d62112062d9268}{init\-With\-String\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_projection_a3cb82d1e81597dd3a3039168d0be8d9c}{init\-With\-String\-:\-In\-Bounds\-:}
+\begin{DoxyCompactList}\small\item\em anybody know what the In\-Bounds\-: parameter means? \end{DoxyCompactList}\item 
+(\hyperlink{struct_r_m_projected_point}{R\-M\-Projected\-Point}) -\/ \hyperlink{interface_r_m_projection_a857345e06858eef53abc8f464cb0f0f3}{lat\-Long\-To\-Point\-:}
+\begin{DoxyCompactList}\small\item\em forward project latitude/longitude, return meters \end{DoxyCompactList}\item 
+(\hyperlink{struct_r_m_lat_long}{R\-M\-Lat\-Long}) -\/ \hyperlink{interface_r_m_projection_a85564cbd0ad54533588ddb55068c4b99}{point\-To\-Lat\-Long\-:}
+\begin{DoxyCompactList}\small\item\em inverse project meters, return latitude/longitude \end{DoxyCompactList}\item 
+(\hyperlink{struct_r_m_projected_point}{R\-M\-Projected\-Point}) -\/ \hyperlink{interface_r_m_projection_a39e2c2dd577abcdc389cd07a5e6a7e25}{wrap\-Point\-Horizontally\-:}
+\begin{DoxyCompactList}\small\item\em If \hyperlink{interface_r_m_projection_aa7aa460042ee6b011d23d20cc0eb1fa9}{projection\-Wraps\-Horizontally}, returns \#a\-Point with its easting adjusted modulo Earth's diameter to be within projection's planet\-Bounds. if !\hyperlink{interface_r_m_projection_aa7aa460042ee6b011d23d20cc0eb1fa9}{projection\-Wraps\-Horizontally}, returns \#a\-Point unchanged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{interface_r_m_projection}{R\-M\-Projection} $\ast$) + \hyperlink{interface_r_m_projection_a8d54612fc9b40930999b22dbf3638560}{E\-P\-S\-G\-Lat\-Long}
+\item 
+(\hyperlink{interface_r_m_projection}{R\-M\-Projection} $\ast$) + \hyperlink{interface_r_m_projection_a650e692e75f1b5336570a6cd28f22ca0}{google\-Projection}
+\item 
+(\hyperlink{interface_r_m_projection}{R\-M\-Projection} $\ast$) + \hyperlink{interface_r_m_projection_a522a3cdd02936b5088085a9477717302}{O\-S\-G\-B}
+\item 
+(\hyperlink{interface_r_m_projection}{R\-M\-Projection} $\ast$) + \hyperlink{interface_r_m_projection_af713cfc503b88c2f1c387423004d98a1}{sm\-Projection\-:}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_projection_ae3bbbad9dab3512aa9c53ae69f07051c}{b\-Is\-S\-M}
+\item 
+void $\ast$ \hyperlink{interface_r_m_projection_a3fc7b131094967bb922e4d222f809c08}{internal\-Projection}
+\begin{DoxyCompactList}\small\item\em This is actually a P\-R\-O\-J4 proj\-P\-J, but it is typed as void$\ast$ so the proj\-\_\-api doesn't have to be included. \end{DoxyCompactList}\item 
+\hyperlink{struct_r_m_projected_rect}{R\-M\-Projected\-Rect} \hyperlink{interface_r_m_projection_aecfffc0acd70c575869e1b13193b2f9f}{planet\-Bounds}
+\begin{DoxyCompactList}\small\item\em the size of the earth, in projected units (meters, most often) \end{DoxyCompactList}\item 
+B\-O\-O\-L \hyperlink{interface_r_m_projection_aa7aa460042ee6b011d23d20cc0eb1fa9}{projection\-Wraps\-Horizontally}
+\begin{DoxyCompactList}\small\item\em hardcoded to Y\-E\-S in \hyperlink{interface_r_m_projection_a3cb82d1e81597dd3a3039168d0be8d9c}{init\-With\-String\-:\-In\-Bounds\-:} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Objective-\/\-C wrapper for P\-R\-O\-J4 map projection definitions. 
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_projection_a46f6e09a03a1383d82b3ef347db52f12}{\index{R\-M\-Projection@{R\-M\-Projection}!constrain\-Point\-To\-Bounds\-:@{constrain\-Point\-To\-Bounds\-:}}
+\index{constrain\-Point\-To\-Bounds\-:@{constrain\-Point\-To\-Bounds\-:}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{constrain\-Point\-To\-Bounds\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Point}) constrain\-Point\-To\-Bounds\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_a46f6e09a03a1383d82b3ef347db52f12}
+
+
+applies \#wrap\-Point\-Horizontally to a\-Point, and then clamps northing (Y coordinate) to projection's planet\-Bounds 
+
+\hypertarget{interface_r_m_projection_a6502b343dac3ea98da4cff9ba3298feb}{\index{R\-M\-Projection@{R\-M\-Projection}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_projection_a6502b343dac3ea98da4cff9ba3298feb}
+\hypertarget{interface_r_m_projection_a8d54612fc9b40930999b22dbf3638560}{\index{R\-M\-Projection@{R\-M\-Projection}!E\-P\-S\-G\-Lat\-Long@{E\-P\-S\-G\-Lat\-Long}}
+\index{E\-P\-S\-G\-Lat\-Long@{E\-P\-S\-G\-Lat\-Long}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{E\-P\-S\-G\-Lat\-Long}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf R\-M\-Projection} $\ast$) E\-P\-S\-G\-Lat\-Long 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_a8d54612fc9b40930999b22dbf3638560}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000035}{Bug}]magic numbers embedded in code, this one's probably ok \end{DoxyRefDesc}
+\hypertarget{interface_r_m_projection_a650e692e75f1b5336570a6cd28f22ca0}{\index{R\-M\-Projection@{R\-M\-Projection}!google\-Projection@{google\-Projection}}
+\index{google\-Projection@{google\-Projection}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{google\-Projection}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf R\-M\-Projection} $\ast$) google\-Projection 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_a650e692e75f1b5336570a6cd28f22ca0}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000033}{Bug}]magic numbers embedded in code, this one's probably ok \end{DoxyRefDesc}
+
+
+参考自 R\-M\-Abstract\-Mercator\-Web\-Source\-::projection, R\-M\-D\-B\-Map\-Source\-::projection , 以及 R\-M\-M\-B\-Tiles\-Tile\-Source\-::projection.
+
+\hypertarget{interface_r_m_projection_abd5003857d513518eea0cd6760f54ccd}{\index{R\-M\-Projection@{R\-M\-Projection}!init@{init}}
+\index{init@{init}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_projection_abd5003857d513518eea0cd6760f54ccd}
+
+
+参考自 init\-With\-String\-:\-In\-Bounds\-:.
+
+\hypertarget{interface_r_m_projection_a7295b2382970d7dfe8d62112062d9268}{\index{R\-M\-Projection@{R\-M\-Projection}!init\-With\-String\-:@{init\-With\-String\-:}}
+\index{init\-With\-String\-:@{init\-With\-String\-:}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{init\-With\-String\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-String\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{params}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_projection_a7295b2382970d7dfe8d62112062d9268}
+
+
+参考自 init.
+
+\hypertarget{interface_r_m_projection_a3cb82d1e81597dd3a3039168d0be8d9c}{\index{R\-M\-Projection@{R\-M\-Projection}!init\-With\-String\-:\-In\-Bounds\-:@{init\-With\-String\-:\-In\-Bounds\-:}}
+\index{init\-With\-String\-:\-In\-Bounds\-:@{init\-With\-String\-:\-In\-Bounds\-:}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{init\-With\-String\-:\-In\-Bounds\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-With\-String\-:} 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{params}
+\item[{InBounds:({\bf R\-M\-Projected\-Rect})}]{proj\-Bounds}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_a3cb82d1e81597dd3a3039168d0be8d9c}
+
+
+anybody know what the In\-Bounds\-: parameter means? 
+
+
+
+参考自 init\-With\-String\-:.
+
+\hypertarget{interface_r_m_projection_a857345e06858eef53abc8f464cb0f0f3}{\index{R\-M\-Projection@{R\-M\-Projection}!lat\-Long\-To\-Point\-:@{lat\-Long\-To\-Point\-:}}
+\index{lat\-Long\-To\-Point\-:@{lat\-Long\-To\-Point\-:}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{lat\-Long\-To\-Point\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Point}) lat\-Long\-To\-Point\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Lat\-Long})}]{a\-Lat\-Long}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_a857345e06858eef53abc8f464cb0f0f3}
+
+
+forward project latitude/longitude, return meters 
+
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000016}{弃用}]rename pending after 0.\-5 \end{DoxyRefDesc}
+
+
+参考自 R\-M\-Path\-::add\-Line\-To\-Lat\-Long\-:, R\-M\-Marker\-Manager\-::add\-Marker\-:\-At\-Lat\-Long\-:, R\-M\-Circle\-::init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:, R\-M\-Map\-Contents\-::lat\-Long\-To\-Pixel\-:, R\-M\-Map\-Contents\-::lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:, R\-M\-Map\-Contents\-::lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:, R\-M\-Marker\-Manager\-::move\-Marker\-:\-At\-Lat\-Lon\-:, R\-M\-Path\-::move\-To\-Lat\-Long\-:, R\-M\-Circle\-::move\-To\-Lat\-Long\-:, R\-M\-Map\-Contents\-::move\-To\-Lat\-Long\-:, R\-M\-Map\-View\-::set\-Constraints\-S\-W\-:\-N\-E\-: , 以及 R\-M\-Map\-Contents\-::zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:.
+
+\hypertarget{interface_r_m_projection_a522a3cdd02936b5088085a9477717302}{\index{R\-M\-Projection@{R\-M\-Projection}!O\-S\-G\-B@{O\-S\-G\-B}}
+\index{O\-S\-G\-B@{O\-S\-G\-B}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{O\-S\-G\-B}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf R\-M\-Projection} $\ast$) O\-S\-G\-B 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_a522a3cdd02936b5088085a9477717302}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000036}{Bug}]T\-O\-D\-O\-: This should use the new init\-With\-String\-:\-In\-Bounds\-: method... but I don't know what the bounds are! \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000037}{Bug}]magic numbers embedded in code, this one's probably ok \end{DoxyRefDesc}
+\hypertarget{interface_r_m_projection_a85564cbd0ad54533588ddb55068c4b99}{\index{R\-M\-Projection@{R\-M\-Projection}!point\-To\-Lat\-Long\-:@{point\-To\-Lat\-Long\-:}}
+\index{point\-To\-Lat\-Long\-:@{point\-To\-Lat\-Long\-:}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{point\-To\-Lat\-Long\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Lat\-Long}) point\-To\-Lat\-Long\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_a85564cbd0ad54533588ddb55068c4b99}
+
+
+inverse project meters, return latitude/longitude 
+
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000015}{弃用}]rename pending after 0.\-5 \end{DoxyRefDesc}
+
+
+参考自 R\-M\-Map\-Contents\-::pixel\-To\-Lat\-Long\-: , 以及 R\-M\-Map\-Contents\-::pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:.
+
+\hypertarget{interface_r_m_projection_af713cfc503b88c2f1c387423004d98a1}{\index{R\-M\-Projection@{R\-M\-Projection}!sm\-Projection\-:@{sm\-Projection\-:}}
+\index{sm\-Projection\-:@{sm\-Projection\-:}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{sm\-Projection\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf R\-M\-Projection} $\ast$) sm\-Projection\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Rect})}]{bounds}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_af713cfc503b88c2f1c387423004d98a1}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000034}{Bug}]magic numbers embedded in code, this one's probably ok \end{DoxyRefDesc}
+
+
+参考自 R\-M\-S\-M\-Tile\-Source\-::projection.
+
+\hypertarget{interface_r_m_projection_a39e2c2dd577abcdc389cd07a5e6a7e25}{\index{R\-M\-Projection@{R\-M\-Projection}!wrap\-Point\-Horizontally\-:@{wrap\-Point\-Horizontally\-:}}
+\index{wrap\-Point\-Horizontally\-:@{wrap\-Point\-Horizontally\-:}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{wrap\-Point\-Horizontally\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Point}) wrap\-Point\-Horizontally\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_projection_a39e2c2dd577abcdc389cd07a5e6a7e25}
+
+
+If \hyperlink{interface_r_m_projection_aa7aa460042ee6b011d23d20cc0eb1fa9}{projection\-Wraps\-Horizontally}, returns \#a\-Point with its easting adjusted modulo Earth's diameter to be within projection's planet\-Bounds. if !\hyperlink{interface_r_m_projection_aa7aa460042ee6b011d23d20cc0eb1fa9}{projection\-Wraps\-Horizontally}, returns \#a\-Point unchanged. 
+
+
+
+参考自 constrain\-Point\-To\-Bounds\-:, R\-M\-Mercator\-To\-Screen\-Projection\-::move\-Point\-:by\-:, R\-M\-Mercator\-To\-Screen\-Projection\-::projected\-Center, R\-M\-Mercator\-To\-Screen\-Projection\-::project\-Screen\-Point\-To\-X\-Y\-:, R\-M\-Mercator\-To\-Screen\-Projection\-::project\-Screen\-Point\-To\-X\-Y\-:with\-Meters\-Per\-Pixel\-:, R\-M\-Mercator\-To\-Screen\-Projection\-::set\-Projected\-Bounds\-:, R\-M\-Mercator\-To\-Screen\-Projection\-::set\-Projected\-Center\-:, R\-M\-Mercator\-To\-Screen\-Projection\-::zoom\-Point\-:by\-Factor\-:near\-:, R\-M\-Mercator\-To\-Screen\-Projection\-::zoom\-Rect\-:by\-Factor\-:near\-: , 以及 R\-M\-Mercator\-To\-Screen\-Projection\-::zoom\-Screen\-By\-Factor\-:near\-:.
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_projection_ae3bbbad9dab3512aa9c53ae69f07051c}{\index{R\-M\-Projection@{R\-M\-Projection}!b\-Is\-S\-M@{b\-Is\-S\-M}}
+\index{b\-Is\-S\-M@{b\-Is\-S\-M}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{b\-Is\-S\-M}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) b\-Is\-S\-M\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_projection_ae3bbbad9dab3512aa9c53ae69f07051c}
+
+
+参考自 E\-P\-S\-G\-Lat\-Long, google\-Projection, lat\-Long\-To\-Point\-:, O\-S\-G\-B, sm\-Projection\-: , 以及 wrap\-Point\-Horizontally\-:.
+
+\hypertarget{interface_r_m_projection_a3fc7b131094967bb922e4d222f809c08}{\index{R\-M\-Projection@{R\-M\-Projection}!internal\-Projection@{internal\-Projection}}
+\index{internal\-Projection@{internal\-Projection}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{internal\-Projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void $\ast$) internal\-Projection\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_projection_a3fc7b131094967bb922e4d222f809c08}
+
+
+This is actually a P\-R\-O\-J4 proj\-P\-J, but it is typed as void$\ast$ so the proj\-\_\-api doesn't have to be included. 
+
+
+
+参考自 dealloc, R\-M\-Transform\-::init\-From\-:\-To\-:, init\-With\-String\-:\-In\-Bounds\-:, lat\-Long\-To\-Point\-:, point\-To\-Lat\-Long\-:, R\-M\-Transform\-::project\-Forward\-:\-At\-Zoom\-: , 以及 R\-M\-Transform\-::project\-Inverse\-:\-At\-Zoom\-:.
+
+\hypertarget{interface_r_m_projection_aecfffc0acd70c575869e1b13193b2f9f}{\index{R\-M\-Projection@{R\-M\-Projection}!planet\-Bounds@{planet\-Bounds}}
+\index{planet\-Bounds@{planet\-Bounds}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{planet\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Rect}) planet\-Bounds\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_projection_aecfffc0acd70c575869e1b13193b2f9f}
+
+
+the size of the earth, in projected units (meters, most often) 
+
+
+
+参考自 constrain\-Point\-To\-Bounds\-:, R\-M\-Fractal\-Tile\-Projection\-::init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:, R\-M\-S\-M\-Tile\-Projection\-::init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:, init\-With\-String\-:\-In\-Bounds\-:, R\-M\-Mercator\-To\-Screen\-Projection\-::project\-X\-Y\-Point\-:with\-Meters\-Per\-Pixel\-: , 以及 wrap\-Point\-Horizontally\-:.
+
+\hypertarget{interface_r_m_projection_aa7aa460042ee6b011d23d20cc0eb1fa9}{\index{R\-M\-Projection@{R\-M\-Projection}!projection\-Wraps\-Horizontally@{projection\-Wraps\-Horizontally}}
+\index{projection\-Wraps\-Horizontally@{projection\-Wraps\-Horizontally}!RMProjection@{R\-M\-Projection}}
+\subsubsection[{projection\-Wraps\-Horizontally}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) projection\-Wraps\-Horizontally\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_projection_aa7aa460042ee6b011d23d20cc0eb1fa9}
+
+
+hardcoded to Y\-E\-S in \hyperlink{interface_r_m_projection_a3cb82d1e81597dd3a3039168d0be8d9c}{init\-With\-String\-:\-In\-Bounds\-:} 
+
+
+
+参考自 init\-With\-String\-:\-In\-Bounds\-:, O\-S\-G\-B , 以及 wrap\-Point\-Horizontally\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_projection_8h}{R\-M\-Projection.\-h}\item 
+Map/\hyperlink{_r_m_projection_8m}{R\-M\-Projection.\-m}\end{DoxyCompactItemize}

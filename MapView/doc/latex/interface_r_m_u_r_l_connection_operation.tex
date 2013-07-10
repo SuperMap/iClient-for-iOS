@@ -1,0 +1,149 @@
+\hypertarget{interface_r_m_u_r_l_connection_operation}{\section{R\-M\-U\-R\-L\-Connection\-Operation类 参考}
+\label{interface_r_m_u_r_l_connection_operation}\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-U\-R\-L\-Connection\-Operation.\-h$>$}
+
+类 R\-M\-U\-R\-L\-Connection\-Operation 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.744548cm]{interface_r_m_u_r_l_connection_operation}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_a99e246b97aa1ce926aeffb8527c28f45}{cancel}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_a7cbdc7875272c5788b349dadd929628f}{complete\-Operation}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_aad4772ff45f348cc0110fecc1bb99a07}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_a2bd62715f43a6a88daefa7a91ec1262e}{init}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_a6593c73d8cac84e1809f10bb09707a80}{init\-With\-Request\-:delegate\-:}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_a853a42e287738292fa4c5ff3e0734c0e}{is\-Concurrent}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_a88f95bcbf94aeccde612e66ee2174ac1}{is\-Executing}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_a36a00992e494be65b6983c7604962fb4}{is\-Finished}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_u_r_l_connection_operation_ac8662842dc515fd766451ae8fbe821d8}{start}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-U\-R\-L\-Connection $\ast$ \hyperlink{interface_r_m_u_r_l_connection_operation_a551180152eb1bb5b04c98725b0dd4d30}{connection}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_u_r_l_connection_operation_ac4a9a08ca30154fee1793cf02ef3cc16}{executing}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_u_r_l_connection_operation_ad9ecd6fc75c7bc1924297f87e31048cf}{finished}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+N\-S\-Port $\ast$ \hyperlink{interface_r_m_u_r_l_connection_operation_a6b97cf5a5f0994f84ee5a0e8e43faeb7}{port}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_u_r_l_connection_operation_a99e246b97aa1ce926aeffb8527c28f45}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!cancel@{cancel}}
+\index{cancel@{cancel}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{cancel}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) cancel 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_a99e246b97aa1ce926aeffb8527c28f45}
+
+
+参考自 cancel, R\-M\-Web\-Tile\-Image\-::cancel\-Loading, R\-M\-Web\-Tile\-Image\-::connection\-Did\-Finish\-Loading\-: , 以及 R\-M\-Web\-Tile\-Image\-::request\-Tile.
+
+\hypertarget{interface_r_m_u_r_l_connection_operation_a7cbdc7875272c5788b349dadd929628f}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!complete\-Operation@{complete\-Operation}}
+\index{complete\-Operation@{complete\-Operation}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{complete\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) complete\-Operation 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_a7cbdc7875272c5788b349dadd929628f}
+
+
+参考自 cancel.
+
+\hypertarget{interface_r_m_u_r_l_connection_operation_aad4772ff45f348cc0110fecc1bb99a07}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_aad4772ff45f348cc0110fecc1bb99a07}
+\hypertarget{interface_r_m_u_r_l_connection_operation_a2bd62715f43a6a88daefa7a91ec1262e}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!init@{init}}
+\index{init@{init}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_a2bd62715f43a6a88daefa7a91ec1262e}
+\hypertarget{interface_r_m_u_r_l_connection_operation_a6593c73d8cac84e1809f10bb09707a80}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!init\-With\-Request\-:delegate\-:@{init\-With\-Request\-:delegate\-:}}
+\index{init\-With\-Request\-:delegate\-:@{init\-With\-Request\-:delegate\-:}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{init\-With\-Request\-:delegate\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Request\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-R\-L\-Request $\ast$)}]{request}
+\item[{delegate:(id)}]{delegate}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_u_r_l_connection_operation_a6593c73d8cac84e1809f10bb09707a80}
+\hypertarget{interface_r_m_u_r_l_connection_operation_a853a42e287738292fa4c5ff3e0734c0e}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!is\-Concurrent@{is\-Concurrent}}
+\index{is\-Concurrent@{is\-Concurrent}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{is\-Concurrent}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-Concurrent 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_a853a42e287738292fa4c5ff3e0734c0e}
+\hypertarget{interface_r_m_u_r_l_connection_operation_a88f95bcbf94aeccde612e66ee2174ac1}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!is\-Executing@{is\-Executing}}
+\index{is\-Executing@{is\-Executing}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{is\-Executing}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-Executing 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_a88f95bcbf94aeccde612e66ee2174ac1}
+
+
+参考自 cancel.
+
+\hypertarget{interface_r_m_u_r_l_connection_operation_a36a00992e494be65b6983c7604962fb4}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!is\-Finished@{is\-Finished}}
+\index{is\-Finished@{is\-Finished}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{is\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) is\-Finished 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_a36a00992e494be65b6983c7604962fb4}
+\hypertarget{interface_r_m_u_r_l_connection_operation_ac8662842dc515fd766451ae8fbe821d8}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!start@{start}}
+\index{start@{start}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) start 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_ac8662842dc515fd766451ae8fbe821d8}
+
+
+参考自 start.
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_u_r_l_connection_operation_a551180152eb1bb5b04c98725b0dd4d30}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!connection@{connection}}
+\index{connection@{connection}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{connection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-R\-L\-Connection$\ast$) connection\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}, {\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_a551180152eb1bb5b04c98725b0dd4d30}
+\hypertarget{interface_r_m_u_r_l_connection_operation_ac4a9a08ca30154fee1793cf02ef3cc16}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!executing@{executing}}
+\index{executing@{executing}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{executing}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) executing\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_ac4a9a08ca30154fee1793cf02ef3cc16}
+\hypertarget{interface_r_m_u_r_l_connection_operation_ad9ecd6fc75c7bc1924297f87e31048cf}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!finished@{finished}}
+\index{finished@{finished}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{finished}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) finished\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_ad9ecd6fc75c7bc1924297f87e31048cf}
+\hypertarget{interface_r_m_u_r_l_connection_operation_a6b97cf5a5f0994f84ee5a0e8e43faeb7}{\index{R\-M\-U\-R\-L\-Connection\-Operation@{R\-M\-U\-R\-L\-Connection\-Operation}!port@{port}}
+\index{port@{port}!RMURLConnectionOperation@{R\-M\-U\-R\-L\-Connection\-Operation}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Port$\ast$) port\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}, {\ttfamily [implementation]}}}\label{interface_r_m_u_r_l_connection_operation_a6b97cf5a5f0994f84ee5a0e8e43faeb7}
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_u_r_l_connection_operation_8h}{R\-M\-U\-R\-L\-Connection\-Operation.\-h}\item 
+Map/\hyperlink{_r_m_u_r_l_connection_operation_8m}{R\-M\-U\-R\-L\-Connection\-Operation.\-m}\end{DoxyCompactItemize}

@@ -1,0 +1,357 @@
+\hypertarget{interface_r_m_cached_tile_source}{\section{R\-M\-Cached\-Tile\-Source类 参考}
+\label{interface_r_m_cached_tile_source}\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}}
+}
+
+
+Simple wrapper around a tilesource which checks the image cache first.  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-Cached\-Tile\-Source.\-h$>$}
+
+类 R\-M\-Cached\-Tile\-Source 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_r_m_cached_tile_source}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_cached_tile_source_acbfb800e18f97d6b0aa62a1e51c4a34d}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_cached_tile_source_a2a17377fc15beaea12ef271cc0c7910b}{did\-Receive\-Memory\-Warning}
+\item 
+(id) -\/ \hyperlink{interface_r_m_cached_tile_source_a67899f6340f78fad6ec0e9fec134165d}{init\-With\-Source\-:}
+\item 
+(\hyperlink{struct_r_m_spherical_trapezium}{R\-M\-Spherical\-Trapezium}) -\/ \hyperlink{interface_r_m_cached_tile_source_a18bb86664692698478705d78ff100bf1}{latitude\-Longitude\-Bounding\-Box}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_a09c61195fbb3b3b41d025b092c830455}{legend}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_ad9da1c346c64d04310f4f1c3a1ec43e7}{long\-Attribution}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_ad9402dc9453199fcb71127d0ff137ab8}{long\-Description}
+\item 
+(float) -\/ \hyperlink{interface_r_m_cached_tile_source_a0946e8601ca057c889341e6238ea12b8}{max\-Zoom}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id$<$ \hyperlink{protocol_r_m_mercator_to_tile_projection-p}{R\-M\-Mercator\-To\-Tile\-Projection} $>$) -\/ \hyperlink{interface_r_m_cached_tile_source_a611ec223df3c49d9ccb6b29670e7c65a}{mercator\-To\-Tile\-Projection}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(float) -\/ \hyperlink{interface_r_m_cached_tile_source_adf9a9a4074baf19c89210b1fca0ed32f}{min\-Zoom}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{interface_r_m_projection}{R\-M\-Projection} $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_a7fd23ce549a314c91034127da0ce5c8a}{projection}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_cached_tile_source_a07c40b88ceb0b2d8fed56f35ea52e82a}{remove\-All\-Cached\-Images}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em clear all images from the in-\/memory and on-\/disk image caches \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_cached_tile_source_abfc94f15a69698f3ff8c127a66bda7a4}{set\-Max\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_cached_tile_source_af62c9fa10f55febeef1054ae644cc045}{set\-Min\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_addd642460ef82b300d67d60813d6338d}{short\-Attribution}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_a70953c71ca922e6dd6093a94723efbb5}{short\-Name}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_a4a4b44c6e1899ad11e9a72e21502861a}{tile\-File\-:}
+\item 
+(\hyperlink{interface_r_m_tile_image}{R\-M\-Tile\-Image} $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_a21743e9d45e9ce2accf27dd098e1b2f0}{tile\-Image\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_a49619cfba67b331c19bdab55cfe3475f}{tile\-Path}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_a96037f61390856cb9dda7e955ff1f551}{tile\-U\-R\-L\-:}
+\item 
+(id$<$ \hyperlink{protocol_r_m_tile_source-p}{R\-M\-Tile\-Source} $>$) -\/ \hyperlink{interface_r_m_cached_tile_source_a07fd06ac405d532aba3653e965b279a1}{underlying\-Tile\-Source}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_cached_tile_source_aa6226fe9784e2f6b47b45ea24d7c062f}{unique\-Tilecache\-Key}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{interface_r_m_cached_tile_source}{R\-M\-Cached\-Tile\-Source} $\ast$) + \hyperlink{interface_r_m_cached_tile_source_a3ae5adfa3d611c7fef0080813e9cf766}{cached\-Tile\-Source\-With\-Source\-:}
+\begin{DoxyCompactList}\small\item\em Bleah ugly name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_r_m_tile_cache}{R\-M\-Tile\-Cache} $\ast$ \hyperlink{interface_r_m_cached_tile_source_a6bfbfd532bdc05e0ea95a67db19574fd}{cache}
+\item 
+id$<$ \hyperlink{protocol_r_m_tile_source-p}{R\-M\-Tile\-Source} $>$ \hyperlink{interface_r_m_cached_tile_source_a1d18d0de8f4c6bfd360c79e211a07ca9}{tile\-Source}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Simple wrapper around a tilesource which checks the image cache first. 
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_cached_tile_source_a3ae5adfa3d611c7fef0080813e9cf766}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!cached\-Tile\-Source\-With\-Source\-:@{cached\-Tile\-Source\-With\-Source\-:}}
+\index{cached\-Tile\-Source\-With\-Source\-:@{cached\-Tile\-Source\-With\-Source\-:}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{cached\-Tile\-Source\-With\-Source\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ ({\bf R\-M\-Cached\-Tile\-Source} $\ast$) cached\-Tile\-Source\-With\-Source\-: 
+\begin{DoxyParamCaption}
+\item[{(id$<${\bf R\-M\-Tile\-Source}$>$)}]{source}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a3ae5adfa3d611c7fef0080813e9cf766}
+
+
+Bleah ugly name. 
+
+
+
+参考自 R\-M\-Map\-Contents\-::set\-Tile\-Source\-:.
+
+\hypertarget{interface_r_m_cached_tile_source_acbfb800e18f97d6b0aa62a1e51c4a34d}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_acbfb800e18f97d6b0aa62a1e51c4a34d}
+\hypertarget{interface_r_m_cached_tile_source_a2a17377fc15beaea12ef271cc0c7910b}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}}
+\index{did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{did\-Receive\-Memory\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\-Receive\-Memory\-Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a2a17377fc15beaea12ef271cc0c7910b}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a70eade96883de23124c3f86321685b52}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a67899f6340f78fad6ec0e9fec134165d}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!init\-With\-Source\-:@{init\-With\-Source\-:}}
+\index{init\-With\-Source\-:@{init\-With\-Source\-:}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{init\-With\-Source\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Source\-: 
+\begin{DoxyParamCaption}
+\item[{(id$<${\bf R\-M\-Tile\-Source}$>$)}]{source}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a67899f6340f78fad6ec0e9fec134165d}
+\hypertarget{interface_r_m_cached_tile_source_a18bb86664692698478705d78ff100bf1}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!latitude\-Longitude\-Bounding\-Box@{latitude\-Longitude\-Bounding\-Box}}
+\index{latitude\-Longitude\-Bounding\-Box@{latitude\-Longitude\-Bounding\-Box}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{latitude\-Longitude\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Spherical\-Trapezium}) latitude\-Longitude\-Bounding\-Box 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_a18bb86664692698478705d78ff100bf1}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a740893daebd1fe8e0a463e64a28816dd}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a09c61195fbb3b3b41d025b092c830455}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!legend@{legend}}
+\index{legend@{legend}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{legend}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) legend 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a09c61195fbb3b3b41d025b092c830455}
+
+
+Provided by category \hyperlink{category_r_m_cached_tile_source_07_r_m_tile_stream_source_extensions_08_a09c61195fbb3b3b41d025b092c830455}{R\-M\-Cached\-Tile\-Source(\-R\-M\-Tile\-Stream\-Source\-Extensions)}.
+
+\hypertarget{interface_r_m_cached_tile_source_ad9da1c346c64d04310f4f1c3a1ec43e7}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!long\-Attribution@{long\-Attribution}}
+\index{long\-Attribution@{long\-Attribution}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{long\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_ad9da1c346c64d04310f4f1c3a1ec43e7}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_adff372c4c777906e56b90a61895d2ff4}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_ad9402dc9453199fcb71127d0ff137ab8}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!long\-Description@{long\-Description}}
+\index{long\-Description@{long\-Description}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{long\-Description}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Description 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_ad9402dc9453199fcb71127d0ff137ab8}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a1f9b03c3dac588a98b050afe3a71dcfa}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a0946e8601ca057c889341e6238ea12b8}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!max\-Zoom@{max\-Zoom}}
+\index{max\-Zoom@{max\-Zoom}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{max\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) max\-Zoom 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_a0946e8601ca057c889341e6238ea12b8}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a7d1ecfedd45c8ac433f972f38e7ac9a4}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a611ec223df3c49d9ccb6b29670e7c65a}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!mercator\-To\-Tile\-Projection@{mercator\-To\-Tile\-Projection}}
+\index{mercator\-To\-Tile\-Projection@{mercator\-To\-Tile\-Projection}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{mercator\-To\-Tile\-Projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf R\-M\-Mercator\-To\-Tile\-Projection} $>$) mercator\-To\-Tile\-Projection 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_a611ec223df3c49d9ccb6b29670e7c65a}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a5086edf762a1756058c665c3a9b0d26f}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_adf9a9a4074baf19c89210b1fca0ed32f}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!min\-Zoom@{min\-Zoom}}
+\index{min\-Zoom@{min\-Zoom}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{min\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) min\-Zoom 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_adf9a9a4074baf19c89210b1fca0ed32f}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a7cd043d2bc55eded244b4c5da41dd909}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a7fd23ce549a314c91034127da0ce5c8a}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!projection@{projection}}
+\index{projection@{projection}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projection} $\ast$) projection 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_a7fd23ce549a314c91034127da0ce5c8a}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a75c20205e72db39aa01943d8b6d8fc29}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a07c40b88ceb0b2d8fed56f35ea52e82a}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}}
+\index{remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{remove\-All\-Cached\-Images}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) remove\-All\-Cached\-Images 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_a07c40b88ceb0b2d8fed56f35ea52e82a}
+
+
+clear all images from the in-\/memory and on-\/disk image caches 
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000052}{Bug}]This method belongs on \hyperlink{interface_r_m_cached_tile_source}{R\-M\-Cached\-Tile\-Source}, not on \hyperlink{protocol_r_m_tile_source-p}{R\-M\-Tile\-Source}, because an \hyperlink{protocol_r_m_tile_source-p}{R\-M\-Tile\-Source} doesn't have a cache. \end{DoxyRefDesc}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_aa5c4555fb2500e5826d5558985d4ee3c}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_abfc94f15a69698f3ff8c127a66bda7a4}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!set\-Max\-Zoom\-:@{set\-Max\-Zoom\-:}}
+\index{set\-Max\-Zoom\-:@{set\-Max\-Zoom\-:}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{set\-Max\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Max\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{a\-Max\-Zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_abfc94f15a69698f3ff8c127a66bda7a4}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_afd2310f2b3b95e91de2ef530ee5d5122}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_af62c9fa10f55febeef1054ae644cc045}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!set\-Min\-Zoom\-:@{set\-Min\-Zoom\-:}}
+\index{set\-Min\-Zoom\-:@{set\-Min\-Zoom\-:}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{set\-Min\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Min\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{a\-Min\-Zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_af62c9fa10f55febeef1054ae644cc045}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_ad8b2d3ab319784223970f215f6dd2f16}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_addd642460ef82b300d67d60813d6338d}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!short\-Attribution@{short\-Attribution}}
+\index{short\-Attribution@{short\-Attribution}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{short\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_addd642460ef82b300d67d60813d6338d}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_afd67cfacb812cd3216ef1309297e264d}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a70953c71ca922e6dd6093a94723efbb5}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!short\-Name@{short\-Name}}
+\index{short\-Name@{short\-Name}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{short\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a70953c71ca922e6dd6093a94723efbb5}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_ae0a98ebf46579f4c29d434322d25e64e}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a4a4b44c6e1899ad11e9a72e21502861a}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!tile\-File\-:@{tile\-File\-:}}
+\index{tile\-File\-:@{tile\-File\-:}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{tile\-File\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-File\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a4a4b44c6e1899ad11e9a72e21502861a}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_adc40bd2f04352819fc05e32d4209a2ca}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a21743e9d45e9ce2accf27dd098e1b2f0}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!tile\-Image\-:@{tile\-Image\-:}}
+\index{tile\-Image\-:@{tile\-Image\-:}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{tile\-Image\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Image} $\ast$) tile\-Image\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_a21743e9d45e9ce2accf27dd098e1b2f0}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_acf4ee01e3c1606d46a2ec8fe52b0d029}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a49619cfba67b331c19bdab55cfe3475f}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!tile\-Path@{tile\-Path}}
+\index{tile\-Path@{tile\-Path}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{tile\-Path}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-Path 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a49619cfba67b331c19bdab55cfe3475f}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_ae9fc8d2cccf8a7ffce2a0f7837140b9b}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a96037f61390856cb9dda7e955ff1f551}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}}
+\index{tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{tile\-U\-R\-L\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-U\-R\-L\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a96037f61390856cb9dda7e955ff1f551}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_af7ca2e2fb8e8cc4cb17433ffdc105230}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_cached_tile_source_a07fd06ac405d532aba3653e965b279a1}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!underlying\-Tile\-Source@{underlying\-Tile\-Source}}
+\index{underlying\-Tile\-Source@{underlying\-Tile\-Source}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{underlying\-Tile\-Source}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf R\-M\-Tile\-Source} $>$) underlying\-Tile\-Source 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_cached_tile_source_a07fd06ac405d532aba3653e965b279a1}
+\hypertarget{interface_r_m_cached_tile_source_aa6226fe9784e2f6b47b45ea24d7c062f}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!unique\-Tilecache\-Key@{unique\-Tilecache\-Key}}
+\index{unique\-Tilecache\-Key@{unique\-Tilecache\-Key}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{unique\-Tilecache\-Key}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) unique\-Tilecache\-Key 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_cached_tile_source_aa6226fe9784e2f6b47b45ea24d7c062f}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a1838a34e9341efe7c76252e131824261}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_cached_tile_source_a6bfbfd532bdc05e0ea95a67db19574fd}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!cache@{cache}}
+\index{cache@{cache}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{cache}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Cache}$\ast$) cache\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_cached_tile_source_a6bfbfd532bdc05e0ea95a67db19574fd}
+
+
+参考自 dealloc, did\-Receive\-Memory\-Warning, init\-With\-Source\-:, remove\-All\-Cached\-Images , 以及 tile\-Image\-:.
+
+\hypertarget{interface_r_m_cached_tile_source_a1d18d0de8f4c6bfd360c79e211a07ca9}{\index{R\-M\-Cached\-Tile\-Source@{R\-M\-Cached\-Tile\-Source}!tile\-Source@{tile\-Source}}
+\index{tile\-Source@{tile\-Source}!RMCachedTileSource@{R\-M\-Cached\-Tile\-Source}}
+\subsubsection[{tile\-Source}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<${\bf R\-M\-Tile\-Source}$>$) tile\-Source\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_cached_tile_source_a1d18d0de8f4c6bfd360c79e211a07ca9}
+
+
+参考自 dealloc, did\-Receive\-Memory\-Warning, init\-With\-Source\-:, latitude\-Longitude\-Bounding\-Box, legend, long\-Attribution, long\-Description, max\-Zoom, mercator\-To\-Tile\-Projection, min\-Zoom, projection, set\-Max\-Zoom\-:, set\-Min\-Zoom\-:, short\-Attribution, short\-Name, tile\-File\-:, tile\-Image\-:, tile\-Path, tile\-U\-R\-L\-:, underlying\-Tile\-Source , 以及 unique\-Tilecache\-Key.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_cached_tile_source_8h}{R\-M\-Cached\-Tile\-Source.\-h}\item 
+Map/\hyperlink{_r_m_cached_tile_source_8m}{R\-M\-Cached\-Tile\-Source.\-m}\end{DoxyCompactItemize}

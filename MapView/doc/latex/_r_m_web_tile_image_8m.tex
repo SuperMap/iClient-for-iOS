@@ -1,0 +1,37 @@
+\hypertarget{_r_m_web_tile_image_8m}{\section{Map/\-R\-M\-Web\-Tile\-Image.m 文件参考}
+\label{_r_m_web_tile_image_8m}\index{Map/\-R\-M\-Web\-Tile\-Image.\-m@{Map/\-R\-M\-Web\-Tile\-Image.\-m}}
+}
+{\ttfamily \#import \char`\"{}R\-M\-Web\-Tile\-Image.\-h\char`\"{}}\\*
+{\ttfamily \#import $<$Quartz\-Core/\-C\-A\-Layer.\-h$>$}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Map\-Contents.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Tile\-Loader.\-h\char`\"{}}\\*
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+static N\-S\-Operation\-Queue $\ast$ \hyperlink{_r_m_web_tile_image_8m_ab4e0db15faff7dd3ba01c7c33c5394ff}{\-\_\-queue} = nil
+\item 
+N\-S\-String $\ast$ \hyperlink{_r_m_web_tile_image_8m_aa13659b5405d2b496e255aa4415d50d8}{R\-M\-Web\-Tile\-Image\-Error\-Domain} = @\char`\"{}R\-M\-Web\-Tile\-Image\-Error\-Domain\char`\"{}
+\item 
+N\-S\-String $\ast$ \hyperlink{_r_m_web_tile_image_8m_ae036604641b96ee72461e4be6eb610ed}{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key} = @\char`\"{}R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key\char`\"{}
+\item 
+N\-S\-String $\ast$ \hyperlink{_r_m_web_tile_image_8m_a8290f75a7d8ebad3d9e975bb43dec928}{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key} = @\char`\"{}R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{变量说明}
+\hypertarget{_r_m_web_tile_image_8m_ab4e0db15faff7dd3ba01c7c33c5394ff}{\index{R\-M\-Web\-Tile\-Image.\-m@{R\-M\-Web\-Tile\-Image.\-m}!\-\_\-queue@{\-\_\-queue}}
+\index{\-\_\-queue@{\-\_\-queue}!RMWebTileImage.m@{R\-M\-Web\-Tile\-Image.\-m}}
+\subsubsection[{\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-Operation\-Queue$\ast$ \-\_\-queue = nil\hspace{0.3cm}{\ttfamily [static]}}}\label{_r_m_web_tile_image_8m_ab4e0db15faff7dd3ba01c7c33c5394ff}
+
+
+参考自 R\-M\-Web\-Tile\-Image\-::initialize.
+
+\hypertarget{_r_m_web_tile_image_8m_aa13659b5405d2b496e255aa4415d50d8}{\index{R\-M\-Web\-Tile\-Image.\-m@{R\-M\-Web\-Tile\-Image.\-m}!R\-M\-Web\-Tile\-Image\-Error\-Domain@{R\-M\-Web\-Tile\-Image\-Error\-Domain}}
+\index{R\-M\-Web\-Tile\-Image\-Error\-Domain@{R\-M\-Web\-Tile\-Image\-Error\-Domain}!RMWebTileImage.m@{R\-M\-Web\-Tile\-Image.\-m}}
+\subsubsection[{R\-M\-Web\-Tile\-Image\-Error\-Domain}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-String$\ast$ R\-M\-Web\-Tile\-Image\-Error\-Domain = @\char`\"{}R\-M\-Web\-Tile\-Image\-Error\-Domain\char`\"{}}}\label{_r_m_web_tile_image_8m_aa13659b5405d2b496e255aa4415d50d8}
+\hypertarget{_r_m_web_tile_image_8m_ae036604641b96ee72461e4be6eb610ed}{\index{R\-M\-Web\-Tile\-Image.\-m@{R\-M\-Web\-Tile\-Image.\-m}!R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key@{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key}}
+\index{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key@{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key}!RMWebTileImage.m@{R\-M\-Web\-Tile\-Image.\-m}}
+\subsubsection[{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-String$\ast$ R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key = @\char`\"{}R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key\char`\"{}}}\label{_r_m_web_tile_image_8m_ae036604641b96ee72461e4be6eb610ed}
+\hypertarget{_r_m_web_tile_image_8m_a8290f75a7d8ebad3d9e975bb43dec928}{\index{R\-M\-Web\-Tile\-Image.\-m@{R\-M\-Web\-Tile\-Image.\-m}!R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key@{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key}}
+\index{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key@{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key}!RMWebTileImage.m@{R\-M\-Web\-Tile\-Image.\-m}}
+\subsubsection[{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-String$\ast$ R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key = @\char`\"{}R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key\char`\"{}}}\label{_r_m_web_tile_image_8m_a8290f75a7d8ebad3d9e975bb43dec928}

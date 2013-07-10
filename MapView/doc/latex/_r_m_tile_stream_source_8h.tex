@@ -1,0 +1,70 @@
+\hypertarget{_r_m_tile_stream_source_8h}{\section{Map/\-R\-M\-Tile\-Stream\-Source.h 文件参考}
+\label{_r_m_tile_stream_source_8h}\index{Map/\-R\-M\-Tile\-Stream\-Source.\-h@{Map/\-R\-M\-Tile\-Stream\-Source.\-h}}
+}
+{\ttfamily \#import \char`\"{}R\-M\-Abstract\-Mercator\-Web\-Source.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Cached\-Tile\-Source.\-h\char`\"{}}\\*
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+category \hyperlink{category_r_m_cached_tile_source_07_r_m_tile_stream_source_extensions_08}{R\-M\-Cached\-Tile\-Source(\-R\-M\-Tile\-Stream\-Source\-Extensions)}
+\item 
+class \hyperlink{interface_r_m_tile_stream_source}{R\-M\-Tile\-Stream\-Source}
+\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_r_m_tile_stream_source_8h_a7e59c981080ad840ddc3ed4d362effbc}{k\-Tile\-Stream\-Default\-Lat\-Lon\-Bounding\-Box}
+\item 
+\#define \hyperlink{_r_m_tile_stream_source_8h_ae2ba7063d9948a6ac85aac27f6ad9cd0}{k\-Tile\-Stream\-Default\-Max\-Tile\-Zoom}~18
+\item 
+\#define \hyperlink{_r_m_tile_stream_source_8h_a40e4b02e528fa67997a1d8a05f519774}{k\-Tile\-Stream\-Default\-Min\-Tile\-Zoom}~0
+\item 
+\#define \hyperlink{_r_m_tile_stream_source_8h_a6120b795d5769118e4a7047e68d9dac0}{k\-Tile\-Stream\-Default\-Tile\-Size}~256
+\end{DoxyCompactItemize}
+\subsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4}{R\-M\-Tile\-Stream\-Layer\-Type} \{ \hyperlink{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4a37945a402401757743d33c297481d2ab}{R\-M\-Tile\-Stream\-Layer\-Type\-Baselayer} = 0, 
+\hyperlink{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4a69c7d958446c0cd8a0c627f99dc9faae}{R\-M\-Tile\-Stream\-Layer\-Type\-Overlay} = 1
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\hypertarget{_r_m_tile_stream_source_8h_a7e59c981080ad840ddc3ed4d362effbc}{\index{R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}!k\-Tile\-Stream\-Default\-Lat\-Lon\-Bounding\-Box@{k\-Tile\-Stream\-Default\-Lat\-Lon\-Bounding\-Box}}
+\index{k\-Tile\-Stream\-Default\-Lat\-Lon\-Bounding\-Box@{k\-Tile\-Stream\-Default\-Lat\-Lon\-Bounding\-Box}!RMTileStreamSource.h@{R\-M\-Tile\-Stream\-Source.\-h}}
+\subsubsection[{k\-Tile\-Stream\-Default\-Lat\-Lon\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Tile\-Stream\-Default\-Lat\-Lon\-Bounding\-Box}}\label{_r_m_tile_stream_source_8h_a7e59c981080ad840ddc3ed4d362effbc}
+{\bfseries 值\-:}
+\begin{DoxyCode}
+((\hyperlink{struct_r_m_spherical_trapezium}{RMSphericalTrapezium})\{ .northeast = \{ .latitude =  85, .longitude =  180 \}, \(\backslash\)
+                                                                     .southwest = \{ .latitude = -85, .
+      longitude = -180 \} \})
+\end{DoxyCode}
+
+
+参考自 R\-M\-Tile\-Stream\-Source\-::covers\-Full\-World , 以及 R\-M\-Tile\-Stream\-Source\-::latitude\-Longitude\-Bounding\-Box.
+
+\hypertarget{_r_m_tile_stream_source_8h_ae2ba7063d9948a6ac85aac27f6ad9cd0}{\index{R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}!k\-Tile\-Stream\-Default\-Max\-Tile\-Zoom@{k\-Tile\-Stream\-Default\-Max\-Tile\-Zoom}}
+\index{k\-Tile\-Stream\-Default\-Max\-Tile\-Zoom@{k\-Tile\-Stream\-Default\-Max\-Tile\-Zoom}!RMTileStreamSource.h@{R\-M\-Tile\-Stream\-Source.\-h}}
+\subsubsection[{k\-Tile\-Stream\-Default\-Max\-Tile\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Tile\-Stream\-Default\-Max\-Tile\-Zoom~18}}\label{_r_m_tile_stream_source_8h_ae2ba7063d9948a6ac85aac27f6ad9cd0}
+\hypertarget{_r_m_tile_stream_source_8h_a40e4b02e528fa67997a1d8a05f519774}{\index{R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}!k\-Tile\-Stream\-Default\-Min\-Tile\-Zoom@{k\-Tile\-Stream\-Default\-Min\-Tile\-Zoom}}
+\index{k\-Tile\-Stream\-Default\-Min\-Tile\-Zoom@{k\-Tile\-Stream\-Default\-Min\-Tile\-Zoom}!RMTileStreamSource.h@{R\-M\-Tile\-Stream\-Source.\-h}}
+\subsubsection[{k\-Tile\-Stream\-Default\-Min\-Tile\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Tile\-Stream\-Default\-Min\-Tile\-Zoom~0}}\label{_r_m_tile_stream_source_8h_a40e4b02e528fa67997a1d8a05f519774}
+\hypertarget{_r_m_tile_stream_source_8h_a6120b795d5769118e4a7047e68d9dac0}{\index{R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}!k\-Tile\-Stream\-Default\-Tile\-Size@{k\-Tile\-Stream\-Default\-Tile\-Size}}
+\index{k\-Tile\-Stream\-Default\-Tile\-Size@{k\-Tile\-Stream\-Default\-Tile\-Size}!RMTileStreamSource.h@{R\-M\-Tile\-Stream\-Source.\-h}}
+\subsubsection[{k\-Tile\-Stream\-Default\-Tile\-Size}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Tile\-Stream\-Default\-Tile\-Size~256}}\label{_r_m_tile_stream_source_8h_a6120b795d5769118e4a7047e68d9dac0}
+
+
+\subsection{枚举类型说明}
+\hypertarget{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4}{\index{R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}!R\-M\-Tile\-Stream\-Layer\-Type@{R\-M\-Tile\-Stream\-Layer\-Type}}
+\index{R\-M\-Tile\-Stream\-Layer\-Type@{R\-M\-Tile\-Stream\-Layer\-Type}!RMTileStreamSource.h@{R\-M\-Tile\-Stream\-Source.\-h}}
+\subsubsection[{R\-M\-Tile\-Stream\-Layer\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf R\-M\-Tile\-Stream\-Layer\-Type}}}\label{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4}
+\begin{Desc}
+\item[枚举值]\par
+\begin{description}
+\index{R\-M\-Tile\-Stream\-Layer\-Type\-Baselayer@{R\-M\-Tile\-Stream\-Layer\-Type\-Baselayer}!R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}}\index{R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}!R\-M\-Tile\-Stream\-Layer\-Type\-Baselayer@{R\-M\-Tile\-Stream\-Layer\-Type\-Baselayer}}\item[{\em 
+\hypertarget{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4a37945a402401757743d33c297481d2ab}{R\-M\-Tile\-Stream\-Layer\-Type\-Baselayer}\label{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4a37945a402401757743d33c297481d2ab}
+}]\index{R\-M\-Tile\-Stream\-Layer\-Type\-Overlay@{R\-M\-Tile\-Stream\-Layer\-Type\-Overlay}!R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}}\index{R\-M\-Tile\-Stream\-Source.\-h@{R\-M\-Tile\-Stream\-Source.\-h}!R\-M\-Tile\-Stream\-Layer\-Type\-Overlay@{R\-M\-Tile\-Stream\-Layer\-Type\-Overlay}}\item[{\em 
+\hypertarget{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4a69c7d958446c0cd8a0c627f99dc9faae}{R\-M\-Tile\-Stream\-Layer\-Type\-Overlay}\label{_r_m_tile_stream_source_8h_ab3d605b7c268a35d197400e0963ae3a4a69c7d958446c0cd8a0c627f99dc9faae}
+}]\end{description}
+\end{Desc}

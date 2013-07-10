@@ -1,0 +1,418 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage[table]{xcolor}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.2cm}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize 生成于 2013年 七月 10日 星期三 16:14:56使用  Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize 生成于 2013年 七月 10日 星期三 16:14:56使用  Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false}
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large 参考手册}\\
+\vspace*{1cm}
+{\large 制作者 Doxygen 1.8.4}\\
+\vspace*{0.5cm}
+{\small 2013年 七月 10日 星期三 16:14:56}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{i\-O\-S S\-D\-K}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{弃用列表}
+\label{deprecated}
+\hypertarget{deprecated}{}
+\input{deprecated}
+\chapter{Bug 列表}
+\label{bug}
+\hypertarget{bug}{}
+\input{bug}
+\chapter{继承关系索引}
+\input{hierarchy}
+\chapter{类索引}
+\input{annotated}
+\chapter{文件索引}
+\input{files}
+\chapter{类说明}
+\input{interface_datasource_connection_info}
+\input{interface_filter_parameter}
+\input{interface_join_item}
+\input{interface_link_item}
+\input{category_n_s_user_defaults_07_route_me_08}
+\input{interface_query_by_bounds_parameters}
+\input{interface_query_by_bounds_service}
+\input{interface_query_by_distance_parameters}
+\input{interface_query_by_distance_service}
+\input{interface_query_by_geometry_parameters}
+\input{interface_query_by_geometry_service}
+\input{interface_query_by_s_q_l_parameters}
+\input{interface_query_by_s_q_l_service}
+\input{interface_query_parameters}
+\input{interface_query_result}
+\input{interface_query_service}
+\input{protocol_query_service-p}
+\input{interface_recordset}
+\input{interface_r_m_abstract_mercator_web_source}
+\input{protocol_r_m_abstract_mercator_web_source-p}
+\input{interface_r_m_cached_tile_source}
+\input{category_r_m_cached_tile_source_07_r_m_tile_stream_source_extensions_08}
+\input{interface_r_m_circle}
+\input{interface_r_m_cloud_made_map_source}
+\input{interface_r_m_cloud_map_source}
+\input{interface_r_m_configuration}
+\input{interface_r_m_core_animation_renderer}
+\input{interface_r_m_database_cache}
+\input{interface_r_m_d_b_map_source}
+\input{category_r_m_d_b_map_source_07_private_methods_08}
+\input{interface_r_m_d_b_tile_image}
+\input{interface_r_m_file_tile_image}
+\input{interface_r_m_foundation_tests}
+\input{interface_r_m_fractal_tile_projection}
+\input{interface_r_m_geo_hash}
+\input{struct_r_m_gesture_details}
+\input{struct_r_m_lat_long}
+\input{interface_r_m_layer_collection}
+\input{interface_r_m_map_contents}
+\input{category_r_m_map_contents_07_internal_08}
+\input{category_r_m_map_contents_07_private_methods_08}
+\input{protocol_r_m_map_contents_animation_callback-p}
+\input{protocol_r_m_map_contents_facade-p}
+\input{interface_r_m_map_layer}
+\input{interface_r_m_map_quest_o_s_m_source}
+\input{interface_r_m_map_renderer}
+\input{interface_r_m_map_view}
+\input{category_r_m_map_view_07_private_methods_08}
+\input{protocol_r_m_map_view_delegate-p}
+\input{interface_r_m_marker}
+\input{interface_r_m_marker_manager}
+\input{interface_r_m_m_b_tiles_tile_source}
+\input{interface_r_m_memory_cache}
+\input{interface_r_m_mercator_to_screen_projection}
+\input{protocol_r_m_mercator_to_tile_projection-p}
+\input{protocol_r_m_moving_map_layer-p}
+\input{interface_r_m_open_aerial_map_source}
+\input{interface_r_m_open_cycle_map_source}
+\input{interface_r_m_open_street_map_source}
+\input{interface_r_m_path}
+\input{struct_r_m_projected_point}
+\input{struct_r_m_projected_rect}
+\input{struct_r_m_projected_size}
+\input{interface_r_m_projection}
+\input{interface_r_m_s_m_layer_info}
+\input{interface_r_m_s_m_measure_parameters}
+\input{interface_r_m_s_m_measure_service}
+\input{interface_r_m_s_m_tile_projection}
+\input{interface_r_m_s_m_tile_source}
+\input{interface_r_m_spatial_cloud_map_source}
+\input{struct_r_m_spherical_trapezium}
+\input{struct_r_m_tile}
+\input{interface_r_m_tile_cache}
+\input{category_r_m_tile_cache_07_configuration_08}
+\input{protocol_r_m_tile_cache-p}
+\input{interface_r_m_tile_cache_d_a_o}
+\input{interface_r_m_tile_cache_source}
+\input{interface_r_m_tiled_layer_controller}
+\input{interface_r_m_tile_image}
+\input{interface_r_m_tile_image_set}
+\input{protocol_r_m_tile_image_set_delegate-p}
+\input{interface_r_m_tile_loader}
+\input{interface_r_m_tile_map_service_source}
+\input{struct_r_m_tile_point}
+\input{interface_r_m_tile_proxy}
+\input{struct_r_m_tile_rect}
+\input{protocol_r_m_tile_source-p}
+\input{interface_r_m_tile_stream_source}
+\input{protocol_r_m_tiles_update_delegate-p}
+\input{interface_r_m_transform}
+\input{interface_r_m_u_r_l_connection_operation}
+\input{interface_r_m_virtual_earth_source}
+\input{interface_r_m_web_tile_image}
+\input{interface_r_m_w_m_s}
+\input{interface_r_m_w_m_s_source}
+\input{interface_r_m_yahoo_map_source}
+\input{interface_route_me_tests}
+\input{interface_server_feature}
+\input{interface_server_geometry}
+\chapter{文件说明}
+\input{_datasource_connection_info_8h}
+\input{_datasource_connection_info_8m}
+\input{_filter_parameter_8h}
+\input{_filter_parameter_8m}
+\input{_join_item_8h}
+\input{_join_item_8m}
+\input{_link_item_8h}
+\input{_link_item_8m}
+\input{_n_s_user_defaults_09_route_me_8h}
+\input{_n_s_user_defaults_09_route_me_8m}
+\input{_query_by_bounds_parameters_8h}
+\input{_query_by_bounds_parameters_8m}
+\input{_query_by_bounds_service_8h}
+\input{_query_by_bounds_service_8m}
+\input{_query_by_distance_parameters_8h}
+\input{_query_by_distance_parameters_8m}
+\input{_query_by_distance_service_8h}
+\input{_query_by_distance_service_8m}
+\input{_query_by_geometry_parameters_8h}
+\input{_query_by_geometry_parameters_8m}
+\input{_query_by_geometry_service_8h}
+\input{_query_by_geometry_service_8m}
+\input{_query_by_s_q_l_parameters_8h}
+\input{_query_by_s_q_l_parameters_8m}
+\input{_query_by_s_q_l_service_8h}
+\input{_query_by_s_q_l_service_8m}
+\input{_query_parameters_8h}
+\input{_query_parameters_8m}
+\input{_query_result_8h}
+\input{_query_result_8m}
+\input{_query_service_8h}
+\input{_query_service_8m}
+\input{_recordset_8h}
+\input{_recordset_8m}
+\input{_r_m_abstract_mercator_web_source_8h}
+\input{_r_m_abstract_mercator_web_source_8m}
+\input{_r_m_cached_tile_source_8h}
+\input{_r_m_cached_tile_source_8m}
+\input{_r_m_circle_8h}
+\input{_r_m_circle_8m}
+\input{_r_m_cloud_made_map_source_8h}
+\input{_r_m_cloud_made_map_source_8m}
+\input{_r_m_cloud_map_source_8h}
+\input{_r_m_cloud_map_source_8m}
+\input{_r_m_configuration_8h}
+\input{_r_m_configuration_8m}
+\input{_r_m_core_animation_renderer_8h}
+\input{_r_m_core_animation_renderer_8m}
+\input{_r_m_database_cache_8h}
+\input{_r_m_database_cache_8m}
+\input{_r_m_d_b_map_source_8h}
+\input{_r_m_d_b_map_source_8m}
+\input{_r_m_d_b_tile_image_8h}
+\input{_r_m_d_b_tile_image_8m}
+\input{_r_m_file_tile_image_8h}
+\input{_r_m_file_tile_image_8m}
+\input{_r_m_foundation_8c}
+\input{_r_m_foundation_8h}
+\input{_r_m_fractal_tile_projection_8h}
+\input{_r_m_fractal_tile_projection_8m}
+\input{_r_m_geo_hash_8h}
+\input{_r_m_geo_hash_8m}
+\input{_r_m_global_constants_8h}
+\input{_r_m_lat_long_8h}
+\input{_r_m_layer_collection_8h}
+\input{_r_m_layer_collection_8m}
+\input{_r_m_map_contents_8h}
+\input{_r_m_map_contents_8m}
+\input{_r_m_map_layer_8h}
+\input{_r_m_map_layer_8m}
+\input{_r_m_map_quest_o_s_m_source_8h}
+\input{_r_m_map_quest_o_s_m_source_8m}
+\input{_r_m_map_renderer_8h}
+\input{_r_m_map_renderer_8m}
+\input{_r_m_map_view_8h}
+\input{_r_m_map_view_8m}
+\input{_r_m_map_view_delegate_8h}
+\input{_r_m_marker_8h}
+\input{_r_m_marker_8m}
+\input{_r_m_marker_manager_8h}
+\input{_r_m_marker_manager_8m}
+\input{_r_m_m_b_tiles_tile_source_8h}
+\input{_r_m_m_b_tiles_tile_source_8m}
+\input{_r_m_memory_cache_8h}
+\input{_r_m_memory_cache_8m}
+\input{_r_m_mercator_to_screen_projection_8h}
+\input{_r_m_mercator_to_screen_projection_8m}
+\input{_r_m_mercator_to_tile_projection_8h}
+\input{_r_m_notifications_8h}
+\input{_r_m_open_aerial_map_source_8h}
+\input{_r_m_open_aerial_map_source_8m}
+\input{_r_m_open_cycle_map_source_8h}
+\input{_r_m_open_cycle_map_source_8m}
+\input{_r_m_open_street_map_source_8h}
+\input{_r_m_open_street_map_source_8m}
+\input{_r_m_path_8h}
+\input{_r_m_path_8m}
+\input{_r_m_pixel_8c}
+\input{_r_m_pixel_8h}
+\input{_r_m_projection_8h}
+\input{_r_m_projection_8m}
+\input{_r_m_s_m_layer_info_8h}
+\input{_r_m_s_m_layer_info_8m}
+\input{_r_m_s_m_measure_parameters_8h}
+\input{_r_m_s_m_measure_parameters_8m}
+\input{_r_m_s_m_measure_service_8h}
+\input{_r_m_s_m_measure_service_8m}
+\input{_r_m_s_m_tile_projection_8h}
+\input{_r_m_s_m_tile_projection_8m}
+\input{_r_m_s_m_tile_source_8h}
+\input{_r_m_s_m_tile_source_8m}
+\input{_r_m_spatial_cloud_map_source_8h}
+\input{_r_m_spatial_cloud_map_source_8m}
+\input{_r_m_tile_8c}
+\input{_r_m_tile_8h}
+\input{_r_m_tile_cache_8h}
+\input{_r_m_tile_cache_8m}
+\input{_r_m_tile_cache_d_a_o_8h}
+\input{_r_m_tile_cache_d_a_o_8m}
+\input{_r_m_tile_cache_source_8h}
+\input{_r_m_tile_cache_source_8m}
+\input{_r_m_tiled_layer_controller_8h}
+\input{_r_m_tiled_layer_controller_8m}
+\input{_r_m_tile_image_8h}
+\input{_r_m_tile_image_8m}
+\input{_r_m_tile_image_set_8h}
+\input{_r_m_tile_image_set_8m}
+\input{_r_m_tile_loader_8h}
+\input{_r_m_tile_loader_8m}
+\input{_r_m_tile_map_service_source_8h}
+\input{_r_m_tile_map_service_source_8m}
+\input{_r_m_tile_proxy_8h}
+\input{_r_m_tile_proxy_8m}
+\input{_r_m_tile_source_8h}
+\input{_r_m_tile_stream_source_8h}
+\input{_r_m_tile_stream_source_8m}
+\input{_r_m_tiles_update_delegate_8h}
+\input{_r_m_transform_8h}
+\input{_r_m_transform_8m}
+\input{_r_m_u_r_l_connection_operation_8h}
+\input{_r_m_u_r_l_connection_operation_8m}
+\input{_r_m_virtual_earth_source_8h}
+\input{_r_m_virtual_earth_source_8m}
+\input{_r_m_web_tile_image_8h}
+\input{_r_m_web_tile_image_8m}
+\input{_r_m_w_m_s_8h}
+\input{_r_m_w_m_s_8m}
+\input{_r_m_w_m_s_source_8h}
+\input{_r_m_w_m_s_source_8m}
+\input{_r_m_yahoo_map_source_8h}
+\input{_r_m_yahoo_map_source_8m}
+\input{_route_me_8h}
+\input{_server_feature_8h}
+\input{_server_feature_8m}
+\input{_server_geometry_8h}
+\input{_server_geometry_8m}
+\input{_r_m_foundation_tests_8h}
+\input{_r_m_foundation_tests_8m}
+\input{_route_me_tests_8h}
+\input{_route_me_tests_8m}
+%--- End generated contents ---
+
+% Index
+\newpage
+\phantomsection
+\addcontentsline{toc}{part}{索引}
+\printindex
+
+\end{document}

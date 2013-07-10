@@ -1,0 +1,69 @@
+\hypertarget{_r_m_web_tile_image_8h}{\section{Map/\-R\-M\-Web\-Tile\-Image.h 文件参考}
+\label{_r_m_web_tile_image_8h}\index{Map/\-R\-M\-Web\-Tile\-Image.\-h@{Map/\-R\-M\-Web\-Tile\-Image.\-h}}
+}
+{\ttfamily \#import $<$Foundation/\-Foundation.\-h$>$}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Tile\-Image.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-U\-R\-L\-Connection\-Operation.\-h\char`\"{}}\\*
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{interface_r_m_web_tile_image}{R\-M\-Web\-Tile\-Image}
+\begin{DoxyCompactList}\small\item\em \hyperlink{interface_r_m_tile_image}{R\-M\-Tile\-Image} subclass\-: a tile image loaded from a U\-R\-L. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7ae6aa3487f6f34d23a450bc255daa2066}{R\-M\-Web\-Tile\-Image\-Error\-Unexpected\-H\-T\-T\-P\-Response}, 
+\hyperlink{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7acaa66973989ddba084b9a4c7f8912e03}{R\-M\-Web\-Tile\-Image\-Error\-Zero\-Length\-Response}, 
+\hyperlink{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7af0f1cf1b4bc9e2ec1570ac42a2fcb644}{R\-M\-Web\-Tile\-Image\-Error\-Not\-Found\-Response}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+static const N\-S\-U\-Integer \hyperlink{_r_m_web_tile_image_8h_abeeaaf3f7df36a16b9d765b4ed5dd081}{k\-Max\-Concurrent\-Connections} = 5
+\item 
+static const N\-S\-U\-Integer \hyperlink{_r_m_web_tile_image_8h_ad3131cdfacd9830c7f58a0a2eed9210e}{k\-Web\-Tile\-Retries} = 30
+\item 
+N\-S\-String $\ast$ \hyperlink{_r_m_web_tile_image_8h_aa13659b5405d2b496e255aa4415d50d8}{R\-M\-Web\-Tile\-Image\-Error\-Domain}
+\item 
+N\-S\-String $\ast$ \hyperlink{_r_m_web_tile_image_8h_ae036604641b96ee72461e4be6eb610ed}{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key}
+\item 
+N\-S\-String $\ast$ \hyperlink{_r_m_web_tile_image_8h_a8290f75a7d8ebad3d9e975bb43dec928}{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key}
+\end{DoxyCompactItemize}
+
+
+\subsection{枚举类型说明}
+\hypertarget{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7}
+\begin{Desc}
+\item[枚举值]\par
+\begin{description}
+\index{R\-M\-Web\-Tile\-Image\-Error\-Unexpected\-H\-T\-T\-P\-Response@{R\-M\-Web\-Tile\-Image\-Error\-Unexpected\-H\-T\-T\-P\-Response}!R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}}\index{R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}!R\-M\-Web\-Tile\-Image\-Error\-Unexpected\-H\-T\-T\-P\-Response@{R\-M\-Web\-Tile\-Image\-Error\-Unexpected\-H\-T\-T\-P\-Response}}\item[{\em 
+\hypertarget{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7ae6aa3487f6f34d23a450bc255daa2066}{R\-M\-Web\-Tile\-Image\-Error\-Unexpected\-H\-T\-T\-P\-Response}\label{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7ae6aa3487f6f34d23a450bc255daa2066}
+}]\index{R\-M\-Web\-Tile\-Image\-Error\-Zero\-Length\-Response@{R\-M\-Web\-Tile\-Image\-Error\-Zero\-Length\-Response}!R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}}\index{R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}!R\-M\-Web\-Tile\-Image\-Error\-Zero\-Length\-Response@{R\-M\-Web\-Tile\-Image\-Error\-Zero\-Length\-Response}}\item[{\em 
+\hypertarget{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7acaa66973989ddba084b9a4c7f8912e03}{R\-M\-Web\-Tile\-Image\-Error\-Zero\-Length\-Response}\label{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7acaa66973989ddba084b9a4c7f8912e03}
+}]\index{R\-M\-Web\-Tile\-Image\-Error\-Not\-Found\-Response@{R\-M\-Web\-Tile\-Image\-Error\-Not\-Found\-Response}!R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}}\index{R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}!R\-M\-Web\-Tile\-Image\-Error\-Not\-Found\-Response@{R\-M\-Web\-Tile\-Image\-Error\-Not\-Found\-Response}}\item[{\em 
+\hypertarget{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7af0f1cf1b4bc9e2ec1570ac42a2fcb644}{R\-M\-Web\-Tile\-Image\-Error\-Not\-Found\-Response}\label{_r_m_web_tile_image_8h_adf764cbdea00d65edcd07bb9953ad2b7af0f1cf1b4bc9e2ec1570ac42a2fcb644}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{变量说明}
+\hypertarget{_r_m_web_tile_image_8h_abeeaaf3f7df36a16b9d765b4ed5dd081}{\index{R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}!k\-Max\-Concurrent\-Connections@{k\-Max\-Concurrent\-Connections}}
+\index{k\-Max\-Concurrent\-Connections@{k\-Max\-Concurrent\-Connections}!RMWebTileImage.h@{R\-M\-Web\-Tile\-Image.\-h}}
+\subsubsection[{k\-Max\-Concurrent\-Connections}]{\setlength{\rightskip}{0pt plus 5cm}const N\-S\-U\-Integer k\-Max\-Concurrent\-Connections = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{_r_m_web_tile_image_8h_abeeaaf3f7df36a16b9d765b4ed5dd081}
+\hypertarget{_r_m_web_tile_image_8h_ad3131cdfacd9830c7f58a0a2eed9210e}{\index{R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}!k\-Web\-Tile\-Retries@{k\-Web\-Tile\-Retries}}
+\index{k\-Web\-Tile\-Retries@{k\-Web\-Tile\-Retries}!RMWebTileImage.h@{R\-M\-Web\-Tile\-Image.\-h}}
+\subsubsection[{k\-Web\-Tile\-Retries}]{\setlength{\rightskip}{0pt plus 5cm}const N\-S\-U\-Integer k\-Web\-Tile\-Retries = 30\hspace{0.3cm}{\ttfamily [static]}}}\label{_r_m_web_tile_image_8h_ad3131cdfacd9830c7f58a0a2eed9210e}
+
+
+参考自 R\-M\-Web\-Tile\-Image\-::init\-With\-Tile\-:\-From\-U\-R\-L\-:.
+
+\hypertarget{_r_m_web_tile_image_8h_aa13659b5405d2b496e255aa4415d50d8}{\index{R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}!R\-M\-Web\-Tile\-Image\-Error\-Domain@{R\-M\-Web\-Tile\-Image\-Error\-Domain}}
+\index{R\-M\-Web\-Tile\-Image\-Error\-Domain@{R\-M\-Web\-Tile\-Image\-Error\-Domain}!RMWebTileImage.h@{R\-M\-Web\-Tile\-Image.\-h}}
+\subsubsection[{R\-M\-Web\-Tile\-Image\-Error\-Domain}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-String$\ast$ R\-M\-Web\-Tile\-Image\-Error\-Domain}}\label{_r_m_web_tile_image_8h_aa13659b5405d2b496e255aa4415d50d8}
+\hypertarget{_r_m_web_tile_image_8h_ae036604641b96ee72461e4be6eb610ed}{\index{R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}!R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key@{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key}}
+\index{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key@{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key}!RMWebTileImage.h@{R\-M\-Web\-Tile\-Image.\-h}}
+\subsubsection[{R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-String$\ast$ R\-M\-Web\-Tile\-Image\-H\-T\-T\-P\-Response\-Code\-Key}}\label{_r_m_web_tile_image_8h_ae036604641b96ee72461e4be6eb610ed}
+\hypertarget{_r_m_web_tile_image_8h_a8290f75a7d8ebad3d9e975bb43dec928}{\index{R\-M\-Web\-Tile\-Image.\-h@{R\-M\-Web\-Tile\-Image.\-h}!R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key@{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key}}
+\index{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key@{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key}!RMWebTileImage.h@{R\-M\-Web\-Tile\-Image.\-h}}
+\subsubsection[{R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key}]{\setlength{\rightskip}{0pt plus 5cm}N\-S\-String$\ast$ R\-M\-Web\-Tile\-Image\-Notification\-Error\-Key}}\label{_r_m_web_tile_image_8h_a8290f75a7d8ebad3d9e975bb43dec928}

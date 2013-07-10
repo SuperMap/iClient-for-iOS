@@ -1,0 +1,186 @@
+\hypertarget{interface_r_m_tile_cache_d_a_o}{\section{R\-M\-Tile\-Cache\-D\-A\-O类 参考}
+\label{interface_r_m_tile_cache_d_a_o}\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}}
+}
+
+
+the interface between \hyperlink{interface_r_m_database_cache}{R\-M\-Database\-Cache} and F\-M\-D\-B  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-Tile\-Cache\-D\-A\-O.\-h$>$}
+
+类 R\-M\-Tile\-Cache\-D\-A\-O 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_r_m_tile_cache_d_a_o}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_aa0f837ba4f88e61e11f80539ab4447b6}{add\-Data\-:\-Last\-Used\-:\-For\-Tile\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_a5576502807bbdfbe130364ccf543f944}{configure\-D\-B\-For\-First\-Use}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-U\-Integer) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_a2781dde5bf63915b2a7a759b328473bd}{count}
+\item 
+(N\-S\-Data $\ast$) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_a83bb633ee07230152bf11382fd065da3}{data\-For\-Tile\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_aa0313e459b023f60fdbefd5635f35e57}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_af5ca74dfbe1355cbd479ed7844fd03da}{did\-Receive\-Memory\-Warning}
+\item 
+(id) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_a255de16d0b9de6c9974f48dd2ec0f0c3}{init\-With\-Database\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_ae44d63a1f9fc1da15fbb9dbac7129b61}{purge\-Tiles\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_a548b34364c0234d3cca2e9076a6409cb}{purge\-Tiles\-From\-Before\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_ab185029f5a4e0631fcd81763e951cb1c}{remove\-All\-Cached\-Images}
+\item 
+(void) -\/ \hyperlink{interface_r_m_tile_cache_d_a_o_a04141d25629d2dca5ffe48b50d7bf1b1}{touch\-Tile\-:with\-Date\-:}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+F\-M\-Database $\ast$ \hyperlink{interface_r_m_tile_cache_d_a_o_a518b8e556139a0f18ab610ade61d76ed}{db}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+the interface between \hyperlink{interface_r_m_database_cache}{R\-M\-Database\-Cache} and F\-M\-D\-B 
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_tile_cache_d_a_o_aa0f837ba4f88e61e11f80539ab4447b6}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!add\-Data\-:\-Last\-Used\-:\-For\-Tile\-:@{add\-Data\-:\-Last\-Used\-:\-For\-Tile\-:}}
+\index{add\-Data\-:\-Last\-Used\-:\-For\-Tile\-:@{add\-Data\-:\-Last\-Used\-:\-For\-Tile\-:}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{add\-Data\-:\-Last\-Used\-:\-For\-Tile\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) add\-Data\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Data$\ast$)}]{data}
+\item[{LastUsed:(N\-S\-Date$\ast$)}]{date}
+\item[{ForTile:(uint64\-\_\-t)}]{tile\-Hash}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_aa0f837ba4f88e61e11f80539ab4447b6}
+
+
+参考自 R\-M\-Database\-Cache\-::add\-Image\-Data\-:.
+
+\hypertarget{interface_r_m_tile_cache_d_a_o_a5576502807bbdfbe130364ccf543f944}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!configure\-D\-B\-For\-First\-Use@{configure\-D\-B\-For\-First\-Use}}
+\index{configure\-D\-B\-For\-First\-Use@{configure\-D\-B\-For\-First\-Use}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{configure\-D\-B\-For\-First\-Use}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) configure\-D\-B\-For\-First\-Use 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_d_a_o_a5576502807bbdfbe130364ccf543f944}
+
+
+参考自 init\-With\-Database\-:.
+
+\hypertarget{interface_r_m_tile_cache_d_a_o_a2781dde5bf63915b2a7a759b328473bd}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!count@{count}}
+\index{count@{count}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) count 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_a2781dde5bf63915b2a7a759b328473bd}
+
+
+参考自 R\-M\-Database\-Cache\-::add\-Image\-Data\-:, purge\-Tiles\-: , 以及 purge\-Tiles\-From\-Before\-:.
+
+\hypertarget{interface_r_m_tile_cache_d_a_o_a83bb633ee07230152bf11382fd065da3}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!data\-For\-Tile\-:@{data\-For\-Tile\-:}}
+\index{data\-For\-Tile\-:@{data\-For\-Tile\-:}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{data\-For\-Tile\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Data $\ast$) data\-For\-Tile\-: 
+\begin{DoxyParamCaption}
+\item[{(uint64\-\_\-t)}]{tile\-Hash}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_a83bb633ee07230152bf11382fd065da3}
+
+
+参考自 R\-M\-Database\-Cache\-::cached\-Image\-:.
+
+\hypertarget{interface_r_m_tile_cache_d_a_o_aa0313e459b023f60fdbefd5635f35e57}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_tile_cache_d_a_o_aa0313e459b023f60fdbefd5635f35e57}
+\hypertarget{interface_r_m_tile_cache_d_a_o_af5ca74dfbe1355cbd479ed7844fd03da}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}}
+\index{did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{did\-Receive\-Memory\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\-Receive\-Memory\-Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_af5ca74dfbe1355cbd479ed7844fd03da}
+
+
+参考自 R\-M\-Database\-Cache\-::did\-Receive\-Memory\-Warning.
+
+\hypertarget{interface_r_m_tile_cache_d_a_o_a255de16d0b9de6c9974f48dd2ec0f0c3}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!init\-With\-Database\-:@{init\-With\-Database\-:}}
+\index{init\-With\-Database\-:@{init\-With\-Database\-:}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{init\-With\-Database\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Database\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{path}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_a255de16d0b9de6c9974f48dd2ec0f0c3}
+\hypertarget{interface_r_m_tile_cache_d_a_o_ae44d63a1f9fc1da15fbb9dbac7129b61}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!purge\-Tiles\-:@{purge\-Tiles\-:}}
+\index{purge\-Tiles\-:@{purge\-Tiles\-:}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{purge\-Tiles\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) purge\-Tiles\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{count}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_ae44d63a1f9fc1da15fbb9dbac7129b61}
+
+
+参考自 R\-M\-Database\-Cache\-::add\-Image\-Data\-:.
+
+\hypertarget{interface_r_m_tile_cache_d_a_o_a548b34364c0234d3cca2e9076a6409cb}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!purge\-Tiles\-From\-Before\-:@{purge\-Tiles\-From\-Before\-:}}
+\index{purge\-Tiles\-From\-Before\-:@{purge\-Tiles\-From\-Before\-:}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{purge\-Tiles\-From\-Before\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) purge\-Tiles\-From\-Before\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Date$\ast$)}]{date}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_a548b34364c0234d3cca2e9076a6409cb}
+
+
+参考自 R\-M\-Database\-Cache\-::purge\-Tiles\-From\-Before\-:.
+
+\hypertarget{interface_r_m_tile_cache_d_a_o_ab185029f5a4e0631fcd81763e951cb1c}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}}
+\index{remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{remove\-All\-Cached\-Images}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) remove\-All\-Cached\-Images 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_ab185029f5a4e0631fcd81763e951cb1c}
+
+
+参考自 R\-M\-Database\-Cache\-::remove\-All\-Cached\-Images.
+
+\hypertarget{interface_r_m_tile_cache_d_a_o_a04141d25629d2dca5ffe48b50d7bf1b1}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!touch\-Tile\-:with\-Date\-:@{touch\-Tile\-:with\-Date\-:}}
+\index{touch\-Tile\-:with\-Date\-:@{touch\-Tile\-:with\-Date\-:}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{touch\-Tile\-:with\-Date\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) touch\-Tile\-: 
+\begin{DoxyParamCaption}
+\item[{(uint64\-\_\-t)}]{tile\-Hash}
+\item[{withDate:(N\-S\-Date$\ast$)}]{date}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_tile_cache_d_a_o_a04141d25629d2dca5ffe48b50d7bf1b1}
+
+
+参考自 R\-M\-Database\-Cache\-::cached\-Image\-:.
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_tile_cache_d_a_o_a518b8e556139a0f18ab610ade61d76ed}{\index{R\-M\-Tile\-Cache\-D\-A\-O@{R\-M\-Tile\-Cache\-D\-A\-O}!db@{db}}
+\index{db@{db}!RMTileCacheDAO@{R\-M\-Tile\-Cache\-D\-A\-O}}
+\subsubsection[{db}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (F\-M\-Database$\ast$) db\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_tile_cache_d_a_o_a518b8e556139a0f18ab610ade61d76ed}
+
+
+参考自 add\-Data\-:\-Last\-Used\-:\-For\-Tile\-:, configure\-D\-B\-For\-First\-Use, count, data\-For\-Tile\-:, dealloc, did\-Receive\-Memory\-Warning, init\-With\-Database\-:, purge\-Tiles\-:, purge\-Tiles\-From\-Before\-:, remove\-All\-Cached\-Images , 以及 touch\-Tile\-:with\-Date\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_tile_cache_d_a_o_8h}{R\-M\-Tile\-Cache\-D\-A\-O.\-h}\item 
+Map/\hyperlink{_r_m_tile_cache_d_a_o_8m}{R\-M\-Tile\-Cache\-D\-A\-O.\-m}\end{DoxyCompactItemize}

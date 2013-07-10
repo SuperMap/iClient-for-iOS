@@ -1,0 +1,1064 @@
+\hypertarget{interface_r_m_map_contents}{\section{R\-M\-Map\-Contents类 参考}
+\label{interface_r_m_map_contents}\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}}
+}
+
+
+The cartographic and data components of a map.  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-Map\-Contents.\-h$>$}
+
+类 R\-M\-Map\-Contents 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_r_m_map_contents}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_ad5e13a19a28049128f6a9eb36415eb71}{adjust\-Map\-Placement\-With\-Scale\-:}
+\begin{DoxyCompactList}\small\item\em This currently is not called because it does not handle the case when the map is continous or not continous. \end{DoxyCompactList}\item 
+(float) -\/ \hyperlink{interface_r_m_map_contents_a08e2f802b9fa6d0cfe3478725684545e}{adjust\-Zoom\-For\-Bounding\-Mask\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a1d3d6d5bd375efa2b6926494150a2f4f}{animated\-Zoom\-Step\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a528c6e073c6c8308771f9d71f16a9bf4}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_ad715d6e1088cf3994b26f7ab6cacf391}{did\-Receive\-Memory\-Warning}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a5bcdc830d59d045abc4fdf2c57fef8cb}{draw\-Rect\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a5e5cb1f8dbb78ee775e5ccc9703ceb3f}{handle\-Memory\-Warning\-Notification\-:}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_contents_a3f56aed0e38083d5fc613887f626210b}{init\-For\-View\-:}
+\begin{DoxyCompactList}\small\item\em deprecated at any moment after release 0.\-5 \end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_r_m_map_contents_a5ac0e7aeea1edca790b2466a62714786}{init\-For\-View\-:\-With\-Location\-:}
+\begin{DoxyCompactList}\small\item\em deprecated at any moment after release 0.\-5 \end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_r_m_map_contents_ac88a327e2895d4d95c9fc829ab99294d}{init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:}
+\begin{DoxyCompactList}\small\item\em deprecated at any moment after release 0.\-5 \end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_r_m_map_contents_ade383b6491bd769a6bb17f5d5b0c107e}{init\-With\-View\-:}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_contents_ade6f726a40417c75537812d02a0f9c6c}{init\-With\-View\-:screen\-Scale\-:}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_contents_a9c237b4599ba3e90db2ab34f40aab601}{init\-With\-View\-:tilesource\-:}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_contents_a6196963182efcdf037319e622f4ca2d8}{init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:}
+\begin{DoxyCompactList}\small\item\em designated initializer \end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_r_m_map_contents_ade69d06fda9b105ca86b023926e0bb21}{init\-With\-View\-:tilesource\-:screen\-Scale\-:}
+\item 
+(\hyperlink{struct_r_m_spherical_trapezium}{R\-M\-Spherical\-Trapezium}) -\/ \hyperlink{interface_r_m_map_contents_a9886560e7143a571c5be1260686dd7b6}{latitude\-Longitude\-Bounding\-Box\-For\-:}
+\begin{DoxyCompactList}\small\item\em returns the smallest bounding box containing a rectangular region of the screen \end{DoxyCompactList}\item 
+(\hyperlink{struct_r_m_spherical_trapezium}{R\-M\-Spherical\-Trapezium}) -\/ \hyperlink{interface_r_m_map_contents_a2f036b07434552724b6ad3d56f6e6ed6}{latitude\-Longitude\-Bounding\-Box\-For\-Screen}
+\begin{DoxyCompactList}\small\item\em returns the smallest bounding box containing the entire screen \end{DoxyCompactList}\item 
+(C\-G\-Point) -\/ \hyperlink{interface_r_m_map_contents_a80f4f3e3dcf962c4d1110248e5f83ff6}{lat\-Long\-To\-Pixel\-:}
+\item 
+(C\-G\-Point) -\/ \hyperlink{interface_r_m_map_contents_a6c7d5693a725d88769b5377d60cab941}{lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:}
+\item 
+(\hyperlink{struct_r_m_tile_point}{R\-M\-Tile\-Point}) -\/ \hyperlink{interface_r_m_map_contents_af5abbc64cb02512eb4378fce3794f0e1}{lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_af3baee3fc58a0b88ecd7a9ec8c7cbe88}{move\-By\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a6964b2e4a12c17c954d32dc8e8fe739e}{move\-To\-Lat\-Long\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a6bf308257eae65ff4037a4e5654f8c46}{move\-To\-Projected\-Point\-:}
+\begin{DoxyCompactList}\small\item\em Use set\-Center\-Projected\-Point\-: instead. \end{DoxyCompactList}\item 
+(float) -\/ \hyperlink{interface_r_m_map_contents_a62632c7f86a830a06afbc6f47f8b3fdf}{next\-Native\-Zoom\-Factor}
+\item 
+(C\-L\-Location\-Coordinate2\-D) -\/ \hyperlink{interface_r_m_map_contents_ad7f1b803be32266a8a0bc5de03fd4e0e}{pixel\-To\-Lat\-Long\-:}
+\item 
+(C\-L\-Location\-Coordinate2\-D) -\/ \hyperlink{interface_r_m_map_contents_a5fe69ea6a21dac1fdc4c6d136d1a1504}{pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:}
+\item 
+(float) -\/ \hyperlink{interface_r_m_map_contents_aef141216ceb8e4c044e83e6ba8a9b7b1}{prev\-Native\-Zoom\-Factor}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a2d6c92fc5d07149961988b7ed062021c}{print\-Debugging\-Information}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a05e9ebea304077388c28e5306459ad96}{remove\-All\-Cached\-Images}
+\begin{DoxyCompactList}\small\item\em Clear all images from the \hyperlink{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}{tile\-Source}'s caching system. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_ac5fb96bc69e7ac42b6a43aff804dc72c}{set\-Background\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_af156345c10a07045bbedec55efe6247e}{set\-Center\-Projected\-Point\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a8bb51badbffed49e25be29edafb10a95}{set\-Frame\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a7787b10ca141e7fdaf6e99312d4f5504}{set\-Map\-Center\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a2668247ea9686a5d84aff8db823b1cf6}{set\-Max\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a56e7ec20e0ef55c9bdceb73dee05a1aa}{set\-Meters\-Per\-Pixel\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a5c2eda436f8e54cbed7263e419046cd1}{set\-Min\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_ad20f344bc5c5361cc12a08bb1221f766}{set\-Overlay\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_ad94e75ab1195d755f8f52caba2fc554f}{set\-Projected\-Bounds\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_ab3dc71cf707383671723a0629bbf6587}{set\-Renderer\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a8c9d36abec740f7a9c7047fa1f47daa5}{set\-Rotation\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a9de0ef8146a2ec46e7bca53bbd763bec}{set\-Scaled\-Meters\-Per\-Pixel\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_ae33000c5144c046f9d4da1d20b80004c}{set\-Tile\-Depth\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a69a041eb8065efe8f31ce40ad9894f1c}{set\-Tile\-Source\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_afbdfe65940239191436f23b14942bb2e}{set\-Tiles\-Update\-Delegate\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a06f80b8cd231adf996ed5c363afa34f8}{set\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em if \hyperlink{interface_r_m_map_contents_a199c766d9970b90672f8884856c7cd4e}{zoom} is outside of range \hyperlink{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}{min\-Zoom} to \hyperlink{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}{max\-Zoom}, zoom level is clamped to that range. \end{DoxyCompactList}\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_r_m_map_contents_a0d412fc8ab80b4ef35c2dabf3a0f1c12}{should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a78107eb32326f58654bd9bcfe04c8289}{tiles\-Updated\-Region\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_ac84735b91375863f930ce3465411a85f}{zoom\-By\-Factor\-:near\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a50036c154b99004fef1068a4972bd941}{zoom\-By\-Factor\-:near\-:animated\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a625f32a99c58256644eeef69d40e13a9}{zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a8f2944077cd2d27c01463fa4881d3152}{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a6c5bafdae9d97c075ef057f78f3c38e6}{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a4d5461e344f8d9f3567064f5749baf1f}{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_af50e2b740deeaf047fd114888c14c042}{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a16518ad8c17a80bc90fbb396f4d9d16b}{zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_contents_a527d09084d834ec9cc4738ba6ebba397}{zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(B\-O\-O\-L) + \hyperlink{interface_r_m_map_contents_a65e78425d0827ed394433fb9aca11a62}{perform\-Expensive\-Operations}
+\item 
+(void) + \hyperlink{interface_r_m_map_contents_aa00c82eeeb84859798f03e09226a8100}{set\-Perform\-Expensive\-Operations\-:}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_r_m_map_layer}{R\-M\-Map\-Layer} $\ast$ \hyperlink{interface_r_m_map_contents_a220a37d482a030e392788dee48ffc108}{background}
+\begin{DoxyCompactList}\small\item\em subview for the image displayed while tiles are loading. Set its contents by providing your own \char`\"{}loading.\-png\char`\"{}. \end{DoxyCompactList}\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_map_contents_a1ab8589d1d1fc05208eaffefcff9edaf}{bounding\-Mask}
+\item 
+\hyperlink{struct_r_m_projected_point}{R\-M\-Projected\-Point} \hyperlink{interface_r_m_map_contents_ae370cf3845309794b89e5b11290b520e}{center\-Projected\-Point}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_map_contents_af81fdb306fe5675cc9ebc223379c773a}{fully\-Loaded}
+\item 
+\hyperlink{interface_r_m_tile_image_set}{R\-M\-Tile\-Image\-Set} $\ast$ \hyperlink{interface_r_m_map_contents_a4da52b65a26cd078dfa90c2d348c58c0}{images\-On\-Screen}
+\item 
+C\-A\-Layer $\ast$ \hyperlink{interface_r_m_map_contents_afba5a8749837d703d4c551c12e134c54}{layer}
+\begin{DoxyCompactList}\small\item\em This is the underlying U\-I\-View's layer. \end{DoxyCompactList}\item 
+C\-L\-Location\-Coordinate2\-D \hyperlink{interface_r_m_map_contents_a66dc32c1210bd62ef66dd729aebcf55c}{map\-Center}
+\item 
+\hyperlink{interface_r_m_marker_manager}{R\-M\-Marker\-Manager} $\ast$ \hyperlink{interface_r_m_map_contents_a2e28d0b3c7f2670181edb8b87ab0324f}{marker\-Manager}
+\item 
+float \hyperlink{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}{max\-Zoom}
+\begin{DoxyCompactList}\small\item\em maximum zoom number allowed for the view. \hyperlink{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}{min\-Zoom} and \hyperlink{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}{max\-Zoom} must be within the limits of \hyperlink{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}{tile\-Source} but can be stricter; they are clamped to tilesource limits if needed. \end{DoxyCompactList}\item 
+\hyperlink{interface_r_m_mercator_to_screen_projection}{R\-M\-Mercator\-To\-Screen\-Projection} $\ast$ \hyperlink{interface_r_m_map_contents_ac90bc80b3d40b418ff2fa21dc35cf6ca}{mercator\-To\-Screen\-Projection}
+\begin{DoxyCompactList}\small\item\em (guess) converts from projected meters to screen pixel coordinates \end{DoxyCompactList}\item 
+id$<$ \hyperlink{protocol_r_m_mercator_to_tile_projection-p}{R\-M\-Mercator\-To\-Tile\-Projection} $>$ \hyperlink{interface_r_m_map_contents_a3e7903c036affb0241bc13e128574073}{mercator\-To\-Tile\-Projection}
+\item 
+float \hyperlink{interface_r_m_map_contents_a23204276fe6140d07d3671e9b90157dc}{meters\-Per\-Pixel}
+\item 
+float \hyperlink{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}{min\-Zoom}
+\begin{DoxyCompactList}\small\item\em minimum zoom number allowed for the view. \hyperlink{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}{min\-Zoom} and \hyperlink{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}{max\-Zoom} must be within the limits of \hyperlink{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}{tile\-Source} but can be stricter; they are clamped to tilesource limits if needed. \end{DoxyCompactList}\item 
+\hyperlink{interface_r_m_layer_collection}{R\-M\-Layer\-Collection} $\ast$ \hyperlink{interface_r_m_map_contents_ae5474cf3d2df7f969aec0944ac02134c}{overlay}
+\begin{DoxyCompactList}\small\item\em subview for markers and paths \end{DoxyCompactList}\item 
+\hyperlink{struct_r_m_projected_rect}{R\-M\-Projected\-Rect} \hyperlink{interface_r_m_map_contents_a46afa80adb2b126e05dfaf6501f17eea}{projected\-Bounds}
+\item 
+\hyperlink{interface_r_m_projection}{R\-M\-Projection} $\ast$ \hyperlink{interface_r_m_map_contents_ac83cbe1542e19defe75afc557007e282}{projection}
+\begin{DoxyCompactList}\small\item\em (guess) the projection object to convert from latitude/longitude to meters. \end{DoxyCompactList}\item 
+\hyperlink{interface_r_m_map_renderer}{R\-M\-Map\-Renderer} $\ast$ \hyperlink{interface_r_m_map_contents_a5054d0d02002aa0757df91c9567d0cd9}{renderer}
+\item 
+double \hyperlink{interface_r_m_map_contents_a5f23576d9f94b8528a3886af2013144d}{scale\-Denominator}
+\begin{DoxyCompactList}\small\item\em The denominator in a cartographic scale like 1/24000, 1/50000, 1/2000000. \end{DoxyCompactList}\item 
+float \hyperlink{interface_r_m_map_contents_a1ad726ecd59ef33b559d35c8d1cef95e}{scaled\-Meters\-Per\-Pixel}
+\item 
+C\-G\-Rect \hyperlink{interface_r_m_map_contents_a658f2c0b02e7dded8f625329c658f925}{screen\-Bounds}
+\item 
+float \hyperlink{interface_r_m_map_contents_aeae93353d6604c3304d945da9490d809}{screen\-Scale}
+\item 
+\hyperlink{struct_r_m_tile_rect}{R\-M\-Tile\-Rect} \hyperlink{interface_r_m_map_contents_a385e41b3717e62ef1d343b73144c1ef4}{tile\-Bounds}
+\item 
+short \hyperlink{interface_r_m_map_contents_ad55a0b34afd6bd4b228f8ae3555f7d98}{tile\-Depth}
+\item 
+\hyperlink{interface_r_m_tile_loader}{R\-M\-Tile\-Loader} $\ast$ \hyperlink{interface_r_m_map_contents_ad7c6bc753e0b9a1cbaa5e9dcb4a5e853}{tile\-Loader}
+\item 
+id$<$ \hyperlink{protocol_r_m_tile_source-p}{R\-M\-Tile\-Source} $>$ \hyperlink{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}{tile\-Source}
+\begin{DoxyCompactList}\small\item\em controls what images are used. Can be changed while the view is visible, but see \href{http://code.google.com/p/route-me/issues/detail?id=12}{\tt http\-://code.\-google.\-com/p/route-\/me/issues/detail?id=12} \end{DoxyCompactList}\item 
+id$<$ \hyperlink{protocol_r_m_tiles_update_delegate-p}{R\-M\-Tiles\-Update\-Delegate} $>$ \hyperlink{interface_r_m_map_contents_a37fd1037d5c01ab7543a46056039ec77}{tiles\-Update\-Delegate}
+\item 
+float \hyperlink{interface_r_m_map_contents_a199c766d9970b90672f8884856c7cd4e}{zoom}
+\begin{DoxyCompactList}\small\item\em zoom level is clamped to range (min\-Zoom, max\-Zoom) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+The cartographic and data components of a map. 
+
+Do not retain.
+
+There is exactly one \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} instance for each \hyperlink{interface_r_m_map_view}{R\-M\-Map\-View} instance.
+
+\begin{DoxyWarning}{警告}
+Do not retain an \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} instance. Instead, ask the \hyperlink{interface_r_m_map_view}{R\-M\-Map\-View} for its contents when you need it. It is an error for an \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} instance to exist without a view, and if you retain the \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents}, it can't go away when the \hyperlink{interface_r_m_map_view}{R\-M\-Map\-View} is released.
+\end{DoxyWarning}
+At some point, it's likely that \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} and \hyperlink{interface_r_m_map_view}{R\-M\-Map\-View} will be merged into one class. 
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_map_contents_ad5e13a19a28049128f6a9eb36415eb71}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!adjust\-Map\-Placement\-With\-Scale\-:@{adjust\-Map\-Placement\-With\-Scale\-:}}
+\index{adjust\-Map\-Placement\-With\-Scale\-:@{adjust\-Map\-Placement\-With\-Scale\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{adjust\-Map\-Placement\-With\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) adjust\-Map\-Placement\-With\-Scale\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{a\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_ad5e13a19a28049128f6a9eb36415eb71}
+
+
+This currently is not called because it does not handle the case when the map is continous or not continous. 
+
+At a certain scale you can continuously move to the west or east until you get to a certain scale level that simply shows the entire world. \hypertarget{interface_r_m_map_contents_a08e2f802b9fa6d0cfe3478725684545e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!adjust\-Zoom\-For\-Bounding\-Mask\-:@{adjust\-Zoom\-For\-Bounding\-Mask\-:}}
+\index{adjust\-Zoom\-For\-Bounding\-Mask\-:@{adjust\-Zoom\-For\-Bounding\-Mask\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{adjust\-Zoom\-For\-Bounding\-Mask\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) adjust\-Zoom\-For\-Bounding\-Mask\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a08e2f802b9fa6d0cfe3478725684545e}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000015}{Bug}]doesn't really adjust anything, just makes a computation. C\-L\-A\-N\-G flags some dead assignments (write-\/only variables) \end{DoxyRefDesc}
+
+
+参考自 zoom\-By\-Factor\-:near\-: , 以及 zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:.
+
+\hypertarget{interface_r_m_map_contents_a1d3d6d5bd375efa2b6926494150a2f4f}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!animated\-Zoom\-Step\-:@{animated\-Zoom\-Step\-:}}
+\index{animated\-Zoom\-Step\-:@{animated\-Zoom\-Step\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{animated\-Zoom\-Step\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) animated\-Zoom\-Step\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Timer $\ast$)}]{timer}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a1d3d6d5bd375efa2b6926494150a2f4f}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000017}{Bug}]magic strings embedded in code \end{DoxyRefDesc}
+
+
+Provided by category \hyperlink{category_r_m_map_contents_07_private_methods_08_a1708db1594b0c789a0da60237477de73}{R\-M\-Map\-Contents(\-Private\-Methods)}.
+
+\hypertarget{interface_r_m_map_contents_a528c6e073c6c8308771f9d71f16a9bf4}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a528c6e073c6c8308771f9d71f16a9bf4}
+\hypertarget{interface_r_m_map_contents_ad715d6e1088cf3994b26f7ab6cacf391}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}}
+\index{did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{did\-Receive\-Memory\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\-Receive\-Memory\-Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_ad715d6e1088cf3994b26f7ab6cacf391}
+
+
+参考自 R\-M\-Map\-View\-::did\-Receive\-Memory\-Warning , 以及 handle\-Memory\-Warning\-Notification\-:.
+
+\hypertarget{interface_r_m_map_contents_a5bcdc830d59d045abc4fdf2c57fef8cb}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!draw\-Rect\-:@{draw\-Rect\-:}}
+\index{draw\-Rect\-:@{draw\-Rect\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{draw\-Rect\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) draw\-Rect\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{rect}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a5bcdc830d59d045abc4fdf2c57fef8cb}
+\hypertarget{interface_r_m_map_contents_a5e5cb1f8dbb78ee775e5ccc9703ceb3f}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!handle\-Memory\-Warning\-Notification\-:@{handle\-Memory\-Warning\-Notification\-:}}
+\index{handle\-Memory\-Warning\-Notification\-:@{handle\-Memory\-Warning\-Notification\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{handle\-Memory\-Warning\-Notification\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) handle\-Memory\-Warning\-Notification\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Notification $\ast$)}]{notification}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a5e5cb1f8dbb78ee775e5ccc9703ceb3f}
+\hypertarget{interface_r_m_map_contents_a3f56aed0e38083d5fc613887f626210b}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!init\-For\-View\-:@{init\-For\-View\-:}}
+\index{init\-For\-View\-:@{init\-For\-View\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{init\-For\-View\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-For\-View\-: 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-View$\ast$)}]{view}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a3f56aed0e38083d5fc613887f626210b}
+
+
+deprecated at any moment after release 0.\-5 
+
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000002}{弃用}]subject to removal at any moment after 0.\-5 is released \end{DoxyRefDesc}
+\hypertarget{interface_r_m_map_contents_a5ac0e7aeea1edca790b2466a62714786}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!init\-For\-View\-:\-With\-Location\-:@{init\-For\-View\-:\-With\-Location\-:}}
+\index{init\-For\-View\-:\-With\-Location\-:@{init\-For\-View\-:\-With\-Location\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{init\-For\-View\-:\-With\-Location\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-For\-View\-:} 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-View$\ast$)}]{view}
+\item[{WithLocation:(C\-L\-Location\-Coordinate2\-D)}]{latlong}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a5ac0e7aeea1edca790b2466a62714786}
+
+
+deprecated at any moment after release 0.\-5 
+
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000003}{弃用}]subject to removal at any moment after 0.\-5 is released \end{DoxyRefDesc}
+\hypertarget{interface_r_m_map_contents_ac88a327e2895d4d95c9fc829ab99294d}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:@{init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:}}
+\index{init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:@{init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-For\-View\-:} 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-View$\ast$)}]{view}
+\item[{WithTileSource:(id$<${\bf R\-M\-Tile\-Source}$>$)}]{tile\-Source}
+\item[{WithRenderer:({\bf R\-M\-Map\-Renderer}$\ast$)}]{renderer}
+\item[{LookingAt:(C\-L\-Location\-Coordinate2\-D)}]{latlong}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_ac88a327e2895d4d95c9fc829ab99294d}
+
+
+deprecated at any moment after release 0.\-5 
+
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000004}{弃用}]subject to removal at any moment after 0.\-5 is released \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000014}{Bug}]T\-O\-D\-O\-: Make a nice background class \end{DoxyRefDesc}
+
+
+参考自 init\-For\-View\-:\-With\-Location\-:.
+
+\hypertarget{interface_r_m_map_contents_ade383b6491bd769a6bb17f5d5b0c107e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!init\-With\-View\-:@{init\-With\-View\-:}}
+\index{init\-With\-View\-:@{init\-With\-View\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{init\-With\-View\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-View\-: 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-View$\ast$)}]{view}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_ade383b6491bd769a6bb17f5d5b0c107e}
+
+
+参考自 init\-For\-View\-:.
+
+\hypertarget{interface_r_m_map_contents_ade6f726a40417c75537812d02a0f9c6c}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!init\-With\-View\-:screen\-Scale\-:@{init\-With\-View\-:screen\-Scale\-:}}
+\index{init\-With\-View\-:screen\-Scale\-:@{init\-With\-View\-:screen\-Scale\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{init\-With\-View\-:screen\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-With\-View\-:} 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-View$\ast$)}]{view}
+\item[{screenScale:(float)}]{the\-Screen\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_ade6f726a40417c75537812d02a0f9c6c}
+\hypertarget{interface_r_m_map_contents_a9c237b4599ba3e90db2ab34f40aab601}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!init\-With\-View\-:tilesource\-:@{init\-With\-View\-:tilesource\-:}}
+\index{init\-With\-View\-:tilesource\-:@{init\-With\-View\-:tilesource\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{init\-With\-View\-:tilesource\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-With\-View\-:} 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-View$\ast$)}]{view}
+\item[{tilesource:(id$<${\bf R\-M\-Tile\-Source}$>$)}]{new\-Tilesource}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a9c237b4599ba3e90db2ab34f40aab601}
+\hypertarget{interface_r_m_map_contents_a6196963182efcdf037319e622f4ca2d8}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:@{init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:}}
+\index{init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:@{init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-With\-View\-:} 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-View$\ast$)}]{view}
+\item[{tilesource:(id$<${\bf R\-M\-Tile\-Source}$>$)}]{tilesource}
+\item[{centerLatLon:(C\-L\-Location\-Coordinate2\-D)}]{initial\-Center}
+\item[{zoomLevel:(float)}]{initial\-Zoom\-Level}
+\item[{maxZoomLevel:(float)}]{max\-Zoom\-Level}
+\item[{minZoomLevel:(float)}]{min\-Zoom\-Level}
+\item[{backgroundImage:(U\-I\-Image $\ast$)}]{background\-Image}
+\item[{screenScale:(float)}]{the\-Screen\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a6196963182efcdf037319e622f4ca2d8}
+
+
+designated initializer 
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000013}{Bug}]T\-O\-D\-O\-: Make a nice background class \end{DoxyRefDesc}
+
+
+参考自 init\-With\-View\-:, init\-With\-View\-:screen\-Scale\-: , 以及 init\-With\-View\-:tilesource\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_ade69d06fda9b105ca86b023926e0bb21}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!init\-With\-View\-:tilesource\-:screen\-Scale\-:@{init\-With\-View\-:tilesource\-:screen\-Scale\-:}}
+\index{init\-With\-View\-:tilesource\-:screen\-Scale\-:@{init\-With\-View\-:tilesource\-:screen\-Scale\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{init\-With\-View\-:tilesource\-:screen\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-With\-View\-:} 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-View$\ast$)}]{view}
+\item[{tilesource:(id$<${\bf R\-M\-Tile\-Source}$>$)}]{new\-Tilesource}
+\item[{screenScale:(float)}]{the\-Screen\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_ade69d06fda9b105ca86b023926e0bb21}
+
+
+参考自 init\-With\-View\-:tilesource\-:.
+
+\hypertarget{interface_r_m_map_contents_a9886560e7143a571c5be1260686dd7b6}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!latitude\-Longitude\-Bounding\-Box\-For\-:@{latitude\-Longitude\-Bounding\-Box\-For\-:}}
+\index{latitude\-Longitude\-Bounding\-Box\-For\-:@{latitude\-Longitude\-Bounding\-Box\-For\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{latitude\-Longitude\-Bounding\-Box\-For\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Spherical\-Trapezium}) latitude\-Longitude\-Bounding\-Box\-For\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{rect}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a9886560e7143a571c5be1260686dd7b6}
+
+
+returns the smallest bounding box containing a rectangular region of the screen 
+
+
+
+参考自 latitude\-Longitude\-Bounding\-Box\-For\-Screen , 以及 tiles\-Updated\-Region\-:.
+
+\hypertarget{interface_r_m_map_contents_a2f036b07434552724b6ad3d56f6e6ed6}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!latitude\-Longitude\-Bounding\-Box\-For\-Screen@{latitude\-Longitude\-Bounding\-Box\-For\-Screen}}
+\index{latitude\-Longitude\-Bounding\-Box\-For\-Screen@{latitude\-Longitude\-Bounding\-Box\-For\-Screen}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{latitude\-Longitude\-Bounding\-Box\-For\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Spherical\-Trapezium}) latitude\-Longitude\-Bounding\-Box\-For\-Screen 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a2f036b07434552724b6ad3d56f6e6ed6}
+
+
+returns the smallest bounding box containing the entire screen 
+
+
+
+参考自 Route\-Me\-Tests\-::test\-Marker\-Coordinates\-Far\-East , 以及 Route\-Me\-Tests\-::test\-Marker\-Coordinates\-Far\-West.
+
+\hypertarget{interface_r_m_map_contents_a80f4f3e3dcf962c4d1110248e5f83ff6}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!lat\-Long\-To\-Pixel\-:@{lat\-Long\-To\-Pixel\-:}}
+\index{lat\-Long\-To\-Pixel\-:@{lat\-Long\-To\-Pixel\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{lat\-Long\-To\-Pixel\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-G\-Point) lat\-Long\-To\-Pixel\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-L\-Location\-Coordinate2\-D)}]{latlong}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a80f4f3e3dcf962c4d1110248e5f83ff6}
+\hypertarget{interface_r_m_map_contents_a6c7d5693a725d88769b5377d60cab941}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:@{lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:}}
+\index{lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:@{lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-G\-Point) {\bf lat\-Long\-To\-Pixel\-:} 
+\begin{DoxyParamCaption}
+\item[{(C\-L\-Location\-Coordinate2\-D)}]{latlong}
+\item[{withMetersPerPixel:(float)}]{a\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a6c7d5693a725d88769b5377d60cab941}
+
+
+参考自 adjust\-Map\-Placement\-With\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_af5abbc64cb02512eb4378fce3794f0e1}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:@{lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:}}
+\index{lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:@{lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Point}) lat\-Long\-To\-Tile\-Point\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-L\-Location\-Coordinate2\-D)}]{latlong}
+\item[{withMetersPerPixel:(float)}]{a\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_af5abbc64cb02512eb4378fce3794f0e1}
+\hypertarget{interface_r_m_map_contents_af3baee3fc58a0b88ecd7a9ec8c7cbe88}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!move\-By\-:@{move\-By\-:}}
+\index{move\-By\-:@{move\-By\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{move\-By\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-By\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Size)}]{delta}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_af3baee3fc58a0b88ecd7a9ec8c7cbe88}
+
+
+参考自 adjust\-Map\-Placement\-With\-Scale\-:, Route\-Me\-Tests\-::test\-Marker\-Coordinates\-Far\-East , 以及 Route\-Me\-Tests\-::test\-Marker\-Coordinates\-Far\-West.
+
+\hypertarget{interface_r_m_map_contents_a6964b2e4a12c17c954d32dc8e8fe739e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!move\-To\-Lat\-Long\-:@{move\-To\-Lat\-Long\-:}}
+\index{move\-To\-Lat\-Long\-:@{move\-To\-Lat\-Long\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{move\-To\-Lat\-Long\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-To\-Lat\-Long\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-L\-Location\-Coordinate2\-D)}]{latlong}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a6964b2e4a12c17c954d32dc8e8fe739e}
+
+
+参考自 init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-: , 以及 set\-Map\-Center\-:.
+
+\hypertarget{interface_r_m_map_contents_a6bf308257eae65ff4037a4e5654f8c46}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!move\-To\-Projected\-Point\-:@{move\-To\-Projected\-Point\-:}}
+\index{move\-To\-Projected\-Point\-:@{move\-To\-Projected\-Point\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{move\-To\-Projected\-Point\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-To\-Projected\-Point\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a6bf308257eae65ff4037a4e5654f8c46}
+
+
+Use set\-Center\-Projected\-Point\-: instead. 
+
+
+
+参考自 move\-To\-Lat\-Long\-:.
+
+\hypertarget{interface_r_m_map_contents_a62632c7f86a830a06afbc6f47f8b3fdf}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!next\-Native\-Zoom\-Factor@{next\-Native\-Zoom\-Factor}}
+\index{next\-Native\-Zoom\-Factor@{next\-Native\-Zoom\-Factor}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{next\-Native\-Zoom\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) next\-Native\-Zoom\-Factor 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a62632c7f86a830a06afbc6f47f8b3fdf}
+\hypertarget{interface_r_m_map_contents_a65e78425d0827ed394433fb9aca11a62}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!perform\-Expensive\-Operations@{perform\-Expensive\-Operations}}
+\index{perform\-Expensive\-Operations@{perform\-Expensive\-Operations}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{perform\-Expensive\-Operations}]{\setlength{\rightskip}{0pt plus 5cm}+ (B\-O\-O\-L) perform\-Expensive\-Operations 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a65e78425d0827ed394433fb9aca11a62}
+\hypertarget{interface_r_m_map_contents_ad7f1b803be32266a8a0bc5de03fd4e0e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!pixel\-To\-Lat\-Long\-:@{pixel\-To\-Lat\-Long\-:}}
+\index{pixel\-To\-Lat\-Long\-:@{pixel\-To\-Lat\-Long\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{pixel\-To\-Lat\-Long\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-L\-Location\-Coordinate2\-D) pixel\-To\-Lat\-Long\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Point)}]{a\-Pixel}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_ad7f1b803be32266a8a0bc5de03fd4e0e}
+
+
+参考自 latitude\-Longitude\-Bounding\-Box\-For\-: , 以及 R\-M\-Marker\-Manager\-::latitude\-Longitude\-For\-Marker\-:.
+
+\hypertarget{interface_r_m_map_contents_a5fe69ea6a21dac1fdc4c6d136d1a1504}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:@{pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:}}
+\index{pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:@{pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-L\-Location\-Coordinate2\-D) {\bf pixel\-To\-Lat\-Long\-:} 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Point)}]{a\-Pixel}
+\item[{withMetersPerPixel:(float)}]{a\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a5fe69ea6a21dac1fdc4c6d136d1a1504}
+\hypertarget{interface_r_m_map_contents_aef141216ceb8e4c044e83e6ba8a9b7b1}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!prev\-Native\-Zoom\-Factor@{prev\-Native\-Zoom\-Factor}}
+\index{prev\-Native\-Zoom\-Factor@{prev\-Native\-Zoom\-Factor}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{prev\-Native\-Zoom\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) prev\-Native\-Zoom\-Factor 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_aef141216ceb8e4c044e83e6ba8a9b7b1}
+\hypertarget{interface_r_m_map_contents_a2d6c92fc5d07149961988b7ed062021c}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!print\-Debugging\-Information@{print\-Debugging\-Information}}
+\index{print\-Debugging\-Information@{print\-Debugging\-Information}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{print\-Debugging\-Information}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) print\-Debugging\-Information 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a2d6c92fc5d07149961988b7ed062021c}
+\hypertarget{interface_r_m_map_contents_a05e9ebea304077388c28e5306459ad96}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}}
+\index{remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{remove\-All\-Cached\-Images}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) remove\-All\-Cached\-Images 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a05e9ebea304077388c28e5306459ad96}
+
+
+Clear all images from the \hyperlink{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}{tile\-Source}'s caching system. 
+
+All of the existing \hyperlink{protocol_r_m_tile_source-p}{R\-M\-Tile\-Source} implementations load tile images via N\-S\-U\-R\-L\-Request. It's possible that some images will remain in your application's shared U\-R\-L cache. If you need to clear this out too, use this call\-: 
+\begin{DoxyCode}
+[[NSURLCache sharedURLCache] removeAllCachedResponses];
+\end{DoxyCode}
+ \hypertarget{interface_r_m_map_contents_ac5fb96bc69e7ac42b6a43aff804dc72c}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Background\-:@{set\-Background\-:}}
+\index{set\-Background\-:@{set\-Background\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Background\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Background\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Map\-Layer}$\ast$)}]{a\-Layer}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_ac5fb96bc69e7ac42b6a43aff804dc72c}
+
+
+参考自 dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-: , 以及 init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_af156345c10a07045bbedec55efe6247e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Center\-Projected\-Point\-:@{set\-Center\-Projected\-Point\-:}}
+\index{set\-Center\-Projected\-Point\-:@{set\-Center\-Projected\-Point\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Center\-Projected\-Point\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Center\-Projected\-Point\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{projected\-Point}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_af156345c10a07045bbedec55efe6247e}
+\hypertarget{interface_r_m_map_contents_a8bb51badbffed49e25be29edafb10a95}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Frame\-:@{set\-Frame\-:}}
+\index{set\-Frame\-:@{set\-Frame\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Frame\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Frame\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{frame}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a8bb51badbffed49e25be29edafb10a95}
+
+
+参考自 R\-M\-Map\-View\-::set\-Frame\-:.
+
+\hypertarget{interface_r_m_map_contents_a7787b10ca141e7fdaf6e99312d4f5504}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Map\-Center\-:@{set\-Map\-Center\-:}}
+\index{set\-Map\-Center\-:@{set\-Map\-Center\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Map\-Center\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Map\-Center\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-L\-Location\-Coordinate2\-D)}]{center}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a7787b10ca141e7fdaf6e99312d4f5504}
+\hypertarget{interface_r_m_map_contents_a2668247ea9686a5d84aff8db823b1cf6}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Max\-Zoom\-:@{set\-Max\-Zoom\-:}}
+\index{set\-Max\-Zoom\-:@{set\-Max\-Zoom\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Max\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Max\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{new\-Max\-Zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a2668247ea9686a5d84aff8db823b1cf6}
+
+
+参考自 init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-: , 以及 init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_a56e7ec20e0ef55c9bdceb73dee05a1aa}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Meters\-Per\-Pixel\-:@{set\-Meters\-Per\-Pixel\-:}}
+\index{set\-Meters\-Per\-Pixel\-:@{set\-Meters\-Per\-Pixel\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Meters\-Per\-Pixel\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Meters\-Per\-Pixel\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{new\-M\-P\-P}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a56e7ec20e0ef55c9bdceb73dee05a1aa}
+
+
+参考自 set\-Scaled\-Meters\-Per\-Pixel\-:.
+
+\hypertarget{interface_r_m_map_contents_a5c2eda436f8e54cbed7263e419046cd1}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Min\-Zoom\-:@{set\-Min\-Zoom\-:}}
+\index{set\-Min\-Zoom\-:@{set\-Min\-Zoom\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Min\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Min\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{new\-Min\-Zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a5c2eda436f8e54cbed7263e419046cd1}
+
+
+参考自 init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-: , 以及 Route\-Me\-Tests\-::test\-Zoom\-Bounds.
+
+\hypertarget{interface_r_m_map_contents_ad20f344bc5c5361cc12a08bb1221f766}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Overlay\-:@{set\-Overlay\-:}}
+\index{set\-Overlay\-:@{set\-Overlay\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Overlay\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Overlay\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Layer\-Collection}$\ast$)}]{a\-Layer}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_ad20f344bc5c5361cc12a08bb1221f766}
+
+
+参考自 dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-: , 以及 init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_aa00c82eeeb84859798f03e09226a8100}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Perform\-Expensive\-Operations\-:@{set\-Perform\-Expensive\-Operations\-:}}
+\index{set\-Perform\-Expensive\-Operations\-:@{set\-Perform\-Expensive\-Operations\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Perform\-Expensive\-Operations\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (void) set\-Perform\-Expensive\-Operations\-: 
+\begin{DoxyParamCaption}
+\item[{(B\-O\-O\-L)}]{p}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_aa00c82eeeb84859798f03e09226a8100}
+
+
+参考自 R\-M\-Map\-View\-::resume\-Expensive\-Operations , 以及 R\-M\-Map\-View\-::touches\-Began\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_contents_ad94e75ab1195d755f8f52caba2fc554f}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Projected\-Bounds\-:@{set\-Projected\-Bounds\-:}}
+\index{set\-Projected\-Bounds\-:@{set\-Projected\-Bounds\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Projected\-Bounds\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Projected\-Bounds\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Rect})}]{bounds\-Rect}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_ad94e75ab1195d755f8f52caba2fc554f}
+
+
+参考自 zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:.
+
+\hypertarget{interface_r_m_map_contents_ab3dc71cf707383671723a0629bbf6587}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Renderer\-:@{set\-Renderer\-:}}
+\index{set\-Renderer\-:@{set\-Renderer\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Renderer\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Renderer\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Map\-Renderer}$\ast$)}]{new\-Renderer}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_ab3dc71cf707383671723a0629bbf6587}
+
+
+参考自 dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-: , 以及 init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_a8c9d36abec740f7a9c7047fa1f47daa5}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Rotation\-:@{set\-Rotation\-:}}
+\index{set\-Rotation\-:@{set\-Rotation\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Rotation\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Rotation\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{angle}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a8c9d36abec740f7a9c7047fa1f47daa5}
+
+
+参考自 R\-M\-Map\-View\-::set\-Rotation\-:.
+
+\hypertarget{interface_r_m_map_contents_a9de0ef8146a2ec46e7bca53bbd763bec}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Scaled\-Meters\-Per\-Pixel\-:@{set\-Scaled\-Meters\-Per\-Pixel\-:}}
+\index{set\-Scaled\-Meters\-Per\-Pixel\-:@{set\-Scaled\-Meters\-Per\-Pixel\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Scaled\-Meters\-Per\-Pixel\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Scaled\-Meters\-Per\-Pixel\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{new\-M\-P\-P}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a9de0ef8146a2ec46e7bca53bbd763bec}
+
+
+参考自 set\-Zoom\-:.
+
+\hypertarget{interface_r_m_map_contents_ae33000c5144c046f9d4da1d20b80004c}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Tile\-Depth\-:@{set\-Tile\-Depth\-:}}
+\index{set\-Tile\-Depth\-:@{set\-Tile\-Depth\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Tile\-Depth\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Tile\-Depth\-: 
+\begin{DoxyParamCaption}
+\item[{(short)}]{value}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_ae33000c5144c046f9d4da1d20b80004c}
+\hypertarget{interface_r_m_map_contents_a69a041eb8065efe8f31ce40ad9894f1c}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Tile\-Source\-:@{set\-Tile\-Source\-:}}
+\index{set\-Tile\-Source\-:@{set\-Tile\-Source\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Tile\-Source\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Tile\-Source\-: 
+\begin{DoxyParamCaption}
+\item[{(id$<${\bf R\-M\-Tile\-Source}$>$)}]{new\-Tile\-Source}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a69a041eb8065efe8f31ce40ad9894f1c}
+
+
+参考自 init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-: , 以及 init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_afbdfe65940239191436f23b14942bb2e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Tiles\-Update\-Delegate\-:@{set\-Tiles\-Update\-Delegate\-:}}
+\index{set\-Tiles\-Update\-Delegate\-:@{set\-Tiles\-Update\-Delegate\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Tiles\-Update\-Delegate\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Tiles\-Update\-Delegate\-: 
+\begin{DoxyParamCaption}
+\item[{(id$<${\bf R\-M\-Tiles\-Update\-Delegate}$>$)}]{\-\_\-tiles\-Update\-Delegate}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_afbdfe65940239191436f23b14942bb2e}
+\hypertarget{interface_r_m_map_contents_a06f80b8cd231adf996ed5c363afa34f8}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!set\-Zoom\-:@{set\-Zoom\-:}}
+\index{set\-Zoom\-:@{set\-Zoom\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{set\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a06f80b8cd231adf996ed5c363afa34f8}
+
+
+if \hyperlink{interface_r_m_map_contents_a199c766d9970b90672f8884856c7cd4e}{zoom} is outside of range \hyperlink{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}{min\-Zoom} to \hyperlink{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}{max\-Zoom}, zoom level is clamped to that range. 
+
+
+
+参考自 animated\-Zoom\-Step\-:, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Far\-East, Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Far\-West, Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Pacific\-Northwest, Route\-Me\-Tests\-::test\-Zoom\-Bounds , 以及 zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:.
+
+\hypertarget{interface_r_m_map_contents_a0d412fc8ab80b4ef35c2dabf3a0f1c12}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:@{should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:}}
+\index{should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:@{should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) should\-Zoom\-To\-Target\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{target\-Zoom}
+\item[{withZoomFactor:(float)}]{zoom\-Factor}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_contents_a0d412fc8ab80b4ef35c2dabf3a0f1c12}
+\hypertarget{interface_r_m_map_contents_a78107eb32326f58654bd9bcfe04c8289}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!tiles\-Updated\-Region\-:@{tiles\-Updated\-Region\-:}}
+\index{tiles\-Updated\-Region\-:@{tiles\-Updated\-Region\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{tiles\-Updated\-Region\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) tiles\-Updated\-Region\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{region}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a78107eb32326f58654bd9bcfe04c8289}
+
+
+参考自 R\-M\-Tile\-Loader\-::update\-Loaded\-Images.
+
+\hypertarget{interface_r_m_map_contents_ac84735b91375863f930ce3465411a85f}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}}
+\index{zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-By\-Factor\-:near\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-By\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{pivot}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_ac84735b91375863f930ce3465411a85f}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000016}{Bug}]this is a no-\/op, not a clamp, if new zoom would be outside of minzoom/maxzoom range \end{DoxyRefDesc}
+\hypertarget{interface_r_m_map_contents_a50036c154b99004fef1068a4972bd941}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-By\-Factor\-:near\-:animated\-:@{zoom\-By\-Factor\-:near\-:animated\-:}}
+\index{zoom\-By\-Factor\-:near\-:animated\-:@{zoom\-By\-Factor\-:near\-:animated\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-By\-Factor\-:near\-:animated\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-By\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{center}
+\item[{animated:(B\-O\-O\-L)}]{animated}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a50036c154b99004fef1068a4972bd941}
+
+
+参考自 animated\-Zoom\-Step\-:, zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-: , 以及 zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:.
+
+\hypertarget{interface_r_m_map_contents_a625f32a99c58256644eeef69d40e13a9}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:@{zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:}}
+\index{zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:@{zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-By\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{center}
+\item[{animated:(B\-O\-O\-L)}]{animated}
+\item[{withCallback:(id$<${\bf R\-M\-Map\-Contents\-Animation\-Callback}$>$)}]{callback}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a625f32a99c58256644eeef69d40e13a9}
+
+
+参考自 zoom\-By\-Factor\-:near\-:animated\-:.
+
+\hypertarget{interface_r_m_map_contents_a8f2944077cd2d27c01463fa4881d3152}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-In\-To\-Next\-Native\-Zoom\-At\-:@{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:}}
+\index{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:@{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-In\-To\-Next\-Native\-Zoom\-At\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Point)}]{pivot}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a8f2944077cd2d27c01463fa4881d3152}
+
+
+参考自 Route\-Me\-Tests\-::test\-Zoom\-Bounds.
+
+\hypertarget{interface_r_m_map_contents_a6c5bafdae9d97c075ef057f78f3c38e6}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-:@{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-:}}
+\index{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-:@{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) {\bf zoom\-In\-To\-Next\-Native\-Zoom\-At\-:} 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Point)}]{pivot}
+\item[{animated:(B\-O\-O\-L)}]{animated}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a6c5bafdae9d97c075ef057f78f3c38e6}
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000007}{弃用}]appears to be unused \end{DoxyRefDesc}
+
+
+参考自 zoom\-In\-To\-Next\-Native\-Zoom\-At\-:.
+
+\hypertarget{interface_r_m_map_contents_a4d5461e344f8d9f3567064f5749baf1f}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:@{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:}}
+\index{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:@{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-Out\-To\-Next\-Native\-Zoom\-At\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Point)}]{pivot}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a4d5461e344f8d9f3567064f5749baf1f}
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000009}{弃用}]appears to be unused \end{DoxyRefDesc}
+
+
+参考自 Route\-Me\-Tests\-::test\-Zoom\-Bounds.
+
+\hypertarget{interface_r_m_map_contents_af50e2b740deeaf047fd114888c14c042}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:@{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:}}
+\index{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:@{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) {\bf zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:} 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Point)}]{pivot}
+\item[{animated:(B\-O\-O\-L)}]{animated}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_af50e2b740deeaf047fd114888c14c042}
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000008}{弃用}]appears to be unused except by zoom\-Out\-To\-Next\-Native\-Zoom\-At\-: \end{DoxyRefDesc}
+
+
+参考自 zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:.
+
+\hypertarget{interface_r_m_map_contents_a16518ad8c17a80bc90fbb396f4d9d16b}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:@{zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:}}
+\index{zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:@{zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-L\-Location\-Coordinate2\-D)}]{ne}
+\item[{SouthWest:(C\-L\-Location\-Coordinate2\-D)}]{se}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a16518ad8c17a80bc90fbb396f4d9d16b}
+\hypertarget{interface_r_m_map_contents_a527d09084d834ec9cc4738ba6ebba397}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:@{zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:}}
+\index{zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:@{zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Rect})}]{bounds}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_contents_a527d09084d834ec9cc4738ba6ebba397}
+
+
+参考自 zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:.
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_map_contents_a220a37d482a030e392788dee48ffc108}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!background@{background}}
+\index{background@{background}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{background}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Map\-Layer} $\ast$) background\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interface_r_m_map_contents_a220a37d482a030e392788dee48ffc108}
+
+
+subview for the image displayed while tiles are loading. Set its contents by providing your own \char`\"{}loading.\-png\char`\"{}. 
+
+
+
+参考自 set\-Background\-:, set\-Frame\-:, set\-Overlay\-: , 以及 set\-Renderer\-:.
+
+\hypertarget{interface_r_m_map_contents_a1ab8589d1d1fc05208eaffefcff9edaf}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!bounding\-Mask@{bounding\-Mask}}
+\index{bounding\-Mask@{bounding\-Mask}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{bounding\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) bounding\-Mask\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a1ab8589d1d1fc05208eaffefcff9edaf}
+
+
+参考自 adjust\-Zoom\-For\-Bounding\-Mask\-: , 以及 init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_ae370cf3845309794b89e5b11290b520e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!center\-Projected\-Point@{center\-Projected\-Point}}
+\index{center\-Projected\-Point@{center\-Projected\-Point}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{center\-Projected\-Point}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Point}) center\-Projected\-Point\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_ae370cf3845309794b89e5b11290b520e}
+\hypertarget{interface_r_m_map_contents_af81fdb306fe5675cc9ebc223379c773a}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!fully\-Loaded@{fully\-Loaded}}
+\index{fully\-Loaded@{fully\-Loaded}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{fully\-Loaded}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) fully\-Loaded\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_af81fdb306fe5675cc9ebc223379c773a}
+\hypertarget{interface_r_m_map_contents_a4da52b65a26cd078dfa90c2d348c58c0}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!images\-On\-Screen@{images\-On\-Screen}}
+\index{images\-On\-Screen@{images\-On\-Screen}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{images\-On\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Image\-Set} $\ast$) images\-On\-Screen\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a4da52b65a26cd078dfa90c2d348c58c0}
+
+
+参考自 dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, move\-By\-:, print\-Debugging\-Information, set\-Meters\-Per\-Pixel\-:, set\-Renderer\-:, set\-Tile\-Depth\-:, set\-Tile\-Source\-:, R\-M\-Tile\-Loader\-::update\-Loaded\-Images, zoom\-By\-Factor\-:near\-: , 以及 zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:.
+
+\hypertarget{interface_r_m_map_contents_afba5a8749837d703d4c551c12e134c54}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!layer@{layer}}
+\index{layer@{layer}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{layer}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-A\-Layer $\ast$) layer\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_afba5a8749837d703d4c551c12e134c54}
+
+
+This is the underlying U\-I\-View's layer. 
+
+
+
+参考自 dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, set\-Background\-:, set\-Frame\-:, set\-Overlay\-: , 以及 set\-Renderer\-:.
+
+\hypertarget{interface_r_m_map_contents_a66dc32c1210bd62ef66dd729aebcf55c}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!map\-Center@{map\-Center}}
+\index{map\-Center@{map\-Center}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{map\-Center}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-L\-Location\-Coordinate2\-D) map\-Center\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a66dc32c1210bd62ef66dd729aebcf55c}
+\hypertarget{interface_r_m_map_contents_a2e28d0b3c7f2670181edb8b87ab0324f}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!marker\-Manager@{marker\-Manager}}
+\index{marker\-Manager@{marker\-Manager}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{marker\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Marker\-Manager} $\ast$) marker\-Manager\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interface_r_m_map_contents_a2e28d0b3c7f2670181edb8b87ab0324f}
+
+
+参考自 dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, Route\-Me\-Tests\-::test\-Marker\-Coordinates\-Far\-East , 以及 Route\-Me\-Tests\-::test\-Marker\-Coordinates\-Far\-West.
+
+\hypertarget{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!max\-Zoom@{max\-Zoom}}
+\index{max\-Zoom@{max\-Zoom}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{max\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) max\-Zoom\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}, {\ttfamily [protected]}}}\label{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}
+
+
+maximum zoom number allowed for the view. \hyperlink{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}{min\-Zoom} and \hyperlink{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}{max\-Zoom} must be within the limits of \hyperlink{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}{tile\-Source} but can be stricter; they are clamped to tilesource limits if needed. 
+
+
+
+参考自 next\-Native\-Zoom\-Factor, R\-M\-Tile\-Loader\-::screen\-Is\-Loaded, set\-Max\-Zoom\-:, set\-Zoom\-:, should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:, Route\-Me\-Tests\-::test\-Zoom\-Bounds, zoom\-By\-Factor\-:near\-:, zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:, zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-: , 以及 zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:.
+
+\hypertarget{interface_r_m_map_contents_ac90bc80b3d40b418ff2fa21dc35cf6ca}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!mercator\-To\-Screen\-Projection@{mercator\-To\-Screen\-Projection}}
+\index{mercator\-To\-Screen\-Projection@{mercator\-To\-Screen\-Projection}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{mercator\-To\-Screen\-Projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Mercator\-To\-Screen\-Projection} $\ast$) mercator\-To\-Screen\-Projection\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_ac90bc80b3d40b418ff2fa21dc35cf6ca}
+
+
+(guess) converts from projected meters to screen pixel coordinates 
+
+
+
+参考自 R\-M\-Path\-::add\-Line\-To\-Screen\-Point\-:, R\-M\-Marker\-Manager\-::add\-Marker\-:at\-Projected\-Point\-:, R\-M\-Path\-::add\-Point\-To\-X\-Y\-:with\-Drawing\-:, R\-M\-Layer\-Collection\-::correct\-Screen\-Position\-:, dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, R\-M\-Circle\-::init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, R\-M\-Marker\-Manager\-::is\-Marker\-Within\-Screen\-Bounds\-:, latitude\-Longitude\-Bounding\-Box\-For\-Screen, lat\-Long\-To\-Pixel\-:, lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:, R\-M\-Marker\-Manager\-::markers\-Within\-Screen\-Bounds, move\-By\-:, R\-M\-Marker\-Manager\-::move\-Marker\-:\-At\-Lat\-Lon\-:, R\-M\-Marker\-Manager\-::move\-Marker\-:\-At\-X\-Y\-:, R\-M\-Circle\-::move\-To\-Lat\-Long\-:, R\-M\-Path\-::move\-To\-Screen\-Point\-:, pixel\-To\-Lat\-Long\-:, pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:, R\-M\-Path\-::recalculate\-Geometry, R\-M\-Marker\-Manager\-::screen\-Coordinates\-For\-Marker\-:, set\-Center\-Projected\-Point\-:, set\-Frame\-:, set\-Meters\-Per\-Pixel\-:, set\-Projected\-Bounds\-:, R\-M\-Circle\-::set\-Projected\-Location\-:, zoom\-By\-Factor\-:near\-: , 以及 zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:.
+
+\hypertarget{interface_r_m_map_contents_a3e7903c036affb0241bc13e128574073}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!mercator\-To\-Tile\-Projection@{mercator\-To\-Tile\-Projection}}
+\index{mercator\-To\-Tile\-Projection@{mercator\-To\-Tile\-Projection}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{mercator\-To\-Tile\-Projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf R\-M\-Mercator\-To\-Tile\-Projection} $>$) mercator\-To\-Tile\-Projection\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a3e7903c036affb0241bc13e128574073}
+
+
+参考自 dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:, set\-Tile\-Source\-:, set\-Zoom\-: , 以及 zoom\-By\-Factor\-:near\-:.
+
+\hypertarget{interface_r_m_map_contents_a23204276fe6140d07d3671e9b90157dc}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!meters\-Per\-Pixel@{meters\-Per\-Pixel}}
+\index{meters\-Per\-Pixel@{meters\-Per\-Pixel}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{meters\-Per\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) meters\-Per\-Pixel\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a23204276fe6140d07d3671e9b90157dc}
+
+
+参考自 R\-M\-Path\-::draw\-In\-Context\-:, R\-M\-Path\-::recalculate\-Geometry , 以及 R\-M\-Circle\-::update\-Circle\-Path.
+
+\hypertarget{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!min\-Zoom@{min\-Zoom}}
+\index{min\-Zoom@{min\-Zoom}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{min\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) min\-Zoom\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}
+
+
+minimum zoom number allowed for the view. \hyperlink{interface_r_m_map_contents_ab434ff9dc95d209ad2d53cf8d0f1703b}{min\-Zoom} and \hyperlink{interface_r_m_map_contents_afa0fef34433cbc987d0346dccbd151a1}{max\-Zoom} must be within the limits of \hyperlink{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}{tile\-Source} but can be stricter; they are clamped to tilesource limits if needed. 
+
+
+
+参考自 prev\-Native\-Zoom\-Factor, R\-M\-Tile\-Loader\-::screen\-Is\-Loaded, set\-Min\-Zoom\-:, set\-Tile\-Source\-:, set\-Zoom\-:, should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:, zoom\-By\-Factor\-:near\-:, zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:, zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-: , 以及 zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:.
+
+\hypertarget{interface_r_m_map_contents_ae5474cf3d2df7f969aec0944ac02134c}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!overlay@{overlay}}
+\index{overlay@{overlay}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{overlay}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Layer\-Collection} $\ast$) overlay\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interface_r_m_map_contents_ae5474cf3d2df7f969aec0944ac02134c}
+
+
+subview for markers and paths 
+
+
+
+参考自 R\-M\-Marker\-Manager\-::add\-Marker\-:at\-Projected\-Point\-:, R\-M\-Marker\-Manager\-::hide\-All\-Markers, R\-M\-Marker\-Manager\-::markers, move\-By\-:, R\-M\-Marker\-Manager\-::remove\-Marker\-:, R\-M\-Marker\-Manager\-::remove\-Markers, R\-M\-Marker\-Manager\-::remove\-Markers\-:, set\-Background\-:, set\-Center\-Projected\-Point\-:, set\-Frame\-:, set\-Meters\-Per\-Pixel\-:, set\-Overlay\-:, set\-Renderer\-:, set\-Rotation\-:, R\-M\-Marker\-Manager\-::unhide\-All\-Markers, zoom\-By\-Factor\-:near\-:, zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-: , 以及 zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:.
+
+\hypertarget{interface_r_m_map_contents_a46afa80adb2b126e05dfaf6501f17eea}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!projected\-Bounds@{projected\-Bounds}}
+\index{projected\-Bounds@{projected\-Bounds}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{projected\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Rect}) projected\-Bounds\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a46afa80adb2b126e05dfaf6501f17eea}
+\hypertarget{interface_r_m_map_contents_ac83cbe1542e19defe75afc557007e282}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!projection@{projection}}
+\index{projection@{projection}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projection} $\ast$) projection\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_ac83cbe1542e19defe75afc557007e282}
+
+
+(guess) the projection object to convert from latitude/longitude to meters. 
+
+Latlong is calculated dynamically from mercator\-Bounds. 
+
+参考自 R\-M\-Path\-::add\-Line\-To\-Lat\-Long\-:, R\-M\-Marker\-Manager\-::add\-Marker\-:\-At\-Lat\-Long\-:, dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, R\-M\-Circle\-::init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, lat\-Long\-To\-Pixel\-:, lat\-Long\-To\-Pixel\-:with\-Meters\-Per\-Pixel\-:, lat\-Long\-To\-Tile\-Point\-:with\-Meters\-Per\-Pixel\-:, R\-M\-Marker\-Manager\-::move\-Marker\-:\-At\-Lat\-Lon\-:, R\-M\-Path\-::move\-To\-Lat\-Long\-:, R\-M\-Circle\-::move\-To\-Lat\-Long\-:, move\-To\-Lat\-Long\-:, pixel\-To\-Lat\-Long\-:, pixel\-To\-Lat\-Long\-:with\-Meters\-Per\-Pixel\-:, set\-Tile\-Source\-: , 以及 zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:.
+
+\hypertarget{interface_r_m_map_contents_a5054d0d02002aa0757df91c9567d0cd9}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!renderer@{renderer}}
+\index{renderer@{renderer}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{renderer}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Map\-Renderer} $\ast$) renderer\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interface_r_m_map_contents_a5054d0d02002aa0757df91c9567d0cd9}
+
+
+参考自 draw\-Rect\-:, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, move\-By\-:, set\-Background\-:, set\-Center\-Projected\-Point\-:, set\-Frame\-:, set\-Meters\-Per\-Pixel\-:, set\-Overlay\-:, set\-Renderer\-:, zoom\-By\-Factor\-:near\-:, zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-: , 以及 zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:.
+
+\hypertarget{interface_r_m_map_contents_a5f23576d9f94b8528a3886af2013144d}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!scale\-Denominator@{scale\-Denominator}}
+\index{scale\-Denominator@{scale\-Denominator}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{scale\-Denominator}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (double) scale\-Denominator\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a5f23576d9f94b8528a3886af2013144d}
+
+
+The denominator in a cartographic scale like 1/24000, 1/50000, 1/2000000. 
+
+\hypertarget{interface_r_m_map_contents_a1ad726ecd59ef33b559d35c8d1cef95e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!scaled\-Meters\-Per\-Pixel@{scaled\-Meters\-Per\-Pixel}}
+\index{scaled\-Meters\-Per\-Pixel@{scaled\-Meters\-Per\-Pixel}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{scaled\-Meters\-Per\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) scaled\-Meters\-Per\-Pixel\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a1ad726ecd59ef33b559d35c8d1cef95e}
+\hypertarget{interface_r_m_map_contents_a658f2c0b02e7dded8f625329c658f925}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!screen\-Bounds@{screen\-Bounds}}
+\index{screen\-Bounds@{screen\-Bounds}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{screen\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-G\-Rect) screen\-Bounds\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a658f2c0b02e7dded8f625329c658f925}
+
+
+参考自 adjust\-Map\-Placement\-With\-Scale\-:, adjust\-Zoom\-For\-Bounding\-Mask\-:, R\-M\-Core\-Animation\-Renderer\-::init\-With\-Content\-:, R\-M\-Path\-::recalculate\-Geometry, set\-Background\-:, R\-M\-Core\-Animation\-Renderer\-::set\-Frame\-:, set\-Overlay\-:, set\-Renderer\-:, R\-M\-Tile\-Loader\-::update\-Loaded\-Images , 以及 zoom\-With\-Lat\-Lng\-Bounds\-North\-East\-:\-South\-West\-:.
+
+\hypertarget{interface_r_m_map_contents_aeae93353d6604c3304d945da9490d809}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!screen\-Scale@{screen\-Scale}}
+\index{screen\-Scale@{screen\-Scale}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{screen\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) screen\-Scale\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_aeae93353d6604c3304d945da9490d809}
+
+
+参考自 init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:.
+
+\hypertarget{interface_r_m_map_contents_a385e41b3717e62ef1d343b73144c1ef4}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!tile\-Bounds@{tile\-Bounds}}
+\index{tile\-Bounds@{tile\-Bounds}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{tile\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Rect}) tile\-Bounds\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a385e41b3717e62ef1d343b73144c1ef4}
+
+
+参考自 R\-M\-Tile\-Loader\-::update\-Loaded\-Images.
+
+\hypertarget{interface_r_m_map_contents_ad55a0b34afd6bd4b228f8ae3555f7d98}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!tile\-Depth@{tile\-Depth}}
+\index{tile\-Depth@{tile\-Depth}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{tile\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (short) tile\-Depth\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_ad55a0b34afd6bd4b228f8ae3555f7d98}
+\hypertarget{interface_r_m_map_contents_ad7c6bc753e0b9a1cbaa5e9dcb4a5e853}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!tile\-Loader@{tile\-Loader}}
+\index{tile\-Loader@{tile\-Loader}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{tile\-Loader}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Loader} $\ast$) tile\-Loader\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_ad7c6bc753e0b9a1cbaa5e9dcb4a5e853}
+
+
+参考自 dealloc, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, move\-By\-:, set\-Center\-Projected\-Point\-:, set\-Frame\-:, set\-Meters\-Per\-Pixel\-:, set\-Tile\-Source\-:, zoom\-By\-Factor\-:near\-:, zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-: , 以及 zoom\-With\-R\-M\-Mercator\-Rect\-Bounds\-:.
+
+\hypertarget{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!tile\-Source@{tile\-Source}}
+\index{tile\-Source@{tile\-Source}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{tile\-Source}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf R\-M\-Tile\-Source} $>$) tile\-Source\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interface_r_m_map_contents_afdc2f45aee8bcc5633182450fdea0cfc}
+
+
+controls what images are used. Can be changed while the view is visible, but see \href{http://code.google.com/p/route-me/issues/detail?id=12}{\tt http\-://code.\-google.\-com/p/route-\/me/issues/detail?id=12} 
+
+
+
+参考自 adjust\-Zoom\-For\-Bounding\-Mask\-:, dealloc, did\-Receive\-Memory\-Warning, init\-For\-View\-:\-With\-Tile\-Source\-:\-With\-Renderer\-:\-Looking\-At\-:, init\-With\-View\-:tilesource\-:center\-Lat\-Lon\-:zoom\-Level\-:max\-Zoom\-Level\-:min\-Zoom\-Level\-:background\-Image\-:screen\-Scale\-:, remove\-All\-Cached\-Images, set\-Min\-Zoom\-:, set\-Tile\-Source\-: , 以及 Route\-Me\-Tests\-::test\-Zoom\-Bounds.
+
+\hypertarget{interface_r_m_map_contents_a37fd1037d5c01ab7543a46056039ec77}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!tiles\-Update\-Delegate@{tiles\-Update\-Delegate}}
+\index{tiles\-Update\-Delegate@{tiles\-Update\-Delegate}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{tiles\-Update\-Delegate}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf R\-M\-Tiles\-Update\-Delegate} $>$) tiles\-Update\-Delegate\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [retain]}}}\label{interface_r_m_map_contents_a37fd1037d5c01ab7543a46056039ec77}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000012}{Bug}]probably shouldn't be retaining this delegate \end{DoxyRefDesc}
+
+
+参考自 set\-Tiles\-Update\-Delegate\-: , 以及 tiles\-Updated\-Region\-:.
+
+\hypertarget{interface_r_m_map_contents_a199c766d9970b90672f8884856c7cd4e}{\index{R\-M\-Map\-Contents@{R\-M\-Map\-Contents}!zoom@{zoom}}
+\index{zoom@{zoom}!RMMapContents@{R\-M\-Map\-Contents}}
+\subsubsection[{zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) zoom\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_contents_a199c766d9970b90672f8884856c7cd4e}
+
+
+zoom level is clamped to range (min\-Zoom, max\-Zoom) 
+
+
+
+参考自 animated\-Zoom\-Step\-:, next\-Native\-Zoom\-Factor, prev\-Native\-Zoom\-Factor, set\-Zoom\-:, should\-Zoom\-To\-Target\-Zoom\-:with\-Zoom\-Factor\-:, Route\-Me\-Tests\-::test\-Zoom\-Bounds, zoom\-By\-Factor\-:near\-:animated\-:with\-Callback\-:, zoom\-In\-To\-Next\-Native\-Zoom\-At\-:animated\-: , 以及 zoom\-Out\-To\-Next\-Native\-Zoom\-At\-:animated\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_map_contents_8h}{R\-M\-Map\-Contents.\-h}\item 
+Map/\hyperlink{_r_m_map_contents_8m}{R\-M\-Map\-Contents.\-m}\end{DoxyCompactItemize}

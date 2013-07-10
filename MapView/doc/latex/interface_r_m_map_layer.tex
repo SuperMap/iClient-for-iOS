@@ -1,0 +1,101 @@
+\hypertarget{interface_r_m_map_layer}{\section{R\-M\-Map\-Layer类 参考}
+\label{interface_r_m_map_layer}\index{R\-M\-Map\-Layer@{R\-M\-Map\-Layer}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-Map\-Layer.\-h$>$}
+
+类 R\-M\-Map\-Layer 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_r_m_map_layer}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id$<$ C\-A\-Action $>$) -\/ \hyperlink{interface_r_m_map_layer_a28e0dabc0cf8638c6d26358354f4fcf8}{action\-For\-Key\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_layer_a0ef1b877235bcaedb2929dae3bd92750}{init}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_layer_aa32c5f5b5e5d2723763780b9ccbabce8}{init\-With\-Layer\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_layer_ac960944a80c596eb918531cf63c54c11}{move\-By\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_layer_ae0e1f8c364aaca4ac39766fe14bbba07}{zoom\-By\-Factor\-:near\-:}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_map_layer_a28e0dabc0cf8638c6d26358354f4fcf8}{\index{R\-M\-Map\-Layer@{R\-M\-Map\-Layer}!action\-For\-Key\-:@{action\-For\-Key\-:}}
+\index{action\-For\-Key\-:@{action\-For\-Key\-:}!RMMapLayer@{R\-M\-Map\-Layer}}
+\subsubsection[{action\-For\-Key\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ C\-A\-Action $>$) action\-For\-Key\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{key}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_layer_a28e0dabc0cf8638c6d26358354f4fcf8}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000018}{Bug}]why return nil for the \char`\"{}position\char`\"{} and \char`\"{}bounds\char`\"{} action\-For\-Key? Does this do anything besides block Core Animation? \end{DoxyRefDesc}
+
+
+被 \hyperlink{interface_r_m_path_aeff4f90d5d01092fd310a0b52d3c9d1c}{R\-M\-Path} 重载.
+
+\hypertarget{interface_r_m_map_layer_a0ef1b877235bcaedb2929dae3bd92750}{\index{R\-M\-Map\-Layer@{R\-M\-Map\-Layer}!init@{init}}
+\index{init@{init}!RMMapLayer@{R\-M\-Map\-Layer}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_layer_a0ef1b877235bcaedb2929dae3bd92750}
+
+
+被 \hyperlink{interface_r_m_marker_ae896ffbfa063f34d49741f540b3f9201}{R\-M\-Marker} 重载.
+
+
+
+参考自 R\-M\-Layer\-Collection\-::init\-For\-Contents\-:, R\-M\-Path\-::init\-With\-Contents\-: , 以及 R\-M\-Circle\-::init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:.
+
+\hypertarget{interface_r_m_map_layer_aa32c5f5b5e5d2723763780b9ccbabce8}{\index{R\-M\-Map\-Layer@{R\-M\-Map\-Layer}!init\-With\-Layer\-:@{init\-With\-Layer\-:}}
+\index{init\-With\-Layer\-:@{init\-With\-Layer\-:}!RMMapLayer@{R\-M\-Map\-Layer}}
+\subsubsection[{init\-With\-Layer\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Layer\-: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{layer}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_layer_aa32c5f5b5e5d2723763780b9ccbabce8}
+\hypertarget{interface_r_m_map_layer_ac960944a80c596eb918531cf63c54c11}{\index{R\-M\-Map\-Layer@{R\-M\-Map\-Layer}!move\-By\-:@{move\-By\-:}}
+\index{move\-By\-:@{move\-By\-:}!RMMapLayer@{R\-M\-Map\-Layer}}
+\subsubsection[{move\-By\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-By\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Size)}]{delta}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_layer_ac960944a80c596eb918531cf63c54c11}
+
+
+被 \hyperlink{interface_r_m_circle_ae75b2ad3001e194c07a13b53a2486871}{R\-M\-Circle}, \hyperlink{interface_r_m_marker_a96b0d02976d98b17a2d8383d9cb4c807}{R\-M\-Marker}, \hyperlink{interface_r_m_layer_collection_aea4e071b3b6841f2892ff7dde0f737e6}{R\-M\-Layer\-Collection} , 以及 \hyperlink{interface_r_m_path_aa51fa75ed859403de65279c357720646}{R\-M\-Path} 重载.
+
+
+
+参考自 R\-M\-Path\-::move\-By\-:, R\-M\-Marker\-::move\-By\-: , 以及 R\-M\-Circle\-::move\-By\-:.
+
+\hypertarget{interface_r_m_map_layer_ae0e1f8c364aaca4ac39766fe14bbba07}{\index{R\-M\-Map\-Layer@{R\-M\-Map\-Layer}!zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}}
+\index{zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}!RMMapLayer@{R\-M\-Map\-Layer}}
+\subsubsection[{zoom\-By\-Factor\-:near\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-By\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{center}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_layer_ae0e1f8c364aaca4ac39766fe14bbba07}
+
+
+被 \hyperlink{interface_r_m_circle_ad1cd9f88068ff39d6000f2bf9816cc2b}{R\-M\-Circle}, \hyperlink{interface_r_m_marker_ad98fa242aceef563743c13963d8a79ca}{R\-M\-Marker} , 以及 \hyperlink{interface_r_m_layer_collection_ade8dc9cb544571522ee47b35e124ac8e}{R\-M\-Layer\-Collection} 重载.
+
+
+
+参考自 R\-M\-Circle\-::zoom\-By\-Factor\-:near\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_map_layer_8h}{R\-M\-Map\-Layer.\-h}\item 
+Map/\hyperlink{_r_m_map_layer_8m}{R\-M\-Map\-Layer.\-m}\end{DoxyCompactItemize}

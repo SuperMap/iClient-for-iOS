@@ -1,0 +1,50 @@
+\hypertarget{_r_m_abstract_mercator_web_source_8h}{\section{Map/\-R\-M\-Abstract\-Mercator\-Web\-Source.h 文件参考}
+\label{_r_m_abstract_mercator_web_source_8h}\index{Map/\-R\-M\-Abstract\-Mercator\-Web\-Source.\-h@{Map/\-R\-M\-Abstract\-Mercator\-Web\-Source.\-h}}
+}
+{\ttfamily \#import \char`\"{}R\-M\-Tile\-Source.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Fractal\-Tile\-Projection.\-h\char`\"{}}\\*
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{interface_r_m_abstract_mercator_web_source}{R\-M\-Abstract\-Mercator\-Web\-Source}
+\item 
+protocol \hyperlink{protocol_r_m_abstract_mercator_web_source-p}{$<$\-R\-M\-Abstract\-Mercator\-Web\-Source$>$}
+\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_r_m_abstract_mercator_web_source_8h_a3d7fc0ce5a7b5f8db390480c7ee3fe23}{k\-Default\-Lat\-Lon\-Bounding\-Box}~((\hyperlink{struct_r_m_spherical_trapezium}{R\-M\-Spherical\-Trapezium})\{.northeast = \{.latitude = 90, .longitude = 180\}, .southwest = \{.latitude = -\/90, .longitude = -\/180\}\})
+\item 
+\#define \hyperlink{_r_m_abstract_mercator_web_source_8h_af501f8cae210f679d3f918f58216e32f}{k\-Default\-Max\-Tile\-Zoom}~18
+\item 
+\#define \hyperlink{_r_m_abstract_mercator_web_source_8h_aa791b448da05a692db4ab6671d36ddb0}{k\-Default\-Min\-Tile\-Zoom}~0
+\item 
+\#define \hyperlink{_r_m_abstract_mercator_web_source_8h_a364364c621a8fa9bef6cb53e284f1955}{k\-Default\-Tile\-Size}~256
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\hypertarget{_r_m_abstract_mercator_web_source_8h_a3d7fc0ce5a7b5f8db390480c7ee3fe23}{\index{R\-M\-Abstract\-Mercator\-Web\-Source.\-h@{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}!k\-Default\-Lat\-Lon\-Bounding\-Box@{k\-Default\-Lat\-Lon\-Bounding\-Box}}
+\index{k\-Default\-Lat\-Lon\-Bounding\-Box@{k\-Default\-Lat\-Lon\-Bounding\-Box}!RMAbstractMercatorWebSource.h@{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}}
+\subsubsection[{k\-Default\-Lat\-Lon\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Lat\-Lon\-Bounding\-Box~(({\bf R\-M\-Spherical\-Trapezium})\{.northeast = \{.latitude = 90, .longitude = 180\}, .southwest = \{.latitude = -\/90, .longitude = -\/180\}\})}}\label{_r_m_abstract_mercator_web_source_8h_a3d7fc0ce5a7b5f8db390480c7ee3fe23}
+
+
+参考自 R\-M\-Abstract\-Mercator\-Web\-Source\-::latitude\-Longitude\-Bounding\-Box.
+
+\hypertarget{_r_m_abstract_mercator_web_source_8h_af501f8cae210f679d3f918f58216e32f}{\index{R\-M\-Abstract\-Mercator\-Web\-Source.\-h@{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}!k\-Default\-Max\-Tile\-Zoom@{k\-Default\-Max\-Tile\-Zoom}}
+\index{k\-Default\-Max\-Tile\-Zoom@{k\-Default\-Max\-Tile\-Zoom}!RMAbstractMercatorWebSource.h@{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}}
+\subsubsection[{k\-Default\-Max\-Tile\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Max\-Tile\-Zoom~18}}\label{_r_m_abstract_mercator_web_source_8h_af501f8cae210f679d3f918f58216e32f}
+
+
+参考自 R\-M\-Yahoo\-Map\-Source\-::tile\-U\-R\-L\-:.
+
+\hypertarget{_r_m_abstract_mercator_web_source_8h_aa791b448da05a692db4ab6671d36ddb0}{\index{R\-M\-Abstract\-Mercator\-Web\-Source.\-h@{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}!k\-Default\-Min\-Tile\-Zoom@{k\-Default\-Min\-Tile\-Zoom}}
+\index{k\-Default\-Min\-Tile\-Zoom@{k\-Default\-Min\-Tile\-Zoom}!RMAbstractMercatorWebSource.h@{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}}
+\subsubsection[{k\-Default\-Min\-Tile\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Min\-Tile\-Zoom~0}}\label{_r_m_abstract_mercator_web_source_8h_aa791b448da05a692db4ab6671d36ddb0}
+\hypertarget{_r_m_abstract_mercator_web_source_8h_a364364c621a8fa9bef6cb53e284f1955}{\index{R\-M\-Abstract\-Mercator\-Web\-Source.\-h@{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}!k\-Default\-Tile\-Size@{k\-Default\-Tile\-Size}}
+\index{k\-Default\-Tile\-Size@{k\-Default\-Tile\-Size}!RMAbstractMercatorWebSource.h@{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}}
+\subsubsection[{k\-Default\-Tile\-Size}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Tile\-Size~256}}\label{_r_m_abstract_mercator_web_source_8h_a364364c621a8fa9bef6cb53e284f1955}
+
+
+参考自 R\-M\-W\-M\-S\-Source\-::init.
+

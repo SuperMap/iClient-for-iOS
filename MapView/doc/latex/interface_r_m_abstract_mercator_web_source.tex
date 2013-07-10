@@ -1,0 +1,420 @@
+\hypertarget{interface_r_m_abstract_mercator_web_source}{\section{R\-M\-Abstract\-Mercator\-Web\-Source类 参考}
+\label{interface_r_m_abstract_mercator_web_source}\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-Abstract\-Mercator\-Web\-Source.\-h$>$}
+
+类 R\-M\-Abstract\-Mercator\-Web\-Source 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{interface_r_m_abstract_mercator_web_source}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a24301a2a9dd3c5839d0884251713c2e5}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a560d3138401fbe5b7f8f7f358cf2e11b}{did\-Receive\-Memory\-Warning}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a88bc1ea00a789381d77ae50e0eaec732}{init}
+\item 
+(\hyperlink{struct_r_m_spherical_trapezium}{R\-M\-Spherical\-Trapezium}) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_ae43425d7f2ade06fd2e3bdf34a8b083a}{latitude\-Longitude\-Bounding\-Box}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a77313c2d697428dd994a6e0cf07a256f}{long\-Attribution}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a9c1c86280c6fa05e4e82502822fcfd10}{long\-Description}
+\item 
+(float) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a95d5287d9e661ba2e6c319fe9615c703}{max\-Zoom}
+\item 
+(id$<$ \hyperlink{protocol_r_m_mercator_to_tile_projection-p}{R\-M\-Mercator\-To\-Tile\-Projection} $>$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_af48c0466d8040638076c5093f8b8234a}{mercator\-To\-Tile\-Projection}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(float) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_ae2767e8347256d6cc5eb88aec30fd97c}{min\-Zoom}
+\item 
+(void) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_ac370abc5403c594edcd8f6a59ab8907e}{network\-Operations\-Notification\-:}
+\item 
+(\hyperlink{interface_r_m_projection}{R\-M\-Projection} $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a7f9e2c871a2842dd854324fc173cd47f}{projection}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a0d60c497c08e580f50acba5cb922fd97}{remove\-All\-Cached\-Images}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em clear all images from the in-\/memory and on-\/disk image caches \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a3b6433a48a63999eb62cb3db63185d9c}{set\-Max\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_ab30d98690abe95929a63f338635a898f}{set\-Min\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_ad7f57c2c9ee2c43e1877195b56ac68f2}{set\-Tile\-Side\-Length\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a6be24cea169d058b5eefd7572bedc366}{short\-Attribution}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a3e6c6ef18250ce14317373db9df1fc85}{short\-Name}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a5883e8ad44e66039acaa12c715a05154}{tile\-File\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{interface_r_m_tile_image}{R\-M\-Tile\-Image} $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a14e580ef6a285f9feedb8028a50b2b63}{tile\-Image\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_a00079a441d15a29bf5181e3672e9ba62}{tile\-Path}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(int) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_ae98cbd18cae13443ec8e71f7c850615b}{tile\-Side\-Length}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_aba0294fce2e720adc6bf91180a90b28e}{tile\-U\-R\-L\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_abstract_mercator_web_source_acf45b84d8f39ef7fcc2a92a2e320a9a2}{unique\-Tilecache\-Key}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_abstract_mercator_web_source_ac05e057c8f0e7dc24790b673e136ce75}{network\-Operations}
+\item 
+\hyperlink{interface_r_m_fractal_tile_projection}{R\-M\-Fractal\-Tile\-Projection} $\ast$ \hyperlink{interface_r_m_abstract_mercator_web_source_abdb12e5197d9fb938a9d68bb0a9c9ae5}{tile\-Projection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_abstract_mercator_web_source_a24301a2a9dd3c5839d0884251713c2e5}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_a24301a2a9dd3c5839d0884251713c2e5}
+
+
+被 \hyperlink{interface_r_m_spatial_cloud_map_source_a6aeb222420a51b8b1a7f8cb13c2797e6}{R\-M\-Spatial\-Cloud\-Map\-Source}, \hyperlink{interface_r_m_w_m_s_source_a7df3f99e46ab5030506ddb7155e45911}{R\-M\-W\-M\-S\-Source} , 以及 \hyperlink{interface_r_m_tile_stream_source_a211ce6db8a319dab3d1089954b5d0f3a}{R\-M\-Tile\-Stream\-Source} 重载.
+
+
+
+参考自 R\-M\-Tile\-Stream\-Source\-::dealloc, R\-M\-W\-M\-S\-Source\-::dealloc , 以及 R\-M\-Spatial\-Cloud\-Map\-Source\-::dealloc.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a560d3138401fbe5b7f8f7f358cf2e11b}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}}
+\index{did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{did\-Receive\-Memory\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\-Receive\-Memory\-Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_a560d3138401fbe5b7f8f7f358cf2e11b}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a70eade96883de23124c3f86321685b52}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a88bc1ea00a789381d77ae50e0eaec732}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!init@{init}}
+\index{init@{init}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_a88bc1ea00a789381d77ae50e0eaec732}
+
+
+被 \hyperlink{interface_r_m_spatial_cloud_map_source_a69952598d6a2cc04c99a629a0df9588f}{R\-M\-Spatial\-Cloud\-Map\-Source}, \hyperlink{interface_r_m_w_m_s_source_af93c7233da63c1092768822cf25cb816}{R\-M\-W\-M\-S\-Source}, \hyperlink{interface_r_m_yahoo_map_source_ad3bb94f78cc1a8acb1f5a351c25976f2}{R\-M\-Yahoo\-Map\-Source}, \hyperlink{interface_r_m_virtual_earth_source_ac5adb7466431cc74785b23ccda89043a}{R\-M\-Virtual\-Earth\-Source}, \hyperlink{interface_r_m_tile_cache_source_a1991da8b9143df226620c9283792dab0}{R\-M\-Tile\-Cache\-Source}, \hyperlink{interface_r_m_map_quest_o_s_m_source_aecd8d0a7ca60bc224ee43f8ad933fb1b}{R\-M\-Map\-Quest\-O\-S\-M\-Source}, \hyperlink{interface_r_m_open_aerial_map_source_a05c9a3ffef1c399e854f0aaaa252924e}{R\-M\-Open\-Aerial\-Map\-Source}, \hyperlink{interface_r_m_open_cycle_map_source_a44641fcc78a286cb2deb35124e260165}{R\-M\-Open\-Cycle\-Map\-Source}, \hyperlink{interface_r_m_open_street_map_source_ad2c425f72e1d6342eb533a64426c1ecc}{R\-M\-Open\-Street\-Map\-Source}, \hyperlink{interface_r_m_cloud_made_map_source_ac1f36511f1261c96378989182fbdc724}{R\-M\-Cloud\-Made\-Map\-Source} , 以及 \hyperlink{interface_r_m_cloud_map_source_af878223b3719bd71f274050374cd7cda}{R\-M\-Cloud\-Map\-Source} 重载.
+
+
+
+参考自 R\-M\-Spatial\-Cloud\-Map\-Source\-::init, R\-M\-Tile\-Map\-Service\-Source\-::init\-:unique\-Key\-:min\-Zoom\-:max\-Zoom\-: , 以及 R\-M\-Tile\-Stream\-Source\-::init\-With\-Info\-:.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_ae43425d7f2ade06fd2e3bdf34a8b083a}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!latitude\-Longitude\-Bounding\-Box@{latitude\-Longitude\-Bounding\-Box}}
+\index{latitude\-Longitude\-Bounding\-Box@{latitude\-Longitude\-Bounding\-Box}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{latitude\-Longitude\-Bounding\-Box}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Spherical\-Trapezium}) latitude\-Longitude\-Bounding\-Box 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_ae43425d7f2ade06fd2e3bdf34a8b083a}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a740893daebd1fe8e0a463e64a28816dd}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_tile_stream_source_a483efb3bdcc1dad1a464506b94e39d78}{R\-M\-Tile\-Stream\-Source} 重载.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a77313c2d697428dd994a6e0cf07a256f}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!long\-Attribution@{long\-Attribution}}
+\index{long\-Attribution@{long\-Attribution}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{long\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_a77313c2d697428dd994a6e0cf07a256f}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_adff372c4c777906e56b90a61895d2ff4}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_spatial_cloud_map_source_aca8e3d49e1f76041d359f4b3f23f455b}{R\-M\-Spatial\-Cloud\-Map\-Source}, \hyperlink{interface_r_m_yahoo_map_source_a3304e958de6f104c62db2cbba5003172}{R\-M\-Yahoo\-Map\-Source}, \hyperlink{interface_r_m_virtual_earth_source_aecb9344a0ea17a52805f4b275bf99f53}{R\-M\-Virtual\-Earth\-Source}, \hyperlink{interface_r_m_tile_cache_source_adc0c3fa292e6dd1fc59534be0d9eea26}{R\-M\-Tile\-Cache\-Source}, \hyperlink{interface_r_m_map_quest_o_s_m_source_a42722a15d1f14e114d2f4cd8de4010d6}{R\-M\-Map\-Quest\-O\-S\-M\-Source}, \hyperlink{interface_r_m_open_aerial_map_source_a3ee5ed718434f321be5ad57fe4c527b8}{R\-M\-Open\-Aerial\-Map\-Source}, \hyperlink{interface_r_m_open_cycle_map_source_af84dc5628aac3458972ab37a9364dd4d}{R\-M\-Open\-Cycle\-Map\-Source}, \hyperlink{interface_r_m_open_street_map_source_a932b3f4e2d2015eaadae1e5876f3fd14}{R\-M\-Open\-Street\-Map\-Source}, \hyperlink{interface_r_m_tile_stream_source_aa977502a8d80f3abcea6669c0cbb2fe7}{R\-M\-Tile\-Stream\-Source}, \hyperlink{interface_r_m_cloud_made_map_source_a591d36a1e1d2d5d5024a568339542b5e}{R\-M\-Cloud\-Made\-Map\-Source}, \hyperlink{interface_r_m_cloud_map_source_afc502c38dc65ff4ca970e7da5b39c5e1}{R\-M\-Cloud\-Map\-Source} , 以及 \hyperlink{interface_r_m_tile_map_service_source_af3e82c8c50ff4d3c6d8aa4940c0bbfd0}{R\-M\-Tile\-Map\-Service\-Source} 重载.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a9c1c86280c6fa05e4e82502822fcfd10}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!long\-Description@{long\-Description}}
+\index{long\-Description@{long\-Description}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{long\-Description}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) long\-Description 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_a9c1c86280c6fa05e4e82502822fcfd10}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a1f9b03c3dac588a98b050afe3a71dcfa}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_spatial_cloud_map_source_a92a59ece1bab8aae7c39fd8f26050930}{R\-M\-Spatial\-Cloud\-Map\-Source}, \hyperlink{interface_r_m_yahoo_map_source_ab368158d1562e382a66495d10778ced0}{R\-M\-Yahoo\-Map\-Source}, \hyperlink{interface_r_m_virtual_earth_source_aed0c86e17a29274bcd6749f9eaf8b0ba}{R\-M\-Virtual\-Earth\-Source}, \hyperlink{interface_r_m_tile_cache_source_a851d9a72047bd81351ec5dacb618c09f}{R\-M\-Tile\-Cache\-Source}, \hyperlink{interface_r_m_map_quest_o_s_m_source_ab56b7a7914bb63cbec37f5e0cf556efd}{R\-M\-Map\-Quest\-O\-S\-M\-Source}, \hyperlink{interface_r_m_open_aerial_map_source_a52f16e426510e04e68da57baa32e0a23}{R\-M\-Open\-Aerial\-Map\-Source}, \hyperlink{interface_r_m_open_cycle_map_source_a3d30e39f50df22cf3ddba68ae4eda864}{R\-M\-Open\-Cycle\-Map\-Source}, \hyperlink{interface_r_m_open_street_map_source_acf8470afa308a44db7eab70e1366c570}{R\-M\-Open\-Street\-Map\-Source}, \hyperlink{interface_r_m_tile_stream_source_a791cffd82b75f0c9853f2ed49aa635f4}{R\-M\-Tile\-Stream\-Source}, \hyperlink{interface_r_m_cloud_made_map_source_a0f04c8a09c3d1a9f25dcd4f45af2934b}{R\-M\-Cloud\-Made\-Map\-Source}, \hyperlink{interface_r_m_cloud_map_source_a4c0753b3fee1264ceca0dd2fd46af299}{R\-M\-Cloud\-Map\-Source} , 以及 \hyperlink{interface_r_m_tile_map_service_source_ad8821cb88d0e55e2f8cce4bb2a080209}{R\-M\-Tile\-Map\-Service\-Source} 重载.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a95d5287d9e661ba2e6c319fe9615c703}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!max\-Zoom@{max\-Zoom}}
+\index{max\-Zoom@{max\-Zoom}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{max\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) max\-Zoom 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_a95d5287d9e661ba2e6c319fe9615c703}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a7d1ecfedd45c8ac433f972f38e7ac9a4}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_tile_stream_source_ad126cd46e17ef5ad95a6cf0533e17fe0}{R\-M\-Tile\-Stream\-Source} 重载.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_af48c0466d8040638076c5093f8b8234a}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!mercator\-To\-Tile\-Projection@{mercator\-To\-Tile\-Projection}}
+\index{mercator\-To\-Tile\-Projection@{mercator\-To\-Tile\-Projection}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{mercator\-To\-Tile\-Projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf R\-M\-Mercator\-To\-Tile\-Projection} $>$) mercator\-To\-Tile\-Projection 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_af48c0466d8040638076c5093f8b8234a}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a5086edf762a1756058c665c3a9b0d26f}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_ae2767e8347256d6cc5eb88aec30fd97c}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!min\-Zoom@{min\-Zoom}}
+\index{min\-Zoom@{min\-Zoom}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{min\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) min\-Zoom 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_ae2767e8347256d6cc5eb88aec30fd97c}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a7cd043d2bc55eded244b4c5da41dd909}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_tile_stream_source_a8a0c7a44fb2d194d2685c1f26187e6e5}{R\-M\-Tile\-Stream\-Source} 重载.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_ac370abc5403c594edcd8f6a59ab8907e}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!network\-Operations\-Notification\-:@{network\-Operations\-Notification\-:}}
+\index{network\-Operations\-Notification\-:@{network\-Operations\-Notification\-:}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{network\-Operations\-Notification\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) network\-Operations\-Notification\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Notification$\ast$)}]{notification}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_ac370abc5403c594edcd8f6a59ab8907e}
+\hypertarget{interface_r_m_abstract_mercator_web_source_a7f9e2c871a2842dd854324fc173cd47f}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!projection@{projection}}
+\index{projection@{projection}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projection} $\ast$) projection 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_a7f9e2c871a2842dd854324fc173cd47f}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a75c20205e72db39aa01943d8b6d8fc29}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+参考自 init.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a0d60c497c08e580f50acba5cb922fd97}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}}
+\index{remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{remove\-All\-Cached\-Images}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) remove\-All\-Cached\-Images 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_a0d60c497c08e580f50acba5cb922fd97}
+
+
+clear all images from the in-\/memory and on-\/disk image caches 
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000052}{Bug}]This method belongs on \hyperlink{interface_r_m_cached_tile_source}{R\-M\-Cached\-Tile\-Source}, not on \hyperlink{protocol_r_m_tile_source-p}{R\-M\-Tile\-Source}, because an \hyperlink{protocol_r_m_tile_source-p}{R\-M\-Tile\-Source} doesn't have a cache. \end{DoxyRefDesc}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_aa5c4555fb2500e5826d5558985d4ee3c}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a3b6433a48a63999eb62cb3db63185d9c}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!set\-Max\-Zoom\-:@{set\-Max\-Zoom\-:}}
+\index{set\-Max\-Zoom\-:@{set\-Max\-Zoom\-:}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{set\-Max\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Max\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{a\-Max\-Zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_a3b6433a48a63999eb62cb3db63185d9c}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_afd2310f2b3b95e91de2ef530ee5d5122}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+参考自 R\-M\-Cloud\-Map\-Source\-::init, R\-M\-Open\-Cycle\-Map\-Source\-::init, R\-M\-Open\-Street\-Map\-Source\-::init, R\-M\-Open\-Aerial\-Map\-Source\-::init, R\-M\-Map\-Quest\-O\-S\-M\-Source\-::init, R\-M\-W\-M\-S\-Source\-::init, R\-M\-Yahoo\-Map\-Source\-::init, R\-M\-Spatial\-Cloud\-Map\-Source\-::init, R\-M\-Tile\-Map\-Service\-Source\-::init\-:unique\-Key\-:min\-Zoom\-:max\-Zoom\-:, R\-M\-Virtual\-Earth\-Source\-::init\-With\-Aerial\-Theme\-Using\-Access\-Key\-:, R\-M\-Virtual\-Earth\-Source\-::init\-With\-Hybrid\-Theme\-Using\-Access\-Key\-: , 以及 R\-M\-Virtual\-Earth\-Source\-::init\-With\-Road\-Theme\-Using\-Access\-Key\-:.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_ab30d98690abe95929a63f338635a898f}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!set\-Min\-Zoom\-:@{set\-Min\-Zoom\-:}}
+\index{set\-Min\-Zoom\-:@{set\-Min\-Zoom\-:}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{set\-Min\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Min\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{a\-Min\-Zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_ab30d98690abe95929a63f338635a898f}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_ad8b2d3ab319784223970f215f6dd2f16}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+参考自 R\-M\-Cloud\-Map\-Source\-::init, R\-M\-Open\-Cycle\-Map\-Source\-::init, R\-M\-Open\-Street\-Map\-Source\-::init, R\-M\-Open\-Aerial\-Map\-Source\-::init, R\-M\-Map\-Quest\-O\-S\-M\-Source\-::init, R\-M\-W\-M\-S\-Source\-::init, R\-M\-Yahoo\-Map\-Source\-::init, R\-M\-Spatial\-Cloud\-Map\-Source\-::init, R\-M\-Tile\-Map\-Service\-Source\-::init\-:unique\-Key\-:min\-Zoom\-:max\-Zoom\-:, R\-M\-Virtual\-Earth\-Source\-::init\-With\-Aerial\-Theme\-Using\-Access\-Key\-:, R\-M\-Virtual\-Earth\-Source\-::init\-With\-Hybrid\-Theme\-Using\-Access\-Key\-: , 以及 R\-M\-Virtual\-Earth\-Source\-::init\-With\-Road\-Theme\-Using\-Access\-Key\-:.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_ad7f57c2c9ee2c43e1877195b56ac68f2}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!set\-Tile\-Side\-Length\-:@{set\-Tile\-Side\-Length\-:}}
+\index{set\-Tile\-Side\-Length\-:@{set\-Tile\-Side\-Length\-:}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{set\-Tile\-Side\-Length\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Tile\-Side\-Length\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{a\-Tile\-Side\-Length}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_ad7f57c2c9ee2c43e1877195b56ac68f2}
+
+
+参考自 R\-M\-Cloud\-Made\-Map\-Source\-::init\-With\-Access\-Key\-:style\-Number\-:.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a6be24cea169d058b5eefd7572bedc366}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!short\-Attribution@{short\-Attribution}}
+\index{short\-Attribution@{short\-Attribution}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{short\-Attribution}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Attribution 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_a6be24cea169d058b5eefd7572bedc366}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_afd67cfacb812cd3216ef1309297e264d}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_spatial_cloud_map_source_a54c0d41fc0dcf7a11dac1f9378098170}{R\-M\-Spatial\-Cloud\-Map\-Source}, \hyperlink{interface_r_m_yahoo_map_source_ae36d15de280147b8decd16d758874689}{R\-M\-Yahoo\-Map\-Source}, \hyperlink{interface_r_m_virtual_earth_source_a2571b1d3e25fa9ebacb40dca3d2bde8b}{R\-M\-Virtual\-Earth\-Source}, \hyperlink{interface_r_m_tile_cache_source_a700f4bcc6a9bbffb852d01eb425f8cfb}{R\-M\-Tile\-Cache\-Source}, \hyperlink{interface_r_m_map_quest_o_s_m_source_a14a58e74d28b38df3c93dfae7a7f6633}{R\-M\-Map\-Quest\-O\-S\-M\-Source}, \hyperlink{interface_r_m_open_aerial_map_source_ac20a79118d42831a77a162d4e42f3309}{R\-M\-Open\-Aerial\-Map\-Source}, \hyperlink{interface_r_m_open_cycle_map_source_a3c0c39e8ab0896390bd329e75e55860e}{R\-M\-Open\-Cycle\-Map\-Source}, \hyperlink{interface_r_m_open_street_map_source_a9ff8d53d553a5fd3e091a1dec5d720fe}{R\-M\-Open\-Street\-Map\-Source}, \hyperlink{interface_r_m_tile_stream_source_af29e760b684cfb520dbbd8f5f0f41686}{R\-M\-Tile\-Stream\-Source}, \hyperlink{interface_r_m_cloud_made_map_source_a24b31ad20954e02ffde188c4a008d2e8}{R\-M\-Cloud\-Made\-Map\-Source}, \hyperlink{interface_r_m_cloud_map_source_ada3be85455de2b8dae2032035d870f3e}{R\-M\-Cloud\-Map\-Source} , 以及 \hyperlink{interface_r_m_tile_map_service_source_ae40c5f9b838f852cb7c0943d0596c056}{R\-M\-Tile\-Map\-Service\-Source} 重载.
+
+
+
+参考自 long\-Attribution.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a3e6c6ef18250ce14317373db9df1fc85}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!short\-Name@{short\-Name}}
+\index{short\-Name@{short\-Name}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{short\-Name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) short\-Name 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_a3e6c6ef18250ce14317373db9df1fc85}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_ae0a98ebf46579f4c29d434322d25e64e}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_spatial_cloud_map_source_a8979840374ba56ae17b72b53877071a8}{R\-M\-Spatial\-Cloud\-Map\-Source}, \hyperlink{interface_r_m_yahoo_map_source_ad41852333c9fbdba9664a56271ebf56e}{R\-M\-Yahoo\-Map\-Source}, \hyperlink{interface_r_m_virtual_earth_source_a3a9b18977a6a266312d7e4d79441b52f}{R\-M\-Virtual\-Earth\-Source}, \hyperlink{interface_r_m_tile_cache_source_a9d81b865c2a4ebb2757f2c1871fb6183}{R\-M\-Tile\-Cache\-Source}, \hyperlink{interface_r_m_map_quest_o_s_m_source_adb22b17b97840aa7bc2170e896b464d9}{R\-M\-Map\-Quest\-O\-S\-M\-Source}, \hyperlink{interface_r_m_open_aerial_map_source_aeee53f47d6b8e07c9db69a200e13738e}{R\-M\-Open\-Aerial\-Map\-Source}, \hyperlink{interface_r_m_open_cycle_map_source_ac9b00e3fbdde801fdda353681d05d838}{R\-M\-Open\-Cycle\-Map\-Source}, \hyperlink{interface_r_m_open_street_map_source_a2c36d88b3653099053eb46129a245a55}{R\-M\-Open\-Street\-Map\-Source}, \hyperlink{interface_r_m_tile_stream_source_a059871decc3a5ad1a72d70b691b343b7}{R\-M\-Tile\-Stream\-Source}, \hyperlink{interface_r_m_cloud_made_map_source_a5e956b126886325f16f34684d974262c}{R\-M\-Cloud\-Made\-Map\-Source}, \hyperlink{interface_r_m_cloud_map_source_ad968ed767e547a7f97753e0ec34dec63}{R\-M\-Cloud\-Map\-Source} , 以及 \hyperlink{interface_r_m_tile_map_service_source_ab6d355147c5578e213f8b822d7cc4753}{R\-M\-Tile\-Map\-Service\-Source} 重载.
+
+
+
+参考自 long\-Description.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a5883e8ad44e66039acaa12c715a05154}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!tile\-File\-:@{tile\-File\-:}}
+\index{tile\-File\-:@{tile\-File\-:}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{tile\-File\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-File\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_a5883e8ad44e66039acaa12c715a05154}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_adc40bd2f04352819fc05e32d4209a2ca}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+参考自 tile\-Image\-:.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a14e580ef6a285f9feedb8028a50b2b63}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!tile\-Image\-:@{tile\-Image\-:}}
+\index{tile\-Image\-:@{tile\-Image\-:}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{tile\-Image\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Image} $\ast$) tile\-Image\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_a14e580ef6a285f9feedb8028a50b2b63}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_acf4ee01e3c1606d46a2ec8fe52b0d029}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_a00079a441d15a29bf5181e3672e9ba62}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!tile\-Path@{tile\-Path}}
+\index{tile\-Path@{tile\-Path}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{tile\-Path}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-Path 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_a00079a441d15a29bf5181e3672e9ba62}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_ae9fc8d2cccf8a7ffce2a0f7837140b9b}{$<$\-R\-M\-Tile\-Source$>$} .
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_ae98cbd18cae13443ec8e71f7c850615b}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!tile\-Side\-Length@{tile\-Side\-Length}}
+\index{tile\-Side\-Length@{tile\-Side\-Length}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{tile\-Side\-Length}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) tile\-Side\-Length 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_abstract_mercator_web_source_ae98cbd18cae13443ec8e71f7c850615b}
+\hypertarget{interface_r_m_abstract_mercator_web_source_aba0294fce2e720adc6bf91180a90b28e}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}}
+\index{tile\-U\-R\-L\-:@{tile\-U\-R\-L\-:}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{tile\-U\-R\-L\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) tile\-U\-R\-L\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_aba0294fce2e720adc6bf91180a90b28e}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000001}{Bug}]magic string literals \end{DoxyRefDesc}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_af7ca2e2fb8e8cc4cb17433ffdc105230}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_spatial_cloud_map_source_a8a29a9ae76880f3ceafb2b03fe2993be}{R\-M\-Spatial\-Cloud\-Map\-Source}, \hyperlink{interface_r_m_w_m_s_source_a87e46d1ac6e1a318323e4785b2c56d98}{R\-M\-W\-M\-S\-Source}, \hyperlink{interface_r_m_yahoo_map_source_a7e78f247de9a7ad3a6adcb1694d15380}{R\-M\-Yahoo\-Map\-Source}, \hyperlink{interface_r_m_virtual_earth_source_ae5d08adc0e9d810956f4f81a9fbf6681}{R\-M\-Virtual\-Earth\-Source}, \hyperlink{interface_r_m_tile_cache_source_a56bc01bcf515d76f547f84d79f9773e9}{R\-M\-Tile\-Cache\-Source}, \hyperlink{interface_r_m_map_quest_o_s_m_source_afb62c2d80e8f350ff3f1049f63e76b3b}{R\-M\-Map\-Quest\-O\-S\-M\-Source}, \hyperlink{interface_r_m_open_aerial_map_source_a4405601eb40cc53cf9d2f2875acc2be2}{R\-M\-Open\-Aerial\-Map\-Source}, \hyperlink{interface_r_m_open_cycle_map_source_a65f5b088a340d5b0e519a244f4f549fd}{R\-M\-Open\-Cycle\-Map\-Source}, \hyperlink{interface_r_m_open_street_map_source_a3d2b2c15f17ca1ab3d1862ffb1feb2e3}{R\-M\-Open\-Street\-Map\-Source}, \hyperlink{interface_r_m_tile_stream_source_ae4c4f099f3f2d43081accc1de9d2c5a8}{R\-M\-Tile\-Stream\-Source}, \hyperlink{interface_r_m_cloud_made_map_source_a25ff631fb042ace3eae48132f484a88e}{R\-M\-Cloud\-Made\-Map\-Source}, \hyperlink{interface_r_m_cloud_map_source_a13edb9f13639697b38732636d71688c1}{R\-M\-Cloud\-Map\-Source} , 以及 \hyperlink{interface_r_m_tile_map_service_source_a39aafcbb0907cfcca9df0f9708434f6b}{R\-M\-Tile\-Map\-Service\-Source} 重载.
+
+
+
+参考自 tile\-Image\-:.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_acf45b84d8f39ef7fcc2a92a2e320a9a2}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!unique\-Tilecache\-Key@{unique\-Tilecache\-Key}}
+\index{unique\-Tilecache\-Key@{unique\-Tilecache\-Key}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{unique\-Tilecache\-Key}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) unique\-Tilecache\-Key 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_abstract_mercator_web_source_acf45b84d8f39ef7fcc2a92a2e320a9a2}
+
+
+重载 \hyperlink{protocol_r_m_tile_source-p_a1838a34e9341efe7c76252e131824261}{$<$\-R\-M\-Tile\-Source$>$} .
+
+
+
+被 \hyperlink{interface_r_m_spatial_cloud_map_source_acb584cc15f37012168e4a81be5fb1a5d}{R\-M\-Spatial\-Cloud\-Map\-Source}, \hyperlink{interface_r_m_yahoo_map_source_aef91c1e282958b4c0f69e3ca885e28e9}{R\-M\-Yahoo\-Map\-Source}, \hyperlink{interface_r_m_virtual_earth_source_a8b7b461c2e4a8a89d51ca08e6d9d7628}{R\-M\-Virtual\-Earth\-Source}, \hyperlink{interface_r_m_tile_cache_source_a0fc37a76b0161717c4bf0de4a03d5fe0}{R\-M\-Tile\-Cache\-Source}, \hyperlink{interface_r_m_map_quest_o_s_m_source_ac5f1fbdc160544d60e9706b4e8e0c6a5}{R\-M\-Map\-Quest\-O\-S\-M\-Source}, \hyperlink{interface_r_m_open_aerial_map_source_a5da92a4a64ec3e3ecb36068b5264ca3f}{R\-M\-Open\-Aerial\-Map\-Source}, \hyperlink{interface_r_m_open_cycle_map_source_a8f454702038372b215a4cfabdce76022}{R\-M\-Open\-Cycle\-Map\-Source}, \hyperlink{interface_r_m_open_street_map_source_a6bf79a7fd62c28cb11979a7d4bdb65b9}{R\-M\-Open\-Street\-Map\-Source}, \hyperlink{interface_r_m_tile_stream_source_ab121a1455447ad90239e7f4ca78ce9a3}{R\-M\-Tile\-Stream\-Source}, \hyperlink{interface_r_m_cloud_made_map_source_aae477f125ad88298f778b14b079a7bbb}{R\-M\-Cloud\-Made\-Map\-Source}, \hyperlink{interface_r_m_cloud_map_source_a7c4d7bb98a9fee5864622a1c5e342dd8}{R\-M\-Cloud\-Map\-Source} , 以及 \hyperlink{interface_r_m_tile_map_service_source_a80f88caa0b6ea9310552e62714522348}{R\-M\-Tile\-Map\-Service\-Source} 重载.
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_abstract_mercator_web_source_ac05e057c8f0e7dc24790b673e136ce75}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!network\-Operations@{network\-Operations}}
+\index{network\-Operations@{network\-Operations}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{network\-Operations}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) network\-Operations\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_abstract_mercator_web_source_ac05e057c8f0e7dc24790b673e136ce75}
+
+
+参考自 init, network\-Operations\-Notification\-: , 以及 tile\-Image\-:.
+
+\hypertarget{interface_r_m_abstract_mercator_web_source_abdb12e5197d9fb938a9d68bb0a9c9ae5}{\index{R\-M\-Abstract\-Mercator\-Web\-Source@{R\-M\-Abstract\-Mercator\-Web\-Source}!tile\-Projection@{tile\-Projection}}
+\index{tile\-Projection@{tile\-Projection}!RMAbstractMercatorWebSource@{R\-M\-Abstract\-Mercator\-Web\-Source}}
+\subsubsection[{tile\-Projection}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Fractal\-Tile\-Projection}$\ast$) tile\-Projection\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_abstract_mercator_web_source_abdb12e5197d9fb938a9d68bb0a9c9ae5}
+
+
+参考自 dealloc, init, max\-Zoom, mercator\-To\-Tile\-Projection, min\-Zoom, set\-Max\-Zoom\-:, set\-Min\-Zoom\-:, set\-Tile\-Side\-Length\-:, tile\-Image\-: , 以及 tile\-Side\-Length.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_abstract_mercator_web_source_8h}{R\-M\-Abstract\-Mercator\-Web\-Source.\-h}\item 
+Map/\hyperlink{_r_m_abstract_mercator_web_source_8m}{R\-M\-Abstract\-Mercator\-Web\-Source.\-m}\end{DoxyCompactItemize}

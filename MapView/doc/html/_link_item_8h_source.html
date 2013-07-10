@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>Map/LinkItem.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_95c9c9bead5808cc0bb4e78e340041f8.html">Map</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">LinkItem.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_link_item_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  LinkItem.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  MapView</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by iclient on 13-6-25.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="_datasource_connection_info_8h.html">DatasourceConnectionInfo.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="interface_link_item.html">   24</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_link_item.html" title="关联信息类。   该类用于定义矢量数据集与外部表之间的关联信息。 外部表可以为另一个矢量数据集（其中纯属性数据集中没有空间几何信息）所对应的 DBMS 表，也可以是用户自建的业务表。 表之间的联系的建立...">LinkItem</a> : NSObject</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="interface_link_item.html#ac227b65db18a97406f2989367279d5b1">   27</a></span>&#160;    <a class="code" href="interface_datasource_connection_info.html" title="数据源连接信息类。 该类包含了数据源名称、数据源连接的数据库或文件等相关信息 ">DatasourceConnectionInfo</a>* <a class="code" href="interface_link_item.html#ac227b65db18a97406f2989367279d5b1">datasourceConnectionInfo</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="interface_link_item.html#a033a104355e0dd425688c1ace667ee15">   28</a></span>&#160;    NSString* <a class="code" href="interface_link_item.html#a033a104355e0dd425688c1ace667ee15">foreignKeys</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="interface_link_item.html#a030e9399a97d2a165aa2ce69b798b115">   29</a></span>&#160;    NSString* <a class="code" href="interface_link_item.html#a030e9399a97d2a165aa2ce69b798b115">foreignTable</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="interface_link_item.html#a480a48b69d6e2c01fa2bc35f584381f3">   30</a></span>&#160;    NSString* <a class="code" href="interface_link_item.html#a480a48b69d6e2c01fa2bc35f584381f3">linkFields</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="interface_link_item.html#ac1a913e4de4457d2e7fdcc34e7e4d254">   31</a></span>&#160;    NSString* <a class="code" href="interface_link_item.html#ac1a913e4de4457d2e7fdcc34e7e4d254">linkFilter</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="interface_link_item.html#a85d67fda78ae47f1415897d8330f62df">   32</a></span>&#160;    NSString* <a class="code" href="interface_link_item.html#a85d67fda78ae47f1415897d8330f62df">name</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="interface_link_item.html#a31d7f4023218fdfef008cec5ae17ea15">   33</a></span>&#160;    NSMutableArray* <a class="code" href="interface_link_item.html#a31d7f4023218fdfef008cec5ae17ea15">primaryKeys</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">@property</span> (retain,readwrite) <a class="code" href="interface_datasource_connection_info.html" title="数据源连接信息类。 该类包含了数据源名称、数据源连接的数据库或文件等相关信息 ">DatasourceConnectionInfo</a>* datasourceConnectionInfo;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">@property</span> (copy,readwrite) NSString* foreignKeys;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">@property</span> (copy,readwrite) NSString* foreignTable;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">@property</span> (copy,readwrite) NSString* linkFields;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">@property</span> (copy,readwrite) NSString* linkFilter;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">@property</span> (copy,readwrite) NSString* name;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">@property</span> (retain,readwrite) NSMutableArray* primaryKeys;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;- (NSMutableDictionary *)toNSDictionary;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2013年 七月 10日 星期三 16:14:54使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

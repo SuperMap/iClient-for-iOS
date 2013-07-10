@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>JoinItem类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="class_join_item-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">JoinItem类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>连接信息类。<br/>
+ 该类用于定义矢量数据集与外部表的连接信息。 外部表可以为另一个矢量数据集（其中纯属性数据集中没有空间几何信息） 所对应的 DBMS(Database Management System，数据库管理系统)表， 也可以是用户自建的业务表。需要注意的是，矢量数据集与外部表必须属于同一数据源。 用于连接两个表的字段的名称不一定相同，但类型必须一致。  
+ <a href="interface_join_item.html#details">更多...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_join_item_8h_source.html">JoinItem.h</a>&gt;</code></p>
+<div class="dynheader">
+类 JoinItem 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="interface_join_item.png" usemap="#JoinItem_map" alt=""/>
+  <map id="JoinItem_map" name="JoinItem_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:ae6b4f0aecf479050c8cf18170d754554"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_join_item.html#ae6b4f0aecf479050c8cf18170d754554">init</a><code> [implementation]</code></td></tr>
+<tr class="separator:ae6b4f0aecf479050c8cf18170d754554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65aa7b6f8fcc79b10406687c599faede"><td class="memItemLeft" align="right" valign="top">(NSMutableDictionary *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_join_item.html#a65aa7b6f8fcc79b10406687c599faede">toNSDictionary</a></td></tr>
+<tr class="separator:a65aa7b6f8fcc79b10406687c599faede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a19fdae54d25724191c1f1a253d8283c5"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_join_item.html#a19fdae54d25724191c1f1a253d8283c5">foreignTableName</a></td></tr>
+<tr class="separator:a19fdae54d25724191c1f1a253d8283c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dfc110b26f4cf48aeae6cee0c1686ec"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_join_item.html#a2dfc110b26f4cf48aeae6cee0c1686ec">joinFilter</a></td></tr>
+<tr class="separator:a2dfc110b26f4cf48aeae6cee0c1686ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa4f1788a48780bf34a84fa58253057"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_join_item.html#a6aa4f1788a48780bf34a84fa58253057">joinType</a></td></tr>
+<tr class="separator:a6aa4f1788a48780bf34a84fa58253057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>连接信息类。<br/>
+ 该类用于定义矢量数据集与外部表的连接信息。 外部表可以为另一个矢量数据集（其中纯属性数据集中没有空间几何信息） 所对应的 DBMS(Database Management System，数据库管理系统)表， 也可以是用户自建的业务表。需要注意的是，矢量数据集与外部表必须属于同一数据源。 用于连接两个表的字段的名称不一定相同，但类型必须一致。 </p>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="ae6b4f0aecf479050c8cf18170d754554"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) init </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a65aa7b6f8fcc79b10406687c599faede"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSMutableDictionary *) toNSDictionary </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a19fdae54d25724191c1f1a253d8283c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) foreignTableName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">atomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_join_item.html#ae6b4f0aecf479050c8cf18170d754554">init</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2dfc110b26f4cf48aeae6cee0c1686ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) joinFilter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">atomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_join_item.html#ae6b4f0aecf479050c8cf18170d754554">init</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6aa4f1788a48780bf34a84fa58253057"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) joinType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">atomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_join_item.html#ae6b4f0aecf479050c8cf18170d754554">init</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Map/<a class="el" href="_join_item_8h_source.html">JoinItem.h</a></li>
+<li>Map/<a class="el" href="_join_item_8m.html">JoinItem.m</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2013年 七月 10日 星期三 16:14:55使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

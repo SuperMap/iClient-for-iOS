@@ -1,0 +1,212 @@
+\hypertarget{interface_r_m_web_tile_image}{\section{R\-M\-Web\-Tile\-Image类 参考}
+\label{interface_r_m_web_tile_image}\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}}
+}
+
+
+\hyperlink{interface_r_m_tile_image}{R\-M\-Tile\-Image} subclass\-: a tile image loaded from a U\-R\-L.  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-Web\-Tile\-Image.\-h$>$}
+
+类 R\-M\-Web\-Tile\-Image 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.616822cm]{interface_r_m_web_tile_image}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_web_tile_image_aea32e968718d02f837dc14531c974109}{cancel\-Loading}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_web_tile_image_a22ea23034b1100a061de71e3ddc8f938}{connection\-:did\-Fail\-With\-Error\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_web_tile_image_a9004ae4a3784bd2e60cb14f0a9c616f0}{connection\-:did\-Receive\-Data\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_web_tile_image_a3655e0f544330485431e9058851c4716}{connection\-:did\-Receive\-Response\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_web_tile_image_a2e7526f07fba82cd5227599e8cd9bd2a}{connection\-Did\-Finish\-Loading\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_web_tile_image_a39b45634801dc11f3662715ccb31d203}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_web_tile_image_a4142138d17d638becde01fc69bf76ff3}{init\-With\-Tile\-:\-From\-U\-R\-L\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_web_tile_image_a402f963266245ad08e6137ea8bf23c56}{request\-Tile}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_web_tile_image_a8ccdd67094a342f55c82b0cec3319e8b}{start\-Loading\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) + \hyperlink{interface_r_m_web_tile_image_a78883d4f8c2ab676fc01cfaaa81c0fb7}{initialize}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_r_m_u_r_l_connection_operation}{R\-M\-U\-R\-L\-Connection\-Operation} $\ast$ \hyperlink{interface_r_m_web_tile_image_aee2864ebb2a7dd93a984d01d57e94904}{connection\-Op}
+\item 
+N\-S\-Mutable\-Data $\ast$ \hyperlink{interface_r_m_web_tile_image_a90f2259d9ecfedaabcfa1da5b60f80d6}{data}
+\item 
+N\-S\-Error $\ast$ \hyperlink{interface_r_m_web_tile_image_a86f1240b8d10b5984a264f371e498521}{last\-Error}
+\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_web_tile_image_a77a8f8934bc1ed15620c1eb8cce80acd}{retries}
+\item 
+N\-S\-U\-R\-L $\ast$ \hyperlink{interface_r_m_web_tile_image_a8229553e4e17a3f5d79d03e66adab84b}{url}
+\end{DoxyCompactItemize}
+\subsection*{额外继承的成员函数}
+
+
+\subsection{详细描述}
+\hyperlink{interface_r_m_tile_image}{R\-M\-Tile\-Image} subclass\-: a tile image loaded from a U\-R\-L. 
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_web_tile_image_aea32e968718d02f837dc14531c974109}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!cancel\-Loading@{cancel\-Loading}}
+\index{cancel\-Loading@{cancel\-Loading}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{cancel\-Loading}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) cancel\-Loading 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_aea32e968718d02f837dc14531c974109}
+
+
+重载 \hyperlink{interface_r_m_tile_image_a2a34d421ea651b726355c6dd91efcf18}{R\-M\-Tile\-Image} .
+
+
+
+参考自 connection\-:did\-Fail\-With\-Error\-:, connection\-:did\-Receive\-Response\-: , 以及 dealloc.
+
+\hypertarget{interface_r_m_web_tile_image_a22ea23034b1100a061de71e3ddc8f938}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!connection\-:did\-Fail\-With\-Error\-:@{connection\-:did\-Fail\-With\-Error\-:}}
+\index{connection\-:did\-Fail\-With\-Error\-:@{connection\-:did\-Fail\-With\-Error\-:}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{connection\-:did\-Fail\-With\-Error\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) connection\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-R\-L\-Connection $\ast$)}]{connection}
+\item[{didFailWithError:(N\-S\-Error $\ast$)}]{error}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_a22ea23034b1100a061de71e3ddc8f938}
+\hypertarget{interface_r_m_web_tile_image_a9004ae4a3784bd2e60cb14f0a9c616f0}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!connection\-:did\-Receive\-Data\-:@{connection\-:did\-Receive\-Data\-:}}
+\index{connection\-:did\-Receive\-Data\-:@{connection\-:did\-Receive\-Data\-:}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{connection\-:did\-Receive\-Data\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) connection\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-R\-L\-Connection $\ast$)}]{connection}
+\item[{didReceiveData:(N\-S\-Data $\ast$)}]{new\-Data}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_a9004ae4a3784bd2e60cb14f0a9c616f0}
+\hypertarget{interface_r_m_web_tile_image_a3655e0f544330485431e9058851c4716}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!connection\-:did\-Receive\-Response\-:@{connection\-:did\-Receive\-Response\-:}}
+\index{connection\-:did\-Receive\-Response\-:@{connection\-:did\-Receive\-Response\-:}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{connection\-:did\-Receive\-Response\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) connection\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-R\-L\-Connection $\ast$)}]{connection}
+\item[{didReceiveResponse:(N\-S\-U\-R\-L\-Response $\ast$)}]{response}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_a3655e0f544330485431e9058851c4716}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000053}{Bug}]magic number \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000054}{Bug}]magic number \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000055}{Bug}]magic number \end{DoxyRefDesc}
+\hypertarget{interface_r_m_web_tile_image_a2e7526f07fba82cd5227599e8cd9bd2a}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!connection\-Did\-Finish\-Loading\-:@{connection\-Did\-Finish\-Loading\-:}}
+\index{connection\-Did\-Finish\-Loading\-:@{connection\-Did\-Finish\-Loading\-:}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{connection\-Did\-Finish\-Loading\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) connection\-Did\-Finish\-Loading\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-R\-L\-Connection $\ast$)}]{connection}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_a2e7526f07fba82cd5227599e8cd9bd2a}
+\hypertarget{interface_r_m_web_tile_image_a39b45634801dc11f3662715ccb31d203}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_a39b45634801dc11f3662715ccb31d203}
+
+
+重载 \hyperlink{interface_r_m_tile_image_ac937dd49368b865545c35346c0d9ba42}{R\-M\-Tile\-Image} .
+
+\hypertarget{interface_r_m_web_tile_image_a78883d4f8c2ab676fc01cfaaa81c0fb7}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!initialize@{initialize}}
+\index{initialize@{initialize}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}+ (void) initialize 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_a78883d4f8c2ab676fc01cfaaa81c0fb7}
+\hypertarget{interface_r_m_web_tile_image_a4142138d17d638becde01fc69bf76ff3}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!init\-With\-Tile\-:\-From\-U\-R\-L\-:@{init\-With\-Tile\-:\-From\-U\-R\-L\-:}}
+\index{init\-With\-Tile\-:\-From\-U\-R\-L\-:@{init\-With\-Tile\-:\-From\-U\-R\-L\-:}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{init\-With\-Tile\-:\-From\-U\-R\-L\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-With\-Tile\-:} 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\item[{FromURL:(N\-S\-String$\ast$)}]{url}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_web_tile_image_a4142138d17d638becde01fc69bf76ff3}
+\hypertarget{interface_r_m_web_tile_image_a402f963266245ad08e6137ea8bf23c56}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!request\-Tile@{request\-Tile}}
+\index{request\-Tile@{request\-Tile}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{request\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) request\-Tile 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_a402f963266245ad08e6137ea8bf23c56}
+
+
+参考自 connection\-:did\-Fail\-With\-Error\-:, connection\-:did\-Receive\-Response\-:, connection\-Did\-Finish\-Loading\-: , 以及 init\-With\-Tile\-:\-From\-U\-R\-L\-:.
+
+\hypertarget{interface_r_m_web_tile_image_a8ccdd67094a342f55c82b0cec3319e8b}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!start\-Loading\-:@{start\-Loading\-:}}
+\index{start\-Loading\-:@{start\-Loading\-:}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{start\-Loading\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) start\-Loading\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Timer $\ast$)}]{timer}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_web_tile_image_a8ccdd67094a342f55c82b0cec3319e8b}
+
+
+参考自 request\-Tile.
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_web_tile_image_aee2864ebb2a7dd93a984d01d57e94904}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!connection\-Op@{connection\-Op}}
+\index{connection\-Op@{connection\-Op}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{connection\-Op}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-U\-R\-L\-Connection\-Operation}$\ast$) connection\-Op\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_web_tile_image_aee2864ebb2a7dd93a984d01d57e94904}
+
+
+参考自 cancel\-Loading, connection\-Did\-Finish\-Loading\-:, init\-With\-Tile\-:\-From\-U\-R\-L\-:, request\-Tile , 以及 start\-Loading\-:.
+
+\hypertarget{interface_r_m_web_tile_image_a90f2259d9ecfedaabcfa1da5b60f80d6}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!data@{data}}
+\index{data@{data}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Data$\ast$) data\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_web_tile_image_a90f2259d9ecfedaabcfa1da5b60f80d6}
+
+
+参考自 connection\-:did\-Receive\-Data\-:, connection\-:did\-Receive\-Response\-:, connection\-Did\-Finish\-Loading\-:, dealloc , 以及 init\-With\-Tile\-:\-From\-U\-R\-L\-:.
+
+\hypertarget{interface_r_m_web_tile_image_a86f1240b8d10b5984a264f371e498521}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!last\-Error@{last\-Error}}
+\index{last\-Error@{last\-Error}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{last\-Error}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Error$\ast$) last\-Error\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_web_tile_image_a86f1240b8d10b5984a264f371e498521}
+
+
+参考自 cancel\-Loading, connection\-:did\-Fail\-With\-Error\-:, connection\-:did\-Receive\-Response\-:, connection\-Did\-Finish\-Loading\-:, dealloc , 以及 request\-Tile.
+
+\hypertarget{interface_r_m_web_tile_image_a77a8f8934bc1ed15620c1eb8cce80acd}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!retries@{retries}}
+\index{retries@{retries}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{retries}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) retries\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_web_tile_image_a77a8f8934bc1ed15620c1eb8cce80acd}
+
+
+参考自 init\-With\-Tile\-:\-From\-U\-R\-L\-: , 以及 request\-Tile.
+
+\hypertarget{interface_r_m_web_tile_image_a8229553e4e17a3f5d79d03e66adab84b}{\index{R\-M\-Web\-Tile\-Image@{R\-M\-Web\-Tile\-Image}!url@{url}}
+\index{url@{url}!RMWebTileImage@{R\-M\-Web\-Tile\-Image}}
+\subsubsection[{url}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-R\-L$\ast$) url\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_web_tile_image_a8229553e4e17a3f5d79d03e66adab84b}
+
+
+参考自 connection\-Did\-Finish\-Loading\-:, dealloc , 以及 init\-With\-Tile\-:\-From\-U\-R\-L\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_web_tile_image_8h}{R\-M\-Web\-Tile\-Image.\-h}\item 
+Map/\hyperlink{_r_m_web_tile_image_8m}{R\-M\-Web\-Tile\-Image.\-m}\end{DoxyCompactItemize}

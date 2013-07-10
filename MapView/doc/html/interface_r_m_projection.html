@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>RMProjection类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#pub-static-methods">Class Methods</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="class_r_m_projection-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">RMProjection类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Objective-C wrapper for PROJ4 map projection definitions.  
+ <a href="interface_r_m_projection.html#details">更多...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_r_m_projection_8h_source.html">RMProjection.h</a>&gt;</code></p>
+<div class="dynheader">
+类 RMProjection 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="interface_r_m_projection.png" usemap="#RMProjection_map" alt=""/>
+  <map id="RMProjection_map" name="RMProjection_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:a46f6e09a03a1383d82b3ef347db52f12"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_projection.html#a46f6e09a03a1383d82b3ef347db52f12">constrainPointToBounds:</a></td></tr>
+<tr class="memdesc:a46f6e09a03a1383d82b3ef347db52f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">applies #wrapPointHorizontally to aPoint, and then clamps northing (Y coordinate) to projection's planetBounds  <a href="#a46f6e09a03a1383d82b3ef347db52f12">更多...</a><br/></td></tr>
+<tr class="separator:a46f6e09a03a1383d82b3ef347db52f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6502b343dac3ea98da4cff9ba3298feb"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_projection.html#a6502b343dac3ea98da4cff9ba3298feb">dealloc</a><code> [implementation]</code></td></tr>
+<tr class="separator:a6502b343dac3ea98da4cff9ba3298feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd5003857d513518eea0cd6760f54ccd"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_projection.html#abd5003857d513518eea0cd6760f54ccd">init</a><code> [implementation]</code></td></tr>
+<tr class="separator:abd5003857d513518eea0cd6760f54ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7295b2382970d7dfe8d62112062d9268"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_projection.html#a7295b2382970d7dfe8d62112062d9268">initWithString:</a><code> [implementation]</code></td></tr>
+<tr class="separator:a7295b2382970d7dfe8d62112062d9268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb82d1e81597dd3a3039168d0be8d9c"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_projection.html#a3cb82d1e81597dd3a3039168d0be8d9c">initWithString:InBounds:</a></td></tr>
+<tr class="memdesc:a3cb82d1e81597dd3a3039168d0be8d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">anybody know what the InBounds: parameter means?  <a href="#a3cb82d1e81597dd3a3039168d0be8d9c">更多...</a><br/></td></tr>
+<tr class="separator:a3cb82d1e81597dd3a3039168d0be8d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857345e06858eef53abc8f464cb0f0f3"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_projection.html#a857345e06858eef53abc8f464cb0f0f3">latLongToPoint:</a></td></tr>
+<tr class="memdesc:a857345e06858eef53abc8f464cb0f0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">forward project latitude/longitude, return meters  <a href="#a857345e06858eef53abc8f464cb0f0f3">更多...</a><br/></td></tr>
+<tr class="separator:a857345e06858eef53abc8f464cb0f0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85564cbd0ad54533588ddb55068c4b99"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_lat_long.html">RMLatLong</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_projection.html#a85564cbd0ad54533588ddb55068c4b99">pointToLatLong:</a></td></tr>
+<tr class="memdesc:a85564cbd0ad54533588ddb55068c4b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">inverse project meters, return latitude/longitude  <a href="#a85564cbd0ad54533588ddb55068c4b99">更多...</a><br/></td></tr>
+<tr class="separator:a85564cbd0ad54533588ddb55068c4b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e2c2dd577abcdc389cd07a5e6a7e25"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_projection.html#a39e2c2dd577abcdc389cd07a5e6a7e25">wrapPointHorizontally:</a></td></tr>
+<tr class="memdesc:a39e2c2dd577abcdc389cd07a5e6a7e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="interface_r_m_projection.html#aa7aa460042ee6b011d23d20cc0eb1fa9" title="hardcoded to YES in initWithString:InBounds: ">projectionWrapsHorizontally</a>, returns #aPoint with its easting adjusted modulo Earth's diameter to be within projection's planetBounds. if !<a class="el" href="interface_r_m_projection.html#aa7aa460042ee6b011d23d20cc0eb1fa9" title="hardcoded to YES in initWithString:InBounds: ">projectionWrapsHorizontally</a>, returns #aPoint unchanged.  <a href="#a39e2c2dd577abcdc389cd07a5e6a7e25">更多...</a><br/></td></tr>
+<tr class="separator:a39e2c2dd577abcdc389cd07a5e6a7e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Class Methods</h2></td></tr>
+<tr class="memitem:a8d54612fc9b40930999b22dbf3638560"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_r_m_projection.html">RMProjection</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_r_m_projection.html#a8d54612fc9b40930999b22dbf3638560">EPSGLatLong</a></td></tr>
+<tr class="separator:a8d54612fc9b40930999b22dbf3638560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650e692e75f1b5336570a6cd28f22ca0"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_r_m_projection.html">RMProjection</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_r_m_projection.html#a650e692e75f1b5336570a6cd28f22ca0">googleProjection</a></td></tr>
+<tr class="separator:a650e692e75f1b5336570a6cd28f22ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522a3cdd02936b5088085a9477717302"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_r_m_projection.html">RMProjection</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_r_m_projection.html#a522a3cdd02936b5088085a9477717302">OSGB</a></td></tr>
+<tr class="separator:a522a3cdd02936b5088085a9477717302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af713cfc503b88c2f1c387423004d98a1"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_r_m_projection.html">RMProjection</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_r_m_projection.html#af713cfc503b88c2f1c387423004d98a1">smProjection:</a></td></tr>
+<tr class="separator:af713cfc503b88c2f1c387423004d98a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:ae3bbbad9dab3512aa9c53ae69f07051c"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_projection.html#ae3bbbad9dab3512aa9c53ae69f07051c">bIsSM</a></td></tr>
+<tr class="separator:ae3bbbad9dab3512aa9c53ae69f07051c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc7b131094967bb922e4d222f809c08"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_projection.html#a3fc7b131094967bb922e4d222f809c08">internalProjection</a></td></tr>
+<tr class="memdesc:a3fc7b131094967bb922e4d222f809c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is actually a PROJ4 projPJ, but it is typed as void* so the proj_api doesn't have to be included.  <a href="#a3fc7b131094967bb922e4d222f809c08">更多...</a><br/></td></tr>
+<tr class="separator:a3fc7b131094967bb922e4d222f809c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfffc0acd70c575869e1b13193b2f9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_projection.html#aecfffc0acd70c575869e1b13193b2f9f">planetBounds</a></td></tr>
+<tr class="memdesc:aecfffc0acd70c575869e1b13193b2f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the size of the earth, in projected units (meters, most often)  <a href="#aecfffc0acd70c575869e1b13193b2f9f">更多...</a><br/></td></tr>
+<tr class="separator:aecfffc0acd70c575869e1b13193b2f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7aa460042ee6b011d23d20cc0eb1fa9"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_projection.html#aa7aa460042ee6b011d23d20cc0eb1fa9">projectionWrapsHorizontally</a></td></tr>
+<tr class="memdesc:aa7aa460042ee6b011d23d20cc0eb1fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">hardcoded to YES in <a class="el" href="interface_r_m_projection.html#a3cb82d1e81597dd3a3039168d0be8d9c" title="anybody know what the InBounds: parameter means? ">initWithString:InBounds:</a>  <a href="#aa7aa460042ee6b011d23d20cc0eb1fa9">更多...</a><br/></td></tr>
+<tr class="separator:aa7aa460042ee6b011d23d20cc0eb1fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Objective-C wrapper for PROJ4 map projection definitions. </p>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a46f6e09a03a1383d82b3ef347db52f12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) constrainPointToBounds: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>applies #wrapPointHorizontally to aPoint, and then clamps northing (Y coordinate) to projection's planetBounds </p>
+
+</div>
+</div>
+<a class="anchor" id="a6502b343dac3ea98da4cff9ba3298feb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) dealloc </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8d54612fc9b40930999b22dbf3638560"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_r_m_projection.html">RMProjection</a> *) EPSGLatLong </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000035">Bug:</a></b></dt><dd>magic numbers embedded in code, this one's probably ok </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a650e692e75f1b5336570a6cd28f22ca0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_r_m_projection.html">RMProjection</a> *) googleProjection </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000033">Bug:</a></b></dt><dd>magic numbers embedded in code, this one's probably ok </dd></dl>
+
+<p>参考自 <a class="el" href="interface_r_m_abstract_mercator_web_source.html#a7f9e2c871a2842dd854324fc173cd47f">RMAbstractMercatorWebSource::projection</a>, <a class="el" href="interface_r_m_d_b_map_source.html#aa1d33d38c216b461ef99176340aa4f66">RMDBMapSource::projection</a> , 以及 <a class="el" href="interface_r_m_m_b_tiles_tile_source.html#ae36211d298346afbebb04b8427023832">RMMBTilesTileSource::projection</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd5003857d513518eea0cd6760f54ccd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) init </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_projection.html#a3cb82d1e81597dd3a3039168d0be8d9c">initWithString:InBounds:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7295b2382970d7dfe8d62112062d9268"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithString: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>params</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_projection.html#abd5003857d513518eea0cd6760f54ccd">init</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3cb82d1e81597dd3a3039168d0be8d9c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) <a class="el" href="interface_r_m_projection.html#a7295b2382970d7dfe8d62112062d9268">initWithString:</a> </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>params</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">InBounds:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td>
+          <td class="paramname"><em>projBounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>anybody know what the InBounds: parameter means? </p>
+
+<p>参考自 <a class="el" href="interface_r_m_projection.html#a7295b2382970d7dfe8d62112062d9268">initWithString:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a857345e06858eef53abc8f464cb0f0f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) latLongToPoint: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_lat_long.html">RMLatLong</a>)&#160;</td>
+          <td class="paramname"><em>aLatLong</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>forward project latitude/longitude, return meters </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">弃用:</a></b></dt><dd>rename pending after 0.5 </dd></dl>
+
+<p>参考自 <a class="el" href="interface_r_m_path.html#a233d38ded11a78015f57d9aee26e8c42">RMPath::addLineToLatLong:</a>, <a class="el" href="interface_r_m_marker_manager.html#aaa93d51f42410bfa5ffe089b9382bed5">RMMarkerManager::addMarker:AtLatLong:</a>, <a class="el" href="interface_r_m_circle.html#a0ec54a4b9dbdf85741f80d294e799d90">RMCircle::initWithContents:radiusInMeters:latLong:</a>, <a class="el" href="interface_r_m_map_contents.html#a80f4f3e3dcf962c4d1110248e5f83ff6">RMMapContents::latLongToPixel:</a>, <a class="el" href="interface_r_m_map_contents.html#a6c7d5693a725d88769b5377d60cab941">RMMapContents::latLongToPixel:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_map_contents.html#af5abbc64cb02512eb4378fce3794f0e1">RMMapContents::latLongToTilePoint:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_marker_manager.html#ac179d8f930721478732b25dc78fc6af8">RMMarkerManager::moveMarker:AtLatLon:</a>, <a class="el" href="interface_r_m_path.html#a9dc844ebe9a05ba48a0ff601b7621684">RMPath::moveToLatLong:</a>, <a class="el" href="interface_r_m_circle.html#a3499f453b9a9a25bc7c30419b35c7008">RMCircle::moveToLatLong:</a>, <a class="el" href="interface_r_m_map_contents.html#a6964b2e4a12c17c954d32dc8e8fe739e">RMMapContents::moveToLatLong:</a>, <a class="el" href="interface_r_m_map_view.html#ac72f6a4091d84d904b65b303fac6bd25">RMMapView::setConstraintsSW:NE:</a> , 以及 <a class="el" href="interface_r_m_map_contents.html#a16518ad8c17a80bc90fbb396f4d9d16b">RMMapContents::zoomWithLatLngBoundsNorthEast:SouthWest:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a522a3cdd02936b5088085a9477717302"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_r_m_projection.html">RMProjection</a> *) OSGB </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000036">Bug:</a></b></dt><dd>TODO: This should use the new initWithString:InBounds: method... but I don't know what the bounds are! </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000037">Bug:</a></b></dt><dd>magic numbers embedded in code, this one's probably ok </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a85564cbd0ad54533588ddb55068c4b99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_lat_long.html">RMLatLong</a>) pointToLatLong: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>inverse project meters, return latitude/longitude </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">弃用:</a></b></dt><dd>rename pending after 0.5 </dd></dl>
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#ad7f1b803be32266a8a0bc5de03fd4e0e">RMMapContents::pixelToLatLong:</a> , 以及 <a class="el" href="interface_r_m_map_contents.html#a5fe69ea6a21dac1fdc4c6d136d1a1504">RMMapContents::pixelToLatLong:withMetersPerPixel:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af713cfc503b88c2f1c387423004d98a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_r_m_projection.html">RMProjection</a> *) smProjection: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td>
+          <td class="paramname"><em>bounds</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000034">Bug:</a></b></dt><dd>magic numbers embedded in code, this one's probably ok </dd></dl>
+
+<p>参考自 <a class="el" href="interface_r_m_s_m_tile_source.html#a2868f4f1ded53b77b6f59a559a54e197">RMSMTileSource::projection</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a39e2c2dd577abcdc389cd07a5e6a7e25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) wrapPointHorizontally: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If <a class="el" href="interface_r_m_projection.html#aa7aa460042ee6b011d23d20cc0eb1fa9" title="hardcoded to YES in initWithString:InBounds: ">projectionWrapsHorizontally</a>, returns #aPoint with its easting adjusted modulo Earth's diameter to be within projection's planetBounds. if !<a class="el" href="interface_r_m_projection.html#aa7aa460042ee6b011d23d20cc0eb1fa9" title="hardcoded to YES in initWithString:InBounds: ">projectionWrapsHorizontally</a>, returns #aPoint unchanged. </p>
+
+<p>参考自 <a class="el" href="interface_r_m_projection.html#a46f6e09a03a1383d82b3ef347db52f12">constrainPointToBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#af1262b51fc47cc2f4a4424e6e5fcfc79">RMMercatorToScreenProjection::movePoint:by:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0be470e222397c01d1fbc343c958c4ed">RMMercatorToScreenProjection::projectedCenter</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a079490067b3f7dd5326389720f383049">RMMercatorToScreenProjection::projectScreenPointToXY:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ae4aca2604d100a8a16e04f70c7d7740e">RMMercatorToScreenProjection::projectScreenPointToXY:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0e7573981b462d019a879178840233f4">RMMercatorToScreenProjection::setProjectedBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a814a8a8ddbafeda6e68b8e02d2efcfb4">RMMercatorToScreenProjection::setProjectedCenter:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a5cb02ad7176d0523eb57471fc99e3c7c">RMMercatorToScreenProjection::zoomPoint:byFactor:near:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a99a67d660114f633f116ebf688642cdc">RMMercatorToScreenProjection::zoomRect:byFactor:near:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ad47c361352cdff2e4689721db9fb6c52">RMMercatorToScreenProjection::zoomScreenByFactor:near:</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="ae3bbbad9dab3512aa9c53ae69f07051c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) bIsSM</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_projection.html#a8d54612fc9b40930999b22dbf3638560">EPSGLatLong</a>, <a class="el" href="interface_r_m_projection.html#a650e692e75f1b5336570a6cd28f22ca0">googleProjection</a>, <a class="el" href="interface_r_m_projection.html#a857345e06858eef53abc8f464cb0f0f3">latLongToPoint:</a>, <a class="el" href="interface_r_m_projection.html#a522a3cdd02936b5088085a9477717302">OSGB</a>, <a class="el" href="interface_r_m_projection.html#af713cfc503b88c2f1c387423004d98a1">smProjection:</a> , 以及 <a class="el" href="interface_r_m_projection.html#a39e2c2dd577abcdc389cd07a5e6a7e25">wrapPointHorizontally:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3fc7b131094967bb922e4d222f809c08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void *) internalProjection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is actually a PROJ4 projPJ, but it is typed as void* so the proj_api doesn't have to be included. </p>
+
+<p>参考自 <a class="el" href="interface_r_m_projection.html#a6502b343dac3ea98da4cff9ba3298feb">dealloc</a>, <a class="el" href="interface_r_m_transform.html#ad2fe8d16cb70f3b165f48fcd2c05aa7b">RMTransform::initFrom:To:</a>, <a class="el" href="interface_r_m_projection.html#a3cb82d1e81597dd3a3039168d0be8d9c">initWithString:InBounds:</a>, <a class="el" href="interface_r_m_projection.html#a857345e06858eef53abc8f464cb0f0f3">latLongToPoint:</a>, <a class="el" href="interface_r_m_projection.html#a85564cbd0ad54533588ddb55068c4b99">pointToLatLong:</a>, <a class="el" href="interface_r_m_transform.html#affd680a05b3f9c144163dee481bf89a1">RMTransform::projectForward:AtZoom:</a> , 以及 <a class="el" href="interface_r_m_transform.html#ac75d144ba71bea2d6a69b2e4168250f9">RMTransform::projectInverse:AtZoom:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aecfffc0acd70c575869e1b13193b2f9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>) planetBounds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the size of the earth, in projected units (meters, most often) </p>
+
+<p>参考自 <a class="el" href="interface_r_m_projection.html#a46f6e09a03a1383d82b3ef347db52f12">constrainPointToBounds:</a>, <a class="el" href="interface_r_m_fractal_tile_projection.html#af734f3ef032f0eacc03d35b3dc6dbbea">RMFractalTileProjection::initFromProjection:tileSideLength:maxZoom:minZoom:</a>, <a class="el" href="interface_r_m_s_m_tile_projection.html#a77c16d194ed35ef8aeccacd92f150cc7">RMSMTileProjection::initFromProjection:tileSideLength:maxZoom:minZoom:info:resolutions:</a>, <a class="el" href="interface_r_m_projection.html#a3cb82d1e81597dd3a3039168d0be8d9c">initWithString:InBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#afbe204c10488ebc50a818d88d0017b16">RMMercatorToScreenProjection::projectXYPoint:withMetersPerPixel:</a> , 以及 <a class="el" href="interface_r_m_projection.html#a39e2c2dd577abcdc389cd07a5e6a7e25">wrapPointHorizontally:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7aa460042ee6b011d23d20cc0eb1fa9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) projectionWrapsHorizontally</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>hardcoded to YES in <a class="el" href="interface_r_m_projection.html#a3cb82d1e81597dd3a3039168d0be8d9c" title="anybody know what the InBounds: parameter means? ">initWithString:InBounds:</a> </p>
+
+<p>参考自 <a class="el" href="interface_r_m_projection.html#a3cb82d1e81597dd3a3039168d0be8d9c">initWithString:InBounds:</a>, <a class="el" href="interface_r_m_projection.html#a522a3cdd02936b5088085a9477717302">OSGB</a> , 以及 <a class="el" href="interface_r_m_projection.html#a39e2c2dd577abcdc389cd07a5e6a7e25">wrapPointHorizontally:</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Map/<a class="el" href="_r_m_projection_8h_source.html">RMProjection.h</a></li>
+<li>Map/<a class="el" href="_r_m_projection_8m.html">RMProjection.m</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2013年 七月 10日 星期三 16:14:56使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

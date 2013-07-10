@@ -1,0 +1,135 @@
+\hypertarget{interface_server_geometry}{\section{Server\-Geometry类 参考}
+\label{interface_server_geometry}\index{Server\-Geometry@{Server\-Geometry}}
+}
+
+
+服务端几何对象类。 该类描述几何对象（矢量）的特征数据（坐标点对、几何对象的类型等）。 基于服务端的空间分析、空间关系运算、查询等 G\-I\-S 服务功能使用服务端几何对象。  
+
+
+
+
+{\ttfamily \#import $<$Server\-Geometry.\-h$>$}
+
+类 Server\-Geometry 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_server_geometry}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(\hyperlink{interface_server_geometry_aeaf1259147fdbd921ffd3fbb2cad2042}{id}) -\/ \hyperlink{interface_server_geometry_a211a04abb0de69457af764fcd92f8a83}{from\-Json\-:}
+\item 
+(\hyperlink{interface_server_geometry_aeaf1259147fdbd921ffd3fbb2cad2042}{id}) -\/ \hyperlink{interface_server_geometry_a3cda98911709c06629b258398a22fd1f}{from\-Json\-Dt\-:}
+\item 
+(\hyperlink{interface_server_geometry_aeaf1259147fdbd921ffd3fbb2cad2042}{id}) -\/ \hyperlink{interface_server_geometry_ad07f35537623575135fe5201925b953d}{from\-R\-M\-Path\-:}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_server_geometry_ac2c1956ae4ed734e2b0d65bce2fb9b83}{to\-Json}
+\item 
+(\hyperlink{interface_r_m_path}{R\-M\-Path} $\ast$) -\/ \hyperlink{interface_server_geometry_a743315afa049eb8e17b59a246dcbb61b}{to\-R\-M\-Path\-:}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_server_geometry_a388397cabb004ee3438947fb3d98e9d4}{smid}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_server_geometry_aeaf1259147fdbd921ffd3fbb2cad2042}{id}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interface_server_geometry_a3f8f113f0b46713c25d6b1aa15a52d86}{parts}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interface_server_geometry_a8570da749c6442e61ef55b7966a5befb}{points}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_server_geometry_a362e7ec6a642117e172be2437a40ede5}{type}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+服务端几何对象类。 该类描述几何对象（矢量）的特征数据（坐标点对、几何对象的类型等）。 基于服务端的空间分析、空间关系运算、查询等 G\-I\-S 服务功能使用服务端几何对象。 
+
+\subsection{Method Documentation}
+\hypertarget{interface_server_geometry_a211a04abb0de69457af764fcd92f8a83}{\index{Server\-Geometry@{Server\-Geometry}!from\-Json\-:@{from\-Json\-:}}
+\index{from\-Json\-:@{from\-Json\-:}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{from\-Json\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf id}) from\-Json\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{json\-Object}
+\end{DoxyParamCaption}
+}}\label{interface_server_geometry_a211a04abb0de69457af764fcd92f8a83}
+\hypertarget{interface_server_geometry_a3cda98911709c06629b258398a22fd1f}{\index{Server\-Geometry@{Server\-Geometry}!from\-Json\-Dt\-:@{from\-Json\-Dt\-:}}
+\index{from\-Json\-Dt\-:@{from\-Json\-Dt\-:}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{from\-Json\-Dt\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf id}) from\-Json\-Dt\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Dictionary$\ast$)}]{json\-Object}
+\end{DoxyParamCaption}
+}}\label{interface_server_geometry_a3cda98911709c06629b258398a22fd1f}
+\hypertarget{interface_server_geometry_ad07f35537623575135fe5201925b953d}{\index{Server\-Geometry@{Server\-Geometry}!from\-R\-M\-Path\-:@{from\-R\-M\-Path\-:}}
+\index{from\-R\-M\-Path\-:@{from\-R\-M\-Path\-:}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{from\-R\-M\-Path\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf id}) from\-R\-M\-Path\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Path}$\ast$)}]{path}
+\end{DoxyParamCaption}
+}}\label{interface_server_geometry_ad07f35537623575135fe5201925b953d}
+\hypertarget{interface_server_geometry_ac2c1956ae4ed734e2b0d65bce2fb9b83}{\index{Server\-Geometry@{Server\-Geometry}!to\-Json@{to\-Json}}
+\index{to\-Json@{to\-Json}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{to\-Json}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) to\-Json 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_server_geometry_ac2c1956ae4ed734e2b0d65bce2fb9b83}
+
+
+参考自 Query\-By\-Geometry\-Service\-::get\-Json\-Parameters\-: , 以及 Query\-By\-Distance\-Service\-::get\-Json\-Parameters\-:.
+
+\hypertarget{interface_server_geometry_a743315afa049eb8e17b59a246dcbb61b}{\index{Server\-Geometry@{Server\-Geometry}!to\-R\-M\-Path\-:@{to\-R\-M\-Path\-:}}
+\index{to\-R\-M\-Path\-:@{to\-R\-M\-Path\-:}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{to\-R\-M\-Path\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Path} $\ast$) to\-R\-M\-Path\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Map\-Contents}$\ast$)}]{a\-Contents}
+\end{DoxyParamCaption}
+}}\label{interface_server_geometry_a743315afa049eb8e17b59a246dcbb61b}
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_server_geometry_a388397cabb004ee3438947fb3d98e9d4}{\index{Server\-Geometry@{Server\-Geometry}!smid@{smid}}
+\index{smid@{smid}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{smid}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) smid\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_server_geometry_a388397cabb004ee3438947fb3d98e9d4}
+
+
+参考自 from\-Json\-:, from\-Json\-Dt\-: , 以及 from\-R\-M\-Path\-:.
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_server_geometry_aeaf1259147fdbd921ffd3fbb2cad2042}{\index{Server\-Geometry@{Server\-Geometry}!id@{id}}
+\index{id@{id}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String$\ast$) id\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [copy]}}}\label{interface_server_geometry_aeaf1259147fdbd921ffd3fbb2cad2042}
+\hypertarget{interface_server_geometry_a3f8f113f0b46713c25d6b1aa15a52d86}{\index{Server\-Geometry@{Server\-Geometry}!parts@{parts}}
+\index{parts@{parts}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{parts}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array $\ast$) parts\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interface_server_geometry_a3f8f113f0b46713c25d6b1aa15a52d86}
+
+
+参考自 from\-Json\-:, from\-Json\-Dt\-:, from\-R\-M\-Path\-: , 以及 to\-R\-M\-Path\-:.
+
+\hypertarget{interface_server_geometry_a8570da749c6442e61ef55b7966a5befb}{\index{Server\-Geometry@{Server\-Geometry}!points@{points}}
+\index{points@{points}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{points}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array $\ast$) points\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interface_server_geometry_a8570da749c6442e61ef55b7966a5befb}
+
+
+参考自 from\-Json\-:, from\-Json\-Dt\-:, from\-R\-M\-Path\-:, to\-Json , 以及 to\-R\-M\-Path\-:.
+
+\hypertarget{interface_server_geometry_a362e7ec6a642117e172be2437a40ede5}{\index{Server\-Geometry@{Server\-Geometry}!type@{type}}
+\index{type@{type}!ServerGeometry@{Server\-Geometry}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) type\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [copy]}}}\label{interface_server_geometry_a362e7ec6a642117e172be2437a40ede5}
+
+
+参考自 from\-Json\-:, from\-Json\-Dt\-:, from\-R\-M\-Path\-: , 以及 to\-R\-M\-Path\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_server_geometry_8h}{Server\-Geometry.\-h}\item 
+Map/\hyperlink{_server_geometry_8m}{Server\-Geometry.\-m}\end{DoxyCompactItemize}

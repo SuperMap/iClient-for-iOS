@@ -1,0 +1,221 @@
+\hypertarget{interface_r_m_circle}{\section{R\-M\-Circle类 参考}
+\label{interface_r_m_circle}\index{R\-M\-Circle@{R\-M\-Circle}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-Circle.\-h$>$}
+
+类 R\-M\-Circle 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_r_m_circle}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_acf8d3d162dee4f97d0c15932c8573bd1}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_circle_a0ec54a4b9dbdf85741f80d294e799d90}{init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_ae75b2ad3001e194c07a13b53a2486871}{move\-By\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_a3499f453b9a9a25bc7c30419b35c7008}{move\-To\-Lat\-Long\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_a3fb94dae8c970736b643cf5293a55410}{set\-Fill\-Color\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_a8b50f3b1671b6de854aae4b49639120a}{set\-Line\-Color\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_a06cdb4f00d047443d030eafb63890c84}{set\-Line\-Width\-In\-Pixels\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_ac25b00f51cc70e84cad0c769df5e8a03}{set\-Projected\-Location\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_a7f2e47cbb3ad9b09db6cd705b4d8e070}{set\-Radius\-In\-Meters\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_a4dddcad3626f86cc77687e2465c212c8}{update\-Circle\-Path}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_circle_ad1cd9f88068ff39d6000f2bf9816cc2b}{zoom\-By\-Factor\-:near\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_circle_ae3453eee968397a9ec223960f8f3df0f}{enable\-Dragging}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_circle_ad3138252a9207ccb1639839ddb2c42b8}{enable\-Rotation}
+\item 
+U\-I\-Color $\ast$ \hyperlink{interface_r_m_circle_aa00ef131c513cfb8c540d092a733f3fe}{fill\-Color}
+\item 
+U\-I\-Color $\ast$ \hyperlink{interface_r_m_circle_a4d11b58b738e2bf11a6041d2388f63eb}{line\-Color}
+\item 
+C\-G\-Float \hyperlink{interface_r_m_circle_a3772331ca60c8812a35183c856983a17}{line\-Width\-In\-Pixels}
+\item 
+\hyperlink{struct_r_m_projected_point}{R\-M\-Projected\-Point} \hyperlink{interface_r_m_circle_a676b4e82ff075de3e4468a12f506006f}{projected\-Location}
+\item 
+C\-G\-Float \hyperlink{interface_r_m_circle_a9b20cc4c242976d1e4dec2439c31fc51}{radius\-In\-Meters}
+\item 
+C\-A\-Shape\-Layer $\ast$ \hyperlink{interface_r_m_circle_a7d1ee226bef3b061c4ca301957d91382}{shape\-Layer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_circle_acf8d3d162dee4f97d0c15932c8573bd1}{\index{R\-M\-Circle@{R\-M\-Circle}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_acf8d3d162dee4f97d0c15932c8573bd1}
+\hypertarget{interface_r_m_circle_a0ec54a4b9dbdf85741f80d294e799d90}{\index{R\-M\-Circle@{R\-M\-Circle}!init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:@{init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:}}
+\index{init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:@{init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Contents\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Map\-Contents}$\ast$)}]{a\-Contents}
+\item[{radiusInMeters:(C\-G\-Float)}]{new\-Radius\-In\-Meters}
+\item[{latLong:({\bf R\-M\-Lat\-Long})}]{new\-Lat\-Long}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_circle_a0ec54a4b9dbdf85741f80d294e799d90}
+\hypertarget{interface_r_m_circle_ae75b2ad3001e194c07a13b53a2486871}{\index{R\-M\-Circle@{R\-M\-Circle}!move\-By\-:@{move\-By\-:}}
+\index{move\-By\-:@{move\-By\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{move\-By\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-By\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Size)}]{delta}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_ae75b2ad3001e194c07a13b53a2486871}
+
+
+重载 \hyperlink{interface_r_m_map_layer_ac960944a80c596eb918531cf63c54c11}{R\-M\-Map\-Layer} .
+
+\hypertarget{interface_r_m_circle_a3499f453b9a9a25bc7c30419b35c7008}{\index{R\-M\-Circle@{R\-M\-Circle}!move\-To\-Lat\-Long\-:@{move\-To\-Lat\-Long\-:}}
+\index{move\-To\-Lat\-Long\-:@{move\-To\-Lat\-Long\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{move\-To\-Lat\-Long\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-To\-Lat\-Long\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Lat\-Long})}]{new\-Lat\-Long}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_circle_a3499f453b9a9a25bc7c30419b35c7008}
+\hypertarget{interface_r_m_circle_a3fb94dae8c970736b643cf5293a55410}{\index{R\-M\-Circle@{R\-M\-Circle}!set\-Fill\-Color\-:@{set\-Fill\-Color\-:}}
+\index{set\-Fill\-Color\-:@{set\-Fill\-Color\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{set\-Fill\-Color\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Fill\-Color\-: 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-Color$\ast$)}]{new\-Fill\-Color}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_a3fb94dae8c970736b643cf5293a55410}
+\hypertarget{interface_r_m_circle_a8b50f3b1671b6de854aae4b49639120a}{\index{R\-M\-Circle@{R\-M\-Circle}!set\-Line\-Color\-:@{set\-Line\-Color\-:}}
+\index{set\-Line\-Color\-:@{set\-Line\-Color\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{set\-Line\-Color\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Line\-Color\-: 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-Color$\ast$)}]{new\-Line\-Color}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_a8b50f3b1671b6de854aae4b49639120a}
+\hypertarget{interface_r_m_circle_a06cdb4f00d047443d030eafb63890c84}{\index{R\-M\-Circle@{R\-M\-Circle}!set\-Line\-Width\-In\-Pixels\-:@{set\-Line\-Width\-In\-Pixels\-:}}
+\index{set\-Line\-Width\-In\-Pixels\-:@{set\-Line\-Width\-In\-Pixels\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{set\-Line\-Width\-In\-Pixels\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Line\-Width\-In\-Pixels\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Float)}]{new\-Line\-Width\-In\-Pixels}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_a06cdb4f00d047443d030eafb63890c84}
+\hypertarget{interface_r_m_circle_ac25b00f51cc70e84cad0c769df5e8a03}{\index{R\-M\-Circle@{R\-M\-Circle}!set\-Projected\-Location\-:@{set\-Projected\-Location\-:}}
+\index{set\-Projected\-Location\-:@{set\-Projected\-Location\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{set\-Projected\-Location\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Projected\-Location\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{new\-Projected\-Location}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_ac25b00f51cc70e84cad0c769df5e8a03}
+
+
+参考自 move\-To\-Lat\-Long\-:.
+
+\hypertarget{interface_r_m_circle_a7f2e47cbb3ad9b09db6cd705b4d8e070}{\index{R\-M\-Circle@{R\-M\-Circle}!set\-Radius\-In\-Meters\-:@{set\-Radius\-In\-Meters\-:}}
+\index{set\-Radius\-In\-Meters\-:@{set\-Radius\-In\-Meters\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{set\-Radius\-In\-Meters\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Radius\-In\-Meters\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Float)}]{new\-Radius\-In\-Meters}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_a7f2e47cbb3ad9b09db6cd705b4d8e070}
+\hypertarget{interface_r_m_circle_a4dddcad3626f86cc77687e2465c212c8}{\index{R\-M\-Circle@{R\-M\-Circle}!update\-Circle\-Path@{update\-Circle\-Path}}
+\index{update\-Circle\-Path@{update\-Circle\-Path}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{update\-Circle\-Path}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) update\-Circle\-Path 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_a4dddcad3626f86cc77687e2465c212c8}
+
+
+参考自 init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:, set\-Fill\-Color\-:, set\-Line\-Color\-:, set\-Line\-Width\-In\-Pixels\-:, set\-Radius\-In\-Meters\-: , 以及 zoom\-By\-Factor\-:near\-:.
+
+\hypertarget{interface_r_m_circle_ad1cd9f88068ff39d6000f2bf9816cc2b}{\index{R\-M\-Circle@{R\-M\-Circle}!zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}}
+\index{zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{zoom\-By\-Factor\-:near\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-By\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{center}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_circle_ad1cd9f88068ff39d6000f2bf9816cc2b}
+
+
+重载 \hyperlink{interface_r_m_map_layer_ae0e1f8c364aaca4ac39766fe14bbba07}{R\-M\-Map\-Layer} .
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_circle_ae3453eee968397a9ec223960f8f3df0f}{\index{R\-M\-Circle@{R\-M\-Circle}!enable\-Dragging@{enable\-Dragging}}
+\index{enable\-Dragging@{enable\-Dragging}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{enable\-Dragging}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) enable\-Dragging\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_circle_ae3453eee968397a9ec223960f8f3df0f}
+
+
+参考自 init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-: , 以及 move\-By\-:.
+
+\hypertarget{interface_r_m_circle_ad3138252a9207ccb1639839ddb2c42b8}{\index{R\-M\-Circle@{R\-M\-Circle}!enable\-Rotation@{enable\-Rotation}}
+\index{enable\-Rotation@{enable\-Rotation}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{enable\-Rotation}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) enable\-Rotation\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_circle_ad3138252a9207ccb1639839ddb2c42b8}
+
+
+参考自 init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:.
+
+\hypertarget{interface_r_m_circle_aa00ef131c513cfb8c540d092a733f3fe}{\index{R\-M\-Circle@{R\-M\-Circle}!fill\-Color@{fill\-Color}}
+\index{fill\-Color@{fill\-Color}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{fill\-Color}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (U\-I\-Color $\ast$) fill\-Color\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [retain]}}}\label{interface_r_m_circle_aa00ef131c513cfb8c540d092a733f3fe}
+
+
+参考自 dealloc, init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:, set\-Fill\-Color\-: , 以及 update\-Circle\-Path.
+
+\hypertarget{interface_r_m_circle_a4d11b58b738e2bf11a6041d2388f63eb}{\index{R\-M\-Circle@{R\-M\-Circle}!line\-Color@{line\-Color}}
+\index{line\-Color@{line\-Color}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{line\-Color}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (U\-I\-Color $\ast$) line\-Color\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [retain]}}}\label{interface_r_m_circle_a4d11b58b738e2bf11a6041d2388f63eb}
+
+
+参考自 dealloc, init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:, set\-Line\-Color\-: , 以及 update\-Circle\-Path.
+
+\hypertarget{interface_r_m_circle_a3772331ca60c8812a35183c856983a17}{\index{R\-M\-Circle@{R\-M\-Circle}!line\-Width\-In\-Pixels@{line\-Width\-In\-Pixels}}
+\index{line\-Width\-In\-Pixels@{line\-Width\-In\-Pixels}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{line\-Width\-In\-Pixels}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-G\-Float) line\-Width\-In\-Pixels\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_r_m_circle_a3772331ca60c8812a35183c856983a17}
+
+
+参考自 init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:, set\-Line\-Width\-In\-Pixels\-: , 以及 update\-Circle\-Path.
+
+\hypertarget{interface_r_m_circle_a676b4e82ff075de3e4468a12f506006f}{\index{R\-M\-Circle@{R\-M\-Circle}!projected\-Location@{projected\-Location}}
+\index{projected\-Location@{projected\-Location}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{projected\-Location}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Point}) projected\-Location\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_r_m_circle_a676b4e82ff075de3e4468a12f506006f}
+
+
+参考自 init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-: , 以及 set\-Projected\-Location\-:.
+
+\hypertarget{interface_r_m_circle_a9b20cc4c242976d1e4dec2439c31fc51}{\index{R\-M\-Circle@{R\-M\-Circle}!radius\-In\-Meters@{radius\-In\-Meters}}
+\index{radius\-In\-Meters@{radius\-In\-Meters}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{radius\-In\-Meters}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-G\-Float) radius\-In\-Meters\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_r_m_circle_a9b20cc4c242976d1e4dec2439c31fc51}
+
+
+参考自 init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-:, set\-Radius\-In\-Meters\-: , 以及 update\-Circle\-Path.
+
+\hypertarget{interface_r_m_circle_a7d1ee226bef3b061c4ca301957d91382}{\index{R\-M\-Circle@{R\-M\-Circle}!shape\-Layer@{shape\-Layer}}
+\index{shape\-Layer@{shape\-Layer}!RMCircle@{R\-M\-Circle}}
+\subsubsection[{shape\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-A\-Shape\-Layer $\ast$) shape\-Layer\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [retain]}}}\label{interface_r_m_circle_a7d1ee226bef3b061c4ca301957d91382}
+
+
+参考自 dealloc, init\-With\-Contents\-:radius\-In\-Meters\-:lat\-Long\-: , 以及 update\-Circle\-Path.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_circle_8h}{R\-M\-Circle.\-h}\item 
+Map/\hyperlink{_r_m_circle_8m}{R\-M\-Circle.\-m}\end{DoxyCompactItemize}

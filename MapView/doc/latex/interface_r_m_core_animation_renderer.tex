@@ -1,0 +1,153 @@
+\hypertarget{interface_r_m_core_animation_renderer}{\section{R\-M\-Core\-Animation\-Renderer类 参考}
+\label{interface_r_m_core_animation_renderer}\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-Core\-Animation\-Renderer.\-h$>$}
+
+类 R\-M\-Core\-Animation\-Renderer 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_r_m_core_animation_renderer}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id$<$ C\-A\-Action $>$) -\/ \hyperlink{interface_r_m_core_animation_renderer_a479b29d8a064a627dacb4e8754288f84}{action\-For\-Layer\-:for\-Key\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_core_animation_renderer_a042e89d2923653a122204ce1fa2efa70}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_core_animation_renderer_a0a684a7d8ba7065b4223b3079d8c3483}{init\-With\-Content\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(C\-A\-Layer $\ast$) -\/ \hyperlink{interface_r_m_core_animation_renderer_ab37d6e7a835c2d88bc51bd4a21d5f5ca}{layer}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_core_animation_renderer_a0bf0f1d99f3d6b98583ae637139e245a}{map\-Image\-Loaded\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_core_animation_renderer_ad46d40355e2c34bcf66663d802118035}{set\-Frame\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_core_animation_renderer_adcf1987f0c72eb304d9c77f7f19cebc0}{tile\-Added\-:\-With\-Image\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_core_animation_renderer_a14bbf63db3a350caaaa8c7e74eec8f3e}{tile\-Removed\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+C\-A\-Layer $\ast$ \hyperlink{interface_r_m_core_animation_renderer_afdec0fc41c8cac5ee66303c3138f7dc9}{layer}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interface_r_m_core_animation_renderer_ac99c17e8a4f0a759ef3482913ab05115}{tiles}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_core_animation_renderer_a479b29d8a064a627dacb4e8754288f84}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!action\-For\-Layer\-:for\-Key\-:@{action\-For\-Layer\-:for\-Key\-:}}
+\index{action\-For\-Layer\-:for\-Key\-:@{action\-For\-Layer\-:for\-Key\-:}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{action\-For\-Layer\-:for\-Key\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ C\-A\-Action $>$) action\-For\-Layer\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-A\-Layer $\ast$)}]{the\-Layer}
+\item[{forKey:(N\-S\-String $\ast$)}]{key}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_core_animation_renderer_a479b29d8a064a627dacb4e8754288f84}
+\hypertarget{interface_r_m_core_animation_renderer_a042e89d2923653a122204ce1fa2efa70}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_core_animation_renderer_a042e89d2923653a122204ce1fa2efa70}
+
+
+重载 \hyperlink{interface_r_m_map_renderer_a171d7fd81412009ed1f92f27c5ec6f2a}{R\-M\-Map\-Renderer} .
+
+\hypertarget{interface_r_m_core_animation_renderer_a0a684a7d8ba7065b4223b3079d8c3483}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!init\-With\-Content\-:@{init\-With\-Content\-:}}
+\index{init\-With\-Content\-:@{init\-With\-Content\-:}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{init\-With\-Content\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Content\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Map\-Contents} $\ast$)}]{\-\_\-contents}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_core_animation_renderer_a0a684a7d8ba7065b4223b3079d8c3483}
+
+
+重载 \hyperlink{interface_r_m_map_renderer_a439495e611ee8960c35d5272089f7b57}{R\-M\-Map\-Renderer} .
+
+\hypertarget{interface_r_m_core_animation_renderer_ab37d6e7a835c2d88bc51bd4a21d5f5ca}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!layer@{layer}}
+\index{layer@{layer}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{layer}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-A\-Layer $\ast$) layer 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_core_animation_renderer_ab37d6e7a835c2d88bc51bd4a21d5f5ca}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000023}{Bug}]no-\/op \end{DoxyRefDesc}
+
+
+重载 \hyperlink{interface_r_m_map_renderer_a388de8a3bd1c56a07bc69f8967f34037}{R\-M\-Map\-Renderer} .
+
+
+
+参考自 action\-For\-Layer\-:for\-Key\-:, dealloc, init\-With\-Content\-: , 以及 set\-Frame\-:.
+
+\hypertarget{interface_r_m_core_animation_renderer_a0bf0f1d99f3d6b98583ae637139e245a}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!map\-Image\-Loaded\-:@{map\-Image\-Loaded\-:}}
+\index{map\-Image\-Loaded\-:@{map\-Image\-Loaded\-:}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{map\-Image\-Loaded\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) map\-Image\-Loaded\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Notification$\ast$)}]{notification}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_core_animation_renderer_a0bf0f1d99f3d6b98583ae637139e245a}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000004}{Bug}]this is a no-\/op \end{DoxyRefDesc}
+
+
+重载 \hyperlink{interface_r_m_map_renderer_aa509a04f8b9702d4a4ea3010ca681f05}{R\-M\-Map\-Renderer} .
+
+\hypertarget{interface_r_m_core_animation_renderer_ad46d40355e2c34bcf66663d802118035}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!set\-Frame\-:@{set\-Frame\-:}}
+\index{set\-Frame\-:@{set\-Frame\-:}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{set\-Frame\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Frame\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{frame}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_core_animation_renderer_ad46d40355e2c34bcf66663d802118035}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000022}{Bug}]no-\/op \end{DoxyRefDesc}
+
+
+重载 \hyperlink{interface_r_m_map_renderer_a9191dc45f6215897f0e601e085850d1d}{R\-M\-Map\-Renderer} .
+
+\hypertarget{interface_r_m_core_animation_renderer_adcf1987f0c72eb304d9c77f7f19cebc0}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!tile\-Added\-:\-With\-Image\-:@{tile\-Added\-:\-With\-Image\-:}}
+\index{tile\-Added\-:\-With\-Image\-:@{tile\-Added\-:\-With\-Image\-:}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{tile\-Added\-:\-With\-Image\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) tile\-Added\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\item[{WithImage:({\bf R\-M\-Tile\-Image}$\ast$)}]{image}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_core_animation_renderer_adcf1987f0c72eb304d9c77f7f19cebc0}
+\hypertarget{interface_r_m_core_animation_renderer_a14bbf63db3a350caaaa8c7e74eec8f3e}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!tile\-Removed\-:@{tile\-Removed\-:}}
+\index{tile\-Removed\-:@{tile\-Removed\-:}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{tile\-Removed\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) tile\-Removed\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_core_animation_renderer_a14bbf63db3a350caaaa8c7e74eec8f3e}
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_core_animation_renderer_afdec0fc41c8cac5ee66303c3138f7dc9}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!layer@{layer}}
+\index{layer@{layer}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{layer}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-A\-Layer$\ast$) layer\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_core_animation_renderer_afdec0fc41c8cac5ee66303c3138f7dc9}
+
+
+参考自 dealloc, init\-With\-Content\-: , 以及 tile\-Added\-:\-With\-Image\-:.
+
+\hypertarget{interface_r_m_core_animation_renderer_ac99c17e8a4f0a759ef3482913ab05115}{\index{R\-M\-Core\-Animation\-Renderer@{R\-M\-Core\-Animation\-Renderer}!tiles@{tiles}}
+\index{tiles@{tiles}!RMCoreAnimationRenderer@{R\-M\-Core\-Animation\-Renderer}}
+\subsubsection[{tiles}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array$\ast$) tiles\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_core_animation_renderer_ac99c17e8a4f0a759ef3482913ab05115}
+
+
+参考自 dealloc, init\-With\-Content\-:, tile\-Added\-:\-With\-Image\-: , 以及 tile\-Removed\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_core_animation_renderer_8h}{R\-M\-Core\-Animation\-Renderer.\-h}\item 
+Map/\hyperlink{_r_m_core_animation_renderer_8m}{R\-M\-Core\-Animation\-Renderer.\-m}\end{DoxyCompactItemize}

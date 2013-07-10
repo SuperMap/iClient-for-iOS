@@ -1,0 +1,371 @@
+\hypertarget{interface_r_m_s_m_tile_projection}{\section{R\-M\-S\-M\-Tile\-Projection类 参考}
+\label{interface_r_m_s_m_tile_projection}\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-S\-M\-Tile\-Projection.\-h$>$}
+
+类 R\-M\-S\-M\-Tile\-Projection 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_r_m_s_m_tile_projection}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(float) -\/ \hyperlink{interface_r_m_s_m_tile_projection_aba4de218e94a607507926e279e149a7a}{calculate\-Normalised\-Zoom\-From\-Scale\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(float) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a94301528cc8b93a91910b955bc149946}{calculate\-Scale\-From\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(float) -\/ \hyperlink{interface_r_m_s_m_tile_projection_abec26590a653146faa9faa3dcc26faf9}{calculate\-Zoom\-From\-Scale\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{struct_r_m_projected_point}{R\-M\-Projected\-Point}) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a09cdcdb2e897909c3f22b330c7667d48}{constrain\-Point\-Horizontally\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a77c16d194ed35ef8aeccacd92f150cc7}{init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:}
+\item 
+(float) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a2d3e324bd351cef1ab0239373becd46c}{limit\-From\-Normalised\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{struct_r_m_tile}{R\-M\-Tile}) -\/ \hyperlink{interface_r_m_s_m_tile_projection_afb0bc6d1a3c82c27cf704689e9afb349}{normalise\-Tile\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(float) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a36e33099f7112bc3a9e2a6d899f31763}{normalise\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{struct_r_m_tile_rect}{R\-M\-Tile\-Rect}) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a5a6e55b1fd17c79125d4d5fe7db20284}{project\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is a helper for project\-Rect above. Much simpler for the caller. \end{DoxyCompactList}\item 
+(\hyperlink{struct_r_m_tile_point}{R\-M\-Tile\-Point}) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a0ff895767233e8f338247faa3b2bee1f}{project\-:at\-Scale\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{struct_r_m_tile_point}{R\-M\-Tile\-Point}) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a27b45f6348b6b10d0ac808a8ee6b6c97}{project\-:at\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{struct_r_m_tile_point}{R\-M\-Tile\-Point}) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a91403688f94d9860ffd9a4af9a7b284f}{project\-Internal\-:normalised\-Zoom\-:limit\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{struct_r_m_tile_rect}{R\-M\-Tile\-Rect}) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a69ee12f033da79ab6f088fb8ca11fbfd}{project\-Rect\-:at\-Scale\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{struct_r_m_tile_rect}{R\-M\-Tile\-Rect}) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a8442a53b7624d621ab15d9027b48b7e9}{project\-Rect\-:at\-Zoom\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_s_m_tile_projection_aa090a90c7fd9238520f36c5e8d3bd522}{set\-Max\-Zoom\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_s_m_tile_projection_ae4a0b2dea7653070f5bf3a54fe02d853}{set\-Min\-Zoom\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_s_m_tile_projection_a722806637be1f62337dde8c6c9daba82}{set\-Tile\-Side\-Length\-:}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-Mutable\-Array $\ast$ \hyperlink{interface_r_m_s_m_tile_projection_a3010dfce00c774103e1e13008cedfae9}{m\-\_\-d\-Resolutions}
+\item 
+\hyperlink{interface_r_m_s_m_layer_info}{R\-M\-S\-M\-Layer\-Info} $\ast$ \hyperlink{interface_r_m_s_m_tile_projection_a9f1a037cccec0d7e4de974b541bce0ee}{m\-\_\-p\-Info}
+\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_s_m_tile_projection_ad7bfc790b1fbb0f87c9dd3708bba7ca7}{max\-Zoom}
+\begin{DoxyCompactList}\small\item\em Maximum zoom for which our tile server stores images. \end{DoxyCompactList}\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_s_m_tile_projection_af52e70bac54d3c9c229f38850dfaa195}{min\-Zoom}
+\item 
+\hyperlink{struct_r_m_projected_rect}{R\-M\-Projected\-Rect} \hyperlink{interface_r_m_s_m_tile_projection_a441495eb7464318f709e32b3ba889ab7}{planet\-Bounds}
+\begin{DoxyCompactList}\small\item\em projected bounds of the planet, in meters \end{DoxyCompactList}\item 
+double \hyperlink{interface_r_m_s_m_tile_projection_ad254771d183309cf4caced68e589da2c}{scale\-Factor}
+\begin{DoxyCompactList}\small\item\em The deal is, we have a scale which stores how many mercator gradiants per pixel in the image. \end{DoxyCompactList}\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_s_m_tile_projection_a879a1a2b92a2a00b75d55953df996ce3}{tile\-Side\-Length}
+\begin{DoxyCompactList}\small\item\em Normally 256. This class assumes tiles are square. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{额外继承的成员函数}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_s_m_tile_projection_aba4de218e94a607507926e279e149a7a}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!calculate\-Normalised\-Zoom\-From\-Scale\-:@{calculate\-Normalised\-Zoom\-From\-Scale\-:}}
+\index{calculate\-Normalised\-Zoom\-From\-Scale\-:@{calculate\-Normalised\-Zoom\-From\-Scale\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{calculate\-Normalised\-Zoom\-From\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) calculate\-Normalised\-Zoom\-From\-Scale\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{scale}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_aba4de218e94a607507926e279e149a7a}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_a470b0ea952dd174bbd573bdfb230cc6e}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+\hypertarget{interface_r_m_s_m_tile_projection_a94301528cc8b93a91910b955bc149946}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!calculate\-Scale\-From\-Zoom\-:@{calculate\-Scale\-From\-Zoom\-:}}
+\index{calculate\-Scale\-From\-Zoom\-:@{calculate\-Scale\-From\-Zoom\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{calculate\-Scale\-From\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) calculate\-Scale\-From\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a94301528cc8b93a91910b955bc149946}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_a49c836acfac1908808c5f218f3bc64a4}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+
+
+参考自 project\-Rect\-:at\-Zoom\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_abec26590a653146faa9faa3dcc26faf9}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!calculate\-Zoom\-From\-Scale\-:@{calculate\-Zoom\-From\-Scale\-:}}
+\index{calculate\-Zoom\-From\-Scale\-:@{calculate\-Zoom\-From\-Scale\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{calculate\-Zoom\-From\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) calculate\-Zoom\-From\-Scale\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{scale}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_abec26590a653146faa9faa3dcc26faf9}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_a013a65cf254c34e3ec021864a4fb8f53}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+
+
+参考自 calculate\-Normalised\-Zoom\-From\-Scale\-:, project\-:at\-Scale\-: , 以及 project\-Rect\-:at\-Scale\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a09cdcdb2e897909c3f22b330c7667d48}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!constrain\-Point\-Horizontally\-:@{constrain\-Point\-Horizontally\-:}}
+\index{constrain\-Point\-Horizontally\-:@{constrain\-Point\-Horizontally\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{constrain\-Point\-Horizontally\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Point}) constrain\-Point\-Horizontally\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a09cdcdb2e897909c3f22b330c7667d48}
+
+
+参考自 project\-Internal\-:normalised\-Zoom\-:limit\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a77c16d194ed35ef8aeccacd92f150cc7}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:@{init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:}}
+\index{init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:@{init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-From\-Projection\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projection}$\ast$)}]{projection}
+\item[{tileSideLength:(N\-S\-U\-Integer)}]{tile\-Side\-Length}
+\item[{maxZoom:(N\-S\-U\-Integer)}]{a\-Max\-Zoom}
+\item[{minZoom:(N\-S\-U\-Integer)}]{a\-Min\-Zoom}
+\item[{info:({\bf R\-M\-S\-M\-Layer\-Info}$\ast$)}]{info}
+\item[{resolutions:(N\-S\-Mutable\-Array$\ast$)}]{d\-Resolutions}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_s_m_tile_projection_a77c16d194ed35ef8aeccacd92f150cc7}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000039}{Bug}]magic string literals \end{DoxyRefDesc}
+\hypertarget{interface_r_m_s_m_tile_projection_a2d3e324bd351cef1ab0239373becd46c}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!limit\-From\-Normalised\-Zoom\-:@{limit\-From\-Normalised\-Zoom\-:}}
+\index{limit\-From\-Normalised\-Zoom\-:@{limit\-From\-Normalised\-Zoom\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{limit\-From\-Normalised\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) limit\-From\-Normalised\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a2d3e324bd351cef1ab0239373becd46c}
+
+
+参考自 project\-:at\-Zoom\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_afb0bc6d1a3c82c27cf704689e9afb349}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!normalise\-Tile\-:@{normalise\-Tile\-:}}
+\index{normalise\-Tile\-:@{normalise\-Tile\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{normalise\-Tile\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile}) normalise\-Tile\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_afb0bc6d1a3c82c27cf704689e9afb349}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_ac8776965edc17be3e90c03aad46a8371}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+
+
+参考自 R\-M\-S\-M\-Tile\-Source\-::tile\-Image\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a36e33099f7112bc3a9e2a6d899f31763}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!normalise\-Zoom\-:@{normalise\-Zoom\-:}}
+\index{normalise\-Zoom\-:@{normalise\-Zoom\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{normalise\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) normalise\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a36e33099f7112bc3a9e2a6d899f31763}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_a48d47f3689db59a82bde9da209529f9b}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+
+
+参考自 calculate\-Normalised\-Zoom\-From\-Scale\-:, project\-:at\-Zoom\-: , 以及 project\-Rect\-:at\-Zoom\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a5a6e55b1fd17c79125d4d5fe7db20284}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!project\-:@{project\-:}}
+\index{project\-:@{project\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{project\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Rect}) project\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Mercator\-To\-Screen\-Projection} $\ast$)}]{screen}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a5a6e55b1fd17c79125d4d5fe7db20284}
+
+
+This is a helper for project\-Rect above. Much simpler for the caller. 
+
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_ae80633ea6d0b4e354666ec6e7ddd88af}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+\hypertarget{interface_r_m_s_m_tile_projection_a0ff895767233e8f338247faa3b2bee1f}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!project\-:at\-Scale\-:@{project\-:at\-Scale\-:}}
+\index{project\-:at\-Scale\-:@{project\-:at\-Scale\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{project\-:at\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Point}) {\bf project\-:} 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\item[{atScale:(float)}]{scale}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a0ff895767233e8f338247faa3b2bee1f}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_aac47d8222bec29f9d8469d166510b9cd}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+\hypertarget{interface_r_m_s_m_tile_projection_a27b45f6348b6b10d0ac808a8ee6b6c97}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!project\-:at\-Zoom\-:@{project\-:at\-Zoom\-:}}
+\index{project\-:at\-Zoom\-:@{project\-:at\-Zoom\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{project\-:at\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Point}) {\bf project\-:} 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\item[{atZoom:(float)}]{zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a27b45f6348b6b10d0ac808a8ee6b6c97}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_a0351c94bf59dfc97b5c1c712a5b2f3b2}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+
+
+参考自 project\-:at\-Scale\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a91403688f94d9860ffd9a4af9a7b284f}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!project\-Internal\-:normalised\-Zoom\-:limit\-:@{project\-Internal\-:normalised\-Zoom\-:limit\-:}}
+\index{project\-Internal\-:normalised\-Zoom\-:limit\-:@{project\-Internal\-:normalised\-Zoom\-:limit\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{project\-Internal\-:normalised\-Zoom\-:limit\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Point}) project\-Internal\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\item[{normalisedZoom:(float)}]{zoom}
+\item[{limit:(float)}]{limit}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a91403688f94d9860ffd9a4af9a7b284f}
+
+
+参考自 project\-:at\-Zoom\-: , 以及 project\-Rect\-:at\-Zoom\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a69ee12f033da79ab6f088fb8ca11fbfd}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!project\-Rect\-:at\-Scale\-:@{project\-Rect\-:at\-Scale\-:}}
+\index{project\-Rect\-:at\-Scale\-:@{project\-Rect\-:at\-Scale\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{project\-Rect\-:at\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Rect}) project\-Rect\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Rect})}]{a\-Rect}
+\item[{atScale:(float)}]{scale}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a69ee12f033da79ab6f088fb8ca11fbfd}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_a6d26aef35f64a793066fdf8c4e3cda10}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+
+
+参考自 project\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a8442a53b7624d621ab15d9027b48b7e9}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!project\-Rect\-:at\-Zoom\-:@{project\-Rect\-:at\-Zoom\-:}}
+\index{project\-Rect\-:at\-Zoom\-:@{project\-Rect\-:at\-Zoom\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{project\-Rect\-:at\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Rect}) project\-Rect\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Rect})}]{a\-Rect}
+\item[{atZoom:(float)}]{zoom}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_s_m_tile_projection_a8442a53b7624d621ab15d9027b48b7e9}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000040}{Bug}]assignment of float to int, W\-T\-F? \end{DoxyRefDesc}
+
+
+重载 \hyperlink{protocol_r_m_mercator_to_tile_projection-p_a53c5b90994528d20a3d85307244ac412}{$<$\-R\-M\-Mercator\-To\-Tile\-Projection$>$} .
+
+
+
+参考自 project\-Rect\-:at\-Scale\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_aa090a90c7fd9238520f36c5e8d3bd522}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!set\-Max\-Zoom\-:@{set\-Max\-Zoom\-:}}
+\index{set\-Max\-Zoom\-:@{set\-Max\-Zoom\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{set\-Max\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Max\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{a\-Max\-Zoom}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_s_m_tile_projection_aa090a90c7fd9238520f36c5e8d3bd522}
+
+
+参考自 R\-M\-S\-M\-Tile\-Source\-::set\-Max\-Zoom\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_ae4a0b2dea7653070f5bf3a54fe02d853}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!set\-Min\-Zoom\-:@{set\-Min\-Zoom\-:}}
+\index{set\-Min\-Zoom\-:@{set\-Min\-Zoom\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{set\-Min\-Zoom\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Min\-Zoom\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{a\-Min\-Zoom}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_s_m_tile_projection_ae4a0b2dea7653070f5bf3a54fe02d853}
+
+
+参考自 R\-M\-S\-M\-Tile\-Source\-::set\-Min\-Zoom\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a722806637be1f62337dde8c6c9daba82}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!set\-Tile\-Side\-Length\-:@{set\-Tile\-Side\-Length\-:}}
+\index{set\-Tile\-Side\-Length\-:@{set\-Tile\-Side\-Length\-:}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{set\-Tile\-Side\-Length\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Tile\-Side\-Length\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{a\-Tile\-Side\-Length}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_s_m_tile_projection_a722806637be1f62337dde8c6c9daba82}
+
+
+参考自 R\-M\-S\-M\-Tile\-Source\-::set\-Tile\-Side\-Length\-:.
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_s_m_tile_projection_a3010dfce00c774103e1e13008cedfae9}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!m\-\_\-d\-Resolutions@{m\-\_\-d\-Resolutions}}
+\index{m\-\_\-d\-Resolutions@{m\-\_\-d\-Resolutions}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{m\-\_\-d\-Resolutions}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Mutable\-Array$\ast$) m\-\_\-d\-Resolutions\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_tile_projection_a3010dfce00c774103e1e13008cedfae9}
+
+
+参考自 calculate\-Scale\-From\-Zoom\-:, calculate\-Zoom\-From\-Scale\-: , 以及 init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a9f1a037cccec0d7e4de974b541bce0ee}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!m\-\_\-p\-Info@{m\-\_\-p\-Info}}
+\index{m\-\_\-p\-Info@{m\-\_\-p\-Info}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{m\-\_\-p\-Info}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-S\-M\-Layer\-Info}$\ast$) m\-\_\-p\-Info\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_tile_projection_a9f1a037cccec0d7e4de974b541bce0ee}
+
+
+参考自 init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_ad7bfc790b1fbb0f87c9dd3708bba7ca7}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!max\-Zoom@{max\-Zoom}}
+\index{max\-Zoom@{max\-Zoom}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{max\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) max\-Zoom\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_tile_projection_ad7bfc790b1fbb0f87c9dd3708bba7ca7}
+
+
+Maximum zoom for which our tile server stores images. 
+
+
+
+参考自 init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:, R\-M\-S\-M\-Tile\-Source\-::max\-Zoom, normalise\-Zoom\-: , 以及 set\-Max\-Zoom\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_af52e70bac54d3c9c229f38850dfaa195}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!min\-Zoom@{min\-Zoom}}
+\index{min\-Zoom@{min\-Zoom}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{min\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) min\-Zoom\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_tile_projection_af52e70bac54d3c9c229f38850dfaa195}
+
+
+参考自 init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:, R\-M\-S\-M\-Tile\-Source\-::min\-Zoom, normalise\-Zoom\-: , 以及 set\-Min\-Zoom\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_a441495eb7464318f709e32b3ba889ab7}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!planet\-Bounds@{planet\-Bounds}}
+\index{planet\-Bounds@{planet\-Bounds}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{planet\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Projected\-Rect}) planet\-Bounds\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_tile_projection_a441495eb7464318f709e32b3ba889ab7}
+
+
+projected bounds of the planet, in meters 
+
+
+
+参考自 constrain\-Point\-Horizontally\-:, init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-: , 以及 project\-Internal\-:normalised\-Zoom\-:limit\-:.
+
+\hypertarget{interface_r_m_s_m_tile_projection_ad254771d183309cf4caced68e589da2c}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!scale\-Factor@{scale\-Factor}}
+\index{scale\-Factor@{scale\-Factor}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{scale\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (double) scale\-Factor\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_tile_projection_ad254771d183309cf4caced68e589da2c}
+
+
+The deal is, we have a scale which stores how many mercator gradiants per pixel in the image. 
+
+If you run the maths, scale = bounds.\-width/(2$^\wedge$zoom $\ast$ tile\-Side\-Length) or if you want, z = log(bounds.\-width/tile\-Side\-Length) -\/ log(s) So here we'll cache the first term for efficiency. I'm using width arbitrarily -\/ I'm not sure what the effect of using the other term is when they're not the same. \hypertarget{interface_r_m_s_m_tile_projection_a879a1a2b92a2a00b75d55953df996ce3}{\index{R\-M\-S\-M\-Tile\-Projection@{R\-M\-S\-M\-Tile\-Projection}!tile\-Side\-Length@{tile\-Side\-Length}}
+\index{tile\-Side\-Length@{tile\-Side\-Length}!RMSMTileProjection@{R\-M\-S\-M\-Tile\-Projection}}
+\subsubsection[{tile\-Side\-Length}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) tile\-Side\-Length\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_s_m_tile_projection_a879a1a2b92a2a00b75d55953df996ce3}
+
+
+Normally 256. This class assumes tiles are square. 
+
+
+
+参考自 init\-From\-Projection\-:tile\-Side\-Length\-:max\-Zoom\-:min\-Zoom\-:info\-:resolutions\-:, set\-Tile\-Side\-Length\-: , 以及 R\-M\-S\-M\-Tile\-Source\-::tile\-Side\-Length.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_s_m_tile_projection_8h}{R\-M\-S\-M\-Tile\-Projection.\-h}\item 
+Map/\hyperlink{_r_m_s_m_tile_projection_8m}{R\-M\-S\-M\-Tile\-Projection.\-m}\end{DoxyCompactItemize}

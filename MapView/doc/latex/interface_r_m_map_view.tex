@@ -1,0 +1,600 @@
+\hypertarget{interface_r_m_map_view}{\section{R\-M\-Map\-View类 参考}
+\label{interface_r_m_map_view}\index{R\-M\-Map\-View@{R\-M\-Map\-View}}
+}
+
+
+Wrapper around \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} for the i\-Phone.  
+
+
+
+
+{\ttfamily \#import $<$R\-M\-Map\-View.\-h$>$}
+
+类 R\-M\-Map\-View 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.424242cm]{interface_r_m_map_view}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_ab512cbaf772a0c0b6a8a8fb10f80d2b4}{animation\-Finished\-With\-Zoom\-Factor\-:near\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a795716de54229787251beb8957477905}{animation\-Stepped}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_r_m_map_view_a71183d1cfbc01ab7fa3c60890165e195}{can\-Become\-First\-Responder}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a617a8a88530a946d5eb3a1f759286e8b}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a3c77bbe947d54f2204c507964958d00c}{delayed\-Resume\-Expensive\-Operations}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\-S\-String $\ast$) -\/ \hyperlink{interface_r_m_map_view_aa23a642a33fd21939aee40ba44e20a6f}{description}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_ae58c168c733c803c56654428f0c8f3f8}{did\-Receive\-Memory\-Warning}
+\begin{DoxyCompactList}\small\item\em Must be called by higher did\-Receive\-Memory\-Warning. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a7f702df1576c7b8db4b2173c6902700c}{draw\-Rect\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_af7d6b307e05ec8764af12246115b96f8}{forward\-Invocation\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Forward invocations to \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents}. \end{DoxyCompactList}\item 
+(\hyperlink{struct_r_m_gesture_details}{R\-M\-Gesture\-Details}) -\/ \hyperlink{interface_r_m_map_view_abb2649a394b8b7289abeec07085fcf57}{gesture\-Details\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a1437dbaa8dbeb7dd1c39e64af6fe67e9}{increment\-Deceleration\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_view_a71b21d934e08438432276751ae143724}{init\-With\-Frame\-:}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_view_a0f9e140d1265f696965fa73730fdf7e3}{init\-With\-Frame\-:screen\-Scale\-:}
+\item 
+(id) -\/ \hyperlink{interface_r_m_map_view_adcd80394c57cbe77208bfc6726ff94dd}{init\-With\-Frame\-:\-With\-Location\-:}
+\item 
+(N\-S\-Method\-Signature $\ast$) -\/ \hyperlink{interface_r_m_map_view_ab97fa7e84b093b0e309ffe18cec6ffad}{method\-Signature\-For\-Selector\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a27baf3f4a31aca87ce9f1a54437b1af0}{move\-By\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a1097238683168693264f3f1fd0e69f80}{move\-To\-Lat\-Long\-:}
+\begin{DoxyCompactList}\small\item\em recenter the map on \#latlong, expressed as C\-L\-Location\-Coordinate2\-D (latitude/longitude) \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a7a576fb939de0ccc3e50f5f92ef9718d}{move\-To\-Projected\-Point\-:}
+\begin{DoxyCompactList}\small\item\em recenter the map on \#a\-Point, expressed in projected meters \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a8eef4d40f5482cf90fe43a8e98f5dba8}{perform\-Initial\-Setup}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_acb8af34cf5b0de81f4643bdcb19c0a59}{resume\-Expensive\-Operations}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_ac72f6a4091d84d904b65b303fac6bd25}{set\-Constraints\-S\-W\-:\-N\-E\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a489d7ac50d1ac7c2629db80141e7f8a6}{set\-Contents\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_aea8bf2b4af3776170dc88d64d18c83bf}{set\-Delegate\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_ab6e0beac983f26b40a756dda0498710e}{set\-Frame\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_ae1cfbd98780426dfee0d008fc51651ea}{set\-Projected\-Contraints\-S\-W\-:\-N\-E\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a7532fc82b570c3e7f81d559717acec6e}{set\-Rotation\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a0634cae1a974936b4dde86e0392a6c33}{start\-Deceleration\-With\-Delta\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a85d36e113ba408b7beeb23a7354156c2}{stop\-Deceleration}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_ae441d7ab885d8dd18b794a68c113e4cb}{touches\-Began\-:with\-Event\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a464f5e8b6bdf7ce72e7e30e17972a047}{touches\-Cancelled\-:with\-Event\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a064931bc77db98015373c5d76faf9226}{touches\-Ended\-:with\-Event\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_ace3bf92bf491646d749c27f55d2d7b34}{touches\-Moved\-:with\-Event\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a6003bcb4479e3ca7f2500db18f7ee8e8}{zoom\-By\-Factor\-:near\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_map_view_a30bd6e4766b3bc224a6e214bb06ec8ca}{zoom\-By\-Factor\-:near\-:animated\-:}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_r_m_gesture_details}{R\-M\-Gesture\-Details} \hyperlink{interface_r_m_map_view_a9b8031da19d9d7850a4795cbbadefa5c}{last\-Gesture}
+\item 
+\hyperlink{interface_r_m_s_m_layer_info}{R\-M\-S\-M\-Layer\-Info} $\ast$ \hyperlink{interface_r_m_map_view_aca406dc0027962e811a73ee69ce5db68}{m\-\_\-info}
+\item 
+\hyperlink{interface_r_m_s_m_tile_source}{R\-M\-S\-M\-Tile\-Source} $\ast$ \hyperlink{interface_r_m_map_view_af89039ac8817690a1dceadd43b44ab8f}{m\-\_\-\-Tile\-Source}
+\item 
+float \hyperlink{interface_r_m_map_view_a51d17c6a26beb3cbd1bf51de4aa1f774}{screen\-Scale}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} $\ast$ \hyperlink{interface_r_m_map_view_a87dc341bead16abfa5b0f23260ac6ed9}{contents}
+\begin{DoxyCompactList}\small\item\em Any other functionality you need to manipulate the map you can access through this property. \end{DoxyCompactList}\item 
+B\-O\-O\-L \hyperlink{interface_r_m_map_view_aba614ce906ab6f54581593002a4a6e78}{deceleration}
+\item 
+float \hyperlink{interface_r_m_map_view_a1e9a66251764c79b4b6c43dc92d8d245}{deceleration\-Factor}
+\item 
+id$<$ \hyperlink{protocol_r_m_map_view_delegate-p}{R\-M\-Map\-View\-Delegate} $>$ \hyperlink{interface_r_m_map_view_a4703ad41a6e6ace59dc9e1bee3d3f382}{delegate}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_map_view_a3ce66092f0dcae73e0d209c9dab6c580}{enable\-Dragging}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_map_view_a0be5c05b118052c1c802a4afda276d6c}{enable\-Rotate}
+\item 
+B\-O\-O\-L \hyperlink{interface_r_m_map_view_a317f8fffb2cd671dd1c8b4fb90d4b7fa}{enable\-Zoom}
+\item 
+\hyperlink{interface_r_m_marker_manager}{R\-M\-Marker\-Manager} $\ast$ \hyperlink{interface_r_m_map_view_adb35b8ebc9e8cddb3bfdf560c2d921dd}{marker\-Manager}
+\item 
+C\-G\-Float \hyperlink{interface_r_m_map_view_a5db051adefc02909422ab8452b0db6f2}{rotation}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Wrapper around \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} for the i\-Phone. 
+
+It implements event handling; but that's about it. All the interesting map logic is done by \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents}. There is exactly one \hyperlink{interface_r_m_map_view}{R\-M\-Map\-View} instance for each \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} instance.
+
+A -\/forward\-Invocation method exists for R\-M\-Map, and forwards all unhandled messages to the \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} instance.
+
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000024}{Bug}]No accessors for enable\-Dragging, enable\-Zoom, deceleration, deceleration\-Factor. Changing enable\-Dragging does not change multitouch\-Enabled for the view. \end{DoxyRefDesc}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_map_view_ab512cbaf772a0c0b6a8a8fb10f80d2b4}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!animation\-Finished\-With\-Zoom\-Factor\-:near\-:@{animation\-Finished\-With\-Zoom\-Factor\-:near\-:}}
+\index{animation\-Finished\-With\-Zoom\-Factor\-:near\-:@{animation\-Finished\-With\-Zoom\-Factor\-:near\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{animation\-Finished\-With\-Zoom\-Factor\-:near\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) animation\-Finished\-With\-Zoom\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{p}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_ab512cbaf772a0c0b6a8a8fb10f80d2b4}
+
+
+重载 \hyperlink{protocol_r_m_map_contents_animation_callback-p_afd3a55e53810bb11b843754ffa4d346d}{$<$\-R\-M\-Map\-Contents\-Animation\-Callback$>$} .
+
+\hypertarget{interface_r_m_map_view_a795716de54229787251beb8957477905}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!animation\-Stepped@{animation\-Stepped}}
+\index{animation\-Stepped@{animation\-Stepped}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{animation\-Stepped}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) animation\-Stepped 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a795716de54229787251beb8957477905}
+
+
+重载 \hyperlink{protocol_r_m_map_contents_animation_callback-p_a404de1d6b9991d9daf716996b515ec6c}{$<$\-R\-M\-Map\-Contents\-Animation\-Callback$>$} .
+
+\hypertarget{interface_r_m_map_view_a71183d1cfbc01ab7fa3c60890165e195}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!can\-Become\-First\-Responder@{can\-Become\-First\-Responder}}
+\index{can\-Become\-First\-Responder@{can\-Become\-First\-Responder}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{can\-Become\-First\-Responder}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) can\-Become\-First\-Responder 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a71183d1cfbc01ab7fa3c60890165e195}
+\hypertarget{interface_r_m_map_view_a617a8a88530a946d5eb3a1f759286e8b}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a617a8a88530a946d5eb3a1f759286e8b}
+\hypertarget{interface_r_m_map_view_a3c77bbe947d54f2204c507964958d00c}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!delayed\-Resume\-Expensive\-Operations@{delayed\-Resume\-Expensive\-Operations}}
+\index{delayed\-Resume\-Expensive\-Operations@{delayed\-Resume\-Expensive\-Operations}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{delayed\-Resume\-Expensive\-Operations}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) delayed\-Resume\-Expensive\-Operations 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a3c77bbe947d54f2204c507964958d00c}
+
+
+参考自 increment\-Deceleration\-:, touches\-Began\-:with\-Event\-:, touches\-Cancelled\-:with\-Event\-:, touches\-Ended\-:with\-Event\-: , 以及 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_aa23a642a33fd21939aee40ba44e20a6f}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!description@{description}}
+\index{description@{description}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{description}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) description 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_aa23a642a33fd21939aee40ba44e20a6f}
+\hypertarget{interface_r_m_map_view_ae58c168c733c803c56654428f0c8f3f8}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}}
+\index{did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{did\-Receive\-Memory\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\-Receive\-Memory\-Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_ae58c168c733c803c56654428f0c8f3f8}
+
+
+Must be called by higher did\-Receive\-Memory\-Warning. 
+
+\hypertarget{interface_r_m_map_view_a7f702df1576c7b8db4b2173c6902700c}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!draw\-Rect\-:@{draw\-Rect\-:}}
+\index{draw\-Rect\-:@{draw\-Rect\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{draw\-Rect\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) draw\-Rect\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{rect}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a7f702df1576c7b8db4b2173c6902700c}
+
+
+参考自 draw\-Rect\-:.
+
+\hypertarget{interface_r_m_map_view_af7d6b307e05ec8764af12246115b96f8}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!forward\-Invocation\-:@{forward\-Invocation\-:}}
+\index{forward\-Invocation\-:@{forward\-Invocation\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{forward\-Invocation\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) forward\-Invocation\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Invocation $\ast$)}]{invocation}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_af7d6b307e05ec8764af12246115b96f8}
+
+
+Forward invocations to \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents}. 
+
+\hypertarget{interface_r_m_map_view_abb2649a394b8b7289abeec07085fcf57}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!gesture\-Details\-:@{gesture\-Details\-:}}
+\index{gesture\-Details\-:@{gesture\-Details\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{gesture\-Details\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Gesture\-Details}) gesture\-Details\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Set$\ast$)}]{touches}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_abb2649a394b8b7289abeec07085fcf57}
+
+
+参考自 touches\-Began\-:with\-Event\-:, touches\-Ended\-:with\-Event\-: , 以及 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_a1437dbaa8dbeb7dd1c39e64af6fe67e9}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!increment\-Deceleration\-:@{increment\-Deceleration\-:}}
+\index{increment\-Deceleration\-:@{increment\-Deceleration\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{increment\-Deceleration\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) increment\-Deceleration\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Timer $\ast$)}]{timer}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a1437dbaa8dbeb7dd1c39e64af6fe67e9}
+
+
+Provided by category \hyperlink{category_r_m_map_view_07_private_methods_08_ad33d83d9abe096685ce0c34fd71ca94f}{R\-M\-Map\-View(\-Private\-Methods)}.
+
+\hypertarget{interface_r_m_map_view_a71b21d934e08438432276751ae143724}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!init\-With\-Frame\-:@{init\-With\-Frame\-:}}
+\index{init\-With\-Frame\-:@{init\-With\-Frame\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{init\-With\-Frame\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Frame\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{frame}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_a71b21d934e08438432276751ae143724}
+\hypertarget{interface_r_m_map_view_a0f9e140d1265f696965fa73730fdf7e3}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!init\-With\-Frame\-:screen\-Scale\-:@{init\-With\-Frame\-:screen\-Scale\-:}}
+\index{init\-With\-Frame\-:screen\-Scale\-:@{init\-With\-Frame\-:screen\-Scale\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{init\-With\-Frame\-:screen\-Scale\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-With\-Frame\-:} 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{frame}
+\item[{screenScale:(float)}]{screen\-Scale}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_a0f9e140d1265f696965fa73730fdf7e3}
+
+
+参考自 init\-With\-Frame\-:.
+
+\hypertarget{interface_r_m_map_view_adcd80394c57cbe77208bfc6726ff94dd}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!init\-With\-Frame\-:\-With\-Location\-:@{init\-With\-Frame\-:\-With\-Location\-:}}
+\index{init\-With\-Frame\-:\-With\-Location\-:@{init\-With\-Frame\-:\-With\-Location\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{init\-With\-Frame\-:\-With\-Location\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) {\bf init\-With\-Frame\-:} 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{frame}
+\item[{WithLocation:(C\-L\-Location\-Coordinate2\-D)}]{latlon}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_adcd80394c57cbe77208bfc6726ff94dd}
+\begin{DoxyRefDesc}{弃用}
+\item[\hyperlink{deprecated__deprecated000010}{弃用}]Deprecated any time after 0.\-5. \end{DoxyRefDesc}
+\hypertarget{interface_r_m_map_view_ab97fa7e84b093b0e309ffe18cec6ffad}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!method\-Signature\-For\-Selector\-:@{method\-Signature\-For\-Selector\-:}}
+\index{method\-Signature\-For\-Selector\-:@{method\-Signature\-For\-Selector\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{method\-Signature\-For\-Selector\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-Method\-Signature $\ast$) method\-Signature\-For\-Selector\-: 
+\begin{DoxyParamCaption}
+\item[{(S\-E\-L)}]{a\-Selector}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_ab97fa7e84b093b0e309ffe18cec6ffad}
+
+
+参考自 method\-Signature\-For\-Selector\-:.
+
+\hypertarget{interface_r_m_map_view_a27baf3f4a31aca87ce9f1a54437b1af0}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!move\-By\-:@{move\-By\-:}}
+\index{move\-By\-:@{move\-By\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{move\-By\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-By\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Size)}]{delta}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_a27baf3f4a31aca87ce9f1a54437b1af0}
+
+
+重载 \hyperlink{protocol_r_m_map_contents_facade-p_a229f6bcfb540a9afb2f1620c2e79fcb2}{$<$\-R\-M\-Map\-Contents\-Facade$>$} .
+
+
+
+参考自 increment\-Deceleration\-:, move\-By\-:, stop\-Deceleration , 以及 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_a1097238683168693264f3f1fd0e69f80}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!move\-To\-Lat\-Long\-:@{move\-To\-Lat\-Long\-:}}
+\index{move\-To\-Lat\-Long\-:@{move\-To\-Lat\-Long\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{move\-To\-Lat\-Long\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-To\-Lat\-Long\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-L\-Location\-Coordinate2\-D)}]{latlong}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_a1097238683168693264f3f1fd0e69f80}
+
+
+recenter the map on \#latlong, expressed as C\-L\-Location\-Coordinate2\-D (latitude/longitude) 
+
+
+
+重载 \hyperlink{protocol_r_m_map_contents_facade-p_afab5c65cfffa2209a44ed73962218589}{$<$\-R\-M\-Map\-Contents\-Facade$>$} .
+
+
+
+参考自 init\-With\-Frame\-:\-With\-Location\-:, move\-To\-Lat\-Long\-:, Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Far\-East, Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Far\-West , 以及 Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Pacific\-Northwest.
+
+\hypertarget{interface_r_m_map_view_a7a576fb939de0ccc3e50f5f92ef9718d}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!move\-To\-Projected\-Point\-:@{move\-To\-Projected\-Point\-:}}
+\index{move\-To\-Projected\-Point\-:@{move\-To\-Projected\-Point\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{move\-To\-Projected\-Point\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) move\-To\-Projected\-Point\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{a\-Point}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_a7a576fb939de0ccc3e50f5f92ef9718d}
+
+
+recenter the map on \#a\-Point, expressed in projected meters 
+
+
+
+重载 \hyperlink{protocol_r_m_map_contents_facade-p_a2cdc6dc414cefda8f1616dd6572d5627}{$<$\-R\-M\-Map\-Contents\-Facade$>$} .
+
+
+
+参考自 move\-To\-Projected\-Point\-:.
+
+\hypertarget{interface_r_m_map_view_a8eef4d40f5482cf90fe43a8e98f5dba8}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!perform\-Initial\-Setup@{perform\-Initial\-Setup}}
+\index{perform\-Initial\-Setup@{perform\-Initial\-Setup}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{perform\-Initial\-Setup}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) perform\-Initial\-Setup 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a8eef4d40f5482cf90fe43a8e98f5dba8}
+
+
+参考自 init\-With\-Frame\-:screen\-Scale\-:, init\-With\-Frame\-:\-With\-Location\-: , 以及 set\-Contents\-:.
+
+\hypertarget{interface_r_m_map_view_acb8af34cf5b0de81f4643bdcb19c0a59}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!resume\-Expensive\-Operations@{resume\-Expensive\-Operations}}
+\index{resume\-Expensive\-Operations@{resume\-Expensive\-Operations}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{resume\-Expensive\-Operations}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) resume\-Expensive\-Operations 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_acb8af34cf5b0de81f4643bdcb19c0a59}
+\hypertarget{interface_r_m_map_view_ac72f6a4091d84d904b65b303fac6bd25}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!set\-Constraints\-S\-W\-:\-N\-E\-:@{set\-Constraints\-S\-W\-:\-N\-E\-:}}
+\index{set\-Constraints\-S\-W\-:\-N\-E\-:@{set\-Constraints\-S\-W\-:\-N\-E\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{set\-Constraints\-S\-W\-:\-N\-E\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Constraints\-S\-W\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-L\-Location\-Coordinate2\-D)}]{sw}
+\item[{NE:(C\-L\-Location\-Coordinate2\-D)}]{ne}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_ac72f6a4091d84d904b65b303fac6bd25}
+\hypertarget{interface_r_m_map_view_a489d7ac50d1ac7c2629db80141e7f8a6}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!set\-Contents\-:@{set\-Contents\-:}}
+\index{set\-Contents\-:@{set\-Contents\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{set\-Contents\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Contents\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Map\-Contents} $\ast$)}]{the\-Contents}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a489d7ac50d1ac7c2629db80141e7f8a6}
+\hypertarget{interface_r_m_map_view_aea8bf2b4af3776170dc88d64d18c83bf}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!set\-Delegate\-:@{set\-Delegate\-:}}
+\index{set\-Delegate\-:@{set\-Delegate\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{set\-Delegate\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Delegate\-: 
+\begin{DoxyParamCaption}
+\item[{(id$<${\bf R\-M\-Map\-View\-Delegate}$>$)}]{\-\_\-delegate}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_aea8bf2b4af3776170dc88d64d18c83bf}
+\hypertarget{interface_r_m_map_view_ab6e0beac983f26b40a756dda0498710e}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!set\-Frame\-:@{set\-Frame\-:}}
+\index{set\-Frame\-:@{set\-Frame\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{set\-Frame\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Frame\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Rect)}]{frame}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_ab6e0beac983f26b40a756dda0498710e}
+\hypertarget{interface_r_m_map_view_ae1cfbd98780426dfee0d008fc51651ea}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!set\-Projected\-Contraints\-S\-W\-:\-N\-E\-:@{set\-Projected\-Contraints\-S\-W\-:\-N\-E\-:}}
+\index{set\-Projected\-Contraints\-S\-W\-:\-N\-E\-:@{set\-Projected\-Contraints\-S\-W\-:\-N\-E\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{set\-Projected\-Contraints\-S\-W\-:\-N\-E\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Projected\-Contraints\-S\-W\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Projected\-Point})}]{sw}
+\item[{NE:({\bf R\-M\-Projected\-Point})}]{ne}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_ae1cfbd98780426dfee0d008fc51651ea}
+
+
+参考自 set\-Constraints\-S\-W\-:\-N\-E\-:.
+
+\hypertarget{interface_r_m_map_view_a7532fc82b570c3e7f81d559717acec6e}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!set\-Rotation\-:@{set\-Rotation\-:}}
+\index{set\-Rotation\-:@{set\-Rotation\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{set\-Rotation\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Rotation\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Float)}]{angle}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_a7532fc82b570c3e7f81d559717acec6e}
+
+
+参考自 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_a0634cae1a974936b4dde86e0392a6c33}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!start\-Deceleration\-With\-Delta\-:@{start\-Deceleration\-With\-Delta\-:}}
+\index{start\-Deceleration\-With\-Delta\-:@{start\-Deceleration\-With\-Delta\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{start\-Deceleration\-With\-Delta\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) start\-Deceleration\-With\-Delta\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-G\-Size)}]{delta}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a0634cae1a974936b4dde86e0392a6c33}
+
+
+Provided by category \hyperlink{category_r_m_map_view_07_private_methods_08_a2cb774e60b32ecc012364bbb95926ccc}{R\-M\-Map\-View(\-Private\-Methods)}.
+
+
+
+参考自 touches\-Ended\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_a85d36e113ba408b7beeb23a7354156c2}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!stop\-Deceleration@{stop\-Deceleration}}
+\index{stop\-Deceleration@{stop\-Deceleration}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{stop\-Deceleration}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) stop\-Deceleration 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a85d36e113ba408b7beeb23a7354156c2}
+
+
+Provided by category \hyperlink{category_r_m_map_view_07_private_methods_08_a531704b7be8e0bd513f996bc04af62af}{R\-M\-Map\-View(\-Private\-Methods)}.
+
+
+
+参考自 increment\-Deceleration\-: , 以及 touches\-Began\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_ae441d7ab885d8dd18b794a68c113e4cb}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!touches\-Began\-:with\-Event\-:@{touches\-Began\-:with\-Event\-:}}
+\index{touches\-Began\-:with\-Event\-:@{touches\-Began\-:with\-Event\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{touches\-Began\-:with\-Event\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) touches\-Began\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Set $\ast$)}]{touches}
+\item[{withEvent:(U\-I\-Event $\ast$)}]{event}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_ae441d7ab885d8dd18b794a68c113e4cb}
+\hypertarget{interface_r_m_map_view_a464f5e8b6bdf7ce72e7e30e17972a047}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!touches\-Cancelled\-:with\-Event\-:@{touches\-Cancelled\-:with\-Event\-:}}
+\index{touches\-Cancelled\-:with\-Event\-:@{touches\-Cancelled\-:with\-Event\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{touches\-Cancelled\-:with\-Event\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) touches\-Cancelled\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Set $\ast$)}]{touches}
+\item[{withEvent:(U\-I\-Event $\ast$)}]{event}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a464f5e8b6bdf7ce72e7e30e17972a047}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000025}{Bug}]touches\-Cancelled should clean up, not pass event to markers \end{DoxyRefDesc}
+\hypertarget{interface_r_m_map_view_a064931bc77db98015373c5d76faf9226}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!touches\-Ended\-:with\-Event\-:@{touches\-Ended\-:with\-Event\-:}}
+\index{touches\-Ended\-:with\-Event\-:@{touches\-Ended\-:with\-Event\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{touches\-Ended\-:with\-Event\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) touches\-Ended\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Set $\ast$)}]{touches}
+\item[{withEvent:(U\-I\-Event $\ast$)}]{event}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_a064931bc77db98015373c5d76faf9226}
+\hypertarget{interface_r_m_map_view_ace3bf92bf491646d749c27f55d2d7b34}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!touches\-Moved\-:with\-Event\-:@{touches\-Moved\-:with\-Event\-:}}
+\index{touches\-Moved\-:with\-Event\-:@{touches\-Moved\-:with\-Event\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{touches\-Moved\-:with\-Event\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) touches\-Moved\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Set $\ast$)}]{touches}
+\item[{withEvent:(U\-I\-Event $\ast$)}]{event}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_map_view_ace3bf92bf491646d749c27f55d2d7b34}
+\hypertarget{interface_r_m_map_view_a6003bcb4479e3ca7f2500db18f7ee8e8}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}}
+\index{zoom\-By\-Factor\-:near\-:@{zoom\-By\-Factor\-:near\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{zoom\-By\-Factor\-:near\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-By\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{a\-Point}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_a6003bcb4479e3ca7f2500db18f7ee8e8}
+
+
+重载 \hyperlink{protocol_r_m_map_contents_facade-p_af9a47536d397223358380cac31c960e1}{$<$\-R\-M\-Map\-Contents\-Facade$>$} .
+
+
+
+参考自 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_a30bd6e4766b3bc224a6e214bb06ec8ca}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!zoom\-By\-Factor\-:near\-:animated\-:@{zoom\-By\-Factor\-:near\-:animated\-:}}
+\index{zoom\-By\-Factor\-:near\-:animated\-:@{zoom\-By\-Factor\-:near\-:animated\-:}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{zoom\-By\-Factor\-:near\-:animated\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) zoom\-By\-Factor\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{zoom\-Factor}
+\item[{near:(C\-G\-Point)}]{a\-Point}
+\item[{animated:(B\-O\-O\-L)}]{animated}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_map_view_a30bd6e4766b3bc224a6e214bb06ec8ca}
+
+
+重载 \hyperlink{protocol_r_m_map_contents_facade-p_adbcb106790b92819764375c1f0deb77b}{$<$\-R\-M\-Map\-Contents\-Facade$>$} .
+
+
+
+参考自 touches\-Ended\-:with\-Event\-: , 以及 zoom\-By\-Factor\-:near\-:.
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_map_view_a9b8031da19d9d7850a4795cbbadefa5c}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!last\-Gesture@{last\-Gesture}}
+\index{last\-Gesture@{last\-Gesture}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{last\-Gesture}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Gesture\-Details}) last\-Gesture\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_map_view_a9b8031da19d9d7850a4795cbbadefa5c}
+
+
+参考自 gesture\-Details\-:, touches\-Began\-:with\-Event\-:, touches\-Ended\-:with\-Event\-: , 以及 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_aca406dc0027962e811a73ee69ce5db68}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!m\-\_\-info@{m\-\_\-info}}
+\index{m\-\_\-info@{m\-\_\-info}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{m\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-S\-M\-Layer\-Info}$\ast$) m\-\_\-info\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_map_view_aca406dc0027962e811a73ee69ce5db68}
+\hypertarget{interface_r_m_map_view_af89039ac8817690a1dceadd43b44ab8f}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!m\-\_\-\-Tile\-Source@{m\-\_\-\-Tile\-Source}}
+\index{m\-\_\-\-Tile\-Source@{m\-\_\-\-Tile\-Source}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{m\-\_\-\-Tile\-Source}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-S\-M\-Tile\-Source}$\ast$) m\-\_\-\-Tile\-Source\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_map_view_af89039ac8817690a1dceadd43b44ab8f}
+\hypertarget{interface_r_m_map_view_a51d17c6a26beb3cbd1bf51de4aa1f774}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!screen\-Scale@{screen\-Scale}}
+\index{screen\-Scale@{screen\-Scale}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{screen\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) screen\-Scale\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_map_view_a51d17c6a26beb3cbd1bf51de4aa1f774}
+
+
+参考自 init\-With\-Frame\-:screen\-Scale\-: , 以及 perform\-Initial\-Setup.
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_map_view_a87dc341bead16abfa5b0f23260ac6ed9}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!contents@{contents}}
+\index{contents@{contents}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{contents}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Map\-Contents} $\ast$) contents\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [retain]}}}\label{interface_r_m_map_view_a87dc341bead16abfa5b0f23260ac6ed9}
+
+
+Any other functionality you need to manipulate the map you can access through this property. 
+
+The \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents} class holds the actual map bits. 
+
+参考自 did\-Receive\-Memory\-Warning, forward\-Invocation\-:, R\-M\-Path\-::init\-For\-Map\-:, set\-Contents\-:, set\-Frame\-:, set\-Rotation\-:, Route\-Me\-Tests\-::test\-Marker\-Coordinates\-Far\-East, Route\-Me\-Tests\-::test\-Marker\-Coordinates\-Far\-West, Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Far\-East, Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Far\-West, Route\-Me\-Tests\-::test\-Screen\-Coordinates\-Pacific\-Northwest, Route\-Me\-Tests\-::test\-Zoom\-Bounds , 以及 zoom\-By\-Factor\-:near\-:animated\-:.
+
+\hypertarget{interface_r_m_map_view_aba614ce906ab6f54581593002a4a6e78}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!deceleration@{deceleration}}
+\index{deceleration@{deceleration}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{deceleration}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) deceleration\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_view_aba614ce906ab6f54581593002a4a6e78}
+
+
+参考自 perform\-Initial\-Setup, touches\-Began\-:with\-Event\-: , 以及 touches\-Ended\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_a1e9a66251764c79b4b6c43dc92d8d245}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!deceleration\-Factor@{deceleration\-Factor}}
+\index{deceleration\-Factor@{deceleration\-Factor}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{deceleration\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) deceleration\-Factor\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_view_a1e9a66251764c79b4b6c43dc92d8d245}
+
+
+参考自 increment\-Deceleration\-: , 以及 perform\-Initial\-Setup.
+
+\hypertarget{interface_r_m_map_view_a4703ad41a6e6ace59dc9e1bee3d3f382}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!delegate@{delegate}}
+\index{delegate@{delegate}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{delegate}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<$ {\bf R\-M\-Map\-View\-Delegate} $>$) delegate\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_view_a4703ad41a6e6ace59dc9e1bee3d3f382}
+
+
+参考自 animation\-Finished\-With\-Zoom\-Factor\-:near\-:, animation\-Stepped, move\-By\-:, move\-To\-Lat\-Long\-:, move\-To\-Projected\-Point\-:, set\-Delegate\-:, set\-Rotation\-:, touches\-Ended\-:with\-Event\-:, touches\-Moved\-:with\-Event\-: , 以及 zoom\-By\-Factor\-:near\-:animated\-:.
+
+\hypertarget{interface_r_m_map_view_a3ce66092f0dcae73e0d209c9dab6c580}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!enable\-Dragging@{enable\-Dragging}}
+\index{enable\-Dragging@{enable\-Dragging}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{enable\-Dragging}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) enable\-Dragging\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_view_a3ce66092f0dcae73e0d209c9dab6c580}
+
+
+参考自 perform\-Initial\-Setup, touches\-Ended\-:with\-Event\-: , 以及 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_a0be5c05b118052c1c802a4afda276d6c}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!enable\-Rotate@{enable\-Rotate}}
+\index{enable\-Rotate@{enable\-Rotate}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{enable\-Rotate}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) enable\-Rotate\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_view_a0be5c05b118052c1c802a4afda276d6c}
+
+
+参考自 perform\-Initial\-Setup , 以及 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_a317f8fffb2cd671dd1c8b4fb90d4b7fa}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!enable\-Zoom@{enable\-Zoom}}
+\index{enable\-Zoom@{enable\-Zoom}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{enable\-Zoom}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) enable\-Zoom\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_view_a317f8fffb2cd671dd1c8b4fb90d4b7fa}
+
+
+参考自 perform\-Initial\-Setup , 以及 touches\-Moved\-:with\-Event\-:.
+
+\hypertarget{interface_r_m_map_view_adb35b8ebc9e8cddb3bfdf560c2d921dd}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!marker\-Manager@{marker\-Manager}}
+\index{marker\-Manager@{marker\-Manager}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{marker\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Marker\-Manager} $\ast$) marker\-Manager\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [retain]}}}\label{interface_r_m_map_view_adb35b8ebc9e8cddb3bfdf560c2d921dd}
+\hypertarget{interface_r_m_map_view_a5db051adefc02909422ab8452b0db6f2}{\index{R\-M\-Map\-View@{R\-M\-Map\-View}!rotation@{rotation}}
+\index{rotation@{rotation}!RMMapView@{R\-M\-Map\-View}}
+\subsubsection[{rotation}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\-G\-Float) rotation\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}}\label{interface_r_m_map_view_a5db051adefc02909422ab8452b0db6f2}
+
+
+参考自 set\-Rotation\-:.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_map_view_8h}{R\-M\-Map\-View.\-h}\item 
+Map/\hyperlink{_r_m_map_view_8m}{R\-M\-Map\-View.\-m}\end{DoxyCompactItemize}

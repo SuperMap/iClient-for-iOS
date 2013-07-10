@@ -1,0 +1,79 @@
+\hypertarget{_r_m_map_contents_8h}{\section{Map/\-R\-M\-Map\-Contents.h 文件参考}
+\label{_r_m_map_contents_8h}\index{Map/\-R\-M\-Map\-Contents.\-h@{Map/\-R\-M\-Map\-Contents.\-h}}
+}
+{\ttfamily \#import $<$U\-I\-Kit/\-U\-I\-Kit.\-h$>$}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Foundation.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Lat\-Long.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Tile.\-h\char`\"{}}\\*
+{\ttfamily \#import \char`\"{}R\-M\-Tiles\-Update\-Delegate.\-h\char`\"{}}\\*
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents}
+\begin{DoxyCompactList}\small\item\em The cartographic and data components of a map. \end{DoxyCompactList}\item 
+protocol \hyperlink{protocol_r_m_map_contents_animation_callback-p}{$<$\-R\-M\-Map\-Contents\-Animation\-Callback$>$}
+\item 
+protocol \hyperlink{protocol_r_m_map_contents_facade-p}{$<$\-R\-M\-Map\-Contents\-Facade$>$}
+\begin{DoxyCompactList}\small\item\em Appears to be the methods actually implemented by \hyperlink{interface_r_m_map_contents}{R\-M\-Map\-Contents}, but generally invoked on \hyperlink{interface_r_m_map_view}{R\-M\-Map\-View}, and forwarded to the contents object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_r_m_map_contents_8h_a5feeb97633a76e7e8f736b39d4a944de}{k\-Default\-Initial\-Latitude}~0
+\item 
+\#define \hyperlink{_r_m_map_contents_8h_a9231c11636426ddb6125ed69c6f8a8f9}{k\-Default\-Initial\-Longitude}~0
+\item 
+\#define \hyperlink{_r_m_map_contents_8h_a898123aef97990440b61d5f69e230ff8}{k\-Default\-Initial\-Zoom\-Level}~3.\-0
+\item 
+\#define \hyperlink{_r_m_map_contents_8h_a963a8c037b06c20d57f3d30e4b080286}{k\-Default\-Maximum\-Zoom\-Level}~25.\-0
+\item 
+\#define \hyperlink{_r_m_map_contents_8h_a40a4857b157961ffccd95bbf4157a1df}{k\-Default\-Minimum\-Zoom\-Level}~0.\-0
+\end{DoxyCompactItemize}
+\subsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55ba6e3d1467c71f93f74e3da9a5a3c1d7df}{R\-M\-Map\-No\-Min\-Bound} = 0, 
+\hyperlink{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55ba2b4f330bed5733538409d26c335edb9a}{R\-M\-Map\-Min\-Height\-Bound} = 1, 
+\hyperlink{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55baf93fa5691eff0a5a204d0aebc7af868d}{R\-M\-Map\-Min\-Width\-Bound} = 2
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\hypertarget{_r_m_map_contents_8h_a5feeb97633a76e7e8f736b39d4a944de}{\index{R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}!k\-Default\-Initial\-Latitude@{k\-Default\-Initial\-Latitude}}
+\index{k\-Default\-Initial\-Latitude@{k\-Default\-Initial\-Latitude}!RMMapContents.h@{R\-M\-Map\-Contents.\-h}}
+\subsubsection[{k\-Default\-Initial\-Latitude}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Initial\-Latitude~0}}\label{_r_m_map_contents_8h_a5feeb97633a76e7e8f736b39d4a944de}
+
+
+参考自 R\-M\-Map\-Contents\-::init\-With\-View\-:, R\-M\-Map\-Contents\-::init\-With\-View\-:screen\-Scale\-: , 以及 R\-M\-Map\-Contents\-::init\-With\-View\-:tilesource\-:screen\-Scale\-:.
+
+\hypertarget{_r_m_map_contents_8h_a9231c11636426ddb6125ed69c6f8a8f9}{\index{R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}!k\-Default\-Initial\-Longitude@{k\-Default\-Initial\-Longitude}}
+\index{k\-Default\-Initial\-Longitude@{k\-Default\-Initial\-Longitude}!RMMapContents.h@{R\-M\-Map\-Contents.\-h}}
+\subsubsection[{k\-Default\-Initial\-Longitude}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Initial\-Longitude~0}}\label{_r_m_map_contents_8h_a9231c11636426ddb6125ed69c6f8a8f9}
+
+
+参考自 R\-M\-Map\-Contents\-::init\-With\-View\-:, R\-M\-Map\-Contents\-::init\-With\-View\-:screen\-Scale\-: , 以及 R\-M\-Map\-Contents\-::init\-With\-View\-:tilesource\-:screen\-Scale\-:.
+
+\hypertarget{_r_m_map_contents_8h_a898123aef97990440b61d5f69e230ff8}{\index{R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}!k\-Default\-Initial\-Zoom\-Level@{k\-Default\-Initial\-Zoom\-Level}}
+\index{k\-Default\-Initial\-Zoom\-Level@{k\-Default\-Initial\-Zoom\-Level}!RMMapContents.h@{R\-M\-Map\-Contents.\-h}}
+\subsubsection[{k\-Default\-Initial\-Zoom\-Level}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Initial\-Zoom\-Level~3.\-0}}\label{_r_m_map_contents_8h_a898123aef97990440b61d5f69e230ff8}
+\hypertarget{_r_m_map_contents_8h_a963a8c037b06c20d57f3d30e4b080286}{\index{R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}!k\-Default\-Maximum\-Zoom\-Level@{k\-Default\-Maximum\-Zoom\-Level}}
+\index{k\-Default\-Maximum\-Zoom\-Level@{k\-Default\-Maximum\-Zoom\-Level}!RMMapContents.h@{R\-M\-Map\-Contents.\-h}}
+\subsubsection[{k\-Default\-Maximum\-Zoom\-Level}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Maximum\-Zoom\-Level~25.\-0}}\label{_r_m_map_contents_8h_a963a8c037b06c20d57f3d30e4b080286}
+\hypertarget{_r_m_map_contents_8h_a40a4857b157961ffccd95bbf4157a1df}{\index{R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}!k\-Default\-Minimum\-Zoom\-Level@{k\-Default\-Minimum\-Zoom\-Level}}
+\index{k\-Default\-Minimum\-Zoom\-Level@{k\-Default\-Minimum\-Zoom\-Level}!RMMapContents.h@{R\-M\-Map\-Contents.\-h}}
+\subsubsection[{k\-Default\-Minimum\-Zoom\-Level}]{\setlength{\rightskip}{0pt plus 5cm}\#define k\-Default\-Minimum\-Zoom\-Level~0.\-0}}\label{_r_m_map_contents_8h_a40a4857b157961ffccd95bbf4157a1df}
+
+
+\subsection{枚举类型说明}
+\hypertarget{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55b}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55b}
+\begin{Desc}
+\item[枚举值]\par
+\begin{description}
+\index{R\-M\-Map\-No\-Min\-Bound@{R\-M\-Map\-No\-Min\-Bound}!R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}}\index{R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}!R\-M\-Map\-No\-Min\-Bound@{R\-M\-Map\-No\-Min\-Bound}}\item[{\em 
+\hypertarget{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55ba6e3d1467c71f93f74e3da9a5a3c1d7df}{R\-M\-Map\-No\-Min\-Bound}\label{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55ba6e3d1467c71f93f74e3da9a5a3c1d7df}
+}]\index{R\-M\-Map\-Min\-Height\-Bound@{R\-M\-Map\-Min\-Height\-Bound}!R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}}\index{R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}!R\-M\-Map\-Min\-Height\-Bound@{R\-M\-Map\-Min\-Height\-Bound}}\item[{\em 
+\hypertarget{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55ba2b4f330bed5733538409d26c335edb9a}{R\-M\-Map\-Min\-Height\-Bound}\label{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55ba2b4f330bed5733538409d26c335edb9a}
+}]\index{R\-M\-Map\-Min\-Width\-Bound@{R\-M\-Map\-Min\-Width\-Bound}!R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}}\index{R\-M\-Map\-Contents.\-h@{R\-M\-Map\-Contents.\-h}!R\-M\-Map\-Min\-Width\-Bound@{R\-M\-Map\-Min\-Width\-Bound}}\item[{\em 
+\hypertarget{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55baf93fa5691eff0a5a204d0aebc7af868d}{R\-M\-Map\-Min\-Width\-Bound}\label{_r_m_map_contents_8h_a06fc87d81c62e9abb8790b6e5713c55baf93fa5691eff0a5a204d0aebc7af868d}
+}]\end{description}
+\end{Desc}

@@ -1,0 +1,792 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>RMMercatorToScreenProjection类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="class_r_m_mercator_to_screen_projection-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">RMMercatorToScreenProjection类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This is a stateful projection. As the screen moves around, so too do projections change.  
+ <a href="interface_r_m_mercator_to_screen_projection.html#details">更多...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_r_m_mercator_to_screen_projection_8h_source.html">RMMercatorToScreenProjection.h</a>&gt;</code></p>
+<div class="dynheader">
+类 RMMercatorToScreenProjection 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="interface_r_m_mercator_to_screen_projection.png" usemap="#RMMercatorToScreenProjection_map" alt=""/>
+  <map id="RMMercatorToScreenProjection_map" name="RMMercatorToScreenProjection_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:a10a96f474830fac6431f2b5521187397"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a10a96f474830fac6431f2b5521187397">dealloc</a><code> [implementation]</code></td></tr>
+<tr class="separator:a10a96f474830fac6431f2b5521187397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4a7f6af88955ab4123a4f5bc14f935"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6c4a7f6af88955ab4123a4f5bc14f935">deepCopy:</a></td></tr>
+<tr class="separator:a6c4a7f6af88955ab4123a4f5bc14f935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3bab2a43cbc3c17295f63d34f7df10"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6e3bab2a43cbc3c17295f63d34f7df10">initFromProjection:ToScreenBounds:</a></td></tr>
+<tr class="separator:a6e3bab2a43cbc3c17295f63d34f7df10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1262b51fc47cc2f4a4424e6e5fcfc79"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#af1262b51fc47cc2f4a4424e6e5fcfc79">movePoint:by:</a></td></tr>
+<tr class="memdesc:af1262b51fc47cc2f4a4424e6e5fcfc79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deltas in screen coordinates.  <a href="#af1262b51fc47cc2f4a4424e6e5fcfc79">更多...</a><br/></td></tr>
+<tr class="separator:af1262b51fc47cc2f4a4424e6e5fcfc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f1802cb7c5c9d3bb518ee32fc5d8b5"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a43f1802cb7c5c9d3bb518ee32fc5d8b5">moveRect:by:</a></td></tr>
+<tr class="memdesc:a43f1802cb7c5c9d3bb518ee32fc5d8b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deltas in screen coordinates.  <a href="#a43f1802cb7c5c9d3bb518ee32fc5d8b5">更多...</a><br/></td></tr>
+<tr class="separator:a43f1802cb7c5c9d3bb518ee32fc5d8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47cfe6fc7b295e1eacad2fea309b1840"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a47cfe6fc7b295e1eacad2fea309b1840">moveScreenBy:</a></td></tr>
+<tr class="memdesc:a47cfe6fc7b295e1eacad2fea309b1840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the screen.  <a href="#a47cfe6fc7b295e1eacad2fea309b1840">更多...</a><br/></td></tr>
+<tr class="separator:a47cfe6fc7b295e1eacad2fea309b1840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc63aa7ec95b73a89d4839d6851a0030"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#adc63aa7ec95b73a89d4839d6851a0030">projectedBounds</a></td></tr>
+<tr class="separator:adc63aa7ec95b73a89d4839d6851a0030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be470e222397c01d1fbc343c958c4ed"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0be470e222397c01d1fbc343c958c4ed">projectedCenter</a></td></tr>
+<tr class="separator:a0be470e222397c01d1fbc343c958c4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a079490067b3f7dd5326389720f383049"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a079490067b3f7dd5326389720f383049">projectScreenPointToXY:</a></td></tr>
+<tr class="separator:a079490067b3f7dd5326389720f383049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4aca2604d100a8a16e04f70c7d7740e"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ae4aca2604d100a8a16e04f70c7d7740e">projectScreenPointToXY:withMetersPerPixel:</a></td></tr>
+<tr class="separator:ae4aca2604d100a8a16e04f70c7d7740e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b275b603a3ce0ecae8d8126880252c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a52b275b603a3ce0ecae8d8126880252c">projectScreenRectToXY:</a></td></tr>
+<tr class="separator:a52b275b603a3ce0ecae8d8126880252c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36883ed7966071c5f51a836c77a2f2da"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_size.html">RMProjectedSize</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a36883ed7966071c5f51a836c77a2f2da">projectScreenSizeToXY:</a></td></tr>
+<tr class="separator:a36883ed7966071c5f51a836c77a2f2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a276efafa172d9221c5133d2308890c8f"><td class="memItemLeft" align="right" valign="top">(CGPoint)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a276efafa172d9221c5133d2308890c8f">projectXYPoint:</a></td></tr>
+<tr class="memdesc:a276efafa172d9221c5133d2308890c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project -&gt; screen coordinates.  <a href="#a276efafa172d9221c5133d2308890c8f">更多...</a><br/></td></tr>
+<tr class="separator:a276efafa172d9221c5133d2308890c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe204c10488ebc50a818d88d0017b16"><td class="memItemLeft" align="right" valign="top">(CGPoint)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#afbe204c10488ebc50a818d88d0017b16">projectXYPoint:withMetersPerPixel:</a></td></tr>
+<tr class="memdesc:afbe204c10488ebc50a818d88d0017b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project -&gt; screen coordinates.  <a href="#afbe204c10488ebc50a818d88d0017b16">更多...</a><br/></td></tr>
+<tr class="separator:afbe204c10488ebc50a818d88d0017b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d5076b8f0b97d2b93a7d801c61f8ba4"><td class="memItemLeft" align="right" valign="top">(CGRect)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a1d5076b8f0b97d2b93a7d801c61f8ba4">projectXYRect:</a></td></tr>
+<tr class="memdesc:a1d5076b8f0b97d2b93a7d801c61f8ba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project -&gt; screen coordinates.  <a href="#a1d5076b8f0b97d2b93a7d801c61f8ba4">更多...</a><br/></td></tr>
+<tr class="separator:a1d5076b8f0b97d2b93a7d801c61f8ba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb472dbe94a24c62a612fa849732d39"><td class="memItemLeft" align="right" valign="top">(CGRect)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#aebb472dbe94a24c62a612fa849732d39">screenBounds</a></td></tr>
+<tr class="separator:aebb472dbe94a24c62a612fa849732d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c6b2da4ecc190c768b4e30469b410b"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ac8c6b2da4ecc190c768b4e30469b410b">setMetersPerPixel:</a><code> [implementation]</code></td></tr>
+<tr class="separator:ac8c6b2da4ecc190c768b4e30469b410b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e7573981b462d019a879178840233f4"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0e7573981b462d019a879178840233f4">setProjectedBounds:</a></td></tr>
+<tr class="separator:a0e7573981b462d019a879178840233f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814a8a8ddbafeda6e68b8e02d2efcfb4"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a814a8a8ddbafeda6e68b8e02d2efcfb4">setProjectedCenter:</a></td></tr>
+<tr class="separator:a814a8a8ddbafeda6e68b8e02d2efcfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bd98049aaf4340cb2291b13588f77d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ab2bd98049aaf4340cb2291b13588f77d">setScreenBounds:</a></td></tr>
+<tr class="separator:ab2bd98049aaf4340cb2291b13588f77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0882ed84fe7346f3a9b8f4e63e2dfa0a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0882ed84fe7346f3a9b8f4e63e2dfa0a">zoomBy:</a><code> [implementation]</code></td></tr>
+<tr class="separator:a0882ed84fe7346f3a9b8f4e63e2dfa0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb02ad7176d0523eb57471fc99e3c7c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a5cb02ad7176d0523eb57471fc99e3c7c">zoomPoint:byFactor:near:</a></td></tr>
+<tr class="memdesc:a5cb02ad7176d0523eb57471fc99e3c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">pivot given in screen coordinates.  <a href="#a5cb02ad7176d0523eb57471fc99e3c7c">更多...</a><br/></td></tr>
+<tr class="separator:a5cb02ad7176d0523eb57471fc99e3c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a67d660114f633f116ebf688642cdc"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a99a67d660114f633f116ebf688642cdc">zoomRect:byFactor:near:</a></td></tr>
+<tr class="memdesc:a99a67d660114f633f116ebf688642cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">pivot given in screen coordinates.  <a href="#a99a67d660114f633f116ebf688642cdc">更多...</a><br/></td></tr>
+<tr class="separator:a99a67d660114f633f116ebf688642cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47c361352cdff2e4689721db9fb6c52"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ad47c361352cdff2e4689721db9fb6c52">zoomScreenByFactor:near:</a></td></tr>
+<tr class="separator:ad47c361352cdff2e4689721db9fb6c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:ac28d9acefc1c419405f7331d9038675a"><td class="memItemLeft" align="right" valign="top">CGRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_mercator_to_screen_projection.html#ac28d9acefc1c419405f7331d9038675a">screenBounds</a></td></tr>
+<tr class="memdesc:ac28d9acefc1c419405f7331d9038675a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounds of the screen in pixels.  <a href="#ac28d9acefc1c419405f7331d9038675a">更多...</a><br/></td></tr>
+<tr class="separator:ac28d9acefc1c419405f7331d9038675a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a6e73179ce2febd38c2f8baefedfefc47"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6e73179ce2febd38c2f8baefedfefc47">metersPerPixel</a></td></tr>
+<tr class="memdesc:a6e73179ce2febd38c2f8baefedfefc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">meters per pixel  <a href="#a6e73179ce2febd38c2f8baefedfefc47">更多...</a><br/></td></tr>
+<tr class="separator:a6e73179ce2febd38c2f8baefedfefc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3cfe961a255f28bb2ea051ae2cbaf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_mercator_to_screen_projection.html#abc3cfe961a255f28bb2ea051ae2cbaf5">origin</a></td></tr>
+<tr class="memdesc:abc3cfe961a255f28bb2ea051ae2cbaf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">What the screen is currently looking at.  <a href="#abc3cfe961a255f28bb2ea051ae2cbaf5">更多...</a><br/></td></tr>
+<tr class="separator:abc3cfe961a255f28bb2ea051ae2cbaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410f2049effa29cfceb4fa87f77b3f22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_r_m_projection.html">RMProjection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_r_m_mercator_to_screen_projection.html#a410f2049effa29cfceb4fa87f77b3f22">projection</a></td></tr>
+<tr class="memdesc:a410f2049effa29cfceb4fa87f77b3f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mercator -or-whatever- projection that the map is in.  <a href="#a410f2049effa29cfceb4fa87f77b3f22">更多...</a><br/></td></tr>
+<tr class="separator:a410f2049effa29cfceb4fa87f77b3f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This is a stateful projection. As the screen moves around, so too do projections change. </p>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a10a96f474830fac6431f2b5521187397"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) dealloc </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c4a7f6af88955ab4123a4f5bc14f935"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) deepCopy: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_r_m_mercator_to_screen_projection.html">RMMercatorToScreenProjection</a> *)&#160;</td>
+          <td class="paramname"><em>copy</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6e3bab2a43cbc3c17295f63d34f7df10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initFromProjection: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_r_m_projection.html">RMProjection</a>*)&#160;</td>
+          <td class="paramname"><em>projection</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">ToScreenBounds:</td>
+          <td></td>
+          <td class="paramtype">(CGRect)&#160;</td>
+          <td class="paramname"><em>aScreenBounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af1262b51fc47cc2f4a4424e6e5fcfc79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) movePoint: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">by:</td>
+          <td></td>
+          <td class="paramtype">(CGSize)&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deltas in screen coordinates. </p>
+
+<p>参考自 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a43f1802cb7c5c9d3bb518ee32fc5d8b5">moveRect:by:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a47cfe6fc7b295e1eacad2fea309b1840">moveScreenBy:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a43f1802cb7c5c9d3bb518ee32fc5d8b5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>) moveRect: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td>
+          <td class="paramname"><em>aRect</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">by:</td>
+          <td></td>
+          <td class="paramtype">(CGSize)&#160;</td>
+          <td class="paramname"><em>delta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deltas in screen coordinates. </p>
+
+</div>
+</div>
+<a class="anchor" id="a47cfe6fc7b295e1eacad2fea309b1840"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) moveScreenBy: </td>
+          <td></td>
+          <td class="paramtype">(CGSize)&#160;</td>
+          <td class="paramname"><em>delta</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Move the screen. </p>
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#af3baee3fc58a0b88ecd7a9ec8c7cbe88">RMMapContents::moveBy:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc63aa7ec95b73a89d4839d6851a0030"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>) projectedBounds </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_map_view.html#a27baf3f4a31aca87ce9f1a54437b1af0">RMMapView::moveBy:</a>, <a class="el" href="interface_r_m_s_m_tile_projection.html#a5a6e55b1fd17c79125d4d5fe7db20284">RMSMTileProjection::project:</a> , 以及 <a class="el" href="interface_r_m_fractal_tile_projection.html#a76f6d1fea39a1c577ff0b26012b05c9c">RMFractalTileProjection::project:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0be470e222397c01d1fbc343c958c4ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) projectedCenter </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ac8c6b2da4ecc190c768b4e30469b410b">setMetersPerPixel:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a079490067b3f7dd5326389720f383049"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) projectScreenPointToXY: </td>
+          <td></td>
+          <td class="paramtype">(CGPoint)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_path.html#a9635a32a6026e63fdf1b34b243dd1d08">RMPath::addLineToScreenPoint:</a>, <a class="el" href="interface_r_m_marker_manager.html#a1e774d2df5924a4632f61bd1565fe73a">RMMarkerManager::moveMarker:AtXY:</a>, <a class="el" href="interface_r_m_path.html#a76134695ca29b3d58857a5d100a8db61">RMPath::moveToScreenPoint:</a>, <a class="el" href="interface_r_m_map_contents.html#ad7f1b803be32266a8a0bc5de03fd4e0e">RMMapContents::pixelToLatLong:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a52b275b603a3ce0ecae8d8126880252c">projectScreenRectToXY:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a5cb02ad7176d0523eb57471fc99e3c7c">zoomPoint:byFactor:near:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a99a67d660114f633f116ebf688642cdc">zoomRect:byFactor:near:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4aca2604d100a8a16e04f70c7d7740e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a079490067b3f7dd5326389720f383049">projectScreenPointToXY:</a> </td>
+          <td></td>
+          <td class="paramtype">(CGPoint)&#160;</td>
+          <td class="paramname"><em>aPixelPoint</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withMetersPerPixel:</td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>aScale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#a5fe69ea6a21dac1fdc4c6d136d1a1504">RMMapContents::pixelToLatLong:withMetersPerPixel:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a079490067b3f7dd5326389720f383049">projectScreenPointToXY:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52b275b603a3ce0ecae8d8126880252c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>) projectScreenRectToXY: </td>
+          <td></td>
+          <td class="paramtype">(CGRect)&#160;</td>
+          <td class="paramname"><em>aRect</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a36883ed7966071c5f51a836c77a2f2da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_size.html">RMProjectedSize</a>) projectScreenSizeToXY: </td>
+          <td></td>
+          <td class="paramtype">(CGSize)&#160;</td>
+          <td class="paramname"><em>aSize</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_map_view.html#a27baf3f4a31aca87ce9f1a54437b1af0">RMMapView::moveBy:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#af1262b51fc47cc2f4a4424e6e5fcfc79">movePoint:by:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a276efafa172d9221c5133d2308890c8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (CGPoint) projectXYPoint: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Project -&gt; screen coordinates. </p>
+
+<p>参考自 <a class="el" href="interface_r_m_marker_manager.html#a76651ce7b6595adb6fec4a2454e34f22">RMMarkerManager::addMarker:atProjectedPoint:</a>, <a class="el" href="interface_r_m_path.html#a63d207d98b22f4a77875fdf8d18b7ed5">RMPath::addPointToXY:withDrawing:</a>, <a class="el" href="interface_r_m_layer_collection.html#a9fdcb7e63266c915fbac013552c74da2">RMLayerCollection::correctScreenPosition:</a>, <a class="el" href="interface_r_m_circle.html#a0ec54a4b9dbdf85741f80d294e799d90">RMCircle::initWithContents:radiusInMeters:latLong:</a>, <a class="el" href="interface_r_m_map_contents.html#a80f4f3e3dcf962c4d1110248e5f83ff6">RMMapContents::latLongToPixel:</a>, <a class="el" href="interface_r_m_marker_manager.html#ac179d8f930721478732b25dc78fc6af8">RMMarkerManager::moveMarker:AtLatLon:</a>, <a class="el" href="interface_r_m_circle.html#a3499f453b9a9a25bc7c30419b35c7008">RMCircle::moveToLatLong:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a1d5076b8f0b97d2b93a7d801c61f8ba4">projectXYRect:</a>, <a class="el" href="interface_r_m_path.html#a49d02bb5a66b86321ef003a2e82fdaa4">RMPath::recalculateGeometry</a>, <a class="el" href="interface_r_m_marker_manager.html#a84726bc335efbd469bb7ac9da60f6641">RMMarkerManager::screenCoordinatesForMarker:</a> , 以及 <a class="el" href="interface_r_m_circle.html#ac25b00f51cc70e84cad0c769df5e8a03">RMCircle::setProjectedLocation:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afbe204c10488ebc50a818d88d0017b16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (CGPoint) <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a276efafa172d9221c5133d2308890c8f">projectXYPoint:</a> </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">withMetersPerPixel:</td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>aScale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Project -&gt; screen coordinates. </p>
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#a6c7d5693a725d88769b5377d60cab941">RMMapContents::latLongToPixel:withMetersPerPixel:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a276efafa172d9221c5133d2308890c8f">projectXYPoint:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d5076b8f0b97d2b93a7d801c61f8ba4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (CGRect) projectXYRect: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td>
+          <td class="paramname"><em>aRect</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Project -&gt; screen coordinates. </p>
+
+</div>
+</div>
+<a class="anchor" id="aebb472dbe94a24c62a612fa849732d39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (CGRect) screenBounds </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6c4a7f6af88955ab4123a4f5bc14f935">deepCopy:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6e3bab2a43cbc3c17295f63d34f7df10">initFromProjection:ToScreenBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#adc63aa7ec95b73a89d4839d6851a0030">projectedBounds</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0be470e222397c01d1fbc343c958c4ed">projectedCenter</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ae4aca2604d100a8a16e04f70c7d7740e">projectScreenPointToXY:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#afbe204c10488ebc50a818d88d0017b16">projectXYPoint:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0e7573981b462d019a879178840233f4">setProjectedBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a814a8a8ddbafeda6e68b8e02d2efcfb4">setProjectedCenter:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ab2bd98049aaf4340cb2291b13588f77d">setScreenBounds:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ad47c361352cdff2e4689721db9fb6c52">zoomScreenByFactor:near:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8c6b2da4ecc190c768b4e30469b410b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setMetersPerPixel: </td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>newMPP</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#a56e7ec20e0ef55c9bdceb73dee05a1aa">RMMapContents::setMetersPerPixel:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e7573981b462d019a879178840233f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setProjectedBounds: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td>
+          <td class="paramname"><em>bounds</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#ad94e75ab1195d755f8f52caba2fc554f">RMMapContents::setProjectedBounds:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a814a8a8ddbafeda6e68b8e02d2efcfb4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setProjectedCenter: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#af156345c10a07045bbedec55efe6247e">RMMapContents::setCenterProjectedPoint:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ac8c6b2da4ecc190c768b4e30469b410b">setMetersPerPixel:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2bd98049aaf4340cb2291b13588f77d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setScreenBounds: </td>
+          <td></td>
+          <td class="paramtype">(CGRect)&#160;</td>
+          <td class="paramname"><em>rect</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#a8bb51badbffed49e25be29edafb10a95">RMMapContents::setFrame:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0882ed84fe7346f3a9b8f4e63e2dfa0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) zoomBy: </td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>factor</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5cb02ad7176d0523eb57471fc99e3c7c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) zoomPoint: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>)&#160;</td>
+          <td class="paramname"><em>aPoint</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">byFactor:</td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>factor</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">near:</td>
+          <td></td>
+          <td class="paramtype">(CGPoint)&#160;</td>
+          <td class="paramname"><em>pivot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pivot given in screen coordinates. </p>
+
+</div>
+</div>
+<a class="anchor" id="a99a67d660114f633f116ebf688642cdc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>) zoomRect: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="struct_r_m_projected_rect.html">RMProjectedRect</a>)&#160;</td>
+          <td class="paramname"><em>aRect</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">byFactor:</td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>factor</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">near:</td>
+          <td></td>
+          <td class="paramtype">(CGPoint)&#160;</td>
+          <td class="paramname"><em>pivot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pivot given in screen coordinates. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad47c361352cdff2e4689721db9fb6c52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) zoomScreenByFactor: </td>
+          <td></td>
+          <td class="paramtype">(float)&#160;</td>
+          <td class="paramname"><em>factor</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">near:</td>
+          <td></td>
+          <td class="paramtype">(CGPoint)&#160;</td>
+          <td class="paramname"><em>aPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参考自 <a class="el" href="interface_r_m_map_contents.html#ac84735b91375863f930ce3465411a85f">RMMapContents::zoomByFactor:near:</a> , 以及 <a class="el" href="interface_r_m_map_contents.html#a625f32a99c58256644eeef69d40e13a9">RMMapContents::zoomByFactor:near:animated:withCallback:</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a class="anchor" id="ac28d9acefc1c419405f7331d9038675a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (CGRect) screenBounds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bounds of the screen in pixels. </p>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000032">Bug:</a></b></dt><dd>name is "screenBounds" but is probably the view, not the whole screen? </dd></dl>
+
+<p>参考自 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6c4a7f6af88955ab4123a4f5bc14f935">deepCopy:</a>, <a class="el" href="interface_r_m_marker_manager.html#a17a9670fc21ae2a217371cabbf7158f1">RMMarkerManager::isMarkerWithinScreenBounds:</a>, <a class="el" href="interface_r_m_map_contents.html#a2f036b07434552724b6ad3d56f6e6ed6">RMMapContents::latitudeLongitudeBoundingBoxForScreen</a>, <a class="el" href="interface_r_m_marker_manager.html#a62301c581687b080ec2d66f7d740166c">RMMarkerManager::markersWithinScreenBounds</a> , 以及 <a class="el" href="interface_r_m_map_view.html#a30bd6e4766b3bc224a6e214bb06ec8ca">RMMapView::zoomByFactor:near:animated:</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a6e73179ce2febd38c2f8baefedfefc47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) metersPerPixel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>meters per pixel </p>
+
+<p>参考自 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6c4a7f6af88955ab4123a4f5bc14f935">deepCopy:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6e3bab2a43cbc3c17295f63d34f7df10">initFromProjection:ToScreenBounds:</a>, <a class="el" href="interface_r_m_s_m_tile_projection.html#a5a6e55b1fd17c79125d4d5fe7db20284">RMSMTileProjection::project:</a>, <a class="el" href="interface_r_m_fractal_tile_projection.html#a76f6d1fea39a1c577ff0b26012b05c9c">RMFractalTileProjection::project:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#adc63aa7ec95b73a89d4839d6851a0030">projectedBounds</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0be470e222397c01d1fbc343c958c4ed">projectedCenter</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a52b275b603a3ce0ecae8d8126880252c">projectScreenRectToXY:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a36883ed7966071c5f51a836c77a2f2da">projectScreenSizeToXY:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a1d5076b8f0b97d2b93a7d801c61f8ba4">projectXYRect:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ac8c6b2da4ecc190c768b4e30469b410b">setMetersPerPixel:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0e7573981b462d019a879178840233f4">setProjectedBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a814a8a8ddbafeda6e68b8e02d2efcfb4">setProjectedCenter:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0882ed84fe7346f3a9b8f4e63e2dfa0a">zoomBy:</a>, <a class="el" href="interface_r_m_map_view.html#a30bd6e4766b3bc224a6e214bb06ec8ca">RMMapView::zoomByFactor:near:animated:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ad47c361352cdff2e4689721db9fb6c52">zoomScreenByFactor:near:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc3cfe961a255f28bb2ea051ae2cbaf5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="struct_r_m_projected_point.html">RMProjectedPoint</a>) origin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">atomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>What the screen is currently looking at. </p>
+
+<p>参考自 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6c4a7f6af88955ab4123a4f5bc14f935">deepCopy:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a47cfe6fc7b295e1eacad2fea309b1840">moveScreenBy:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#adc63aa7ec95b73a89d4839d6851a0030">projectedBounds</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0be470e222397c01d1fbc343c958c4ed">projectedCenter</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ae4aca2604d100a8a16e04f70c7d7740e">projectScreenPointToXY:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#afbe204c10488ebc50a818d88d0017b16">projectXYPoint:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0e7573981b462d019a879178840233f4">setProjectedBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a814a8a8ddbafeda6e68b8e02d2efcfb4">setProjectedCenter:</a>, <a class="el" href="interface_r_m_map_view.html#a30bd6e4766b3bc224a6e214bb06ec8ca">RMMapView::zoomByFactor:near:animated:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ad47c361352cdff2e4689721db9fb6c52">zoomScreenByFactor:near:</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a410f2049effa29cfceb4fa87f77b3f22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_r_m_projection.html">RMProjection</a> *) projection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The mercator -or-whatever- projection that the map is in. </p>
+<p>This projection move linearly with the screen. </p>
+
+<p>参考自 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a10a96f474830fac6431f2b5521187397">dealloc</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6c4a7f6af88955ab4123a4f5bc14f935">deepCopy:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a6e3bab2a43cbc3c17295f63d34f7df10">initFromProjection:ToScreenBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#af1262b51fc47cc2f4a4424e6e5fcfc79">movePoint:by:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0be470e222397c01d1fbc343c958c4ed">projectedCenter</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a079490067b3f7dd5326389720f383049">projectScreenPointToXY:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ae4aca2604d100a8a16e04f70c7d7740e">projectScreenPointToXY:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#afbe204c10488ebc50a818d88d0017b16">projectXYPoint:withMetersPerPixel:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a0e7573981b462d019a879178840233f4">setProjectedBounds:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a814a8a8ddbafeda6e68b8e02d2efcfb4">setProjectedCenter:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a5cb02ad7176d0523eb57471fc99e3c7c">zoomPoint:byFactor:near:</a>, <a class="el" href="interface_r_m_mercator_to_screen_projection.html#a99a67d660114f633f116ebf688642cdc">zoomRect:byFactor:near:</a> , 以及 <a class="el" href="interface_r_m_mercator_to_screen_projection.html#ad47c361352cdff2e4689721db9fb6c52">zoomScreenByFactor:near:</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>Map/<a class="el" href="_r_m_mercator_to_screen_projection_8h_source.html">RMMercatorToScreenProjection.h</a></li>
+<li>Map/<a class="el" href="_r_m_mercator_to_screen_projection_8m.html">RMMercatorToScreenProjection.m</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2013年 七月 10日 星期三 16:14:56使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

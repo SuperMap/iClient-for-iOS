@@ -1,0 +1,253 @@
+\hypertarget{interface_r_m_database_cache}{\section{R\-M\-Database\-Cache类 参考}
+\label{interface_r_m_database_cache}\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}}
+}
+
+
+{\ttfamily \#import $<$R\-M\-Database\-Cache.\-h$>$}
+
+类 R\-M\-Database\-Cache 继承关系图\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_r_m_database_cache}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_ade3ba936e084cd27dd8baa6556df2409}{add\-Image\-Data\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_aa6e7191032fd7ee788d9566f93dcb124}{add\-Tile\-:\-With\-Image\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(\hyperlink{interface_r_m_tile_image}{R\-M\-Tile\-Image} $\ast$) -\/ \hyperlink{interface_r_m_database_cache_a5b954b244864b84cc490815c841883fa}{cached\-Image\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the cached image if it exists. nil otherwise. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_afbb97c4847de1495061d21d60e4e1066}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_a22549fd820b0fb903d787b9235354199}{did\-Receive\-Memory\-Warning}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(id) -\/ \hyperlink{interface_r_m_database_cache_a19c0d0753815dc491d87f1a0a3c85ec6}{init\-With\-Database\-:}
+\item 
+(id) -\/ \hyperlink{interface_r_m_database_cache_a5991d40d229df8c26fc8f358ecafe569}{init\-With\-Tile\-Source\-:using\-Cache\-Dir\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_a03d0d4bee7287e82ca4db041a4434b1f}{purge\-Tiles\-From\-Before\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_a6b1d9c5a4c26b936ddd5bb837046760e}{remove\-All\-Cached\-Images}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em removes all tile images from the memory and disk subcaches \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_a9815ce5f25d2dbc8f7f186e6d4ab9678}{set\-Capacity\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_a638f3d74205233c988fd727c163fc2bf}{set\-Minimal\-Purge\-:}
+\item 
+(void) -\/ \hyperlink{interface_r_m_database_cache_aefea28907d48132dbd79475ab385a497}{set\-Purge\-Strategy\-:}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(N\-S\-String $\ast$) + \hyperlink{interface_r_m_database_cache_a18cf19019d86081e29c6b57a903daefc}{db\-Path\-For\-Tile\-Source\-:using\-Cache\-Dir\-:}
+\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_database_cache_afa03a8db5ae9ce39dcdfaaf4950198d0}{capacity}
+\item 
+\hyperlink{interface_r_m_tile_cache_d_a_o}{R\-M\-Tile\-Cache\-D\-A\-O} $\ast$ \hyperlink{interface_r_m_database_cache_a155c655a0a18d7fa99bae05faa17765c}{dao}
+\item 
+N\-S\-U\-Integer \hyperlink{interface_r_m_database_cache_af53a420e2e3f29269c0845a60efa3856}{minimal\-Purge}
+\item 
+\hyperlink{_r_m_tile_cache_8h_a39a51990ae35e2dbc42369aa64ef43f4}{R\-M\-Cache\-Purge\-Strategy} \hyperlink{interface_r_m_database_cache_a9504fb13d6065ee7a3cd5b37f500921d}{purge\-Strategy}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+N\-S\-String $\ast$ \hyperlink{interface_r_m_database_cache_a7c19186ec63b382cae1348a92b266ee7}{database\-Path}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_m_database_cache_ade3ba936e084cd27dd8baa6556df2409}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!add\-Image\-Data\-:@{add\-Image\-Data\-:}}
+\index{add\-Image\-Data\-:@{add\-Image\-Data\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{add\-Image\-Data\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) add\-Image\-Data\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Notification $\ast$)}]{notification}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_database_cache_ade3ba936e084cd27dd8baa6556df2409}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000006}{Bug}]magic string literals \end{DoxyRefDesc}
+\hypertarget{interface_r_m_database_cache_aa6e7191032fd7ee788d9566f93dcb124}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!add\-Tile\-:\-With\-Image\-:@{add\-Tile\-:\-With\-Image\-:}}
+\index{add\-Tile\-:\-With\-Image\-:@{add\-Tile\-:\-With\-Image\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{add\-Tile\-:\-With\-Image\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) add\-Tile\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\item[{WithImage:({\bf R\-M\-Tile\-Image}$\ast$)}]{image}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_database_cache_aa6e7191032fd7ee788d9566f93dcb124}
+
+
+重载 \hyperlink{protocol_r_m_tile_cache-p_a6a8e29b5f172b347d0ca556a643ee87c}{$<$\-R\-M\-Tile\-Cache$>$} .
+
+\hypertarget{interface_r_m_database_cache_a5b954b244864b84cc490815c841883fa}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!cached\-Image\-:@{cached\-Image\-:}}
+\index{cached\-Image\-:@{cached\-Image\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{cached\-Image\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Image} $\ast$) cached\-Image\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Tile})}]{tile}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_database_cache_a5b954b244864b84cc490815c841883fa}
+
+
+Returns the cached image if it exists. nil otherwise. 
+
+
+
+重载 \hyperlink{protocol_r_m_tile_cache-p_a4710bfa32e9aa99e8c8f6a335fcadbc2}{$<$\-R\-M\-Tile\-Cache$>$} .
+
+\hypertarget{interface_r_m_database_cache_a18cf19019d86081e29c6b57a903daefc}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!db\-Path\-For\-Tile\-Source\-:using\-Cache\-Dir\-:@{db\-Path\-For\-Tile\-Source\-:using\-Cache\-Dir\-:}}
+\index{db\-Path\-For\-Tile\-Source\-:using\-Cache\-Dir\-:@{db\-Path\-For\-Tile\-Source\-:using\-Cache\-Dir\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{db\-Path\-For\-Tile\-Source\-:using\-Cache\-Dir\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (N\-S\-String $\ast$) db\-Path\-For\-Tile\-Source\-: 
+\begin{DoxyParamCaption}
+\item[{(id$<${\bf R\-M\-Tile\-Source}$>$)}]{source}
+\item[{usingCacheDir:(B\-O\-O\-L)}]{use\-Cache\-Dir}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_database_cache_a18cf19019d86081e29c6b57a903daefc}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000005}{Bug}]magic string literals \end{DoxyRefDesc}
+
+
+参考自 init\-With\-Tile\-Source\-:using\-Cache\-Dir\-:.
+
+\hypertarget{interface_r_m_database_cache_afbb97c4847de1495061d21d60e4e1066}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{dealloc}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_database_cache_afbb97c4847de1495061d21d60e4e1066}
+\hypertarget{interface_r_m_database_cache_a22549fd820b0fb903d787b9235354199}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}}
+\index{did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{did\-Receive\-Memory\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\-Receive\-Memory\-Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_database_cache_a22549fd820b0fb903d787b9235354199}
+
+
+重载 \hyperlink{protocol_r_m_tile_cache-p_abd8c91f7aeefeeb8744537ed2f304449}{$<$\-R\-M\-Tile\-Cache$>$} .
+
+\hypertarget{interface_r_m_database_cache_a19c0d0753815dc491d87f1a0a3c85ec6}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!init\-With\-Database\-:@{init\-With\-Database\-:}}
+\index{init\-With\-Database\-:@{init\-With\-Database\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{init\-With\-Database\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Database\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String$\ast$)}]{path}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_database_cache_a19c0d0753815dc491d87f1a0a3c85ec6}
+
+
+参考自 init\-With\-Tile\-Source\-:using\-Cache\-Dir\-:.
+
+\hypertarget{interface_r_m_database_cache_a5991d40d229df8c26fc8f358ecafe569}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!init\-With\-Tile\-Source\-:using\-Cache\-Dir\-:@{init\-With\-Tile\-Source\-:using\-Cache\-Dir\-:}}
+\index{init\-With\-Tile\-Source\-:using\-Cache\-Dir\-:@{init\-With\-Tile\-Source\-:using\-Cache\-Dir\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{init\-With\-Tile\-Source\-:using\-Cache\-Dir\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Tile\-Source\-: 
+\begin{DoxyParamCaption}
+\item[{(id$<${\bf R\-M\-Tile\-Source}$>$)}]{source}
+\item[{usingCacheDir:(B\-O\-O\-L)}]{use\-Cache\-Dir}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_database_cache_a5991d40d229df8c26fc8f358ecafe569}
+\hypertarget{interface_r_m_database_cache_a03d0d4bee7287e82ca4db041a4434b1f}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!purge\-Tiles\-From\-Before\-:@{purge\-Tiles\-From\-Before\-:}}
+\index{purge\-Tiles\-From\-Before\-:@{purge\-Tiles\-From\-Before\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{purge\-Tiles\-From\-Before\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) purge\-Tiles\-From\-Before\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-Date$\ast$)}]{date}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_database_cache_a03d0d4bee7287e82ca4db041a4434b1f}
+\hypertarget{interface_r_m_database_cache_a6b1d9c5a4c26b936ddd5bb837046760e}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}}
+\index{remove\-All\-Cached\-Images@{remove\-All\-Cached\-Images}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{remove\-All\-Cached\-Images}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) remove\-All\-Cached\-Images 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_r_m_database_cache_a6b1d9c5a4c26b936ddd5bb837046760e}
+
+
+removes all tile images from the memory and disk subcaches 
+
+
+
+重载 \hyperlink{protocol_r_m_tile_cache-p_a57f54af62bb9c0e473ba2cd395864c4a}{$<$\-R\-M\-Tile\-Cache$>$} .
+
+\hypertarget{interface_r_m_database_cache_a9815ce5f25d2dbc8f7f186e6d4ab9678}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!set\-Capacity\-:@{set\-Capacity\-:}}
+\index{set\-Capacity\-:@{set\-Capacity\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{set\-Capacity\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Capacity\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{the\-Capacity}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_database_cache_a9815ce5f25d2dbc8f7f186e6d4ab9678}
+
+
+参考自 R\-M\-Tile\-Cache\-::new\-Database\-Cache\-With\-Config\-:tile\-Source\-:.
+
+\hypertarget{interface_r_m_database_cache_a638f3d74205233c988fd727c163fc2bf}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!set\-Minimal\-Purge\-:@{set\-Minimal\-Purge\-:}}
+\index{set\-Minimal\-Purge\-:@{set\-Minimal\-Purge\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{set\-Minimal\-Purge\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Minimal\-Purge\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-U\-Integer)}]{the\-Purge\-Minimum}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_database_cache_a638f3d74205233c988fd727c163fc2bf}
+
+
+参考自 R\-M\-Tile\-Cache\-::new\-Database\-Cache\-With\-Config\-:tile\-Source\-:.
+
+\hypertarget{interface_r_m_database_cache_aefea28907d48132dbd79475ab385a497}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!set\-Purge\-Strategy\-:@{set\-Purge\-Strategy\-:}}
+\index{set\-Purge\-Strategy\-:@{set\-Purge\-Strategy\-:}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{set\-Purge\-Strategy\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Purge\-Strategy\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-M\-Cache\-Purge\-Strategy})}]{the\-Strategy}
+\end{DoxyParamCaption}
+}}\label{interface_r_m_database_cache_aefea28907d48132dbd79475ab385a497}
+
+
+参考自 R\-M\-Tile\-Cache\-::new\-Database\-Cache\-With\-Config\-:tile\-Source\-:.
+
+
+
+\subsection{类成员变量说明}
+\hypertarget{interface_r_m_database_cache_afa03a8db5ae9ce39dcdfaaf4950198d0}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!capacity@{capacity}}
+\index{capacity@{capacity}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{capacity}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) capacity\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_database_cache_afa03a8db5ae9ce39dcdfaaf4950198d0}
+
+
+参考自 add\-Image\-Data\-:, cached\-Image\-: , 以及 set\-Capacity\-:.
+
+\hypertarget{interface_r_m_database_cache_a155c655a0a18d7fa99bae05faa17765c}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!dao@{dao}}
+\index{dao@{dao}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{dao}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Tile\-Cache\-D\-A\-O}$\ast$) dao\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_database_cache_a155c655a0a18d7fa99bae05faa17765c}
+
+
+参考自 add\-Image\-Data\-:, cached\-Image\-:, dealloc, did\-Receive\-Memory\-Warning, init\-With\-Database\-:, purge\-Tiles\-From\-Before\-: , 以及 remove\-All\-Cached\-Images.
+
+\hypertarget{interface_r_m_database_cache_af53a420e2e3f29269c0845a60efa3856}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!minimal\-Purge@{minimal\-Purge}}
+\index{minimal\-Purge@{minimal\-Purge}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{minimal\-Purge}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-U\-Integer) minimal\-Purge\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_database_cache_af53a420e2e3f29269c0845a60efa3856}
+
+
+参考自 set\-Minimal\-Purge\-:.
+
+\hypertarget{interface_r_m_database_cache_a9504fb13d6065ee7a3cd5b37f500921d}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!purge\-Strategy@{purge\-Strategy}}
+\index{purge\-Strategy@{purge\-Strategy}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{purge\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-M\-Cache\-Purge\-Strategy}) purge\-Strategy\hspace{0.3cm}{\ttfamily [protected]}}}\label{interface_r_m_database_cache_a9504fb13d6065ee7a3cd5b37f500921d}
+
+
+参考自 cached\-Image\-: , 以及 set\-Purge\-Strategy\-:.
+
+
+
+\subsection{属性说明}
+\hypertarget{interface_r_m_database_cache_a7c19186ec63b382cae1348a92b266ee7}{\index{R\-M\-Database\-Cache@{R\-M\-Database\-Cache}!database\-Path@{database\-Path}}
+\index{database\-Path@{database\-Path}!RMDatabaseCache@{R\-M\-Database\-Cache}}
+\subsubsection[{database\-Path}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\-S\-String $\ast$) database\-Path\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [retain]}}}\label{interface_r_m_database_cache_a7c19186ec63b382cae1348a92b266ee7}
+
+
+参考自 dealloc.
+
+
+
+该类的文档由以下文件生成\-:\begin{DoxyCompactItemize}
+\item 
+Map/\hyperlink{_r_m_database_cache_8h}{R\-M\-Database\-Cache.\-h}\item 
+Map/\hyperlink{_r_m_database_cache_8m}{R\-M\-Database\-Cache.\-m}\end{DoxyCompactItemize}

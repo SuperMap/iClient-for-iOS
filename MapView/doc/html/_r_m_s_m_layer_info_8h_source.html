@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>Map/RMSMLayerInfo.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_95c9c9bead5808cc0bb4e78e340041f8.html">Map</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">RMSMLayerInfo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_r_m_s_m_layer_info_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="_r_m_tile_8h.html">RMTile.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="_r_m_lat_long_8h.html">RMLatLong.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html">   27</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_r_m_s_m_layer_info.html" title="地图服务属性类 RMSMLayerInfo仅针对SuperMap iServer发布的服务，通过RMSMLayerInfo，可以方便的验证该地图服务是否可链接，获取该地图服务所需要的基本属性信息（该地图...">RMSMLayerInfo</a> : NSObject {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html#ac4aefcf958b2ba03724dc84c1c667126">   28</a></span>&#160;    NSString *<a class="code" href="interface_r_m_s_m_layer_info.html#ac4aefcf958b2ba03724dc84c1c667126" title="当前地图服务的url地址 ">smurl</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html#a440f798ca882b5d5772018e3ef0558bf">   29</a></span>&#160;    NSString* <a class="code" href="interface_r_m_s_m_layer_info.html#a440f798ca882b5d5772018e3ef0558bf">name</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html#ae5ab0f196f3230eb4799999fcf91a006">   30</a></span>&#160;    CLLocationCoordinate2D <a class="code" href="interface_r_m_s_m_layer_info.html#ae5ab0f196f3230eb4799999fcf91a006" title="当前地图左上角点坐标位置 ">m_pntOrg</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html#a13807ccd8a6c9fbae7b6871c50e866cf">   31</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="interface_r_m_s_m_layer_info.html#a13807ccd8a6c9fbae7b6871c50e866cf" title="当前地图地理范围的宽度 ">dWidth</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html#af25c14ce763ab15bff3a1fa972f336bb">   32</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="interface_r_m_s_m_layer_info.html#af25c14ce763ab15bff3a1fa972f336bb" title="当前地图地理范围的高度 ">dHeight</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html#a7406807133af7ad0ce73440c382413f4">   33</a></span>&#160;    NSString*  <a class="code" href="interface_r_m_s_m_layer_info.html#a7406807133af7ad0ce73440c382413f4">unit</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html#ae59e4397d7cdc04e4d3a186cf7f8c19c">   34</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="interface_r_m_s_m_layer_info.html#ae59e4397d7cdc04e4d3a186cf7f8c19c">datumAxis</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="interface_r_m_s_m_layer_info.html#a4f0a8078ba4d84c1eab544e0667d0872">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="interface_r_m_s_m_layer_info.html#a4f0a8078ba4d84c1eab544e0667d0872">dpi</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">@property</span> (readwrite) <span class="keywordtype">double</span> dWidth;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">@property</span> (readwrite) <span class="keywordtype">double</span> dHeight;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">@property</span> (readwrite) CLLocationCoordinate2D m_pntOrg;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">@property</span> (assign,readwrite) NSString *smurl;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;- (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;- (int)calculateDpi:(<span class="keywordtype">double</span>)viewBoundsWidth rvbheight:(<span class="keywordtype">double</span>)viewBoundsHeight rvWidth:(<span class="keywordtype">int</span>)nWidth rcHeight:(<span class="keywordtype">int</span>)nHeight scale:(<span class="keywordtype">double</span>)dScale;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;-(NSString*) getScaleFromResolutionDpi:(<span class="keywordtype">double</span>)dResolution;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2013年 七月 10日 星期三 16:14:55使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>
