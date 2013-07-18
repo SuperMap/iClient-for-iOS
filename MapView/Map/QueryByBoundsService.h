@@ -22,7 +22,7 @@
  * Bounds 查询服务类构造函数。
  *
  * 例如：
- * (start end)
+ * (start code)
  * QueryByBoundsService* ps = [[QueryByBoundsService alloc] init:@"http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World"];
  * FilterParameter* pF = [[FilterParameter alloc] init];
  * pF.name = [[NSString alloc] initWithString:@"Capitals@World.1"];

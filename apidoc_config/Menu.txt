@@ -46,29 +46,28 @@ Group: SuperMap  {
       File: RMSMTileSource  (RMSMTileSource.h)
       File: RMCloudMapSource  (RMCloudMapSource.h)
       File: RMSMMBTileSource  (RMSMMBTileSource.h)
-      
       }  # Group: Tile Source
 
-      Group: Projection  {
+   Group: Projection  {
 
       File: RMSMTileProjection  (RMSMTileProjection.h)
-      } 
+      }  # Group: Projection
 
-      Group: REST  {
+   Group: REST  {
 
-         Group: ServerType  {
+      Group: ServerType  {
 
          File: ServerGeometry  (ServerGeometry.h)
          File: ServerFeature  (ServerFeature.h)
-         } 
+         }  # Group: ServerType
 
-         Group: Measure  {
+      Group: Measure  {
 
          File: RMSMMeasureService  (RMSMMeasureService.h)
          File: RMSMMeasureParameters  (RMSMMeasureParameters.h)
-         } 
+         }  # Group: Measure
 
-         Group: Query  {
+      Group: Query  {
 
          File: DatasourceConnectionInfo  (DatasourceConnectionInfo.h)
          File: LinkItem  (LinkItem.h)
@@ -86,12 +85,11 @@ Group: SuperMap  {
          File: QueryBySQLService  (QueryBySQLService.h)
          File: QueryByGeometryService  (QueryByGeometryService.h)
          File: QueryByGeometryParameters  (QueryByGeometryParameters.h)
-         } 
-      } 
+         }  # Group: Query
+
+      }  # Group: REST
 
    }  # Group: SuperMap
-
-
 
 Group: Index  {
 
