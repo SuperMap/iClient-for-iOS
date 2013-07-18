@@ -38,6 +38,7 @@
 #import "RMSMLayerInfo.h"
 #import "RMSMTileSource.h"
 #import "RMCloudMapSource.h"
+#import "RMSMMBTileSource.h"
 
 @interface RMMapView (PrivateMethods)
 // methods for post-touch deceleration, ala UIScrollView
@@ -146,7 +147,20 @@
         // CloudLayer
         RMCloudMapSource* cloud = [[RMCloudMapSource alloc] init];
         RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:cloud];
-         
+        
+        /*
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *name = @"China.mbtiles";
+        //NSString* type = @".mbtiles";
+        
+        //name = [name stringByAppendingString:type];
+        
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:name];
+        
+        RMSMMBTileSource* mbSource = [[RMSMMBTileSource alloc] initWithTileSetURL:path];
+        RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:mbSource];
+        */
         //RMMapContents *newContents = [[RMMapContents alloc] initWithView:self];
 		self.contents = newContents;
 		[newContents release];

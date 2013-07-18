@@ -261,6 +261,8 @@
 		FE96C6DA177C25C3003017A9 /* QueryByGeometryService.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96C6D8177C25C1003017A9 /* QueryByGeometryService.m */; };
 		FE96C6DD177C25DC003017A9 /* QueryByGeometryParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = FE96C6DB177C25D9003017A9 /* QueryByGeometryParameters.h */; };
 		FE96C6DE177C25DC003017A9 /* QueryByGeometryParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96C6DC177C25DB003017A9 /* QueryByGeometryParameters.m */; };
+		FED38EE3178E963800A91F98 /* RMSMMBTileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */; };
+		FED38EE4178E963800A91F98 /* RMSMMBTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -502,6 +504,8 @@
 		FE96C6D8177C25C1003017A9 /* QueryByGeometryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryByGeometryService.m; sourceTree = "<group>"; };
 		FE96C6DB177C25D9003017A9 /* QueryByGeometryParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryByGeometryParameters.h; sourceTree = "<group>"; };
 		FE96C6DC177C25DB003017A9 /* QueryByGeometryParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryByGeometryParameters.m; sourceTree = "<group>"; };
+		FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMMBTileSource.h; sourceTree = "<group>"; };
+		FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSMMBTileSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -807,6 +811,8 @@
 				DDCD58D21406F8A300F59E0D /* RMTileStreamSource.m */,
 				FE74F63D1785124C0063C6A2 /* RMCloudMapSource.h */,
 				FE74F63E1785124C0063C6A2 /* RMCloudMapSource.m */,
+				FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */,
+				FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */,
 			);
 			name = "Tile Source";
 			sourceTree = "<group>";
@@ -1105,6 +1111,7 @@
 				FE96C6D9177C25C3003017A9 /* QueryByGeometryService.h in Headers */,
 				FE96C6DD177C25DC003017A9 /* QueryByGeometryParameters.h in Headers */,
 				FE74F63F1785124C0063C6A2 /* RMCloudMapSource.h in Headers */,
+				FED38EE3178E963800A91F98 /* RMSMMBTileSource.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1431,6 +1438,7 @@
 				FE96C6DA177C25C3003017A9 /* QueryByGeometryService.m in Sources */,
 				FE96C6DE177C25DC003017A9 /* QueryByGeometryParameters.m in Sources */,
 				FE74F6401785124C0063C6A2 /* RMCloudMapSource.m in Sources */,
+				FED38EE4178E963800A91F98 /* RMSMMBTileSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

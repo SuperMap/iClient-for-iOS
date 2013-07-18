@@ -12,6 +12,13 @@
 
 @implementation QueryByGeometryService
 
+-(id) init
+{
+    if (![super init])
+		return nil;
+    
+    return self;
+}
 -(NSString*) getJsonParameters:(QueryParameters*)params
 {
     QueryParameters* base = [self getQueryParameters:params];

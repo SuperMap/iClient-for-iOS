@@ -10,7 +10,8 @@
 #import "QueryParameters.h"
 
 /**
- *	@brief	查询服务基类。
+ * Class: QueryService
+ * 查询服务基类。
  */
 @protocol QueryService
 

@@ -27,7 +27,7 @@
 	// We don't care about the rest of the projection... just the bounds is important.
 	planetBounds = [projection planetBounds];
 	
-    m_dResolutions = dResolutions;
+    m_dResolutions = [dResolutions copy];
 	if (planetBounds.size.width == 0.0f || planetBounds.size.height == 0.0f)
 	{
 		/// \bug magic string literals
@@ -180,9 +180,11 @@
 {
     int zoom = 0;
     float oldScale;
-    //NSLog(@"scale %f",scale);
+    NSLog(@"scale %f",scale);
+        NSLog(@"%@",m_dResolutions);
     for (id value in m_dResolutions) {
         float fValue = [value floatValue];
+        NSLog(@"fValue %f",fValue);        
         if(zoom == 0)
             oldScale = fValue;
         

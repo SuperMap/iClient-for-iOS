@@ -281,7 +281,7 @@
         do {
             retry   = NO;
             rc      = sqlite3_prepare_v2(db, [sql UTF8String], -1, &pStmt, 0);
-            
+            NSLog(@"%@",sql);
             if (SQLITE_BUSY == rc) {
                 retry = YES;
                 usleep(20);

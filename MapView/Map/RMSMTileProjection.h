@@ -13,6 +13,10 @@
 
 @class RMProjection;
 
+/**
+ * Class: RMSMTileProjection
+ * SuperMap iServer地图服务投影
+ */
 @interface RMSMTileProjection : NSObject<RMMercatorToTileProjection>{
     /// Maximum zoom for which our tile server stores images
 	NSUInteger maxZoom, minZoom;

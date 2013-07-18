@@ -159,6 +159,7 @@
 	
 	tile = [tileProjection normaliseTile:tile];
 	
+    NSLog(@"x :%d y:%d,z:%d",tile.x,tile.y,tile.zoom);
 	NSString *file = [self tileFile:tile];
 	
 	if(file && [[NSFileManager defaultManager] fileExistsAtPath:file])
@@ -188,6 +189,7 @@
     double dWidth = m_Info.dWidth;
     double dleft = m_Info.m_pntOrg.latitude;
     double dbottom = m_Info.m_pntOrg.longitude - dHeight;
+    NSLog(@"%f,%f,%f,%f",dleft,dbottom,dWidth,dHeight);
     RMProjectedRect theBounds = RMMakeProjectedRect(dleft,dbottom,dWidth,dHeight);
     
     return [RMProjection smProjection:theBounds];

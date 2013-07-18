@@ -9,11 +9,19 @@
 #import "QueryParameters.h"
 
 /**
- *	@brief	SQL 查询参数类。\n
+ * Class: QueryBySQLParameters
+ * SQL 查询参数类。
  * 该类用于设置 SQL 查询的相关参数。
+ *
+ * Inherits from:
+ *  - <QueryParameters>
  */
 @interface QueryBySQLParameters : QueryParameters
 
-
+/**
+ * Constructor: init
+ * SQL 查询参数类构造函数。
+ */
 -(id) init;
+
 @end

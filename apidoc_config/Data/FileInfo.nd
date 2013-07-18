@@ -1,0 +1,26 @@
+1.52
+C/C++
+E:\doc\Map\ServerFeature.h	1373450585	0	E:\doc\Map\ServerFeature.h
+E:\doc\Map\QueryResult.h	1373450585	0	E:\doc\Map\QueryResult.h
+E:\doc\Map\LinkItem.h	1373450585	0	E:\doc\Map\LinkItem.h
+E:\doc\Map\JoinItem.h	1373450585	0	E:\doc\Map\JoinItem.h
+E:\doc\Map\QueryBySQLService.h	1373450585	0	E:\doc\Map\QueryBySQLService.h
+E:\doc\Map\QueryByGeometryParameters.h	1373450585	0	E:\doc\Map\QueryByGeometryParameters.h
+E:\doc\Map\DatasourceConnectionInfo.h	1373450585	0	E:\doc\Map\DatasourceConnectionInfo.h
+E:\doc\Map\Recordset.h	1373450585	0	E:\doc\Map\Recordset.h
+E:\doc\Map\RMSMTileSource.h	1373450585	0	E:\doc\Map\RMSMTileSource.h
+E:\doc\Map\RMSMTileProjection.h	1373450585	0	E:\doc\Map\RMSMTileProjection.h
+E:\doc\Map\QueryByDistanceParameters.h	1373450585	0	E:\doc\Map\QueryByDistanceParameters.h
+E:\doc\Map\ServerGeometry.h	1373450585	0	E:\doc\Map\ServerGeometry.h
+E:\doc\Map\QueryByBoundsParameters.h	1373450585	0	E:\doc\Map\QueryByBoundsParameters.h
+E:\doc\Map\FilterParameter.h	1373450585	0	E:\doc\Map\FilterParameter.h
+E:\doc\Map\QueryByBoundsService.h	1373450585	0	E:\doc\Map\QueryByBoundsService.h
+E:\doc\Map\QueryBySQLParameters.h	1373450585	0	E:\doc\Map\QueryBySQLParameters.h
+E:\doc\Map\QueryParameters.h	1373450585	0	E:\doc\Map\QueryParameters.h
+E:\doc\Map\RMSMMeasureService.h	1373450585	0	E:\doc\Map\RMSMMeasureService.h
+E:\doc\Map\RMCloudMapSource.h	1373450585	0	E:\doc\Map\RMCloudMapSource.h
+E:\doc\Map\QueryByGeometryService.h	1373450585	0	E:\doc\Map\QueryByGeometryService.h
+E:\doc\Map\RMSMMeasureParameters.h	1373450585	0	E:\doc\Map\RMSMMeasureParameters.h
+E:\doc\Map\QueryService.h	1373450585	0	E:\doc\Map\QueryService.h
+E:\doc\Map\RMSMLayerInfo.h	1374048288	1	RMSMLayerInfo
+E:\doc\Map\QueryByDistanceService.h	1373450585	0	E:\doc\Map\QueryByDistanceService.h

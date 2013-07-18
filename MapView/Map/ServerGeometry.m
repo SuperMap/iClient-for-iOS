@@ -5,7 +5,6 @@
 //  Created by iclient on 13-6-24.
 //
 //
-
 #import "ServerGeometry.h"
 
 @implementation ServerGeometry

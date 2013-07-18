@@ -12,20 +12,8 @@
 #import "RMSMLayerInfo.h"
 
 /**
- *@brief	SuperMap iServer地图
- * RMSMTileSource用于在iOS上加载iServer地图服务，方便的将iServer发布的地图服务显示在地图框架中 \n
- * 使用范例如下：
- * @code
- * //字符串为SuperMap iServer地图服务的url链接
- * NSString *mapUrl = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
- * //创建地图服务配置信息，参数为地图名和链接地址
- * RMSMLayerInfo* info = [[RMSMLayerInfo alloc] initWithTile:@"China" linkurl:mapUrl];
- * // 创建iServer地图服务
- * RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];
- * // 加载该地图服务
- * RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:smSource];
- * @endcode
- * 通过如上的方法，你可以获取该地图服务的配置信息，方便地图服务的创建和加载
+ * Class: RMSMTileSource
+ * SuperMap iServer地图服务
  */
 @interface RMSMTileSource : NSObject <RMTileSource> {
 	RMSMTileProjection *tileProjection;
@@ -35,18 +23,24 @@
     NSMutableArray* m_dScale;
 }
 
-
-/**
- *	@brief	初始化构造函数
- *
- *	@return	RMSMTileSource类
- */
 -(id) init;
 
 /**
- *	@brief	初始化构造函数
+ * Constructor: initWithInfo
+ * RMSMTileSource用于在iOS上加载iServer地图服务，方便的将iServer发布的地图服务显示在地图框架中
+ * (start code)
+ * //字符串为SuperMap iServer地图服务的url链接
+ * NSString *mapUrl = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
+ * //创建地图服务配置信息，参数为地图名和链接地址
+ * RMSMLayerInfo* info = [[RMSMLayerInfo alloc] initWithTile:@"China" linkurl:mapUrl];
+ * // 创建iServer地图服务
+ * RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];
+ * // 加载该地图服务
+ * RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:smSource];
+ * (end)
  *
- *	@return	RMSMTileSource类
+ * Parameters:
+ * info - {RMSMLayerInfo}  地图服务属性信息。
  */
 -(id) initWithInfo:(RMSMLayerInfo*) info ;
 
@@ -57,35 +51,48 @@
  *
  *	@return	RMSMTileSource类
  */
+
+/**
+ * Constructor: initWithInfo
+ * RMSMTileSource用于在iOS上加载iServer地图服务，方便的将iServer发布的地图服务显示在地图框架中
+ *
+ * Parameters:
+ * info - {RMSMLayerInfo}  地图服务属性信息。
+ * resolutions - {NSMutableArray}  指定分辨率。
+ */
 -(id) initWithInfo:(RMSMLayerInfo*) info resolutions:(NSMutableArray*)resolutions;
+
 
 -(void) networkOperationsNotification: (NSNotification*) notification;
 
-
 /**
- *	@brief	获取该地图服务每一个Tile瓦片的像素大小，默认为256像素
+ * APIMethod: tileSideLength
+ * 获取该地图服务每一个Tile瓦片的像素大小，默认为256像素
  *
- *	@return	每一个Tile瓦片的像素大小
+ * Returns:
+ * {<int>}  获取该地图服务每一个Tile瓦片的像素大小，默认为256像素。
  */
 -(int) tileSideLength;
 
 /**
- *	@brief	指定每一个Tile瓦片的像素大小
+ * APIMethod: setTileSideLength
+ * 指定每一个Tile瓦片的像素大小
+ *
+ ** Parameters:
+ * aTileSideLength - {NSUInteger}  指定的像素大小。
  */
 -(void) setTileSideLength: (NSUInteger) aTileSideLength;
 
 
 /**
- *	@brief	最小显示层级
- *
- *	@return	最小显示层级
+ * APIProperty: minZoom
+ * {float} 当前地图最小显示层级。
  */
 -(float) minZoom;
 
 /**
- *	@brief	最大显示层级
- *
- *	@return	最大显示层级
+ * APIProperty: maxZoom
+ * {float} 当前地图最大显示层级。
  */
 -(float) maxZoom;
 

@@ -1,0 +1,104 @@
+Format: 1.52
+
+
+Title: SuperMap
+SubTitle: iOS SDK
+
+Footer: 北京超图软件股份有限公司
+Timestamp: 更新于 10/26/2012
+#   m     - One or two digit month.  January is "1"
+#   mm    - Always two digit month.  January is "01"
+#   mon   - Short month word.  January is "Jan"
+#   month - Long month word.  January is "January"
+#   d     - One or two digit day.  1 is "1"
+#   dd    - Always two digit day.  1 is "01"
+#   day   - Day with letter extension.  1 is "1st"
+#   yy    - Two digit year.  2006 is "06"
+#   yyyy  - Four digit year.  2006 is "2006"
+#   year  - Four digit year.  2006 is "2006"
+
+
+# --------------------------------------------------------------------------
+# 
+# Cut and paste the lines below to change the order in which your files
+# appear on the menu.  Don't worry about adding or removing files, Natural
+# Docs will take care of that.
+# 
+# You can further organize the menu by grouping the entries.  Add a
+# "Group: [name] {" line to start a group, and add a "}" to end it.
+# 
+# You can add text and web links to the menu by adding "Text: [text]" and
+# "Link: [name] ([URL])" lines, respectively.
+# 
+# The formatting and comments are auto-generated, so don't worry about
+# neatness when editing the file.  Natural Docs will clean it up the next
+# time it is run.  When working with groups, just deal with the braces and
+# forget about the indentation and comments.
+# 
+# --------------------------------------------------------------------------
+
+
+Group: SuperMap  {
+
+   Group: Tile Source  {
+
+      File: RMSMLayerInfo  (RMSMLayerInfo.h)
+      File: RMSMTileSource  (RMSMTileSource.h)
+      File: RMCloudMapSource  (RMCloudMapSource.h)
+      File: RMSMMBTileSource  (RMSMMBTileSource.h)
+      
+      }  # Group: Tile Source
+
+      Group: Projection  {
+
+      File: RMSMTileProjection  (RMSMTileProjection.h)
+      } 
+
+      Group: REST  {
+
+         Group: ServerType  {
+
+         File: ServerGeometry  (ServerGeometry.h)
+         File: ServerFeature  (ServerFeature.h)
+         } 
+
+         Group: Measure  {
+
+         File: RMSMMeasureService  (RMSMMeasureService.h)
+         File: RMSMMeasureParameters  (RMSMMeasureParameters.h)
+         } 
+
+         Group: Query  {
+
+         File: DatasourceConnectionInfo  (DatasourceConnectionInfo.h)
+         File: LinkItem  (LinkItem.h)
+         File: JoinItem  (JoinItem.h)
+         File: FilterParameter  (FilterParameter.h)
+         File: QueryParameters  (QueryParameters.h)
+         File: QueryService  (QueryService.h)
+         File: QueryByBoundsParameters  (QueryByBoundsParameters.h)
+         File: QueryByBoundsService  (QueryByBoundsService.h)
+         File: Recordset  (Recordset.h)
+         File: QueryResult  (QueryResult.h)
+         File: QueryByDistanceParameters  (QueryByDistanceParameters.h)
+         File: QueryByDistanceService  (QueryByDistanceService.h)
+         File: QueryBySQLParameters  (QueryBySQLParameters.h)
+         File: QueryBySQLService  (QueryBySQLService.h)
+         File: QueryByGeometryService  (QueryByGeometryService.h)
+         File: QueryByGeometryParameters  (QueryByGeometryParameters.h)
+         } 
+      } 
+
+   }  # Group: SuperMap
+
+
+
+Group: Index  {
+
+   Index: Everything
+   Class Index: Classes
+   Constructor Index: Constructor
+   Function Index: Functions
+   Property Index: Properties
+   }  # Group: Index
+
