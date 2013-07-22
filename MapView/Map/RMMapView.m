@@ -145,10 +145,11 @@
         
         
         // CloudLayer
+        /*
         RMCloudMapSource* cloud = [[RMCloudMapSource alloc] init];
         RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:cloud];
+        */
         
-        /*
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *name = @"China.mbtiles";
@@ -160,7 +161,7 @@
         
         RMSMMBTileSource* mbSource = [[RMSMMBTileSource alloc] initWithTileSetURL:path];
         RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:mbSource];
-        */
+        
         //RMMapContents *newContents = [[RMMapContents alloc] initWithView:self];
 		self.contents = newContents;
 		[newContents release];

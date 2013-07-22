@@ -168,6 +168,7 @@ static void saveApplier(void* info, const CGPathElement* element)
 
 - (void)performTest
 {
+    return;
     /*
     FilterParameter* pF = [[FilterParameter alloc] init];
     pF.name = [[NSString alloc] initWithString:@"Capitals@World.1"];

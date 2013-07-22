@@ -354,7 +354,7 @@
 				GCC_PREFIX_HEADER = MapTestbed_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../../MapView/**";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MapTestbed;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -371,7 +371,7 @@
 				GCC_PREFIX_HEADER = MapTestbed_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../../MapView/**";
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MapTestbed;
 				TARGETED_DEVICE_FAMILY = 2;

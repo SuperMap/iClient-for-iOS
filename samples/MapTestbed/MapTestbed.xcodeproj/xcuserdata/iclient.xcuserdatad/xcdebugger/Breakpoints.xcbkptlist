@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMMapView.m"
-         timestampString = "395304829.179369"
+         timestampString = "395895576.116941"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "455"
-         endingLineNumber = "455"
+         startingLineNumber = "456"
+         endingLineNumber = "456"
          landmarkName = "-gestureDetails:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMMapView.m"
-         timestampString = "395304829.179369"
+         timestampString = "395895576.116941"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "444"
-         endingLineNumber = "444"
+         startingLineNumber = "445"
+         endingLineNumber = "445"
          landmarkName = "-gestureDetails:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1053,8 +1053,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "37"
          endingLineNumber = "37"
-         landmarkName = "-initFromProjection:tileSideLength:maxZoom:minZoom:info:resolutions:"
-         landmarkType = "4">
+         landmarkName = "@interface RMSMTileProjection"
+         landmarkType = "2">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1269,11 +1269,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMMapView.m"
-         timestampString = "395304829.179369"
+         timestampString = "395895576.116941"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "169"
-         endingLineNumber = "169"
+         startingLineNumber = "170"
+         endingLineNumber = "170"
          landmarkName = "-contents"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1282,11 +1282,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMMapView.m"
-         timestampString = "395304829.179369"
+         timestampString = "395895576.116941"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "170"
-         endingLineNumber = "170"
+         startingLineNumber = "171"
+         endingLineNumber = "171"
          landmarkName = "-contents"
          landmarkType = "5">
       </FileBreakpoint>
@@ -3230,11 +3230,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMMapView.m"
-         timestampString = "395304829.179369"
+         timestampString = "395895576.116941"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "160"
-         endingLineNumber = "160"
+         startingLineNumber = "161"
+         endingLineNumber = "161"
          landmarkName = "-contents"
          landmarkType = "5">
       </FileBreakpoint>
@@ -3373,11 +3373,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMMapView.m"
-         timestampString = "395304829.179369"
+         timestampString = "395895576.116941"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "161"
-         endingLineNumber = "161"
+         startingLineNumber = "162"
+         endingLineNumber = "162"
          landmarkName = "-contents"
          landmarkType = "5">
       </FileBreakpoint>
@@ -3399,11 +3399,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMMapView.m"
-         timestampString = "395304829.179369"
+         timestampString = "395895576.116941"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "175"
-         endingLineNumber = "175"
+         startingLineNumber = "176"
+         endingLineNumber = "176"
          landmarkName = "-setContents:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -3694,7 +3694,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMSMTileSource.m"
@@ -3802,37 +3802,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMSMTileProjection.m"
-         timestampString = "395306815.010012"
+         timestampString = "395897997.47578"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "218"
+         endingLineNumber = "218"
+         landmarkName = "-calculateZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMSMTileProjection.m"
+         timestampString = "395897997.47578"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "206"
+         endingLineNumber = "206"
+         landmarkName = "-calculateZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMSMTileProjection.m"
+         timestampString = "395897997.47578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "210"
          endingLineNumber = "210"
-         landmarkName = "-calculateZoomFromScale:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../MapView/Map/RMSMTileProjection.m"
-         timestampString = "395306815.010012"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "202"
-         endingLineNumber = "202"
-         landmarkName = "-calculateZoomFromScale:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../../MapView/Map/RMSMTileProjection.m"
-         timestampString = "395306815.010012"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "204"
-         endingLineNumber = "204"
          landmarkName = "-calculateZoomFromScale:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -3887,6 +3887,227 @@
          endingLineNumber = "98"
          landmarkName = "@interface RMSMTileSource"
          landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/MapTestbedAppDelegate.m"
+         timestampString = "395892830.273377"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "241"
+         endingLineNumber = "241"
+         landmarkName = "-performTest"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMSMTileProjection.m"
+         timestampString = "395895760.746719"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "181"
+         endingLineNumber = "181"
+         landmarkName = "-calculateZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMSMTileProjection.m"
+         timestampString = "395895863.476684"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "184"
+         endingLineNumber = "184"
+         landmarkName = "-calculateZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMMapContents.m"
+         timestampString = "395896632.448868"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "869"
+         endingLineNumber = "869"
+         landmarkName = "-zoom"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMSMTileProjection.m"
+         timestampString = "395897997.47578"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "214"
+         endingLineNumber = "214"
+         landmarkName = "-calculateZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMSMTileProjection.m"
+         timestampString = "395897997.47578"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "208"
+         endingLineNumber = "208"
+         landmarkName = "-calculateZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMSMTileProjection.m"
+         timestampString = "395897997.47578"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "219"
+         endingLineNumber = "219"
+         landmarkName = "-calculateZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMFractalTileProjection.m"
+         timestampString = "395898486.152588"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "198"
+         endingLineNumber = "198"
+         landmarkName = "-calculateNormalisedZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMSMTileProjection.m"
+         timestampString = "395898535.901566"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "223"
+         endingLineNumber = "223"
+         landmarkName = "-calculateNormalisedZoomFromScale:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMTileLoader.m"
+         timestampString = "395898617.288664"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "84"
+         endingLineNumber = "84"
+         landmarkName = "-screenIsLoaded"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMMapView.m"
+         timestampString = "395898659.662658"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "511"
+         endingLineNumber = "511"
+         landmarkName = "-resumeExpensiveOperations"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMTileLoader.m"
+         timestampString = "395898668.183134"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "83"
+         endingLineNumber = "83"
+         landmarkName = "-screenIsLoaded"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMMapContents.m"
+         timestampString = "395898680.14906"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "564"
+         endingLineNumber = "564"
+         landmarkName = "-animatedZoomStep:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMMapContents.m"
+         timestampString = "395898803.962763"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "501"
+         endingLineNumber = "501"
+         landmarkName = "-zoomByFactor:near:animated:withCallback:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMMapContents.m"
+         timestampString = "395898835.158166"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "506"
+         endingLineNumber = "506"
+         landmarkName = "-zoomByFactor:near:animated:withCallback:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMMapContents.m"
+         timestampString = "395899017.0657"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "585"
+         endingLineNumber = "585"
+         landmarkName = "-animatedZoomStep:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../MapView/Map/RMMapContents.m"
+         timestampString = "395899103.453261"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "576"
+         endingLineNumber = "576"
+         landmarkName = "-animatedZoomStep:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
