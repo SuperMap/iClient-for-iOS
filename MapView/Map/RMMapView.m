@@ -127,13 +127,13 @@
 - (RMMapContents *)contents
 {
     if (!_contentsIsSet) {
-        /*
+        
          //SuperMap iServer
-        NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
+        //NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
         
-        //NSString *tileThing = @"http://192.168.13.61:8090/iserver/services/map-world/rest/maps/World";
+        //NSString *tileThing = @"http://192.168.13.104:8090/iserver/services/map-world/rest/maps/World";
         
-        //NSString *tileThing = @"http://192.168.13.49:8090/iserver/services/map-china400/rest/maps/China";
+        NSString *tileThing = @"http://192.168.13.104:8090/iserver/services/map-china400/rest/maps/China";
         
         RMSMLayerInfo* info = [[RMSMLayerInfo alloc] initWithTile:@"China" linkurl:tileThing];
         // 判断获取iServer服务配置信息失败，为NULL时失败
@@ -141,7 +141,7 @@
         
         RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];        
 		RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:smSource];
-        */
+        
         
         
         // CloudLayer
@@ -149,7 +149,7 @@
         RMCloudMapSource* cloud = [[RMCloudMapSource alloc] init];
         RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:cloud];
         */
-        
+        /*
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *name = @"China.mbtiles";
@@ -161,7 +161,8 @@
         
         RMSMMBTileSource* mbSource = [[RMSMMBTileSource alloc] initWithTileSetURL:path];
         RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:mbSource];
-        
+        [newContents setMaxZoom:[mbSource maxZoom]];
+        */
         //RMMapContents *newContents = [[RMMapContents alloc] initWithView:self];
 		self.contents = newContents;
 		[newContents release];

@@ -222,6 +222,8 @@ static void saveApplier(void* info, const CGPathElement* element)
     ///////////////////////////////
     // QueryBySQLService example
     //////////////////////////////////
+    
+    
      QueryBySQLService* ps = [[QueryBySQLService alloc] init:@"http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World"];
      FilterParameter* pF = [[FilterParameter alloc] init];
      pF.name = [[NSString alloc] initWithString:@"Countries@World.1"];
@@ -233,6 +235,8 @@ static void saveApplier(void* info, const CGPathElement* element)
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompleted:) name:@"processCompleted" object:nil];
      
      [ps processAsync:p];
+    
+    
      return;
      ///////////////////////////////////
     

@@ -493,7 +493,7 @@
 	else
 	{
 		return NO;
-	}
+	} 
 }
 
 - (void)zoomByFactor: (float) zoomFactor near:(CGPoint) pivot animated:(BOOL) animated withCallback:(id<RMMapContentsAnimationCallback>)callback
@@ -502,6 +502,7 @@
 	float zoomDelta = log2f(zoomFactor);
 	float targetZoom = zoomDelta + [self zoom];
 	
+    //NSLog(@"zoomdelta:%f,zoom:%f,target:%f",zoomDelta,[self zoom],targetZoom);
 	if (targetZoom == [self zoom]){
 		return;
 	}
@@ -511,6 +512,8 @@
 		zoomFactor = exp2f([self maxZoom] - [self zoom]);
 		targetZoom = [self maxZoom];
 	}
+    
+    //NSLog(@"zoomdelta:%f,zoom:%f,target:%f",zoomDelta,[self zoom],targetZoom);
 	
 	// clamp zoom to remain above or equal to minZoom after zoomAfter will be applied
 	// Set targetZoom to minZoom so the map zooms to its maximum
@@ -519,6 +522,8 @@
 		targetZoom = [self minZoom];
 	}
 
+    //NSLog(@"zoomdelta:%f,zoom:%f,target:%f",zoomDelta,[self zoom],targetZoom);
+    
     if ([self shouldZoomToTargetZoom:targetZoom withZoomFactor:zoomFactor])
     {
         if (animated)
@@ -567,6 +572,8 @@
 	NSDictionary *userInfo = [[[timer userInfo] retain] autorelease];
 	id<RMMapContentsAnimationCallback> callback = [userInfo objectForKey:@"callback"];
 
+    //NSLog(@"zoomIncr:%f,zoom:%f,targetzoom:%f\n",zoomIncr,[self zoom],targetZoom);
+    
 	if ((zoomIncr > 0 && [self zoom] >= targetZoom-1.0e-6) || (zoomIncr < 0 && [self zoom] <= targetZoom+1.0e-6))
 	{
         if ( [self zoom] != targetZoom ) [self setZoom:targetZoom];

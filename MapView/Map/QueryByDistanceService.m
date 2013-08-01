@@ -27,7 +27,7 @@
     NSMutableArray *baseparams = [[NSMutableArray alloc] init];
     
     [baseparams addObject:[base toNSDictionary]];
-    NSLog(@"%@",[base toNSDictionary]);
+    //NSLog(@"%@",[base toNSDictionary]);
     
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[base toNSDictionary]

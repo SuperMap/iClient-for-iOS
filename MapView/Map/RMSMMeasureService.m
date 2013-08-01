@@ -86,8 +86,8 @@ static void saveApplier(void* info, const CGPathElement* element)
     
     strUrl = [strUrl stringByAppendingString:strJson];
     
-    NSLog(@"json:%@",strJson);
-    NSLog(@"%@",strUrl);
+//    NSLog(@"json:%@",strJson);
+ //   NSLog(@"%@",strUrl);
     
     url = [[NSURL alloc] initWithString:strUrl];
     
@@ -101,7 +101,7 @@ static void saveApplier(void* info, const CGPathElement* element)
 
     NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
 
-    NSLog(@"%@",[res allHeaderFields]);
+//    NSLog(@"%@",[res allHeaderFields]);
 
     data = [[NSMutableData alloc] initWithCapacity:0];
 }

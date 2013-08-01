@@ -55,10 +55,10 @@
     }
     //[results next];
     
-    NSLog(@"%@",(NSString*)[dict objectForKey:@"resolutions"]);
+    //NSLog(@"%@",(NSString*)[dict objectForKey:@"resolutions"]);
     //NSLog(@"%@",[[dict objectForKey:@"resolutions"] stringValue]);
     NSString *resolutions = (NSString*)[dict objectForKey:@"resolutions"];
-    NSLog(@"re is :%@",resolutions);
+    //NSLog(@"re is :%@",resolutions);
     NSArray *reArray = [resolutions componentsSeparatedByString: @","];
     m_dResolutions = [[NSMutableArray alloc] init];
     for (NSString* res in reArray)
@@ -68,7 +68,7 @@
 
     
     NSString *scales =  (NSString*)[dict objectForKey:@"scales"];
-    NSLog(@"%@",    scales);
+    //NSLog(@"%@",    scales);
     NSArray *saArray = [scales componentsSeparatedByString: @","];
     
     m_dScale = [[NSMutableArray alloc] init];
@@ -80,8 +80,8 @@
         [m_dScale addObject:myString];
     }
     
-        NSLog(@"%@",m_dResolutions);
-            NSLog(@"%@",m_dScale);
+        //NSLog(@"%@",m_dResolutions);
+            //NSLog(@"%@",m_dScale);
     NSString* referResolution = [m_dResolutions objectAtIndex:0];
     NSString* referScale = [m_dScale objectAtIndex:0];
     
@@ -136,7 +136,7 @@
     [m_config setObject:unit forKey:@"unit"];
     [m_config setObject:boundsArray forKey:@"bounds"];
     [m_config setObject:compatible forKey:@"compatible"];
-    NSLog(@"%@",m_config);
+    //NSLog(@"%@",m_config);
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:nil resolutions:m_dResolutions];
     
     [self setMaxZoom:[m_dResolutions count]-1];
@@ -207,10 +207,10 @@
     int y = tile.y;
     int z = tile.zoom;
     
-    NSLog(@"x :%d y:%d,z:%d",tile.x,tile.y,tile.zoom);
+    //NSLog(@"x :%d y:%d,z:%d",tile.x,tile.y,tile.zoom);
     bool bcompatible = [[m_config objectForKey:@"compatible"] boolValue];
     
-    NSLog(@"%@",m_dResolutions);
+//    NSLog(@"%@",m_dResolutions);
     if(false)
     {
         int y1 = (1 << z) - y - 1;
@@ -220,7 +220,7 @@
     int key = [m_dResolutions count] - 1 - z;
     
     NSString* resolution = [m_dResolutions objectAtIndex:z];
-    NSLog(@"x :%d y:%d,res:%@",x,y,resolution);
+    //NSLog(@"x :%d y:%d,res:%@",x,y,resolution);
     
     NSString *sql = @"select tile_data from tiles where tile_column=%d and tile_row=%d and resolution>%@-0.0000001 and resolution<%@+0.0000001";
     sql = [NSString stringWithFormat:sql, x,y,resolution,resolution];
@@ -264,7 +264,7 @@
     double dWidth = dright - dleft;
     double dHeight = dtop - dbottom;
     
-        NSLog(@"%f,%f,%f,%f",dleft,dbottom,dWidth,dHeight);
+//        NSLog(@"%f,%f,%f,%f",dleft,dbottom,dWidth,dHeight);
     RMProjectedRect theBounds = RMMakeProjectedRect(dleft,dbottom,dWidth,dHeight);
     
     return [RMProjection smProjection:theBounds];

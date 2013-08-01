@@ -31,7 +31,7 @@
     NSString* strJsonParams = [self getJsonParameters:params];
     
     //strJsonParams =[strJsonParams stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    NSLog(@"%@",strJsonParams);
+    //NSLog(@"%@",strJsonParams);
     NSString* strHttpUrl = [[NSString alloc] initWithString:strQueryUrl];
     if(params.retainCount == true)
     {
@@ -81,7 +81,7 @@
     
     NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
     
-    NSLog(@"%@",[res allHeaderFields]);
+    //NSLog(@"%@",[res allHeaderFields]);
     
     data = [[NSMutableData alloc] initWithCapacity:0];
 }

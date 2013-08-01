@@ -23,22 +23,22 @@
     //[NSJSONSerialization JSONObjectWithData: [jsonObject dataUsingEncoding:NSUTF8StringEncoding]
      //                               options: NSJSONReadingMutableContainers
       //                                error: &error];
-    NSLog(@"JSON DIct: %@", JSON2);
+//    NSLog(@"JSON DIct: %@", JSON2);
     //if([JSON objectForKey:@"type"] != nil)
     
     NSArray* keys;
     keys = [JSON2 allKeys];
-    NSLog(@"%d",[keys count]);
+ //   NSLog(@"%d",[keys count]);
     NSDictionary* JSON = [[NSDictionary alloc] init];
     JSON = [JSON2 objectForKey:@"geometry"];
-    NSLog(@"JSON DIct: %@", JSON);
+  //  NSLog(@"JSON DIct: %@", JSON);
     
     type = [[NSString alloc] initWithString:[JSON objectForKey:@"type"]];
-    NSLog(@"%@",type);
+  //  NSLog(@"%@",type);
 
     smid = [[NSString alloc] initWithFormat:@"%d",[[JSON objectForKey:@"id"] intValue]];
     
-    NSLog(@"%@&%@",type,smid);
+  //  NSLog(@"%@&%@",type,smid);
     
     parts = [[NSMutableArray alloc] init];
     parts = [JSON objectForKey: @"parts"];
@@ -93,11 +93,11 @@
 - (id) fromJsonDt:(NSDictionary*)JSON
 {
     type = [[NSString alloc] initWithString:[JSON objectForKey:@"type"]];
-    NSLog(@"%@",type);
+  //  NSLog(@"%@",type);
     
     smid = [[NSString alloc] initWithFormat:@"%d",[[JSON objectForKey:@"id"] intValue]];
     
-    NSLog(@"%@&%@",type,smid);
+   // NSLog(@"%@&%@",type,smid);
     
     parts = [[NSMutableArray alloc] init];
     parts = [JSON objectForKey: @"parts"];
@@ -109,8 +109,8 @@
     
     int count = [arrayPoints count];
     int countParts = [parts count];
-    NSLog(@"%d",countParts);
-    NSLog(@"%d",count);
+  //  NSLog(@"%d",countParts);
+   // NSLog(@"%d",count);
     for (int i = 0; i < count; i++)
     {
         NSDictionary* dict = [[NSDictionary alloc] init];
@@ -158,7 +158,7 @@
                                                          error:&error];
     
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",jsonString);
+  //  NSLog(@"%@",jsonString);
 
     return jsonString;
 }

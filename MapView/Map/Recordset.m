@@ -29,9 +29,9 @@
         [features addObject:pF];
     }
     
-    NSLog(@"fs %d",[fsArray count]);
+    //NSLog(@"fs %d",[fsArray count]);
     
-    NSLog(@"%d",[features count]);
+    //NSLog(@"%d",[features count]);
 
     return self;
 }

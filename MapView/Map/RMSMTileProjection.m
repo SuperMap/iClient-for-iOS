@@ -180,11 +180,11 @@
 {
     int zoom = 0;
     float oldScale;
-    NSLog(@"scale %f",scale);
-        NSLog(@"%@",m_dResolutions);
+//    NSLog(@"scale %f",scale);
+ //       NSLog(@"%@",m_dResolutions);
     for (id value in m_dResolutions) {
         float fValue = [value floatValue];
-        NSLog(@"fValue %f",fValue);        
+//        NSLog(@"fValue %f",fValue);        
         if(zoom == 0)
             oldScale = fValue;
         
@@ -200,22 +200,22 @@
                 float d2 = oldScale - scale;
                 if(d1<d2)
                 {
-                    NSLog(@"zoom %d",zoom);
+//                    NSLog(@"zoom %d",zoom);
                     return zoom;
                 }
 
                 else
                 {
-                    NSLog(@"zoom %d",--zoom);
-                    return --zoom;
+//                    NSLog(@"zoom %d",zoom);
+                    return zoom;
                 }
             }
         }
         zoom++;
         
     }
-    NSLog(@"zoom %d",--zoom);
-	return --zoom;
+  //  NSLog(@"zoom %d",zoom);
+	return zoom;
 }
 
 -(float) calculateNormalisedZoomFromScale: (float) scale
