@@ -39,6 +39,7 @@
 #import "RMSMTileSource.h"
 #import "RMCloudMapSource.h"
 #import "RMSMMBTileSource.h"
+#import "RMMapRenderer.h"
 
 @interface RMMapView (PrivateMethods)
 // methods for post-touch deceleration, ala UIScrollView
@@ -58,6 +59,8 @@
 @synthesize enableDragging;
 @synthesize enableZoom;
 @synthesize enableRotate;
+@synthesize bZoomOut;
+@synthesize bRun;
 
 #pragma mark --- begin constants ----
 #define kDefaultDecelerationFactor .88f
@@ -80,6 +83,7 @@
 	deceleration = NO;
 	
     screenScale = 0.0;
+    lastTime = 0;
 
     
 	//	[self recalculateImageSet];
@@ -90,6 +94,7 @@
 	self.backgroundColor = [UIColor grayColor];
 	
 	_constrainMovement=NO;
+    bRun = false;
 	
 //	[[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
@@ -121,7 +126,7 @@
 	return self;
 }
 
-//=========================================================== 
+//===========================================================
 //  contents 
 //=========================================================== 
 - (RMMapContents *)contents
@@ -132,7 +137,7 @@
         //NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
         
         //NSString *tileThing = @"http://192.168.13.104:8090/iserver/services/map-world/rest/maps/World";
-        
+        /*
         NSString *tileThing = @"http://192.168.13.104:8090/iserver/services/map-china400/rest/maps/China";
         
         RMSMLayerInfo* info = [[RMSMLayerInfo alloc] initWithTile:@"China" linkurl:tileThing];
@@ -141,14 +146,14 @@
         
         RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];        
 		RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:smSource];
-        
+        */
         
         
         // CloudLayer
-        /*
+        
         RMCloudMapSource* cloud = [[RMCloudMapSource alloc] init];
         RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:cloud];
-        */
+        
         /*
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -510,17 +515,30 @@
 - (void)resumeExpensiveOperations
 {
 	[RMMapContents setPerformExpensiveOperations:YES];
+    bRun = false;
 }
 
 - (void)delayedResumeExpensiveOperations
 {
+    if (bRun)
+        return;
 	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(resumeExpensiveOperations) object:nil];
-	[self performSelector:@selector(resumeExpensiveOperations) withObject:nil afterDelay:0.4];	
+	[self performSelector:@selector(resumeExpensiveOperations) withObject:nil afterDelay:0.4];
+    bRun = true;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *touch = [[touches allObjects] objectAtIndex:0];
+    
+    RMMapRenderer * pRender = [[self contents] renderer];
+    if(pRender.bRemove == false)
+    {
+        [pRender clear];
+        pRender.bRemove = true;
+    }
+    
+    
 	//Check if the touch hit a RMMarker subclass and if so, forward the touch event on
 	//so it can be handled there
 	id furthestLayerDown = [self.contents.overlay hitTest:[touch locationInView:self]];
@@ -570,7 +588,21 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *touch = [[touches allObjects] objectAtIndex:0];
-	
+	/*
+    NSUInteger numTouches = [[event allTouches] count];
+    if (numTouches>1) {
+        RMMapRenderer * pRender = [[self contents] renderer];
+        pRender.bRemove = false;
+    }
+    */
+    
+    if (bZoomOut == true) {
+        RMMapRenderer * pRender = [[self contents] renderer];
+        pRender.bRemove = false;
+        bZoomOut = false;
+    }
+    
+    lastTime = 0.0;
 	//Check if the touch hit a RMMarker subclass and if so, forward the touch event on
 	//so it can be handled there
 	id furthestLayerDown = [self.contents.overlay hitTest:[touch locationInView:self]];
@@ -706,10 +738,27 @@
 	
 	if (enableDragging && newGesture.numTouches == lastGesture.numTouches)
 	{
+        
+        double CurrentTime = CACurrentMediaTime();
+        
 		CGSize delta;
 		delta.width = newGesture.center.x - lastGesture.center.x;
 		delta.height = newGesture.center.y - lastGesture.center.y;
-		
+        /*
+        if(fabs(lastTime)>0.1)
+        {
+            NSLog(@"1:%f",CurrentTime);
+            NSLog(@"2:%f",lastTime);
+            NSLog(@"3:%f",sqrt(delta.width*delta.width+delta.height*delta.height));
+            double speed = sqrt(delta.width*delta.width+delta.height*delta.height)/(CurrentTime-lastTime)/1000;
+            
+            NSLog(@"speed:%f",speed);
+            
+            delta.width = delta.width*(1+speed*0.4);
+            delta.height = delta.height*(1+speed*0.4);
+        }
+        lastTime = CurrentTime;
+		*/
 		if (enableZoom && newGesture.numTouches > 1)
 		{
 			NSAssert (lastGesture.averageDistanceFromCenter > 0.0f && newGesture.averageDistanceFromCenter > 0.0f,
@@ -719,6 +768,12 @@
 			
 			[self moveBy:delta];
 			[self zoomByFactor: zoomFactor near: newGesture.center];
+            if (zoomFactor>1.0) {
+                bZoomOut = true;
+            }else{
+                [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(resumeExpensiveOperations) object:nil];
+                [self performSelector:@selector(resumeExpensiveOperations) withObject:nil afterDelay:0.4];
+            }
 		}
 		else
 		{
@@ -727,8 +782,10 @@
 	}
 	
 	lastGesture = newGesture;
-	
-	[self delayedResumeExpensiveOperations];
+	if (newGesture.numTouches == 1) {
+        [self delayedResumeExpensiveOperations];
+    }
+
 }
 
 // first responder needed to use UIMenuController

@@ -135,6 +135,9 @@ typedef struct {
     
     RMSMLayerInfo* m_info;
     RMSMTileSource* m_TileSource;
+    BOOL bZoomOut;
+    BOOL bRun;
+    double lastTime;
 	
 @private
    	BOOL _delegateHasBeforeMapMove;
@@ -171,6 +174,9 @@ typedef struct {
 @property (readwrite) BOOL enableDragging;
 @property (readwrite) BOOL enableZoom;
 @property (readwrite) BOOL enableRotate;
+@property (readwrite) BOOL bZoomOut;
+@property (readwrite) BOOL bRun;
+@property (readwrite) double lastTime;
 
 @property (nonatomic, retain, readonly) RMMarkerManager *markerManager;
 

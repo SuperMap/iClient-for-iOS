@@ -31,6 +31,7 @@
 
 @implementation RMMapRenderer
 
+@synthesize bRemove,tileRemove;
 // Designated initialiser
 - (id) initWithContent: (RMMapContents *)_contents
 {
@@ -38,7 +39,9 @@
 		return nil;
 
 	content = _contents;
-	
+	bRemove = true;
+    
+    tileRemove = [[NSMutableArray alloc] init];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mapImageLoaded:) name:RMMapImageLoadedNotification object:nil];
 	
 	return self;
@@ -54,6 +57,11 @@
 - (void) setNeedsDisplay
 {
 	
+}
+
+- (void)clear
+{
+    
 }
 
 /// \bug calls a no-op

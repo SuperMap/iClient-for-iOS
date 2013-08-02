@@ -39,12 +39,23 @@
 @interface RMMapRenderer : NSObject
 {
 	RMMapContents *content;
+    BOOL bRemove;
+    
+    NSMutableArray* tileRemove;
 }
+
+/**
+ * APIProperty: dWidth
+ * {double} 当前地图地理范围的宽度。
+ */
+@property (readwrite) BOOL bRemove;
+@property (assign,readwrite) NSMutableArray* tileRemove;
 
 - (id)initWithContent:(RMMapContents *)contents;
 - (void)setNeedsDisplay;
 - (void)drawRect:(CGRect)rect;
 - (void)setFrame:(CGRect)frame;
+- (void)clear;
 
 - (CALayer*)layer;
 

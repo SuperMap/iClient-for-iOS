@@ -131,6 +131,27 @@
 
 -(void) tileRemoved: (RMTile) tile
 {
+    if(bRemove == false)
+    {
+        RMTileImage *image = nil;
+        
+        NSUInteger i = [tiles count];
+        while (i--)
+        {
+            RMTileImage *potential = [tiles objectAtIndex:i];
+            
+            if (RMTilesEqual(tile, potential.tile))
+            {
+                [tiles removeObjectAtIndex:i];
+                image = potential;
+                break;
+            }
+        }
+        
+        [tileRemove addObject:image];
+        return;
+    }
+        
 	RMTileImage *image = nil;
 
 	NSUInteger i = [tiles count];
@@ -152,6 +173,14 @@
 	[[image layer] removeFromSuperlayer];
 }
 
+- (void)clear
+{
+    for (RMTileImage  *image in tileRemove) {
+        [[image layer] removeFromSuperlayer];
+    }
+    
+    [tileRemove removeAllObjects];
+}
 - (void)setFrame:(CGRect)frame
 {
 	layer.frame = [content screenBounds];
