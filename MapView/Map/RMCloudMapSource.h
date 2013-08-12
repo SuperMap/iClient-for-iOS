@@ -8,13 +8,19 @@
 
 #import "RMAbstractMercatorWebSource.h"
 
+@class RMSMTileProjection;
+
 /**
  * Class: RMCloudMapSource
  * SuperMap云地图服务
  */
-@interface RMCloudMapSource : RMAbstractMercatorWebSource <RMAbstractMercatorWebSource>{
+@interface RMCloudMapSource : NSObject <RMTileSource>
+{
+    RMSMTileProjection *tileProjection;
+    BOOL networkOperations;
+    NSMutableArray* m_dResolutions;
+    NSMutableArray* m_dScale;
 }
-
 /**
  * Constructor: init
  * RMCloudMapSource用于在iOS上加载云地图服务，方便的将iServer发布的地图服务显示在地图框架中
@@ -24,6 +30,53 @@
  * (end)
  */
 -(id) init;
+
+/**
+ * APIMethod: tileSideLength
+ * 获取该地图服务每一个Tile瓦片的像素大小，默认为256像素
+ *
+ * Returns:
+ * {<int>}  获取该地图服务每一个Tile瓦片的像素大小，默认为256像素。
+ */
+-(int) tileSideLength;
+
+/**
+ * APIMethod: setTileSideLength
+ * 指定每一个Tile瓦片的像素大小
+ *
+ ** Parameters:
+ * aTileSideLength - {NSUInteger}  指定的像素大小。
+ */
+-(void) setTileSideLength: (NSUInteger) aTileSideLength;
+
+
+/**
+ * APIProperty: minZoom
+ * {float} 当前地图最小显示层级。
+ */
+-(float) minZoom;
+
+/**
+ * APIProperty: maxZoom
+ * {float} 当前地图最大显示层级。
+ */
+-(float) maxZoom;
+
+-(RMSphericalTrapezium) latitudeLongitudeBoundingBox;
+
+-(void) networkOperationsNotification: (NSNotification*) notification;
+
+-(NSString *)shortName;
+
+
+-(NSString *)longDescription;
+
+-(NSString *)shortAttribution;
+
+-(NSString *)longAttribution;
+
+
+
 
 @end
 
