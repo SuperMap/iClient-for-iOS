@@ -782,6 +782,10 @@
 			children = (
 				FE19279B17695657003B2E46 /* RMSMTileSource.h */,
 				FE19279C17695657003B2E46 /* RMSMTileSource.m */,
+				FE74F63D1785124C0063C6A2 /* RMCloudMapSource.h */,
+				FE74F63E1785124C0063C6A2 /* RMCloudMapSource.m */,
+				FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */,
+				FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */,
 				96FE8E340F72D01B00A11CF0 /* RMYahooMapSource.h */,
 				96FE8E350F72D01B00A11CF0 /* RMYahooMapSource.m */,
 				B1EB26C110B5D8C0009F8658 /* RMOpenCycleMapSource.h */,
@@ -809,10 +813,6 @@
 				DDA3E85513B00D9E004D861C /* RMMapQuestOSMSource.m */,
 				DDCD58D11406F8A300F59E0D /* RMTileStreamSource.h */,
 				DDCD58D21406F8A300F59E0D /* RMTileStreamSource.m */,
-				FE74F63D1785124C0063C6A2 /* RMCloudMapSource.h */,
-				FE74F63E1785124C0063C6A2 /* RMCloudMapSource.m */,
-				FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */,
-				FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */,
 			);
 			name = "Tile Source";
 			sourceTree = "<group>";

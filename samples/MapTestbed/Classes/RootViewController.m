@@ -23,6 +23,8 @@
     self.mainViewController = viewController;
     [viewController release];
     
+    //self.mainViewController.mapView.enableRotate = TRUE;
+    
     [self.view insertSubview:mainViewController.view belowSubview:infoButton];
 }
 

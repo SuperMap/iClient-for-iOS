@@ -244,9 +244,9 @@
 	RMProjectedPoint aPoint;
 	aPoint.easting = origin.easting + aPixelPoint.x * aScale;
 	aPoint.northing = origin.northing + (screenBounds.size.height - aPixelPoint.y) * aScale;
-	
+	NSLog(@"%f,%f",aPoint.easting,aPoint.northing);
 	origin = [projection wrapPointHorizontally:origin];
-	
+	NSLog(@"%f,%f",aPoint.easting,aPoint.northing);
 	return aPoint;
 }
 

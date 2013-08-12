@@ -117,7 +117,7 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
 
 - (RMProjectedPoint)latLongToPoint:(RMLatLong)aLatLong
 {
-    if (bIsSM) {
+    if (false) {
         RMProjectedPoint result_pointSm = {
             aLatLong.longitude,
             aLatLong.latitude,

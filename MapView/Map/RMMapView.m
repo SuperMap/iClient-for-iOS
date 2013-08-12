@@ -133,18 +133,20 @@
 {
     if (!_contentsIsSet) {
         
+        //RMMapContents *newContents = [[RMMapContents alloc] initWithView:self screenScale:screenScale];
+		//self.contents = newContents;
          //SuperMap iServer
         //NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
-        
-        //NSString *tileThing = @"http://192.168.13.104:8090/iserver/services/map-world/rest/maps/World";
         /*
-        NSString *tileThing = @"http://192.168.13.104:8090/iserver/services/map-china400/rest/maps/China";
+        //NSString *tileThing = @"http://192.168.13.109:8090/iserver/services/map-world/rest/maps/World";
+        
+        NSString *tileThing = @"http://192.168.13.110:8090/iserver/services/map-china400/rest/maps/China";
         
         RMSMLayerInfo* info = [[RMSMLayerInfo alloc] initWithTile:@"China" linkurl:tileThing];
         // 判断获取iServer服务配置信息失败，为NULL时失败
         NSAssert(info != NULL,@"RMSMLayerInfo Connect fail");
         
-        RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];        
+        RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];
 		RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:smSource];
         */
         
@@ -153,6 +155,8 @@
         
         RMCloudMapSource* cloud = [[RMCloudMapSource alloc] init];
         RMMapContents *newContents = [[RMMapContents alloc] initWithView:self tilesource:cloud];
+        
+        
         
         /*
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

@@ -5,8 +5,10 @@
 
 #import "MainViewController.h"
 #import "MapTestbedAppDelegate.h"
+#import "RMMarker.h"
 
 #import "MainView.h"
+#import "RMFoundation.h"
 
 @implementation MainViewController
 
@@ -79,6 +81,40 @@
 
 - (void) afterMapZoom: (RMMapView*) map byFactor: (float) zoomFactor near:(CGPoint) center {
     [self updateInfo];
+}
+
+- (void) singleTapOnMap: (RMMapView*) map At: (CGPoint) point {
+    //NSLog(@"Clicked on Map - New location: X:%lf Y:%lf", point.x, point.y);
+    
+    UIImage *xMarkerImage = [UIImage imageNamed:@"markerflag.png"];
+    
+    CLLocationCoordinate2D one;
+	one.latitude = 0;
+	one.longitude = 0;
+    
+    RMMapContents *mapContents = self.mapView.contents;
+    
+    //[mapContents zoom]
+    RMProjectedPoint point1;
+    
+    //point.x = point.y = 0;
+    //one = [[mapContents projection] pointToLatLong:point];
+    CLLocationCoordinate2D coordinate = [self.mapView.contents pixelToLatLong: point];
+    //RMTilePoint pp;
+    //pp = [self.mapView.contents latLongToTilePoint:coordinate withMetersPerPixel:19575.68359375];
+    
+    //[[mapContents projection] latLongToPoint:coordinate];
+    NSLog(@"Clicked on Map - New location: X:%lf Y:%lf", coordinate.latitude, coordinate.longitude);
+    RMMarker *newMarker;
+	newMarker = [[RMMarker alloc] initWithUIImage:xMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
+	[mapContents.markerManager addMarker:[newMarker autorelease] AtLatLong:coordinate];
+    //[mapContents.markerManager addMarker:[newMarker autorelease] atProjectedPoint:coordinate];
+    
+}
+
+- (void) tapOnMarker: (RMMarker*) marker onMap: (RMMapView*) map
+{
+	NSLog(@"MARKER TAPPED!");    
 }
 
 

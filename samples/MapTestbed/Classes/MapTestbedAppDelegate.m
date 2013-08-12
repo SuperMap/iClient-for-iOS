@@ -168,7 +168,24 @@ static void saveApplier(void* info, const CGPathElement* element)
 
 - (void)performTest
 {
-    return;
+    UIImage *xMarkerImage = [UIImage imageNamed:@"markerflag.png"];
+    
+    CLLocationCoordinate2D one, two, three, four;
+	//one.latitude = 4863568.7766;
+	//one.longitude = 12969237.6;
+    
+    RMMapContents *mapContents = [self mapContents];
+    
+    RMProjectedPoint point;
+    point.easting = 12969237.600603817;
+    point.northing = 4863568.776619955;
+    //one = [[mapContents projection] pointToLatLong:point];
+    
+    RMMarker *newMarker;
+	newMarker = [[RMMarker alloc] initWithUIImage:xMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
+	//[mapContents.markerManager addMarker:[newMarker autorelease] AtLatLong:one];
+    [mapContents.markerManager addMarker:[newMarker autorelease] atProjectedPoint:point];
+    return; 
     /*
     FilterParameter* pF = [[FilterParameter alloc] init];
     pF.name = [[NSString alloc] initWithString:@"Capitals@World.1"];
@@ -189,12 +206,12 @@ static void saveApplier(void* info, const CGPathElement* element)
     
     NSLog(@"%@",jsonString);
     */
-    RMMapContents *mapContents = [self mapContents];
+    
     
     ///////////////////////////////
     RMPath *testPath, *testRegion;
     
-    CLLocationCoordinate2D one, two, three, four;
+    
     one.latitude = 39.914712153518;
 	one.longitude = 4.6055437100213;
     two.latitude = 39.914712153518;
@@ -219,26 +236,64 @@ static void saveApplier(void* info, const CGPathElement* element)
 
     //[[mapContents overlay] addSublayer:testPath];
 
+    
+    
+    
+    
+    
+    
+    
+    
     ///////////////////////////////
     // QueryBySQLService example
+    // SuperMap iOS 示例：查询地物并在地图显示该Feature
     //////////////////////////////////
     
-    
+    //1 创建查询Service
      QueryBySQLService* ps = [[QueryBySQLService alloc] init:@"http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World"];
      FilterParameter* pF = [[FilterParameter alloc] init];
      pF.name = [[NSString alloc] initWithString:@"Countries@World.1"];
+    //2 设置查询SQL： SMID 247 对应中国；SMID 1对应俄罗斯
      pF.attributeFilter = [[NSString alloc] initWithString:@"SMID = 1"];
      
      QueryBySQLParameters* p = [[QueryBySQLParameters alloc] init];
      [p.queryParams addObject:pF];
-     
+    
+    //3 绑定查询成功的回调函数
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompleted:) name:@"processCompleted" object:nil];
-     
+    
+    //4 执行！
      [ps processAsync:p];
     
     
      return;
      ///////////////////////////////////
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     // QueryByGeometryService example
     /*/////////////////////////////////
@@ -297,17 +352,6 @@ static void saveApplier(void* info, const CGPathElement* element)
     *///////////////////////////////
 	NSLog(@"testing paths");
 	
-
-	UIImage *xMarkerImage = [UIImage imageNamed:@"markerflag.png"];
-    
-    
-	one.latitude = 0;
-	one.longitude = 0;
-
-    
-    RMMarker *newMarker;
-	newMarker = [[RMMarker alloc] initWithUIImage:xMarkerImage anchorPoint:CGPointMake(0.5, 1.0)];
-	[mapContents.markerManager addMarker:[newMarker autorelease] AtLatLong:one];
     return;
 	// if we zoom with bounds after the paths are created, nothing is displayed on the map
 	CLLocationCoordinate2D northeast, southwest;
