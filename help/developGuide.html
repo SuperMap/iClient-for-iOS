@@ -1,0 +1,192 @@
+﻿  <!DOCTYPE html>
+  <html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>产品介绍</title>
+        <link href='./css/bootstrap.min.css' rel='stylesheet' />
+        <link href='./css/bootstrap-responsive.min.css' rel='stylesheet' />
+        <link href='./css/sm-extend.css' rel='stylesheet' />
+        <link href='./css/sm-doc.css' rel='stylesheet' />
+    </head>
+    <body data-spy="scroll" data-target=".subnav" data-offset="50">
+        <!--导航条-->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="../index.html">iOS API</a>
+                    <div class="nav-collapse">
+                        <ul class="nav" id='titleContent'>
+                            <li class=""> <a href="../index.html">首页</a> </li>
+                            <li class=""> <a href="./developGuide.html">产品入门</a> </li>
+                            <li class=""> <a href="../doc/index.html">类参考</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--功能区-->
+        <div id='container' class='container'>
+            <div id="inner-container">
+                <div class="page-header">
+                    <h2>产品入门&nbsp&nbsp<span class="label label-info" id="togglelink" onClick="toggleList()">隐藏</span></h2>
+                    <div id="lists">
+                        <ul>
+                            <li><a href="#details1">开发环境准备</a></li>
+                            <li><a href="#details2">第一步 创建工程</a></li>
+                            <li><a href="#details3">第二步 添加依赖库</a></li>
+                            <li><a href="#details5">第三步 代码实现</a></li>
+                            <li><a href="#details5">第四步 编译并运行</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="content">
+                    <div>
+                        <h2 class="title" id="details1">开发环境准备</h2>
+                        <div>
+                            <ul class="circle">
+                                <li>
+                                    <strong>Xcode</strong><br />Xcode 4.X版本及以上
+                                </li>
+                                <li>
+                                    <strong>iOS</strong><br />iOS SDK 5及以上
+                                </li>
+                                <li>
+                                    <strong>下载并解压iClient for iOS库文件</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="title" id="details2">创建工程</h2>
+                        <div>
+                            <ul class="circle">
+                                <li>
+                                在Xcode中，选择<strong>"Create a new Xcode project"</strong>,
+                                    选择自己的工程模板后点击<strong>"Next"</strong>，如下图，这里选择的是<strong>Tabbed Application</strong>。
+                                    <div class="pageImage"> <img src="./images/create.png" alt="Create New Project"/>
+                                    </div>
+                                </li>
+                                <li>
+                                设置工程的<strong>Name</strong>、<strong>Organization</strong>和<strong>Company</strong>，指定自己的设备选项，如下图，这里选择的为iPhone,然后点击<strong>"Next"</strong>。
+                                    <div class="pageImage"> <img src="./images/project.png" alt="Set Project Name"/>
+                                    </div>
+                                </li>
+                                <li>
+                                保存该工程到指定目录，注意设置是否需要git托管，至此，该工程创建完毕。
+                                    <div class="pageImage"> <img src="./images/save.png" alt="Save New Project"/>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="title" id="details3">添加依赖库</h2>
+                        <div>
+                            <ul class="circle">
+                                <li>
+                                    将iClient for iOS开发包中<strong>MapView</strong>和<strong>Proj4</strong>文件夹拷贝至刚刚创建工程的文件夹下，然后在Project Name上鼠标右键，点击"Add Files",如下图：
+                                    <div class="pageImage"> <img src="./images/add.png" alt="Add MapView"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    将MapView.xcodeproj工程添加到你的工程下，<strong>如果提示"Copy items into destination group’s folder (if needed)",请勿点击</strong>，最终，工程目录结构如下：
+                                    <div class="pageImage"> <img src="./images/folder.png" alt="Project Struct"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    下面开始添加工程依赖的库文件，如下图，选择<strong>Project Name</strong>-><strong>TARGETS</strong>-><strong>Build Phases</strong>-><strong>Link Binary With Libraries</strong>,点击<strong>"+"</strong>号
+                                    <div class="pageImage"> <img src="./images/addlib.png" alt="Project Struct"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    选择<strong>libMapView.a</strong>,点击Add按钮,将iClient for iOS静态库添加至依赖库中
+                                    <div class="pageImage"> <img src="./images/MapView.png" alt="MapView"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    相同的方式，依次添加<strong>libsqlite3.dylib, libsqlite3.0.dylib, QuartzCode.framwork, CoreFoundation.framework</strong>,
+                                    最终依赖库清单如下：
+                                    <div class="pageImage"> <img src="./images/libAll.png" alt="MapView"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    当我们把静态库和依赖库添加完成后，需要把头文件的Path路径也添加进行，和添加依赖库方式相似，选择
+                                    <strong>Build Setting</strong>-><strong>Header Search Paths</strong>(可以在搜索框中输入关键字)
+                                    <div class="pageImage"> <img src="./images/header.png" alt="MapView"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    双击Header Search Paths空白处，添加MapView文件夹路径，选择recursive遍历方式，如下图：
+                                    <div class="pageImage"> <img src="./images/header2.png" alt="MapView"/>
+                                    </div>
+                                    此处注意，不要单独选择debug和release空白处，最终头文件路径设置结果如下图
+                                    <div class="pageImage"> <img src="./images/header3.png" alt="MapView"/>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="title" id="details4">代码实现</h2>
+                        <div>
+                            <ul class="circle">
+                                <li>
+                                    至此，环境搭建的工作到此结束，打开FirstViewController.h文件，添加如下代码：
+                                    <pre>
+<code>
+    #import "RMMapView.h"
+
+    @interface FirstViewController : UIViewController{
+    RMMapView *mapView;
+    }
+
+    @property (nonatomic, retain) RMMapView *mapView;
+</code></pre>
+                                </li>
+                                <li>
+                                    打开FirstViewController.m文件，添加如下代码：
+                                    <pre>
+<code>
+    @synthesize mapView;
+    - (void)loadView {
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    [self setMapView:[[RMMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, bounds.size.width, bounds.size.height)] ];
+    self.view = mapView;
+    // Your own code
+    }
+</code></pre>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="title" id="details5">编译并运行</h2>
+                        <div>
+                            <ul class="circle">
+                                <li>
+                                    选择模拟器，点击<strong>Run</strong>运行，say “Hello” to your Map<br />
+                                    <div class="pageImage"> <img src="./images/map.png" alt="MapView"/>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer'>
+            <p>版权所有&nbsp;&copy; 1997-2013. &nbsp;北京超图软件股份有限公司</p>
+        </div>
+    </div>
+    <script src='./js/jquery.js'></script> 
+    <script src='./js/bootstrap.js'></script>
+    <script type="text/javascript">
+        var isListToggled = false;
+        function toggleList(){
+            var lists = $("#lists");
+            var link = document.getElementById("togglelink");
+            if(!isListToggled){
+                link.innerText = "显示";
+                lists.hide('slow');
+                isListToggled = true;
+                }else{
+                link.innerText = "隐藏";
+                lists.show();
+                isListToggled = false;
+            }
+        }
+    </script>
+</body>
+</html>
