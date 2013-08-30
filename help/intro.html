@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>产品介绍</title>
+        <link href='./css/bootstrap.min.css' rel='stylesheet' />
+        <link href='./css/bootstrap-responsive.min.css' rel='stylesheet' />
+        <link href='./css/sm-extend.css' rel='stylesheet' />
+        <link href='./css/sm-doc.css' rel='stylesheet' />
+    </head>
+    <body data-spy="scroll" data-target=".subnav" data-offset="50">
+        <!--导航条-->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="../index.html">iOS API</a>
+                    <div class="nav-collapse">
+                        <ul class="nav" id='titleContent'>
+                            <li class=""> <a href="../index.html">首页</a> </li>
+                            <li class="active">
+                                <a href="./help/intro.html">产品介绍</a>
+                            </li>
+                            <li class=""> <a href="./developGuide.html">产品入门</a> </li>
+                            <li class=""> <a href="../doc/index.html">类参考</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--功能区-->
+        <div id='container' class='container'>
+            <div id="inner-container">
+                <div class="page-header">
+                    <h2>目录&nbsp&nbsp<span class="label label-info" id="togglelink" onClick="toggleList()">隐藏</span></h2>
+                    <div id="lists">
+                        <ul>
+                            <li><a href="#details1"><span>1.</span>SuperMap iClient 7C for iOS 产品简介</a></li>
+                            <li><a href="#details2"><span>2.</span>产品技术特点</a></li>
+                            <li><a href="#details3"><span>3.</span>产品功能</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="content">
+                    <div>
+                        <h2 class="title" id="details1">SuperMap iClient 7C for iOS 产品介绍</h2>
+                        <div>
+                            <p> SuperMap iClient 6R(2012) for iOS是一套基于iOS平台的轻量级地图软件开发包（SDK），
+                                提供了针对iPhone以及iPad移动设备的Web地图访问接口，包括地图浏览等基本接口，以及查询、量算、标绘等服务，
+                                同时支持离线数据的读取，在无网络条件下仍可便捷的访问地图。
+                                通过该产品可以在iOS平台下快速访问SuperMap iServer发布的REST地图服务。
+                            </p>
+                            <div class="pageImage"> <img src="./images/iClient7C.png" alt="SuperMap iClient 7C for iOS 与其他产品架构关系"/>
+                                <p> 图1 SuperMap iClient 7C 产品架构关系</p>
+                            </div>
+                        </div>
+                        <h2 class="title" id="details2">SuperMap iClient 7C for iOS 的技术特点</h2>
+                        <div>
+                            <ul  class="circle">
+                                <li> <strong>在iOS平台下访问SuperMap iServer REST地图服务，更加轻便、灵活 </strong><br />
+                                    针对iOS原生开发语言，较好的效率和用户体验，同时对接iServer REST服务，支持在线和离线方式下的地图服务，方便用户的开发
+                                </li>
+                                <li> <strong>不依赖于浏览器 </strong><br />
+                                </li>
+                                <li><strong>对接SuperMap iServer REST地图服务，提供丰富的地图框架的解决方案，用户更好的专注于自己的业务需求 </strong><br />
+                                </li>
+                            </ul>
+                      </div>
+                        <h2 class="title" id="details3">SuperMap iClient 7C for iOS 提供的功能</h2>
+                        <div>
+                            <ul  class="circle">
+                                <li >地图浏览，如缩放、漫游操作，支持多点触控</li>
+                                <li >地图属性支持设置固定比例尺</li>
+                                <li >地图查询（范围查询、距离查询、几何对象查询以及SQL查询）</li>
+                                <li >地图量算（距离、面积）</li>
+                                <li >Marker标注及事件响应</li>
+                                <li >地物标绘及事件响应</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer'>
+            <p>版权所有&nbsp;&copy; 1997-2013. &nbsp;北京超图软件股份有限公司</p>
+        </div>
+    </div>
+    <script src='./js/jquery.js'></script> 
+    <script src='./js/bootstrap.js'></script>
+    <script type="text/javascript">
+        var isListToggled = false;
+        function toggleList(){
+            var lists = $("#lists");
+            var link = document.getElementById("togglelink");
+            if(!isListToggled){
+                link.innerText = "显示";
+                lists.hide('slow');
+                isListToggled = true;
+                }else{
+                link.innerText = "隐藏";
+                lists.show();
+                isListToggled = false;
+            }
+        }
+    </script>
+</body>
+</html>
