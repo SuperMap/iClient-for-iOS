@@ -37,7 +37,9 @@
 @class RMTileCache;
 @protocol RMMercatorToTileProjection;
 @class RMProjection;
-
+/**
+ * Class: RMTileSource
+ */
 @protocol RMTileSource <NSObject>
 
 -(RMTileImage *) tileImage: (RMTile) tile;

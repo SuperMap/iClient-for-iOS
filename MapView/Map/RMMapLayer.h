@@ -28,6 +28,9 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
+/**
+ * Class: RMMapLayer
+ */
 @interface RMMapLayer : CAScrollLayer
 {
 }

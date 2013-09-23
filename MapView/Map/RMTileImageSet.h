@@ -44,7 +44,9 @@
 -(void) tileAdded: (RMTile) tile WithImage: (RMTileImage*) image;
 
 @end
-
+/**
+ * Class: RMTileImageSet
+ */
 @interface RMTileImageSet : NSObject {
 	IBOutlet id delegate;
 	id<RMTileSource> tileSource;
@@ -56,7 +58,10 @@
 
 -(void) addTile: (RMTile) tile WithImage: (RMTileImage *)image At: (CGRect) screenLocation;
 -(void) addTile: (RMTile) tile At: (CGRect) screenLocation;
-/// Add tiles inside rect protected to bounds. Return rectangle containing bounds extended to full tile loading area
+/**
+ * APIMethod: addTiles
+ * Add tiles inside rect protected to bounds. Return rectangle containing bounds extended to full tile loading area
+ */
 -(CGRect) addTiles: (RMTileRect)rect ToDisplayIn:(CGRect)bounds;
 
 -(RMTileImage*) imageWithTile: (RMTile) tile;
@@ -85,6 +90,7 @@
 -(void) removeTilesOutsideOf: (RMTileRect)rect;
 
 @property (assign, nonatomic, readwrite) id delegate;
+
 // tileDepth defaults to zero. if tiles have no alpha, set this higher, 3 or so, to make zooming smoother
 @property (assign, readwrite) short zoom, tileDepth;
 @property (readonly) BOOL fullyLoaded;

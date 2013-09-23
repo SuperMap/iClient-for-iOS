@@ -27,10 +27,11 @@
 
 #import "RMAbstractMercatorWebSource.h"
 
-/*! 
- \brief Subclass of RMAbstractMercatorWebSource for access to MapQuest's version of OpenStreetMap.
- 
- Provides key-based access to tiles from MapQuest project. 
+ /**
+ * Class: RMMapQuestOSMSource
+ * Subclass of RMAbstractMercatorWebSource for access to MapQuest's version of OpenStreetMap.
+ *
+ * Provides key-based access to tiles from MapQuest project. 
  */
 @interface RMMapQuestOSMSource : RMAbstractMercatorWebSource <RMAbstractMercatorWebSource>{
 }

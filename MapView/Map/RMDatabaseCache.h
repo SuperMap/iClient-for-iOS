@@ -29,7 +29,9 @@
 #import "RMTileCache.h"
 
 @class RMTileCacheDAO;
-
+/**
+ * Class: RMDatabaseCache
+ */
 @interface RMDatabaseCache : NSObject<RMTileCache> {
 	NSString* databasePath;
 	RMTileCacheDAO *dao;

@@ -30,7 +30,10 @@
 #import <QuartzCore/QuartzCore.h>
 
 @protocol RMTileSource;
-
+/**
+ * Class: RMTiledLayerController
+ *
+ */
 /// ////////////////////////// NOT COMPLETE. DO NOT USE
 @interface RMTiledLayerController : NSObject
 {

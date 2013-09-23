@@ -31,7 +31,10 @@
 #import "RMFoundation.h"
 #import "RMLatLong.h"
 
-/// Objective-C wrapper for PROJ4 map projection definitions.
+/**
+ * Class: RMProjection
+ * Objective-C wrapper for PROJ4 map projection definitions.
+ */
 @interface RMProjection : NSObject
 {
 	/// This is actually a PROJ4 projPJ, but it is typed as void* so the proj_api doesn't have to be included
@@ -49,11 +52,31 @@
 @property (readonly) RMProjectedRect planetBounds;
 @property (readwrite) BOOL projectionWrapsHorizontally;
 @property (readwrite) BOOL bIsSM;
-
-/// If #projectionWrapsHorizontally, returns #aPoint with its easting adjusted modulo Earth's diameter to be within projection's planetBounds. if !#projectionWrapsHorizontally, returns #aPoint unchanged.
+ 
+/**
+ * APIMethod: wrapPointHorizontally
+ * If #projectionWrapsHorizontally, 
+ * returns #aPoint with its easting adjusted modulo Earth's diameter to be within projection's planetBounds. if 
+ * !#projectionWrapsHorizontally, returns #aPoint unchanged.
+ *
+ * Parameters:
+ * aPoint - {<RMProjectedPoint>}
+ *
+ * Returns
+ * {<RMProjectedPoint>}
+ */
 - (RMProjectedPoint) wrapPointHorizontally: (RMProjectedPoint) aPoint;
 
-/// applies #wrapPointHorizontally to aPoint, and then clamps northing (Y coordinate) to projection's planetBounds
+/**
+ * APIMethod: constrainPointToBounds
+ * applies #wrapPointHorizontally to aPoint, and then clamps northing (Y coordinate) to projection's planetBounds
+ *
+ * Parameters:
+ * aPoint - {<RMProjectedPoint>}
+ *
+ * Returns
+ * {<RMProjectedPoint>}
+ */
 - (RMProjectedPoint) constrainPointToBounds: (RMProjectedPoint) aPoint;
 
 + (RMProjection *) googleProjection;
@@ -64,11 +87,30 @@
 /// anybody know what the InBounds: parameter means?
 - (id) initWithString: (NSString*)params InBounds: (RMProjectedRect) projBounds;
 
-/// inverse project meters, return latitude/longitude
-/// \deprecated rename pending after 0.5
+/**
+ * APIMethod: pointToLatLong
+ * inverse project meters, return latitude/longitude
+ * deprecated: rename pending after 0.5
+ *
+ * Parameters:
+ * aPoint - {<RMProjectedPoint>}
+ *
+ * Returns
+ * {<RMLatLong>}
+ */
 - (RMLatLong)pointToLatLong:(RMProjectedPoint)aPoint;
-/// forward project latitude/longitude, return meters
-/// \deprecated rename pending after 0.5
+/**
+ * APIMethod: latLongToPoint
+ * forward project latitude/longitude, return meters
+ * deprecated: rename pending after 0.5
+ *
+ * Parameters:
+ * aLatLong - {<RMLatLong>}
+ *
+ * Returns
+ * {<RMProjectedPoint>}
+ */
+
 - (RMProjectedPoint)latLongToPoint:(RMLatLong)aLatLong;
 
 @end

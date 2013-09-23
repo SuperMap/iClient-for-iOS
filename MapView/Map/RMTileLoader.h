@@ -35,7 +35,9 @@
 @class RMMercatorToScreenProjection;
 
 @protocol RMTileSource;
-
+/**
+ * Class: RMTileLoader
+ */
 @interface RMTileLoader : NSObject {
 	RMMapContents *content;
 

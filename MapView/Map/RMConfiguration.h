@@ -27,7 +27,10 @@
 
 #import <UIKit/UIKit.h>
 
-
+/**
+ * Class: RMConfiguration
+ * 
+ */
 @interface RMConfiguration : NSObject {
 
 	id propList;

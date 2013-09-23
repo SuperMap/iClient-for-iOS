@@ -31,7 +31,9 @@
 #import "RMMarker.h"
 
 @class RMProjection;
-
+/**
+ * Class: RMMarkerManager
+ */
 @interface RMMarkerManager : NSObject {
 	RMMapContents *contents;
         CGAffineTransform rotationTransform;

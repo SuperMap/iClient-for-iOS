@@ -29,8 +29,12 @@
 #import "RMTile.h"
 
 @class RMTileImage;
-/// Has only class methods defined, to return generic "error image", "not-yet-loaded image", and proxy images.
-/// \bug This functionality belongs on the tile source, and should not be freestanding.
+/**
+ * Class: RMTileProxy
+ * Has only class methods defined, to return generic "error image", "not-yet-loaded image", and proxy images.
+ * bug:This functionality belongs on the tile source, and should not be freestanding.
+ *
+ */
 @interface RMTileProxy : NSObject {
 	
 }

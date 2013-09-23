@@ -36,6 +36,9 @@
 @protocol RMTileSource;
 @class RMMapContents;
 
+/**
+ * Class: RMMapRenderer
+ */
 @interface RMMapRenderer : NSObject
 {
 	RMMapContents *content;

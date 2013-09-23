@@ -30,6 +30,9 @@
 #import "RMLatLong.h"
 
 @class RMProjection;
+/**
+ * Class: RMTransform
+ */
 @interface RMTransform : NSObject {
 	RMProjection* source;
 	RMProjection* destination;

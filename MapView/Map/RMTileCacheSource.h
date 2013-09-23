@@ -39,6 +39,12 @@
  as 2^3 = 8.
 */
 
+/**
+ * Class: RMTileCacheSource
+ * 
+ * Inherits from:
+ *  - <RMAbstractMercatorWebSource>
+ */
 @interface RMTileCacheSource : RMAbstractMercatorWebSource <RMAbstractMercatorWebSource> {
 	@private
 	NSString *_shortName;

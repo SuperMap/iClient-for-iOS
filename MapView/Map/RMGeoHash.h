@@ -32,7 +32,9 @@ typedef enum _RMGeoHashAtDirection {
 	RMGeoHashAtRight = 0, RMGeoHashAtLeft, RMGeoHashAtTop, RMGeoHashAtBottom
 } RMGeoHashAtDirection;
 
-
+/**
+ * Class: RMGeoHash
+ */
 @interface RMGeoHash : NSObject {
 
 }

@@ -32,7 +32,10 @@
 
 @class RMProjection;
 
-/// This is a stateful projection. As the screen moves around, so too do projections change.
+/**
+ * Class: RMMercatorToScreenProjection
+ * This is a stateful projection. As the screen moves around, so too do projections change.
+ */
 @interface RMMercatorToScreenProjection : NSObject
 {
 	/// What the screen is currently looking at.
@@ -51,25 +54,89 @@
 
 - (id) initFromProjection: (RMProjection*) projection ToScreenBounds: (CGRect)aScreenBounds;
 
-/// Deltas in screen coordinates.
+/**
+ * APIMethod: movePoint
+ * Deltas in screen coordinates.
+ *
+ * Parameters:
+ * aPoint - {<RMProjectedPoint>} 
+ *
+ * Returns:
+ * {<RMProjectedPoint>}
+ */
 - (RMProjectedPoint)movePoint: (RMProjectedPoint)aPoint by:(CGSize) delta;
-/// Deltas in screen coordinates.
+
+/**
+ * APIMethod: moveRect
+ * Deltas in screen coordinates.
+ *
+ * Parameters:
+ * aRect - {<RMProjectedRect>} 
+ *
+ * Returns:
+ * {<RMProjectedRect>}
+ */
 - (RMProjectedRect)moveRect: (RMProjectedRect)aRect by:(CGSize) delta;
 
-/// pivot given in screen coordinates.
+/**
+ * APIMethod: zoomPoint
+ * pivot given in screen coordinates.
+ *
+ * Parameters:
+ * aPoint - {<RMProjectedPoint>} 
+ *
+ * Returns:
+ * {<RMProjectedPoint>}
+ */
 - (RMProjectedPoint)zoomPoint: (RMProjectedPoint)aPoint byFactor: (float)factor near:(CGPoint) pivot;
-/// pivot given in screen coordinates.
+ 
+/**
+ * APIMethod: zoomRect
+ * pivot given in screen coordinates.
+ *
+ * Parameters:
+ * aRect - {<RMProjectedRect>} 
+ *
+ * Returns:
+ * {<RMProjectedRect>}
+ */
 - (RMProjectedRect)zoomRect: (RMProjectedRect)aRect byFactor: (float)factor near:(CGPoint) pivot;
 
-/// Move the screen.
+/**
+ * APIMethod: moveScreenBy
+ * Move the screen.
+ *
+ * Parameters:
+ * delta - {<CGSize>} 
+ */
 - (void) moveScreenBy: (CGSize) delta;
 - (void) zoomScreenByFactor: (float) factor near:(CGPoint) aPoint;
 
-/// Project -> screen coordinates.
+/**
+ * APIMethod: projectXYPoint
+ * Project -> screen coordinates.
+ *
+ * Parameters:
+ * aPoint - {<RMProjectedPoint>} 
+ *
+ * Returns:
+ * {<CGPoint>}
+ */
 - (CGPoint)projectXYPoint:(RMProjectedPoint)aPoint withMetersPerPixel:(float)aScale;
+
 /// Project -> screen coordinates.
 - (CGPoint) projectXYPoint: (RMProjectedPoint) aPoint;
-/// Project -> screen coordinates.
+
+/**
+ * APIMethod: projectXYRect
+ * Project -> screen coordinates.
+ *
+ * Parameters:
+ * aRect - {<RMProjectedRect>} 
+ *
+ * Returns:
+ * {<CGRect>}
+ */
 - (CGRect) projectXYRect: (RMProjectedRect) aRect;
 
 - (RMProjectedPoint) projectScreenPointToXY: (CGPoint) aPoint;

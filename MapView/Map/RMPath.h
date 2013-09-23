@@ -33,7 +33,12 @@
 
 @class RMMapContents;
 @class RMMapView;
-
+/**
+ * Class: RMPath
+ *
+ * Inherits from:
+ *  - <RMMapLayer>
+ */
 @interface RMPath : RMMapLayer <RMMovingMapLayer> {
     BOOL bIsClosePath;
     

@@ -33,11 +33,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import "RMGlobalConstants.h"
 
-/*! \struct RMSphericalTrapezium
- 
- \brief Specifies a spherical trapezium by northwest and southeast corners, each given as CLLocationCoordinate2D, similar to specifying the corners of a box.
- 
- A spherical trapezium is the surface of a sphere or ellipsoid bounded by two meridians and two parallels. Note that in almost all cases, the lengths of the northern and southern sides of the box are different.
+ /**
+ * APIProperty: RMSphericalTrapezium
+ * {struct} Specifies a spherical trapezium by northwest and southeast corners, each given as CLLocationCoordinate2D, similar to *specifying the corners of a box.
+ *
+ *A spherical trapezium is the surface of a sphere or ellipsoid bounded by two meridians and two parallels. Note that in almost all *cases, the lengths of the northern and southern sides of the box are different.
  */
 typedef struct {
 	CLLocationCoordinate2D northeast;
@@ -55,6 +55,7 @@ typedef struct {
  *    Type used to represent a latitude or longitude coordinate in degrees under the WGS 84 reference
  *    frame. The degree can be positive (North and East) or negative (South and West).  
  */
+ 
 typedef double CLLocationDegrees;
 /*
  *  CLLocationCoordinate2D
@@ -75,8 +76,9 @@ typedef struct {
 
 #endif
 
-/*! \struct RMLatLong 
- \brief latitude/longitude of a point, in WGS-84 degrees
+ /**
+ * APIProperty: RMLatLong
+ * {struct} latitude/longitude of a point, in WGS-84 degrees
  */
 typedef CLLocationCoordinate2D RMLatLong;
 

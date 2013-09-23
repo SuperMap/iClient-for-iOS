@@ -27,7 +27,9 @@
 
 #import <Foundation/Foundation.h>
 
-
+ /**
+ * Class: RMWMS
+ */
 @interface RMWMS : NSObject {
 
     NSString *urlPrefix;

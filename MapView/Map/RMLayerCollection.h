@@ -32,12 +32,14 @@
 @class RMMapRenderer;
 @class RMMapContents;
 
-/*! Appears to be some sort of interface between RMMapContents and markers.
- 
- \bug lots of arbitrary-appearing \@synchronized blocks. Old mailing list traffic 
- claims they're needed, but no one seems to know why. If the #set ivar needs to be guarded,
- should be done by \@synchronized(self) and not \@synchronized(sublayers). Maybe the guarding
- is needed because of Core Animation thread interactions.
+ /**
+ * Class: RMLayerCollection
+ *	Appears to be some sort of interface between RMMapContents and markers.
+ *
+ *	lots of arbitrary-appearing \@synchronized blocks. Old mailing list traffic 
+ *	claims they're needed, but no one seems to know why. If the #set ivar needs to be guarded,
+ *	should be done by \@synchronized(self) and not \@synchronized(sublayers). Maybe the guarding
+ *	is needed because of Core Animation thread interactions.
  */
 @interface RMLayerCollection : RMMapLayer
 {
@@ -68,7 +70,11 @@
 - (void) setRotationOfAllSublayers:(float) angle;
 //-(void) drawRect: (CGRect)rect;
 //-(CALayer*) layer;
-/// Orders layers in the collection based on their position in the map, prioritizing instances/subclass instances of RMMarker above other layers. This is called automatically in addSublayer.
+
+/**
+ * APIMethod: orderLayers
+ * Orders layers in the collection based on their position in the map, prioritizing instances/subclass instances of RMMarker above *other layers. This is called automatically in addSublayer.
+ */
 - (void)orderLayers;
 
 @end

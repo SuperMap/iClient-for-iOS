@@ -27,10 +27,13 @@
 
 #import "RMAbstractMercatorWebSource.h"
 
-/*! 
- \brief Subclass of RMAbstractMercatorWebSource for access to the Open Cycle Map project's development server.
- 
- Provides key-based access to tiles from the Open Cycle Map project. 
+ /**
+ * Class: RMOpenCycleMapSource
+ * Subclass of RMAbstractMercatorWebSource for access to the Open Cycle Map project's development server.
+ * Provides key-based access to tiles from the Open Cycle Map project. 
+ *
+ * Inherits from:
+ *  - <RMAbstractMercatorWebSource>
  */
 @interface RMOpenCycleMapSource : RMAbstractMercatorWebSource <RMAbstractMercatorWebSource>{
 }

@@ -27,43 +27,58 @@
 
 #import "RMAbstractMercatorWebSource.h"
 
-/*!
- \brief Subclass of RMAbstractMercatorWebSource for access to SpatialCloud.com MapSources.
- 
- Allows access to SpatialCloud.com MapSources. Direct access can be attained using a loginID
- and password. Alternatively, a proxy server can be used in place of a loginID and password. 
- If both a loginID/password pair and a server URL are provided, the server URL will be used.
- 
- SpatialCloud.com MapSources are available for purchase & resale for various US & world 
- datasets; in addition, SpatialCloud allows you to host/serve/resell your own datasets. 
- Please visit http://spatialcloud.com to setup your own account, subscribe to the 
- MapSource(s), & create your own MapStream(s), as well as licensing terms and fees.
+/**
+ * Class: RMSpatialCloudMapSource
+ * Subclass of RMAbstractMercatorWebSource for access to SpatialCloud.com MapSources.
+ *
+ * Allows access to SpatialCloud.com MapSources. Direct access can be attained using a loginID
+ * and password. Alternatively, a proxy server can be used in place of a loginID and password. 
+ * If both a loginID/password pair and a server URL are provided, the server URL will be used.
+ *
+ * SpatialCloud.com MapSources are available for purchase & resale for various US & world 
+ * datasets; in addition, SpatialCloud allows you to host/serve/resell your own datasets. 
+ * Please visit http://spatialcloud.com to setup your own account, subscribe to the 
+ * MapSource(s), & create your own MapStream(s), as well as licensing terms and fees.
+ *
+ * Inherits from:
+ *  - <RMAbstractMercatorWebSource>
  */
-
 @interface RMSpatialCloudMapSource : RMAbstractMercatorWebSource <RMAbstractMercatorWebSource> {
 	NSString *customServerURL;
 	NSString *loginID;
 	NSString *password;
 }
 
-// URL string of proxy server used to access SpatialCloud.com tiles
-//
-// If you don't have a proxy server, use the loginID/password combination below
-// See http://www.spatialcloud.com/index.cfm?event=home.support for server sample code
-// Examples:
-// http://127.0.0.1:8080/openbd/custom/server/CFML/index.cfm?
-// http://localhost:8080/openbd/SSCustomServer/server/JSP/index.jsp?
-// http://localhost/server/PHP/index.php?
+/**
+ * APIProperty: customServerURL
+ * {NSString} URL string of proxy server used to access SpatialCloud.com tiles
+ *
+ * If you don't have a proxy server, use the loginID/password combination below
+ * See http://www.spatialcloud.com/index.cfm?event=home.support for server sample code
+ *
+ * Examples:
+ * http://127.0.0.1:8080/openbd/custom/server/CFML/index.cfm?
+ * http://localhost:8080/openbd/SSCustomServer/server/JSP/index.jsp?
+ * http://localhost/server/PHP/index.php?
+ */
 @property (nonatomic, retain) NSString *customServerURL;
 
-// LoginID and password used to access a MapStream
-//
-// See http://www.spatialcloud.com/index.cfm?event=home.support to signup
-// For the purposes of this demo, use 20101213051851055 for the loginID and
-// gRtXbm79CODFq for the password
-// If you don't want to release your loginID in your app's binary, consider
-// using a proxy server as mentioned above
+/**
+ * APIProperty: loginID
+ * {NSString} LoginID and password used to access a MapStream
+ *
+ * See http://www.spatialcloud.com/index.cfm?event=home.support to signup
+ * For the purposes of this demo, use 20101213051851055 for the loginID and
+ * gRtXbm79CODFq for the password
+ * If you don't want to release your loginID in your app's binary, consider
+ * using a proxy server as mentioned above
+ */
 @property (nonatomic, retain) NSString *loginID;
+
+/**
+ * APIProperty: password
+ * {NSString} LoginID and password used to access a MapStream
+ */
 @property (nonatomic, retain) NSString *password;
 
 - (id)initWithLoginID:(NSString *)newLoginID password:(NSString *)newPassword;

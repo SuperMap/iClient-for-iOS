@@ -30,7 +30,9 @@
 #import "RMMapRenderer.h"
 
 @class RMLayeredTileLoader;
-
+/**
+ * Class: RMCoreAnimationRenderer
+ */
 @interface RMCoreAnimationRenderer : RMMapRenderer {
 	CALayer *layer;
 	NSMutableArray *tiles;

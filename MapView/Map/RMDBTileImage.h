@@ -26,7 +26,10 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 #import "RMTileImage.h"
-
+/**
+ * Class: RMDBTileImage
+ * 
+ */
 @interface RMDBTileImage : RMTileImage {}
 
 - (id)initWithTile:(RMTile)tile fromDB:(FMDatabase*)db;

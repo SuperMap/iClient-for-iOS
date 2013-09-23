@@ -30,12 +30,14 @@
 
 extern NSString * const RMCloudMadeAccessTokenRequestFailed; 
 
-/*! 
- \brief Subclass of RMAbstractMercatorWebSource  for access to CloudMade's commercial-grade tile servers.
- 
- Provides key-based access to tiles from CloudMade's servers. This is Open Street Map data, but 
- rendered much more nicely, in your choice of stylings. See http://www.cloudmade.com/ for 
- licensing terms and fees. 
+/**
+ * Class: RMCloudMadeMapSource
+ * Subclass of RMAbstractMercatorWebSource  for access to CloudMade's commercial-grade tile servers.
+ *
+ *Provides key-based access to tiles from CloudMade's servers. This is Open Street Map data, but 
+ *rendered much more nicely, in your choice of stylings. See http://www.cloudmade.com/ for 
+ *licensing terms and fees. 
+ *
  */
 @interface RMCloudMadeMapSource : RMAbstractMercatorWebSource <RMAbstractMercatorWebSource>
 {

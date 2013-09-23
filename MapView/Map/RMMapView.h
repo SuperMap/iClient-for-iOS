@@ -97,9 +97,9 @@ SuperMap iClient for iOS更多内容和更新，可以访问Github项目
 #import "RMSMLayerInfo.h"
 #import "RMSMTileSource.h"
 
-/*! 
- \struct RMGestureDetails
- iPhone-specific mapview stuff. Handles event handling, whatnot.
+ /**
+ * APIProperty: RMGestureDetails
+ * {struct} iPhone-specific mapview stuff. Handles event handling, whatnot.
  */
 typedef struct {
 	CGPoint center;
@@ -110,15 +110,16 @@ typedef struct {
 
 @class RMMapContents;
 
-/*! 
- \brief Wrapper around RMMapContents for the iPhone.
- 
- It implements event handling; but that's about it. All the interesting map
- logic is done by RMMapContents. There is exactly one RMMapView instance for each RMMapContents instance.
- 
- A -forwardInvocation method exists for RMMap, and forwards all unhandled messages to the RMMapContents instance.
- 
- \bug No accessors for enableDragging, enableZoom, deceleration, decelerationFactor. Changing enableDragging does not change multitouchEnabled for the view.
+ /**
+ * Class: RMCloudMapSource
+ * Wrapper around RMMapContents for the iPhone.
+ *
+ *It implements event handling; but that's about it. All the interesting map
+ *logic is done by RMMapContents. There is exactly one RMMapView instance for each RMMapContents instance.
+ *
+ *A -forwardInvocation method exists for RMMap, and forwards all unhandled messages to the RMMapContents instance.
+ *
+ *bug:No accessors for enableDragging, enableZoom, deceleration, decelerationFactor. Changing enableDragging does not change *multitouchEnabled for the view.
  */
 @interface RMMapView : UIView <RMMapContentsFacade, RMMapContentsAnimationCallback>
 {
@@ -192,9 +193,21 @@ typedef struct {
 - (id)initWithFrame:(CGRect)frame screenScale:(float)screenScale;
 - (id)initWithFrame:(CGRect)frame WithLocation:(CLLocationCoordinate2D)latlong;
 
-/// recenter the map on #latlong, expressed as CLLocationCoordinate2D (latitude/longitude)
+/**
+ * APIMethod: moveToLatLong
+ * recenter the map on #latlong, expressed as CLLocationCoordinate2D (latitude/longitude)
+ *
+ ** Parameters:
+ * latlong - {CLLocationCoordinate2D}  
+ */
 - (void)moveToLatLong: (CLLocationCoordinate2D)latlong;
-/// recenter the map on #aPoint, expressed in projected meters
+/**
+ * APIMethod: moveToProjectedPoint
+ * recenter the map on #aPoint, expressed in projected meters
+ *
+ ** Parameters:
+ * aPoint - {RMProjectedPoint}  
+ */
 - (void)moveToProjectedPoint: (RMProjectedPoint)aPoint;
 
 - (void)moveBy: (CGSize) delta;

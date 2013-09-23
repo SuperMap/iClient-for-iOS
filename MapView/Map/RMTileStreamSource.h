@@ -65,12 +65,22 @@
 #define kTileStreamDefaultMaxTileZoom 18
 #define kTileStreamDefaultLatLonBoundingBox ((RMSphericalTrapezium){ .northeast = { .latitude =  85, .longitude =  180 }, \
                                                                      .southwest = { .latitude = -85, .longitude = -180 } })
-
+/**
+ * Constant: RMTileStreamLayerType
+ * RMTileStreamLayerTypeBaselayer: 0,
+ * RMTileStreamLayerTypeOverlay: 1,
+ */
 typedef enum {
     RMTileStreamLayerTypeBaselayer = 0,
     RMTileStreamLayerTypeOverlay   = 1,
 } RMTileStreamLayerType;
 
+/**
+ * Class: RMTileStreamSource
+ *
+ * Inherits from:
+ *  - <RMAbstractMercatorWebSource>
+ */
 @interface RMTileStreamSource : RMAbstractMercatorWebSource <RMAbstractMercatorWebSource>
 {
     NSDictionary *infoDictionary;

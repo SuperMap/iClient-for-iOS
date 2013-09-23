@@ -41,7 +41,9 @@ typedef NSImage UIImage;
 
 @class RMTileImage;
 @class NSData;
-
+/**
+ * Class: RMTileImage
+ */
 @interface RMTileImage : NSObject {
 	// I know this is a bit nasty.
 	RMTile tile;

@@ -27,32 +27,50 @@
 
 #import <stdbool.h>
 
-/*! \struct RMProjectedPoint 
- \brief coordinates, in projected meters, paralleling CGPoint */
+/**
+ * APIProperty: RMProjectedPoint
+ * {struct} coordinates, in projected meters, paralleling CGPoint 
+ */
 typedef struct {
 	double easting, northing;
 } RMProjectedPoint;
 
-/*! \struct RMProjectedSize 
- \brief width/height struct, in projected meters, paralleling CGSize */
+/**
+ * APIProperty: RMProjectedSize
+ * {struct} width/height struct, in projected meters, paralleling CGSize
+ */
 typedef struct {
 	double width, height;
 } RMProjectedSize;
 
-/*! \struct RMProjectedRect 
- \brief location and size, in projected meters, paralleling CGRect */
+/**
+ * APIProperty: RMProjectedRect
+ * {struct} location and size, in projected meters, paralleling CGRect
+ */
 typedef struct {
 	RMProjectedPoint origin;
 	RMProjectedSize size;
 } RMProjectedRect;
 
-/// \brief The function checks whether two passed projected points are equal.
+/**
+ * APIProperty: RMProjectedPointEqualToProjectedPoint
+ * {bool} The function checks whether two passed projected points are equal.
+ */
 bool RMProjectedPointEqualToProjectedPoint(RMProjectedPoint point1, RMProjectedPoint point2);
-/// \brief The fuction returns true if the passed sizes are equal 
+/**
+ * APIProperty: RMProjectedSizeEqualToProjectedSize
+ * {bool} The fuction returns true if the passed sizes are equal 
+ */
 bool RMProjectedSizeEqualToProjectedSize(RMProjectedSize size1, RMProjectedSize size2);
-/// \brief The fuction returns true if the passed rects are equal 
+/**
+ * APIProperty: RMProjectedRectEqualToProjectedRect
+ * {bool} The fuction returns true if the passed rects are equal 
+ */
 bool RMProjectedRectEqualToProjectedRect(RMProjectedRect rect1, RMProjectedRect rect2);
-/// \brief The function returns true if passed rects intersect each other.
+/**
+ * APIProperty: RMProjectedRectInterectsProjectedRect
+ * {bool} The function returns true if passed rects intersect each other.
+ */
 bool RMProjectedRectInterectsProjectedRect(RMProjectedRect rect1, RMProjectedRect rect2);
 
 RMProjectedPoint RMScaleProjectedPointAboutPoint (RMProjectedPoint point, float factor, RMProjectedPoint pivot);
@@ -64,8 +82,14 @@ RMProjectedPoint RMMakeProjectedPoint (double easting, double northing);
 RMProjectedSize RMMakeProjectedSize(double width, double height); 
 RMProjectedRect RMMakeProjectedRect (double easting, double northing, double width, double height);
 
-/// \brief The function returns the midpoint easting of the given rect.
+/**
+ * APIProperty: RMProjectedRectGetMidEasting
+ * {double} The function returns the midpoint easting of the given rect.
+ */
 double RMProjectedRectGetMidEasting(RMProjectedRect rect);
 
-/// \brief The function returns the midpoint northing of the given rect.
+/**
+ * APIProperty: RMProjectedRectGetMidNorthing
+ * {double} The function returns the midpoint northing of the given rect.
+ */
 double RMProjectedRectGetMidNorthing(RMProjectedRect rect);

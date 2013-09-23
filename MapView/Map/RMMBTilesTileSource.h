@@ -47,12 +47,24 @@
 #define kMBTilesDefaultMaxTileZoom 22
 #define kMBTilesDefaultLatLonBoundingBox ((RMSphericalTrapezium){ .northeast = { .latitude =  85, .longitude =  180 }, \
                                                                   .southwest = { .latitude = -85, .longitude = -180 } })
-
+/**
+ * Constant: RMMBTilesLayerType
+ * {enum} 
+ *
+ * RMMBTilesLayerTypeBaselayer: 0,
+ * RMMBTilesLayerTypeOverlay: 1,
+ */
 typedef enum {
     RMMBTilesLayerTypeBaselayer = 0,
     RMMBTilesLayerTypeOverlay   = 1,
 } RMMBTilesLayerType;
 
+/**
+ * Class: RMMBTilesTileSource
+ *
+ * Inherits from:
+ *  - <RMTileSource>
+ */
 @interface RMMBTilesTileSource : NSObject <RMTileSource>
 {
     RMFractalTileProjection *tileProjection;

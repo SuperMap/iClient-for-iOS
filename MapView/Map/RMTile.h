@@ -64,13 +64,31 @@ char RMTilesEqual(RMTile one, RMTile two);
 char RMTileIsDummy(RMTile tile);
 RMTile RMTileDummy();
 
-/// Return a hash of the tile, used to override the NSObject hash method for RMTile.
+/**
+ * APIMethod: RMTileHash
+ * Return a hash of the tile, used to override the NSObject hash method for RMTile.
+ *
+ * Parameters:
+ * tile - {<RMTile>}
+ */
 uint64_t RMTileHash(RMTile tile);
 
-/// Returns a unique key of the tile for use in the SQLite cache
+/**
+ * APIMethod: RMTileKey
+ * Returns a unique key of the tile for use in the SQLite cache
+ *
+ * Parameters:
+ * tile - {<RMTile>}
+ */
 uint64_t RMTileKey(RMTile tile);
 
-/// Round the rectangle to whole numbers of tiles
+/**
+ * APIMethod: RMTileRectRound
+ * Round the rectangle to whole numbers of tiles
+ *
+ * Parameters:
+ * rect - {<RMTileRect>}
+ */
 RMTileRect RMTileRectRound(RMTileRect rect);
 /*
 /// Calculate and return the intersection of two rectangles

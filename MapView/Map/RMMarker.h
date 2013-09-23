@@ -33,9 +33,14 @@
 #endif
 
 @class RMMarkerStyle;
-
-/// one marker drawn on the map. Note that RMMarker ultimately descends from CALayer, and has an image contents.
-/// RMMarker inherits "position" and "anchorPoint" from CALayer.
+/**
+ * Class: RMMarker
+ * one marker drawn on the map. Note that RMMarker ultimately descends from CALayer, and has an image contents.
+ * RMMarker inherits "position" and "anchorPoint" from CALayer.
+ *
+ * Inherits from:
+ *  - <RMMapLayer>
+ */
 @interface RMMarker : RMMapLayer <RMMovingMapLayer> {
 	/// expressed in projected meters. The anchorPoint of the image is plotted here. 
 	RMProjectedPoint projectedLocation;	
@@ -59,10 +64,22 @@
 @property(nonatomic,retain) UIColor *textForegroundColor;
 @property(nonatomic,retain) UIColor *textBackgroundColor;
 
-/// the font used for labels when another font is not explicitly requested; currently [UIFont systemFontOfSize:15]
+/**
+ * APIMethod: defaultFont
+ * the font used for labels when another font is not explicitly requested; currently [UIFont systemFontOfSize:15]
+ *
+ * Returns:
+ * {<UIFont *>}
+ */
 + (UIFont *)defaultFont;
 
-/// returns RMMarker initialized with #image, and the default anchor point (0.5, 0.5)
+/**
+ * APIMethod: initWithUIImage
+ * returns RMMarker initialized with #image, and the default anchor point (0.5, 0.5)
+ *
+ * Parameters:
+ * image - {<UIImage*>}
+ */
 - (id) initWithUIImage: (UIImage*) image;
 /// \brief returns RMMarker initialized with provided image and anchorPoint. 
 /// #anchorPoint x and y range from 0 to 1, normalized to the width and height of image, 

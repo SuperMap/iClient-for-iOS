@@ -32,8 +32,11 @@
 
 @class RMMercatorToScreenProjection;
 
-/// A tile projection is a projection which turns mercators into tile coordinates.
-/// At time of writing, read RMFractalTileProjection to see the implementation of this.
+/**
+ * Class: RMMercatorToTileProjection
+ * A tile projection is a projection which turns mercators into tile coordinates.
+ * At time of writing, read RMFractalTileProjection to see the implementation of this.
+ */
 @protocol RMMercatorToTileProjection<NSObject>
 
 -(RMTilePoint) project: (RMProjectedPoint)aPoint atZoom:(float)zoom;
@@ -53,15 +56,26 @@
 -(float) calculateNormalisedZoomFromScale: (float) scale;
 -(float) calculateScaleFromZoom: (float) zoom;
 
-/// bounds of the earth, in projected units (meters).
+/**
+ * APIProperty: planetBounds
+ * {RMProjectedRect} bounds of the earth, in projected units (meters).
+ */
 @property(readonly, nonatomic) RMProjectedRect planetBounds;
 
-/// Maximum zoom for which we have tile images 
+/**
+ * APIProperty: maxZoom
+ * {NSUInteger} Maximum zoom for which we have tile images
+ */ 
 @property(readonly, nonatomic) NSUInteger maxZoom;
-/// Minimum zoom for which we have tile images 
+/**
+ * APIProperty: minZoom
+ * {NSUInteger} Minimum zoom for which we have tile images 
+ */ 
 @property(readonly, nonatomic) NSUInteger minZoom;
-
-/// Tile side length in pixels
+/**
+ * APIProperty: tileSideLength
+ * {NSUInteger} Tile side length in pixels
+ */ 
 @property(readonly, nonatomic) NSUInteger tileSideLength;
 
 @end

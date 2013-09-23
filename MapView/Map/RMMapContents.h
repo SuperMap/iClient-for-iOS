@@ -32,7 +32,6 @@
 
 #import "RMTilesUpdateDelegate.h"
 
-
 // constants for boundingMask
 enum {
 	// Map can be zoomed out past view limits
@@ -70,16 +69,17 @@ enum {
 @end
 
 
-/*! \brief The cartographic and data components of a map. Do not retain.
- 
- There is exactly one RMMapContents instance for each RMMapView instance.
- 
- \warning Do not retain an RMMapContents instance. Instead, ask the RMMapView for its contents 
- when you need it. It is an error for an RMMapContents instance to exist without a view, and 
- if you retain the RMMapContents, it can't go away when the RMMapView is released.
- 
- At some point, it's likely that RMMapContents and RMMapView will be merged into one class.
- 
+ /**
+ * Class: RMMapContents
+ *The cartographic and data components of a map. Do not retain.
+ *
+ *There is exactly one RMMapContents instance for each RMMapView instance.
+ * 
+ *warning:Do not retain an RMMapContents instance. Instead, ask the RMMapView for its contents 
+ *when you need it. It is an error for an RMMapContents instance to exist without a view, and 
+ *if you retain the RMMapContents, it can't go away when the RMMapView is released.
+ *
+ *At some point, it's likely that RMMapContents and RMMapView will be merged into one class.
  */
 @interface RMMapContents : NSObject
 {
@@ -128,7 +128,10 @@ enum {
 @property (readonly)  CGRect screenBounds;
 @property (readwrite) float metersPerPixel;
 @property (readonly)  float scaledMetersPerPixel;
-/// zoom level is clamped to range (minZoom, maxZoom)
+/**
+ * APIProperty: zoom
+ * zoom level is clamped to range (minZoom, maxZoom)
+ */
 @property (readwrite) float zoom;
 
 @property (nonatomic, readwrite) float minZoom, maxZoom;
@@ -153,7 +156,10 @@ enum {
 /// \bug probably shouldn't be retaining this delegate
 @property (nonatomic, retain) id<RMTilesUpdateDelegate> tilesUpdateDelegate;
 @property (readwrite) NSUInteger boundingMask;
-/// The denominator in a cartographic scale like 1/24000, 1/50000, 1/2000000.
+/**
+ * APIProperty: scaleDenominator
+ * {double} The denominator in a cartographic scale like 1/24000, 1/50000, 1/2000000.
+ */
 @property (readonly)double scaleDenominator;
 
 // tileDepth defaults to zero. if tiles have no alpha, set this higher, 3 or so, to make zooming smoother
@@ -174,7 +180,16 @@ enum {
    backgroundImage:(UIImage *)backgroundImage
        screenScale:(float)theScreenScale;
 
-/// \deprecated subject to removal at any moment after 0.5 is released
+/**
+ * APIMethod: initForView
+ * subject to removal at any moment after 0.5 is released
+ *
+ ** Parameters:
+ * view - {UIView*}  
+ *
+ ** Returns:
+ *{id}
+ */
 - (id) initForView: (UIView*) view;
 /// \deprecated subject to removal at any moment after 0.5 is released
 - (id) initForView: (UIView*) view WithLocation:(CLLocationCoordinate2D)latlong;
@@ -187,7 +202,13 @@ enum {
 - (void)didReceiveMemoryWarning;
 
 - (void)moveToLatLong: (CLLocationCoordinate2D)latlong;
-/// \deprecate Use setCenterProjectedPoint: instead.
+/**
+ * APIMethod: moveToProjectedPoint
+ * Use setCenterProjectedPoint: instead.
+ *
+ ** Parameters:
+ * aPoint - {RMProjectedPoint}  
+ */
 - (void)moveToProjectedPoint: (RMProjectedPoint)aPoint;
 
 - (void)moveBy: (CGSize) delta;
@@ -224,22 +245,37 @@ enum {
 - (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)se;
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 
-/// returns the smallest bounding box containing the entire screen
+/**
+ * APIMethod: latitudeLongitudeBoundingBoxFor
+ * returns the smallest bounding box containing the entire screen
+ */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxForScreen;
-/// returns the smallest bounding box containing a rectangular region of the screen
+/**
+ * APIMethod: latitudeLongitudeBoundingBoxFor
+ * returns the smallest bounding box containing a rectangular region of the screen
+ *
+ ** Parameters:
+ * rect - {CGRect}  
+ *
+ ** Returns:
+ *{RMSphericalTrapezium}
+ */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxFor:(CGRect) rect;
 
 - (void)setRotation:(float)angle;
 
 - (void) tilesUpdatedRegion:(CGRect)region;
 
-/*! \brief Clear all images from the #tileSource's caching system.
- 
- All of the existing RMTileSource implementations load tile images via NSURLRequest. It's possible that some images will remain in your
- application's shared URL cache. If you need to clear this out too, use this call:
- \code
- [[NSURLCache sharedURLCache] removeAllCachedResponses];
- \endcode
+ /**
+ * APIMethod: removeAllCachedImages
+ * Clear all images from the #tileSource's caching system.
+ *
+ *All of the existing RMTileSource implementations load tile images via NSURLRequest. It's possible that some images will remain in *your
+ *application's shared URL cache. If you need to clear this out too, use this call:
+ *
+ * \code
+ *[[NSURLCache sharedURLCache] removeAllCachedResponses];
+ *\endcode
  */
 -(void)removeAllCachedImages;
 
@@ -271,9 +307,22 @@ enum {
 - (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)se;
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 
-/// \deprecated name change pending after 0.5
+/**
+ * APIMethod: latitudeLongitudeBoundingBoxForScreen
+ * name change pending after 0.5
+ */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxForScreen;
-/// \deprecated name change pending after 0.5
+
+/**
+ * APIMethod: latitudeLongitudeBoundingBoxFor
+ * name change pending after 0.5
+ *
+ ** Parameters:
+ * rect - {CGRect}  
+ *
+ ** Returns:
+ *{RMSphericalTrapezium}
+ */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxFor:(CGRect) rect;
 
 - (void) tilesUpdatedRegion:(CGRect)region;

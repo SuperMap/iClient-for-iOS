@@ -28,7 +28,12 @@
 #import <Foundation/Foundation.h>
 #import "RMTile.h"
 #import "RMTileCache.h"
-
+/**
+ * Class: RMMemoryCache
+ *
+ * Inherits from:
+ *  - <RMTileCache>
+ */
 @interface RMMemoryCache : NSObject<RMTileCache> {
 	NSMutableDictionary *cache;
 

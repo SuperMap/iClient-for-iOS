@@ -40,17 +40,95 @@ Timestamp: 更新于 10/26/2012
 
 Group: SuperMap  {
 
+   File: RMMapContents.h  (RMMapContents.h)
+   File: RMMapView.h  (RMMapView.h)
+   File: RMMapViewDelegate  (RMMapViewDelegate.h)
+   File: RMWMS  (RMWMS.h)
+
+   Group: Configuration  {
+
+      File: RMConfiguration  (RMConfiguration.h)
+      }  # Group: Configuration
+
+   Group: Coordinate Systems  {
+
+      File: RMLatLong  (RMLatLong.h)
+      File: RMFoundation.h  (RMFoundation.h)
+      File: RMGeoHash  (RMGeoHash.h)
+      File: RMTile.h  (RMTile.h)
+      }  # Group: Coordinate Systems
+
    Group: Tile Source  {
 
       File: RMSMLayerInfo  (RMSMLayerInfo.h)
       File: RMSMTileSource  (RMSMTileSource.h)
       File: RMCloudMapSource  (RMCloudMapSource.h)
       File: RMSMMBTileSource  (RMSMMBTileSource.h)
+      File: RMAbstractMercatorWebSource  (RMAbstractMercatorWebSource.h)
+      File: RMCachedTileSource  (RMCachedTileSource.h)
+      File: RMCloudMapSource  (RMCloudMapSource.h)
+      File: RMDBMapSource  (RMDBMapSource.h)
+      File: RMMapQuestOSMSource  (RMMapQuestOSMSource.h)
+      File: RMMBTilesTileSource.h  (RMMBTilesTileSource.h)
+      File: RMOpenAerialMapSource  (RMOpenAerialMapSource.h)
+      File: RMOpenCycleMapSource  (RMOpenCycleMapSource.h)
+      File: RMOpenStreetMapSource  (RMOpenStreetMapSource.h)
+      File: RMSpatialCloudMapSource  (RMSpatialCloudMapSource.h)
+      File: RMTileMapServiceSource  (RMTileMapServiceSource.h)
+      File: RMTileSource  (RMTileSource.h)
+      File: RMTileStreamSource.h  (RMTileStreamSource.h)
+      File: RMVirtualEarthSource  (RMVirtualEarthSource.h)
+      File: RMYahooMapSource  (RMYahooMapSource.h)
+      File: RMWMSSource  (RMWMSSource.h)
+
+      Group: Cache  {
+
+         File: RMDatabaseCache  (RMDatabaseCache.h)
+         File: RMMemoryCache  (RMMemoryCache.h)
+         File: RMTileCache  (RMTileCache.h)
+         File: RMTileCacheDAO  (RMTileCacheDAO.h)
+         }  # Group: Cache
+
+      File: RMTileCacheSource  (RMTileCacheSource.h)
+      File: RMTiledLayerController  (RMTiledLayerController.h)
+      File: RMTransform  (RMTransform.h)
       }  # Group: Tile Source
+
+   Group: Tile Image  {
+
+      File: RMDBTileImage  (RMDBTileImage.h)
+      File: RMFileTileImage  (RMFileTileImage.h)
+      File: RMTileImage  (RMTileImage.h)
+      File: RMTileImageSet  (RMTileImageSet.h)
+      File: RMTileLoader  (RMTileLoader.h)
+      File: RMTileProxy  (RMTileProxy.h)
+      File: RMURLConnectionOperation  (RMURLConnectionOperation.h)
+      File: RMWebTileImage  (RMWebTileImage.h)
+      }  # Group: Tile Image
+
+   Group: Markers and other layers  {
+
+      File: RMMarker  (RMMarker.h)
+      File: RMCircle  (RMCircle.h)
+      File: RMLayerCollection  (RMLayerCollection.h)
+      File: RMMapLayer  (RMMapLayer.h)
+      File: RMMarkerManager  (RMMarkerManager.h)
+      File: RMPath  (RMPath.h)
+      }  # Group: Markers and other layers
+
+   Group: Renderers  {
+
+      File: RMCoreAnimationRenderer  (RMCoreAnimationRenderer.h)
+      File: RMMapRenderer  (RMMapRenderer.h)
+      }  # Group: Renderers
 
    Group: Projection  {
 
+      File: RMProjection  (RMProjection.h)
       File: RMSMTileProjection  (RMSMTileProjection.h)
+      File: RMFractalTileProjection  (RMFractalTileProjection.h)
+      File: RMMercatorToScreenProjection  (RMMercatorToScreenProjection.h)
+      File: RMMercatorToTileProjection  (RMMercatorToTileProjection.h)
       }  # Group: Projection
 
    Group: REST  {
@@ -98,5 +176,7 @@ Group: Index  {
    Constructor Index: Constructor
    Function Index: Functions
    Property Index: Properties
+   Constant Index: Constants
+   File Index: Files
    }  # Group: Index
 

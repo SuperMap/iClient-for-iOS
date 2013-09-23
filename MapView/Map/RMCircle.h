@@ -32,7 +32,10 @@
 
 @class RMMapContents;
 
-
+/**
+ * Class: RMCircle
+ * 
+ */
 @interface RMCircle : RMMapLayer <RMMovingMapLayer> {
 @private
 	RMMapContents* mapContents;

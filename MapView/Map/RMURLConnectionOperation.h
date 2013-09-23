@@ -29,7 +29,9 @@
 #import <Foundation/Foundation.h>
 
 @protocol RMURLConnectionOperationDelegate;
-
+/**
+ * Class: RMURLConnectionOperation
+ */
 @interface RMURLConnectionOperation : NSOperation
 
 - (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate;

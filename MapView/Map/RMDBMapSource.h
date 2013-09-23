@@ -30,6 +30,10 @@
 #import "RMProjection.h"
 #import "FMDatabase.h"
 
+/**
+ * Class: RMDBMapSource
+ *
+ */
 @interface RMDBMapSource : NSObject<RMTileSource> {
 	// tile database
 	FMDatabase* db;

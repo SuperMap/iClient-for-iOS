@@ -41,6 +41,10 @@
 
 @end
 
+/**
+ * Class: RMAbstractMercatorWebSource
+ * 
+ */
 @interface RMAbstractMercatorWebSource : NSObject <RMTileSource> {
 	RMFractalTileProjection *tileProjection;
 	BOOL networkOperations;
