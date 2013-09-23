@@ -21,12 +21,28 @@
 
 - (id) initWithTile:(NSString *)layerName linkurl:(NSString*)url;
 {
+    BOOL bAscii = true;
+    for(int i=0; i< [url length];i++){
+        int a = [url characterAtIndex:i];
+        if( a > 0x4e00 && a < 0x9fff)
+        {
+            bAscii = false;
+            break;
+        }
+    }
+    
+    if (bAscii == false) {
+        url =  [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    }
+    
     smurl = [[NSString alloc] initWithString:url];
     
+    
+
     name = [[NSString alloc] initWithString:layerName];
     //[smurl initWithString:url];
     //NSLog(@"%@",smurl);
-    NSString *urlString =[NSString stringWithFormat:@"%@.json",url];
+    NSString *urlString =[NSString stringWithFormat:@"%@.json",smurl];
     
     
     
@@ -56,7 +72,7 @@
     
     NSString *immutableString = [NSString stringWithString:result];
     
-    NSData* aData = [immutableString dataUsingEncoding: NSASCIIStringEncoding];
+    NSData* aData = [immutableString dataUsingEncoding: NSUTF8StringEncoding];
     
     NSDictionary* json =[NSJSONSerialization
                          JSONObjectWithData:aData //1
