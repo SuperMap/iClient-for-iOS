@@ -398,6 +398,7 @@
 				FE15380C17D42B330098416B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

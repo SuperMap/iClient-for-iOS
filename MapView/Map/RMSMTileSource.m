@@ -217,24 +217,24 @@
 
 -(NSString*) uniqueTilecacheKey
 {
-	return @"SuperMap";
+	return m_Info.smurl;
 }
 
 -(NSString *)shortName
 {
-	return @"SM";
+	return m_Info.smurl;
 }
 -(NSString *)longDescription
 {
-	return @"Su";
+	return m_Info.smurl;
 }
 -(NSString *)shortAttribution
 {
-	return @"SuperMap iServer REST Map";
+	return m_Info.smurl;
 }
 -(NSString *)longAttribution
 {
-	return @"SuperMap iServer REST Map";
+	return m_Info.smurl;
 }
 -(void) removeAllCachedImages
 {

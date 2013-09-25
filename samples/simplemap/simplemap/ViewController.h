@@ -12,8 +12,10 @@
 
 @interface ViewController : UIViewController{
     RMMapView *mapView;
+    RMSMLayerInfo* info;
 }
 
 @property (nonatomic, retain) RMMapView *mapView;
+@property (nonatomic, retain) RMSMLayerInfo* info;
 
 @end

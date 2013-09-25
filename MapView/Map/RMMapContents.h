@@ -47,7 +47,7 @@ enum {
 
 #define kDefaultMinimumZoomLevel 0.0
 #define kDefaultMaximumZoomLevel 25.0
-#define kDefaultInitialZoomLevel 3.0
+#define kDefaultInitialZoomLevel 6.0
 
 @class RMMarkerManager;
 @class RMProjection;
