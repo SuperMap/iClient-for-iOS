@@ -5,7 +5,7 @@ SuperMap iClient for iOS是一套基于iOS平台的轻量级地图软件开发�
 特点
  
  - 在iOS平台下访问SuperMap iServer REST地图服务，更加轻便、灵活
- - 不依赖于浏览器
+ - 不依赖于浏览器https://github.com/SuperMap/iClient-for-iOS/edit/master/README.markdown#fullscreen_blob_contents
  - 对接SuperMap iServer REST地图服务，提供丰富的地图框架的解决方案，用户更好的专注于自己的业务需求
 
  功能
@@ -24,3 +24,14 @@ SuperMap iClient for iOS是一套基于iOS平台的轻量级地图软件开发�
 ### 三、许可授权
 
 详见“LICENSE.txt”。
+
+### 四、目录说明
+
+doc 存放iClient for iOS API接口说明文档
+help存放iClient for iOS 帮助文档
+MapView存放iClient for iOS 的开源库
+Proj4为用于投影转换的开源库
+samples存放iClient for iOS 的使用范例
+License用于说明iClient for iOS免费版和商业版两种使用方式的许可
+index.html为产品帮助文档首页
+README.markdown为产品说明文档
