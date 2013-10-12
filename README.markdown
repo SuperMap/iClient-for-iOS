@@ -27,11 +27,11 @@ SuperMap iClient for iOS是一套基于iOS平台的轻量级地图软件开发�
 
 ### 四、目录说明
 
-doc 存放iClient for iOS API接口说明文档
-help存放iClient for iOS 帮助文档
-MapView存放iClient for iOS 的开源库
-Proj4为用于投影转换的开源库
-samples存放iClient for iOS 的使用范例
-License用于说明iClient for iOS免费版和商业版两种使用方式的许可
-index.html为产品帮助文档首页
-README.markdown为产品说明文档
+- doc 存放iClient for iOS API接口说明文档。
+- help存放iClient for iOS 帮助文档
+- MapView存放iClient for iOS 的开源库
+- Proj4为用于投影转换的开源库
+- samples存放iClient for iOS 的使用范例
+- License用于说明iClient for iOS免费版和商业版两种使用方式的许可
+- index.html为产品帮助文档首页
+- README.markdown为产品说明文档
