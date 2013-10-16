@@ -84,18 +84,32 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
 
 - (RMProjectedPoint) wrapPointHorizontally: (RMProjectedPoint) aPoint
 {
-    if (bIsSM) {             
+    if (bIsSM) {
+        if (aPoint.easting < (planetBounds.origin.easting))
+            aPoint.easting = planetBounds.origin.easting;
+        if (aPoint.easting > (planetBounds.origin.easting + planetBounds.size.width))
+            aPoint.easting -= planetBounds.size.width;
+        
+        if (aPoint.northing < planetBounds.origin.northing)
+            aPoint.northing = planetBounds.origin.northing;
+        else if (aPoint.northing > (planetBounds.origin.northing + planetBounds.size.height))
+            aPoint.northing = planetBounds.origin.northing ;//+ planetBounds.size.height;
+        //NSLog(@"%f",planetBounds.size.width);
         return aPoint;
     }
+    else
+    {
+        if (!projectionWrapsHorizontally
+            || planetBounds.size.width == 0.0f || planetBounds.size.height == 0.0f)
+            return aPoint;
+        
+        while (aPoint.easting < planetBounds.origin.easting)
+            aPoint.easting += planetBounds.size.width;
+        while (aPoint.easting > (planetBounds.origin.easting + planetBounds.size.width))
+            aPoint.easting -= planetBounds.size.width;
+    }
     
-	if (!projectionWrapsHorizontally
-		|| planetBounds.size.width == 0.0f || planetBounds.size.height == 0.0f)
-		return aPoint;
 	
-	while (aPoint.easting < planetBounds.origin.easting)
-		aPoint.easting += planetBounds.size.width;
-	while (aPoint.easting > (planetBounds.origin.easting + planetBounds.size.width))
-		aPoint.easting -= planetBounds.size.width;
 	
 	return aPoint;
 }
