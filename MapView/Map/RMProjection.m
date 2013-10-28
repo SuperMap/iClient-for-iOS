@@ -131,7 +131,7 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
 
 - (RMProjectedPoint)latLongToPoint:(RMLatLong)aLatLong
 {
-    if (false) {
+    if (bIsSM) {
         RMProjectedPoint result_pointSm = {
             aLatLong.longitude,
             aLatLong.latitude,
@@ -146,6 +146,7 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
 	
 	projUV result = pj_fwd(uv, internalProjection);
 	
+    
 	RMProjectedPoint result_point = {
 		result.u,
 		result.v,

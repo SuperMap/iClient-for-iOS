@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "459"
-         endingLineNumber = "459"
+         startingLineNumber = "464"
+         endingLineNumber = "464"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1074,12 +1074,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMProjection.m"
-         timestampString = "393305610.664656"
+         timestampString = "404644232.084504"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "186"
-         endingLineNumber = "186"
-         landmarkName = "+smProjection:"
+         startingLineNumber = "187"
+         endingLineNumber = "187"
+         landmarkName = "+googleProjection"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1365,7 +1365,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "126"
          endingLineNumber = "126"
-         landmarkName = "-latLongToPoint:"
+         landmarkName = "-constrainPointToBounds:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1373,12 +1373,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/RMProjection.m"
-         timestampString = "393305610.664656"
+         timestampString = "404644232.084504"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "195"
-         endingLineNumber = "195"
-         landmarkName = "+smProjection:"
+         startingLineNumber = "196"
+         endingLineNumber = "196"
+         landmarkName = "+googleProjection"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1391,7 +1391,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "120"
          endingLineNumber = "120"
-         landmarkName = "-latLongToPoint:"
+         landmarkName = "-constrainPointToBounds:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1646,11 +1646,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "410"
-         endingLineNumber = "410"
+         startingLineNumber = "415"
+         endingLineNumber = "415"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1659,11 +1659,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "371"
-         endingLineNumber = "371"
+         startingLineNumber = "376"
+         endingLineNumber = "376"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1685,11 +1685,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "401"
-         endingLineNumber = "401"
+         startingLineNumber = "406"
+         endingLineNumber = "406"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1698,11 +1698,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "390"
-         endingLineNumber = "390"
+         startingLineNumber = "395"
+         endingLineNumber = "395"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1711,24 +1711,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "394"
+         endingLineNumber = "394"
+         landmarkName = "-performTest"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/MapTestbedAppDelegate.m"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "389"
          endingLineNumber = "389"
-         landmarkName = "-performTest"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "384"
-         endingLineNumber = "384"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1763,11 +1763,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "385"
-         endingLineNumber = "385"
+         startingLineNumber = "390"
+         endingLineNumber = "390"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1880,11 +1880,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "386"
-         endingLineNumber = "386"
+         startingLineNumber = "391"
+         endingLineNumber = "391"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1969,11 +1969,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "206"
-         endingLineNumber = "206"
+         startingLineNumber = "225"
+         endingLineNumber = "225"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1982,11 +1982,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "200"
-         endingLineNumber = "200"
+         startingLineNumber = "219"
+         endingLineNumber = "219"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -1995,11 +1995,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "192"
-         endingLineNumber = "192"
+         startingLineNumber = "211"
+         endingLineNumber = "211"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2008,11 +2008,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "197"
-         endingLineNumber = "197"
+         startingLineNumber = "216"
+         endingLineNumber = "216"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2034,11 +2034,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393929546.340409"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
          landmarkName = "-processAsync:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2047,11 +2047,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "335"
-         endingLineNumber = "335"
+         startingLineNumber = "340"
+         endingLineNumber = "340"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2073,11 +2073,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "345"
-         endingLineNumber = "345"
+         startingLineNumber = "350"
+         endingLineNumber = "350"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2086,11 +2086,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393929546.340409"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
+         startingLineNumber = "96"
+         endingLineNumber = "96"
          landmarkName = "-connection:didReceiveResponse:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2099,11 +2099,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393929546.340409"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "91"
-         endingLineNumber = "91"
+         startingLineNumber = "105"
+         endingLineNumber = "105"
          landmarkName = "-connection:didReceiveData:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2112,11 +2112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393929546.340409"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "110"
+         endingLineNumber = "110"
          landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2125,11 +2125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393929546.340409"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "110"
+         endingLineNumber = "110"
          landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2138,11 +2138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393929546.340409"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
          landmarkName = "-processAsync:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2255,11 +2255,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393996718.142665"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "109"
-         endingLineNumber = "109"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
          landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2294,11 +2294,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393996718.142665"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "108"
-         endingLineNumber = "108"
+         startingLineNumber = "122"
+         endingLineNumber = "122"
          landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2372,11 +2372,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "393996736.50368"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
          landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2489,11 +2489,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "328"
-         endingLineNumber = "328"
+         startingLineNumber = "333"
+         endingLineNumber = "333"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2502,11 +2502,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "324"
-         endingLineNumber = "324"
+         startingLineNumber = "329"
+         endingLineNumber = "329"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2541,11 +2541,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "307"
-         endingLineNumber = "307"
+         startingLineNumber = "312"
+         endingLineNumber = "312"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -2554,11 +2554,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../../MapView/Map/QueryService.m"
-         timestampString = "394013631.654463"
+         timestampString = "404644400.205916"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "113"
+         endingLineNumber = "113"
          landmarkName = "-connectionDidFinishLoading:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -3698,11 +3698,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "300"
-         endingLineNumber = "300"
+         startingLineNumber = "305"
+         endingLineNumber = "305"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -4673,11 +4673,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397970344.604891"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "252"
-         endingLineNumber = "252"
+         startingLineNumber = "271"
+         endingLineNumber = "271"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -4829,11 +4829,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/MapTestbedAppDelegate.m"
-         timestampString = "397987966.058847"
+         timestampString = "404628945.1512"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "187"
-         endingLineNumber = "187"
+         startingLineNumber = "206"
+         endingLineNumber = "206"
          landmarkName = "-performTest"
          landmarkType = "5">
       </FileBreakpoint>
@@ -4847,7 +4847,20 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "121"
          endingLineNumber = "121"
-         landmarkName = "-latLongToPoint:"
+         landmarkName = "-constrainPointToBounds:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/MapTestbedAppDelegate.m"
+         timestampString = "404644227.910731"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "106"
+         endingLineNumber = "106"
+         landmarkName = "-processCompleted:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -50,6 +50,22 @@ static void saveApplier(void* info, const CGPathElement* element)
 }
 
 - (id)init:(NSString*)mapurl {
+    
+    BOOL bAscii = true;
+    for(int i=0; i< [mapurl length];i++){
+        int a = [mapurl characterAtIndex:i];
+        if( a > 0x4e00 && a < 0x9fff)
+        {
+            bAscii = false;
+            break;
+        }
+    }
+    
+    if (bAscii == false) {
+        mapurl =  [mapurl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    }
+
+    
     strUrl = [[NSString alloc] initWithString:mapurl];
     return self;
 }

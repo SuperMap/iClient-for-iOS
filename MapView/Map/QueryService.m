@@ -13,6 +13,20 @@
 
 -(id) init:(NSString*)strUrl
 {
+    BOOL bAscii = true;
+    for(int i=0; i< [strUrl length];i++){
+        int a = [strUrl characterAtIndex:i];
+        if( a > 0x4e00 && a < 0x9fff)
+        {
+            bAscii = false;
+            break;
+        }
+    }
+    
+    if (bAscii == false) {
+        strUrl =  [strUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    }
+    
     strQueryUrl = [[NSString alloc] initWithString:strUrl];
     
     NSString *strEnd = [strQueryUrl substringFromIndex:[strQueryUrl length]-1];
