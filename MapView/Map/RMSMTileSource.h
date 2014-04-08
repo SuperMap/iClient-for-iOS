@@ -96,6 +96,8 @@
  */
 -(float) maxZoom;
 
+-(float) numberZoomLevels;
+
 -(RMSphericalTrapezium) latitudeLongitudeBoundingBox;
 
 -(NSString *)shortName;

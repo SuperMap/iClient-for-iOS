@@ -72,6 +72,7 @@
     m_Info = info;
     int nCount = [resolutions count];
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:nCount];
+    m_dResolutions = resolutions;
     m_dScale = [[NSMutableArray alloc] initWithCapacity:nCount];
     
     NSString*  strScale;
@@ -128,6 +129,10 @@
 	return (float)tileProjection.maxZoom;
 }
 
+-(float) numberZoomLevels
+{
+    return [m_dScale count]-1;
+}
 -(void) setMinZoom:(NSUInteger)aMinZoom
 {
 	[tileProjection setMinZoom:aMinZoom];

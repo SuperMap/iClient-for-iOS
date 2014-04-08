@@ -117,15 +117,17 @@
 -(id)initWithView:(UIView *)view tilesource:(id<RMTileSource>)newTilesource screenScale:(float)theScreenScale
 {	
 	LogMethod();
+    
+    float maximumZoomLevel=[newTilesource numberZoomLevels];
+
 	CLLocationCoordinate2D here;
 	here.latitude = kDefaultInitialLatitude;
 	here.longitude = kDefaultInitialLongitude;
-	
-	return [self initWithView:view
+       	return [self initWithView:view
 				   tilesource:newTilesource
 				 centerLatLon:here
 					zoomLevel:kDefaultInitialZoomLevel
-				 maxZoomLevel:kDefaultMaximumZoomLevel
+				 maxZoomLevel:maximumZoomLevel
 				 minZoomLevel:kDefaultMinimumZoomLevel
 			  backgroundImage:nil
                   screenScale:theScreenScale];
@@ -875,7 +877,14 @@
 {
         return [mercatorToTileProjection calculateZoomFromScale:[self scaledMetersPerPixel]];
 }
+/*
+-(float) numberZoomLevel
+{
+   // NSLog(@"OK");
+    return [tileSource numberZoomLevel];
+}
 
+ */
 /// if #zoom is outside of range #minZoom to #maxZoom, zoom level is clamped to that range.
 -(void) setZoom: (float) zoom
 {

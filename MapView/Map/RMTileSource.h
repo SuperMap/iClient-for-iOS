@@ -40,8 +40,7 @@
 /**
  * Class: RMTileSource
  */
-@protocol RMTileSource <NSObject>
-
+@protocol RMTileSource <NSObject> 
 -(RMTileImage *) tileImage: (RMTile) tile;
 -(NSString *) tileURL: (RMTile) tile;
 -(NSString *) tileFile: (RMTile) tile;
@@ -51,6 +50,7 @@
 
 -(float) minZoom;
 -(float) maxZoom;
+-(float) numberZoomLevels;
 
 -(void) setMinZoom:(NSUInteger) aMinZoom;
 -(void) setMaxZoom:(NSUInteger) aMaxZoom;

@@ -47,7 +47,7 @@ enum {
 
 #define kDefaultMinimumZoomLevel 0.0
 #define kDefaultMaximumZoomLevel 25.0
-#define kDefaultInitialZoomLevel 6.0
+#define kDefaultInitialZoomLevel 0.0
 
 @class RMMarkerManager;
 @class RMProjection;
@@ -134,7 +134,7 @@ enum {
  */
 @property (readwrite) float zoom;
 
-@property (nonatomic, readwrite) float minZoom, maxZoom;
+@property (nonatomic, readwrite) float minZoom, maxZoom,numberZoomLevel;
 
 @property (nonatomic, readonly) float screenScale;
 

@@ -200,13 +200,13 @@
                 float d2 = oldScale - scale;
                 if(d1<d2)
                 {
-//                    NSLog(@"zoom %d",zoom);
+                    //NSLog(@"zoom %d",zoom);
                     return zoom;
                 }
 
                 else
                 {
-//                    NSLog(@"zoom %d",zoom);
+                    //NSLog(@"zoom %d",zoom);
                     return zoom;
                 }
             }
@@ -214,7 +214,7 @@
         zoom++;
         
     }
-  //  NSLog(@"zoom %d",zoom);
+   NSLog(@"zoom %d",zoom);
 	return zoom;
 }
 
