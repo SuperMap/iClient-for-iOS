@@ -263,36 +263,6 @@
 		FE96C6DE177C25DC003017A9 /* QueryByGeometryParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96C6DC177C25DB003017A9 /* QueryByGeometryParameters.m */; };
 		FED38EE3178E963800A91F98 /* RMSMMBTileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */; };
 		FED38EE4178E963800A91F98 /* RMSMMBTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */; };
-		FED3D14718EE46AF00D1523F /* FlipsideView.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D0F818EE46AE00D1523F /* FlipsideView.h */; };
-		FED3D14818EE46AF00D1523F /* FlipsideView.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D0F918EE46AE00D1523F /* FlipsideView.m */; };
-		FED3D14918EE46AF00D1523F /* FlipsideViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D0FA18EE46AE00D1523F /* FlipsideViewController.h */; };
-		FED3D14A18EE46AF00D1523F /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D0FB18EE46AE00D1523F /* FlipsideViewController.m */; };
-		FED3D14B18EE46AF00D1523F /* MainView.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D0FC18EE46AE00D1523F /* MainView.h */; };
-		FED3D14C18EE46AF00D1523F /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D0FD18EE46AE00D1523F /* MainView.m */; };
-		FED3D14D18EE46AF00D1523F /* MainViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D0FE18EE46AE00D1523F /* MainViewController.h */; };
-		FED3D14E18EE46AF00D1523F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D0FF18EE46AE00D1523F /* MainViewController.m */; };
-		FED3D14F18EE46AF00D1523F /* MapTestbedAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D10018EE46AE00D1523F /* MapTestbedAppDelegate.h */; };
-		FED3D15018EE46AF00D1523F /* MapTestbedAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D10118EE46AE00D1523F /* MapTestbedAppDelegate.m */; };
-		FED3D15118EE46AF00D1523F /* RootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D10218EE46AE00D1523F /* RootViewController.h */; };
-		FED3D15218EE46AF00D1523F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D10318EE46AE00D1523F /* RootViewController.m */; };
-		FED3D15318EE46AF00D1523F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D10818EE46AE00D1523F /* main.m */; };
-		FED3D15418EE46AF00D1523F /* MapTestbed_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = FED3D10F18EE46AE00D1523F /* MapTestbed_Prefix.pch */; };
-		FED3D15518EE46AF00D1523F /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D11418EE46AE00D1523F /* AppDelegate.h */; };
-		FED3D15618EE46AF00D1523F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D11518EE46AE00D1523F /* AppDelegate.m */; };
-		FED3D15718EE46AF00D1523F /* FirstViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D12118EE46AE00D1523F /* FirstViewController.h */; };
-		FED3D15818EE46AF00D1523F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D12218EE46AE00D1523F /* FirstViewController.m */; };
-		FED3D15918EE46AF00D1523F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D12318EE46AE00D1523F /* main.m */; };
-		FED3D15A18EE46AF00D1523F /* mapwithmarker-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = FED3D12518EE46AE00D1523F /* mapwithmarker-Prefix.pch */; };
-		FED3D15B18EE46AF00D1523F /* SecondViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D12918EE46AE00D1523F /* SecondViewController.h */; };
-		FED3D15C18EE46AF00D1523F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D12A18EE46AE00D1523F /* SecondViewController.m */; };
-		FED3D15D18EE46AF00D1523F /* SMCalloutView.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D12B18EE46AE00D1523F /* SMCalloutView.h */; };
-		FED3D15E18EE46AF00D1523F /* SMCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D12C18EE46AE00D1523F /* SMCalloutView.m */; };
-		FED3D15F18EE46AF00D1523F /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D13318EE46AF00D1523F /* AppDelegate.h */; };
-		FED3D16018EE46AF00D1523F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D13418EE46AF00D1523F /* AppDelegate.m */; };
-		FED3D16118EE46AF00D1523F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D13E18EE46AF00D1523F /* main.m */; };
-		FED3D16218EE46AF00D1523F /* simplemap-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = FED3D14018EE46AF00D1523F /* simplemap-Prefix.pch */; };
-		FED3D16318EE46AF00D1523F /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FED3D14118EE46AF00D1523F /* ViewController.h */; };
-		FED3D16418EE46AF00D1523F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED3D14218EE46AF00D1523F /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,27 +286,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Proj4;
-		};
-		FED3D16618EE46AF00D1523F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FED3D10B18EE46AE00D1523F /* MapTestbed.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
-			remoteInfo = MapTestbed;
-		};
-		FED3D16918EE46AF00D1523F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FED3D12D18EE46AE00D1523F /* mapwithmarker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FEC6ED2A17D5912200862A1A;
-			remoteInfo = mapwithmarker;
-		};
-		FED3D16C18EE46AF00D1523F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FED3D14318EE46AF00D1523F /* simplemap.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FE1537E417D42B330098416B;
-			remoteInfo = simplemap;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -557,65 +506,6 @@
 		FE96C6DC177C25DB003017A9 /* QueryByGeometryParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryByGeometryParameters.m; sourceTree = "<group>"; };
 		FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMMBTileSource.h; sourceTree = "<group>"; };
 		FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSMMBTileSource.m; sourceTree = "<group>"; };
-		FED3D0F818EE46AE00D1523F /* FlipsideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideView.h; sourceTree = "<group>"; };
-		FED3D0F918EE46AE00D1523F /* FlipsideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideView.m; sourceTree = "<group>"; };
-		FED3D0FA18EE46AE00D1523F /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
-		FED3D0FB18EE46AE00D1523F /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
-		FED3D0FC18EE46AE00D1523F /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
-		FED3D0FD18EE46AE00D1523F /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
-		FED3D0FE18EE46AE00D1523F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		FED3D0FF18EE46AE00D1523F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		FED3D10018EE46AE00D1523F /* MapTestbedAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTestbedAppDelegate.h; sourceTree = "<group>"; };
-		FED3D10118EE46AE00D1523F /* MapTestbedAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTestbedAppDelegate.m; sourceTree = "<group>"; };
-		FED3D10218EE46AE00D1523F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		FED3D10318EE46AE00D1523F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		FED3D10418EE46AE00D1523F /* FlipsideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
-		FED3D10518EE46AE00D1523F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FED3D10718EE46AE00D1523F /* MainWindow-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
-		FED3D10818EE46AE00D1523F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FED3D10918EE46AE00D1523F /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		FED3D10A18EE46AE00D1523F /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		FED3D10B18EE46AE00D1523F /* MapTestbed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MapTestbed.xcodeproj; sourceTree = "<group>"; };
-		FED3D10F18EE46AE00D1523F /* MapTestbed_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTestbed_Prefix.pch; sourceTree = "<group>"; };
-		FED3D11018EE46AE00D1523F /* marker-X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker-X.png"; sourceTree = "<group>"; };
-		FED3D11118EE46AE00D1523F /* markerflag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = markerflag.png; sourceTree = "<group>"; };
-		FED3D11418EE46AE00D1523F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FED3D11518EE46AE00D1523F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FED3D11618EE46AE00D1523F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FED3D11718EE46AE00D1523F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		FED3D11818EE46AE00D1523F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		FED3D11A18EE46AE00D1523F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FED3D11C18EE46AE00D1523F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		FED3D11E18EE46AE00D1523F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		FED3D11F18EE46AE00D1523F /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		FED3D12018EE46AE00D1523F /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		FED3D12118EE46AE00D1523F /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		FED3D12218EE46AE00D1523F /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		FED3D12318EE46AE00D1523F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FED3D12418EE46AE00D1523F /* mapwithmarker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "mapwithmarker-Info.plist"; sourceTree = "<group>"; };
-		FED3D12518EE46AE00D1523F /* mapwithmarker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mapwithmarker-Prefix.pch"; sourceTree = "<group>"; };
-		FED3D12618EE46AE00D1523F /* mylocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mylocation.png; sourceTree = "<group>"; };
-		FED3D12718EE46AE00D1523F /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		FED3D12818EE46AE00D1523F /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		FED3D12918EE46AE00D1523F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		FED3D12A18EE46AE00D1523F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		FED3D12B18EE46AE00D1523F /* SMCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCalloutView.h; sourceTree = "<group>"; };
-		FED3D12C18EE46AE00D1523F /* SMCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCalloutView.m; sourceTree = "<group>"; };
-		FED3D12D18EE46AE00D1523F /* mapwithmarker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = mapwithmarker.xcodeproj; sourceTree = "<group>"; };
-		FED3D13318EE46AF00D1523F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FED3D13418EE46AF00D1523F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FED3D13518EE46AF00D1523F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FED3D13618EE46AF00D1523F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		FED3D13718EE46AF00D1523F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		FED3D13918EE46AF00D1523F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FED3D13B18EE46AF00D1523F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		FED3D13D18EE46AF00D1523F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		FED3D13E18EE46AF00D1523F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FED3D13F18EE46AF00D1523F /* simplemap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "simplemap-Info.plist"; sourceTree = "<group>"; };
-		FED3D14018EE46AF00D1523F /* simplemap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "simplemap-Prefix.pch"; sourceTree = "<group>"; };
-		FED3D14118EE46AF00D1523F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FED3D14218EE46AF00D1523F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FED3D14318EE46AF00D1523F /* simplemap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = simplemap.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -703,7 +593,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				FED3D0F518EE46AE00D1523F /* samples */,
 				2BF0E4540F73119C0095A926 /* Documentation */,
 				2B246B230F8AE20300A7D55D /* Testing */,
 				B8C9740D0E8A196E007D16AD /* Map */,
@@ -1094,153 +983,6 @@
 			name = ServerType;
 			sourceTree = "<group>";
 		};
-		FED3D0F518EE46AE00D1523F /* samples */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D0F618EE46AE00D1523F /* MapTestbed */,
-				FED3D11218EE46AE00D1523F /* mapwithmarker */,
-				FED3D13118EE46AF00D1523F /* simplemap */,
-			);
-			name = samples;
-			path = ../samples;
-			sourceTree = "<group>";
-		};
-		FED3D0F618EE46AE00D1523F /* MapTestbed */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D0F718EE46AE00D1523F /* Classes */,
-				FED3D10418EE46AE00D1523F /* FlipsideView.xib */,
-				FED3D10518EE46AE00D1523F /* Info.plist */,
-				FED3D10618EE46AE00D1523F /* iPad */,
-				FED3D10818EE46AE00D1523F /* main.m */,
-				FED3D10918EE46AE00D1523F /* MainView.xib */,
-				FED3D10A18EE46AE00D1523F /* MainWindow.xib */,
-				FED3D10B18EE46AE00D1523F /* MapTestbed.xcodeproj */,
-				FED3D10F18EE46AE00D1523F /* MapTestbed_Prefix.pch */,
-				FED3D11018EE46AE00D1523F /* marker-X.png */,
-				FED3D11118EE46AE00D1523F /* markerflag.png */,
-			);
-			path = MapTestbed;
-			sourceTree = "<group>";
-		};
-		FED3D0F718EE46AE00D1523F /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D0F818EE46AE00D1523F /* FlipsideView.h */,
-				FED3D0F918EE46AE00D1523F /* FlipsideView.m */,
-				FED3D0FA18EE46AE00D1523F /* FlipsideViewController.h */,
-				FED3D0FB18EE46AE00D1523F /* FlipsideViewController.m */,
-				FED3D0FC18EE46AE00D1523F /* MainView.h */,
-				FED3D0FD18EE46AE00D1523F /* MainView.m */,
-				FED3D0FE18EE46AE00D1523F /* MainViewController.h */,
-				FED3D0FF18EE46AE00D1523F /* MainViewController.m */,
-				FED3D10018EE46AE00D1523F /* MapTestbedAppDelegate.h */,
-				FED3D10118EE46AE00D1523F /* MapTestbedAppDelegate.m */,
-				FED3D10218EE46AE00D1523F /* RootViewController.h */,
-				FED3D10318EE46AE00D1523F /* RootViewController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		FED3D10618EE46AE00D1523F /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D10718EE46AE00D1523F /* MainWindow-iPad.xib */,
-			);
-			path = iPad;
-			sourceTree = "<group>";
-		};
-		FED3D10C18EE46AE00D1523F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D16718EE46AF00D1523F /* MapTestbed.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FED3D11218EE46AE00D1523F /* mapwithmarker */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D11318EE46AE00D1523F /* mapwithmarker */,
-				FED3D12D18EE46AE00D1523F /* mapwithmarker.xcodeproj */,
-			);
-			path = mapwithmarker;
-			sourceTree = "<group>";
-		};
-		FED3D11318EE46AE00D1523F /* mapwithmarker */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D11418EE46AE00D1523F /* AppDelegate.h */,
-				FED3D11518EE46AE00D1523F /* AppDelegate.m */,
-				FED3D11618EE46AE00D1523F /* Default-568h@2x.png */,
-				FED3D11718EE46AE00D1523F /* Default.png */,
-				FED3D11818EE46AE00D1523F /* Default@2x.png */,
-				FED3D11918EE46AE00D1523F /* InfoPlist.strings */,
-				FED3D11B18EE46AE00D1523F /* MainStoryboard_iPad.storyboard */,
-				FED3D11D18EE46AE00D1523F /* MainStoryboard_iPhone.storyboard */,
-				FED3D11F18EE46AE00D1523F /* first.png */,
-				FED3D12018EE46AE00D1523F /* first@2x.png */,
-				FED3D12118EE46AE00D1523F /* FirstViewController.h */,
-				FED3D12218EE46AE00D1523F /* FirstViewController.m */,
-				FED3D12318EE46AE00D1523F /* main.m */,
-				FED3D12418EE46AE00D1523F /* mapwithmarker-Info.plist */,
-				FED3D12518EE46AE00D1523F /* mapwithmarker-Prefix.pch */,
-				FED3D12618EE46AE00D1523F /* mylocation.png */,
-				FED3D12718EE46AE00D1523F /* second.png */,
-				FED3D12818EE46AE00D1523F /* second@2x.png */,
-				FED3D12918EE46AE00D1523F /* SecondViewController.h */,
-				FED3D12A18EE46AE00D1523F /* SecondViewController.m */,
-				FED3D12B18EE46AE00D1523F /* SMCalloutView.h */,
-				FED3D12C18EE46AE00D1523F /* SMCalloutView.m */,
-			);
-			path = mapwithmarker;
-			sourceTree = "<group>";
-		};
-		FED3D12E18EE46AE00D1523F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D16A18EE46AF00D1523F /* mapwithmarker.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FED3D13118EE46AF00D1523F /* simplemap */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D13218EE46AF00D1523F /* simplemap */,
-				FED3D14318EE46AF00D1523F /* simplemap.xcodeproj */,
-			);
-			path = simplemap;
-			sourceTree = "<group>";
-		};
-		FED3D13218EE46AF00D1523F /* simplemap */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D13318EE46AF00D1523F /* AppDelegate.h */,
-				FED3D13418EE46AF00D1523F /* AppDelegate.m */,
-				FED3D13518EE46AF00D1523F /* Default-568h@2x.png */,
-				FED3D13618EE46AF00D1523F /* Default.png */,
-				FED3D13718EE46AF00D1523F /* Default@2x.png */,
-				FED3D13818EE46AF00D1523F /* InfoPlist.strings */,
-				FED3D13A18EE46AF00D1523F /* MainStoryboard_iPad.storyboard */,
-				FED3D13C18EE46AF00D1523F /* MainStoryboard_iPhone.storyboard */,
-				FED3D13E18EE46AF00D1523F /* main.m */,
-				FED3D13F18EE46AF00D1523F /* simplemap-Info.plist */,
-				FED3D14018EE46AF00D1523F /* simplemap-Prefix.pch */,
-				FED3D14118EE46AF00D1523F /* ViewController.h */,
-				FED3D14218EE46AF00D1523F /* ViewController.m */,
-			);
-			path = simplemap;
-			sourceTree = "<group>";
-		};
-		FED3D14418EE46AF00D1523F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FED3D16D18EE46AF00D1523F /* simplemap.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FEE0BDAE1772F46600A881BB /* Query */ = {
 			isa = PBXGroup;
 			children = (
@@ -1292,19 +1034,14 @@
 				B8C974190E8A19B2007D16AD /* RMMapRenderer.h in Headers */,
 				B8C9741D0E8A19B2007D16AD /* RMCoreAnimationRenderer.h in Headers */,
 				B8C974220E8A19B2007D16AD /* RMProjection.h in Headers */,
-				FED3D15B18EE46AF00D1523F /* SecondViewController.h in Headers */,
-				FED3D15518EE46AF00D1523F /* AppDelegate.h in Headers */,
 				B8C974230E8A19B2007D16AD /* RMTileCache.h in Headers */,
 				B8C974260E8A19B2007D16AD /* RMTile.h in Headers */,
-				FED3D14718EE46AF00D1523F /* FlipsideView.h in Headers */,
 				B8C974270E8A19B2007D16AD /* RMPixel.h in Headers */,
 				B8C974290E8A19B2007D16AD /* RMFileTileImage.h in Headers */,
-				FED3D14F18EE46AF00D1523F /* MapTestbedAppDelegate.h in Headers */,
 				B8C9742A0E8A19B2007D16AD /* RMTileImage.h in Headers */,
 				B8C9742B0E8A19B2007D16AD /* RMMemoryCache.h in Headers */,
 				B8C9742D0E8A19B2007D16AD /* RMFractalTileProjection.h in Headers */,
 				B8C9742F0E8A19B2007D16AD /* RMMapLayer.h in Headers */,
-				FED3D14B18EE46AF00D1523F /* MainView.h in Headers */,
 				B8C974310E8A19B2007D16AD /* RMAbstractMercatorWebSource.h in Headers */,
 				B8C9745C0E8A19E5007D16AD /* RMTileImageSet.h in Headers */,
 				B8C9745E0E8A19E6007D16AD /* RMTileLoader.h in Headers */,
@@ -1325,24 +1062,18 @@
 				B8474BA20EB40094006A0BC1 /* RMTileCacheDAO.h in Headers */,
 				B8474BA40EB40094006A0BC1 /* RMDatabaseCache.h in Headers */,
 				23A0AAEB0EB90AA6003A4521 /* RMFoundation.h in Headers */,
-				FED3D15418EE46AF00D1523F /* MapTestbed_Prefix.pch in Headers */,
 				23A0ABAA0EB923AF003A4521 /* RMLatLong.h in Headers */,
-				FED3D15D18EE46AF00D1523F /* SMCalloutView.h in Headers */,
 				B8800FF10EC3A237003E9CDD /* RMMarkerManager.h in Headers */,
 				B8800FF20EC3A239003E9CDD /* RMMapViewDelegate.h in Headers */,
 				B8800FF30EC3A23D003E9CDD /* RMConfiguration.h in Headers */,
-				FED3D14D18EE46AF00D1523F /* MainViewController.h in Headers */,
-				FED3D15118EE46AF00D1523F /* RootViewController.h in Headers */,
 				090FE3140ECD71A500035FBC /* RMTilesUpdateDelegate.h in Headers */,
 				B8CEB1C50ED5A3480014C431 /* RMPath.h in Headers */,
-				FED3D15718EE46AF00D1523F /* FirstViewController.h in Headers */,
 				2B5682720F68E36000E8DF40 /* RMOpenAerialMapSource.h in Headers */,
 				96FE8E360F72D01B00A11CF0 /* RMYahooMapSource.h in Headers */,
 				F5C12D2A0F8A86CA00A894D2 /* RMGeoHash.h in Headers */,
 				96492C400FA8AD3400EBA6D2 /* RMGlobalConstants.h in Headers */,
 				B144DEFE0FD989C3003F3368 /* RMTileMapServiceSource.h in Headers */,
 				B1EB26C310B5D8C0009F8658 /* RMOpenCycleMapSource.h in Headers */,
-				FED3D16318EE46AF00D1523F /* ViewController.h in Headers */,
 				B1EB26C610B5D8E6009F8658 /* RMNotifications.h in Headers */,
 				D1437B35122869E400888DAE /* RMDBTileImage.h in Headers */,
 				D1437B37122869E400888DAE /* RMDBMapSource.h in Headers */,
@@ -1360,18 +1091,15 @@
 				FE19279D17695657003B2E46 /* RMSMTileSource.h in Headers */,
 				FE1927A417695695003B2E46 /* RMSMLayerInfo.h in Headers */,
 				FE59C7F81771A0FE000A532B /* RMSMMeasureService.h in Headers */,
-				FED3D14918EE46AF00D1523F /* FlipsideViewController.h in Headers */,
 				FE59C7FC1771A3E3000A532B /* RMSMMeasureParameters.h in Headers */,
 				FE64F85D17781C4300935CEB /* ServerGeometry.h in Headers */,
 				FE221B68177968FC0051A2C2 /* DatasourceConnectionInfo.h in Headers */,
 				FE221B6C17796C0F0051A2C2 /* LinkItem.h in Headers */,
-				FED3D16218EE46AF00D1523F /* simplemap-Prefix.pch in Headers */,
 				FE221B7017796F670051A2C2 /* JoinItem.h in Headers */,
 				FE221B74177972680051A2C2 /* FilterParameter.h in Headers */,
 				FE221B781779779F0051A2C2 /* QueryParameters.h in Headers */,
 				FE221B7C17797D4C0051A2C2 /* QueryService.h in Headers */,
 				FE221B8017797DC60051A2C2 /* QueryByBoundsParameters.h in Headers */,
-				FED3D15A18EE46AF00D1523F /* mapwithmarker-Prefix.pch in Headers */,
 				FE221B84177983080051A2C2 /* QueryByBoundsService.h in Headers */,
 				FE237B68177AD566000C8B42 /* ServerFeature.h in Headers */,
 				FE237B6C177AD5D6000C8B42 /* Recordset.h in Headers */,
@@ -1384,7 +1112,6 @@
 				FE96C6DD177C25DC003017A9 /* QueryByGeometryParameters.h in Headers */,
 				FE74F63F1785124C0063C6A2 /* RMCloudMapSource.h in Headers */,
 				FED38EE3178E963800A91F98 /* RMSMMBTileSource.h in Headers */,
-				FED3D15F18EE46AF00D1523F /* AppDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1451,8 +1178,6 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MapView" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -1468,20 +1193,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FED3D10C18EE46AE00D1523F /* Products */;
-					ProjectRef = FED3D10B18EE46AE00D1523F /* MapTestbed.xcodeproj */;
-				},
-				{
-					ProductGroup = FED3D12E18EE46AE00D1523F /* Products */;
-					ProjectRef = FED3D12D18EE46AE00D1523F /* mapwithmarker.xcodeproj */;
-				},
-				{
 					ProductGroup = 38D8184C0F6F67B90034598B /* Products */;
 					ProjectRef = B83E654A0E80E7A8001663B6 /* Proj4.xcodeproj */;
-				},
-				{
-					ProductGroup = FED3D14418EE46AF00D1523F /* Products */;
-					ProjectRef = FED3D14318EE46AF00D1523F /* simplemap.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1501,27 +1214,6 @@
 			fileType = archive.ar;
 			path = libProj4.a;
 			remoteRef = 38D8184F0F6F67B90034598B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FED3D16718EE46AF00D1523F /* MapTestbed.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = MapTestbed.app;
-			remoteRef = FED3D16618EE46AF00D1523F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FED3D16A18EE46AF00D1523F /* mapwithmarker.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = mapwithmarker.app;
-			remoteRef = FED3D16918EE46AF00D1523F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FED3D16D18EE46AF00D1523F /* simplemap.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = simplemap.app;
-			remoteRef = FED3D16C18EE46AF00D1523F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1677,27 +1369,21 @@
 				B8C9743A0E8A19B2007D16AD /* RMCoreAnimationRenderer.m in Sources */,
 				B8C9743F0E8A19B2007D16AD /* RMTileImage.m in Sources */,
 				B8C974400E8A19B2007D16AD /* RMTile.c in Sources */,
-				FED3D15218EE46AF00D1523F /* RootViewController.m in Sources */,
-				FED3D14E18EE46AF00D1523F /* MainViewController.m in Sources */,
-				FED3D14C18EE46AF00D1523F /* MainView.m in Sources */,
 				B8C974410E8A19B2007D16AD /* RMOpenStreetMapSource.m in Sources */,
 				B8C974420E8A19B2007D16AD /* RMMemoryCache.m in Sources */,
 				B8C974430E8A19B2007D16AD /* RMPixel.c in Sources */,
 				B8C974440E8A19B2007D16AD /* RMFractalTileProjection.m in Sources */,
 				B8C974460E8A19B2007D16AD /* RMFileTileImage.m in Sources */,
-				FED3D16118EE46AF00D1523F /* main.m in Sources */,
 				B8C974480E8A19B2007D16AD /* RMTileCache.m in Sources */,
 				B8C9744A0E8A19B2007D16AD /* RMProjection.m in Sources */,
 				B8C9744C0E8A19B2007D16AD /* RMAbstractMercatorWebSource.m in Sources */,
 				B8C9745D0E8A19E6007D16AD /* RMTileImageSet.m in Sources */,
 				B8C9745F0E8A19E7007D16AD /* RMTileLoader.m in Sources */,
-				FED3D14A18EE46AF00D1523F /* FlipsideViewController.m in Sources */,
 				B8C974610E8A19E8007D16AD /* RMTileProxy.m in Sources */,
 				B8C974640E8A19E9007D16AD /* RMTransform.m in Sources */,
 				B8C974660E8A19EA007D16AD /* RMVirtualEarthSource.m in Sources */,
 				B8C974680E8A19EB007D16AD /* RMWebTileImage.m in Sources */,
 				B8C9746C0E8A1A50007D16AD /* RMMapView.m in Sources */,
-				FED3D15018EE46AF00D1523F /* MapTestbedAppDelegate.m in Sources */,
 				B8C974B90E8A280A007D16AD /* RMMapContents.m in Sources */,
 				B8C974CB0E8A9C30007D16AD /* RMCachedTileSource.m in Sources */,
 				B8FA921A0E9315EC003A9FE6 /* RMLayerCollection.m in Sources */,
@@ -1707,26 +1393,21 @@
 				B8474B9D0EB40094006A0BC1 /* FMDatabaseAdditions.m in Sources */,
 				B8474BA00EB40094006A0BC1 /* FMResultSet.m in Sources */,
 				B8474BA30EB40094006A0BC1 /* RMTileCacheDAO.m in Sources */,
-				FED3D15E18EE46AF00D1523F /* SMCalloutView.m in Sources */,
 				B8474BA50EB40094006A0BC1 /* RMDatabaseCache.m in Sources */,
 				126693040EB76C0B00E002D5 /* RMConfiguration.m in Sources */,
 				23A0AAE90EB90A99003A4521 /* RMFoundation.c in Sources */,
 				B8800FF00EC3A237003E9CDD /* RMMarkerManager.m in Sources */,
 				B8CEB1C60ED5A3480014C431 /* RMPath.m in Sources */,
 				2B5682730F68E36000E8DF40 /* RMOpenAerialMapSource.m in Sources */,
-				FED3D15618EE46AF00D1523F /* AppDelegate.m in Sources */,
 				96FE8E370F72D01B00A11CF0 /* RMYahooMapSource.m in Sources */,
 				F5C12D2B0F8A86CA00A894D2 /* RMGeoHash.m in Sources */,
-				FED3D16018EE46AF00D1523F /* AppDelegate.m in Sources */,
 				B144DEFF0FD989C3003F3368 /* RMTileMapServiceSource.m in Sources */,
-				FED3D15C18EE46AF00D1523F /* SecondViewController.m in Sources */,
 				B1EB26C410B5D8C0009F8658 /* RMOpenCycleMapSource.m in Sources */,
 				D1437B34122869E400888DAE /* RMDBTileImage.m in Sources */,
 				D1437B36122869E400888DAE /* RMDBMapSource.m in Sources */,
 				25757F501291C8640083D504 /* RMCircle.m in Sources */,
 				2702E97012EB9DB50027A466 /* RMSpatialCloudMapSource.m in Sources */,
 				DD55FD1412FB40E000B6FE24 /* RMMBTilesTileSource.m in Sources */,
-				FED3D16418EE46AF00D1523F /* ViewController.m in Sources */,
 				447420DB1302B2F5004D6E8A /* RMWMSSource.m in Sources */,
 				4474211C1302B60A004D6E8A /* RMWMS.m in Sources */,
 				175701DF1323C2E900A5D314 /* NSUserDefaults+RouteMe.m in Sources */,
@@ -1734,7 +1415,6 @@
 				DDCD58D41406F8A400F59E0D /* RMTileStreamSource.m in Sources */,
 				F56554F9146E002B00623AC9 /* RMURLConnectionOperation.m in Sources */,
 				FE19279A1769563F003B2E46 /* RMSMTileProjection.m in Sources */,
-				FED3D15318EE46AF00D1523F /* main.m in Sources */,
 				FE19279E17695657003B2E46 /* RMSMTileSource.m in Sources */,
 				FE1927A517695695003B2E46 /* RMSMLayerInfo.m in Sources */,
 				FE59C7F91771A0FE000A532B /* RMSMMeasureService.m in Sources */,
@@ -1752,12 +1432,9 @@
 				FE237B6D177AD5D6000C8B42 /* Recordset.m in Sources */,
 				FE237B71177AE51E000C8B42 /* QueryResult.m in Sources */,
 				FE96C6CA177C1697003017A9 /* QueryByDistanceParameters.m in Sources */,
-				FED3D14818EE46AF00D1523F /* FlipsideView.m in Sources */,
 				FE96C6CE177C18D9003017A9 /* QueryByDistanceService.m in Sources */,
 				FE96C6D2177C24AE003017A9 /* QueryBySQLParameters.m in Sources */,
 				FE96C6D6177C24EE003017A9 /* QueryBySQLService.m in Sources */,
-				FED3D15818EE46AF00D1523F /* FirstViewController.m in Sources */,
-				FED3D15918EE46AF00D1523F /* main.m in Sources */,
 				FE96C6DA177C25C3003017A9 /* QueryByGeometryService.m in Sources */,
 				FE96C6DE177C25DC003017A9 /* QueryByGeometryParameters.m in Sources */,
 				FE74F6401785124C0063C6A2 /* RMCloudMapSource.m in Sources */,
@@ -1787,54 +1464,6 @@
 				17157D8F133BBC8300E28941 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		FED3D11918EE46AE00D1523F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FED3D11A18EE46AE00D1523F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		FED3D11B18EE46AE00D1523F /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FED3D11C18EE46AE00D1523F /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		FED3D11D18EE46AE00D1523F /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FED3D11E18EE46AE00D1523F /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		FED3D13818EE46AF00D1523F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FED3D13918EE46AF00D1523F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		FED3D13A18EE46AF00D1523F /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FED3D13B18EE46AF00D1523F /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		FED3D13C18EE46AF00D1523F /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FED3D13D18EE46AF00D1523F /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

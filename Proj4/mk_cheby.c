@@ -18,7 +18,7 @@ eval(projUV **w, int nu, int nv, double res, projUV *resid) {
 		}
 }
 	static Tseries * /* create power series structure */
-makeT(int nru, int nrv) {		
+makeT(int nru, int nrv) {
 	Tseries *Ts;
 	int i;
 
