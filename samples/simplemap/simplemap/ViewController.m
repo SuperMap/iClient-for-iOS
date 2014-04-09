@@ -33,23 +33,19 @@
     [resolutions addObject:[NSNumber numberWithDouble:0.125]];
     
     [resolutions addObject:[NSNumber numberWithDouble:0.0625]];
-    
+
     [resolutions addObject:[NSNumber numberWithDouble:0.03125]];
     [resolutions addObject:[NSNumber numberWithDouble:0.015625]];
     [resolutions addObject:[NSNumber numberWithDouble:0.0078125]];
-    //   [resolutions addObject:[NSNumber numberWithDouble:0.00390625]];
+ //   [resolutions addObject:[NSNumber numberWithDouble:0.00390625]];
     
     //RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];
     
     RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info resolutions:resolutions];
     RMMapContents *newContents = [[RMMapContents alloc] initWithView:mapView tilesource:smSource];
     //[newContents set]
-
-   // RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];
-   // RMMapContents *newContents = [[RMMapContents alloc] initWithView:mapView tilesource:smSource];
-    //[newContents set]
     
-    [mapView setContents:newContents];
+    [mapView setContents:newContents];   
     
     RMProjectedPoint prjPnt;
     prjPnt.easting = 4503;

@@ -61,7 +61,7 @@
  * {float} 当前地图最大显示层级。
  */
 -(float) maxZoom;
-
+-(float) numberZoomLevels;
 -(RMSphericalTrapezium) latitudeLongitudeBoundingBox;
 
 -(void) networkOperationsNotification: (NSNotification*) notification;

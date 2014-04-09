@@ -98,6 +98,11 @@
 	return (float)tileProjection.maxZoom;
 }
 
+-(float) numberZoomLevels
+{
+    return [m_dResolutions count]-1;
+}
+
 -(void) setMinZoom:(NSUInteger)aMinZoom
 {
 	[tileProjection setMinZoom:aMinZoom];
