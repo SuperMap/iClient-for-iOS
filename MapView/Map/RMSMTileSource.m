@@ -68,7 +68,7 @@
 -(id) initWithInfo:(RMSMLayerInfo*) info resolutions:(NSMutableArray*)resolutions
 {
     [self init];
-    
+
     m_Info = info;
     int nCount = [resolutions count];
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:nCount];
@@ -213,8 +213,9 @@
     
     NSString* strScale = [m_dScale objectAtIndex:(int)tile.zoom];
 	//float fScale = [result floatValue];
-        
-    NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?transparent=true&cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@",m_Info.smurl,tile.x, tile.y,strScale];
+     //transparent=true&cacheEnabled=true&redirect=true
+
+    NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@",m_Info.smurl,tile.x, tile.y,strScale];
     //NSLog(@"%@",strUrl);
 
 	return strUrl;

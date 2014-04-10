@@ -19,11 +19,11 @@
 		FE15380117D42B330098416B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1537FF17D42B330098416B /* MainStoryboard_iPhone.storyboard */; };
 		FE15380417D42B330098416B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE15380217D42B330098416B /* MainStoryboard_iPad.storyboard */; };
 		FE15380717D42B330098416B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE15380617D42B330098416B /* ViewController.m */; };
-		FE15381C17D42B840098416B /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15381717D42B4E0098416B /* libMapView.a */; };
 		FE15381F17D42B8E0098416B /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15381D17D42B8E0098416B /* libsqlite3.0.dylib */; };
 		FE15382017D42B8E0098416B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15381E17D42B8E0098416B /* libsqlite3.dylib */; };
 		FE15382217D42B9A0098416B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15382117D42B9A0098416B /* QuartzCore.framework */; };
 		FE15382417D42BAE0098416B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15382317D42BAE0098416B /* CoreFoundation.framework */; };
+		FE7B4EE218F62EBF00460EA2 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15381717D42B4E0098416B /* libMapView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 2BF3078F0F8AC5C0007014EE;
 			remoteInfo = "Unit Tests";
+		};
+		FE7B4EDE18F62EA600460EA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE15380D17D42B4C0098416B /* MapView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C974130E8A19B2007D16AD;
+			remoteInfo = MapView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -80,11 +87,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7B4EE218F62EBF00460EA2 /* libMapView.a in Frameworks */,
 				FE15382417D42BAE0098416B /* CoreFoundation.framework in Frameworks */,
 				FE15382217D42B9A0098416B /* QuartzCore.framework in Frameworks */,
 				FE15381F17D42B8E0098416B /* libsqlite3.0.dylib in Frameworks */,
 				FE15382017D42B8E0098416B /* libsqlite3.dylib in Frameworks */,
-				FE15381C17D42B840098416B /* libMapView.a in Frameworks */,
 				FE1537E817D42B330098416B /* UIKit.framework in Frameworks */,
 				FE1537EA17D42B330098416B /* Foundation.framework in Frameworks */,
 				FE1537EC17D42B330098416B /* CoreGraphics.framework in Frameworks */,
@@ -178,6 +185,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FE7B4EDF18F62EA600460EA2 /* PBXTargetDependency */,
 			);
 			name = simplemap;
 			productName = simplemap;
@@ -268,6 +276,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE7B4EDF18F62EA600460EA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapView;
+			targetProxy = FE7B4EDE18F62EA600460EA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FE1537F017D42B330098416B /* InfoPlist.strings */ = {
