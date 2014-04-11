@@ -34,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FE902F8E18F691BD00C00C54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEC6ED5E17D5915600862A1A /* MapView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C974130E8A19B2007D16AD;
+			remoteInfo = MapView;
+		};
 		FEC6ED6717D5915700862A1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FEC6ED5E17D5915600862A1A /* MapView.xcodeproj */;
@@ -203,6 +210,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FE902F8F18F691BD00C00C54 /* PBXTargetDependency */,
 			);
 			name = mapwithmarker;
 			productName = mapwithmarker;
@@ -300,6 +308,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE902F8F18F691BD00C00C54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapView;
+			targetProxy = FE902F8E18F691BD00C00C54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FEC6ED3617D5912200862A1A /* InfoPlist.strings */ = {
@@ -434,6 +450,7 @@
 				FEC6ED5D17D5912300862A1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -192,8 +192,8 @@
 {
     double dHeight = m_Info.dHeight;
     double dWidth = m_Info.dWidth;
-    double dleft = m_Info.m_pntOrg.latitude;
-    double dbottom = m_Info.m_pntOrg.longitude - dHeight;
+    double dleft = m_Info.m_pntOrg.longitude;
+    double dbottom = m_Info.m_pntOrg.latitude - dHeight;
 //    NSLog(@"%f,%f,%f,%f",dleft,dbottom,dWidth,dHeight);
     RMProjectedRect theBounds = RMMakeProjectedRect(dleft,dbottom,dWidth,dHeight);
     

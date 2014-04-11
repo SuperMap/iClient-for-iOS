@@ -134,7 +134,7 @@ enum {
  */
 @property (readwrite) float zoom;
 
-@property (nonatomic, readwrite) float minZoom, maxZoom,numberZoomLevel;
+@property (nonatomic, readwrite) float minZoom, maxZoom;
 
 @property (nonatomic, readonly) float screenScale;
 

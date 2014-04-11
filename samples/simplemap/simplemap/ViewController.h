@@ -10,7 +10,8 @@
 
 #import "RMMapView.h"
 
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController
+{
     RMMapView *mapView;
     RMSMLayerInfo* info;
 }
