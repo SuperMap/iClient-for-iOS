@@ -72,19 +72,20 @@
     m_Info = info;
     int nCount = [resolutions count];
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:nCount];
-    m_dResolutions = resolutions;
+   // m_dResolutions = resolutions;
     m_dScale = [[NSMutableArray alloc] initWithCapacity:nCount];
     
     NSString*  strScale;
-    id dScale;
+    id dResolutions;
     for(int i=0;i<nCount;++i)
     {
-        dScale = [m_dResolutions objectAtIndex:(int)i];
-        [m_dResolutions addObject:[NSNumber numberWithDouble:[dScale doubleValue]]];
-        strScale = [m_Info getScaleFromResolutionDpi:[dScale doubleValue]];
+        dResolutions = [resolutions objectAtIndex:(int)i];
+        [m_dResolutions addObject:[NSNumber numberWithDouble:[dResolutions doubleValue]]];
+        strScale = [m_Info getScaleFromResolutionDpi:[dResolutions doubleValue]];
         //NSLog(@"%@",strScale);
         [m_dScale addObject:strScale];
     }
+    
     
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
     
@@ -92,6 +93,39 @@
 	[self setMinZoom:0];
     return  self;
 }
+
+-(id) initWithInfo:(RMSMLayerInfo*) info scales:(NSMutableArray*) scales
+{
+    [self init];
+    
+    m_Info = info;
+    int nCount = [scales count];
+    m_dScale = [[NSMutableArray alloc] initWithCapacity:nCount];
+    m_dResolutions = [[NSMutableArray alloc] initWithCapacity:nCount];
+    
+    NSString*  strResoltion;
+    NSString*  strScale;
+
+    id dScale;
+    for(int i=0;i<nCount;++i)
+    {
+       
+        dScale = [scales objectAtIndex:(int)i];
+        strResoltion = [m_Info getResolutionFromScaleDpi:[dScale doubleValue]];
+        [m_dResolutions addObject:strResoltion];
+        strScale =[NSString stringWithFormat:@"%e",[dScale doubleValue]];
+        [m_dScale addObject:strScale];
+    }
+    
+    
+    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dScale  count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
+    
+	[self setMaxZoom:[m_dScale count]-1];
+	[self setMinZoom:0];
+    return  self;
+}
+
+
 
 - (void) networkOperationsNotification: (NSNotification*) notification
 {

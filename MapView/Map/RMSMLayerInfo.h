@@ -85,7 +85,7 @@
 
 /**
 * APIMethod: getScaleFromResolutionDpi
-* 计算当前地图服务DPI。
+* 根据指定的分辨率，返回对应的比例尺。
 *
 * Parameters:
 * dResolution - {double} 分辨率
@@ -95,5 +95,17 @@
 */
 -(NSString*) getScaleFromResolutionDpi:(double)dResolution;
 
+/**
+ * APIMethod: getResolutionFromScaleDpi
+ * 根据指定的比例尺，返回对应的分辨率。
+ *
+ * Parameters:
+ * dScale - {double} 比例尺
+ *
+ * Returns:
+ * {<NSString>}  当前地图分辨率。
+ */
+
+-(NSString*) getResolutionFromScaleDpi:(double)dScale;
 
 @end

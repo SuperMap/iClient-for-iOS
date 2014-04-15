@@ -58,10 +58,28 @@
  *
  * Parameters:
  * info - {RMSMLayerInfo}  地图服务属性信息。
- * resolutions - {NSMutableArray}  指定分辨率。
+ * resolutions - {NSMutableArray}  指定分辨率数组。
  */
--(id) initWithInfo:(RMSMLayerInfo*) info resolutions:(NSMutableArray*)resolutions;
+-(id) initWithInfo:(RMSMLayerInfo*) info resolutions:(NSMutableArray*) resolutions;
 
+/**
+ *	@brief	初始化构造函数
+ *
+ *	@param 	scales 	指定地图服务比例尺数组
+ *
+ *	@return	RMSMTileSource类
+ */
+
+/**
+ * Constructor: initWithInfo
+ * RMSMTileSource用于在iOS上加载iServer地图服务，方便的将iServer发布的地图服务显示在地图框架中
+ *
+ * Parameters:
+ * info - {RMSMLayerInfo}  地图服务属性信息。
+ * scales - {NSMutableArray}  指定s比例尺数组。
+ */
+
+-(id) initWithInfo:(RMSMLayerInfo*) info scales:(NSMutableArray*) scales;
 
 -(void) networkOperationsNotification: (NSNotification*) notification;
 
