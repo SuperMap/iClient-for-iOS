@@ -46,12 +46,12 @@
     double maxResolution = wRes>hRes?wRes:hRes;
     double base = 2.0;
     NSString*  strScale;
-    double dScale;
+    double dResolutions;
     for(int i=0;i<16;++i)
     {
-        dScale = maxResolution/pow(base,i);
-        [m_dResolutions addObject:[NSNumber numberWithDouble:dScale]];
-        strScale = [m_Info getScaleFromResolutionDpi:dScale];
+        dResolutions = maxResolution/pow(base,i);
+        [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
+        strScale = [m_Info getScaleFromResolutionDpi:dResolutions];
         //NSLog(@"%@",strScale);
         [m_dScale addObject:strScale];
     }
@@ -75,18 +75,20 @@
    // m_dResolutions = resolutions;
     m_dScale = [[NSMutableArray alloc] initWithCapacity:nCount];
     
+    //对resolutions数组升序排列,并在计算scales时对m_dScale降序排列
+    NSArray *resolutionsDescending=[resolutions sortedArrayUsingSelector:@selector(compare:)];
     NSString*  strScale;
     id dResolutions;
-    for(int i=0;i<nCount;++i)
+    //m_dScale降序排列
+    for(int i=nCount-1;i>=0;--i)
     {
-        dResolutions = [resolutions objectAtIndex:(int)i];
+        dResolutions = [resolutionsDescending objectAtIndex:(int)i];
         [m_dResolutions addObject:[NSNumber numberWithDouble:[dResolutions doubleValue]]];
         strScale = [m_Info getScaleFromResolutionDpi:[dResolutions doubleValue]];
-        //NSLog(@"%@",strScale);
         [m_dScale addObject:strScale];
     }
-    
-    
+    //NSLog(@"%@",m_dScale);
+
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
     
 	[self setMaxZoom:[m_dResolutions count]-1];
@@ -103,14 +105,16 @@
     m_dScale = [[NSMutableArray alloc] initWithCapacity:nCount];
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:nCount];
     
+    //对scales数组升序排列
+    NSArray *scalesAscending=[scales sortedArrayUsingSelector:@selector(compare:)];
+   // NSLog(@"%@",scalesAscending);
+    
     NSString*  strResoltion;
     NSString*  strScale;
-
     id dScale;
     for(int i=0;i<nCount;++i)
     {
-       
-        dScale = [scales objectAtIndex:(int)i];
+        dScale = [scalesAscending objectAtIndex:(int)i];
         strResoltion = [m_Info getResolutionFromScaleDpi:[dScale doubleValue]];
         [m_dResolutions addObject:strResoltion];
         strScale =[NSString stringWithFormat:@"%e",[dScale doubleValue]];
@@ -247,7 +251,7 @@
     
     NSString* strScale = [m_dScale objectAtIndex:(int)tile.zoom];
 	//float fScale = [result floatValue];
-     //transparent=true&cacheEnabled=true&redirect=true
+     //transparent=true&cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@
 
     NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@",m_Info.smurl,tile.x, tile.y,strScale];
     //NSLog(@"%@",strUrl);
