@@ -13,6 +13,7 @@
 @synthesize dWidth,dHeight;
 @synthesize m_pntOrg;
 @synthesize smurl;
+@synthesize strParams;
 
 - (void) initialize
 {
@@ -20,6 +21,17 @@
 }
 
 - (id) initWithTile:(NSString *)layerName linkurl:(NSString*)url;
+{
+    
+    //设置到url请求上的参数
+    NSMutableDictionary* paramsDefault=[[NSMutableDictionary alloc] init];
+  
+    return [self initWithTile:layerName linkurl:url params:paramsDefault];
+    
+}
+
+
+- (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url params:(NSMutableDictionary*)params;
 {
     BOOL bAscii = true;
     for(int i=0; i< [url length];i++){
@@ -38,7 +50,7 @@
     smurl = [[NSString alloc] initWithString:url];
     
     
-
+    
     name = [[NSString alloc] initWithString:layerName];
     //[smurl initWithString:url];
     //NSLog(@"%@",smurl);
@@ -66,7 +78,7 @@
         return NULL;
     
     NSMutableString *result = [[NSMutableString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-        
+    
     //NSLog(@"The result string is :%@",result);
     
     
@@ -83,7 +95,7 @@
     id bounds,viewbounds,viewSize;
     NSString *bottom,*left,*right,*top;
     double fbottom,fleft,fright,ftop;
-
+    
     bounds = [json objectForKey: @"bounds"];
     bottom = (NSString *)[bounds objectForKey: @"bottom"];
     fbottom = [bottom floatValue];
@@ -144,8 +156,31 @@
     dpi = [self calculateDpi:fright-fleft rvbheight:ftop-fbottom rvWidth:[width intValue] rcHeight:[height intValue] scale:dScale];
     //NSLog(@"The result string is :%d",dpi);
     
-    //[responseData release];
+    
+    //获取params的所有有效参数并返回url请求参数的字符串
+    NSString *strTransparent=@"false",*strCacheEnabled=@"true",*strRedirect=@"false";
+ 
+    NSNumber *nTransparent=[params objectForKey:@"transparent"];
+    NSNumber *nCacheEnabled=[params objectForKey:@"cacheEnabled"];
+    NSNumber *nRedirect=[params objectForKey:@"redirect"];
+    
+    if (nTransparent!=nil) {
+         BOOL bTransparent=[nTransparent boolValue];
+         if (bTransparent) {strTransparent=@"true";}
+    }
+    if (nCacheEnabled!=nil) {
+        BOOL bCacheEnabled=[nCacheEnabled boolValue];
+        if (!bCacheEnabled) {strCacheEnabled=@"false";}
+    }
+    if (nRedirect!=nil) {
+        BOOL bRedirect=[nRedirect boolValue];
+        if (bRedirect) {strRedirect=@"true";}
+    }
+
+   strParams=[[NSString alloc] initWithFormat:@"transparent=%@&cacheEnabled=%@&redirect=%@",strTransparent,strCacheEnabled,strRedirect];
+    
     return self;
+
 }
 
 - (int)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;

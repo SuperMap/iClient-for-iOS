@@ -25,6 +25,7 @@
     NSString*  unit;
     int datumAxis;
     int dpi;
+    NSString *strParams;
 }
 
 /**
@@ -46,11 +47,16 @@
 @property (readwrite) CLLocationCoordinate2D m_pntOrg;
 
 /**
-* APIProperty: smurl
+* Property: smurl
 * {NSString} 当前地图服务的url地址。
 */
 @property (assign,readwrite) NSString *smurl;
- 
+
+/**
+ * Property: strParams
+ * {NSString} url的可选参数字符串。
+ */
+@property (assign,readwrite) NSString *strParams;
  /**
  * Constructor: initWithTile
  * 所有SuperMap iServer 6R 分块动态 REST 图层。
@@ -66,6 +72,33 @@
  * url - {NSString} 图层的服务地址。     
  */
 - (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url;
+
+/**
+ * Constructor: initWithTile
+ * 所有SuperMap iServer 6R 分块动态 REST 图层。
+ * (start code)
+ * //字符串为SuperMap iServer地图服务的url链接
+ * NSString *mapUrl = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
+ * //将BOOL值转为NSNumber类型，用以作为可选参数NSMutableDictionary的value值
+ * NSNumber *yesNum=[NSNumber numberWithBool:YES];   
+ * NSNumber *noNum=[NSNumber numberWithBool:NO];
+ * NSMutableDictionary存储url的可选参数，包括redirect、cacheEnabled、transparent。
+ * NSMutableDictionary *parmas=[[NSMutableDictionary alloc] initWithObjectsAndKeys:noNum,@"redirect",yesNum,@"transparent",yesNum,@"cacheEnabled",nil];
+ * //创建地图服务配置信息，参数为地图名、链接地址和可选参数NSMutableDictionary
+ * RMSMLayerInfo* info = [[RMSMLayerInfo alloc] initWithTile:@"China" linkurl:mapUrl params:parmas];
+ * (end)
+ *
+ * Parameters:
+ * layerName - {NSString}  图层名称。
+ * url - {NSString} 图层的服务地址。
+ * params - {NSMutableDictionary} 设置到url上的可选参数，目前可选参数包括：
+ * transparent: {BOOL} 图层是否透明，默认为 NO，即不透明。
+ * cacheEnabled: {BOOL} 是否使用服务端的缓存，默认为 YES，即使用服务端的缓存。
+ * redirect: {BOOL} 是否重定向，HTTP 传输中的一个概念。如果为 YES，则将请求重定向到图片的真实地址；
+ * 如果为 NO，则响应体中是图片的字节流。默认为 NO，不进行重定向。
+ */
+
+- (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url params:(NSMutableDictionary*)params;
 
 /**
 * APIMethod: calculateDpi
