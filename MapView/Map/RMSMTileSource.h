@@ -16,6 +16,7 @@
  * SuperMap iServer地图服务
  */
 @interface RMSMTileSource : NSObject <RMTileSource> {
+    RMProjection *smProjection;
 	RMSMTileProjection *tileProjection;
     BOOL networkOperations;
     RMSMLayerInfo* m_Info;
@@ -76,7 +77,7 @@
  *
  * Parameters:
  * info - {RMSMLayerInfo}  地图服务属性信息。
- * scales - {NSMutableArray}  指定s比例尺数组。
+ * scales - {NSMutableArray}  指定比例尺数组。
  */
 
 -(id) initWithInfo:(RMSMLayerInfo*) info scales:(NSMutableArray*) scales;

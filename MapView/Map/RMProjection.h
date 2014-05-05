@@ -49,7 +49,7 @@
 }
 
 @property (readonly) void* internalProjection;
-@property (readonly) RMProjectedRect planetBounds;
+@property (readwrite) RMProjectedRect planetBounds;
 @property (readwrite) BOOL projectionWrapsHorizontally;
 @property (readwrite) BOOL bIsSM;
  
@@ -86,6 +86,10 @@
 
 /// anybody know what the InBounds: parameter means?
 - (id) initWithString: (NSString*)params InBounds: (RMProjectedRect) projBounds;
+
+-(id)initForSMProjection;
+-(id)projectionWithBounds:(RMProjectedRect) projBounds;
+
 
 /**
  * APIMethod: pointToLatLong

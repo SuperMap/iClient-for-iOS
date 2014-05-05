@@ -57,7 +57,7 @@
     }
     
     //NSLog(@"%@",m_dResolutions);
-    
+    smProjection=[[RMProjection alloc] initForSMProjection];
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
     
 	[self setMaxZoom:15];
@@ -88,7 +88,7 @@
         [m_dScale addObject:strScale];
     }
     //NSLog(@"%@",m_dScale);
-
+    smProjection=[[RMProjection alloc] initForSMProjection];
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
     
 	[self setMaxZoom:[m_dResolutions count]-1];
@@ -122,6 +122,7 @@
     }
     
     
+    smProjection=[[RMProjection alloc] initForSMProjection];
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dScale  count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
     
 	[self setMaxZoom:[m_dScale count]-1];
@@ -235,8 +236,9 @@
 //    NSLog(@"%f,%f,%f,%f",dleft,dbottom,dWidth,dHeight);
     RMProjectedRect theBounds = RMMakeProjectedRect(dleft,dbottom,dWidth,dHeight);
     
-    return [RMProjection smProjection:theBounds];
+    return [smProjection projectionWithBounds:theBounds];
 }
+
 
 -(void) didReceiveMemoryWarning
 {
@@ -252,9 +254,9 @@
     NSString* strScale = [m_dScale objectAtIndex:(int)tile.zoom];
 	//float fScale = [result floatValue];
      //transparent=true&cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@
-    
-    NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@",m_Info.smurl,m_Info.strParams,tile.x, tile.y,strScale];
-  //  NSLog(@"%@",strUrl);
+
+    NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@",m_Info.smurl,tile.x, tile.y,strScale];
+    NSLog(@"%@",strUrl);
 
 	return strUrl;
 }
