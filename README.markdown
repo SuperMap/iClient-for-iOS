@@ -35,3 +35,14 @@ SuperMap iClient for iOS是一套基于iOS平台的轻量级地图软件开发�
 - License用于说明iClient for iOS免费版和商业版两种使用方式的许可
 - index.html为产品帮助文档首页
 - README.markdown为产品说明文档
+
+### 五、产品变更信息
+
+- RMSMTileSource增加scales接口
+- 为传入的resolutions和scales数组增加排序逻辑
+- RMSMTileSource 增加设置到url上的参数
+- RMProjection增加用于创建SMProjection的实例方法
+- 完善RMMapView类注释
+- 完善RMMapContents类注释
+- 解决设置resolutions级数报错的问题
+- 解决地图中心点计算错误的问题
