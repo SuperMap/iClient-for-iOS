@@ -74,7 +74,7 @@ enum {
  *The cartographic and data components of a map. Do not retain.
  *
  *There is exactly one RMMapContents instance for each RMMapView instance.
- * 
+ *
  *warning:Do not retain an RMMapContents instance. Instead, ask the RMMapView for its contents 
  *when you need it. It is an error for an RMMapContents instance to exist without a view, and 
  *if you retain the RMMapContents, it can't go away when the RMMapView is released.
@@ -88,8 +88,10 @@ enum {
 	
 	RMMarkerManager *markerManager;
 	/// subview for the image displayed while tiles are loading. Set its contents by providing your own "loading.png".
+    ///用于加载tiles后显示image的子图层
 	RMMapLayer *background;
 	/// subview for markers and paths
+    ///用于加载markers 和paths的子图层集合
 	RMLayerCollection *overlay;
 	
 	/// (guess) the projection object to convert from latitude/longitude to meters.
@@ -112,10 +114,13 @@ enum {
 	NSUInteger		boundingMask;
 	
 	/// minimum zoom number allowed for the view. #minZoom and #maxZoom must be within the limits of #tileSource but can be stricter; they are clamped to tilesource limits if needed.
+    ///最小的缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
 	float minZoom;
 	/// maximum zoom number allowed for the view. #minZoom and #maxZoom must be within the limits of #tileSource but can be stricter; they are clamped to tilesource limits if needed.
+    /////最大的缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
 	float maxZoom;
-
+    //设备的屏幕分辨率，屏幕类型（普通或者视网膜屏幕）不一样，相同尺寸的屏幕分辨率不一样
+    //以iphone为例，若值为1，代表当前设备是320*480的分辨率（iphone4之前的设备），若值为2，是代表采用了名为Retina的显示技术后的分辨率，为640*960的分辨率。
     float screenScale;
 
 	id<RMTilesUpdateDelegate> tilesUpdateDelegate;
@@ -128,9 +133,11 @@ enum {
 @property (readonly)  CGRect screenBounds;
 @property (readwrite) float metersPerPixel;
 @property (readonly)  float scaledMetersPerPixel;
+
+//zoom level is clamped to range (minZoom, maxZoom)
 /**
  * APIProperty: zoom
- * zoom level is clamped to range (minZoom, maxZoom)
+ * {float} 缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
  */
 @property (readwrite) float zoom;
 
@@ -156,9 +163,11 @@ enum {
 /// \bug probably shouldn't be retaining this delegate
 @property (nonatomic, retain) id<RMTilesUpdateDelegate> tilesUpdateDelegate;
 @property (readwrite) NSUInteger boundingMask;
+
+//The denominator in a cartographic scale like 1/24000, 1/50000, 1/2000000.
 /**
  * APIProperty: scaleDenominator
- * {double} The denominator in a cartographic scale like 1/24000, 1/50000, 1/2000000.
+ * {double} 比例尺的分母值，其比例尺形如1/24000, 1/50000, 1/2000000。
  */
 @property (readonly)double scaleDenominator;
 
@@ -166,11 +175,61 @@ enum {
 @property (readwrite, assign) short tileDepth;
 @property (readonly, assign) BOOL fullyLoaded;
 
+/**
+ * Constructor: initWithView
+ * 用于初始化RMMapContents
+ *
+ * Parameters:
+ * view - {UIView}  mapView。
+ */
 - (id)initWithView: (UIView*) view;
+
+/**
+ * Constructor: initWithView
+ * 用于初始化RMMapContents
+ *
+ * Parameters:
+ * view - {UIView}  mapView。
+ * screenScale - {float} 设备的屏幕分辨率的属性值
+ */
 - (id)initWithView: (UIView*) view screenScale:(float)theScreenScale;
+
+/**
+ * Constructor: initWithView
+ * 用于初始化RMMapContents
+ *
+ * Parameters:
+ * view - {UIView}  mapView。
+ * tilesource - {id<RMTileSource>} 地图服务
+ */
 - (id)initWithView: (UIView*) view tilesource:(id<RMTileSource>)newTilesource;
+
+/**
+ * Constructor: initWithView
+ * 用于初始化RMMapContents
+ *
+ * Parameters:
+ * view - {UIView}  mapView。
+ * tilesource - {id<RMTileSource>} 地图服务
+ * screenScale - {float} 设备的屏幕分辨率的属性值
+ */
 - (id)initWithView: (UIView*) view tilesource:(id<RMTileSource>)newTilesource screenScale:(float)theScreenScale;
+
 /// designated initializer
+/**
+ * Constructor: initWithView
+ * 用于初始化RMMapContents
+ *
+ * Parameters:
+ * view - {UIView}  mapView。
+ * tilesource - {id<RMTileSource>} 地图服务
+ * centerLatLon - {CLLocationCoordinate2D} 地图的中心点
+ * zoomLevel - {float} 地图初始化时的缩放级别
+ * maxZoomLevel - {float} 最大缩放级别
+ * minZoomLevel - {float} 最小缩放级别
+ * backgroundImage - {UIImage *} 
+ * screenScale - {float} 设备的屏幕分辨率的属性值
+ */
 - (id)initWithView:(UIView*)view
 		tilesource:(id<RMTileSource>)tilesource
 	  centerLatLon:(CLLocationCoordinate2D)initialCenter
@@ -181,19 +240,13 @@ enum {
        screenScale:(float)theScreenScale;
 
 /**
- * APIMethod: initForView
- * subject to removal at any moment after 0.5 is released
- *
- ** Parameters:
- * view - {UIView*}  
- *
- ** Returns:
- *{id}
+ *subject to removal at any moment after 0.5 is released
+ *发布了版本0.5后，此方法会被弃用。
  */
 - (id) initForView: (UIView*) view;
-/// \deprecated subject to removal at any moment after 0.5 is released
+/// \发布了版本0.5后，此方法会被弃用。
 - (id) initForView: (UIView*) view WithLocation:(CLLocationCoordinate2D)latlong;
-/// \deprecated subject to removal at any moment after 0.5 is released
+/// \发布了版本0.5后，此方法会被弃用。
 - (id)initForView:(UIView*)view WithTileSource:(id<RMTileSource>)tileSource WithRenderer:(RMMapRenderer*)renderer LookingAt:(CLLocationCoordinate2D)latlong;
 
 - (void)setFrame:(CGRect)frame;
@@ -204,7 +257,7 @@ enum {
 - (void)moveToLatLong: (CLLocationCoordinate2D)latlong;
 /**
  * APIMethod: moveToProjectedPoint
- * Use setCenterProjectedPoint: instead.
+ * 用于重置地图的中心点
  *
  ** Parameters:
  * aPoint - {RMProjectedPoint}  
@@ -247,18 +300,21 @@ enum {
 
 /**
  * APIMethod: latitudeLongitudeBoundingBoxFor
- * returns the smallest bounding box containing the entire screen
+ * 返回包含整个屏幕的最小边界框
+ * 
+ * Returns:
+ * {RMSphericalTrapezium}
  */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxForScreen;
 /**
  * APIMethod: latitudeLongitudeBoundingBoxFor
- * returns the smallest bounding box containing a rectangular region of the screen
+ * 返回包含所指定矩形的最小边界框。
  *
- ** Parameters:
+ * Parameters:
  * rect - {CGRect}  
  *
- ** Returns:
- *{RMSphericalTrapezium}
+ * Returns:
+ * {RMSphericalTrapezium}
  */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxFor:(CGRect) rect;
 
@@ -268,14 +324,16 @@ enum {
 
  /**
  * APIMethod: removeAllCachedImages
- * Clear all images from the #tileSource's caching system.
+ * 删除tileSource缓存机制所缓存的所有图片。
  *
- *All of the existing RMTileSource implementations load tile images via NSURLRequest. It's possible that some images will remain in *your
- *application's shared URL cache. If you need to clear this out too, use this call:
+ * 可能会有一些图片保存在用户的分享URL缓存中，而所有RMTileSource都是通过NSURLRequest加载tile images ,所以如果用户需要清理这些缓存，可以通过
+ * 以下的方式：
  *
- * \code
- *[[NSURLCache sharedURLCache] removeAllCachedResponses];
- *\endcode
+ * //code
+ *
+ * [[NSURLCache sharedURLCache] removeAllCachedResponses];
+ *
+ * //endcode
  */
 -(void)removeAllCachedImages;
 
@@ -308,14 +366,14 @@ enum {
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 
 /**
- * APIMethod: latitudeLongitudeBoundingBoxForScreen
- * name change pending after 0.5
+ *APIMethod: latitudeLongitudeBoundingBoxForScreen
+ *name change pending after 0.5
  */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxForScreen;
 
 /**
- * APIMethod: latitudeLongitudeBoundingBoxFor
- * name change pending after 0.5
+ *APIMethod: latitudeLongitudeBoundingBoxFor
+ *name change pending after 0.5
  *
  ** Parameters:
  * rect - {CGRect}  

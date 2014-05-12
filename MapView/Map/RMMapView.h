@@ -100,6 +100,7 @@ SuperMap iClient for iOS更多内容和更新，可以访问Github项目
  /**
  * APIProperty: RMGestureDetails
  * {struct} iPhone-specific mapview stuff. Handles event handling, whatnot.
+ * 手势的细节信息
  */
 typedef struct {
 	CGPoint center;
@@ -193,17 +194,19 @@ typedef struct {
 - (id)initWithFrame:(CGRect)frame screenScale:(float)screenScale;
 - (id)initWithFrame:(CGRect)frame WithLocation:(CLLocationCoordinate2D)latlong;
 
+//recenter the map on #latlong, expressed as CLLocationCoordinate2D (latitude/longitude)
 /**
  * APIMethod: moveToLatLong
- * recenter the map on #latlong, expressed as CLLocationCoordinate2D (latitude/longitude)
+ * 重置地图的中心点，该中心点为经纬度坐标。
  *
  ** Parameters:
  * latlong - {CLLocationCoordinate2D}  
  */
 - (void)moveToLatLong: (CLLocationCoordinate2D)latlong;
+//recenter the map on #aPoint, expressed in projected meters
 /**
  * APIMethod: moveToProjectedPoint
- * recenter the map on #aPoint, expressed in projected meters
+ * 重置地图的中心点，该中心点为平面坐标。
  *
  ** Parameters:
  * aPoint - {RMProjectedPoint}  

@@ -310,6 +310,7 @@
 		RMMercatorToScreenProjection *mtsp=self.contents.mercatorToScreenProjection;
 		
 		//calculate new bounds after move
+        ///移动后计算新的范围
 		RMProjectedRect pBounds=[mtsp projectedBounds];
 		RMProjectedSize XYDelta = [mtsp projectScreenSizeToXY:delta];
         CGSize sizeRatio = CGSizeMake(((delta.width == 0) ? 0 : XYDelta.width / delta.width),
@@ -321,6 +322,7 @@
 		newBounds.origin.easting -= XYDelta.width; 
 		
 		// see if new bounds are within constrained bounds, and constrain if necessary
+        //判断bounds是否需要裁剪，若超出范围则裁剪
         BOOL constrained = NO;
 		if ( newBounds.origin.northing < SWconstraint.northing ) { newBounds.origin.northing = SWconstraint.northing; constrained = YES; }
         if ( newBounds.origin.northing+newBounds.size.height > NEconstraint.northing ) { newBounds.origin.northing = NEconstraint.northing - newBounds.size.height; constrained = YES; }
@@ -350,8 +352,8 @@
 {
 	if ( _constrainMovement ) 
 	{
-		//check that bounds after zoom don't exceed map constraints
-		//the logic is copued from the method zoomByFactor,
+		//判断缩放后地图是否超出范围
+        //the logic is copued from the method zoomByFactor,
 		float _zoomFactor = [self.contents adjustZoomForBoundingMask:zoomFactor];
 		float zoomDelta = log2f(_zoomFactor);
 		float targetZoom = zoomDelta + [self.contents zoom];
@@ -371,6 +373,7 @@
 		}
 		
 		//bools for syntactical sugar to understand the logic in the if statement below
+        //用于判断能否缩放的bools
 		BOOL zoomAtMax = ([self.contents  zoom] == [self.contents  maxZoom]);
 		BOOL zoomAtMin = ([self.contents  zoom] == [self.contents  minZoom]);
 		BOOL zoomGreaterMin = ([self.contents  zoom] > [self.contents  minZoom]);
@@ -391,17 +394,19 @@
 			
 			//tjis is copied from [RMMercatorToScreenBounds zoomScreenByFactor]
 			// First we move the origin to the pivot...
+            //首先把中心点移到原点（左下角点）
 			origin.easting += center.x * metersPerPixel;
 			origin.northing += (screenBounds.size.height - center.y) * metersPerPixel;
 			// Then scale by 1/factor
+            //然后根据_zoomFactor计算新的metersPerPixel
 			metersPerPixel /= _zoomFactor;
-			// Then translate back
+			// 再用新的metersPerPixel重新计算原点（左下角点）
 			origin.easting -= center.x * metersPerPixel;
 			origin.northing -= (screenBounds.size.height - center.y) * metersPerPixel;
 			
 			origin = [mtsp.projection wrapPointHorizontally:origin];
 			
-			//calculate new bounds
+			//重新计算bounds
 			RMProjectedRect zRect;
 			zRect.origin = origin;
 			zRect.size.width = screenBounds.size.width * metersPerPixel;
@@ -544,6 +549,7 @@
     
     
 	//Check if the touch hit a RMMarker subclass and if so, forward the touch event on
+    //判断是否点击了一个marker，如果是，则响应对应的事件
 	//so it can be handled there
 	id furthestLayerDown = [self.contents.overlay hitTest:[touch locationInView:self]];
 	if ([[furthestLayerDown class]isSubclassOfClass: [RMMarker class]]) {

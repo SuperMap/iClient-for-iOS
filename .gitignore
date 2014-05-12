@@ -7,7 +7,6 @@ samples/simplemap/simplemap.xcodeproj/project.pbxproj
 
 samples/simplemap/simplemap.xcodeproj/project.xcworkspace/xcuserdata/iclient.xcuserdatad/UserInterfaceState.xcuserstate
 
-MapView/Map/RMSMTileSource.h
 
 MapView/.DS_Store
 
@@ -75,8 +74,6 @@ MapView/Map/.DS_Store
 
 samples/simplemap/simplemap/ViewController.m
 
-samples/simplemap/simplemap/ViewController.m
-
 samples/simplemap/simplemap/en.lproj/MainStoryboard_iPad.storyboard
 
 samples/simplemap/simplemap.xcodeproj/xcuserdata/iclient.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
@@ -84,3 +81,7 @@ samples/simplemap/simplemap.xcodeproj/xcuserdata/iclient.xcuserdatad/xcdebugger/
 samples/simplemap/simplemap.xcodeproj/project.xcworkspace/xcuserdata/iclient.xcuserdatad/UserInterfaceState.xcuserstate
 
 samples/simplemap/simplemap.xcodeproj/project.xcworkspace/xcshareddata/simplemap.xccheckout
+
+MapView/.DS_Store
+
+MapView/.DS_Store

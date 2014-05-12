@@ -135,12 +135,12 @@
 
 - (id)initWithView:(UIView*)newView
 		tilesource:(id<RMTileSource>)newTilesource
-	  centerLatLon:(CLLocationCoordinate2D)initialCenter
-		 zoomLevel:(float)initialZoomLevel
+	  centerLatLon:(CLLocationCoordinate2D)initialCenter  ///地图的中心点
+		 zoomLevel:(float)initialZoomLevel                ///地图初始化时的缩放级别
 	  maxZoomLevel:(float)maxZoomLevel
 	  minZoomLevel:(float)minZoomLevel
    backgroundImage:(UIImage *)backgroundImage
-       screenScale:(float)theScreenScale
+       screenScale:(float)theScreenScale                  ///设备的屏幕分辨率的属性值
 {
 	LogMethod();
 	if (![super init])
@@ -208,14 +208,15 @@
 }
 
 
-/// deprecated at any moment after release 0.5	
+/// deprecated at any moment after release 0.5
+/// 发布了版本0.5后，此方法会被弃用。
 - (id) initForView: (UIView*) view
 {
 	WarnDeprecated();
 	return [self initWithView:view];
 }
 
-/// deprecated at any moment after release 0.5
+/// 发布了版本0.5后，此方法会被弃用。
 - (id) initForView: (UIView*) view WithLocation:(CLLocationCoordinate2D)latlong
 {
 	WarnDeprecated();
@@ -231,7 +232,7 @@
 }
 
 
-/// deprecated at any moment after release 0.5
+/// 发布了版本0.5后，此方法会被弃用。
 - (id) initForView: (UIView*) view WithTileSource: (id<RMTileSource>)_tileSource WithRenderer: (RMMapRenderer*)_renderer LookingAt:(CLLocationCoordinate2D)latlong
 {
 	WarnDeprecated();
@@ -421,6 +422,7 @@
 
 /// This currently is not called because it does not handle the case when the map is continous or not continous.  At a certain scale
 /// you can continuously move to the west or east until you get to a certain scale level that simply shows the entire world.
+/// 此方法目前未真正实现
 - (void)adjustMapPlacementWithScale:(float)aScale
 {
 	CGSize		adjustmentDelta = {0.0, 0.0};
@@ -942,7 +944,7 @@ static BOOL _performExpensiveOperations = YES;
 		[[NSNotificationCenter defaultCenter] postNotificationName:RMSuspendExpensiveOperations object:self];
 }
 
-#pragma mark LatLng/Pixel translation functions
+#pragma mark LatLng/Pixel translation functions
 
 - (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong
 {	
