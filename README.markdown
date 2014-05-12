@@ -38,6 +38,9 @@ SuperMap iClient for iOS是一套基于iOS平台的轻量级地图软件开发�
 
 ### 五、产品变更信息
 
+当前版本:7.0 sp1
+上次版本:7.0
+
 - RMSMTileSource增加scales接口
 - 为传入的resolutions和scales数组增加排序逻辑
 - RMSMTileSource 增加设置到url上的参数
