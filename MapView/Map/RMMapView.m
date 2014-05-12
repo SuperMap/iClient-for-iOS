@@ -91,7 +91,7 @@
 	if (enableZoom || enableRotate)
 		[self setMultipleTouchEnabled:TRUE];
 	
-	self.backgroundColor = [UIColor grayColor];
+	self.backgroundColor = [UIColor whiteColor];
 	
 	_constrainMovement=NO;
     bRun = false;
