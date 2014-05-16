@@ -117,7 +117,7 @@ enum {
     ///最小的缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
 	float minZoom;
 	/// maximum zoom number allowed for the view. #minZoom and #maxZoom must be within the limits of #tileSource but can be stricter; they are clamped to tilesource limits if needed.
-    /////最大的缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
+    ///最大的缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
 	float maxZoom;
     //设备的屏幕分辨率，屏幕类型（普通或者视网膜屏幕）不一样，相同尺寸的屏幕分辨率不一样
     //以iphone为例，若值为1，代表当前设备是320*480的分辨率（iphone4之前的设备），若值为2，是代表采用了名为Retina的显示技术后的分辨率，为640*960的分辨率。

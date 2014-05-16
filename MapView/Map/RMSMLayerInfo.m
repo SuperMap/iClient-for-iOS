@@ -106,8 +106,8 @@
     top = (NSString *)[bounds objectForKey: @"top"];
     ftop = [top floatValue];
     
-    m_pntOrg.latitude = fleft;
-    m_pntOrg.longitude = ftop;
+    m_pntOrg.latitude = ftop;
+    m_pntOrg.longitude = fleft;
     dWidth = fright - fleft;
     dHeight = ftop - fbottom;
     

@@ -209,7 +209,7 @@
 
 
 /// deprecated at any moment after release 0.5
-/// 发布了版本0.5后，此方法会被弃用。
+/// 发布了版本0.5后，此方法会被弃用
 - (id) initForView: (UIView*) view
 {
 	WarnDeprecated();

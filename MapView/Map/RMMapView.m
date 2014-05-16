@@ -398,7 +398,7 @@
 			origin.easting += center.x * metersPerPixel;
 			origin.northing += (screenBounds.size.height - center.y) * metersPerPixel;
 			// Then scale by 1/factor
-            //然后根据_zoomFactor计算新的metersPerPixel
+            // 然后根据_zoomFactor计算新的metersPerPixel
 			metersPerPixel /= _zoomFactor;
 			// 再用新的metersPerPixel重新计算原点（左下角点）
 			origin.easting -= center.x * metersPerPixel;

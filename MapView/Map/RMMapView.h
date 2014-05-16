@@ -203,7 +203,7 @@ typedef struct {
  * latlong - {CLLocationCoordinate2D}  
  */
 - (void)moveToLatLong: (CLLocationCoordinate2D)latlong;
-//recenter the map on #aPoint, expressed in projected meters
+
 /**
  * APIMethod: moveToProjectedPoint
  * 重置地图的中心点，该中心点为平面坐标。
