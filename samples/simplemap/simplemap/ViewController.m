@@ -22,7 +22,7 @@
     // Your own code
     
     //NSString *tileThing = @"http://192.168.13.174:8090/iserver/services/map-china400/rest/maps/China";
-    NSString *tileThing = @"http://192.168.13.186:8090/iserver/services/map-changchun/rest/maps/长春市区图";
+    NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-changchun/rest/maps/长春市区图";
     info = [[RMSMLayerInfo alloc] initWithTile:@"China" linkurl:tileThing];
     // 判断获取iServer服务配置信息失败，为NULL时失败
     NSAssert(info != NULL,@"RMSMLayerInfo Connect fail");

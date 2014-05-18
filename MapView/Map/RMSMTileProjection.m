@@ -123,13 +123,18 @@
 	// Unfortunately, y is indexed from the bottom left.. hence we have to translate it.
 	double y = ((planetBounds.origin.northing + planetBounds.size.height - newPoint.northing) / fMeterPerTile);
     //NSLog(@"y %f",y);
-	
+	if (y<=-1) {
+        tile.tile.y=0;
+    }
+    else {
+        tile.tile.y =(uint32_t)y ;
+    }
 	tile.tile.x = (uint32_t)x;
-	tile.tile.y = (uint32_t)y;
 	tile.tile.zoom = zoom;
 	tile.offset.x = (float)x - tile.tile.x;
 	tile.offset.y = (float)y - tile.tile.y;
-	
+    //NSLog(@"tile.offset.y :%f",tile.offset.y);
+
 	return tile;
 }
 

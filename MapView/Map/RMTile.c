@@ -75,8 +75,13 @@ char RMTilesEqual(RMTile one, RMTile two)
 // Round the rectangle to whole numbers of tiles
 RMTileRect RMTileRectRound(RMTileRect rect)
 {
-	rect.size.width = ceilf(rect.size.width + rect.origin.offset.x);
+    rect.size.width = ceilf(rect.size.width + rect.origin.offset.x);
 	rect.size.height = ceilf(rect.size.height + rect.origin.offset.y);
+    if (rect.origin.offset.y<=-1) {
+        int iOffsetY=floor(fabs(rect.origin.offset.y)) ;
+        rect.size.height+=iOffsetY;
+    }
+    
 	rect.origin.offset = CGPointZero;
 	
 	return rect;
