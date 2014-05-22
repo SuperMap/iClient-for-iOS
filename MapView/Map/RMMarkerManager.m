@@ -60,6 +60,7 @@
 - (void)addMarker:(RMMarker *)marker atProjectedPoint:(RMProjectedPoint)projectedPoint {
 
 	// only set the AffineTransform if the marker has rotation enabled
+    //只有当marker的rotation为YES时才调用AffineTransform（放射变换）
 	if (marker.enableRotation) {
 	[marker setAffineTransform:rotationTransform];
 	} else {

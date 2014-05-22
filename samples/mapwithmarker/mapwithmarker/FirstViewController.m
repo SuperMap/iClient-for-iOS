@@ -25,11 +25,11 @@
        
     RMProjectedPoint prjPnt = (RMProjectedPoint){12969236.42061722,4863568.820204712};
     [self setMapCenter:prjPnt];
-    mapView.contents.zoom = 14;
+    mapView.contents.zoom = 11;
     // Your own code
     
     UIImage *image = [UIImage imageNamed:@"mylocation.png"];
-    RMMarker *newMarker = [[RMMarker alloc] initWithUIImage:image anchorPoint:CGPointMake(0.5, 0.5)];
+    RMMarker *newMarker = [[RMMarker alloc] initWithUIImage:image anchorPoint:CGPointMake(0.5, 1)];
     [mapView.contents.markerManager addMarker:newMarker atProjectedPoint:prjPnt];
     mapView.delegate = self;
     calloutView = [[SMCalloutView alloc]init];

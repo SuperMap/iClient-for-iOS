@@ -24,7 +24,7 @@
     double dHeight;
     NSString*  unit;
     int datumAxis;
-    int dpi;
+    float dpi;
     NSString *strParams;
 }
 
@@ -114,7 +114,7 @@
 * Returns:
 * {<int>}  当前地图DPI。
 */
-- (int)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
+- (float)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
 
 /**
 * APIMethod: getScaleFromResolutionDpi

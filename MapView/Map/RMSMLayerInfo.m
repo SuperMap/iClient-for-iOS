@@ -154,7 +154,7 @@
     //NSLog(@"The Height is :%@",height);
     
     dpi = [self calculateDpi:fright-fleft rvbheight:ftop-fbottom rvWidth:[width intValue] rcHeight:[height intValue] scale:dScale];
-    //NSLog(@"The result string is :%d",dpi);
+   // NSLog(@"The result string is :%f",dpi);
     
     
     //获取params的所有有效参数并返回url请求参数的字符串
@@ -183,37 +183,40 @@
 
 }
 
-- (int)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
+- (float)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
 {
     //NSLog(@"%.20f",dScale);
 
     //用户自定义地图的Options时，若未指定该参数的值，则系统默认为6378137米，即WGS84参考系的椭球体长半轴。
     //nDatumAxis = nDatumAxis || 6378137;
     if ([unit isEqualToString:@"degree"] || [unit isEqualToString:@"degrees"] || [unit isEqualToString:@"dd"]) {
-        float num1 = viewBoundsWidth / (float)nWidth;
-        float num2 = viewBoundsHeight / (float)nHeight;
-        float resolution = num1 > num2 ? num1 : num2;
-        //int nDpi = (int)(0.0254 / resolution / dScale/ ((M_PI * 2 * datumAxis) / 360));
-        double dTemp1 = 0.0254 / resolution;
+        double num1 = viewBoundsWidth / (float)nWidth;
+        double num2 = viewBoundsHeight / (float)nHeight;
+        double resolution = num1 > num2 ? num1 : num2;
+       // NSLog(@"resolution:::%f",resolution);
+        //10000是0.1毫米与1米的转换,用以提高精度
+        int ratio=10000;
+        //float nDpi = (float)(0.0254 * ratio / resolution / dScale/ ((M_PI * 2 * datumAxis) / 360)) / ratio;
+        double dTemp1 = 0.0254 * ratio / resolution;
         double dTemp2 = (M_PI * 2 * datumAxis) / 360;
         double dTemp = dTemp1 / dTemp2;
                          
-        NSLog(@"dTemp1: %.20f",dTemp1);
-        NSLog(@"dTemp2: %.20f",dTemp2);
-        NSLog(@"dTemp: %.20f",dTemp);
-        int nDpi = dTemp / dScale;
+     //   NSLog(@"dTemp1: %.20f",dTemp1);
+      //  NSLog(@"dTemp2: %.20f",dTemp2);
+     //   NSLog(@"dTemp: %.20f",dTemp);
+        float nDpi = dTemp / dScale /ratio;
         
         NSLog(@"%f",viewBoundsWidth);
         NSLog(@"%f",viewBoundsHeight);
         NSLog(@"%d",nWidth);
         NSLog(@"%d",nHeight);
         NSLog(@"%f",resolution);
-        NSLog(@"%d",nDpi);
+        NSLog(@"nDpi:::::::%f",nDpi);
         
         return nDpi;
     } else {
-        float resolution = viewBoundsWidth / (float)nWidth;
-        int nDpi = 0.0254 / resolution / dScale;
+        double resolution = viewBoundsWidth / (float)nWidth;
+        float nDpi = 0.0254 / resolution / dScale;
         return nDpi;
     }
 }

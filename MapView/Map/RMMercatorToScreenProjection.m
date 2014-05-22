@@ -140,8 +140,9 @@
 
 /*
  This method returns the pixel point based on the currently displayed map view converted from a RMProjectedPoint.
- 
- origin is the top left projected point currently displayed in the view.  The range of this value is based
+ 此方法用于将RMProjectedPoint转化为像素坐标
+ origin是视图内的地理左下角点
+ origin is the bottom left projected point currently displayed in the view.  The range of this value is based
  on the planetBounds.  planetBounds in turn is based on an RMProjection.  For example 
  look at +(RMProjection*)googleProjection to see range of values for planetBounds/origin.
  
@@ -152,18 +153,21 @@
 - (CGPoint) projectXYPoint:(RMProjectedPoint)aPoint withMetersPerPixel:(float)aScale
 {
 	CGPoint	aPixelPoint = { 0, 0 };
-	
+
+    //视图内地理范围
 	RMProjectedRect projectedScreenBounds;
 	projectedScreenBounds.origin = origin;
 	projectedScreenBounds.size.width = screenBounds.size.width * aScale;
 	projectedScreenBounds.size.height = screenBounds.size.height * aScale;
 	
 	RMProjectedRect planetBounds = [projection planetBounds];
+    //地图右上角
 	RMProjectedPoint planetEndPoint = {planetBounds.origin.easting + planetBounds.size.width,
 		planetBounds.origin.northing + planetBounds.size.height};
 	
 	
 	// Normalize coordinate system so there is no negative values
+    //正常化坐标系，没有负值
 	RMProjectedRect normalizedProjectedScreenBounds;
 	normalizedProjectedScreenBounds.origin.easting = projectedScreenBounds.origin.easting + planetEndPoint.easting;
 	normalizedProjectedScreenBounds.origin.northing = projectedScreenBounds.origin.northing + planetEndPoint.northing;
@@ -172,7 +176,7 @@
 	RMProjectedPoint normalizedProjectedPoint;
 	normalizedProjectedPoint.easting = aPoint.easting + planetEndPoint.easting;
 	normalizedProjectedPoint.northing = aPoint.northing + planetEndPoint.northing;
-	
+
 	double rightMostViewableEasting;
 	
 	// check if world wrap divider is contained in view
@@ -193,7 +197,6 @@
 	}
 	
 	aPixelPoint.y = screenBounds.size.height - ( normalizedProjectedPoint.northing - normalizedProjectedScreenBounds.origin.northing ) / aScale;
-	
 	return aPixelPoint;
 }
 
@@ -244,9 +247,7 @@
 	RMProjectedPoint aPoint;
 	aPoint.easting = origin.easting + aPixelPoint.x * aScale;
 	aPoint.northing = origin.northing + (screenBounds.size.height - aPixelPoint.y) * aScale;
-	NSLog(@"%f,%f",aPoint.easting,aPoint.northing);
-	origin = [projection wrapPointHorizontally:origin];
-	NSLog(@"%f,%f",aPoint.easting,aPoint.northing);
+    origin = [projection wrapPointHorizontally:origin];
 	return aPoint;
 }
 
