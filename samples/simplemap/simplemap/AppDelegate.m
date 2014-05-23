@@ -3,7 +3,7 @@
 //  simplemap
 //
 //  Created by iclient on 13-9-2.
-//  Copyright (c) 2013年 iclient. All rights reserved.
+//  Copyright (c) 2014年 iclient. All rights reserved.
 //
 
 #import "AppDelegate.h"
