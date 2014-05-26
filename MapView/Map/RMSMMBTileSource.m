@@ -23,7 +23,8 @@
         sqlite3_close(m_database);
         NSLog(@"数据库打开失败");
     }
-    
+	
+	
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     
     const char* sqlQuery = "select name,value from metadata";
@@ -43,7 +44,13 @@
     NSLog(@"%d",nresult);
      */
     db = [[FMDatabase databaseWithPath:tileSetURL] retain];
-    
+    if([tileSetURL hasSuffix:@".mbtiles"]){
+		file_extension = @"mbtiles";
+	}
+	else if([tileSetURL hasSuffix:@".smtiles"]){
+		file_extension = @"smtiles";
+	}
+
     if ( ! [db open])
         return nil;
 
@@ -206,26 +213,46 @@
     int x = tile.x;
     int y = tile.y;
     int z = tile.zoom;
-    //MBTiles y对应的图片排列为倒序，所以需再倒序
-    y=pow(2, z)-1-y;
-    //NSLog(@"x :%d y:%d,z:%d",tile.x,tile.y,tile.zoom);
-    bool bcompatible = [[m_config objectForKey:@"compatible"] boolValue];
-    
-//    NSLog(@"%@",m_dResolutions);
-    if(false)
-    {
-        int y1 = (1 << z) - y - 1;
-        y = y1;
-    }
-    
-    int key = [m_dResolutions count] - 1 - z;
-    
-    
-    NSString* resolution = [m_dResolutions objectAtIndex:z];
-    //NSLog(@"x :%d y:%d,res:%@",x,y,resolution);
-    
-    NSString *sql = @"select tile_data from tiles where tile_column=%d and tile_row=%d and resolution>%@-0.0000001 and resolution<%@+0.0000001";
-    sql = [NSString stringWithFormat:sql, x,y,resolution,resolution];
+	
+    NSString *sql=[[NSString alloc]init ];
+	if([file_extension isEqualToString:@"mbtiles"] ){
+		//MBTiles y对应的图片排列为倒序，所以需再倒序
+		y=pow(2, z)-1-y;
+		//NSLog(@"x :%d y:%d,z:%d",tile.x,tile.y,tile.zoom);
+		//bool bcompatible = [[m_config objectForKey:@"compatible"] boolValue];
+		
+	    //NSLog(@"%@",m_dResolutions);
+		//if(false)
+		//{
+		//	int y1 = (1 << z) - y - 1;
+		//	y = y1;
+		//}
+		
+		//int key = [m_dResolutions count] - 1 - z;		
+		
+		//NSString* resolution = [m_dResolutions objectAtIndex:z];
+		//NSLog(@"x :%d y:%d,res:%@",x,y,resolution);
+		
+		//NSString *sql = @"select tile_data from tiles where tile_column=%d and tile_row=%d and resolution>%@-0.0000001 and resolution<%@+0.0000001";
+		//sql = [NSString stringWithFormat:sql, x,y,resolution,resolution];
+		
+		sql = @"select tile_data from tiles where tile_column=%d and tile_row=%d and zoom_level=%d";
+		sql = [NSString stringWithFormat:sql, x,y,z];
+        
+        
+	}
+	else if([file_extension isEqualToString:@"smtiles"]){
+		//NSLog(@"x :%d y:%d,z:%d",tile.x,tile.y,tile.zoom);
+		
+		NSString* resolution = [m_dResolutions objectAtIndex:z];
+		//NSLog(@"x :%d y:%d,res:%@",x,y,resolution);
+		
+		sql = @"select tile_data from tiles where tile_column=%d and tile_row=%d and resolution>%@-0.0000001 and resolution<%@+0.0000001";
+		sql = [NSString stringWithFormat:sql, x,y,resolution,resolution];
+	}
+	else{
+		return [RMTileImage dummyTile:tile];
+	}
     FMResultSet *results = [db executeQuery:sql];
     
     if ([db hadError])

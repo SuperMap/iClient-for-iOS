@@ -14,7 +14,9 @@
 
 /**
  * Class: RMSMMBTileSource
- * SuperMap MBTile离线地图
+ * SuperMap MBTile离线地图,SuperMap iServer支持生成符合MBTiles规范的地图瓦片，以及一种对 MBTiles 格式的扩展格式，
+ * 称为SMTiles格式。MBTiles是由MapBox制定的一种将瓦片地图数据存储到SQLite数据库中并可快速使用，管理和分享的规范。
+ * SMTiles基于原规范对MBTiles格式进行了扩展,支持任意坐标系，支持任意比例尺，切片的起算原点为任意指定点，行列号的方向为原点开始向左下递增。
  */
 @interface RMSMMBTileSource : NSObject <RMTileSource>
 {
@@ -24,6 +26,8 @@
     NSMutableDictionary* m_config;
     NSMutableArray* m_dResolutions;
     NSMutableArray* m_dScale;
+	
+	NSString* file_extension;//mbtiles or smtiles
 }
 
 /**
