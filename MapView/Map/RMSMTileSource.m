@@ -256,7 +256,7 @@
      //transparent=true&cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@
 
    NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@",m_Info.smurl,m_Info.strParams,tile.x, tile.y,strScale];
-    NSLog(@"%@",strUrl);
+ //   NSLog(@"%@",strUrl);
 
 	return strUrl;
 }

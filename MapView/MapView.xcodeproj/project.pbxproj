@@ -261,6 +261,20 @@
 		FE96C6DA177C25C3003017A9 /* QueryByGeometryService.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96C6D8177C25C1003017A9 /* QueryByGeometryService.m */; };
 		FE96C6DD177C25DC003017A9 /* QueryByGeometryParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = FE96C6DB177C25D9003017A9 /* QueryByGeometryParameters.h */; };
 		FE96C6DE177C25DC003017A9 /* QueryByGeometryParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FE96C6DC177C25DB003017A9 /* QueryByGeometryParameters.m */; };
+		FEBFDD9A1935689A0015E999 /* FindPathResult.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBFDD981935689A0015E999 /* FindPathResult.h */; };
+		FEBFDD9B1935689A0015E999 /* FindPathResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDD991935689A0015E999 /* FindPathResult.m */; };
+		FEBFDD9E19358D360015E999 /* TransportationAnalystParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBFDD9C19358D360015E999 /* TransportationAnalystParameter.h */; };
+		FEBFDD9F19358D360015E999 /* TransportationAnalystParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDD9D19358D360015E999 /* TransportationAnalystParameter.m */; };
+		FEBFDDA219358D8B0015E999 /* TransportationAnalystResultSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBFDDA019358D8B0015E999 /* TransportationAnalystResultSetting.h */; };
+		FEBFDDA319358D8B0015E999 /* TransportationAnalystResultSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDDA119358D8B0015E999 /* TransportationAnalystResultSetting.m */; };
+		FEBFDDA61935E1A60015E999 /* Path.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBFDDA41935E1A60015E999 /* Path.h */; };
+		FEBFDDA71935E1A60015E999 /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDDA51935E1A60015E999 /* Path.m */; };
+		FEBFDDAA1935E6730015E999 /* PathGuideItem.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBFDDA81935E6730015E999 /* PathGuideItem.h */; };
+		FEBFDDAB1935E6730015E999 /* PathGuideItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDDA91935E6730015E999 /* PathGuideItem.m */; };
+		FEC0BFF41934903F00A23971 /* FindPathParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC0BFF21934903F00A23971 /* FindPathParameters.h */; };
+		FEC0BFF51934903F00A23971 /* FindPathParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BFF31934903F00A23971 /* FindPathParameters.m */; };
+		FEC0BFF8193490A300A23971 /* FindPathService.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC0BFF6193490A300A23971 /* FindPathService.h */; };
+		FEC0BFF9193490A300A23971 /* FindPathService.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BFF7193490A300A23971 /* FindPathService.m */; };
 		FED38EE3178E963800A91F98 /* RMSMMBTileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */; };
 		FED38EE4178E963800A91F98 /* RMSMMBTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */; };
 /* End PBXBuildFile section */
@@ -504,6 +518,20 @@
 		FE96C6D8177C25C1003017A9 /* QueryByGeometryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryByGeometryService.m; sourceTree = "<group>"; };
 		FE96C6DB177C25D9003017A9 /* QueryByGeometryParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryByGeometryParameters.h; sourceTree = "<group>"; };
 		FE96C6DC177C25DB003017A9 /* QueryByGeometryParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryByGeometryParameters.m; sourceTree = "<group>"; };
+		FEBFDD981935689A0015E999 /* FindPathResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPathResult.h; sourceTree = "<group>"; };
+		FEBFDD991935689A0015E999 /* FindPathResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPathResult.m; sourceTree = "<group>"; };
+		FEBFDD9C19358D360015E999 /* TransportationAnalystParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationAnalystParameter.h; sourceTree = "<group>"; };
+		FEBFDD9D19358D360015E999 /* TransportationAnalystParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationAnalystParameter.m; sourceTree = "<group>"; };
+		FEBFDDA019358D8B0015E999 /* TransportationAnalystResultSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransportationAnalystResultSetting.h; sourceTree = "<group>"; };
+		FEBFDDA119358D8B0015E999 /* TransportationAnalystResultSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationAnalystResultSetting.m; sourceTree = "<group>"; };
+		FEBFDDA41935E1A60015E999 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
+		FEBFDDA51935E1A60015E999 /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Path.m; sourceTree = "<group>"; };
+		FEBFDDA81935E6730015E999 /* PathGuideItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathGuideItem.h; sourceTree = "<group>"; };
+		FEBFDDA91935E6730015E999 /* PathGuideItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathGuideItem.m; sourceTree = "<group>"; };
+		FEC0BFF21934903F00A23971 /* FindPathParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPathParameters.h; sourceTree = "<group>"; };
+		FEC0BFF31934903F00A23971 /* FindPathParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPathParameters.m; sourceTree = "<group>"; };
+		FEC0BFF6193490A300A23971 /* FindPathService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPathService.h; sourceTree = "<group>"; };
+		FEC0BFF7193490A300A23971 /* FindPathService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPathService.m; sourceTree = "<group>"; };
 		FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMMBTileSource.h; sourceTree = "<group>"; };
 		FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSMMBTileSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -954,6 +982,7 @@
 		FE59C7F4177190A3000A532B /* REST */ = {
 			isa = PBXGroup;
 			children = (
+				FEC0BFF119348EB500A23971 /* NetworkAnalyst */,
 				FE64F85A1778191800935CEB /* ServerType */,
 				FEE0BDAE1772F46600A881BB /* Query */,
 				FE59C7F517719166000A532B /* Measure */,
@@ -981,6 +1010,27 @@
 				FE237B67177AD566000C8B42 /* ServerFeature.m */,
 			);
 			name = ServerType;
+			sourceTree = "<group>";
+		};
+		FEC0BFF119348EB500A23971 /* NetworkAnalyst */ = {
+			isa = PBXGroup;
+			children = (
+				FEC0BFF21934903F00A23971 /* FindPathParameters.h */,
+				FEC0BFF31934903F00A23971 /* FindPathParameters.m */,
+				FEC0BFF6193490A300A23971 /* FindPathService.h */,
+				FEC0BFF7193490A300A23971 /* FindPathService.m */,
+				FEBFDD981935689A0015E999 /* FindPathResult.h */,
+				FEBFDD991935689A0015E999 /* FindPathResult.m */,
+				FEBFDD9C19358D360015E999 /* TransportationAnalystParameter.h */,
+				FEBFDD9D19358D360015E999 /* TransportationAnalystParameter.m */,
+				FEBFDDA019358D8B0015E999 /* TransportationAnalystResultSetting.h */,
+				FEBFDDA119358D8B0015E999 /* TransportationAnalystResultSetting.m */,
+				FEBFDDA41935E1A60015E999 /* Path.h */,
+				FEBFDDA51935E1A60015E999 /* Path.m */,
+				FEBFDDA81935E6730015E999 /* PathGuideItem.h */,
+				FEBFDDA91935E6730015E999 /* PathGuideItem.m */,
+			);
+			name = NetworkAnalyst;
 			sourceTree = "<group>";
 		};
 		FEE0BDAE1772F46600A881BB /* Query */ = {
@@ -1038,6 +1088,8 @@
 				B8C974260E8A19B2007D16AD /* RMTile.h in Headers */,
 				B8C974270E8A19B2007D16AD /* RMPixel.h in Headers */,
 				B8C974290E8A19B2007D16AD /* RMFileTileImage.h in Headers */,
+				FEBFDD9E19358D360015E999 /* TransportationAnalystParameter.h in Headers */,
+				FEBFDDA61935E1A60015E999 /* Path.h in Headers */,
 				B8C9742A0E8A19B2007D16AD /* RMTileImage.h in Headers */,
 				B8C9742B0E8A19B2007D16AD /* RMMemoryCache.h in Headers */,
 				B8C9742D0E8A19B2007D16AD /* RMFractalTileProjection.h in Headers */,
@@ -1055,6 +1107,7 @@
 				B8C974B80E8A280A007D16AD /* RMMapContents.h in Headers */,
 				B8C974CA0E8A9C30007D16AD /* RMCachedTileSource.h in Headers */,
 				B8FA92190E9315EC003A9FE6 /* RMLayerCollection.h in Headers */,
+				FEBFDDA219358D8B0015E999 /* TransportationAnalystResultSetting.h in Headers */,
 				B8F3FC640EA2E792004D8F85 /* RMMarker.h in Headers */,
 				B8474B9A0EB40094006A0BC1 /* FMDatabase.h in Headers */,
 				B8474B9C0EB40094006A0BC1 /* FMDatabaseAdditions.h in Headers */,
@@ -1073,10 +1126,12 @@
 				F5C12D2A0F8A86CA00A894D2 /* RMGeoHash.h in Headers */,
 				96492C400FA8AD3400EBA6D2 /* RMGlobalConstants.h in Headers */,
 				B144DEFE0FD989C3003F3368 /* RMTileMapServiceSource.h in Headers */,
+				FEC0BFF41934903F00A23971 /* FindPathParameters.h in Headers */,
 				B1EB26C310B5D8C0009F8658 /* RMOpenCycleMapSource.h in Headers */,
 				B1EB26C610B5D8E6009F8658 /* RMNotifications.h in Headers */,
 				D1437B35122869E400888DAE /* RMDBTileImage.h in Headers */,
 				D1437B37122869E400888DAE /* RMDBMapSource.h in Headers */,
+				FEC0BFF8193490A300A23971 /* FindPathService.h in Headers */,
 				25757F4F1291C8640083D504 /* RMCircle.h in Headers */,
 				2599740912EB966400816331 /* RMSpatialCloudMapSource.h in Headers */,
 				DD55FD1512FB40E000B6FE24 /* RMMBTilesTileSource.h in Headers */,
@@ -1104,10 +1159,12 @@
 				FE237B68177AD566000C8B42 /* ServerFeature.h in Headers */,
 				FE237B6C177AD5D6000C8B42 /* Recordset.h in Headers */,
 				FE237B70177AE51E000C8B42 /* QueryResult.h in Headers */,
+				FEBFDD9A1935689A0015E999 /* FindPathResult.h in Headers */,
 				FE96C6C9177C1697003017A9 /* QueryByDistanceParameters.h in Headers */,
 				FE96C6CD177C18D9003017A9 /* QueryByDistanceService.h in Headers */,
 				FE96C6D1177C24AE003017A9 /* QueryBySQLParameters.h in Headers */,
 				FE96C6D5177C24EE003017A9 /* QueryBySQLService.h in Headers */,
+				FEBFDDAA1935E6730015E999 /* PathGuideItem.h in Headers */,
 				FE96C6D9177C25C3003017A9 /* QueryByGeometryService.h in Headers */,
 				FE96C6DD177C25DC003017A9 /* QueryByGeometryParameters.h in Headers */,
 				FE74F63F1785124C0063C6A2 /* RMCloudMapSource.h in Headers */,
@@ -1385,6 +1442,7 @@
 				B8C974640E8A19E9007D16AD /* RMTransform.m in Sources */,
 				B8C974660E8A19EA007D16AD /* RMVirtualEarthSource.m in Sources */,
 				B8C974680E8A19EB007D16AD /* RMWebTileImage.m in Sources */,
+				FEBFDDA71935E1A60015E999 /* Path.m in Sources */,
 				B8C9746C0E8A1A50007D16AD /* RMMapView.m in Sources */,
 				B8C974B90E8A280A007D16AD /* RMMapContents.m in Sources */,
 				B8C974CB0E8A9C30007D16AD /* RMCachedTileSource.m in Sources */,
@@ -1404,6 +1462,7 @@
 				96FE8E370F72D01B00A11CF0 /* RMYahooMapSource.m in Sources */,
 				F5C12D2B0F8A86CA00A894D2 /* RMGeoHash.m in Sources */,
 				B144DEFF0FD989C3003F3368 /* RMTileMapServiceSource.m in Sources */,
+				FEC0BFF9193490A300A23971 /* FindPathService.m in Sources */,
 				B1EB26C410B5D8C0009F8658 /* RMOpenCycleMapSource.m in Sources */,
 				D1437B34122869E400888DAE /* RMDBTileImage.m in Sources */,
 				D1437B36122869E400888DAE /* RMDBMapSource.m in Sources */,
@@ -1413,12 +1472,14 @@
 				447420DB1302B2F5004D6E8A /* RMWMSSource.m in Sources */,
 				4474211C1302B60A004D6E8A /* RMWMS.m in Sources */,
 				175701DF1323C2E900A5D314 /* NSUserDefaults+RouteMe.m in Sources */,
+				FEBFDDA319358D8B0015E999 /* TransportationAnalystResultSetting.m in Sources */,
 				DDA3E85713B00D9E004D861C /* RMMapQuestOSMSource.m in Sources */,
 				DDCD58D41406F8A400F59E0D /* RMTileStreamSource.m in Sources */,
 				F56554F9146E002B00623AC9 /* RMURLConnectionOperation.m in Sources */,
 				FE19279A1769563F003B2E46 /* RMSMTileProjection.m in Sources */,
 				FE19279E17695657003B2E46 /* RMSMTileSource.m in Sources */,
 				FE1927A517695695003B2E46 /* RMSMLayerInfo.m in Sources */,
+				FEBFDD9F19358D360015E999 /* TransportationAnalystParameter.m in Sources */,
 				FE59C7F91771A0FE000A532B /* RMSMMeasureService.m in Sources */,
 				FE59C7FD1771A3E3000A532B /* RMSMMeasureParameters.m in Sources */,
 				FE64F85E17781C4300935CEB /* ServerGeometry.m in Sources */,
@@ -1428,9 +1489,12 @@
 				FE221B75177972680051A2C2 /* FilterParameter.m in Sources */,
 				FE221B791779779F0051A2C2 /* QueryParameters.m in Sources */,
 				FE221B7D17797D4C0051A2C2 /* QueryService.m in Sources */,
+				FEBFDDAB1935E6730015E999 /* PathGuideItem.m in Sources */,
 				FE221B8117797DC60051A2C2 /* QueryByBoundsParameters.m in Sources */,
 				FE221B85177983080051A2C2 /* QueryByBoundsService.m in Sources */,
 				FE237B69177AD566000C8B42 /* ServerFeature.m in Sources */,
+				FEBFDD9B1935689A0015E999 /* FindPathResult.m in Sources */,
+				FEC0BFF51934903F00A23971 /* FindPathParameters.m in Sources */,
 				FE237B6D177AD5D6000C8B42 /* Recordset.m in Sources */,
 				FE237B71177AE51E000C8B42 /* QueryResult.m in Sources */,
 				FE96C6CA177C1697003017A9 /* QueryByDistanceParameters.m in Sources */,

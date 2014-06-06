@@ -102,7 +102,7 @@ RMProjectedSize RMMakeProjectedSize(double width, double height) {
     };
     return size;
 }
-
+//左下角，宽高
 RMProjectedRect  RMMakeProjectedRect (double easting, double northing, double width, double height)
 {
 	RMProjectedRect rect = {
