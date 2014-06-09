@@ -13,12 +13,12 @@
 
 -(id) init
 {
-     returnEdgeFeatures = YES;
-     returnEdgeGeometry = YES;
-     returnEdgeIDs = YES;
-     returnNodeFeatures = YES;
-     returnNodeGeometry = YES;
-     returnNodeIDs = YES;
+     returnEdgeFeatures = NO;
+     returnEdgeGeometry = NO;
+     returnEdgeIDs = NO;
+     returnNodeFeatures = NO;
+     returnNodeGeometry = NO;
+     returnNodeIDs = NO;
      returnPathGuides = YES;
     // returnRoute = NO;
   

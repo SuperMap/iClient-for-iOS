@@ -25,31 +25,31 @@
     pathGuideItems=[[NSMutableArray alloc]init];
     
     NSArray *aEdgeFeatures=[dictJson objectForKey:@"edgeFeatures"];
-        if (aEdgeFeatures!=nil){
-            for (int i=0;i<[aEdgeFeatures count] ; i++) {
-                ServerFeature *sFeature=[[ServerFeature alloc]initfromJson:[aEdgeFeatures objectAtIndex:i]];
-                [edgeFeatures addObject:sFeature];
-            }
+    if ((NSNull *)aEdgeFeatures!=[NSNull null]){
+        for (int i=0;i<[aEdgeFeatures count] ; i++) {
+            ServerFeature *sFeature=[[ServerFeature alloc]initfromJson:[aEdgeFeatures objectAtIndex:i]];
+            [edgeFeatures addObject:sFeature];
+        }
     }
-        
+    
     NSArray *aNodeFeatures=[dictJson objectForKey:@"nodeFeatures"];
-        if (aNodeFeatures!=nil){
-            for (int i=0;i<[aNodeFeatures count] ; i++) {
-                ServerFeature *sFeature=[[ServerFeature alloc]initfromJson:[aNodeFeatures objectAtIndex:i]];
-                [nodeFeatures addObject:sFeature];
-            }
+    if ((NSNull *)aNodeFeatures!=[NSNull null]){
+        for (int i=0;i<[aNodeFeatures count] ; i++) {
+            ServerFeature *sFeature=[[ServerFeature alloc]initfromJson:[aNodeFeatures objectAtIndex:i]];
+            [nodeFeatures addObject:sFeature];
+        }
     }
     NSArray *aPathGuideItems=[dictJson objectForKey:@"pathGuideItems"];
-        if (aPathGuideItems!=nil){
-            for (int i=0;i<[aPathGuideItems count] ; i++) {
-                PathGuideItem *pathGuide=[[PathGuideItem alloc]initFromJson:[aPathGuideItems objectAtIndex:i]];
-                [pathGuideItems addObject:pathGuide];
-            }
+    if ((NSNull *)aPathGuideItems!=[NSNull null]){
+        for (int i=0;i<[aPathGuideItems count] ; i++) {
+            PathGuideItem *pathGuide=[[PathGuideItem alloc]initFromJson:[aPathGuideItems objectAtIndex:i]];
+            [pathGuideItems addObject:pathGuide];
+        }
     }
-            
+    
     return self;
-            
+    
 }
-        
-        
- @end
+
+
+@end

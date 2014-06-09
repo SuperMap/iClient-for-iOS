@@ -38,8 +38,7 @@
     //TransportationAnalystResultSetting *resultSetting=[[TransportationAnalystResultSetting alloc]init];
     TransportationAnalystParameter *analystParameter=[[TransportationAnalystParameter alloc]init];
     analystParameter.weightFieldName=@"length";
-    
-    
+        
    // RMProjectedPoint prjPnt1;
    // prjPnt1.easting = 2328.5375449003;
   //  prjPnt1.northing = -3656.9550357373;

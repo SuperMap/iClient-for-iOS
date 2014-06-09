@@ -62,7 +62,7 @@
     FindPathParameters *parameters=[[FindPathParameters alloc]init];
     parameters=params;
     NSString *strJsonParameters=[[NSString alloc]initWithString:[parameters toString]];
-    NSLog(@"%@",strJsonParameters);
+    //NSLog(@"%@",strJsonParameters);
     
     return strJsonParameters;
     

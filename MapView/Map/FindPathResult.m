@@ -22,9 +22,6 @@
     strJson = [strJson stringByReplacingOccurrencesOfString:@"\r" withString:@"\\r"];
     strJson = [strJson stringByReplacingOccurrencesOfString:@"\t" withString:@"\t"];
     
-    
-    
-    
     NSError *e;
     NSDictionary *JSON =
     [NSJSONSerialization JSONObjectWithData: [strJson dataUsingEncoding:NSUTF8StringEncoding]
@@ -37,7 +34,8 @@
     NSMutableArray *aPathList=[[NSMutableArray alloc] init];
     aPathList=[JSON objectForKey:@"pathList"];
     Path *aPath;
-    if ([aPathList count]>0) {
+    int nCount=[aPathList count]>0?[aPathList count]:0;
+    if (nCount>0) {
         for (int i=0; i<[aPathList count]; i++) {
             aPath=[[Path alloc]initFromJson:[aPathList objectAtIndex:i]];
         }
