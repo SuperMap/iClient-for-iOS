@@ -295,6 +295,17 @@ enum {
 - (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel;
 - (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel withMetersPerPixel:(float)aScale;
 
+/**
+ * APIMethod: pixelToProjectedPoint
+ * 将像素坐标转换为当前地图的地理坐标
+ *
+ * Parameters:
+ * aPixel - {CGPoint} 所需转换的像素坐标
+ *
+ * Returns:
+ * {RMProjectedPoint}
+ */
+- (RMProjectedPoint)pixelToProjectedPoint:(CGPoint)aPixel;
 - (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)se;
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 
@@ -361,7 +372,6 @@ enum {
 - (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong withMetersPerPixel:(float)aScale;
 - (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel;
 - (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel withMetersPerPixel:(float)aScale;
-
 - (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)se;
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 

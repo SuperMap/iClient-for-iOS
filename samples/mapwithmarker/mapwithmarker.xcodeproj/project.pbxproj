@@ -72,7 +72,6 @@
 		FEC6ED3517D5912200862A1A /* mapwithmarker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mapwithmarker-Info.plist"; sourceTree = "<group>"; };
 		FEC6ED3717D5912200862A1A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FEC6ED3917D5912200862A1A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FEC6ED3B17D5912200862A1A /* mapwithmarker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mapwithmarker-Prefix.pch"; sourceTree = "<group>"; };
 		FEC6ED3C17D5912200862A1A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FEC6ED3D17D5912200862A1A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FEC6ED3F17D5912200862A1A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -178,7 +177,6 @@
 				FEC6ED3517D5912200862A1A /* mapwithmarker-Info.plist */,
 				FEC6ED3617D5912200862A1A /* InfoPlist.strings */,
 				FEC6ED3917D5912200862A1A /* main.m */,
-				FEC6ED3B17D5912200862A1A /* mapwithmarker-Prefix.pch */,
 				FEC6ED3F17D5912200862A1A /* Default.png */,
 				FEC6ED4117D5912200862A1A /* Default@2x.png */,
 				FEC6ED4317D5912200862A1A /* Default-568h@2x.png */,
