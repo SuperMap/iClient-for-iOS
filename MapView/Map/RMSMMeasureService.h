@@ -25,7 +25,7 @@
 }
 
 /**
- * Constructor: init
+ * Constructor: init:
  * 量算服务类构造函数。
  *
  * 例如：
@@ -49,7 +49,7 @@
 - (id)init:(NSString*)mapurl;
 
 /**
- * APIMethod: processAsync
+ * APIMethod: processAsync:
  * 负责将客户端的量算参数传递到服务端。
  *
  * Parameters:

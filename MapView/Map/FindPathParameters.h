@@ -65,7 +65,7 @@
 @property (retain,readwrite) TransportationAnalystParameter *parameter;
 
 /**
- * Constructor: FindPathParameters
+ * Constructor: init: bHasLeastEdgeCount: nodes: parameter:
  * 最佳路径分析参数类构造函数。
  *
  * Parameters:

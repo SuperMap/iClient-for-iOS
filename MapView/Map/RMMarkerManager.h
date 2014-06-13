@@ -33,6 +33,9 @@
 @class RMProjection;
 /**
  * Class: RMMarkerManager
+ * Marker管理图层类
+ * 用于添加、删除、显示Marker
+ *
  */
 @interface RMMarkerManager : NSObject {
 	RMMapContents *contents;
@@ -41,18 +44,93 @@
 
 @property (assign, readwrite)  RMMapContents *contents;
 
+/**
+ * Constructor: initWithContents:
+ * Marker管理图层类构造函数。
+ *
+ * Parameters:
+ * mapContents - {RMMapContents} 
+ *
+ */
 - (id)initWithContents:(RMMapContents *)mapContents;
 
+/**
+ * APIMethod: addMarker:atProjectedPoint:
+ * 在一地理坐标上添加Marker
+ *
+ ** Parameters:
+ * marker - {RMMarker} 需要添加的marker
+ * projectedPoint - {RMProjectedPoint} 当前所添加marker的地理坐标
+ */
 - (void)addMarker:(RMMarker *)marker atProjectedPoint:(RMProjectedPoint)projectedPoint;
+
+/**
+ * APIMethod: addMarker:AtLatLong:
+ * 在一经纬度坐标上添加Marker
+ *
+ ** Parameters:
+ * marker - {RMMarker} 需要添加的marker
+ * point - {CLLocationCoordinate2D} 当前所添加marker的经纬度坐标
+ */
 - (void) addMarker: (RMMarker*)marker AtLatLong:(CLLocationCoordinate2D)point;
+
+/**
+ * APIMethod: removeMarkers
+ * 移除所有的Marker
+ *
+ */
 - (void) removeMarkers;
+
+/**
+ * APIMethod: hideAllMarkers
+ * 隐藏所有的Marker
+ *
+ */
 - (void) hideAllMarkers;
+
+/**
+ * APIMethod: hideAllMarkers
+ * 显示所有的Marker
+ *
+ */
 - (void) unhideAllMarkers;
 
+/**
+ * APIMethod: markers
+ * 获取所有的Marker
+ *
+ * Returns:
+ * {NSArray}  获取所有的Marker
+ */
 - (NSArray *)markers;
+
+/**
+ * APIMethod: removeMarker:
+ * 移除marker
+ *
+ ** Parameters:
+ * marker - {RMMarker} 需要移除的marker
+ */
 - (void) removeMarker:(RMMarker *)marker;
+
+/**
+ * APIMethod: removeMarkers:
+ * 移除marker列表
+ *
+ ** Parameters:
+ * markers - {NSArray} 需要移除的marker列表
+ */
 - (void) removeMarkers:(NSArray *)markers;
+
+/**
+ * APIMethod: screenCoordinatesForMarker:
+ * 获取marker所在的屏幕坐标
+ *
+ ** Parameters:
+ * marker - {RMMarker} marker
+ */
 - (CGPoint) screenCoordinatesForMarker: (RMMarker *)marker;
+
 - (CLLocationCoordinate2D) latitudeLongitudeForMarker: (RMMarker *) marker;
 - (NSArray *) markersWithinScreenBounds;
 - (BOOL) isMarkerWithinScreenBounds:(RMMarker*)marker;

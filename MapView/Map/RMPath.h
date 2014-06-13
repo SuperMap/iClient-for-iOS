@@ -47,37 +47,225 @@
     int nTempParts;
 }
 
+/**
+ * Constructor: initWithContents:
+ * RMPath类构造函数。
+ *
+ * Parameters:
+ * aContents - {RMMapContents}
+ *
+ */
 - (id) initWithContents: (RMMapContents*)aContents;
+
+/**
+ * Constructor: initForMap:
+ * RMPath类构造函数。
+ *
+ * Parameters:
+ * map - {RMMapView}
+ *
+ */
 - (id) initForMap: (RMMapView*)map;
+
+/**
+ * Constructor: initForMap: withCoordinates: count:
+ * RMPath类构造函数。
+ *
+ * Parameters:
+ * map - {RMMapView}
+ * coordinates - {CLLocationCoordinate2D}
+ * aContents - {NSInteger}
+ *
+ */
 - (id) initForMap: (RMMapView*)map withCoordinates:(const CLLocationCoordinate2D*)coordinates count:(NSInteger)count;
 
+/**
+ * APIMethod: moveToXY:
+ * 设置点，或设置线、多边形的起点。此点为RMProjectedPoint。
+ *
+ ** Parameters:
+ * point - {RMProjectedPoint} 点，或线、多边形的起点
+ */
 - (void) moveToXY: (RMProjectedPoint) point;
+
+/**
+ * APIMethod: moveToScreenPoint:
+ * 设置点，或设置线、多边形的起点。此点为CGPoint。
+ *
+ ** Parameters:
+ * point - {CGPoint} 点，或线、多边形的起点
+ */
 - (void) moveToScreenPoint: (CGPoint) point;
+
+/**
+ * APIMethod: moveToLatLong:
+ * 设置点，或设置线、多边形的起点。此点为RMLatLong。
+ *
+ ** Parameters:
+ * point - {RMLatLong} 点，或线、多边形的起点
+ */
 - (void) moveToLatLong: (RMLatLong) point;
+
+/**
+ * APIMethod: addLineToXY:
+ * 设置线段的终点，创建了一条线段，起点是设置的起点或所创建的前一条线段的终点。此终点为RMProjectedPoint。
+ *
+ ** Parameters:
+ * point - {RMProjectedPoint} 线段的终点
+ */
 - (void) addLineToXY: (RMProjectedPoint) point;
+
+/**
+ * APIMethod: addLineToScreenPoint:
+ * 设置线段的终点，创建了一条线段，起点是设置的起点或所创建的前一条线段的终点。此终点为CGPoint。
+ *
+ ** Parameters:
+ * point - {CGPoint} 线段的终点
+ */
 - (void) addLineToScreenPoint: (CGPoint) point;
+
+/**
+ * APIMethod: addLineToLatLong:
+ * 设置线段的终点，创建了一条线段，起点是设置的起点或所创建的前一条线段的终点。此终点为RMLatLong。
+ *
+ ** Parameters:
+ * point - {RMLatLong} 线段的终点
+ */
 - (void) addLineToLatLong: (RMLatLong) point;
+
+/**
+ * APIMethod: closePath
+ * 闭合多边形，连接多边形的起点和最后一个点为一条线段。
+ *
+ */
 - (void) closePath;
 
+
+/**
+ * APIProperty: lineCap
+ * {<CGLineCap>} 线的端点显示类型
+ */
 @property (nonatomic, assign) CGLineCap lineCap;
+
+/**
+ * APIProperty: lineJoin
+ * {<CGLineJoin>} 线的拐角显示类型
+ */
 @property (nonatomic, assign) CGLineJoin lineJoin;
+
+/**
+ * APIProperty: lineWidth
+ * {float} 线宽
+ */
 @property (nonatomic, assign) float lineWidth;
+
+/**
+ * APIProperty: scaleLineWidth
+ * {BOOL} 是否随地图缩放
+ */
 @property (nonatomic, assign) BOOL	scaleLineWidth;
+
+/**
+ * APIProperty: shadowBlur
+ * {CGFloat} 阴影模糊级别
+ *
+ */
 @property (nonatomic, assign) CGFloat shadowBlur;
+
+/**
+ * APIProperty: shadowOffset
+ * {CGSize} 阴影偏移
+ *
+ */
 @property (nonatomic, assign) CGSize shadowOffset;
+
+/**
+ * APIProperty: shadowColor
+ * {UIColor} 阴影的颜色
+ *
+ */
 @property (nonatomic, retain) UIColor *shadowColor;
+////////////////////////////////
+/**
+ *APIProperty: lineDashLengths
+ *{NSArray} 线的类型编码
+ *
+ */
 @property (nonatomic, assign) NSArray *lineDashLengths;
+////////////////////////////////
+/**
+ *APIProperty: lineDashPhase
+ *{CGFloat}
+ *
+ */
 @property (nonatomic, assign) CGFloat lineDashPhase;
+////////////////////////////////
+/**
+ *APIProperty: scaleLineDash
+ *{BOOL}
+ *
+ */
 @property (nonatomic, assign) BOOL scaleLineDash;
+//起点
 @property (nonatomic, assign) RMProjectedPoint projectedLocation;
+
+/**
+ * APIProperty: enableDragging
+ * {BOOL} 是否随地图移动
+ *
+ */
 @property (assign) BOOL enableDragging;
+
+/**
+ * APIProperty: enableRotation
+ * {BOOL} 是否随地图旋转
+ *
+ */
 @property (assign) BOOL enableRotation;
+
+/**
+ * APIProperty: lineColor
+ * {UIColor} 线的颜色
+ *
+ */
 @property (nonatomic, readwrite, assign) UIColor *lineColor;
+
+/**
+ * APIProperty: fillColor
+ * {UIColor} 多边形的填充色
+ *
+ */
 @property (nonatomic, readwrite, assign) UIColor *fillColor;
+
+/**
+ * APIProperty: CGPath
+ * {<CGPathRef>} 阴影偏移
+ *
+ */
 @property (nonatomic, readonly) CGPathRef CGPath;
+
 @property (nonatomic, readonly) RMProjectedRect projectedBounds;
+
+/**
+ * APIProperty: bIsClosePath
+ * {BOOL} 是否闭合，即是否为多边形。
+ *
+ */
 @property (readonly) BOOL bIsClosePath;
+
+/**
+ * APIProperty: parts
+ * {NSMutableArray} 组成多边形的子对象集合
+ *
+ */
 @property (retain,readwrite) NSMutableArray* parts;
+
+/**
+ * APIProperty: points
+ * {NSMutableArray} 组成线、多边形的点集合
+ *
+ */
 @property (retain,readwrite) NSMutableArray* points;
+
 @end
 

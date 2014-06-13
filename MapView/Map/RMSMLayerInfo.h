@@ -58,7 +58,7 @@
  */
 @property (assign,readwrite) NSString *strParams;
  /**
- * Constructor: initWithTile
+ * Constructor: initWithTile:linkurl:
  * 所有SuperMap iServer 6R 分块动态 REST 图层。
  * (start code)  
  * //字符串为SuperMap iServer地图服务的url链接
@@ -74,7 +74,7 @@
 - (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url;
 
 /**
- * Constructor: initWithTile
+ * Constructor: initWithTile: linkurl: params:
  * 所有SuperMap iServer 6R 分块动态 REST 图层。
  * (start code)
  * //字符串为SuperMap iServer地图服务的url链接
@@ -101,7 +101,7 @@
 - (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url params:(NSMutableDictionary*)params;
 
 /**
-* APIMethod: calculateDpi
+* APIMethod: calculateDpi: rvbheight: rvWidth: rcHeight: scale:
 * 计算当前地图服务DPI。
 *
 * Parameters:
@@ -112,12 +112,12 @@
 * dScale - {double} 对应比例尺 
 *
 * Returns:
-* {<int>}  当前地图DPI。
+* {float}  当前地图DPI。
 */
 - (float)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
 
 /**
-* APIMethod: getScaleFromResolutionDpi
+* APIMethod: getScaleFromResolutionDpi:
 * 根据指定的分辨率，返回对应的比例尺。
 *
 * Parameters:
@@ -129,7 +129,7 @@
 -(NSString*) getScaleFromResolutionDpi:(double)dResolution;
 
 /**
- * APIMethod: getResolutionFromScaleDpi
+ * APIMethod: getResolutionFromScaleDpi:
  * 根据指定的比例尺，返回对应的分辨率。
  *
  * Parameters:

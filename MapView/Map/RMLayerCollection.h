@@ -52,6 +52,13 @@
 	CGAffineTransform rotationTransform;
 }
 
+/**
+ * Constructor: initForContents
+ * RMLayerCollection 图层集合类构造函数。
+ *
+ * Parameters:
+ * contents - {RMMapContents}
+ */
 - (id)initForContents: (RMMapContents *)contents;
 
 //- (void)insertSublayer:(RMMapLayer*) layer below:(RMMapLayer*)sibling;
@@ -61,7 +68,23 @@
 - (void)moveToProjectedPoint: (RMProjectedPoint)aPoint;
 - (void)moveBy: (CGSize) delta;
 - (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center;
+
+/**
+ * APIMethod: removeSublayer:
+ * 移除图层
+ *
+ ** Parameters:
+ * layer - {CALayer} 需移除的图层
+ */
 - (void)removeSublayer:(CALayer *)layer;
+
+/**
+ * APIMethod: removeSublayers:
+ * 移除图层集合
+ *
+ ** Parameters:
+ * layer - {NSArray} 需移除的图层集合
+ */
 - (void)removeSublayers:(NSArray *)layers;
 /// (guess) recompute the screen coordinates for the sublayers (map markers, paths) 
 /// \deprecated name will change after 0.5
@@ -73,7 +96,7 @@
 
 /**
  * APIMethod: orderLayers
- * Orders layers in the collection based on their position in the map, prioritizing instances/subclass instances of RMMarker above *other layers. This is called automatically in addSublayer.
+ * 图层排序。根据图层在map的位置排序，但优先RMMarker的实例或其子类。
  */
 - (void)orderLayers;
 

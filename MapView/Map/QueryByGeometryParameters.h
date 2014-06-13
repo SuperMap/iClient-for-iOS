@@ -37,7 +37,7 @@
 @property (copy,readwrite) NSString* spatialQueryMode;
 
 /**
- * Constructor: init
+ * Constructor: init:
  * Geometry 查询参数类构造函数。
  *
  * Parameters:

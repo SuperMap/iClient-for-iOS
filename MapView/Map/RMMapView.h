@@ -196,7 +196,7 @@ typedef struct {
 
 //recenter the map on #latlong, expressed as CLLocationCoordinate2D (latitude/longitude)
 /**
- * APIMethod: moveToLatLong
+ * APIMethod: moveToLatLong:
  * 重置地图的中心点，该中心点为经纬度坐标。
  *
  ** Parameters:
@@ -205,11 +205,11 @@ typedef struct {
 - (void)moveToLatLong: (CLLocationCoordinate2D)latlong;
 
 /**
- * APIMethod: moveToProjectedPoint
+ * APIMethod: moveToProjectedPoint:
  * 重置地图的中心点，该中心点为平面坐标。
  *
  ** Parameters:
- * aPoint - {RMProjectedPoint}  
+ * aPoint - {RMProjectedPoint}  地图的中心点，该中心点为平面坐标
  */
 - (void)moveToProjectedPoint: (RMProjectedPoint)aPoint;
 

@@ -35,12 +35,15 @@
 @class RMMarkerStyle;
 /**
  * Class: RMMarker
- * one marker drawn on the map. Note that RMMarker ultimately descends from CALayer, and has an image contents.
- * RMMarker inherits "position" and "anchorPoint" from CALayer.
+ * 标记覆盖物
+ * 标注地图上的点，包含一个标注的图标。 
  *
+ * RMMarker根本上是继承于CALayer。
  * Inherits from:
  *  - <RMMapLayer>
  */
+// Note that RMMarker ultimately descends from CALayer, and has an image contents.
+// RMMarker inherits "position" and "anchorPoint" from CALayer.
 @interface RMMarker : RMMapLayer <RMMovingMapLayer> {
 	/// expressed in projected meters. The anchorPoint of the image is plotted here. 
 	RMProjectedPoint projectedLocation;	
@@ -55,6 +58,7 @@
 	BOOL enableDragging;
 	BOOL enableRotation;
 }
+//所标注的marker的坐标
 @property (assign, nonatomic) RMProjectedPoint projectedLocation;
 @property (assign) BOOL enableDragging;
 @property (assign) BOOL enableRotation;
@@ -66,38 +70,104 @@
 
 /**
  * APIMethod: defaultFont
- * the font used for labels when another font is not explicitly requested; currently [UIFont systemFontOfSize:15]
+ * labels默认的字体，其值是[UIFont systemFontOfSize:15]。
  *
  * Returns:
- * {<UIFont *>}
+ * {<UIFont>}
  */
 + (UIFont *)defaultFont;
 
 /**
- * APIMethod: initWithUIImage
- * returns RMMarker initialized with #image, and the default anchor point (0.5, 0.5)
+ * Constructor: initWithUIImage:
+ * 标记类构造函数
  *
- * Parameters:
- * image - {<UIImage*>}
+ * 初始化RMMarker类，默认anchorPoint为 (0.5,1)
+ *
+ ** Parameters:
+ * image - {<UIImage>} 标注的图标
  */
 - (id) initWithUIImage: (UIImage*) image;
-/// \brief returns RMMarker initialized with provided image and anchorPoint. 
-/// #anchorPoint x and y range from 0 to 1, normalized to the width and height of image, 
-/// referenced to upper left corner, y increasing top to bottom. To put the image's upper right corner on the marker's 
-/// #projectedLocation, use an anchor point of (1.0, 0.0);
+
+/**
+ * Constructor: initWithUIImage:anchorPoint:
+ * 标记类构造函数
+ *
+ * 初始化RMMarker类。
+ *
+ ** Parameters:
+ * image - {<UIImage>} 标注的图标
+ * anchorPoint - {<CGPoint>} 标注的位置。其中，anchorPoint的 x 与 y 值的范围为[0,1]，即image的宽和高被规范化的范围，参考点为image的左上角[0,0]，y值从上到下增加。一般设置为(0.5,1)，即所要标注的坐标点位于image底部的中间。
+ */
 - (id) initWithUIImage: (UIImage*) image anchorPoint: (CGPoint) anchorPoint;
 
 /// changes the labelView to a UILabel with supplied #text and default marker font, using existing text foreground/background color.
+/**
+ * APIMethod: changeLabelUsingText:
+ * 改变marker上的UILabel所显示的文本内容，即改变属性label的值。
+ *
+ ** Parameters:
+ * text - {NSString} 需要在marker上显示的文本内容
+ */
 - (void) changeLabelUsingText: (NSString*)text;
+
 /// changes the labelView to a UILabel with supplied #text and default marker font, positioning the text some weird way i don't understand yet. Uses existing text color/background color.
+
+/**
+ * APIMethod: changeLabelUsingText:position:
+ * 改变marker上的UILabel所显示的文本内容，即改变属性label的值。
+ *
+ ** Parameters:
+ * text - {NSString} 需要在UILabel上显示的文本内容
+ * position - {CGPoint} UILabel的位置
+ */
 - (void) changeLabelUsingText: (NSString*)text position:(CGPoint)position;
 /// changes the labelView to a UILabel with supplied #text and default marker font, changing this marker's text foreground/background colors for this and future text strings.
+
+/**
+ * APIMethod: changeLabelUsingText: font: foregroundColor: backgroundColor:
+ * 改变marker上的UILabel所显示的文本内容，即改变属性label的值。
+ *
+ ** Parameters:
+ * text - {NSString} 需要在UILabel上显示的文本内容
+ * font - {UIFont} UILabel的字体
+ * textColor - {UIColor} UILabel的前景色
+ * backgroundColor - {UIColor} UILabel的背景色
+ */
 - (void) changeLabelUsingText: (NSString*)text font:(UIFont*)font foregroundColor:(UIColor*)textColor backgroundColor:(UIColor*)backgroundColor;
 /// changes the labelView to a UILabel with supplied #text and default marker font, changing this marker's text foreground/background colors for this and future text strings; modifies position as in #changeLabelUsingText:position.
+
+/**
+ * APIMethod: changeLabelUsingText: position: font: foregroundColor: backgroundColor:
+ * 改变marker上的UILabel所显示的文本内容，即改变属性label的值。
+ *
+ ** Parameters:
+ * text - {NSString} 需要在UILabel上显示的文本内容
+ * position - {CGPoint} UILabel的位置
+ * font - {UIFont} UILabel的字体
+ * textColor - {UIColor} UILabel的前景色
+ * backgroundColor - {UIColor} UILabel的背景色
+ */
 - (void) changeLabelUsingText: (NSString*)text position:(CGPoint)position font:(UIFont*)font foregroundColor:(UIColor*)textColor backgroundColor:(UIColor*)backgroundColor;
 
+/**
+ * APIMethod: toggleLabel
+ * 切换marker上的UILabel的显示
+ *
+ */
 - (void) toggleLabel;
+
+/**
+ * APIMethod: showLabel
+ * 显示marker上的UILabel
+ *
+ */
 - (void) showLabel;
+
+/**
+ * APIMethod: hideLabel
+ * 隐藏marker上的UILabel
+ *
+ */
 - (void) hideLabel;
 
 - (void) replaceUIImage:(UIImage*)image;

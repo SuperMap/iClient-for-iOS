@@ -18,7 +18,7 @@
   NSString *host, *key;
 }
 /**
- * Constructor: init
+ * Constructor: init: uniqueKey: minZoom: maxZoom:
  */
 -(id) init: (NSString*) _host uniqueKey: (NSString*) _key minZoom: (float) _minZoom maxZoom: (float) _maxZoom;
 

@@ -48,12 +48,12 @@
 @property (readwrite) BOOL isNearest;
 
 /**
- * Constructor: init
+ * Constructor: init: mGeometry: bNearest:
  * Distance 查询参数类构造函数。
  *
  * Parameters:
  * dis - {int} 查询距离。
- * mGeometry - {RMPath} 期望返回结果记录个数。
+ * mGeometry - {RMPath} 用于查询的地理对象。
  * bNearest - {BOOL} 是否为最近距离查询。
 */
 -(id) init:(int)dis mGeometry:(RMPath*)mGeometry bNearest:(BOOL)bNearest;
