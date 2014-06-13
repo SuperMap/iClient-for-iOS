@@ -55,15 +55,66 @@
 	CGMutablePathRef circlePath;
 }
 
+//画圆的图层
 @property (nonatomic, retain) CAShapeLayer* shapeLayer;
+/**
+ * APIProperty: projectedLocation
+ * {<RMProjectedPoint>} 圆心
+ *
+ */
 @property (nonatomic, assign) RMProjectedPoint projectedLocation;
+
+/**
+ * APIProperty: enableDragging
+ * {BOOL} 是否随地图移动
+ *
+ */
 @property (assign) BOOL enableDragging;
+
+/**
+ * APIProperty: enableRotation
+ * {BOOL} 是否随地图旋转
+ *
+ */
 @property (assign) BOOL enableRotation;
+
+/**
+ * APIProperty: lineColor
+ * {UIColor} 边缘线的颜色
+ *
+ */
 @property (nonatomic, retain) UIColor* lineColor;
+
+/**
+ * APIProperty: fillColor
+ * {UIColor} 填充色
+ *
+ */
 @property (nonatomic, retain) UIColor* fillColor;
+
+/**
+ * APIProperty: radiusInMeters
+ * {CGFloat} 半径
+ */
 @property (nonatomic, assign) CGFloat radiusInMeters;
+
+/**
+ * APIProperty: lineWidthInPixels
+ * {CGFloat} 线宽
+ */
 @property (nonatomic, assign) CGFloat lineWidthInPixels;
 
+
+/**
+ * Constructor: initWithContents
+ * RMCircle类构造函数。
+ *
+ ** Parameters:
+ * aContents - {RMMapContents}
+ * newRadiusInMeters - {CGFloat} 半径,单位：米。
+ * newLatLong - {RMLatLong} 圆心
+ * 
+ */
 - (id)initWithContents:(RMMapContents*)aContents radiusInMeters:(CGFloat)newRadiusInMeters latLong:(RMLatLong)newLatLong;
 - (void)moveToLatLong:(RMLatLong)newLatLong;
 

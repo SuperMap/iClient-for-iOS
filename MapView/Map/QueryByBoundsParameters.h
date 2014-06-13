@@ -30,8 +30,11 @@
 @property (readwrite) RMProjectedRect bounds;
 
 /**
- * Constructor: SuperMap.REST.QueryByBoundsParameters
+ * Constructor: init
  * Bounds 查询参数类构造函数。
+ *
+ * Parameters:
+ * mbounds - {RMProjectedRect} 指定的查询范围。
  */
 -(id) init:(RMProjectedRect)mbounds;
 

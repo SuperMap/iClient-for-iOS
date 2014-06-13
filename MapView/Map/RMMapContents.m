@@ -951,6 +951,17 @@ static BOOL _performExpensiveOperations = YES;
 	return [mercatorToScreenProjection projectXYPoint:[projection latLongToPoint:latlong]];
 }
 
+
+- (RMProjectedPoint)latLongToProjectedPoint:(CLLocationCoordinate2D)latlong
+{
+	return [projection latLongToPoint:latlong];
+}
+
+- (CLLocationCoordinate2D)projectedPointToLatLong:(RMProjectedPoint)projectedPoint
+{
+	return [projection pointToLatLong:projectedPoint];
+}
+
 - (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong withMetersPerPixel:(float)aScale
 {	
 	return [mercatorToScreenProjection projectXYPoint:[projection latLongToPoint:latlong] withMetersPerPixel:aScale];
