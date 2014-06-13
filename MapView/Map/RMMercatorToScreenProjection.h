@@ -55,12 +55,11 @@
 - (id) initFromProjection: (RMProjection*) projection ToScreenBounds: (CGRect)aScreenBounds;
 
 /**
- * APIMethod: movePoint: by:
+ * APIMethod: movePoint
  * Deltas in screen coordinates.
  *
  * Parameters:
  * aPoint - {<RMProjectedPoint>} 
- * delta - {<CGSize>}
  *
  * Returns:
  * {<RMProjectedPoint>}
@@ -68,12 +67,11 @@
 - (RMProjectedPoint)movePoint: (RMProjectedPoint)aPoint by:(CGSize) delta;
 
 /**
- * APIMethod: moveRect by:
+ * APIMethod: moveRect
  * Deltas in screen coordinates.
  *
  * Parameters:
  * aRect - {<RMProjectedRect>} 
- * delta - {<CGSize>}
  *
  * Returns:
  * {<RMProjectedRect>}
@@ -81,13 +79,11 @@
 - (RMProjectedRect)moveRect: (RMProjectedRect)aRect by:(CGSize) delta;
 
 /**
- * APIMethod: zoomPoint: byFactor: near:
+ * APIMethod: zoomPoint
  * pivot given in screen coordinates.
  *
  * Parameters:
  * aPoint - {<RMProjectedPoint>} 
- * factor - {float}
- * pivot - {CGPoint}
  *
  * Returns:
  * {<RMProjectedPoint>}
@@ -95,13 +91,11 @@
 - (RMProjectedPoint)zoomPoint: (RMProjectedPoint)aPoint byFactor: (float)factor near:(CGPoint) pivot;
  
 /**
- * APIMethod: zoomRect:byFactor:near:
+ * APIMethod: zoomRect
  * pivot given in screen coordinates.
  *
  * Parameters:
- * aRect - {<RMProjectedRect>}
- * factor - {float}
- * pivot - {CGPoint}
+ * aRect - {<RMProjectedRect>} 
  *
  * Returns:
  * {<RMProjectedRect>}
@@ -109,7 +103,7 @@
 - (RMProjectedRect)zoomRect: (RMProjectedRect)aRect byFactor: (float)factor near:(CGPoint) pivot;
 
 /**
- * APIMethod: moveScreenBy:
+ * APIMethod: moveScreenBy
  * Move the screen.
  *
  * Parameters:
@@ -119,12 +113,11 @@
 - (void) zoomScreenByFactor: (float) factor near:(CGPoint) aPoint;
 
 /**
- * APIMethod: projectXYPoint: withMetersPerPixel:
+ * APIMethod: projectXYPoint
  * Project -> screen coordinates.
  *
  * Parameters:
  * aPoint - {<RMProjectedPoint>} 
- * aScale - {float}
  *
  * Returns:
  * {<CGPoint>}
@@ -135,7 +128,7 @@
 - (CGPoint) projectXYPoint: (RMProjectedPoint) aPoint;
 
 /**
- * APIMethod: projectXYRect:
+ * APIMethod: projectXYRect
  * Project -> screen coordinates.
  *
  * Parameters:

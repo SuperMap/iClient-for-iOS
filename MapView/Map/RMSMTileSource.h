@@ -27,7 +27,7 @@
 -(id) init;
 
 /**
- * Constructor: initWithInfo:
+ * Constructor: initWithInfo
  * RMSMTileSource用于在iOS上加载iServer地图服务，方便的将iServer发布的地图服务显示在地图框架中
  * (start code)
  * //字符串为SuperMap iServer地图服务的url链接
@@ -54,7 +54,7 @@
  */
 
 /**
- * Constructor: initWithInfo: resolutions:
+ * Constructor: initWithInfo
  * RMSMTileSource用于在iOS上加载iServer地图服务，方便的将iServer发布的地图服务显示在地图框架中
  *
  * Parameters:
@@ -72,7 +72,7 @@
  */
 
 /**
- * Constructor: initWithInfo: scales:
+ * Constructor: initWithInfo
  * RMSMTileSource用于在iOS上加载iServer地图服务，方便的将iServer发布的地图服务显示在地图框架中
  *
  * Parameters:
@@ -89,12 +89,12 @@
  * 获取该地图服务每一个Tile瓦片的像素大小，默认为256像素
  *
  * Returns:
- * {int}  获取该地图服务每一个Tile瓦片的像素大小，默认为256像素。
+ * {<int>}  获取该地图服务每一个Tile瓦片的像素大小，默认为256像素。
  */
 -(int) tileSideLength;
 
 /**
- * APIMethod: setTileSideLength:
+ * APIMethod: setTileSideLength
  * 指定每一个Tile瓦片的像素大小
  *
  ** Parameters:
@@ -104,20 +104,14 @@
 
 
 /**
- * APIMethod: minZoom
- * 获取当前地图最小显示层级。
- *
- ** Returns:
- * {float}  获取当前地图最小显示层级。
+ * APIProperty: minZoom
+ * {float} 当前地图最小显示层级。
  */
 -(float) minZoom;
 
 /**
- * APIMethod: maxZoom
- * 获取当前地图最大的显示层级。
- *
- ** Returns:
- * {float}  获取当前地图最大的显示层级。
+ * APIProperty: maxZoom
+ * {float} 当前地图最大显示层级。
  */
 -(float) maxZoom;
 

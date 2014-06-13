@@ -41,7 +41,7 @@
 -(int) tileSideLength;
 
 /**
- * APIMethod: setTileSideLength:
+ * APIMethod: setTileSideLength
  * 指定每一个Tile瓦片的像素大小
  *
  ** Parameters:

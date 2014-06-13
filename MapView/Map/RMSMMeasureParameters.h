@@ -22,7 +22,7 @@
 }
 
 /**
- * Constructor: init:
+ * Constructor: init
  * 量算参数类构造函数。
  *
  * Parameters:

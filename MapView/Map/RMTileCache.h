@@ -42,7 +42,7 @@ typedef enum {
 @protocol RMTileCache<NSObject>
 
 /**
- * APIMethod: cachedImage:
+ * APIMethod: cachedImage
  * Returns the cached image if it exists. nil otherwise.
  *
  * Parameters:
@@ -80,7 +80,7 @@ typedef enum {
  */
  
  /**
- * APIMethod: addTile: WithImage:
+ * APIMethod: addTile
  * Add tile to cache
  *
  * Parameters:
@@ -89,7 +89,7 @@ typedef enum {
 -(void)addTile: (RMTile)tile WithImage: (RMTileImage*)image;
 
  /**
- * APIMethod: addCache:
+ * APIMethod: addCache
  * Add another cache to the chain
  *
  * Parameters:

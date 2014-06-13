@@ -31,7 +31,7 @@
 }
 
 /**
- * Constructor: initWithTileSetURL:
+ * Constructor: initWithTileSetURL
  * RMSMMBTileSource用于在iOS上加载MbTile离线地图服务，方便在离线情况下显示地图
  * (start code)
  * NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -57,7 +57,7 @@
 -(int) tileSideLength;
 
 /**
- * APIMethod: setTileSideLength:
+ * APIMethod: setTileSideLength
  * 指定每一个Tile瓦片的像素大小
  *
  ** Parameters:

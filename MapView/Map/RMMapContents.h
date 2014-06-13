@@ -176,7 +176,7 @@ enum {
 @property (readonly, assign) BOOL fullyLoaded;
 
 /**
- * Constructor: initWithView:
+ * Constructor: initWithView
  * 用于初始化RMMapContents
  *
  * Parameters:
@@ -185,7 +185,7 @@ enum {
 - (id)initWithView: (UIView*) view;
 
 /**
- * Constructor: initWithView: screenScale:
+ * Constructor: initWithView
  * 用于初始化RMMapContents
  *
  * Parameters:
@@ -195,7 +195,7 @@ enum {
 - (id)initWithView: (UIView*) view screenScale:(float)theScreenScale;
 
 /**
- * Constructor: initWithView tilesource:
+ * Constructor: initWithView
  * 用于初始化RMMapContents
  *
  * Parameters:
@@ -205,7 +205,7 @@ enum {
 - (id)initWithView: (UIView*) view tilesource:(id<RMTileSource>)newTilesource;
 
 /**
- * Constructor: initWithView: tilesource: screenScale:
+ * Constructor: initWithView
  * 用于初始化RMMapContents
  *
  * Parameters:
@@ -217,7 +217,7 @@ enum {
 
 /// designated initializer
 /**
- * Constructor: initWithView: tilesource: centerLatLon: zoomLevel: maxZoomLevel: minZoomLevel: backgroundImage: screenScale:
+ * Constructor: initWithView
  * 用于初始化RMMapContents
  *
  * Parameters:
@@ -256,7 +256,7 @@ enum {
 
 - (void)moveToLatLong: (CLLocationCoordinate2D)latlong;
 /**
- * APIMethod: moveToProjectedPoint:
+ * APIMethod: moveToProjectedPoint
  * 用于重置地图的中心点
  *
  ** Parameters:
@@ -296,18 +296,7 @@ enum {
 - (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel withMetersPerPixel:(float)aScale;
 
 /**
- * APIMethod: latLongToProjectedPoint:
- * 将经纬度坐标转换为投影坐标
- *
- * Parameters:
- * latlong - {CLLocationCoordinate2D} 所需转换的经纬度坐标
- *
- * Returns:
- * {RMProjectedPoint}
- */
-- (RMProjectedPoint)latLongToProjectedPoint:(CLLocationCoordinate2D)latlong;
-/**
- * APIMethod: pixelToProjectedPoint:
+ * APIMethod: pixelToProjectedPoint
  * 将像素坐标转换为当前地图的地理坐标
  *
  * Parameters:
@@ -317,18 +306,6 @@ enum {
  * {RMProjectedPoint}
  */
 - (RMProjectedPoint)pixelToProjectedPoint:(CGPoint)aPixel;
-
-/**
- * APIMethod: projectedPointToLatLong:
- * 将投影坐标转换为经纬度坐标
- *
- * Parameters:
- * projectedPoint - {RMProjectedPoint} 所需转换的投影坐标
- *
- * Returns:
- * {CLLocationCoordinate2D}
- */
-- (CLLocationCoordinate2D)projectedPointToLatLong:(RMProjectedPoint)projectedPoint;
 - (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)se;
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 
@@ -341,7 +318,7 @@ enum {
  */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxForScreen;
 /**
- * APIMethod: latitudeLongitudeBoundingBoxFor:
+ * APIMethod: latitudeLongitudeBoundingBoxFor
  * 返回包含所指定矩形的最小边界框。
  *
  * Parameters:
@@ -405,7 +382,7 @@ enum {
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxForScreen;
 
 /**
- *APIMethod: latitudeLongitudeBoundingBoxFor:
+ *APIMethod: latitudeLongitudeBoundingBoxFor
  *name change pending after 0.5
  *
  ** Parameters:

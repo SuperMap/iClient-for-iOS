@@ -25,7 +25,7 @@
 }
 
 /**
- * Constructor: FindPathService:
+ * Constructor: FindPathService
  * 最佳路径分析服务类构造函数。
  *
  * 例如：
@@ -53,7 +53,7 @@
 -(id) init:(NSString*)strUrl;
 
 /**
- * APIMethod: processAsync:
+ * APIMethod: processAsync
  * 负责将客户端的查询参数传递到服务端。
  *
  * Parameters:
