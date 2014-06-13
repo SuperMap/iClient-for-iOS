@@ -12,7 +12,27 @@ if (browserType) {document.write("<div class=" + browserType + ">");if (browserV
 
 
 
-<div id=Content><div class="CClass"><div class=CTopic id=MainTopic><h1 class=CTitle><a name="RMCircle"></a>RMCircle</h1><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface RMCircle : RMMapLayer &lt;RMMovingMapLayer&gt;</td></tr></table></blockquote></div></div></div>
+<div id=Content><div class="CClass"><div class=CTopic id=MainTopic><h1 class=CTitle><a name="RMCircle"></a>RMCircle</h1><div class=CBody><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface RMCircle : RMMapLayer &lt;RMMovingMapLayer&gt;</td></tr></table></blockquote><!--START_ND_SUMMARY--><div class=Summary><div class=STitle>Summary</div><div class=SBorder><table border=0 cellspacing=0 cellpadding=0 class=STable><tr class="SMain"><td class=SEntry><a href="#RMCircle" id=link1 onMouseOver="ShowTip(event, 'tt1', 'link1')" onMouseOut="HideTip('tt1')">RMCircle</a></td><td class=SDescription></td></tr><tr class="SGroup SIndent1"><td class=SEntry><a href="#RMCircle.Properties" >Properties</a></td><td class=SDescription></td></tr><tr class="SProperty SIndent2 SMarked"><td class=SEntry><a href="#RMCircle.projectedLocation" >projectedLocation</a></td><td class=SDescription>{<a href="RMFoundation-h.html#RMProjectedPoint" class=LProperty id=link2 onMouseOver="ShowTip(event, 'tt2', 'link2')" onMouseOut="HideTip('tt2')">RMProjectedPoint</a>} 圆心</td></tr><tr class="SProperty SIndent2"><td class=SEntry><a href="#RMCircle.enableDragging" >enableDragging</a></td><td class=SDescription>{BOOL} 是否随地图移动</td></tr><tr class="SProperty SIndent2 SMarked"><td class=SEntry><a href="#RMCircle.enableRotation" >enableRotation</a></td><td class=SDescription>{BOOL} 是否随地图旋转</td></tr><tr class="SProperty SIndent2"><td class=SEntry><a href="#RMCircle.lineColor" >lineColor</a></td><td class=SDescription>{UIColor} 边缘线的颜色</td></tr><tr class="SProperty SIndent2 SMarked"><td class=SEntry><a href="#RMCircle.fillColor" >fillColor</a></td><td class=SDescription>{UIColor} 填充色</td></tr><tr class="SProperty SIndent2"><td class=SEntry><a href="#RMCircle.radiusInMeters" >radiusInMeters</a></td><td class=SDescription>{CGFloat} 半径</td></tr><tr class="SProperty SIndent2 SMarked"><td class=SEntry><a href="#RMCircle.lineWidthInPixels" >lineWidthInPixels</a></td><td class=SDescription>{CGFloat} 线宽</td></tr><tr class="SGroup SIndent1"><td class=SEntry><a href="#RMCircle.Constructor" >Constructor</a></td><td class=SDescription></td></tr><tr class="SConstructor SIndent2 SMarked"><td class=SEntry><a href="#RMCircle.initWithContents" >initWithContents</a></td><td class=SDescription>RMCircle类构造函数。</td></tr></table></div></div><!--END_ND_SUMMARY--></div></div></div>
+
+<div class="CGroup"><div class=CTopic><h3 class=CTitle><a name="RMCircle.Properties"></a>Properties</h3></div></div>
+
+<div class="CProperty"><div class=CTopic><h3 class=CTitle><a name="RMCircle.projectedLocation"></a>projectedLocation</h3><div class=CBody><p>{<a href="RMFoundation-h.html#RMProjectedPoint" class=LProperty id=link3 onMouseOver="ShowTip(event, 'tt2', 'link3')" onMouseOut="HideTip('tt2')">RMProjectedPoint</a>} 圆心</p></div></div></div>
+
+<div class="CProperty"><div class=CTopic><h3 class=CTitle><a name="RMCircle.enableDragging"></a>enableDragging</h3><div class=CBody><p>{BOOL} 是否随地图移动</p></div></div></div>
+
+<div class="CProperty"><div class=CTopic><h3 class=CTitle><a name="RMCircle.enableRotation"></a>enableRotation</h3><div class=CBody><p>{BOOL} 是否随地图旋转</p></div></div></div>
+
+<div class="CProperty"><div class=CTopic><h3 class=CTitle><a name="RMCircle.lineColor"></a>lineColor</h3><div class=CBody><p>{UIColor} 边缘线的颜色</p></div></div></div>
+
+<div class="CProperty"><div class=CTopic><h3 class=CTitle><a name="RMCircle.fillColor"></a>fillColor</h3><div class=CBody><p>{UIColor} 填充色</p></div></div></div>
+
+<div class="CProperty"><div class=CTopic><h3 class=CTitle><a name="RMCircle.radiusInMeters"></a>radiusInMeters</h3><div class=CBody><p>{CGFloat} 半径</p></div></div></div>
+
+<div class="CProperty"><div class=CTopic><h3 class=CTitle><a name="RMCircle.lineWidthInPixels"></a>lineWidthInPixels</h3><div class=CBody><p>{CGFloat} 线宽</p></div></div></div>
+
+<div class="CGroup"><div class=CTopic><h3 class=CTitle><a name="RMCircle.Constructor"></a>Constructor</h3></div></div>
+
+<div class="CConstructor"><div class=CTopic><h3 class=CTitle><a name="RMCircle.initWithContents"></a>initWithContents</h3><div class=CBody><p>RMCircle类构造函数。</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>aContents</td><td class=CDLDescription>{RMMapContents}</td></tr><tr><td class=CDLEntry>newRadiusInMeters</td><td class=CDLDescription>{CGFloat} 半径,单位：米。</td></tr><tr><td class=CDLEntry>newLatLong</td><td class=CDLDescription>{RMLatLong} 圆心</td></tr></table></div></div></div>
 
 </div><!--Content-->
 
@@ -28,7 +48,7 @@ HideAllBut([6, 14], 16);// --></script></div><!--Menu-->
 
 
 <!--START_ND_TOOLTIPS-->
-<!--END_ND_TOOLTIPS-->
+<div class=CToolTip id="tt1"><div class=CClass><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface RMCircle : RMMapLayer &lt;RMMovingMapLayer&gt;</td></tr></table></blockquote></div></div><div class=CToolTip id="tt2"><div class=CProperty>{struct} coordinates, in projected meters, paralleling CGPoint</div></div><!--END_ND_TOOLTIPS-->
 
 
 
