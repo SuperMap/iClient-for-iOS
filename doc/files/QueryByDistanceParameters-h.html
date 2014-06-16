@@ -24,7 +24,7 @@ if (browserType) {document.write("<div class=" + browserType + ">");if (browserV
 
 <div class="CGroup"><div class=CTopic><h3 class=CTitle><a name="QueryByDistanceParameters.Constructor"></a>Constructor</h3></div></div>
 
-<div class="CConstructor"><div class=CTopic><h3 class=CTitle><a name="QueryByDistanceParameters.init"></a>init</h3><div class=CBody><p>Distance 查询参数类构造函数。</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>dis</td><td class=CDLDescription>{int} 查询距离。</td></tr><tr><td class=CDLEntry>mGeometry</td><td class=CDLDescription>{RMPath} 期望返回结果记录个数。</td></tr><tr><td class=CDLEntry>bNearest</td><td class=CDLDescription>{BOOL} 是否为最近距离查询。</td></tr></table></div></div></div>
+<div class="CConstructor"><div class=CTopic><h3 class=CTitle><a name="QueryByDistanceParameters.init"></a>init</h3><div class=CBody><p>Distance 查询参数类构造函数。</p><h4 class=CHeading>Parameters</h4><table border=0 cellspacing=0 cellpadding=0 class=CDescriptionList><tr><td class=CDLEntry>dis</td><td class=CDLDescription>{int} 查询距离。</td></tr><tr><td class=CDLEntry>mGeometry</td><td class=CDLDescription>{RMPath} 用于查询的地理对象。</td></tr><tr><td class=CDLEntry>bNearest</td><td class=CDLDescription>{BOOL} 是否为最近距离查询。</td></tr></table></div></div></div>
 
 </div><!--Content-->
 
@@ -40,7 +40,7 @@ HideAllBut([11, 13, 14], 16);// --></script></div><!--Menu-->
 
 
 <!--START_ND_TOOLTIPS-->
-<div class=CToolTip id="tt1"><div class=CClass><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface QueryByDistanceParameters : QueryParameters</td></tr></table></blockquote>Distance 查询参数类。 该类用于设置 Distance 查询的相关参数。</div></div><div class=CToolTip id="tt2"><div class=CClass><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface RMPath : RMMapLayer &lt;RMMovingMapLayer&gt;</td></tr></table></blockquote></div></div><div class=CToolTip id="tt3"><div class=CClass><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface QueryParameters : NSObject</td></tr></table></blockquote>查询参数基类。 距离查询、SQL 查询、几何地物查询等各自的参数均继承此类。</div></div><!--END_ND_TOOLTIPS-->
+<div class=CToolTip id="tt1"><div class=CClass><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface QueryByDistanceParameters : QueryParameters</td></tr></table></blockquote>Distance 查询参数类。 该类用于设置 Distance 查询的相关参数。</div></div><div class=CToolTip id="tt2"><div class=CClass><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface RMPath : RMMapLayer &lt;RMMovingMapLayer&gt;</td></tr></table></blockquote>几何对象图层类，主要用于绘制点、线、多边形。</div></div><div class=CToolTip id="tt3"><div class=CClass><blockquote><table border=0 cellspacing=0 cellpadding=0 class="Prototype"><tr><td class="prettyprint">@interface QueryParameters : NSObject</td></tr></table></blockquote>查询参数基类。 距离查询、SQL 查询、几何地物查询等各自的参数均继承此类。</div></div><!--END_ND_TOOLTIPS-->
 
 
 

@@ -34,7 +34,10 @@
 
 /**
  * Class: RMCircle
- * 
+ * 几何对象图层类，主要用于绘制圆。
+ *
+ * Inherits from:
+ *  - <RMMapLayer>
  */
 @interface RMCircle : RMMapLayer <RMMovingMapLayer> {
 @private

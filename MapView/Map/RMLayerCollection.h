@@ -32,11 +32,16 @@
 @class RMMapRenderer;
 @class RMMapContents;
 
- /**
+
+/**
  * Class: RMLayerCollection
- *	Appears to be some sort of interface between RMMapContents and markers.
+ * 图层集合类，连接了RMMapContents与markers。
  *
- *	lots of arbitrary-appearing \@synchronized blocks. Old mailing list traffic 
+ * Inherits from:
+ *  - <RMMapLayer>
+ */
+/**
+ *	lots of arbitrary-appearing \@synchronized blocks. Old mailing list traffic
  *	claims they're needed, but no one seems to know why. If the #set ivar needs to be guarded,
  *	should be done by \@synchronized(self) and not \@synchronized(sublayers). Maybe the guarding
  *	is needed because of Core Animation thread interactions.

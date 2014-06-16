@@ -39,6 +39,7 @@
  * 标注地图上的点，包含一个标注的图标。 
  *
  * RMMarker根本上是继承于CALayer。
+ *
  * Inherits from:
  *  - <RMMapLayer>
  */

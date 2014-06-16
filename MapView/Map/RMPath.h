@@ -35,6 +35,7 @@
 @class RMMapView;
 /**
  * Class: RMPath
+ * 几何对象图层类，主要用于绘制点、线、多边形。
  *
  * Inherits from:
  *  - <RMMapLayer>

@@ -30,6 +30,10 @@
 
 /**
  * Class: RMMapLayer
+ * 地图图层类。此图层可叠加于地图上。
+ *
+ * Inherits from:
+ *  - <CAScrollLayer>
  */
 @interface RMMapLayer : CAScrollLayer
 {
