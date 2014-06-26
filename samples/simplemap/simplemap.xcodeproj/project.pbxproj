@@ -25,7 +25,6 @@
 		FE15382417D42BAE0098416B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15382317D42BAE0098416B /* CoreFoundation.framework */; };
 		FE7B4EE218F62EBF00460EA2 /* libMapView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15381717D42B4E0098416B /* libMapView.a */; };
 		FEAF792F192DDC2E00A53B12 /* mylocation.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAF792E192DDC2E00A53B12 /* mylocation.png */; };
-		FEAF7935192DDC6900A53B12 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = FEAF7934192DDC6900A53B12 /* marker.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +82,6 @@
 		FE15382117D42B9A0098416B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FE15382317D42BAE0098416B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FEAF792E192DDC2E00A53B12 /* mylocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mylocation.png; path = ../../mapwithmarker/mapwithmarker/mylocation.png; sourceTree = "<group>"; };
-		FEAF7934192DDC6900A53B12 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = ../../../../../Downloads/QQ/marker.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +152,6 @@
 		FE1537EE17D42B330098416B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FEAF7934192DDC6900A53B12 /* marker.png */,
 				FEAF792E192DDC2E00A53B12 /* mylocation.png */,
 				FE1537EF17D42B330098416B /* simplemap-Info.plist */,
 				FE1537F017D42B330098416B /* InfoPlist.strings */,
@@ -266,7 +263,6 @@
 				FE15380117D42B330098416B /* MainStoryboard_iPhone.storyboard in Resources */,
 				FE15380417D42B330098416B /* MainStoryboard_iPad.storyboard in Resources */,
 				FEAF792F192DDC2E00A53B12 /* mylocation.png in Resources */,
-				FEAF7935192DDC6900A53B12 /* marker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
