@@ -28,11 +28,12 @@
 #import "RMTiledLayerController.h"
 #import "RMFractalTileProjection.h"
 #import "RMTileSource.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMTiledLayerController
 
 @synthesize layer;
-
+@dynamic scale;
 -(id) initWithTileSource: (id <RMTileSource>) _tileSource
 {
 	if (![super init])
@@ -53,8 +54,8 @@
 	layer.tileSize = CGSizeMake(tileProjection.tileSideLength,
 								tileProjection.tileSideLength);
 	
-	RMXYRect boundsRect = tileProjection.bounds;
-	layer.bounds = CGRectMake(boundsRect.origin.x, boundsRect.origin.y, boundsRect.size.width, boundsRect.size.height) ;
+	//RMXYRect boundsRect = tileProjection.bounds;
+	//layer.bounds = CGRectMake(boundsRect.origin.x, boundsRect.origin.y, boundsRect.size.width, boundsRect.size.height) ;
 	layer.position = CGPointZero;
 
 	[self setScale:1];
@@ -102,11 +103,12 @@
 //	topLeft.x -= viewSize.width * scale / 2;
 //	topLeft.y -= viewSize.height * scale / 2;
 }
-
+/*
 -(void) centerLatLong: (CLLocationCoordinate2D) aPoint animate: (BOOL) animate
 {
 	[self centerMercator:[RMMercator toMercator:aPoint] animate: animate];
 }
+*/
 
 -(void) dragBy: (CGSize) delta
 {	

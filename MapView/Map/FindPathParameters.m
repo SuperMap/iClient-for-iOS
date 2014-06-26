@@ -27,8 +27,10 @@
     if (nCount>0) {
         if (!self.isAnalystById) {
             strNodes = [strNodes stringByAppendingString:@"["];
-            RMPath *path;
+            RMPath *path = [RMPath alloc];
             for (int i=0;i<nCount;i++) {
+                //当nodes不是坐标数组时报错
+            NSAssert([[self.nodes objectAtIndex:i] isMemberOfClass:[path class]],@"the value of FindPathParameters.isAnalyzeById is NO,but FindPathParameters.nodes is NSMutableArray of nodes's id");
                 path=[self.nodes objectAtIndex:i];
                 CGPoint point=[[path.points objectAtIndex:0]CGPointValue];
                 if(i!=0)
@@ -57,16 +59,8 @@
     NSString *strParameters=[[NSString alloc]initWithString:self.hasLeastEdgeCount?@"&hasLeastEdgeCount=true":@"&hasLeastEdgeCount=false"];
     strParameters=[strParameters stringByAppendingString:strNodes];
     strParameters=[[strParameters stringByAppendingString:@"&parameter="]stringByAppendingString:[self.parameter toString]];
-    
     return strParameters;
 }
-
-
-
-
-
-
-
 
 
 @end

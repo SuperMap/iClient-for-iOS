@@ -47,6 +47,7 @@
 	float metersPerPixel;
 	
 	id tileSource;
+    float scale;
 }
 
 -(id) initWithTileSource: (id <RMTileSource>) tileSource;
@@ -54,7 +55,7 @@
 -(void) setMetersPerPixel: (float) scale;
 
 -(void) centerProjectedPoint: (RMProjectedPoint) aPoint animate: (BOOL) animate;
--(void) centerLatLong: (CLLocationCoordinate2D) point animate: (BOOL) animate;
+//-(void) centerLatLong: (CLLocationCoordinate2D) point animate: (BOOL) animate;
 -(void) dragBy: (CGSize) delta;
 -(void) zoomByFactor: (float) zoomFactor near:(CGPoint) center;
 
@@ -69,5 +70,6 @@
 */
 @property (assign, readwrite, nonatomic) float metersPerPixel;
 @property (readonly, nonatomic) CATiledLayer *layer;
+@property (assign, nonatomic) float scale;
 
 @end

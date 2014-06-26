@@ -26,12 +26,12 @@
     bounds=RMMakeProjectedRect(dleft, dbottom, dWidth, dHeight);
     directionType=[dictJson objectForKey:@"directionType"];
     distance=[[dictJson objectForKey:@"distance"]floatValue];
-    ID=[dictJson objectForKey:@"id"];
+    ID=(long int)[dictJson objectForKey:@"id"];
    // NSLog(@"id::%ld",ID);
-    index=[dictJson objectForKey:@"index"];
-    isEdge=[dictJson objectForKey:@"isEdge"];
-    isStop=[dictJson objectForKey:@"isStop"];
-    dLength=[[dictJson objectForKey:@"length"]doubleValue];
+    index=(int)[dictJson objectForKey:@"index"];
+    isEdge=(BOOL)[dictJson objectForKey:@"isEdge"];
+    isStop=(BOOL)[dictJson objectForKey:@"isStop"];
+    dLength=(double)[[dictJson objectForKey:@"length"]doubleValue];
     name=[dictJson objectForKey:@"name"];
     sideType=[dictJson objectForKey:@"sideType"];
     turnAngle=[[dictJson objectForKey:@"turnAngle"]floatValue];
@@ -41,5 +41,6 @@
     geometry=[[ServerGeometry alloc]fromJsonDt:[dictJson objectForKey:@"geometry"]];
     return self;
 }
+
 
 @end

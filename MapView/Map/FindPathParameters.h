@@ -52,9 +52,9 @@
 
 /**
  * APIProperty: nodes
- * {Array(<RMProjectedPoint>/Number)} 最佳路径分析经过的结点或设施点数组，必设字段。该字段至少包含两个点。
- * 当 FindPathParameters.isAnalyzeById = YES 时，nodes 应为点的坐标数组；
- * 当 FindPathParameters.isAnalyzeById = NO 时，nodes 应为点的 ID 数组。
+ * {Array(<RMPath>/Number)} 最佳路径分析经过的结点或设施点数组，必设字段。该字段至少包含两个点。
+ * 当 FindPathParameters.isAnalyzeById = YES 时，nodes 应为点的 ID 数组；
+ * 当 FindPathParameters.isAnalyzeById = NO 时，nodes 应为点的坐标数组。
  */
 @property (retain,readwrite)  NSMutableArray *nodes;
 
@@ -71,7 +71,7 @@
  * Parameters:
  * bIsAnalystById - {BOOL} 是否通过节点 ID 指定路径分析的结点。
  * bHasLeastEdgeCount - {BOOL} 是否按照弧段数最少的进行最佳路径分析。
- * mNodes - {Array(<RMProjectedPoint>/Number)} 最佳路径分析经过的结点或设施点数组，必设字段。该字段至少包含两个点。
+ * mNodes - {Array(<RMPath>/Number)} 最佳路径分析经过的结点或设施点数组，必设字段。该字段至少包含两个点。
  * parameter - {<TransportationAnalystParameter>} 交通网络分析通用参数。
  */
 -(id) init:(BOOL)bIsAnalystById bHasLeastEdgeCount:(BOOL)bHasLeastEdgeCount nodes:(NSMutableArray *)mNodes parameter:(TransportationAnalystParameter *)tParameter;

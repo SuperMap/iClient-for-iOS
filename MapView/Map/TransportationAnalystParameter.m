@@ -13,15 +13,16 @@
 
 -(id) init
 {
+    
     barrierEdgeIDs=[[NSMutableArray alloc]init];
     barrierNodeIDs=[[NSMutableArray alloc]init];
     barrierPoints=[[NSMutableArray alloc]init];
-    weightFieldName=[[NSString alloc]init];
+    weightFieldName=nil;
     turnWeightField=nil;
     resultSetting=[[TransportationAnalystResultSetting alloc]init];
     return self;
+    
 }
-
 -(NSString *) toString
 {
     NSMutableDictionary *dictionary=[[NSMutableDictionary alloc]init];
@@ -31,16 +32,13 @@
     [dictionary setValue:self.weightFieldName forKey:@"weightFieldName"];
     [dictionary setValue:self.turnWeightField forKey:@"turnWeightField"];
     
-    
-    
-    
-    NSString *strResultSetting=[[NSString alloc]initWithString:@",\"resultSetting\":"];
+    NSString *strResultSetting=@",\"resultSetting\":";
     strResultSetting=[strResultSetting stringByAppendingString:[self.resultSetting toString]];
     
     NSError *error;
     NSData *jsonData=[NSJSONSerialization dataWithJSONObject:dictionary options:NULL error:&error];
     NSString *strAnalystParameter=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-  
+    
     strAnalystParameter=[[[strAnalystParameter substringToIndex:[strAnalystParameter length]-1] stringByAppendingString:strResultSetting]stringByAppendingString:@"}"];
     
     return  strAnalystParameter;
