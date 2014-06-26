@@ -14,6 +14,7 @@ SuperMap iClient for iOS是一套基于iOS平台的轻量级地图软件开发�
  - 地图属性支持设置固定比例尺
  - 地图查询（范围查询、距离查询、几何对象查询以及SQL查询）
  - 地图量算（距离、面积）
+ - 最佳路径分析
  - Marker标注及事件响应
  - 地物标绘及事件响应
 
@@ -38,6 +39,17 @@ SuperMap iClient for iOS是一套基于iOS平台的轻量级地图软件开发�
 
 ### 五、产品变更信息
 
+当前版本:7.0 sp2
+上次版本:7.0 sp1
+
+- 新增最佳路径分析服务
+- RMSMMBTileSource增加对smtiles格式的支持
+- RMMapContents 增加用于将像素坐标转换为地理坐标的方法
+- 完善 Marker and other layers 的类注释
+- 增加最佳路径分析服务相关的注释和文档
+- 增加最佳路径分析范例
+- 增加获取单指触摸位置的像素坐标和地理坐标的范例
+
 当前版本:7.0 sp1
 上次版本:7.0
 
@@ -49,3 +61,5 @@ SuperMap iClient for iOS是一套基于iOS平台的轻量级地图软件开发�
 - 完善RMMapContents类注释
 - 解决设置resolutions级数报错的问题
 - 解决地图中心点计算错误的问题
+
+
