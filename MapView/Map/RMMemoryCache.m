@@ -27,6 +27,7 @@
 
 #import "RMMemoryCache.h"
 #import "RMTileImage.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMMemoryCache
 

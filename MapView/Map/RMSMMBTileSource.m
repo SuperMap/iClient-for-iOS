@@ -11,6 +11,7 @@
 #import "FMDatabase.h"
 #import "RMProjection.h"
 #import "RMTileImage.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMSMMBTileSource
 

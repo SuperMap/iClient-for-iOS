@@ -27,6 +27,7 @@
 
 #import "RMCachedTileSource.h"
 #import "RMTileCache.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMCachedTileSource
 

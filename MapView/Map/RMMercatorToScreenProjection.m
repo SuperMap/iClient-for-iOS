@@ -27,6 +27,7 @@
 #import "RMGlobalConstants.h"
 #import "RMMercatorToScreenProjection.h"
 #include "RMProjection.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMMercatorToScreenProjection
 

@@ -29,7 +29,7 @@
 #import "FMDatabase.h"
 #import "RMTileCache.h"
 #import "RMTileImage.h"
-
+#import "MapView_Prefix.pch"
 
 @implementation RMTileCacheDAO
 

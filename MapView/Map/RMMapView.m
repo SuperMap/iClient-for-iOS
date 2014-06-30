@@ -40,6 +40,7 @@
 #import "RMCloudMapSource.h"
 #import "RMSMMBTileSource.h"
 #import "RMMapRenderer.h"
+#import "MapView_Prefix.pch"
 
 @interface RMMapView (PrivateMethods)
 // methods for post-touch deceleration, ala UIScrollView

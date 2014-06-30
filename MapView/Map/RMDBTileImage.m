@@ -32,6 +32,7 @@
 
 
 #import "RMDBTileImage.h"
+#import "MapView_Prefix.pch"
 
 #define FMDBErrorCheck(db)		{ if ([db hadError]) { NSLog(@"DB error %d on line %d: %@", [db lastErrorCode], __LINE__, [db lastErrorMessage]); } }
 

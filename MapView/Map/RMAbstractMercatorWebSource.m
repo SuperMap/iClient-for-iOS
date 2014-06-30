@@ -32,6 +32,7 @@
 #import "RMFractalTileProjection.h"
 #import "RMTiledLayerController.h"
 #import "RMProjection.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMAbstractMercatorWebSource
 

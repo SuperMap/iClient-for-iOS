@@ -32,6 +32,7 @@
 #import "RMPixel.h"
 #import "RMTileImage.h"
 #import "RMTileImageSet.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMCoreAnimationRenderer
 

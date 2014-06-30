@@ -27,6 +27,7 @@
 #import "RMGlobalConstants.h"
 #import "proj_api.h"
 #import "RMProjection.h"
+#import "MapView_Prefix.pch"
 
 
 NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {

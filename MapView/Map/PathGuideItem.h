@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RMFoundation.h>
+#import "RMFoundation.h"
 #import "ServerGeometry.h"
 
 /**
@@ -120,7 +120,7 @@
  * APIProperty: description
  * {NSString} 行驶引导描述。
  */
-@property(retain,readwrite)NSString *description;
+@property(readwrite)NSString *description;
 
 
 /**
@@ -130,6 +130,5 @@
 @property(retain,readwrite)ServerGeometry *geometry;
 
 -(id) initFromJson:(NSDictionary*)dictJson;
-
 
 @end

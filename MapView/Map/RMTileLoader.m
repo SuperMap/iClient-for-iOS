@@ -33,6 +33,8 @@
 #import "RMMercatorToScreenProjection.h"
 #import "RMFractalTileProjection.h"
 #import "RMTileImageSet.h"
+#import "MapView_Prefix.pch"
+
 
 #import "RMTileCache.h"
 

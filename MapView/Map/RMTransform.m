@@ -28,6 +28,7 @@
 #import "proj_api.h"
 #import "RMTransform.h"
 #import "RMProjection.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMTransform
 

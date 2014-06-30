@@ -26,6 +26,7 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 #import "RMVirtualEarthSource.h"
+#import "MapView_Prefix.pch"
 
 
 @implementation RMVirtualEarthSource

@@ -31,6 +31,7 @@
 
 #import "RMMapContents.h"
 #import "RMTileLoader.h"
+#import "MapView_Prefix.pch"
 
 NSString *RMWebTileImageErrorDomain = @"RMWebTileImageErrorDomain";
 NSString *RMWebTileImageHTTPResponseCodeKey = @"RMWebTileImageHTTPResponseCodeKey";

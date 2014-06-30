@@ -9,6 +9,7 @@
 #import "FindPathService.h"
 
 @implementation FindPathService
+@synthesize lastResult;
 
 -(id)init:(NSString *)strUrl
 {
@@ -88,6 +89,7 @@
     
     FindPathResult *findPathResult=[[FindPathResult alloc]init];
     findPathResult=[findPathResult fromJson:strReceive];
+    lastResult =findPathResult;
     NSMutableDictionary* dictionary = [[NSMutableDictionary alloc] init];
     [dictionary setValue:findPathResult forKey:@"FindPathResult"];
     

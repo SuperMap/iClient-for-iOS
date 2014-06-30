@@ -96,6 +96,7 @@ SuperMap iClient for iOS更多内容和更新，可以访问Github项目
 #import "RMMapContents.h"
 #import "RMSMLayerInfo.h"
 #import "RMSMTileSource.h"
+#import "MapView_Prefix.pch"
 
  /**
  * APIProperty: RMGestureDetails

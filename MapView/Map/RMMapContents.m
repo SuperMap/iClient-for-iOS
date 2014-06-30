@@ -47,6 +47,8 @@
 
 #import "RMMarker.h"
 
+#import "MapView_Prefix.pch"
+
 
 
 

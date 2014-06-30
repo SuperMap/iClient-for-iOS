@@ -71,6 +71,7 @@
 #import "RMDBMapSource.h"
 #import "RMTileImage.h"
 #import "RMFractalTileProjection.h"
+#import "MapView_Prefix.pch"
 
 #define kDefaultLatLonBoundingBox ((RMSphericalTrapezium){.northeast = {.latitude = 90, .longitude = 180}, .southwest = {.latitude = -90, .longitude = -180}})
 

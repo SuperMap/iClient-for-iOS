@@ -26,6 +26,7 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 #import "RMConfiguration.h"
+#import "MapView_Prefix.pch"
 
 static RMConfiguration* RMConfigurationSharedInstance = nil;
 

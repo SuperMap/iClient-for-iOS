@@ -31,7 +31,7 @@
 #import "RMTile.h"
 
 #import "RMTilesUpdateDelegate.h"
-
+#import "MapView_Prefix.pch"
 // constants for boundingMask
 enum {
 	// Map can be zoomed out past view limits

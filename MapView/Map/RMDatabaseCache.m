@@ -29,6 +29,7 @@
 #import "RMTileCacheDAO.h"
 #import "RMTileImage.h"
 #import "RMTile.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMDatabaseCache
 

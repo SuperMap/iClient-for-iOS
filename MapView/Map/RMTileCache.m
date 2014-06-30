@@ -33,7 +33,7 @@
 #import "RMConfiguration.h"
 
 #import "RMTileSource.h"
-
+#import "MapView_Prefix.pch"
 
 @interface RMTileCache ( Configuration ) 
 

@@ -33,6 +33,8 @@
 #import "RMTileCache.h"
 #import "RMPixel.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MapView_Prefix.pch"
+
 
 @implementation RMTileImage
 

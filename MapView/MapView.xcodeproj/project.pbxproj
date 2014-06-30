@@ -275,6 +275,85 @@
 		FEC0BFF51934903F00A23971 /* FindPathParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BFF31934903F00A23971 /* FindPathParameters.m */; };
 		FEC0BFF8193490A300A23971 /* FindPathService.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC0BFF6193490A300A23971 /* FindPathService.h */; };
 		FEC0BFF9193490A300A23971 /* FindPathService.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BFF7193490A300A23971 /* FindPathService.m */; };
+		FEC1B0D919540B6A00A0CDA4 /* FindPathService.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BFF7193490A300A23971 /* FindPathService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0DA19540B6A00A0CDA4 /* FindPathResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDD991935689A0015E999 /* FindPathResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0DB19540B6A00A0CDA4 /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDDA51935E1A60015E999 /* Path.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0DC19540B6A00A0CDA4 /* PathGuideItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDDA91935E6730015E999 /* PathGuideItem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0DD19540B6A00A0CDA4 /* ServerGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = FE64F85C17781C4300935CEB /* ServerGeometry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0DE19540B6A00A0CDA4 /* ServerFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = FE237B67177AD566000C8B42 /* ServerFeature.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0DF19540B6A00A0CDA4 /* RMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C9746A0E8A1A50007D16AD /* RMMapView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E019540B6A00A0CDA4 /* RMMapContents.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C974B70E8A280A007D16AD /* RMMapContents.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E119540B6A00A0CDA4 /* RMGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C12D290F8A86CA00A894D2 /* RMGeoHash.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E219540B6A00A0CDA4 /* RMSMTileProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1927981769563F003B2E46 /* RMSMTileProjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E319540B6A00A0CDA4 /* RMMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F3FC600EA2B382004D8F85 /* RMMapLayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E419540B6A00A0CDA4 /* RMLayerCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FA92180E9315EC003A9FE6 /* RMLayerCollection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E519540B6A00A0CDA4 /* RMPath.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CEB1C40ED5A3480014C431 /* RMPath.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E619540B6A00A0CDA4 /* RMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 25757F4E1291C8640083D504 /* RMCircle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E719540C2F00A0CDA4 /* RMMercatorToScreenProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64C90E80E73F001663B6 /* RMMercatorToScreenProjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E819540C2F00A0CDA4 /* RMCloudMapSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FE74F63E1785124C0063C6A2 /* RMCloudMapSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0E919540C2F00A0CDA4 /* RMOpenStreetMapSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64EE0E80E73F001663B6 /* RMOpenStreetMapSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0EA19540C2F00A0CDA4 /* RMTileImageSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64E10E80E73F001663B6 /* RMTileImageSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0EB19540C2F00A0CDA4 /* RMTileLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64C70E80E73F001663B6 /* RMTileLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0EC19540C2F00A0CDA4 /* RMCachedTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C974C90E8A9C30007D16AD /* RMCachedTileSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0ED19540C2F00A0CDA4 /* RMCoreAnimationRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64BE0E80E73F001663B6 /* RMCoreAnimationRenderer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0EE19540C2F00A0CDA4 /* RMMarkerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 090C948C0EC23FCD003AEE25 /* RMMarkerManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0EF19540C2F00A0CDA4 /* RMMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F3FC630EA2E792004D8F85 /* RMMarker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F019540D6600A0CDA4 /* RMSMLayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1927A317695695003B2E46 /* RMSMLayerInfo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F219540D6600A0CDA4 /* RMProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64E40E80E73F001663B6 /* RMProjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F319540D6600A0CDA4 /* RMTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64E60E80E73F001663B6 /* RMTransform.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F419540D6600A0CDA4 /* RMFractalTileProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64EA0E80E73F001663B6 /* RMFractalTileProjection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F519540D6600A0CDA4 /* RMWMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4474211A1302B60A004D6E8A /* RMWMS.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F619540D6600A0CDA4 /* RMSMTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FE19279C17695657003B2E46 /* RMSMTileSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F719540D6600A0CDA4 /* RMSMMBTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F819540D6600A0CDA4 /* RMYahooMapSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE8E350F72D01B00A11CF0 /* RMYahooMapSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0F919540D6600A0CDA4 /* RMOpenCycleMapSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EB26C210B5D8C0009F8658 /* RMOpenCycleMapSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0FA19540D6600A0CDA4 /* RMTileMapServiceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B144DEFD0FD989C3003F3368 /* RMTileMapServiceSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0FB19540D6600A0CDA4 /* RMAbstractMercatorWebSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A967510E8412930031BA75 /* RMAbstractMercatorWebSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0FC19540D6600A0CDA4 /* RMVirtualEarthSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A9675D0E84134B0031BA75 /* RMVirtualEarthSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0FD19540D6600A0CDA4 /* RMDBMapSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D1437B32122869E400888DAE /* RMDBMapSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0FE19540D6600A0CDA4 /* RMOpenAerialMapSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5682710F68E36000E8DF40 /* RMOpenAerialMapSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B0FF19540D6600A0CDA4 /* RMSpatialCloudMapSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2599740812EB966400816331 /* RMSpatialCloudMapSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10019540D6600A0CDA4 /* RMMBTilesTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD55FD1212FB40E000B6FE24 /* RMMBTilesTileSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10119540D6600A0CDA4 /* RMWMSSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 447420D91302B2F5004D6E8A /* RMWMSSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10219540D6600A0CDA4 /* RMMapQuestOSMSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA3E85513B00D9E004D861C /* RMMapQuestOSMSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10319540D6600A0CDA4 /* RMTileStreamSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCD58D21406F8A300F59E0D /* RMTileStreamSource.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10419540D6600A0CDA4 /* RMURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F56554F7146E002B00623AC9 /* RMURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10519540D6600A0CDA4 /* RMTileImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64D90E80E73F001663B6 /* RMTileImage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10619540D6600A0CDA4 /* RMDBTileImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D1437B30122869E400888DAE /* RMDBTileImage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10719540D6600A0CDA4 /* RMTileProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64DB0E80E73F001663B6 /* RMTileProxy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10819540D6600A0CDA4 /* RMWebTileImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64DD0E80E73F001663B6 /* RMWebTileImage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10919540D6600A0CDA4 /* RMFileTileImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64DF0E80E73F001663B6 /* RMFileTileImage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10A19540D6600A0CDA4 /* RMTileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64D10E80E73F001663B6 /* RMTileCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10B19540D6600A0CDA4 /* RMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64D30E80E73F001663B6 /* RMMemoryCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10C19540D6600A0CDA4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B8474B8E0EB40094006A0BC1 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10D19540D6600A0CDA4 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B8474B900EB40094006A0BC1 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10E19540D6600A0CDA4 /* fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = B8474B910EB40094006A0BC1 /* fmdb.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B10F19540D6600A0CDA4 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B8474B930EB40094006A0BC1 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B11019540D6600A0CDA4 /* RMTileCacheDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B8474B970EB40094006A0BC1 /* RMTileCacheDAO.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B11119540D6600A0CDA4 /* RMDatabaseCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B8474B990EB40094006A0BC1 /* RMDatabaseCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B11219540D6600A0CDA4 /* RMMapRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64CB0E80E73F001663B6 /* RMMapRenderer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B11319540D6600A0CDA4 /* RMTiledLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E64C50E80E73F001663B6 /* RMTiledLayerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B11419540D6600A0CDA4 /* RMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 126692A00EB75C0A00E002D5 /* RMConfiguration.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FEC1B118195413E800A0CDA4 /* RMTile.c in Sources */ = {isa = PBXBuildFile; fileRef = B83E64D70E80E73F001663B6 /* RMTile.c */; };
+		FEC1B119195413E800A0CDA4 /* RMPixel.c in Sources */ = {isa = PBXBuildFile; fileRef = B83E64B70E80E73F001663B6 /* RMPixel.c */; };
+		FEC1B11C1954154400A0CDA4 /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D818500F6F67B90034598B /* libProj4.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		FEC1B1261954273200A0CDA4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B8474BC00EB4019A006A0BC1 /* libsqlite3.dylib */; };
+		FEC1B1281954273300A0CDA4 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC1B1271954273300A0CDA4 /* libsqlite3.0.dylib */; };
+		FEC1B12C19542E8B00A0CDA4 /* RMFoundation.c in Sources */ = {isa = PBXBuildFile; fileRef = 23A0AAE80EB90A99003A4521 /* RMFoundation.c */; };
+		FECBE561195133E6000ACE66 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECBE560195133E6000ACE66 /* XCTest.framework */; };
+		FECBE562195133E6000ACE66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		FECBE563195133E6000ACE66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		FECBE569195133E6000ACE66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FECBE567195133E6000ACE66 /* InfoPlist.strings */; };
+		FECBE578195134CC000ACE66 /* FindPathParametersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECBE577195134CC000ACE66 /* FindPathParametersTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE57A19513699000ACE66 /* FindPathServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECBE57919513699000ACE66 /* FindPathServiceTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE57C1951373B000ACE66 /* FindPathResultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECBE57B1951373B000ACE66 /* FindPathResultTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE57E19527CED000ACE66 /* TransportationAnalystResultSettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECBE57D19527CED000ACE66 /* TransportationAnalystResultSettingTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE57F19528ACC000ACE66 /* TransportationAnalystResultSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDDA119358D8B0015E999 /* TransportationAnalystResultSetting.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE583195290AE000ACE66 /* PathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECBE582195290AE000ACE66 /* PathTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE585195290C2000ACE66 /* PathGuideItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECBE584195290C2000ACE66 /* PathGuideItemTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE587195290F0000ACE66 /* TransportationAnalystParameterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECBE586195290F0000ACE66 /* TransportationAnalystParameterTests.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE5891952B81F000ACE66 /* FindPathParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC0BFF31934903F00A23971 /* FindPathParameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECBE58C1952B81F000ACE66 /* TransportationAnalystParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = FEBFDD9D19358D360015E999 /* TransportationAnalystParameter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FED38EE3178E963800A91F98 /* RMSMMBTileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */; };
 		FED38EE4178E963800A91F98 /* RMSMMBTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */; };
 /* End PBXBuildFile section */
@@ -300,6 +379,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Proj4;
+		};
+		FEC1B12219541A3E00A0CDA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B83E654A0E80E7A8001663B6 /* Proj4.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Proj4;
+		};
+		FECBE56D195133E6000ACE66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C974130E8A19B2007D16AD;
+			remoteInfo = MapView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -532,6 +625,19 @@
 		FEC0BFF31934903F00A23971 /* FindPathParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPathParameters.m; sourceTree = "<group>"; };
 		FEC0BFF6193490A300A23971 /* FindPathService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPathService.h; sourceTree = "<group>"; };
 		FEC0BFF7193490A300A23971 /* FindPathService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPathService.m; sourceTree = "<group>"; };
+		FEC1B1271954273300A0CDA4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		FECBE55F195133E6000ACE66 /* RMSMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMSMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FECBE560195133E6000ACE66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FECBE566195133E6000ACE66 /* RMSMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RMSMTests-Info.plist"; sourceTree = "<group>"; };
+		FECBE568195133E6000ACE66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FECBE56C195133E6000ACE66 /* RMSMTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RMSMTests-Prefix.pch"; sourceTree = "<group>"; };
+		FECBE577195134CC000ACE66 /* FindPathParametersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPathParametersTests.m; sourceTree = "<group>"; };
+		FECBE57919513699000ACE66 /* FindPathServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPathServiceTests.m; sourceTree = "<group>"; };
+		FECBE57B1951373B000ACE66 /* FindPathResultTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPathResultTests.m; sourceTree = "<group>"; };
+		FECBE57D19527CED000ACE66 /* TransportationAnalystResultSettingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationAnalystResultSettingTests.m; sourceTree = "<group>"; };
+		FECBE582195290AE000ACE66 /* PathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathTests.m; sourceTree = "<group>"; };
+		FECBE584195290C2000ACE66 /* PathGuideItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathGuideItemTests.m; sourceTree = "<group>"; };
+		FECBE586195290F0000ACE66 /* TransportationAnalystParameterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransportationAnalystParameterTests.m; sourceTree = "<group>"; };
 		FED38EE1178E963700A91F98 /* RMSMMBTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMMBTileSource.h; sourceTree = "<group>"; };
 		FED38EE2178E963800A91F98 /* RMSMMBTileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSMMBTileSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -576,6 +682,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FECBE55C195133E6000ACE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC1B1281954273300A0CDA4 /* libsqlite3.0.dylib in Frameworks */,
+				FEC1B1261954273200A0CDA4 /* libsqlite3.dylib in Frameworks */,
+				FEC1B11C1954154400A0CDA4 /* libProj4.a in Frameworks */,
+				FECBE561195133E6000ACE66 /* XCTest.framework in Frameworks */,
+				FECBE563195133E6000ACE66 /* UIKit.framework in Frameworks */,
+				FECBE562195133E6000ACE66 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -614,6 +733,7 @@
 				2BF3078F0F8AC5C0007014EE /* RM Unit Tests.app */,
 				17F31EFA1331050A00122B16 /* libMapView.a */,
 				17157D87133BBC8300E28941 /* MapViewTests.octest */,
+				FECBE55F195133E6000ACE66 /* RMSMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -636,6 +756,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEC1B1271954273300A0CDA4 /* libsqlite3.0.dylib */,
 				B83E654A0E80E7A8001663B6 /* Proj4.xcodeproj */,
 				B8474BC00EB4019A006A0BC1 /* libsqlite3.dylib */,
 				B83E65590E80E7EB001663B6 /* CoreFoundation.framework */,
@@ -644,6 +765,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				FECBE560195133E6000ACE66 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -651,6 +773,7 @@
 		2B246B230F8AE20300A7D55D /* Testing */ = {
 			isa = PBXGroup;
 			children = (
+				FECBE564195133E6000ACE66 /* RMSMTests */,
 				17157D8C133BBC8300E28941 /* MapViewTests */,
 				2B8C8A230F8EB855002E8CF3 /* RouteMeTests.h */,
 				2B8C8A240F8EB855002E8CF3 /* RouteMeTests.m */,
@@ -1033,6 +1156,47 @@
 			name = NetworkAnalyst;
 			sourceTree = "<group>";
 		};
+		FECBE564195133E6000ACE66 /* RMSMTests */ = {
+			isa = PBXGroup;
+			children = (
+				FECBE572195133EF000ACE66 /* REST */,
+				FECBE565195133E6000ACE66 /* Supporting Files */,
+			);
+			path = RMSMTests;
+			sourceTree = "<group>";
+		};
+		FECBE565195133E6000ACE66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FECBE566195133E6000ACE66 /* RMSMTests-Info.plist */,
+				FECBE567195133E6000ACE66 /* InfoPlist.strings */,
+				FECBE56C195133E6000ACE66 /* RMSMTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FECBE572195133EF000ACE66 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				FECBE573195133F5000ACE66 /* NetworkAnalyst */,
+			);
+			name = REST;
+			sourceTree = "<group>";
+		};
+		FECBE573195133F5000ACE66 /* NetworkAnalyst */ = {
+			isa = PBXGroup;
+			children = (
+				FECBE577195134CC000ACE66 /* FindPathParametersTests.m */,
+				FECBE57919513699000ACE66 /* FindPathServiceTests.m */,
+				FECBE57B1951373B000ACE66 /* FindPathResultTests.m */,
+				FECBE57D19527CED000ACE66 /* TransportationAnalystResultSettingTests.m */,
+				FECBE582195290AE000ACE66 /* PathTests.m */,
+				FECBE584195290C2000ACE66 /* PathGuideItemTests.m */,
+				FECBE586195290F0000ACE66 /* TransportationAnalystParameterTests.m */,
+			);
+			name = NetworkAnalyst;
+			sourceTree = "<group>";
+		};
 		FEE0BDAE1772F46600A881BB /* Query */ = {
 			isa = PBXGroup;
 			children = (
@@ -1230,12 +1394,36 @@
 			productReference = 17F31EFA1331050A00122B16 /* libMapView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		FECBE55E195133E6000ACE66 /* RMSMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FECBE571195133E7000ACE66 /* Build configuration list for PBXNativeTarget "RMSMTests" */;
+			buildPhases = (
+				FECBE55B195133E6000ACE66 /* Sources */,
+				FECBE55C195133E6000ACE66 /* Frameworks */,
+				FECBE55D195133E6000ACE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEC1B12319541A3E00A0CDA4 /* PBXTargetDependency */,
+				FECBE56E195133E6000ACE66 /* PBXTargetDependency */,
+			);
+			name = RMSMTests;
+			productName = RMSMTests;
+			productReference = FECBE55F195133E6000ACE66 /* RMSMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+					FECBE55E195133E6000ACE66 = {
+						TestTargetID = B8C974130E8A19B2007D16AD;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MapView" */;
 			compatibilityVersion = "Xcode 3.1";
@@ -1263,6 +1451,7 @@
 				386676D40F6B73AC00C56B17 /* MapView-framework */,
 				2B2BD43A0F79AA1B00B8B9A7 /* Doxygen-Documentation */,
 				2BF3078E0F8AC5C0007014EE /* Unit Tests */,
+				FECBE55E195133E6000ACE66 /* RMSMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1292,6 +1481,14 @@
 			files = (
 				2B580E2C0F8D201200D495B2 /* marker-red.png in Resources */,
 				2B2BADD70FA3B45A00EE37AA /* marker-X.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECBE55D195133E6000ACE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECBE569195133E6000ACE66 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1508,6 +1705,85 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FECBE55B195133E6000ACE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC1B12C19542E8B00A0CDA4 /* RMFoundation.c in Sources */,
+				FEC1B118195413E800A0CDA4 /* RMTile.c in Sources */,
+				FEC1B119195413E800A0CDA4 /* RMPixel.c in Sources */,
+				FEC1B0F019540D6600A0CDA4 /* RMSMLayerInfo.m in Sources */,
+				FEC1B0F219540D6600A0CDA4 /* RMProjection.m in Sources */,
+				FEC1B0F319540D6600A0CDA4 /* RMTransform.m in Sources */,
+				FEC1B0F419540D6600A0CDA4 /* RMFractalTileProjection.m in Sources */,
+				FEC1B0F519540D6600A0CDA4 /* RMWMS.m in Sources */,
+				FEC1B0F619540D6600A0CDA4 /* RMSMTileSource.m in Sources */,
+				FEC1B0F719540D6600A0CDA4 /* RMSMMBTileSource.m in Sources */,
+				FEC1B0F819540D6600A0CDA4 /* RMYahooMapSource.m in Sources */,
+				FEC1B0F919540D6600A0CDA4 /* RMOpenCycleMapSource.m in Sources */,
+				FEC1B0FA19540D6600A0CDA4 /* RMTileMapServiceSource.m in Sources */,
+				FEC1B0FB19540D6600A0CDA4 /* RMAbstractMercatorWebSource.m in Sources */,
+				FEC1B0FC19540D6600A0CDA4 /* RMVirtualEarthSource.m in Sources */,
+				FEC1B0FD19540D6600A0CDA4 /* RMDBMapSource.m in Sources */,
+				FEC1B0FE19540D6600A0CDA4 /* RMOpenAerialMapSource.m in Sources */,
+				FEC1B0FF19540D6600A0CDA4 /* RMSpatialCloudMapSource.m in Sources */,
+				FEC1B10019540D6600A0CDA4 /* RMMBTilesTileSource.m in Sources */,
+				FEC1B10119540D6600A0CDA4 /* RMWMSSource.m in Sources */,
+				FEC1B10219540D6600A0CDA4 /* RMMapQuestOSMSource.m in Sources */,
+				FEC1B10319540D6600A0CDA4 /* RMTileStreamSource.m in Sources */,
+				FEC1B10419540D6600A0CDA4 /* RMURLConnectionOperation.m in Sources */,
+				FEC1B10519540D6600A0CDA4 /* RMTileImage.m in Sources */,
+				FEC1B10619540D6600A0CDA4 /* RMDBTileImage.m in Sources */,
+				FEC1B10719540D6600A0CDA4 /* RMTileProxy.m in Sources */,
+				FEC1B10819540D6600A0CDA4 /* RMWebTileImage.m in Sources */,
+				FEC1B10919540D6600A0CDA4 /* RMFileTileImage.m in Sources */,
+				FEC1B10A19540D6600A0CDA4 /* RMTileCache.m in Sources */,
+				FEC1B10B19540D6600A0CDA4 /* RMMemoryCache.m in Sources */,
+				FEC1B10C19540D6600A0CDA4 /* FMDatabase.m in Sources */,
+				FEC1B10D19540D6600A0CDA4 /* FMDatabaseAdditions.m in Sources */,
+				FEC1B10E19540D6600A0CDA4 /* fmdb.m in Sources */,
+				FEC1B10F19540D6600A0CDA4 /* FMResultSet.m in Sources */,
+				FEC1B11019540D6600A0CDA4 /* RMTileCacheDAO.m in Sources */,
+				FEC1B11119540D6600A0CDA4 /* RMDatabaseCache.m in Sources */,
+				FEC1B11219540D6600A0CDA4 /* RMMapRenderer.m in Sources */,
+				FEC1B11319540D6600A0CDA4 /* RMTiledLayerController.m in Sources */,
+				FEC1B11419540D6600A0CDA4 /* RMConfiguration.m in Sources */,
+				FEC1B0E719540C2F00A0CDA4 /* RMMercatorToScreenProjection.m in Sources */,
+				FEC1B0E819540C2F00A0CDA4 /* RMCloudMapSource.m in Sources */,
+				FEC1B0E919540C2F00A0CDA4 /* RMOpenStreetMapSource.m in Sources */,
+				FEC1B0EA19540C2F00A0CDA4 /* RMTileImageSet.m in Sources */,
+				FEC1B0EB19540C2F00A0CDA4 /* RMTileLoader.m in Sources */,
+				FEC1B0EC19540C2F00A0CDA4 /* RMCachedTileSource.m in Sources */,
+				FEC1B0ED19540C2F00A0CDA4 /* RMCoreAnimationRenderer.m in Sources */,
+				FEC1B0EE19540C2F00A0CDA4 /* RMMarkerManager.m in Sources */,
+				FEC1B0EF19540C2F00A0CDA4 /* RMMarker.m in Sources */,
+				FEC1B0D919540B6A00A0CDA4 /* FindPathService.m in Sources */,
+				FEC1B0DA19540B6A00A0CDA4 /* FindPathResult.m in Sources */,
+				FEC1B0DB19540B6A00A0CDA4 /* Path.m in Sources */,
+				FEC1B0DC19540B6A00A0CDA4 /* PathGuideItem.m in Sources */,
+				FEC1B0DD19540B6A00A0CDA4 /* ServerGeometry.m in Sources */,
+				FEC1B0DE19540B6A00A0CDA4 /* ServerFeature.m in Sources */,
+				FEC1B0DF19540B6A00A0CDA4 /* RMMapView.m in Sources */,
+				FEC1B0E019540B6A00A0CDA4 /* RMMapContents.m in Sources */,
+				FEC1B0E119540B6A00A0CDA4 /* RMGeoHash.m in Sources */,
+				FEC1B0E219540B6A00A0CDA4 /* RMSMTileProjection.m in Sources */,
+				FEC1B0E319540B6A00A0CDA4 /* RMMapLayer.m in Sources */,
+				FEC1B0E419540B6A00A0CDA4 /* RMLayerCollection.m in Sources */,
+				FEC1B0E519540B6A00A0CDA4 /* RMPath.m in Sources */,
+				FEC1B0E619540B6A00A0CDA4 /* RMCircle.m in Sources */,
+				FECBE5891952B81F000ACE66 /* FindPathParameters.m in Sources */,
+				FECBE58C1952B81F000ACE66 /* TransportationAnalystParameter.m in Sources */,
+				FECBE585195290C2000ACE66 /* PathGuideItemTests.m in Sources */,
+				FECBE57F19528ACC000ACE66 /* TransportationAnalystResultSetting.m in Sources */,
+				FECBE587195290F0000ACE66 /* TransportationAnalystParameterTests.m in Sources */,
+				FECBE57C1951373B000ACE66 /* FindPathResultTests.m in Sources */,
+				FECBE57E19527CED000ACE66 /* TransportationAnalystResultSettingTests.m in Sources */,
+				FECBE57A19513699000ACE66 /* FindPathServiceTests.m in Sources */,
+				FECBE583195290AE000ACE66 /* PathTests.m in Sources */,
+				FECBE578195134CC000ACE66 /* FindPathParametersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1521,6 +1797,16 @@
 			name = Proj4;
 			targetProxy = B8C974150E8A19B2007D16AD /* PBXContainerItemProxy */;
 		};
+		FEC1B12319541A3E00A0CDA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Proj4;
+			targetProxy = FEC1B12219541A3E00A0CDA4 /* PBXContainerItemProxy */;
+		};
+		FECBE56E195133E6000ACE66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C974130E8A19B2007D16AD /* MapView */;
+			targetProxy = FECBE56D195133E6000ACE66 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1528,6 +1814,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				17157D8F133BBC8300E28941 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FECBE567195133E6000ACE66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FECBE568195133E6000ACE66 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1784,6 +2078,99 @@
 			};
 			name = Release;
 		};
+		FECBE56F195133E6000ACE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RMSMTests/RMSMTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../Proj4/**",
+				);
+				INFOPLIST_FILE = "RMSMTests/RMSMTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FECBE570195133E6000ACE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RMSMTests/RMSMTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../Proj4/**",
+				);
+				INFOPLIST_FILE = "RMSMTests/RMSMTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1837,6 +2224,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FECBE571195133E7000ACE66 /* Build configuration list for PBXNativeTarget "RMSMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FECBE56F195133E6000ACE66 /* Debug */,
+				FECBE570195133E6000ACE66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

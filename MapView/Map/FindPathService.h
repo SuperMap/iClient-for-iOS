@@ -21,6 +21,7 @@
 {
     NSString *strFindPathUrl;
     NSMutableData *data;
+    FindPathResult *lastResult;
 
 }
 
@@ -60,5 +61,5 @@
  * parameters - {<FindPathParameters>} 最佳路径分析参数类。
  */
 -(void) processAsync:(FindPathParameters*)parameters;
-
+@property (assign) FindPathResult *lastResult;
 @end

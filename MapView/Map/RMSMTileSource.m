@@ -13,6 +13,7 @@
 #import "RMSMTileProjection.h"
 #import "RMTiledLayerController.h"
 #import "RMProjection.h"
+#import "MapView_Prefix.pch"
 
 @implementation RMSMTileSource
 

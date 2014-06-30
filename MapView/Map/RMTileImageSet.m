@@ -29,6 +29,7 @@
 #import "RMTileImage.h"
 #import "RMPixel.h"
 #import "RMTileSource.h"
+#import "MapView_Prefix.pch"
 
 // For notification strings
 #import "RMTileLoader.h"
