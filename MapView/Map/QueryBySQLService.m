@@ -7,7 +7,6 @@
 //
 
 #import "QueryBySQLService.h"
-#import "QueryBySQLParameters.h"
 
 @implementation QueryBySQLService
 

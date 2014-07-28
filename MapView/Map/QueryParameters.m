@@ -8,7 +8,6 @@
 
 #import "QueryParameters.h"
 #import "RMGlobalConstants.h"
-#import "FilterParameter.h"
 
 @implementation QueryParameters
 

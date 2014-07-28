@@ -7,6 +7,7 @@
 //
 
 #import "QueryService.h"
+#import "QueryByDistanceParameters.h"
 
 /**
  * Class: QueryByDistanceService

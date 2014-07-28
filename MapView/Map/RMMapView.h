@@ -113,7 +113,7 @@ typedef struct {
 @class RMMapContents;
 
  /**
- * Class: RMCloudMapSource
+ * Class: RMMapView
  * Wrapper around RMMapContents for the iPhone.
  *
  *It implements event handling; but that's about it. All the interesting map

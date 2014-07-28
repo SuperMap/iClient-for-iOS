@@ -7,6 +7,7 @@
 //
 
 #import "QueryService.h"
+#import "QueryByGeometryParameters.h"
 
 /**
  * Class: QueryByGeometryService

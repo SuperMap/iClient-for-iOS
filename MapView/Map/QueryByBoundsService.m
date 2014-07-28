@@ -7,7 +7,6 @@
 //
 
 #import "QueryByBoundsService.h"
-#import "QueryByBoundsParameters.h"
 
 @implementation QueryByBoundsService
 

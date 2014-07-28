@@ -7,7 +7,7 @@
 //
 
 #import "QueryService.h"
-
+#import "QueryBySQLParameters.h"
 /**
  * Class: QueryBySQLService
  * SQL 查询服务类。

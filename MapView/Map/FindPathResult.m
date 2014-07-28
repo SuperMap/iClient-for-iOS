@@ -33,7 +33,7 @@
 
     NSMutableArray *aPathList=[[NSMutableArray alloc] init];
     aPathList=[JSON objectForKey:@"pathList"];
-    Path *aPath;
+    Path *aPath = nil;
     int nCount=[aPathList count]>0?[aPathList count]:0;
     if (nCount>0) {
         for (int i=0; i<[aPathList count]; i++) {

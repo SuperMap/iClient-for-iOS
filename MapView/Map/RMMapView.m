@@ -139,9 +139,9 @@
          //SuperMap iServer
         //NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
         /*
-        //NSString *tileThing = @"http://192.168.13.109:8090/iserver/services/map-world/rest/maps/World";
+        //NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-world/rest/maps/World";
         
-        NSString *tileThing = @"http://192.168.13.110:8090/iserver/services/map-china400/rest/maps/China";
+        NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-china400/rest/maps/China";
         
         RMSMLayerInfo* info = [[RMSMLayerInfo alloc] initWithTile:@"China" linkurl:tileThing];
         // 判断获取iServer服务配置信息失败，为NULL时失败

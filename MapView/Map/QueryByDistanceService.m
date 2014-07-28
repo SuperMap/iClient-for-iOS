@@ -7,7 +7,6 @@
 //
 
 #import "QueryByDistanceService.h"
-#import "QueryByDistanceParameters.h"
 #import "ServerGeometry.h"
 
 @implementation QueryByDistanceService

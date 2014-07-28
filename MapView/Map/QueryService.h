@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "QueryParameters.h"
-
+#import "QueryResult.h"
 /**
  * Class: QueryService
  * 查询服务基类。
@@ -22,8 +22,10 @@
 {
     NSString* strQueryUrl;
     NSMutableData *data;
+    QueryResult* lastResult;
 }
 
+@property (retain,atomic) QueryResult* lastResult;
 -(id) init:(NSString*)strUrl;
 
 -(void) processAsync:(QueryParameters*)params;

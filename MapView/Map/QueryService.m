@@ -7,9 +7,9 @@
 //
 
 #import "QueryService.h"
-#import "QueryResult.h"
 
 @implementation QueryService
+@synthesize lastResult;
 
 -(id) init:(NSString*)strUrl
 {
@@ -53,7 +53,6 @@
     }else{
         strHttpUrl = [strHttpUrl stringByAppendingFormat:@"strHttpUrl=%@",params.returnCustomResult?@"true":@"false"];
     }
-    
     //第一步，创建url
     NSURL *url = [NSURL URLWithString:strHttpUrl];
     //第二步，创建请求
@@ -112,6 +111,7 @@
     
     QueryResult* qs = [[QueryResult alloc] init];
     [qs fromJson:receiveStr];
+    lastResult=qs;
     //NSLog(@"dict1:%d",[[[qs.recordsets objectAtIndex:0] features] count]);
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     [dict setObject:qs forKey:@"QueryResult"];
@@ -133,6 +133,7 @@
  didFailWithError:(NSError *)error
 {
     NSLog(@"%@",[error localizedDescription]);
+
 }
 
 @end

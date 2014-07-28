@@ -7,7 +7,7 @@
 //
 
 #import "QueryService.h"
-
+#import "QueryByBoundsParameters.h"
 /**
  * Class: QueryByBoundsService
  * Bounds 查询服务类。

@@ -7,7 +7,6 @@
 //
 
 #import "QueryByGeometryService.h"
-#import "QueryByGeometryParameters.m"
 #import "ServerGeometry.h"
 
 @implementation QueryByGeometryService
