@@ -23,7 +23,7 @@
     {
         
         [super setUp];
-        findPathService=[[FindPathService alloc]init:@"http://192.168.13.81:8090/iserver/services/transportationanalyst-sample/rest/networkanalyst/RoadNet@Changchun"];
+        findPathService=[[FindPathService alloc]init:@"http://support.supermap.com.cn:8090/iserver/services/transportationanalyst-sample/rest/networkanalyst/RoadNet@Changchun"];
     }
 
     - (void)tearDown
