@@ -1,4 +1,4 @@
-//
+ //
 //  RMTileImageSet.m
 //
 // Copyright (c) 2008-2009, Route-Me Contributors
@@ -151,7 +151,7 @@
 -(void) addTile: (RMTile) tile At: (CGRect) screenLocation
 {
 	//	RMLog(@"addTile: %d %d", tile.x, tile.y);
-
+    //为image makeLayer
 	RMTileImage *dummyTile = [RMTileImage dummyTile:tile];
 	RMTileImage *tileImage = [images member:dummyTile];
 
@@ -173,11 +173,13 @@
 -(CGRect) addTiles: (RMTileRect)rect ToDisplayIn:(CGRect)bounds
 {
     //	RMLog(@"addTiles: %d %d - %f %f", rect.origin.tile.x, rect.origin.tile.y, rect.size.width, rect.size.height);
-
-	RMTile t;
+////修改传进来的rect宽高为地图显示的切片数
+    RMTile t;
 	float pixelsPerTile = bounds.size.width / rect.size.width;
+    //切片整数（width,height）
 	RMTileRect roundedRect = RMTileRectRound(rect);
 	// The number of tiles we'll load in the vertical and horizontal directions
+    ////修改传进来的rect宽高为地图显示的切片数
 	int tileRegionWidth = (int)roundedRect.size.width;
 	int tileRegionHeight = (int)roundedRect.size.height;
 	id<RMMercatorToTileProjection> proj = [tileSource mercatorToTileProjection];
@@ -185,8 +187,10 @@
 
 	// Now we translate the loaded region back into screen space for loadedBounds.
 	CGRect newLoadedBounds;
+    //地图左上角点在屏幕
 	newLoadedBounds.origin.x = bounds.origin.x - (rect.origin.offset.x * pixelsPerTile);
-	newLoadedBounds.origin.y = bounds.origin.y - (rect.origin.offset.y * pixelsPerTile);	
+	newLoadedBounds.origin.y = bounds.origin.y - (rect.origin.offset.y * pixelsPerTile);
+    //地图的偏移像素（整切片）
 	newLoadedBounds.size.width = tileRegionWidth * pixelsPerTile;
 	newLoadedBounds.size.height = tileRegionHeight * pixelsPerTile;
 

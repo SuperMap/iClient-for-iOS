@@ -63,3 +63,8 @@ static NSString* const  SpatialQueryMode_OVERLAP = @"OVERLAP";
 static NSString* const  SpatialQueryMode_TOUCH = @"TOUCH";
 static NSString* const  SpatialQueryMode_WITHIN = @"WITHIN";
 
+static NSString* const  DATASET_AND_RECORDSET = @"DATASET_AND_RECORDSET";
+static NSString* const  DATASET_ONLY = @"DATASET_ONLY";
+static NSString* const  RECORDSET_ONLY = @"RECORDSET_ONLY";
+
+

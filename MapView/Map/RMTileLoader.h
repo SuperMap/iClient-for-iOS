@@ -40,7 +40,8 @@
  */
 @interface RMTileLoader : NSObject {
 	RMMapContents *content;
-
+    id<RMTileSource> tileSource;
+    
 	CGRect loadedBounds;
 	NSUInteger loadedZoom;
 	RMTileRect loadedTiles;
@@ -49,7 +50,7 @@
 }
 
 /// Designated initialiser
-- (id)initWithContent: (RMMapContents *)contents;
+- (id)initWithContent: (RMMapContents *)contents tileSouce:(id<RMTileSource>)aTileSource ;
 
 - (void)updateLoadedImages;
 

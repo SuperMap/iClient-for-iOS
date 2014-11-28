@@ -36,6 +36,7 @@
 	double scaleFactor;
     RMSMLayerInfo* m_pInfo;
     NSMutableArray* m_dResolutions;
+    BOOL isBaseLayer;
 }
 
 - (id) initFromProjection:(RMProjection*)projection tileSideLength:(NSUInteger)tileSideLength maxZoom: (NSUInteger) aMaxZoom minZoom: (NSUInteger) aMinZoom info:(RMSMLayerInfo*) info resolutions:(NSMutableArray*) dResolutions;
@@ -43,5 +44,5 @@
 - (void) setTileSideLength: (NSUInteger) aTileSideLength;
 - (void) setMinZoom: (NSUInteger) aMinZoom;
 - (void) setMaxZoom: (NSUInteger) aMaxZoom;
-
+- (void) setIsBaseLayer:(BOOL)bIsBaseLayer;
 @end

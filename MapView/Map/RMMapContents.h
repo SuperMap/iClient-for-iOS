@@ -29,6 +29,7 @@
 #import "RMFoundation.h"
 #import "RMLatLong.h"
 #import "RMTile.h"
+#import "RMTileSourcesContainer.h"
 
 #import "RMTilesUpdateDelegate.h"
 #import "MapView_Prefix.pch"
@@ -85,7 +86,14 @@ enum {
 {
 	/// This is the underlying UIView's layer.
 	CALayer *layer;
+    CALayer *superTileSouceLayer;
 	
+    RMTileSourcesContainer *tileSourcesContainer;
+     NSMutableArray *earlyTileSources;
+    
+    NSMutableArray *baseLayeScals;
+    
+    
 	RMMarkerManager *markerManager;
 	/// subview for the image displayed while tiles are loading. Set its contents by providing your own "loading.png".
     ///用于加载tiles后显示image的子图层
@@ -105,14 +113,16 @@ enum {
 	RMMercatorToScreenProjection *mercatorToScreenProjection;
 	
 	/// controls what images are used. Can be changed while the view is visible, but see http://code.google.com/p/route-me/issues/detail?id=12
-	id<RMTileSource> tileSource;
+	////
+    //id<RMTileSource> tileSource;
 	
-	RMTileImageSet *imagesOnScreen;
-	RMTileLoader *tileLoader;
-	
-	RMMapRenderer *renderer;
+	NSMutableArray *imagesOnScreens;
+	NSMutableArray *tileLoaders;
+	NSMutableArray *renderers;
+	//RMMapRenderer *renderer;
 	NSUInteger		boundingMask;
 	
+    NSMutableArray *baseLayerScales;
 	/// minimum zoom number allowed for the view. #minZoom and #maxZoom must be within the limits of #tileSource but can be stricter; they are clamped to tilesource limits if needed.
     ///最小的缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
 	float minZoom;
@@ -133,7 +143,9 @@ enum {
 @property (readonly)  CGRect screenBounds;
 @property (readwrite) float metersPerPixel;
 @property (readonly)  float scaledMetersPerPixel;
+@property (readonly)    NSMutableArray *baseLayerScales;
 
+@property (retain)  NSMutableArray *renderers;
 //zoom level is clamped to range (minZoom, maxZoom)
 /**
  * APIProperty: zoom
@@ -145,15 +157,15 @@ enum {
 
 @property (nonatomic, readonly) float screenScale;
 
-@property (readonly)  RMTileImageSet *imagesOnScreen;
-@property (readonly)  RMTileLoader *tileLoader;
+//@property (readonly)  RMTileImageSet *imagesOnScreen;
+//@property (readonly)  RMTileLoader *tileLoader;
 
 @property (readonly)  RMProjection *projection;
-@property (readonly)  id<RMMercatorToTileProjection> mercatorToTileProjection;
+@property (retain,readonly)  id<RMMercatorToTileProjection> mercatorToTileProjection;
 @property (readonly)  RMMercatorToScreenProjection *mercatorToScreenProjection;
 
-@property (retain, readwrite) id<RMTileSource> tileSource;
-@property (retain, readwrite) RMMapRenderer *renderer;
+//@property (retain, readwrite) id<RMTileSource> tileSource;
+//@property (retain, readwrite) RMMapRenderer *renderer;
 
 @property (readonly)  CALayer *layer;
 
@@ -238,6 +250,25 @@ enum {
 	  minZoomLevel:(float)minZoomLevel
    backgroundImage:(UIImage *)backgroundImage
        screenScale:(float)theScreenScale;
+
+
+
+- (void)addTileSource:(id <RMTileSource>)newTileSource;
+
+- (void)addTileSource:(id<RMTileSource>)newTileSource atIndex:(NSUInteger)index;
+
+- (void)removeTileSource:(id <RMTileSource>)tileSource;
+
+- (void)removeTileSourceAtIndex:(NSUInteger)index;
+
+- (void)setHidden:(BOOL)isHidden forTileSource:(id <RMTileSource>)tileSource;
+
+- (void)setHidden:(BOOL)isHidden forTileSourceAtIndex:(NSUInteger)index;
+
+- (void)setOpacity:(float)opacity forTileSource:(id <RMTileSource>)tileSource;
+
+- (void)setOpacity:(CGFloat)opacity forTileSourceAtIndex:(NSUInteger)index;
+
 
 /**
  *subject to removal at any moment after 0.5 is released

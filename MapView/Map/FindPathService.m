@@ -46,16 +46,16 @@
     
     NSString* strHttpUrl = [[NSString alloc]init];
     strHttpUrl=[strFindPathUrl stringByAppendingString:strJsonParameters];
-    
+    NSLog(@"%@",strHttpUrl);
     strHttpUrl=[strHttpUrl stringByAddingPercentEscapesUsingEncoding:CFStringConvertEncodingToNSStringEncoding(NSASCIIStringEncoding)];
-    // NSLog(@"%@",strHttpUrl);
+     NSLog(@"%@",strHttpUrl);
     
     //第一步，创建url
     NSURL *url = [NSURL URLWithString:strHttpUrl];
-    
+    NSLog(@"@%@",url);
     //第二步，创建请求
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    
+    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10];
+    NSLog(@"@%@",request);
     [[NSURLConnection alloc]initWithRequest:request delegate:self];}
 
 -(NSString *) getJsonParameters:(FindPathParameters *)params

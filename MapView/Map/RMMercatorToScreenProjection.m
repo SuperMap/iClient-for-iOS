@@ -64,7 +64,7 @@
 	aPoint.easting += XYDelta.width;
 	aPoint.northing += XYDelta.height;
 	aPoint = [projection wrapPointHorizontally:aPoint];
-	return aPoint;
+	return aPoint; 
 }
 
 - (RMProjectedRect)moveRect: (RMProjectedRect)aRect by:(CGSize) delta
@@ -275,7 +275,7 @@
 	aSize.height = -aPixelSize.height * metersPerPixel;
 	return aSize;
 }
-
+//视图内地理范围
 - (RMProjectedRect) projectedBounds
 {
 	RMProjectedRect aRect;

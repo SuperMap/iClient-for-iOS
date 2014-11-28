@@ -40,7 +40,7 @@
 	id <RMTileSource> tileSource;
 	RMTileCache *cache;
 }
-
+@property (retain)id <RMTileSource> tileSource;
 - (id) initWithSource: (id<RMTileSource>) source;
 - (void) didReceiveMemoryWarning;
 
@@ -57,5 +57,6 @@
 -(NSString *)longDescription;
 -(NSString *)shortAttribution;
 -(NSString *)longAttribution;
+
 
 @end

@@ -44,110 +44,117 @@
 
 -(id) init
 {
-	if (![self initWithContent: nil])
-		return nil;
-	
-	return self;
+    if (![self initWithContent: nil tileSouce:nil])
+        return nil;
+    
+    return self;
 }
 
--(id) initWithContent: (RMMapContents *)_contents
+- (id)initWithContent: (RMMapContents *)contents tileSouce:(id<RMTileSource>)aTileSource
 {
-	if (![super init])
-		return nil;
-	
-	content = _contents;
-	
-	[self clearLoadedBounds];
-	loadedTiles.origin.tile = RMTileDummy();
-	
-	suppressLoading = NO;
-	
-	return self;
+    if (![super init])
+        return nil;
+    
+    content = contents;
+    tileSource=aTileSource;
+    [self clearLoadedBounds];
+    loadedTiles.origin.tile = RMTileDummy();
+    
+    suppressLoading = NO;
+    
+    return self;
 }
 
 -(void) dealloc
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	[super dealloc];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super dealloc];
 }
 
 -(void) clearLoadedBounds
 {
-	loadedBounds = CGRectZero;
+    loadedBounds = CGRectZero;
 }
 
 -(BOOL) screenIsLoaded
 {
-	//	RMTileRect targetRect = [content tileBounds];
-	BOOL contained = CGRectContainsRect(loadedBounds, [content screenBounds]);
-	
-	int targetZoom = (int)([[content mercatorToTileProjection] calculateNormalisedZoomFromScale:[content scaledMetersPerPixel]]);
-	if((targetZoom > content.maxZoom) || (targetZoom < content.minZoom))
-          RMLog(@"target zoom %d is outside of RMMapContents limits %f to %f",
-			  targetZoom, content.minZoom, content.maxZoom);
-	if (contained == NO)
-	{
-		//		RMLog(@"reassembling because its not contained");
-	}
-	
-	if (targetZoom != loadedZoom)
-	{
-		//		RMLog(@"reassembling because target zoom = %f, loaded zoom = %d", targetZoom, loadedZoom);
-	}
-	
-	return contained && targetZoom == loadedZoom;
+    //	RMTileRect targetRect = [content tileBounds];
+    BOOL contained = CGRectContainsRect(loadedBounds, [content screenBounds]);
+    
+    int targetZoom = (int)([[content mercatorToTileProjection] calculateNormalisedZoomFromScale:[content scaledMetersPerPixel]]);
+    if((targetZoom > content.maxZoom) || (targetZoom < content.minZoom))
+        RMLog(@"target zoom %d is outside of RMMapContents limits %f to %f",
+              targetZoom, content.minZoom, content.maxZoom);
+    if (contained == NO)
+    {
+        //		RMLog(@"reassembling because its not contained");
+    }
+    
+    if (targetZoom != loadedZoom)
+    {
+        //		RMLog(@"reassembling because target zoom = %f, loaded zoom = %d", targetZoom, loadedZoom);
+    }
+    
+    return contained && targetZoom == loadedZoom;
 }
 
 
 -(void) updateLoadedImages
 {
-	if (suppressLoading)
-		return;
-	
-	if ([content mercatorToTileProjection] == nil || [content  
-													  mercatorToScreenProjection] == nil)
-		return;
-	
-	// delay display of new images until expensive operations are  
-	//allowed
-	[[NSNotificationCenter defaultCenter] removeObserver:self  
-													name:RMResumeExpensiveOperations object:nil];
-	if ([RMMapContents performExpensiveOperations] == NO)
-	{
-        [[NSNotificationCenter defaultCenter] addObserver:self  
-												 selector:@selector(updateLoadedImages)  
-													 name:RMResumeExpensiveOperations object:nil];
+    if (suppressLoading)
         return;
-	}
-	
-	if ([self screenIsLoaded])
-		return;
-	
-	//RMLog(@"updateLoadedImages initial count = %d", [[content imagesOnScreen] count]);
-	
-	RMTileRect newTileRect = [content tileBounds];
-	
-	RMTileImageSet *images = [content imagesOnScreen];
-	images.zoom = newTileRect.origin.tile.zoom;
-	CGRect newLoadedBounds = [images addTiles:newTileRect ToDisplayIn:
-							  [content screenBounds]];
-	//RMLog(@"updateLoadedImages added count = %d", [images count]);
-	
-	
-	if (!RMTileIsDummy(loadedTiles.origin.tile))
-	{
-		[images removeTilesOutsideOf:newTileRect];
-	}
-	
-	//RMLog(@"updateLoadedImages final count = %d", [images count]);
-	
-	loadedBounds = newLoadedBounds;
-	loadedZoom = newTileRect.origin.tile.zoom;
-	loadedTiles = newTileRect;
-	
-	[content tilesUpdatedRegion:newLoadedBounds];
-	
-} 
+    
+    if ([content mercatorToTileProjection] == nil || [content
+                                                      mercatorToScreenProjection] == nil)
+        return;
+    
+    // delay display of new images until expensive operations are
+    //allowed
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:RMResumeExpensiveOperations object:nil];
+    if ([RMMapContents performExpensiveOperations] == NO)
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(updateLoadedImages)
+                                                     name:RMResumeExpensiveOperations object:nil];
+        return;
+    }
+    
+    if ([self screenIsLoaded])
+        return;
+    
+    //RMLog(@"updateLoadedImages initial count = %d", [[tileSource imagesOnScreen] count]);
+    
+    //RMTileRect newTileRect = [content tileBounds];
+    //[mercatorToTileProjection projectRect:[mercatorToScreenProjection projectedBounds]atScale:[self scaledMetersPerPixel]];
+    
+    RMTileRect newTileRect =[[tileSource mercatorToTileProjection]projectRect:[[content mercatorToScreenProjection] projectedBounds]atScale:[content scaledMetersPerPixel]];
+    
+    
+    
+    
+    
+    RMTileImageSet *images = [tileSource imagesOnScreen];
+    images.zoom = newTileRect.origin.tile.zoom;
+    CGRect newLoadedBounds = [images addTiles:newTileRect ToDisplayIn:
+                              [content screenBounds]];
+    //RMLog(@"updateLoadedImages added count = %d", [images count]);
+    
+    
+    if (!RMTileIsDummy(loadedTiles.origin.tile))
+    {
+        [images removeTilesOutsideOf:newTileRect];
+    }
+    
+    //RMLog(@"updateLoadedImages final count = %d", [images count]);
+    
+    loadedBounds = newLoadedBounds;
+    loadedZoom = newTileRect.origin.tile.zoom;
+    loadedTiles = newTileRect;
+    
+    [content tilesUpdatedRegion:newLoadedBounds];
+    
+}
 
 /*
  -(void) updateLoadedImages
@@ -183,40 +190,40 @@
 
 - (void)moveBy: (CGSize) delta
 {
-	//	RMLog(@"loadedBounds %f %f %f %f -> ", loadedBounds.origin.x, loadedBounds.origin.y, loadedBounds.size.width, loadedBounds.size.height);
-	loadedBounds = RMTranslateCGRectBy(loadedBounds, delta);
-	//	RMLog(@" -> %f %f %f %f", loadedBounds.origin.x, loadedBounds.origin.y, loadedBounds.size.width, loadedBounds.size.height);
-	[self updateLoadedImages];
+    //	RMLog(@"loadedBounds %f %f %f %f -> ", loadedBounds.origin.x, loadedBounds.origin.y, loadedBounds.size.width, loadedBounds.size.height);
+    loadedBounds = RMTranslateCGRectBy(loadedBounds, delta);
+    //	RMLog(@" -> %f %f %f %f", loadedBounds.origin.x, loadedBounds.origin.y, loadedBounds.size.width, loadedBounds.size.height);
+    [self updateLoadedImages];
 }
 
 - (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center
 {
-	loadedBounds = RMScaleCGRectAboutPoint(loadedBounds, zoomFactor, center);
-	[self updateLoadedImages];
+    loadedBounds = RMScaleCGRectAboutPoint(loadedBounds, zoomFactor, center);
+    [self updateLoadedImages];
 }
 
 - (BOOL) suppressLoading
 {
-	return suppressLoading;
+    return suppressLoading;
 }
 
 - (void) setSuppressLoading: (BOOL) suppress
 {
-	suppressLoading = suppress;
-	
-	if (suppress == NO)
-		[self updateLoadedImages];
+    suppressLoading = suppress;
+    
+    if (suppress == NO)
+        [self updateLoadedImages];
 }
 
 - (void)reset
 {
-	loadedTiles.origin.tile = RMTileDummy();
+    loadedTiles.origin.tile = RMTileDummy();
 }
 
 - (void)reload
 {
-	[self clearLoadedBounds];
-	[self updateLoadedImages];
+    [self clearLoadedBounds];
+    [self updateLoadedImages];
 }
 
 //-(BOOL) containsRect: (CGRect)bounds

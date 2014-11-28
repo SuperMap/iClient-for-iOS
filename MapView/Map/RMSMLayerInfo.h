@@ -26,6 +26,7 @@
     int datumAxis;
     float dpi;
     NSString *strParams;
+    NSString * projection;
 }
 
 /**
@@ -33,6 +34,8 @@
 * {double} 当前地图地理范围的宽度。
 */
 @property (readwrite) double dWidth;
+
+@property (retain,readonly) NSString * projection;
 
 /**
 * APIProperty: dHeight
@@ -56,7 +59,7 @@
  * Property: strParams
  * {NSString} url的可选参数字符串。
  */
-@property (assign,readwrite) NSString *strParams;
+@property (retain,readwrite) NSString *strParams;
  /**
  * Constructor: initWithTile
  * 所有SuperMap iServer 6R 分块动态 REST 图层。

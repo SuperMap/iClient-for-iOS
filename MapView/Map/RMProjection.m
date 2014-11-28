@@ -42,6 +42,7 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
 @synthesize planetBounds;
 @synthesize projectionWrapsHorizontally;
 @synthesize bIsSM;
+@synthesize epsgCode;
 
 - (id) initWithString: (NSString*)params InBounds: (RMProjectedRect) projBounds
 {
@@ -55,7 +56,7 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
 		[self release];
 		return nil;
 	}
-	
+	//左下角点
 	planetBounds = projBounds;
 
 	projectionWrapsHorizontally = YES;
@@ -82,9 +83,16 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
             +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs"];
 }
 
--(id)projectionWithBounds:(RMProjectedRect) projBounds
+-(id)projectionWithBounds:(RMProjectedRect) projBounds EPSGCode:(NSString*) _epsgCode
 {
 	self.planetBounds=projBounds;
+    self.epsgCode=_epsgCode;
+    return self;
+}
+
+-(id)projectionWithBounds:(RMProjectedRect) projBounds
+{
+    self.planetBounds=projBounds;
     return self;
 }
 
@@ -99,7 +107,7 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
 - (RMProjectedPoint) wrapPointHorizontally: (RMProjectedPoint) aPoint
 {
     if (bIsSM) {
-       
+        
         if (aPoint.easting < (planetBounds.origin.easting))
             aPoint.easting = planetBounds.origin.easting;
         if (aPoint.easting > (planetBounds.origin.easting + planetBounds.size.width))

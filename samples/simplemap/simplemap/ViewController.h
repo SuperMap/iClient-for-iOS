@@ -13,16 +13,21 @@
 #import "RMPath.h"
 #import "RMLayerCollection.h"
 #import "RMMarkerManager.h"
-
+#import "ThemeService.h"
+#import "RMMapContents.h"
+#import "GenerateSpatialDataService.h"
 
 @interface ViewController : UIViewController
 {
     RMMapView *mapView;
     RMSMLayerInfo* info;
     RMMapContents *newContents;
+    RMSMLayerInfo* info2;
+
  }
 
 @property (nonatomic, retain) RMMapView *mapView;
-@property (nonatomic, retain) RMSMLayerInfo* info;
+//@property (nonatomic, retain) RMSMLayerInfo* info;
+//@property (nonatomic, retain) RMSMLayerInfo* info2;
 
 @end

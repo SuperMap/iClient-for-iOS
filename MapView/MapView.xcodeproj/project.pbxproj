@@ -222,6 +222,8 @@
 		F56554F9146E002B00623AC9 /* RMURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F56554F7146E002B00623AC9 /* RMURLConnectionOperation.m */; };
 		F5C12D2A0F8A86CA00A894D2 /* RMGeoHash.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C12D280F8A86CA00A894D2 /* RMGeoHash.h */; };
 		F5C12D2B0F8A86CA00A894D2 /* RMGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C12D290F8A86CA00A894D2 /* RMGeoHash.m */; };
+		FE170D811A2713EA00D4B41F /* GenerateSpatialDataResult.h in Headers */ = {isa = PBXBuildFile; fileRef = FE170D7F1A2713EA00D4B41F /* GenerateSpatialDataResult.h */; };
+		FE170D821A2713EA00D4B41F /* GenerateSpatialDataResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FE170D801A2713EA00D4B41F /* GenerateSpatialDataResult.m */; };
 		FE1927991769563F003B2E46 /* RMSMTileProjection.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1927971769563F003B2E46 /* RMSMTileProjection.h */; };
 		FE19279A1769563F003B2E46 /* RMSMTileProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1927981769563F003B2E46 /* RMSMTileProjection.m */; };
 		FE19279D17695657003B2E46 /* RMSMTileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FE19279B17695657003B2E46 /* RMSMTileSource.h */; };
@@ -250,6 +252,28 @@
 		FE237B6D177AD5D6000C8B42 /* Recordset.m in Sources */ = {isa = PBXBuildFile; fileRef = FE237B6B177AD5D5000C8B42 /* Recordset.m */; };
 		FE237B70177AE51E000C8B42 /* QueryResult.h in Headers */ = {isa = PBXBuildFile; fileRef = FE237B6E177AE51D000C8B42 /* QueryResult.h */; };
 		FE237B71177AE51E000C8B42 /* QueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FE237B6F177AE51D000C8B42 /* QueryResult.m */; };
+		FE3ADE2A1A24B351009188F2 /* ThemeParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3ADE201A24B351009188F2 /* ThemeParameters.h */; };
+		FE3ADE2B1A24B351009188F2 /* ThemeParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3ADE211A24B351009188F2 /* ThemeParameters.m */; };
+		FE3ADE2C1A24B351009188F2 /* ThemeResult.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3ADE221A24B351009188F2 /* ThemeResult.h */; };
+		FE3ADE2D1A24B351009188F2 /* ThemeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3ADE231A24B351009188F2 /* ThemeResult.m */; };
+		FE3ADE2E1A24B351009188F2 /* ThemeService.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3ADE241A24B351009188F2 /* ThemeService.h */; };
+		FE3ADE2F1A24B351009188F2 /* ThemeService.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3ADE251A24B351009188F2 /* ThemeService.m */; };
+		FE3ADE301A24B351009188F2 /* ThemeUnique.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3ADE261A24B351009188F2 /* ThemeUnique.h */; };
+		FE3ADE311A24B351009188F2 /* ThemeUnique.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3ADE271A24B351009188F2 /* ThemeUnique.m */; };
+		FE3ADE321A24B351009188F2 /* ThemeUniqueItem.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3ADE281A24B351009188F2 /* ThemeUniqueItem.h */; };
+		FE3ADE331A24B351009188F2 /* ThemeUniqueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3ADE291A24B351009188F2 /* ThemeUniqueItem.m */; };
+		FE3ADE361A24B386009188F2 /* ServerStytle.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3ADE341A24B386009188F2 /* ServerStytle.h */; };
+		FE3ADE371A24B386009188F2 /* ServerStytle.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3ADE351A24B386009188F2 /* ServerStytle.m */; };
+		FE3ADE3C1A24B3FF009188F2 /* RMTileSourcesContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3ADE391A24B3FF009188F2 /* RMTileSourcesContainer.h */; };
+		FE3ADE3D1A24B3FF009188F2 /* RMTileSourcesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3ADE3A1A24B3FF009188F2 /* RMTileSourcesContainer.m */; };
+		FE3ADE461A24B5D0009188F2 /* ResourceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3ADE441A24B5D0009188F2 /* ResourceInfo.h */; };
+		FE3ADE471A24B5D0009188F2 /* ResourceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3ADE451A24B5D0009188F2 /* ResourceInfo.m */; };
+		FE4162081A260F3B004607B2 /* GenerateSpatialDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4162061A260F3B004607B2 /* GenerateSpatialDataService.h */; };
+		FE4162091A260F3B004607B2 /* GenerateSpatialDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4162071A260F3B004607B2 /* GenerateSpatialDataService.m */; };
+		FE41620C1A260F61004607B2 /* GenerateSpatialDataParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = FE41620A1A260F61004607B2 /* GenerateSpatialDataParameters.h */; };
+		FE41620D1A260F61004607B2 /* GenerateSpatialDataParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41620B1A260F61004607B2 /* GenerateSpatialDataParameters.m */; };
+		FE4162101A260F82004607B2 /* DataReturnOption.h in Headers */ = {isa = PBXBuildFile; fileRef = FE41620E1A260F82004607B2 /* DataReturnOption.h */; };
+		FE4162111A260F82004607B2 /* DataReturnOption.m in Sources */ = {isa = PBXBuildFile; fileRef = FE41620F1A260F82004607B2 /* DataReturnOption.m */; };
 		FE59C7F81771A0FE000A532B /* RMSMMeasureService.h in Headers */ = {isa = PBXBuildFile; fileRef = FE59C7F61771A0FE000A532B /* RMSMMeasureService.h */; };
 		FE59C7F91771A0FE000A532B /* RMSMMeasureService.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C7F71771A0FE000A532B /* RMSMMeasureService.m */; };
 		FE59C7FC1771A3E3000A532B /* RMSMMeasureParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = FE59C7FA1771A3E3000A532B /* RMSMMeasureParameters.h */; };
@@ -598,6 +622,8 @@
 		F56554F7146E002B00623AC9 /* RMURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMURLConnectionOperation.m; sourceTree = "<group>"; };
 		F5C12D280F8A86CA00A894D2 /* RMGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGeoHash.h; sourceTree = "<group>"; };
 		F5C12D290F8A86CA00A894D2 /* RMGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGeoHash.m; sourceTree = "<group>"; };
+		FE170D7F1A2713EA00D4B41F /* GenerateSpatialDataResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateSpatialDataResult.h; sourceTree = "<group>"; };
+		FE170D801A2713EA00D4B41F /* GenerateSpatialDataResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateSpatialDataResult.m; sourceTree = "<group>"; };
 		FE1927971769563F003B2E46 /* RMSMTileProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMTileProjection.h; sourceTree = "<group>"; };
 		FE1927981769563F003B2E46 /* RMSMTileProjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSMTileProjection.m; sourceTree = "<group>"; };
 		FE19279B17695657003B2E46 /* RMSMTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMTileSource.h; sourceTree = "<group>"; };
@@ -626,6 +652,28 @@
 		FE237B6B177AD5D5000C8B42 /* Recordset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recordset.m; sourceTree = "<group>"; };
 		FE237B6E177AE51D000C8B42 /* QueryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryResult.h; sourceTree = "<group>"; };
 		FE237B6F177AE51D000C8B42 /* QueryResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryResult.m; sourceTree = "<group>"; };
+		FE3ADE201A24B351009188F2 /* ThemeParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeParameters.h; sourceTree = "<group>"; };
+		FE3ADE211A24B351009188F2 /* ThemeParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeParameters.m; sourceTree = "<group>"; };
+		FE3ADE221A24B351009188F2 /* ThemeResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeResult.h; sourceTree = "<group>"; };
+		FE3ADE231A24B351009188F2 /* ThemeResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeResult.m; sourceTree = "<group>"; };
+		FE3ADE241A24B351009188F2 /* ThemeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeService.h; sourceTree = "<group>"; };
+		FE3ADE251A24B351009188F2 /* ThemeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeService.m; sourceTree = "<group>"; };
+		FE3ADE261A24B351009188F2 /* ThemeUnique.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeUnique.h; sourceTree = "<group>"; };
+		FE3ADE271A24B351009188F2 /* ThemeUnique.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeUnique.m; sourceTree = "<group>"; };
+		FE3ADE281A24B351009188F2 /* ThemeUniqueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeUniqueItem.h; sourceTree = "<group>"; };
+		FE3ADE291A24B351009188F2 /* ThemeUniqueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeUniqueItem.m; sourceTree = "<group>"; };
+		FE3ADE341A24B386009188F2 /* ServerStytle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerStytle.h; sourceTree = "<group>"; };
+		FE3ADE351A24B386009188F2 /* ServerStytle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerStytle.m; sourceTree = "<group>"; };
+		FE3ADE391A24B3FF009188F2 /* RMTileSourcesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTileSourcesContainer.h; sourceTree = "<group>"; };
+		FE3ADE3A1A24B3FF009188F2 /* RMTileSourcesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMTileSourcesContainer.m; sourceTree = "<group>"; };
+		FE3ADE441A24B5D0009188F2 /* ResourceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceInfo.h; sourceTree = "<group>"; };
+		FE3ADE451A24B5D0009188F2 /* ResourceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceInfo.m; sourceTree = "<group>"; };
+		FE4162061A260F3B004607B2 /* GenerateSpatialDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateSpatialDataService.h; sourceTree = "<group>"; };
+		FE4162071A260F3B004607B2 /* GenerateSpatialDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateSpatialDataService.m; sourceTree = "<group>"; };
+		FE41620A1A260F61004607B2 /* GenerateSpatialDataParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateSpatialDataParameters.h; sourceTree = "<group>"; };
+		FE41620B1A260F61004607B2 /* GenerateSpatialDataParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateSpatialDataParameters.m; sourceTree = "<group>"; };
+		FE41620E1A260F82004607B2 /* DataReturnOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataReturnOption.h; sourceTree = "<group>"; };
+		FE41620F1A260F82004607B2 /* DataReturnOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataReturnOption.m; sourceTree = "<group>"; };
 		FE59C7F61771A0FE000A532B /* RMSMMeasureService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMMeasureService.h; sourceTree = "<group>"; };
 		FE59C7F71771A0FE000A532B /* RMSMMeasureService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMSMMeasureService.m; sourceTree = "<group>"; };
 		FE59C7FA1771A3E3000A532B /* RMSMMeasureParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMMeasureParameters.h; sourceTree = "<group>"; };
@@ -1087,6 +1135,8 @@
 				96492C3F0FA8AD3400EBA6D2 /* RMGlobalConstants.h */,
 				B1EB26C510B5D8E6009F8658 /* RMNotifications.h */,
 				090FE3130ECD71A500035FBC /* RMTilesUpdateDelegate.h */,
+				FE3ADE391A24B3FF009188F2 /* RMTileSourcesContainer.h */,
+				FE3ADE3A1A24B3FF009188F2 /* RMTileSourcesContainer.m */,
 				B8C974690E8A1A50007D16AD /* RMMapView.h */,
 				B8C9746A0E8A1A50007D16AD /* RMMapView.m */,
 				B8C974B60E8A280A007D16AD /* RMMapContents.h */,
@@ -1140,9 +1190,45 @@
 			name = SM;
 			sourceTree = "<group>";
 		};
+		FE3ADE1F1A24B328009188F2 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				FE3ADE441A24B5D0009188F2 /* ResourceInfo.h */,
+				FE3ADE451A24B5D0009188F2 /* ResourceInfo.m */,
+				FE3ADE201A24B351009188F2 /* ThemeParameters.h */,
+				FE3ADE211A24B351009188F2 /* ThemeParameters.m */,
+				FE3ADE221A24B351009188F2 /* ThemeResult.h */,
+				FE3ADE231A24B351009188F2 /* ThemeResult.m */,
+				FE3ADE241A24B351009188F2 /* ThemeService.h */,
+				FE3ADE251A24B351009188F2 /* ThemeService.m */,
+				FE3ADE261A24B351009188F2 /* ThemeUnique.h */,
+				FE3ADE271A24B351009188F2 /* ThemeUnique.m */,
+				FE3ADE281A24B351009188F2 /* ThemeUniqueItem.h */,
+				FE3ADE291A24B351009188F2 /* ThemeUniqueItem.m */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		FE4162051A260F1A004607B2 /* SpatialAnalyst */ = {
+			isa = PBXGroup;
+			children = (
+				FE4162061A260F3B004607B2 /* GenerateSpatialDataService.h */,
+				FE4162071A260F3B004607B2 /* GenerateSpatialDataService.m */,
+				FE41620A1A260F61004607B2 /* GenerateSpatialDataParameters.h */,
+				FE41620B1A260F61004607B2 /* GenerateSpatialDataParameters.m */,
+				FE41620E1A260F82004607B2 /* DataReturnOption.h */,
+				FE41620F1A260F82004607B2 /* DataReturnOption.m */,
+				FE170D7F1A2713EA00D4B41F /* GenerateSpatialDataResult.h */,
+				FE170D801A2713EA00D4B41F /* GenerateSpatialDataResult.m */,
+			);
+			name = SpatialAnalyst;
+			sourceTree = "<group>";
+		};
 		FE59C7F4177190A3000A532B /* REST */ = {
 			isa = PBXGroup;
 			children = (
+				FE4162051A260F1A004607B2 /* SpatialAnalyst */,
+				FE3ADE1F1A24B328009188F2 /* Theme */,
 				FEC0BFF119348EB500A23971 /* NetworkAnalyst */,
 				FE64F85A1778191800935CEB /* ServerType */,
 				FEE0BDAE1772F46600A881BB /* Query */,
@@ -1165,6 +1251,8 @@
 		FE64F85A1778191800935CEB /* ServerType */ = {
 			isa = PBXGroup;
 			children = (
+				FE3ADE341A24B386009188F2 /* ServerStytle.h */,
+				FE3ADE351A24B386009188F2 /* ServerStytle.m */,
 				FE64F85B17781C4300935CEB /* ServerGeometry.h */,
 				FE64F85C17781C4300935CEB /* ServerGeometry.m */,
 				FE237B66177AD566000C8B42 /* ServerFeature.h */,
@@ -1311,6 +1399,7 @@
 				B8C974290E8A19B2007D16AD /* RMFileTileImage.h in Headers */,
 				FEBFDD9E19358D360015E999 /* TransportationAnalystParameter.h in Headers */,
 				FEBFDDA61935E1A60015E999 /* Path.h in Headers */,
+				FE3ADE301A24B351009188F2 /* ThemeUnique.h in Headers */,
 				B8C9742A0E8A19B2007D16AD /* RMTileImage.h in Headers */,
 				B8C9742B0E8A19B2007D16AD /* RMMemoryCache.h in Headers */,
 				B8C9742D0E8A19B2007D16AD /* RMFractalTileProjection.h in Headers */,
@@ -1331,8 +1420,10 @@
 				FEBFDDA219358D8B0015E999 /* TransportationAnalystResultSetting.h in Headers */,
 				B8F3FC640EA2E792004D8F85 /* RMMarker.h in Headers */,
 				B8474B9A0EB40094006A0BC1 /* FMDatabase.h in Headers */,
+				FE4162081A260F3B004607B2 /* GenerateSpatialDataService.h in Headers */,
 				B8474B9C0EB40094006A0BC1 /* FMDatabaseAdditions.h in Headers */,
 				B8474B9F0EB40094006A0BC1 /* FMResultSet.h in Headers */,
+				FE170D811A2713EA00D4B41F /* GenerateSpatialDataResult.h in Headers */,
 				B8474BA20EB40094006A0BC1 /* RMTileCacheDAO.h in Headers */,
 				B8474BA40EB40094006A0BC1 /* RMDatabaseCache.h in Headers */,
 				23A0AAEB0EB90AA6003A4521 /* RMFoundation.h in Headers */,
@@ -1351,6 +1442,7 @@
 				B1EB26C310B5D8C0009F8658 /* RMOpenCycleMapSource.h in Headers */,
 				B1EB26C610B5D8E6009F8658 /* RMNotifications.h in Headers */,
 				D1437B35122869E400888DAE /* RMDBTileImage.h in Headers */,
+				FE3ADE2A1A24B351009188F2 /* ThemeParameters.h in Headers */,
 				D1437B37122869E400888DAE /* RMDBMapSource.h in Headers */,
 				FEC0BFF8193490A300A23971 /* FindPathService.h in Headers */,
 				25757F4F1291C8640083D504 /* RMCircle.h in Headers */,
@@ -1358,27 +1450,35 @@
 				DD55FD1512FB40E000B6FE24 /* RMMBTilesTileSource.h in Headers */,
 				447420DA1302B2F5004D6E8A /* RMWMSSource.h in Headers */,
 				4474211B1302B60A004D6E8A /* RMWMS.h in Headers */,
+				FE3ADE3C1A24B3FF009188F2 /* RMTileSourcesContainer.h in Headers */,
 				17F02BB11319BA4B00260C6B /* RouteMe.h in Headers */,
 				175701DE1323C2E900A5D314 /* NSUserDefaults+RouteMe.h in Headers */,
 				DDA3E85613B00D9E004D861C /* RMMapQuestOSMSource.h in Headers */,
 				DDCD58D31406F8A400F59E0D /* RMTileStreamSource.h in Headers */,
+				FE3ADE361A24B386009188F2 /* ServerStytle.h in Headers */,
 				F56554F8146E002B00623AC9 /* RMURLConnectionOperation.h in Headers */,
+				FE41620C1A260F61004607B2 /* GenerateSpatialDataParameters.h in Headers */,
 				FE1927991769563F003B2E46 /* RMSMTileProjection.h in Headers */,
 				FE19279D17695657003B2E46 /* RMSMTileSource.h in Headers */,
+				FE4162101A260F82004607B2 /* DataReturnOption.h in Headers */,
 				FE1927A417695695003B2E46 /* RMSMLayerInfo.h in Headers */,
 				FE59C7F81771A0FE000A532B /* RMSMMeasureService.h in Headers */,
 				FE59C7FC1771A3E3000A532B /* RMSMMeasureParameters.h in Headers */,
 				FE64F85D17781C4300935CEB /* ServerGeometry.h in Headers */,
+				FE3ADE321A24B351009188F2 /* ThemeUniqueItem.h in Headers */,
 				FE221B68177968FC0051A2C2 /* DatasourceConnectionInfo.h in Headers */,
+				FE3ADE2E1A24B351009188F2 /* ThemeService.h in Headers */,
 				FE221B6C17796C0F0051A2C2 /* LinkItem.h in Headers */,
 				FE221B7017796F670051A2C2 /* JoinItem.h in Headers */,
 				FE221B74177972680051A2C2 /* FilterParameter.h in Headers */,
 				FE221B781779779F0051A2C2 /* QueryParameters.h in Headers */,
 				FE221B7C17797D4C0051A2C2 /* QueryService.h in Headers */,
 				FE221B8017797DC60051A2C2 /* QueryByBoundsParameters.h in Headers */,
+				FE3ADE2C1A24B351009188F2 /* ThemeResult.h in Headers */,
 				FE221B84177983080051A2C2 /* QueryByBoundsService.h in Headers */,
 				FE237B68177AD566000C8B42 /* ServerFeature.h in Headers */,
 				FE237B6C177AD5D6000C8B42 /* Recordset.h in Headers */,
+				FE3ADE461A24B5D0009188F2 /* ResourceInfo.h in Headers */,
 				FE237B70177AE51E000C8B42 /* QueryResult.h in Headers */,
 				FEBFDD9A1935689A0015E999 /* FindPathResult.h in Headers */,
 				FE96C6C9177C1697003017A9 /* QueryByDistanceParameters.h in Headers */,
@@ -1677,10 +1777,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3ADE2B1A24B351009188F2 /* ThemeParameters.m in Sources */,
 				B8C974350E8A19B2007D16AD /* RMMercatorToScreenProjection.m in Sources */,
 				B8C974380E8A19B2007D16AD /* RMMapRenderer.m in Sources */,
 				B8C9743A0E8A19B2007D16AD /* RMCoreAnimationRenderer.m in Sources */,
 				B8C9743F0E8A19B2007D16AD /* RMTileImage.m in Sources */,
+				FE4162111A260F82004607B2 /* DataReturnOption.m in Sources */,
 				B8C974400E8A19B2007D16AD /* RMTile.c in Sources */,
 				B8C974410E8A19B2007D16AD /* RMOpenStreetMapSource.m in Sources */,
 				B8C974420E8A19B2007D16AD /* RMMemoryCache.m in Sources */,
@@ -1688,6 +1790,7 @@
 				B8C974440E8A19B2007D16AD /* RMFractalTileProjection.m in Sources */,
 				B8C974460E8A19B2007D16AD /* RMFileTileImage.m in Sources */,
 				B8C974480E8A19B2007D16AD /* RMTileCache.m in Sources */,
+				FE3ADE311A24B351009188F2 /* ThemeUnique.m in Sources */,
 				B8C9744A0E8A19B2007D16AD /* RMProjection.m in Sources */,
 				B8C9744C0E8A19B2007D16AD /* RMAbstractMercatorWebSource.m in Sources */,
 				B8C9745D0E8A19E6007D16AD /* RMTileImageSet.m in Sources */,
@@ -1696,14 +1799,17 @@
 				B8C974640E8A19E9007D16AD /* RMTransform.m in Sources */,
 				B8C974660E8A19EA007D16AD /* RMVirtualEarthSource.m in Sources */,
 				B8C974680E8A19EB007D16AD /* RMWebTileImage.m in Sources */,
+				FE3ADE371A24B386009188F2 /* ServerStytle.m in Sources */,
 				FEBFDDA71935E1A60015E999 /* Path.m in Sources */,
 				B8C9746C0E8A1A50007D16AD /* RMMapView.m in Sources */,
 				B8C974B90E8A280A007D16AD /* RMMapContents.m in Sources */,
+				FE4162091A260F3B004607B2 /* GenerateSpatialDataService.m in Sources */,
 				B8C974CB0E8A9C30007D16AD /* RMCachedTileSource.m in Sources */,
 				B8FA921A0E9315EC003A9FE6 /* RMLayerCollection.m in Sources */,
 				B8F3FC610EA2B382004D8F85 /* RMMapLayer.m in Sources */,
 				B8F3FC650EA2E792004D8F85 /* RMMarker.m in Sources */,
 				B8474B9B0EB40094006A0BC1 /* FMDatabase.m in Sources */,
+				FE3ADE2F1A24B351009188F2 /* ThemeService.m in Sources */,
 				B8474B9D0EB40094006A0BC1 /* FMDatabaseAdditions.m in Sources */,
 				B8474BA00EB40094006A0BC1 /* FMResultSet.m in Sources */,
 				B8474BA30EB40094006A0BC1 /* RMTileCacheDAO.m in Sources */,
@@ -1714,8 +1820,10 @@
 				B8CEB1C60ED5A3480014C431 /* RMPath.m in Sources */,
 				2B5682730F68E36000E8DF40 /* RMOpenAerialMapSource.m in Sources */,
 				96FE8E370F72D01B00A11CF0 /* RMYahooMapSource.m in Sources */,
+				FE3ADE331A24B351009188F2 /* ThemeUniqueItem.m in Sources */,
 				F5C12D2B0F8A86CA00A894D2 /* RMGeoHash.m in Sources */,
 				B144DEFF0FD989C3003F3368 /* RMTileMapServiceSource.m in Sources */,
+				FE170D821A2713EA00D4B41F /* GenerateSpatialDataResult.m in Sources */,
 				FEC0BFF9193490A300A23971 /* FindPathService.m in Sources */,
 				B1EB26C410B5D8C0009F8658 /* RMOpenCycleMapSource.m in Sources */,
 				D1437B34122869E400888DAE /* RMDBTileImage.m in Sources */,
@@ -1728,6 +1836,7 @@
 				175701DF1323C2E900A5D314 /* NSUserDefaults+RouteMe.m in Sources */,
 				FEBFDDA319358D8B0015E999 /* TransportationAnalystResultSetting.m in Sources */,
 				DDA3E85713B00D9E004D861C /* RMMapQuestOSMSource.m in Sources */,
+				FE3ADE3D1A24B3FF009188F2 /* RMTileSourcesContainer.m in Sources */,
 				DDCD58D41406F8A400F59E0D /* RMTileStreamSource.m in Sources */,
 				F56554F9146E002B00623AC9 /* RMURLConnectionOperation.m in Sources */,
 				FE19279A1769563F003B2E46 /* RMSMTileProjection.m in Sources */,
@@ -1738,6 +1847,7 @@
 				FE59C7FD1771A3E3000A532B /* RMSMMeasureParameters.m in Sources */,
 				FE64F85E17781C4300935CEB /* ServerGeometry.m in Sources */,
 				FE221B69177968FC0051A2C2 /* DatasourceConnectionInfo.m in Sources */,
+				FE3ADE2D1A24B351009188F2 /* ThemeResult.m in Sources */,
 				FE221B6D17796C0F0051A2C2 /* LinkItem.m in Sources */,
 				FE221B7117796F670051A2C2 /* JoinItem.m in Sources */,
 				FE221B75177972680051A2C2 /* FilterParameter.m in Sources */,
@@ -1750,9 +1860,11 @@
 				FEBFDD9B1935689A0015E999 /* FindPathResult.m in Sources */,
 				FEC0BFF51934903F00A23971 /* FindPathParameters.m in Sources */,
 				FE237B6D177AD5D6000C8B42 /* Recordset.m in Sources */,
+				FE41620D1A260F61004607B2 /* GenerateSpatialDataParameters.m in Sources */,
 				FE237B71177AE51E000C8B42 /* QueryResult.m in Sources */,
 				FE96C6CA177C1697003017A9 /* QueryByDistanceParameters.m in Sources */,
 				FE96C6CE177C18D9003017A9 /* QueryByDistanceService.m in Sources */,
+				FE3ADE471A24B5D0009188F2 /* ResourceInfo.m in Sources */,
 				FE96C6D2177C24AE003017A9 /* QueryBySQLParameters.m in Sources */,
 				FE96C6D6177C24EE003017A9 /* QueryBySQLService.m in Sources */,
 				FE96C6DA177C25C3003017A9 /* QueryByGeometryService.m in Sources */,

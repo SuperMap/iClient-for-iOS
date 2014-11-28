@@ -42,7 +42,7 @@
 	
 	/// the size of the earth, in projected units (meters, most often)
 	RMProjectedRect	planetBounds;
-	
+    NSString *epsgCode;
 	/// hardcoded to YES in #initWithString:InBounds:
 	BOOL		projectionWrapsHorizontally;
     BOOL bIsSM;
@@ -52,6 +52,7 @@
 @property (readwrite) RMProjectedRect planetBounds;
 @property (readwrite) BOOL projectionWrapsHorizontally;
 @property (readwrite) BOOL bIsSM;
+@property (retain) NSString *epsgCode;
  
 /**
  * APIMethod: wrapPointHorizontally
@@ -88,6 +89,7 @@
 - (id) initWithString: (NSString*)params InBounds: (RMProjectedRect) projBounds;
 
 -(id)initForSMProjection;
+-(id)projectionWithBounds:(RMProjectedRect) projBounds EPSGCode:(NSString*) _epsgCode;
 -(id)projectionWithBounds:(RMProjectedRect) projBounds;
 
 

@@ -30,7 +30,7 @@
 #import "MapView_Prefix.pch"
 
 @implementation RMCachedTileSource
-
+@synthesize tileSource;
 - (id) initWithSource: (id<RMTileSource>) _source
 {
 	if ([_source isKindOfClass:[RMCachedTileSource class]])
@@ -104,6 +104,11 @@
 	return [tileSource maxZoom];
 }
 
+-(int) tileSideLength
+{
+    return [tileSource tileSideLength];
+}
+
 -(RMSphericalTrapezium) latitudeLongitudeBoundingBox
 {
 	return [tileSource latitudeLongitudeBoundingBox];
@@ -166,6 +171,18 @@
 -(void) removeAllCachedImages
 {
 	[cache removeAllCachedImages];
+}
+-(void)setImagesOnScreen:(RMTileImageSet *)imagesOnScreen;
+{
+    [tileSource setImagesOnScreen:imagesOnScreen];
+}
+-(void)setTileLoader:(RMTileLoader *)tileLoader;
+{
+    [tileSource setTileLoader:tileLoader];
+}
+-(void)setRenderer:(RMMapRenderer *)renderer;
+{
+    [tileSource setRenderer:renderer];
 }
 
 @end

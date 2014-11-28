@@ -21,11 +21,18 @@
     BOOL networkOperations;
     RMSMLayerInfo* m_Info;
     NSMutableArray* m_dResolutions;
-    NSMutableArray* m_dScale;
+    NSMutableArray* m_dScales;
+   
+    RMTileImageSet* _imagesOnScreen;
+    RMTileLoader* _tileLoader;
+    RMMapRenderer* _renderer;
+    BOOL _isBaseLayer;
 }
+//@property (nonatomic, assign) RMTileImageSet * imagesOnScreen;
+//@property (nonatomic, assign) RMTileLoader * tileLoader;
+//@property (nonatomic, assign) RMMapRenderer * renderer;
 
 -(id) init;
-
 /**
  * Constructor: initWithInfo
  * RMSMTileSource用于在iOS上加载iServer地图服务，方便的将iServer发布的地图服务显示在地图框架中
@@ -108,7 +115,8 @@
  * {float} 当前地图最小显示层级。
  */
 -(float) minZoom;
-
+-(BOOL) isBaseLayer;
+-(void) setIsBaseLayer:(BOOL)isBaseLayer;
 /**
  * APIProperty: maxZoom
  * {float} 当前地图最大显示层级。
@@ -116,6 +124,8 @@
 -(float) maxZoom;
 
 -(float) numberZoomLevels;
+-(NSMutableArray*) m_dScales;
+-(void) setM_dScales:(NSMutableArray*) scales;
 
 -(RMSphericalTrapezium) latitudeLongitudeBoundingBox;
 

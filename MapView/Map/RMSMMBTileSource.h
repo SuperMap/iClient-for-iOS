@@ -25,7 +25,7 @@
     
     NSMutableDictionary* m_config;
     NSMutableArray* m_dResolutions;
-    NSMutableArray* m_dScale;
+    NSMutableArray* m_dScales;
 	
 	NSString* file_extension;//mbtiles or smtiles
 }
@@ -71,7 +71,8 @@
  * {float} 当前地图最小显示层级。
  */
 -(float) minZoom;
-
+-(NSMutableArray*) m_dScales;
+-(void) setM_dScales:(NSMutableArray*) scales;
 /**
  * APIProperty: maxZoom
  * {float} 当前地图最大显示层级。

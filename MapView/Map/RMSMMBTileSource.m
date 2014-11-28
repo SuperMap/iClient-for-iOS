@@ -79,19 +79,19 @@
     //NSLog(@"%@",    scales);
     NSArray *saArray = [scales componentsSeparatedByString: @","];
     
-    m_dScale = [[NSMutableArray alloc] init];
+    m_dScales = [[NSMutableArray alloc] init];
     for (NSString* scale in saArray)
     {
         double stringFloat = [scale doubleValue];
         NSString *myString = [NSString stringWithFormat:@"%.20f", 1/stringFloat];
         
-        [m_dScale addObject:myString];
+        [m_dScales addObject:myString];
     }
     
         //NSLog(@"%@",m_dResolutions);
-            //NSLog(@"%@",m_dScale);
+            //NSLog(@"%@",m_dScales);
     NSString* referResolution = [m_dResolutions objectAtIndex:0];
-    NSString* referScale = [m_dScale objectAtIndex:0];
+    NSString* referScale = [m_dScales objectAtIndex:0];
     
     NSString *crs_wkt = (NSString*)[dict objectForKey:@"crs_wkt"];
     NSString *unit = @"";// = comfirmUnit(crs_wkt);
@@ -312,7 +312,7 @@
 
 -(float) numberZoomLevels
 {
-    return [m_dScale count]-1;
+    return [m_dScales count]-1;
 }
 
 -(NSString*) uniqueTilecacheKey
@@ -339,5 +339,13 @@
 -(void) removeAllCachedImages
 {
 }
-
+-(NSMutableArray*) m_dScales
+{
+    return m_dScales;
+}
+-(void) setM_dScales:(NSMutableArray*) scales
+{
+    [m_dScales release];
+    m_dScales=scales;
+}
 @end

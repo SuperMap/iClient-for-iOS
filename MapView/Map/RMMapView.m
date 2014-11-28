@@ -542,12 +542,18 @@
 {
 	UITouch *touch = [[touches allObjects] objectAtIndex:0];
     
-    RMMapRenderer * pRender = [[self contents] renderer];
-    if(pRender.bRemove == false)
+    if([[self contents] renderers]&&[[self contents] renderers]>0)
     {
-        [pRender clear];
-        pRender.bRemove = true;
+        for(RMMapRenderer *pRender in [[self contents] renderers])
+            if(pRender.bRemove == false)
+            {
+                [pRender clear];
+                pRender.bRemove = true;
+            }
+    
     }
+   
+   
     
     
 	//Check if the touch hit a RMMarker subclass and if so, forward the touch event on
@@ -609,8 +615,16 @@
     */
     
     if (bZoomOut == true) {
-        RMMapRenderer * pRender = [[self contents] renderer];
-        pRender.bRemove = false;
+        if([[self contents] renderers]&&[[self contents] renderers]>0)
+        {
+            for(RMMapRenderer *pRender in [[self contents] renderers])
+                if(pRender.bRemove == false)
+                {
+                     pRender.bRemove = false;
+                }
+            
+        }
+       
         bZoomOut = false;
     }
     

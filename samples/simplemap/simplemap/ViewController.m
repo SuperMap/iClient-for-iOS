@@ -7,99 +7,94 @@
 //
 
 #import "ViewController.h"
-
+#import "ServerStytle.h"
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-
+{
+    NSString *tileThing ;
+    RMSMTileSource* smSource1 ;
+    NSString *tileThing2 ;
+}
 @synthesize mapView;
 - (void)loadView {
     CGRect bounds = [[UIScreen mainScreen] bounds];
     [self setMapView:[[RMMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, bounds.size.width, bounds.size.height)] ];
     self.view = mapView;
-    NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-changchun/rest/maps/长春市区图";
-    //NSString *tileThing = @"http://support.supermap.com.cn:8090/iserver/services/maps/rest/maps/World";
+    
+    tileThing = @"http://192.168.1.24:8090/iserver/services/map-changchun/rest/maps/长春市区图";
     //最佳路径分析服务地址
-   // NSString *tileThing2= @"http://support.supermap.com.cn:8090/iserver/services/transportationanalyst-sample/rest/networkanalyst/RoadNet@Changchun";
+    tileThing2= @"http://192.168.1.24:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst";
+    
     info = [[RMSMLayerInfo alloc] initWithTile:@"Changchun" linkurl:tileThing];
     // 判断获取iServer服务配置信息失败，为NULL时失败
     NSAssert(info != NULL,@"RMSMLayerInfo Connect fail");
-    RMSMTileSource* smSource = [[RMSMTileSource alloc] initWithInfo:info];
-    newContents = [[RMMapContents alloc] initWithView:mapView tilesource:smSource];
-    //[newContents set]
+    smSource1 = [[RMSMTileSource alloc] initWithInfo:info];
+    newContents = [[RMMapContents alloc] initWithView:mapView tilesource:smSource1];
     [mapView setContents:newContents];
+    
     RMProjectedPoint prjPnt;
-    prjPnt.easting = 2328.5375449003;
-    prjPnt.northing = -3656.9550357373;
-    // prjPnt.easting = 0;
-    //prjPnt.northing =0;
+    prjPnt.easting = 4503;
+    prjPnt.northing = -3861;
+    
     [newContents setCenterProjectedPoint:prjPnt];
     newContents.zoom = 1;
     
-    UIImage *image = [UIImage imageNamed:@"marker.png"];
-    RMMarker *newMarker = [[RMMarker alloc] initWithUIImage:image anchorPoint:CGPointMake(0.5, 1)];
-    [mapView.contents.markerManager addMarker:newMarker atProjectedPoint:prjPnt];
+    //动态分段
+    [self generateSpatialData];
+}
+
+-(void)generateSpatialData
+{
     
-    /*
-     //最佳路径分析
-     //TransportationAnalystResultSetting *resultSetting=[[TransportationAnalystResultSetting alloc]init];
-     TransportationAnalystParameter *analystParameter=[[TransportationAnalystParameter alloc]init];
-     analystParameter.weightFieldName=@"length";
-     
-     // RMProjectedPoint prjPnt1;
-     // prjPnt1.easting = 2328.5375449003;
-     //  prjPnt1.northing = -3656.9550357373;
-     RMProjectedPoint prjPnt2;
-     prjPnt2.easting = 4129.2262366137;
-     prjPnt2.northing = -3686.2345266594;
-     RMPath *point1=[[RMPath alloc]initWithContents:newContents];
-     [point1 moveToXY:prjPnt];
-     RMPath *point2=[[RMPath alloc]initWithContents:newContents];
-     [point2 moveToXY:prjPnt2];
-     
-     UIImage *image = [UIImage imageNamed:@"marker.png"];
-     RMMarker *newMarker = [[RMMarker alloc] initWithUIImage:image anchorPoint:CGPointMake(0.5, 1)];
-     RMMarker *newMarker2 = [[RMMarker alloc] initWithUIImage:image anchorPoint:CGPointMake(0.5, 1)];
-     [mapView.contents.markerManager addMarker:newMarker atProjectedPoint:prjPnt];
-     [mapView.contents.markerManager addMarker:newMarker2 atProjectedPoint:prjPnt2];
-     
-     // NSMutableArray *nodeArray=[[NSMutableArray alloc]initWithObjects:[NSNumber numberWithFloat:2657],[NSNumber numberWithFloat:2525],nil];
-     NSMutableArray *nodeArray=[[NSMutableArray alloc]initWithObjects:point1,point2, nil];
-     
-     //最佳路径分析参数设置
-     FindPathParameters *parameters=[[FindPathParameters alloc]init:NO bHasLeastEdgeCount:NO nodes:nodeArray parameter:analystParameter];
-     
-     FindPathService *findPathService=[[FindPathService alloc]init:tileThing2];
-     
-     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompleted:) name:@"processCompleted" object:nil];
-     [findPathService processAsync:parameters];
-     */
+    DataReturnOption *option=[[DataReturnOption alloc]initWithDataset:@"generateSpatialDatas@Changchun"];
     
+    GenerateSpatialDataParameters *param=[[GenerateSpatialDataParameters alloc]initWithRouteTable:@"RouteDT_road@Changchun" routeIDField:@"RouteID" eventTable:@"LinearEventTabDT@Changchun" eventRouteIDField:@"RouteID" measureStartField:@"LineMeasureFrom" measureEndField:@"LineMeasureTo" dataReturnOption:option];
     
+    GenerateSpatialDataService *service=[[GenerateSpatialDataService alloc]initWithURL:tileThing2];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedGenerateSpatialData:) name:@"processCompleted" object:nil];
+    
+    [service processAsync:param];
     
 }
-//单指触摸返回屏幕坐标和地理坐标
-- (void)viewDidLoad
+
+-(void)processCompletedGenerateSpatialData:(NSNotification *)notification
 {
-    [super viewDidLoad];
-	//手势识别器
-    UITapGestureRecognizer *tg=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handlefrom:)];
-    //单指手势
-    [tg setNumberOfTapsRequired:1];
-    [mapView addGestureRecognizer:tg];
-}
--(void) handlefrom:(UITapGestureRecognizer *)rg
-{
-    //单指所触摸的屏幕坐标
-    CGPoint location=[rg locationInView:self.view];
-    NSLog(@"屏幕坐标::x:%f,y:%f",location.x,location.y);
-    //将屏幕坐标转为地理坐标
-    RMProjectedPoint lo=[newContents pixelToProjectedPoint:location];
-    NSLog(@"地理坐标::x:%f,y:%f",lo.easting,lo.northing);
-    
-    
+    if (notification.userInfo) {
+        //获取动态分段的结果
+        GenerateSpatialDataResult *result=[notification.userInfo objectForKey:@"GenerateSpatialDataResult"];
+        if(result && result.dataset)
+        {
+            
+            NSString *datasetName=[[result.dataset componentsSeparatedByString:@"@"]objectAtIndex:0];
+            
+            ServerStytle* stytle1 =[[ServerStytle alloc]initLineStytleWithFillForeColor:[UIColor colorWithRed:242/255.0 green:48/255.0 blue:48/255.0 alpha:1] lineColor:[UIColor colorWithRed:242/255.0 green:48/255.0 blue:48/255.0 alpha:1] lineWidth:1];
+            
+            ServerStytle* stytle2 =[[ServerStytle alloc]initLineStytleWithFillForeColor:[UIColor colorWithRed:255/255.0 green:159/255.0 blue:25/255.0 alpha:1] lineColor:[UIColor colorWithRed:255/255.0 green:159/255.0 blue:25/255.0 alpha:1] lineWidth:1];
+            
+            
+            ServerStytle* stytle3 =[[ServerStytle alloc]initLineStytleWithFillForeColor:[UIColor colorWithRed:91/255.0 green:195/255.0 blue:69/255.0 alpha:1] lineColor:[UIColor colorWithRed:91/255.0 green:195/255.0 blue:69/255.0 alpha:1] lineWidth:1];
+            ServerStytle* defaultStytle =[[ServerStytle alloc]initLineStytleWithFillForeColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1] lineColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1] lineWidth:1];
+            
+            ThemeUniqueItem *item1=[[ThemeUniqueItem alloc]initWithUnique:@"拥挤" serverStyle:stytle1];
+            ThemeUniqueItem *item2=[[ThemeUniqueItem alloc]initWithUnique:@"缓行" serverStyle:stytle2];
+            ThemeUniqueItem *item3=[[ThemeUniqueItem alloc]initWithUnique:@"畅通" serverStyle:stytle3];
+            NSMutableArray *items=[[NSMutableArray alloc]initWithObjects:item1,item2,item3,nil];
+            
+            ThemeUnique *themeUinque=[[ThemeUnique alloc]initWithUniqueExpression:@"TrafficStatus"items:items defaultStyle:defaultStytle];
+            
+            ThemeParameters *param=[[ThemeParameters alloc]initWithDatasetNames:datasetName  dataSourceName:@"Changchun"  themeUnique:themeUinque];
+            ThemeService *service=[[ThemeService alloc]initWithURL:tileThing];
+            
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedTheme:) name:@"processCompleted" object:nil];
+            
+            [service processAsync:param];
+            
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,32 +103,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*最佳路径分析结果
- -(void)processCompleted:(NSNotification *)notification
- 
- {
- if (notification.userInfo) {
- FindPathResult *result=[notification.userInfo objectForKey:@"FindPathResult"];
- 
- for (int j=0; j<[result.pathList count];j++ ) {
- NSMutableArray *pathGuideItems=[[result.pathList objectAtIndex:j] pathGuideItems];
- int ncount=[pathGuideItems count];
- for (int k=0; k<ncount;k++ ) {
- 
- ServerGeometry *guideGeometry=[[pathGuideItems objectAtIndex:k]geometry];
- //行驶引导描述信息
- NSString *description=[[pathGuideItems objectAtIndex:k]description];
- NSLog(@"%@",description);
- RMPath *path=[guideGeometry toRMPath:newContents];
- //加载图层
- [mapView.contents.overlay addSublayer:path];
- }
- }
- 
- }
- 
- }
- */
+//最佳路径分析结果
+-(void)processCompletedTheme:(NSNotification *)notification
+
+{
+    if (notification.userInfo) {
+        ThemeResult *result=[notification.userInfo objectForKey:@"ThemeResult"];
+        if(result.resourceInfo && result.resourceInfo.resourceID)
+        {
+            NSMutableDictionary *infoParam=[[NSMutableDictionary alloc]initWithObjectsAndKeys:result.resourceInfo.resourceID,@"layersID",[NSNumber numberWithBool:NO],@"cacheEnabled",nil];
+            
+            info2 = [[RMSMLayerInfo alloc] initWithTile:@"theme" linkurl:tileThing params:infoParam];
+            // 判断获取iServer服务配置信息失败，为NULL时失败
+            NSAssert(info2 != NULL,@"RMSMLayerInfo2 Connect fail");
+            RMSMTileSource* smSource2 = [[RMSMTileSource alloc] initWithInfo:info2];
+            [newContents addTileSource:smSource2 atIndex:1];
+            
+        }
+    }
+}
 
 
 @end

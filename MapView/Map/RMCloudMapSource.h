@@ -19,7 +19,7 @@
     RMSMTileProjection *tileProjection;
     BOOL networkOperations;
     NSMutableArray* m_dResolutions;
-    NSMutableArray* m_dScale;
+    NSMutableArray* m_dScales;
 }
 /**
  * Constructor: init

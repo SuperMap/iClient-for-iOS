@@ -44,7 +44,7 @@
 
 -(RMTilePoint) project: (RMProjectedPoint)aPoint atScale:(float)scale;
 -(RMTileRect) projectRect: (RMProjectedRect)aRect atScale:(float)scale;
-
+- (void) setIsBaseLayer:(BOOL)bIsBaseLayer;
 /// This is a helper for projectRect above. Much simpler for the caller.
 -(RMTileRect) project: (RMMercatorToScreenProjection*)screen;
 

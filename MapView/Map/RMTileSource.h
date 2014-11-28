@@ -37,21 +37,36 @@
 @class RMTileCache;
 @protocol RMMercatorToTileProjection;
 @class RMProjection;
+@class RMTileImageSet;
+@class RMMapRenderer;
 /**
  * Class: RMTileSource
  */
-@protocol RMTileSource <NSObject> 
--(RMTileImage *) tileImage: (RMTile) tile;
+@protocol RMTileSource <NSObject>
+
+@property (nonatomic, assign) RMTileImageSet * imagesOnScreen;
+@property (nonatomic, assign) RMTileLoader * tileLoader;
+@property (nonatomic, assign) RMMapRenderer * renderer;
+@property (nonatomic, assign) NSMutableArray* m_dScales;
+
 -(NSString *) tileURL: (RMTile) tile;
 -(NSString *) tileFile: (RMTile) tile;
 -(NSString *) tilePath;
 -(id<RMMercatorToTileProjection>) mercatorToTileProjection;
 -(RMProjection*) projection;
 
+-(void)setImagesOnScreen:(RMTileImageSet *)imagesOnScreen;
+-(void)setTileLoader:(RMTileLoader *)tileLoader;
+-(void)setRenderer:(RMMapRenderer *)renderer;
+-(BOOL) isBaseLayer;
+-(void) setIsBaseLayer:(BOOL)isBaseLayer;
+-(int) tileSideLength;
 -(float) minZoom;
 -(float) maxZoom;
 -(float) numberZoomLevels;
+-(NSMutableArray*) m_dScales;
 
+-(void) setM_dScales:(NSMutableArray*) scales;
 -(void) setMinZoom:(NSUInteger) aMinZoom;
 -(void) setMaxZoom:(NSUInteger) aMaxZoom;
 

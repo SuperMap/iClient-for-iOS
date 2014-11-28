@@ -14,7 +14,7 @@
 @synthesize m_pntOrg;
 @synthesize smurl;
 @synthesize strParams;
-
+@synthesize projection;
 - (void) initialize
 {
     
@@ -125,6 +125,13 @@
     
     //NSLog(@"unit: %@",unit);
     
+    id prjCoordSys=[json objectForKey: @"prjCoordSys"];
+    projection=@"EPSG:";
+    
+    NSString* epsgCode=[[[NSNumberFormatter alloc] init] stringFromNumber:(NSNumber*)[prjCoordSys objectForKey: @"epsgCode"]];
+    projection=[projection stringByAppendingString:epsgCode];
+    //NSLog(@"%@",projection);
+    
     viewbounds = [json objectForKey: @"viewBounds"];
     bottom = (NSString *)[viewbounds objectForKey: @"bottom"];
     fbottom = [bottom floatValue];
@@ -158,15 +165,16 @@
     
     
     //获取params的所有有效参数并返回url请求参数的字符串
-    NSString *strTransparent=@"false",*strCacheEnabled=@"true",*strRedirect=@"false";
- 
+    NSString *strTransparent=@"true",*strCacheEnabled=@"true",*strRedirect=@"false";
+   
     NSNumber *nTransparent=[params objectForKey:@"transparent"];
     NSNumber *nCacheEnabled=[params objectForKey:@"cacheEnabled"];
     NSNumber *nRedirect=[params objectForKey:@"redirect"];
-    
+    NSString *layersID=[params objectForKey:@"layersID"];
+   
     if (nTransparent!=nil) {
          BOOL bTransparent=[nTransparent boolValue];
-         if (bTransparent) {strTransparent=@"true";}
+         if (!bTransparent) {strTransparent=@"false";}
     }
     if (nCacheEnabled!=nil) {
         BOOL bCacheEnabled=[nCacheEnabled boolValue];
@@ -177,8 +185,16 @@
         if (bRedirect) {strRedirect=@"true";}
     }
 
-   strParams=[[NSString alloc] initWithFormat:@"transparent=%@&cacheEnabled=%@&redirect=%@",strTransparent,strCacheEnabled,strRedirect];
+   
+    NSString *aParams=[[NSString alloc] initWithFormat:@"transparent=%@&cacheEnabled=%@&redirect=%@",strTransparent,strCacheEnabled,strRedirect];
     
+    if(layersID !=nil && [layersID length]>0)
+    {
+        NSString *strLayersID=[NSString stringWithFormat:@"&layersID=%@",layersID];
+        aParams=[aParams stringByAppendingString:strLayersID];
+    }
+    
+    strParams=[[NSString alloc]initWithString:aParams];;
     return self;
 
 }
