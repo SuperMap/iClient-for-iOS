@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "ResourceInfo.h"
+
+/**
+ * Class: ThemeResult
+ * 专题图结果类。 
+ * 专题图结果类中包含了专题图结果资源（ResourceInfo)的相关信息。
+ *
+ * Inherits from:
+ *  - <NSObject>
+ */
 @interface ThemeResult : NSObject
 
 /**

@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Class: ServerStytle
+ *
+ * 服务端矢量要素风格类。该类用于定义线状符号及其相关属性。
+ *
+ * Inherits from:
+ *  - <NSObject>
+ */
 @interface ServerStytle : NSObject
 
 /**

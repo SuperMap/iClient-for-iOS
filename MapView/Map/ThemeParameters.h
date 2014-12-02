@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "ThemeUnique.h"
 
+/**
+ * Class: ThemeParameters
+ * 专题图参数类。
+ * 该类存储了制作专题所需的参数，包括数据源、数据集名称和专题图对象。
+ *
+ * Inherits from:
+ *  - <NSObject>
+ */
 @interface ThemeParameters : NSObject
 
 
@@ -27,7 +35,7 @@
 
 /**
  * APIProperty: theme
- * {ThemeUnique} 单值专题图对象
+ * {<ThemeUnique>} 单值专题图对象
  */
 @property (assign) ThemeUnique *theme;
 

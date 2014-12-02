@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "DataReturnOption.h"
+
+/**
+ * Class: GenerateSpatialDataParameters
+ * 动态分段操作参数类。通过该类可以为动态分段提供参数信息。
+ *
+ * Inherits from:
+ *  - <NSObject>
+ */
 @interface GenerateSpatialDataParameters : NSObject
 
 /**
@@ -66,14 +74,14 @@
 
 /**
  * APIProperty: dataReturnOption
- * {DataReturnOption} 设置数据返回的选项。
+ * {<DataReturnOption>} 设置数据返回的选项。
  */
 @property (assign)DataReturnOption* dataReturnOption;
 
 
 /**
  * Constructor: GenerateSpatialDataParameters
- * 动态分段操作参数类。通过该类可以为动态分段提供参数信息。
+ * 动态分段操作参数类构造函数
  *
  * Parameters:
  * routeTable - {NSString} 路由数据集。

@@ -9,20 +9,28 @@
 #import <Foundation/Foundation.h>
 #import "GenerateSpatialDataParameters.h"
 #import "GenerateSpatialDataResult.h"
+
+/**
+ * Class: GenerateSpatialDataService
+ * 动态分段分析服务类。
+ * 该类负责将客户设置的动态分段分析服务参数传递给服务端，并接收服务端返回的动态分段分析结果数据。
+ * 动态分段分析结果通过该类支持的事件的监听函数获取，获取的结果数据为服务端返回的动态分段分析结果result， 保存在GenerateSpatialDataResult 对象中。
+ *
+ * Inherits from:
+ *  - <NSObject>
+ */
 @interface GenerateSpatialDataService : NSObject
 
 
 
 /**
  * Constructor: GenerateSpatialDataService
- * 动态分段分析服务类。 
- * 该类负责将客户设置的动态分段分析服务参数传递给服务端，并接收服务端返回的动态分段分析结果数据。 
- * 动态分段分析结果通过该类支持的事件的监听函数获取，获取的结果数据为服务端返回的动态分段分析结果result， 保存在GenerateSpatialDataResult 对象中。
+ * 最佳路径分析参数类构造函数。
  *
  * 例如：
  * (start code)
  * DataReturnOption *option=[[DataReturnOption alloc]initWithDataset:@"generateSpatialData@Changchun"];
- 
+ * 
  * GenerateSpatialDataParameters *param=[[GenerateSpatialDataParameters alloc]initWithRouteTable:@"RouteDT_road@Changchun" routeIDField:@"RouteID" eventTable:@"LinearEventTabDT@Changchun" eventRouteIDField:@"RouteID" measureStartField:@"LineMeasureFrom" measureEndField:@"LineMeasureTo" dataReturnOption:option];
  *
  * GenerateSpatialDataService *service=[[GenerateSpatialDataService alloc]initWithURL:tileThing2];

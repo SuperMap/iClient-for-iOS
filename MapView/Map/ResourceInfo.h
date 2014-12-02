@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Class: ResourceInfo
+ * 结果资源信息类
+ * 从中可以获取到相应资源在服务端的地址 url 和资源的 ID 号。
+ * 这是临时的资源，默认的生命周期是7天，用户可以设置临时资源的存活时间，详情请见SuperMap iServer 7C帮助文档（iServer REST API > 临时资源的生命周期）。
+ * 
+ * Inherits from:
+ *  - <NSObject>
+ */
 @interface ResourceInfo : NSObject
 
 /**

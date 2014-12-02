@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Class: DataReturnOption
+ * 数据返回设置类
+ *
+ * Inherits from:
+ *  - <NSObject>
+ */
 @interface DataReturnOption : NSObject
 
 
@@ -53,7 +60,7 @@
 
 /**
  * Constructor: DataReturnOption
- * 数据返回设置类
+ * 数据返回设置类构造函数
  *
  * Parameters:
  * expectCount - {NSInteger} 设置返回的最大记录数，小于或者等于0时表示返回所有记录数。

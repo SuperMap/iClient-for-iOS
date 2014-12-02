@@ -70,17 +70,17 @@ enum {
 @end
 
 
- /**
+/**
  * Class: RMMapContents
- *The cartographic and data components of a map. Do not retain.
+ * The cartographic and data components of a map. Do not retain.
  *
- *There is exactly one RMMapContents instance for each RMMapView instance.
+ * There is exactly one RMMapContents instance for each RMMapView instance.
  *
- *warning:Do not retain an RMMapContents instance. Instead, ask the RMMapView for its contents 
- *when you need it. It is an error for an RMMapContents instance to exist without a view, and 
- *if you retain the RMMapContents, it can't go away when the RMMapView is released.
+ * warning:Do not retain an RMMapContents instance. Instead, ask the RMMapView for its contents
+ * when you need it. It is an error for an RMMapContents instance to exist without a view, and
+ * if you retain the RMMapContents, it can't go away when the RMMapView is released.
  *
- *At some point, it's likely that RMMapContents and RMMapView will be merged into one class.
+ * At some point, it's likely that RMMapContents and RMMapView will be merged into one class.
  */
 @interface RMMapContents : NSObject
 {
@@ -212,7 +212,7 @@ enum {
  *
  * Parameters:
  * view - {UIView}  mapView。
- * tilesource - {id<RMTileSource>} 地图服务
+ * tilesource - {id<RMTileSource>} 地图服务，底图。
  */
 - (id)initWithView: (UIView*) view tilesource:(id<RMTileSource>)newTilesource;
 
@@ -222,7 +222,7 @@ enum {
  *
  * Parameters:
  * view - {UIView}  mapView。
- * tilesource - {id<RMTileSource>} 地图服务
+ * tilesource - {id<RMTileSource>} 地图服务，底图。
  * screenScale - {float} 设备的屏幕分辨率的属性值
  */
 - (id)initWithView: (UIView*) view tilesource:(id<RMTileSource>)newTilesource screenScale:(float)theScreenScale;
@@ -234,7 +234,7 @@ enum {
  *
  * Parameters:
  * view - {UIView}  mapView。
- * tilesource - {id<RMTileSource>} 地图服务
+ * tilesource - {id<RMTileSource>} 地图服务，底图。
  * centerLatLon - {CLLocationCoordinate2D} 地图的中心点
  * zoomLevel - {float} 地图初始化时的缩放级别
  * maxZoomLevel - {float} 最大缩放级别
@@ -252,21 +252,86 @@ enum {
        screenScale:(float)theScreenScale;
 
 
-
+/**
+ * APIMethod: addTileSource
+ * 添加叠加图层
+ *
+ * Parameters:
+ * newTileSource - {id <RMTileSource>} 地图服务，叠加图层
+ *
+ */
 - (void)addTileSource:(id <RMTileSource>)newTileSource;
 
+/**
+ * APIMethod: addTileSource
+ * 添加叠加图层
+ *
+ * Parameters:
+ * newTileSource - {id <RMTileSource>} 地图服务，叠加图层
+ * index - {NSUInteger} 图层的索引值
+ */
 - (void)addTileSource:(id<RMTileSource>)newTileSource atIndex:(NSUInteger)index;
 
+/**
+ * APIMethod: removeTileSource
+ * 移除叠加图层
+ * 底图不能被移除。
+ *
+ * Parameters:
+ * tileSource - {id <RMTileSource>} 地图服务，所移除的图层
+ *
+ */
 - (void)removeTileSource:(id <RMTileSource>)tileSource;
 
+/**
+ * APIMethod: removeTileSource
+ * 移除叠加图层
+ * 底图不能被移除。
+ *
+ * Parameters:
+ * tileSource - {id <RMTileSource>} 地图服务，所需移除的图层
+ * index - {NSUInteger} 图层的索引值
+ *
+ */
 - (void)removeTileSourceAtIndex:(NSUInteger)index;
 
+/**
+ * APIMethod: setHidden
+ * 隐藏图层
+ *
+ * Parameters:
+ * tileSource - {id <RMTileSource>} 地图服务，所需隐藏的图层
+ */
 - (void)setHidden:(BOOL)isHidden forTileSource:(id <RMTileSource>)tileSource;
 
+/**
+ * APIMethod: setHidden
+ * 隐藏图层
+ *
+ * Parameters:
+ * tileSource - {id <RMTileSource>} 地图服务，所需隐藏的图层
+ * index - {NSUInteger} 图层的索引值
+ */
 - (void)setHidden:(BOOL)isHidden forTileSourceAtIndex:(NSUInteger)index;
 
+/**
+ * APIMethod: setOpacity
+ * 设置图层的透明度
+ *
+ * Parameters:
+ * opacity - {float} 图层的透明度，其中在[0,1]区间内，默认为1，即不透明。
+ * tileSource - {id <RMTileSource>} 地图服务，所设置透明度的图层
+ */
 - (void)setOpacity:(float)opacity forTileSource:(id <RMTileSource>)tileSource;
 
+/**
+ * APIMethod: setOpacity
+ * 设置图层的透明度
+ *
+ * Parameters:
+ * opacity - {float} 图层的透明度，其中在[0,1]区间内，默认为1，即不透明。
+ * index - {NSUInteger} 所设置透明度的图层的索引值
+ */
 - (void)setOpacity:(CGFloat)opacity forTileSourceAtIndex:(NSUInteger)index;
 
 
