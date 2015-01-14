@@ -25,7 +25,7 @@
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMSuspendNetworkOperations object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMResumeNetworkOperations object:nil];
-
+        _isBaseLayer=NO;
         
         m_dResolutions = [[NSMutableArray alloc] init];
         
@@ -101,6 +101,14 @@
 -(float) numberZoomLevels
 {
     return [m_dResolutions count]-1;
+}
+-(NSMutableArray*) m_dScales
+{
+    return m_dScales;
+}
+-(void) setIsBaseLayer:(BOOL)isBaseLayer
+{
+    _isBaseLayer=isBaseLayer;
 }
 
 -(void) setMinZoom:(NSUInteger)aMinZoom

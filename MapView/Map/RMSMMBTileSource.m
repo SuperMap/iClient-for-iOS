@@ -149,8 +149,9 @@
     
     [self setMaxZoom:[m_dResolutions count]-1];
 	[self setMinZoom:0];
+    _isBaseLayer=NO;
     return self;
-}
+    }
 
 -(void) dealloc
 {
@@ -347,5 +348,9 @@
 {
     [m_dScales release];
     m_dScales=scales;
+}
+-(void) setIsBaseLayer:(BOOL)isBaseLayer
+{
+    _isBaseLayer=isBaseLayer;
 }
 @end

@@ -7,19 +7,20 @@
 //
 
 #import "RMAbstractMercatorWebSource.h"
-
+#import "RMSMTileSource.h"
 @class RMSMTileProjection;
 
 /**
  * Class: RMCloudMapSource
  * SuperMap云地图服务
  */
-@interface RMCloudMapSource : NSObject <RMTileSource>
+@interface RMCloudMapSource :RMSMTileSource
 {
-    RMSMTileProjection *tileProjection;
-    BOOL networkOperations;
-    NSMutableArray* m_dResolutions;
-    NSMutableArray* m_dScales;
+//    RMSMTileProjection *tileProjection;
+//    BOOL networkOperations;
+//    NSMutableArray* m_dResolutions;
+//    NSMutableArray* m_dScales;
+//    BOOL _isBaseLayer;
 }
 /**
  * Constructor: init
@@ -63,7 +64,8 @@
 -(float) maxZoom;
 -(float) numberZoomLevels;
 -(RMSphericalTrapezium) latitudeLongitudeBoundingBox;
-
+-(NSMutableArray*) m_dScales;
+-(void) setIsBaseLayer:(BOOL)isBaseLayer;
 -(void) networkOperationsNotification: (NSNotification*) notification;
 
 -(NSString *)shortName;

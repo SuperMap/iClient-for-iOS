@@ -1,4 +1,4 @@
-SuperMap iClient for iOS 版权所有© 2000-2014 北京超图软件股份有限公司。保留所有权利。
+SuperMap iClient for iOS 版权所有© 2000-2015 北京超图软件股份有限公司。保留所有权利。
 
 The Route-Me library is copyright (c) 2008-2010, Route-Me Contributors
 All rights reserved.

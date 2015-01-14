@@ -222,12 +222,12 @@
      //   NSLog(@"dTemp: %.20f",dTemp);
         float nDpi = dTemp / dScale /ratio;
         
-        NSLog(@"%f",viewBoundsWidth);
-        NSLog(@"%f",viewBoundsHeight);
-        NSLog(@"%d",nWidth);
-        NSLog(@"%d",nHeight);
-        NSLog(@"%f",resolution);
-        NSLog(@"nDpi:::::::%f",nDpi);
+//        NSLog(@"%f",viewBoundsWidth);
+//        NSLog(@"%f",viewBoundsHeight);
+//        NSLog(@"%d",nWidth);
+//        NSLog(@"%d",nHeight);
+//        NSLog(@"%f",resolution);
+//        NSLog(@"nDpi:::::::%f",nDpi);
         
         return nDpi;
     } else {

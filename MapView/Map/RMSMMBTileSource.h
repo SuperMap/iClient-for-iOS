@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RMTileSource.h"
+#import "RMSMTileSource.h"
 
 @class RMSMTileProjection;
 @class FMDatabase;
@@ -18,14 +19,15 @@
  * 称为SMTiles格式。MBTiles是由MapBox制定的一种将瓦片地图数据存储到SQLite数据库中并可快速使用，管理和分享的规范。
  * SMTiles基于原规范对MBTiles格式进行了扩展,支持任意坐标系，支持任意比例尺，切片的起算原点为任意指定点，行列号的方向为原点开始向左下递增。
  */
-@interface RMSMMBTileSource : NSObject <RMTileSource>
+@interface RMSMMBTileSource : RMSMTileSource
 {
-    RMSMTileProjection *tileProjection;
+//    RMSMTileProjection *tileProjection;
     FMDatabase *db;
     
     NSMutableDictionary* m_config;
-    NSMutableArray* m_dResolutions;
-    NSMutableArray* m_dScales;
+//    NSMutableArray* m_dResolutions;
+//    NSMutableArray* m_dScales;
+//    BOOL _isBaseLayer;
 	
 	NSString* file_extension;//mbtiles or smtiles
 }
@@ -73,6 +75,7 @@
 -(float) minZoom;
 -(NSMutableArray*) m_dScales;
 -(void) setM_dScales:(NSMutableArray*) scales;
+-(void) setIsBaseLayer:(BOOL)isBaseLayer;
 /**
  * APIProperty: maxZoom
  * {float} 当前地图最大显示层级。
