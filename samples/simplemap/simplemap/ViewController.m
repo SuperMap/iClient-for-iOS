@@ -25,12 +25,13 @@
     self.view = mapView;
     
     tileThing = @"http://192.168.1.24:8090/iserver/services/map-changchun/rest/maps/长春市区图";
-    //最佳路径分析服务地址
+    //动态分段服务地址
     tileThing2= @"http://192.168.1.24:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst";
     
     info = [[RMSMLayerInfo alloc] initWithTile:@"Changchun" linkurl:tileThing];
     // 判断获取iServer服务配置信息失败，为NULL时失败
     NSAssert(info != NULL,@"RMSMLayerInfo Connect fail");
+    //底图
     smSource1 = [[RMSMTileSource alloc] initWithInfo:info];
     newContents = [[RMMapContents alloc] initWithView:mapView tilesource:smSource1];
     [mapView setContents:newContents];
@@ -50,17 +51,17 @@
 {
     
     DataReturnOption *option=[[DataReturnOption alloc]initWithDataset:@"generateSpatialDatas@Changchun"];
-    
+    //动态分段服务参数
     GenerateSpatialDataParameters *param=[[GenerateSpatialDataParameters alloc]initWithRouteTable:@"RouteDT_road@Changchun" routeIDField:@"RouteID" eventTable:@"LinearEventTabDT@Changchun" eventRouteIDField:@"RouteID" measureStartField:@"LineMeasureFrom" measureEndField:@"LineMeasureTo" dataReturnOption:option];
-    
+    //动态分段服务
     GenerateSpatialDataService *service=[[GenerateSpatialDataService alloc]initWithURL:tileThing2];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedGenerateSpatialData:) name:@"processCompleted" object:nil];
-    
+    //发送服务请求
     [service processAsync:param];
     
 }
-
+//动态分段结果，用单值专题图显示
 -(void)processCompletedGenerateSpatialData:(NSNotification *)notification
 {
     if (notification.userInfo) {
@@ -105,7 +106,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-//最佳路径分析结果
+//动态分段结果，单值专题图表示
 -(void)processCompletedTheme:(NSNotification *)notification
 
 {
@@ -118,6 +119,7 @@
             info2 = [[RMSMLayerInfo alloc] initWithTile:@"theme" linkurl:tileThing params:infoParam];
             // 判断获取iServer服务配置信息失败，为NULL时失败
             NSAssert(info2 != NULL,@"RMSMLayerInfo2 Connect fail");
+            //叠加专题图
             RMSMTileSource* smSource2 = [[RMSMTileSource alloc] initWithInfo:info2];
             [newContents addTileSource:smSource2 atIndex:1];
             
