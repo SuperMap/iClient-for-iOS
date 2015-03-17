@@ -6,9 +6,11 @@
 //
 //
 /**
- *  换乘引导类：
- *      该类记录了从换乘分析起始站点到终止站点的公交换乘引导方案
- *
+ * Class: TransferSolutionResult 
+ * 换乘分析结果类。
+ * 
+ * Inherits from:
+ *  - <NSObject>
  */
 @class TransferSolution;
 @class TransferGuide;
@@ -16,11 +18,22 @@
 #import <Foundation/Foundation.h>
 
 @interface TransferSolutionResult : NSObject
-
-// 默认的乘车方案及相关信息
+/**
+ * APIProperty: defaultGuide
+ * {TransferGuide} 默认的乘车方案的引导信息。
+ */
 @property(nonatomic,retain) TransferGuide *defaultGuide;
-// 乘车方案集合
+/**
+ * APIProperty: transferSolution
+ * {NSMutableArray} 乘车方案集合。
+ */
 @property(nonatomic,retain) NSMutableArray *transferSolution;
-// 解析json数据
+/**
+ * Constructor: TransferSolutionResult
+ *      换乘分析结果类。
+ *
+ * Parameters:
+ *      dict - {NSDictionary} 对象。
+ */
 -(instancetype)initWithDict:(NSDictionary *)dict;
 @end

@@ -228,8 +228,6 @@
 		DFA6DCF91AB6D822000F15A2 /* TransferLine.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA6DCE11AB6D822000F15A2 /* TransferLine.m */; };
 		DFA6DCFA1AB6D822000F15A2 /* TransferLines.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA6DCE21AB6D822000F15A2 /* TransferLines.h */; };
 		DFA6DCFB1AB6D822000F15A2 /* TransferLines.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA6DCE31AB6D822000F15A2 /* TransferLines.m */; };
-		DFA6DCFC1AB6D822000F15A2 /* TransferPathParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA6DCE41AB6D822000F15A2 /* TransferPathParameter.h */; };
-		DFA6DCFD1AB6D822000F15A2 /* TransferPathParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA6DCE51AB6D822000F15A2 /* TransferPathParameter.m */; };
 		DFA6DCFE1AB6D822000F15A2 /* TransferPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA6DCE61AB6D822000F15A2 /* TransferPreference.h */; };
 		DFA6DCFF1AB6D822000F15A2 /* TransferSolution.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA6DCE71AB6D822000F15A2 /* TransferSolution.h */; };
 		DFA6DD001AB6D822000F15A2 /* TransferSolution.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA6DCE81AB6D822000F15A2 /* TransferSolution.m */; };
@@ -652,8 +650,6 @@
 		DFA6DCE11AB6D822000F15A2 /* TransferLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferLine.m; sourceTree = "<group>"; };
 		DFA6DCE21AB6D822000F15A2 /* TransferLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferLines.h; sourceTree = "<group>"; };
 		DFA6DCE31AB6D822000F15A2 /* TransferLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferLines.m; sourceTree = "<group>"; };
-		DFA6DCE41AB6D822000F15A2 /* TransferPathParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferPathParameter.h; sourceTree = "<group>"; };
-		DFA6DCE51AB6D822000F15A2 /* TransferPathParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferPathParameter.m; sourceTree = "<group>"; };
 		DFA6DCE61AB6D822000F15A2 /* TransferPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferPreference.h; sourceTree = "<group>"; };
 		DFA6DCE71AB6D822000F15A2 /* TransferSolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferSolution.h; sourceTree = "<group>"; };
 		DFA6DCE81AB6D822000F15A2 /* TransferSolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferSolution.m; sourceTree = "<group>"; };
@@ -1242,8 +1238,6 @@
 				DFA6DCE11AB6D822000F15A2 /* TransferLine.m */,
 				DFA6DCE21AB6D822000F15A2 /* TransferLines.h */,
 				DFA6DCE31AB6D822000F15A2 /* TransferLines.m */,
-				DFA6DCE41AB6D822000F15A2 /* TransferPathParameter.h */,
-				DFA6DCE51AB6D822000F15A2 /* TransferPathParameter.m */,
 				DFA6DCE61AB6D822000F15A2 /* TransferPreference.h */,
 				DFA6DCE71AB6D822000F15A2 /* TransferSolution.h */,
 				DFA6DCE81AB6D822000F15A2 /* TransferSolution.m */,
@@ -1539,7 +1533,6 @@
 				447420DA1302B2F5004D6E8A /* RMWMSSource.h in Headers */,
 				4474211B1302B60A004D6E8A /* RMWMS.h in Headers */,
 				FE3ADE3C1A24B3FF009188F2 /* RMTileSourcesContainer.h in Headers */,
-				DFA6DCFC1AB6D822000F15A2 /* TransferPathParameter.h in Headers */,
 				17F02BB11319BA4B00260C6B /* RouteMe.h in Headers */,
 				175701DE1323C2E900A5D314 /* NSUserDefaults+RouteMe.h in Headers */,
 				DDA3E85613B00D9E004D861C /* RMMapQuestOSMSource.h in Headers */,
@@ -1885,7 +1878,6 @@
 				B8C974430E8A19B2007D16AD /* RMPixel.c in Sources */,
 				B8C974440E8A19B2007D16AD /* RMFractalTileProjection.m in Sources */,
 				B8C974460E8A19B2007D16AD /* RMFileTileImage.m in Sources */,
-				DFA6DCFD1AB6D822000F15A2 /* TransferPathParameter.m in Sources */,
 				B8C974480E8A19B2007D16AD /* RMTileCache.m in Sources */,
 				FE3ADE311A24B351009188F2 /* ThemeUnique.m in Sources */,
 				B8C9744A0E8A19B2007D16AD /* RMProjection.m in Sources */,

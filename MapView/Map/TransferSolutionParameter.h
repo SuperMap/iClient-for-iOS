@@ -6,24 +6,56 @@
 //
 //
 
-/*
- *  乘车方案参数类
- *
+/**
+ * Class: TransferSolutionParameter
+ * 换乘分析方案请求参数类
+ * 
+ * Inherits from:
+ *  - <NSObject>
  */
-
 #import <Foundation/Foundation.h>
 #import "TransferTactic.h"
 @interface TransferSolutionParameter : NSObject
-
+/**
+ * APIProperty: points
+ * {NSMutableArray} 乘车方案的起始和终止点组成的数组，可以起始或终止点的地理坐标 即{<Point2D>}类型数组,也可以是站点id组成的Integer数组
+ */
 @property(nonatomic,retain) NSMutableArray *points;
-// 返回的乘车方案的数量
+/**
+ * APIProperty: solutionCount
+ * {NSInteger} 返回的乘车方案的数量。
+ */
 @property(nonatomic) NSInteger solutionCount;
-// 步行与公交的消耗权重比，默认值为10
+/**
+ * APIProperty: walkingRatio
+ * {double} 步行与公交的消耗权重比，默认值为10。
+ */
 @property(nonatomic) double walkingRatio;
-// 公交换乘策略类型，包括时间最短，距离最短，最少换乘，少步行四种选择
+/**
+ * APIProperty: transferTactic
+ * {NSString} 公交换乘策略类型。在{<TransferTactic>}类中定义。
+ */
 @property(nonatomic,retain) NSString *transferTactic;
-// 乘车偏好枚举
+/**
+ * APIProperty: transferPreference
+ * {NSString} 乘车偏好，在{<TransferPreference>}类中定义。
+ */
 @property(nonatomic,retain) NSString *transferPreference;
-
+/**
+ * Constructor: TransferSolutionParameter
+ * 交通换乘方案类
+ *
+ * Parameters:
+ * points - {NSMutableArray} 乘车方案的起始和终止点组成的数组，可以起始或终止点的
+ *           地理坐标即{<Point2D>}类型数组,也可以是站点id组成的Integer数组。
+ *
+ * solutionCount - {NSInteger}返回的乘车方案的数量。
+ *
+ * walkingRatio - {double}步行与公交的消耗权重比，默认值为10。
+ *
+ * transferTactic - {NSString}公交换乘策略类型。在{<TransferTactic>}类中定义。
+ *
+ * transferPreference - {NSString} 乘车偏好，在{<TransferPreference>}类中定义
+ */
 -(id)initWithPoints:(NSArray *)points solutionCount:(NSInteger *)solutionCount walkingRatio:(double) walkingRatio transferTactic:(NSString *) transferTactic transferPreference:(NSString *)transferPreference;
 @end

@@ -33,13 +33,5 @@
     [dict setObject:arr forKey:@"lineItems" ];
     return dict;
 }
--(NSArray *)castToLinesArr{
-    
-    NSMutableArray *arr = [[NSMutableArray alloc] init];
-    for (int i=0; i<[_lineItems count]; i++) {
-        [arr addObject:[[_lineItems objectAtIndex:i] castToDict]];
-    }
-    return arr;
-}
 
 @end
