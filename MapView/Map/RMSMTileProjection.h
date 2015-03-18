@@ -38,6 +38,7 @@
     NSMutableArray* m_dResolutions;
     BOOL isBaseLayer;
 }
+@property (nonatomic,retain) RMSMLayerInfo* m_pInfo;
 
 - (id) initFromProjection:(RMProjection*)projection tileSideLength:(NSUInteger)tileSideLength maxZoom: (NSUInteger) aMaxZoom minZoom: (NSUInteger) aMinZoom info:(RMSMLayerInfo*) info resolutions:(NSMutableArray*) dResolutions;
 

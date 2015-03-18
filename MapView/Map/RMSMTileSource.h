@@ -22,7 +22,7 @@
     RMSMLayerInfo* m_Info;
     NSMutableArray* m_dResolutions;
     NSMutableArray* m_dScales;
-   
+    
     RMTileImageSet* _imagesOnScreen;
     RMTileLoader* _tileLoader;
     RMMapRenderer* _renderer;
@@ -31,7 +31,7 @@
 //@property (nonatomic, assign) RMTileImageSet * imagesOnScreen;
 //@property (nonatomic, assign) RMTileLoader * tileLoader;
 //@property (nonatomic, assign) RMMapRenderer * renderer;
-
+@property (nonatomic,retain) RMSMLayerInfo* m_Info;
 -(id) init;
 /**
  * Constructor: initWithInfo

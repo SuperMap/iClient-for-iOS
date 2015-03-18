@@ -37,13 +37,13 @@
     CGRect rect_screen = [[UIScreen mainScreen] bounds];
     int width = rect_screen.size.width;
     int height = rect_screen.size.height;
-    m_Info = info;
+    self.m_Info = info;
     
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:16];
     m_dScales = [[NSMutableArray alloc] initWithCapacity:16];
     
-    double wRes = m_Info.dWidth / width;
-    double hRes = m_Info.dHeight / height;
+    double wRes = self.m_Info.dWidth / width;
+    double hRes = self.m_Info.dHeight / height;
     double maxResolution = wRes>hRes?wRes:hRes;
     double base = 2.0;
     NSString*  strScale;
@@ -52,14 +52,14 @@
     {
         dResolutions = maxResolution/pow(base,i);
         [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
-        strScale = [m_Info getScaleFromResolutionDpi:dResolutions];
+        strScale = [self.m_Info getScaleFromResolutionDpi:dResolutions];
         //NSLog(@"%@",strScale);
         [m_dScales addObject:strScale];
     }
     
     //NSLog(@"%@",m_dResolutions);
     smProjection=[[RMProjection alloc] initForSMProjection];
-    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
+    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:self.m_Info resolutions:m_dResolutions];
     
     [self setMaxZoom:15];
     [self setMinZoom:0];
@@ -70,7 +70,7 @@
 {
     [self init];
     
-    m_Info = info;
+    self.m_Info = info;
     int nCount = [resolutions count];
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:nCount];
     // m_dResolutions = resolutions;
@@ -85,12 +85,12 @@
     {
         dResolutions = [resolutionsDescending objectAtIndex:(int)i];
         [m_dResolutions addObject:[NSNumber numberWithDouble:[dResolutions doubleValue]]];
-        strScale = [m_Info getScaleFromResolutionDpi:[dResolutions doubleValue]];
+        strScale = [self.m_Info getScaleFromResolutionDpi:[dResolutions doubleValue]];
         [m_dScales addObject:strScale];
     }
     //NSLog(@"%@",m_dScales);
     smProjection=[[RMProjection alloc] initForSMProjection];
-    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
+    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:self.m_Info resolutions:m_dResolutions];
     
     [self setMaxZoom:[m_dResolutions count]-1];
     [self setMinZoom:0];
@@ -101,12 +101,12 @@
 {
     [self init];
     
-    m_Info = info;
+    self.m_Info = info;
     
     [self getResolutionsFromScales:scales];
     
     smProjection=[[RMProjection alloc] initForSMProjection];
-    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dScales  count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
+    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dScales  count]-1 minZoom:0 info:self.m_Info resolutions:m_dResolutions];
     
     [self setMaxZoom:[m_dScales count]-1];
     [self setMinZoom:0];
@@ -129,7 +129,7 @@
     for(int i=0;i<nCount;++i)
     {
         dScale = [scalesAscending objectAtIndex:(int)i];
-        strResoltion = [m_Info getResolutionFromScaleDpi:[dScale doubleValue]];
+        strResoltion = [self.m_Info getResolutionFromScaleDpi:[dScale doubleValue]];
         [m_dResolutions addObject:strResoltion];
         strScale =[NSString stringWithFormat:@"%e",[dScale doubleValue]];
         [m_dScales addObject:strScale];
@@ -184,7 +184,7 @@
     [m_dScales release];
     [m_dResolutions release];
     [self getResolutionsFromScales:scales];
-    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dScales  count]-1 minZoom:0 info:m_Info resolutions:m_dResolutions];
+    tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dScales  count]-1 minZoom:0 info:self.m_Info resolutions:m_dResolutions];
     
     
 }
@@ -250,14 +250,14 @@
 
 -(RMProjection*) projection
 {
-    double dHeight = m_Info.dHeight;
-    double dWidth = m_Info.dWidth;
-    double dleft = m_Info.m_pntOrg.longitude;
-    double dbottom = m_Info.m_pntOrg.latitude - dHeight;
+    double dHeight = self.m_Info.dHeight;
+    double dWidth = self.m_Info.dWidth;
+    double dleft = self.m_Info.m_pntOrg.longitude;
+    double dbottom = self.m_Info.m_pntOrg.latitude - dHeight;
     //    NSLog(@"%f,%f,%f,%f",dleft,dbottom,dWidth,dHeight);
     RMProjectedRect theBounds = RMMakeProjectedRect(dleft,dbottom,dWidth,dHeight);
     
-    NSString *projection=m_Info.projection;
+    NSString *projection=self.m_Info.projection;
     
     return [smProjection projectionWithBounds:theBounds EPSGCode:projection];
     
@@ -279,32 +279,32 @@
     //float fScale = [result floatValue];
     //transparent=true&cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@
     
-    NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@",m_Info.smurl,m_Info.strParams,tile.x, tile.y,strScale];
-    //    NSLog(@"%@",m_Info.strParams);
+    NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale];
+    //    NSLog(@"%@",self.m_Info.strParams);
     
     return strUrl;
 }
 
 -(NSString*) uniqueTilecacheKey
 {
-    return m_Info.smurl;
+    return self.m_Info.smurl;
 }
 
 -(NSString *)shortName
 {
-    return m_Info.smurl;
+    return self.m_Info.smurl;
 }
 -(NSString *)longDescription
 {
-    return m_Info.smurl;
+    return self.m_Info.smurl;
 }
 -(NSString *)shortAttribution
 {
-    return m_Info.smurl;
+    return self.m_Info.smurl;
 }
 -(NSString *)longAttribution
 {
-    return m_Info.smurl;
+    return self.m_Info.smurl;
 }
 -(void) removeAllCachedImages
 {

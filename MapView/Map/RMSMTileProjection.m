@@ -22,7 +22,7 @@
     if (![super init])
         return nil;
     
-    m_pInfo = info;
+    self.m_pInfo = info;
     
     // We don't care about the rest of the projection... just the bounds is important.
     //左下角和宽高
