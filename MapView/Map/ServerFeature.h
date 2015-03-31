@@ -21,7 +21,7 @@
     ServerGeometry* geometry;
 }
 
-@property (readwrite) NSMutableArray* fieldNames;
+@property (retain,readwrite) NSMutableArray* fieldNames;
 
 @property (retain,readwrite) NSMutableArray* fieldValues;
 @property (retain,readwrite) ServerGeometry* geometry;

@@ -10,29 +10,29 @@
 	<string>mapwithmarker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>604008AC-6090-4C5C-8215-7FA10A25A1A5</key>
+		<key>14C053C2EE2D474F74F7350B616424E900CBFE02</key>
 		<string>https://github.com/SuperMap/iClient-for-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>samples/mapwithmarker/mapwithmarker.xcodeproj/project.xcworkspace</string>
+	<string>samples/mapwithmarker/mapwithmarker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>604008AC-6090-4C5C-8215-7FA10A25A1A5</key>
+		<key>14C053C2EE2D474F74F7350B616424E900CBFE02</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/SuperMap/iClient-for-iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>604008AC-6090-4C5C-8215-7FA10A25A1A5</string>
+	<string>14C053C2EE2D474F74F7350B616424E900CBFE02</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>604008AC-6090-4C5C-8215-7FA10A25A1A5</string>
+			<string>14C053C2EE2D474F74F7350B616424E900CBFE02</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iClient-for-iOS</string>
 		</dict>

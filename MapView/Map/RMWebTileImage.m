@@ -161,7 +161,7 @@ static NSOperationQueue *_queue = nil;
     int statusCode = NSURLErrorUnknown; // unknown
     
 	if ([response isKindOfClass:[NSHTTPURLResponse class]])
-        statusCode = [(NSHTTPURLResponse*)response statusCode];
+        statusCode = [[NSNumber numberWithUnsignedLong:[(NSHTTPURLResponse*)response statusCode]] intValue];
 	
     [data setLength:0];
     

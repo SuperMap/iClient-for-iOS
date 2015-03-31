@@ -24,13 +24,13 @@
 }
 -(NSMutableDictionary *)castToDict{
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    [dict setValue:[NSString stringWithFormat:@"%d",_endStopIndex ]forKey:@"endStopIndex"];
-    [dict setValue:[NSString stringWithFormat:@"%d",_startStopIndex ] forKey:@"startStopIndex"];
+    [dict setValue:[NSString stringWithFormat:@"%ld",(long)_endStopIndex ]forKey:@"endStopIndex"];
+    [dict setValue:[NSString stringWithFormat:@"%ld",(long)_startStopIndex ] forKey:@"startStopIndex"];
     [dict setValue:[NSString stringWithFormat:@"%ld",_lineID ] forKey:@"lineID"];
     return dict;
 }
 
 -(NSString *)castToJson{
-    return [NSString stringWithFormat:@"{'lineID':%ld,'startStopIndex':%d,'endStopIndex':%d}",_lineID,_startStopIndex,_endStopIndex];
+    return [NSString stringWithFormat:@"{'lineID':%ld,'startStopIndex':%ld,'endStopIndex':%ld}",_lineID,(long)_startStopIndex,(long)_endStopIndex];
 }
 @end

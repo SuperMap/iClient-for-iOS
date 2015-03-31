@@ -120,7 +120,7 @@
  * APIProperty: description
  * {NSString} 行驶引导描述。
  */
-@property(readwrite)NSString *description;
+@property(retain,readwrite)NSString *description;
 
 
 /**

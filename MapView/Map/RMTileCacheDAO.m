@@ -114,12 +114,12 @@
 
 -(void) purgeTiles: (NSUInteger) count;
 {
-	RMLog(@"purging %u old tiles from db cache", count);
+	RMLog(@"purging %d old tiles from db cache", [[NSNumber numberWithUnsignedLong:count] intValue]);
 	
 	// does not work: "DELETE FROM ZCACHE ORDER BY zlastUsed LIMIT"
 
 	BOOL result = [db executeUpdate: @"DELETE FROM ZCACHE WHERE ztileHash IN (SELECT ztileHash FROM ZCACHE ORDER BY zlastUsed LIMIT ? )", 
-				   [NSNumber numberWithUnsignedInt: count]];
+				   [[NSNumber numberWithUnsignedLong:count] intValue]];
 	if (result == NO) {
 		RMLog(@"Error purging cache");
 	}
@@ -132,7 +132,7 @@
     FMResultSet *results = [db executeQuery:@"SELECT COUNT(ztileHash) FROM ZCACHE WHERE zInserted < ?", date];
 	if ([results next]) {
         count = [results intForColumnIndex:0];
-        RMLog(@"Will purge %i tile(s) from before %@", count, date);
+        RMLog(@"Will purge %i tile(s) from before %@", [[NSNumber numberWithUnsignedLong:count] intValue], date);
     }
 	[results close];
     
@@ -158,7 +158,7 @@
 -(void) touchTile: (uint64_t) tileHash withDate: (NSDate*) date
 {
 	BOOL result = [db executeUpdate: @"UPDATE ZCACHE SET zlastUsed = ? WHERE ztileHash = ? ", 
-				   date, [NSNumber numberWithUnsignedInt: tileHash]];
+				   date, [NSNumber numberWithUnsignedLongLong: tileHash]];
 	
 	if (result == NO) {
 		RMLog(@"Error touching tile");

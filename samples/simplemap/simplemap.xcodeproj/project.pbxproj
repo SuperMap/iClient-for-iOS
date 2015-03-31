@@ -28,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DFBE03011AC8F9FB00A5E3A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE15380D17D42B4C0098416B /* MapView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FECBE55F195133E6000ACE66;
+			remoteInfo = RMSMTests;
+		};
 		FE15381617D42B4E0098416B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE15380D17D42B4C0098416B /* MapView.xcodeproj */;
@@ -170,6 +177,7 @@
 				FE15381717D42B4E0098416B /* libMapView.a */,
 				FE15381917D42B4E0098416B /* MapViewTests.octest */,
 				FE15381B17D42B4E0098416B /* RM Unit Tests.app */,
+				DFBE03021AC8F9FB00A5E3A0 /* RMSMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +236,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		DFBE03021AC8F9FB00A5E3A0 /* RMSMTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RMSMTests.xctest;
+			remoteRef = DFBE03011AC8F9FB00A5E3A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FE15381717D42B4E0098416B /* libMapView.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -343,10 +358,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s ";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -369,12 +384,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s ";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
@@ -387,6 +402,7 @@
 				INFOPLIST_FILE = "simplemap/simplemap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = arm64;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -400,6 +416,7 @@
 				INFOPLIST_FILE = "simplemap/simplemap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = arm64;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

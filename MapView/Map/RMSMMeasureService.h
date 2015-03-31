@@ -51,6 +51,7 @@
 /**
  * APIMethod: processAsync
  * 负责将客户端的量算参数传递到服务端。
+ * 请求成功通知标识为"measureComplete"，失败为"measureError"
  *
  * Parameters:
  * params - {<RMSMMeasureParameters>} 量算参数。

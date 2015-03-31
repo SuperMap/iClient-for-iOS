@@ -46,16 +46,16 @@
     
     NSString* strHttpUrl = [[NSString alloc]init];
     strHttpUrl=[strFindPathUrl stringByAppendingString:strJsonParameters];
-    NSLog(@"%@",strHttpUrl);
-    strHttpUrl=[strHttpUrl stringByAddingPercentEscapesUsingEncoding:CFStringConvertEncodingToNSStringEncoding(NSASCIIStringEncoding)];
-     NSLog(@"%@",strHttpUrl);
+//    NSLog(@"%@",strHttpUrl);
+//    strHttpUrl=[strHttpUrl stringByAddingPercentEscapesUsingEncoding:CFStringConvertEncodingToNSStringEncoding(NSASCIIStringEncoding)];
     
     //第一步，创建url
-    NSURL *url = [NSURL URLWithString:strHttpUrl];
-    NSLog(@"@%@",url);
+    NSURL *url = [NSURL URLWithString:[strHttpUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
     //第二步，创建请求
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10];
-    NSLog(@"@%@",request);
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:10];
+    [request setHTTPMethod:@"GET"];
+    [request addValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [[NSURLConnection alloc]initWithRequest:request delegate:self];}
 
 -(NSString *) getJsonParameters:(FindPathParameters *)params
@@ -73,7 +73,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     
-    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
+//    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
     
     data = [[NSMutableData alloc] initWithCapacity:0];
 }
@@ -93,7 +93,7 @@
     NSMutableDictionary* dictionary = [[NSMutableDictionary alloc] init];
     [dictionary setValue:findPathResult forKey:@"FindPathResult"];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"processCompleted" object:nil userInfo:dictionary];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"findPathCompleted" object:nil userInfo:dictionary];
     
 }
 //网络请求过程中，出现任何错误（断网，连接超时等）会进入此方法

@@ -765,8 +765,7 @@
 	if (enableDragging && newGesture.numTouches == lastGesture.numTouches)
 	{
         
-        double CurrentTime = CACurrentMediaTime();
-        
+//        double CurrentTime = CACurrentMediaTime();
 		CGSize delta;
 		delta.width = newGesture.center.x - lastGesture.center.x;
 		delta.height = newGesture.center.y - lastGesture.center.y;

@@ -23,13 +23,17 @@
 }
 
 #pragma -mark 根据起始和终止站点的位置，以及分析条件，返回换乘方案
--(void) processAsync4SolutionWithParam:(TransferSolutionParameter *) param finishBlock:(void(^)(TransferSolutionResult * transferSolutionResult))finishBlock{
+-(void) processAsync4SolutionWithParam:(TransferSolutionParameter *) param finishBlock:(void(^)(TransferSolutionResult * transferSolutionResult))finishBlock failedBlock:(void (^)(NSError * connectionError))failedBlock{
+    if (param == nil) {
+        NSLog(@"param is null.");
+        return;
+    }
     
     NSArray *arr = [self castPointsToArr:[param points]];
     
-    NSString *strAnalystParameter=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:arr options:NULL error:nil] encoding:NSUTF8StringEncoding];
+    NSString *strAnalystParameter=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
     
-    NSString *endUrl = [NSString stringWithFormat:@"%@solutions.json?points=%@&walkingRatio=%f&transferTactic=%@&solutionCount=%d&transferPreference=%@",_strSolutionUrl,strAnalystParameter,[param walkingRatio],[param transferTactic],[param solutionCount],[param transferPreference]];
+    NSString *endUrl = [NSString stringWithFormat:@"%@solutions.json?points=%@&walkingRatio=%f&transferTactic=%@&solutionCount=%d&transferPreference=%@",_strSolutionUrl,strAnalystParameter,[param walkingRatio],[param transferTactic],[[NSNumber numberWithUnsignedLong:[param solutionCount]] intValue],[param transferPreference]];
     
     //第一步，创建url
     NSURL *url = [NSURL URLWithString:[endUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
@@ -43,11 +47,12 @@
     }
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if (connectionError) {
-             NSLog(@"Error:%@   Code:%d",[connectionError localizedDescription],[connectionError code]);
+             NSLog(@"Error:%@   Code:%ld",[connectionError localizedDescription],(long)[connectionError code]);
+            failedBlock(connectionError);
         }else{
             NSError *e;
             NSDictionary *dict =[NSJSONSerialization JSONObjectWithData: data
-                                                                options: NSJSONReadingMutableContainers
+                                                                options: NSJSONWritingPrettyPrinted
                                                                   error: &e];
             TransferSolutionResult *transferSolutionResult = [[TransferSolutionResult alloc] initWithDict:dict];
             finishBlock(transferSolutionResult);
@@ -56,11 +61,15 @@
 }
 
 #pragma -mark 发送换乘方案，返回换乘引导
--(void) processAsync4PathWithPoints:(NSArray *) points transferLines:(NSArray *)transferLines finishBlock:(void(^)(TransferGuide * transferGuide))finishBlock{
-
+-(void) processAsync4PathWithPoints:(NSArray *) points transferLines:(NSArray *)transferLines finishBlock:(void(^)(TransferGuide * transferGuide))finishBlock failedBlock:(void (^)(NSError *))failedBlock{
+    if (points == nil || transferLines ==nil ) {
+        NSLog(@"param is null.");
+        return;
+    }
+    
     NSArray *pointsArr = [self castPointsToArr:points];
     
-    NSString *_points=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:pointsArr options:NULL error:nil] encoding:NSUTF8StringEncoding];
+    NSString *_points=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:pointsArr options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
     NSMutableString *linesJson =[[NSMutableString alloc] initWithString:@"["];
     
     for (int i=0; i< [transferLines count]; i++) {
@@ -70,7 +79,7 @@
         }
     }
     [linesJson appendString:@"]"];
-//    NSString *strTransferLines =[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dd options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
+
     
     NSString *endUrl = [NSString stringWithFormat:@"%@path.json?points=%@&transferLines=%@",_strSolutionUrl,_points,linesJson];
     //第一步，创建url
@@ -85,11 +94,12 @@
     }
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if (connectionError) {
-            NSLog(@"Error:%@   Code:%d",[connectionError localizedDescription],[connectionError code]);
+            NSLog(@"Error:%@   Code:%ld",[connectionError localizedDescription],(long)[connectionError code]);
+            failedBlock(connectionError);
         }else{
             NSError *e;
             NSDictionary *dict =[NSJSONSerialization JSONObjectWithData: data
-                                                                  options: NSJSONReadingMutableContainers
+                                                                  options: NSJSONWritingPrettyPrinted
                                                                   error: &e];
             TransferGuide *transferGuide = [[TransferGuide alloc] initWithDict:dict];
             finishBlock(transferGuide);
@@ -98,7 +108,11 @@
 }
 
 #pragma -mark 传入关键字，查询符合条件的站点信息列表
--(void)ProcessAsync4StopsWithKeyWord:(NSString *)keyWord returnPosition:(BOOL)returnPosition finishBlock:(void(^)(NSArray * transferStopsInfo))finishBlock{
+-(void)ProcessAsync4StopsWithKeyWord:(NSString *)keyWord returnPosition:(BOOL)returnPosition finishBlock:(void(^)(NSArray * transferStopsInfo))finishBlock failedBlock:(void (^)(NSError * connectionError))failedBlock{
+    if (keyWord == nil) {
+        NSLog(@"keyWord is null.");
+        return;
+    }
     
     NSString *endUrl = [NSString stringWithFormat:@"%@stops/keyword/%@.json?returnPosition=%@",_strSolutionUrl,[keyWord stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],returnPosition?@"true":@"false"];
     //第一步，创建url
@@ -115,11 +129,12 @@
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         
         if (connectionError) {
-            NSLog(@"Error:%@   Code:%d",[connectionError localizedDescription],[connectionError code]);
+            NSLog(@"Error:%@   Code:%ld",[connectionError localizedDescription],(long)[connectionError code]);
+            failedBlock(connectionError);
         }else{
             NSError *e;
             NSArray *arr =[NSJSONSerialization JSONObjectWithData: data
-                                                            options: NSJSONReadingMutableContainers
+                                                            options: NSJSONWritingPrettyPrinted
                                                               error: &e];
             NSMutableArray *stopsInfo = [[NSMutableArray alloc] init];
             for (int i=0; i<[arr count]; i++) {

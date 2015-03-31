@@ -38,6 +38,7 @@
 -(void) processAsync:(QueryParameters*)params
 {
     if (params == NULL) {
+        NSLog(@"params is null.");
         return;
     }
 
@@ -45,7 +46,7 @@
     NSString* strJsonParams = [self getJsonParameters:params];
     
     //strJsonParams =[strJsonParams stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
-    //NSLog(@"%@",strJsonParams);
+
     NSString* strHttpUrl = [[NSString alloc] initWithString:strQueryUrl];
     if(params.retainCount == true)
     {
@@ -58,8 +59,8 @@
     //第二步，创建请求
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     [request setHTTPMethod:@"POST"];
-    NSData *data = [strJsonParams dataUsingEncoding:NSUTF8StringEncoding];
-    [request setHTTPBody:data];
+    [request addValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:[strJsonParams dataUsingEncoding:NSUTF8StringEncoding]];
     //第三步，连接服务器
     [[NSURLConnection alloc]initWithRequest:request delegate:self];
 }
@@ -92,7 +93,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     
-    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
+//    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
     
     //NSLog(@"%@",[res allHeaderFields]);
     
@@ -119,7 +120,7 @@
     
     //NSLog(@"dict1:%d",[[[qs.recordsets objectAtIndex:0] features] count]);
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"processCompleted" object:nil userInfo:dict];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"queryCompleted" object:nil userInfo:dict];
     /*
     if ([JSON objectForKey:@"succeed"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"processFailed" object:nil userInfo:JSON];

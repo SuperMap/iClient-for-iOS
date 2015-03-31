@@ -33,6 +33,7 @@
 
 - (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url params:(NSMutableDictionary*)params;
 {
+    // 判断url中是否有汉字
     BOOL bAscii = true;
     for(int i=0; i< [url length];i++){
         int a = [url characterAtIndex:i];

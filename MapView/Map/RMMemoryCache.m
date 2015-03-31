@@ -36,13 +36,13 @@
 	if (![super init])
 		return nil;
 
-	RMLog(@"initializing memory cache %@ with capacity %d", self, _capacity);
+	RMLog(@"initializing memory cache %@ with capacity %lu", self, (unsigned long)_capacity);
 	
 	cache = [[NSMutableDictionary alloc] initWithCapacity:_capacity];
 	
 	if (_capacity < 1)
 		_capacity = 1;
-	capacity = _capacity;
+	capacity = [[NSNumber numberWithUnsignedLong:_capacity] intValue];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(imageLoadingCancelled:)

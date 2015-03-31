@@ -39,8 +39,8 @@ return self;
     
    
     NSError *error;
-    NSData *jsonData=[NSJSONSerialization dataWithJSONObject:dictionary options:NULL error:&error];
-     NSString *strResultSetting=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSData *jsonData=[NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:&error];
+    NSString *strResultSetting=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
 
     return strResultSetting;
     

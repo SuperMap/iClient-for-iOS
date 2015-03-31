@@ -48,7 +48,7 @@
     
     points = [[NSMutableArray alloc] init];
     
-    int count = [arrayPoints count];
+    int count = [[NSNumber numberWithUnsignedLong:[arrayPoints count]] intValue] ;
 
     for (int i = 0; i < count; i++)
     {
@@ -68,7 +68,7 @@
 
 - (id) fromRMPath:(RMPath*)path
 {
-    int nPointsCount = [path.points count];
+    int nPointsCount = [[NSNumber numberWithUnsignedLong:[path.points count]] intValue];
     //int nPartsCount = [path.parts count];
     BOOL bClosePath = path.bIsClosePath;
     
@@ -107,8 +107,8 @@
     
     points = [[NSMutableArray alloc] init];
     
-    int count = [arrayPoints count];
-    int countParts = [parts count];
+    int count = [[NSNumber numberWithUnsignedLong:[arrayPoints count]] intValue];
+//    int countParts = [parts count];
   //  NSLog(@"%d",countParts);
    // NSLog(@"%d",count);
     for (int i = 0; i < count; i++)
@@ -128,7 +128,7 @@
 - (NSString*) toJson
 {    
     NSMutableArray *arrayOfPoints = [[NSMutableArray alloc] init];
-    int nCount = [points count];
+    int nCount = [[NSNumber numberWithUnsignedLong:[points count]] intValue];
     for (int i = 0; i < nCount; i++) {
         NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
                               [NSString stringWithFormat:@"%f", [[points objectAtIndex:i] CGPointValue].x], @"x",
@@ -167,7 +167,7 @@
 {
     RMPath* path = [[RMPath alloc] initWithContents:aContents];
     int i,j,nCountPoints;
-    int nCountParts = [parts count];
+    int nCountParts = [[NSNumber numberWithUnsignedLong:[parts count]] intValue];
     j = nCountPoints = 0;
     CLLocationCoordinate2D coord;
     CGPoint pnt;

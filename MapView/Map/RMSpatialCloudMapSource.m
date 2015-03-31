@@ -71,7 +71,7 @@
 - (NSString *)md5HexDigest:(NSString *)stringToHash {
 	const char *cStringToHash = [stringToHash UTF8String];
 	unsigned char hash[CC_MD5_DIGEST_LENGTH];
-	CC_MD5(cStringToHash, strlen(cStringToHash), hash);
+	CC_MD5(cStringToHash,[[NSNumber numberWithUnsignedLong:strlen(cStringToHash)] unsignedIntValue], hash);
 	
 	NSMutableString *hashString = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {

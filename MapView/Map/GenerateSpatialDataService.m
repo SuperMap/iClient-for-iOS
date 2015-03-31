@@ -77,7 +77,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     
-    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
+//    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
     
     _data = [[NSMutableData alloc] initWithCapacity:0];
 }
@@ -98,13 +98,12 @@
     [dict setObject:result forKey:@"GenerateSpatialDataResult"];
     if (result.succeed) {
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"processCompleted" object:nil userInfo:dict];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"generateSpatialCompleted" object:nil userInfo:dict];
     }
     else
     {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"processFailed" object:nil userInfo:dict];
-        
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"generateSpatialFailed" object:nil userInfo:dict];
+      
     }
     
 }

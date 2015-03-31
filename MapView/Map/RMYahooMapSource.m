@@ -49,7 +49,7 @@
 	NSInteger x = tile.x;
 	NSInteger y = pow(2,shift)-1-tile.y;
 	NSString *tileThing = [NSString stringWithFormat:@"http://us.maps2.yimg.com/us.png.maps.yimg.com/png?v=3.1.0&t=m&x=%d&y=%d&z=%d",
-						   x, y,zoom];
+						   [[NSNumber numberWithUnsignedLong:x] intValue], [[NSNumber numberWithUnsignedLong:y] intValue],[[NSNumber numberWithUnsignedLong:zoom] intValue]];
 //	NSLog(@"%@",tileThing);
 	return tileThing;
 	

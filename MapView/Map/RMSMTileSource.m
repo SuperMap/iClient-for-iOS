@@ -71,7 +71,7 @@
     [self init];
     
     self.m_Info = info;
-    int nCount = [resolutions count];
+    int nCount =[[NSNumber numberWithUnsignedLong:[resolutions count]] intValue];
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:nCount];
     // m_dResolutions = resolutions;
     m_dScales = [[NSMutableArray alloc] initWithCapacity:nCount];
@@ -116,7 +116,7 @@
 
 -(void)getResolutionsFromScales:(NSMutableArray *) newScales
 {
-    int nCount = [newScales count];
+    int nCount = [[NSNumber numberWithUnsignedLong:[newScales count]] intValue];
     m_dScales = [[NSMutableArray alloc] initWithCapacity:nCount];
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:nCount];
     //对scales数组升序排列
@@ -157,7 +157,7 @@
 
 -(int)tileSideLength
 {
-    return tileProjection.tileSideLength;
+    return [[NSNumber numberWithUnsignedLong:tileProjection.tileSideLength] intValue];
 }
 
 - (void) setTileSideLength: (NSUInteger) aTileSideLength

@@ -7,7 +7,7 @@
 		<key>TransferSolution.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +18,11 @@
 			<true/>
 		</dict>
 		<key>DF522D9A1AA6B652001AD908</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFA5C2651ABFB3F1008FE4BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

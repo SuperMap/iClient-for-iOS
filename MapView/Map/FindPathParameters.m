@@ -23,7 +23,7 @@
 -(NSString *) toString
 {
     NSString *strNodes=[[NSString alloc]initWithString:@"&nodes="];
-    int nCount=[self.nodes count]>0?[self.nodes count]:0;
+    int nCount=[self.nodes count]>0?[[NSNumber numberWithUnsignedLong:[self.nodes count]] intValue]:0;
     if (nCount>0) {
         if (!self.isAnalystById) {
             strNodes = [strNodes stringByAppendingString:@"["];

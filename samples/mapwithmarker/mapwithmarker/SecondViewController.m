@@ -25,7 +25,7 @@
 	
 	tileSource = [[RMOpenCycleMapSource alloc] init] ;
 	
-	[[mapView contents] setTileSource:tileSource];
+//	[[mapView contents] setTileSource:tileSource];
     // Your own code
     
     RMProjectedPoint prjPnt = (RMProjectedPoint){12969236.42061722,4863568.820204712};

@@ -36,7 +36,7 @@
     strResultSetting=[strResultSetting stringByAppendingString:[self.resultSetting toString]];
     
     NSError *error;
-    NSData *jsonData=[NSJSONSerialization dataWithJSONObject:dictionary options:NULL error:&error];
+    NSData *jsonData=[NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:&error];
     NSString *strAnalystParameter=[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     strAnalystParameter=[[[strAnalystParameter substringToIndex:[strAnalystParameter length]-1] stringByAppendingString:strResultSetting]stringByAppendingString:@"}"];

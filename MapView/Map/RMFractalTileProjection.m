@@ -202,5 +202,5 @@
 {
 	return planetBounds.size.width / tileSideLength / exp2(zoom);	
 }
-
+-(void)setIsBaseLayer:(BOOL)bIsBaseLayer{}
 @end

@@ -20,7 +20,7 @@
 @interface ViewController : UIViewController
 {
     RMMapView *mapView;
-    RMSMLayerInfo* info;
+   
     RMMapContents *newContents;
     RMSMLayerInfo* info2;
 

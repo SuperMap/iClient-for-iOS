@@ -64,7 +64,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     
-    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
+//    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
     
     _data = [[NSMutableData alloc] initWithCapacity:0];
 }
@@ -87,12 +87,12 @@
     
     if (themeResult.resourceInfo.isSucceed) {
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"processCompleted" object:nil userInfo:dict];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"themeCompleted" object:nil userInfo:dict];
     
     }
     else
     {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"processFailed" object:nil userInfo:dict];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"themeFailed" object:nil userInfo:dict];
 
     }
 }

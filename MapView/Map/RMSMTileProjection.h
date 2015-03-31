@@ -34,7 +34,7 @@
 	/// So here we'll cache the first term for efficiency.
 	/// I'm using width arbitrarily - I'm not sure what the effect of using the other term is when they're not the same.
 	double scaleFactor;
-    RMSMLayerInfo* m_pInfo;
+//    RMSMLayerInfo* m_pInfo;
     NSMutableArray* m_dResolutions;
     BOOL isBaseLayer;
 }

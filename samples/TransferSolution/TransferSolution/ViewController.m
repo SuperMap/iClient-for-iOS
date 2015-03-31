@@ -52,7 +52,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    tileThing = @"http://192.168.18.116:8090/iserver/services/map-changchun/rest/maps/长春市区图";
+    tileThing = @"http://192.168.18.143:8090/iserver/services/map-changchun/rest/maps/长春市区图";
     info = [[RMSMLayerInfo alloc] initWithTile:@"Changchun" linkurl:tileThing];
     // 判断获取iServer服务配置信息失败，为NULL时失败
     NSAssert(info != NULL,@"RMSMLayerInfo Connect fail");
@@ -68,7 +68,7 @@
     [newContents setCenterProjectedPoint:prjPnt];
     newContents.zoom = 1;
     
-    NSString *url =@"http://192.168.18.116:8090/iserver/services/traffictransferanalyst-sample/restjsr/traffictransferanalyst/Traffic-Changchun";
+    NSString *url =@"http://192.168.18.143:8090/iserver/services/traffictransferanalyst-sample/restjsr/traffictransferanalyst/Traffic-Changchun";
     
     // 给输入框添加监听，当文本内容发生改变是，从新请求站点
     [self.startTF addTarget:self action:@selector(textFieldValueDidChange:) forControlEvents:UIControlEventEditingChanged];
@@ -112,12 +112,14 @@
 //    NSArray *arr = [[NSArray alloc] initWithObjects:[startPoint position], [endPoint position],nil];
     // 设置换乘分析的参数
     TransferSolutionParameter *param = [[TransferSolutionParameter alloc] initWithPoints:points solutionCount:[@"6" integerValue] walkingRatio:10 transferTactic: LESS_TIME transferPreference:NONE];
-     [solutionService processAsync4SolutionWithParam:param finishBlock:^(TransferSolutionResult *transferSolutionResult) {
+     [solutionService processAsync4SolutionWithParam:param finishBlock:^(TransferSolutionResult *transferSolutionResult){
          guide = [transferSolutionResult defaultGuide];
          transferSolutions =[transferSolutionResult transferSolution];
          [pupoListView reloadData];
          NSMutableArray *items =  [guide transferGuideItems];
          [self performSelectorOnMainThread:@selector(addLayer:) withObject:items waitUntilDone:YES ];
+         
+     } failedBlock:^(NSError *connectionError) {
          
      }];
 }
@@ -137,6 +139,8 @@
             
             
         }
+    } failedBlock:^(NSError *connectionError) {
+        
     }];
 }
 
@@ -199,6 +203,8 @@
         NSMutableArray *items = [transferGuide transferGuideItems];
         // 在主线程中更新ui
         [self performSelectorOnMainThread:@selector(addLayer:) withObject:items waitUntilDone:YES ];
+    } failedBlock:^(NSError *connectionError) {
+        
     }];
 }
 

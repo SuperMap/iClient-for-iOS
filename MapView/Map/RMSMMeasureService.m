@@ -84,7 +84,7 @@ static void saveApplier(void* info, const CGPathElement* element)
         strUrl = [strUrl stringByAppendingString:[strEnd isEqualToString:@"/"]?@"distance.jsonp?":@"/distance.json?"];
     }
     
-    int nCount = [pPath.points count];
+    int nCount =[[NSNumber numberWithUnsignedLong:[pPath.points count]] intValue];
     NSString* strJson = [[NSString alloc] initWithString:@"point2Ds=["];
     for (int i=0;i<nCount; i++) {
         if(i!=0)
@@ -101,13 +101,12 @@ static void saveApplier(void* info, const CGPathElement* element)
     
     
     strUrl = [strUrl stringByAppendingString:strJson];
-    
-//    NSLog(@"json:%@",strJson);
- //   NSLog(@"%@",strUrl);
-    
+        
     url = [[NSURL alloc] initWithString:strUrl];
     
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    [request setHTTPMethod:@"GET"];
+    [request addValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     
     [[NSURLConnection alloc]initWithRequest:request delegate:self];
 }
@@ -115,9 +114,7 @@ static void saveApplier(void* info, const CGPathElement* element)
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
 
-    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
-
-//    NSLog(@"%@",[res allHeaderFields]);
+//    NSHTTPURLResponse *res = (NSHTTPURLResponse *)response;
 
     data = [[NSMutableData alloc] initWithCapacity:0];
 }

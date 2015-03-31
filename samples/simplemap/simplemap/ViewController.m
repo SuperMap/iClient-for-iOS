@@ -20,13 +20,14 @@
 }
 @synthesize mapView;
 - (void)loadView {
+     RMSMLayerInfo* info;
     CGRect bounds = [[UIScreen mainScreen] bounds];
     [self setMapView:[[RMMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, bounds.size.width, bounds.size.height)] ];
     self.view = mapView;
     
-    tileThing = @"http://192.168.1.24:8090/iserver/services/map-changchun/rest/maps/长春市区图";
+    tileThing = @"http://192.168.18.143:8090/iserver/services/map-changchun/rest/maps/长春市区图";
     //动态分段服务地址
-    tileThing2= @"http://192.168.1.24:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst";
+    tileThing2= @"http://192.168.18.143:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst";
     
     info = [[RMSMLayerInfo alloc] initWithTile:@"Changchun" linkurl:tileThing];
     // 判断获取iServer服务配置信息失败，为NULL时失败

@@ -42,7 +42,7 @@
  *
  * FindPathService *findPathService=[[FindPathService alloc]init:@"http://support.supermap.com.cn:8090/iserver/services/transportationanalyst-sample/rest/networkanalyst/RoadNet@Changchun"];
  *
- * [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompleted:) name:@"processCompleted" object:nil];
+ * [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompleted:) name:@"findPathCompleted" object:nil];
  * [findPathService processAsync:parameters];
  * (end)
  *
@@ -56,6 +56,7 @@
 /**
  * APIMethod: processAsync
  * 负责将客户端的查询参数传递到服务端。
+ * 请求成功通知标识为"findPathCompleted"
  *
  * Parameters:
  * parameters - {<FindPathParameters>} 最佳路径分析参数类。

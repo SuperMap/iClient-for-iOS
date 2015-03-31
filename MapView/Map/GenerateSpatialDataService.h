@@ -25,7 +25,7 @@
 
 /**
  * Constructor: GenerateSpatialDataService
- * 最佳路径分析参数类构造函数。
+ * 动态分段分析服务类。
  *
  * 例如：
  * (start code)
@@ -35,7 +35,7 @@
  *
  * GenerateSpatialDataService *service=[[GenerateSpatialDataService alloc]initWithURL:tileThing2];
  *
- * [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedGenerateSpatialData:) name:@"processCompleted" object:nil];
+ * [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedGenerateSpatialData:) name:@"generateSpatialCompleted" object:nil];
  *
  * [service processAsync:param];
  * (end)
@@ -50,6 +50,7 @@
 /**
  * APIMethod: processAsync
  * 负责将客户端的查询参数传递到服务端。
+ * 请求成功通知标识为"generateSpatialCompleted"，失败为"generateSpatialFailed"
  *
  * Parameters:
  * parameters - {<GenerateSpatialDataParameters>} 动态分段分析参数类。

@@ -74,14 +74,14 @@
     NSMutableDictionary *colorDictionary=[NSMutableDictionary new];
     
     CGColorRef colorRef = [color CGColor];
-    int numComponents = CGColorGetNumberOfComponents(colorRef);
+    int numComponents = [[NSNumber numberWithUnsignedLong:CGColorGetNumberOfComponents(colorRef)] intValue];
     if (numComponents == 4)
     {
         const CGFloat *components = CGColorGetComponents(colorRef);
         
-        [colorDictionary setValue:[NSNumber numberWithInt:lround(components[0] * 255)]  forKey:@"red"];
-        [colorDictionary setValue:[NSNumber numberWithInt:lround(components[1] * 255)] forKey:@"green"];
-        [colorDictionary setValue:[NSNumber numberWithInt:lround(components[2] * 255)] forKey:@"blue"];
+        [colorDictionary setValue:[NSNumber numberWithLong:lround(components[0] * 255)] forKey:@"red"];
+        [colorDictionary setValue:[NSNumber numberWithLong:lround(components[1] * 255)] forKey:@"green"];
+        [colorDictionary setValue:[NSNumber numberWithLong:lround(components[2] * 255)] forKey:@"blue"];
     }
     else
     {

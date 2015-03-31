@@ -92,10 +92,10 @@ static NSString *BORDERS[4][2] =
 	loc2->longitude = kMaxLong;
 	NSRange	range;
 	int cd, mask;
-	int geohashLen = [geohash length];
+	int geohashLen =[[NSNumber numberWithUnsignedLong:[geohash length]] intValue];
 	for (int i=0; i<geohashLen; i++) {
 		range = [BASE32 rangeOfString: [geohash substringWithRange:NSMakeRange(i, 1)]];
-		cd = range.location;		
+		cd = [[NSNumber numberWithUnsignedLong:range.location] intValue];
 		for (int j=0; j<5; j++) {
 			mask = 1<<(4-j);
 			if (is_even) {
@@ -118,7 +118,7 @@ static NSString *BORDERS[4][2] =
 
 + (NSString *) adjacentOf: (NSString *)srcHash inDir: (RMGeoHashAtDirection) dir 
 {
-	int srcHashLen = [srcHash length];
+	int srcHashLen = [[NSNumber numberWithUnsignedLong:[srcHash length]] intValue];
 	NSString *lastChr = [srcHash substringFromIndex: srcHashLen - 1];
 	int type = srcHashLen & 0x1;
 	NSString *base = [srcHash substringToIndex: srcHashLen - 1];

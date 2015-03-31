@@ -34,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DFBE030A1AC8FAC500A5E3A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEC6ED5E17D5915600862A1A /* MapView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FECBE55F195133E6000ACE66;
+			remoteInfo = RMSMTests;
+		};
 		FE902F8E18F691BD00C00C54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FEC6ED5E17D5915600862A1A /* MapView.xcodeproj */;
@@ -190,6 +197,7 @@
 				FEC6ED6817D5915700862A1A /* libMapView.a */,
 				FEC6ED6A17D5915700862A1A /* MapViewTests.octest */,
 				FEC6ED6C17D5915700862A1A /* RM Unit Tests.app */,
+				DFBE030B1AC8FAC500A5E3A0 /* RMSMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,6 +256,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		DFBE030B1AC8FAC500A5E3A0 /* RMSMTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RMSMTests.xctest;
+			remoteRef = DFBE030A1AC8FAC500A5E3A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FEC6ED6817D5915700862A1A /* libMapView.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -372,6 +387,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -398,6 +414,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -410,7 +427,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "../../MapView/**";
 				INFOPLIST_FILE = "mapwithmarker/mapwithmarker-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -424,7 +443,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "../../MapView/**";
 				INFOPLIST_FILE = "mapwithmarker/mapwithmarker-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

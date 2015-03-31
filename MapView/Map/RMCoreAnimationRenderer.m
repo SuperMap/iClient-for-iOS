@@ -127,7 +127,7 @@
 	}
 
 	[tiles insertObject:image atIndex:min];
-	[layer insertSublayer:sublayer atIndex:min];
+	[layer insertSublayer:sublayer atIndex:[[NSNumber numberWithUnsignedLong:min] intValue]];
 }
 
 -(void) tileRemoved: (RMTile) tile

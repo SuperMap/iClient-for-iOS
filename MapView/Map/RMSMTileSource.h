@@ -19,7 +19,7 @@
     RMProjection *smProjection;
 	RMSMTileProjection *tileProjection;
     BOOL networkOperations;
-    RMSMLayerInfo* m_Info;
+//    RMSMLayerInfo* m_Info;
     NSMutableArray* m_dResolutions;
     NSMutableArray* m_dScales;
     

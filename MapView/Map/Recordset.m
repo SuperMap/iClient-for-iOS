@@ -28,11 +28,7 @@
         ServerFeature* pF = [[ServerFeature alloc] initfromJson:[fsArray objectAtIndex:i]];
         [features addObject:pF];
     }
-    
-    //NSLog(@"fs %d",[fsArray count]);
-    
-    //NSLog(@"%d",[features count]);
-
+        
     return self;
 }
 

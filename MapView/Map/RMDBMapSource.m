@@ -130,7 +130,7 @@
 			center.longitude = [self getPreferenceAsFloat:kCoverageCenterLongitudeKey];
 			
 			RMLog(@"Tile size: %d pixel", tileSideLength);
-			RMLog(@"Supported zoom range: %d - %d", minZoom, maxZoom);
+			RMLog(@"Supported zoom range: %f - %f", minZoom, maxZoom);
 			RMLog(@"Coverage area: (%2.6f,%2.6f) x (%2.6f,%2.6f)", 
 				  topLeft.latitude, 
 				  topLeft.longitude,

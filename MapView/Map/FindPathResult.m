@@ -34,7 +34,7 @@
     NSMutableArray *aPathList=[[NSMutableArray alloc] init];
     aPathList=[JSON objectForKey:@"pathList"];
     Path *aPath = nil;
-    int nCount=[aPathList count]>0?[aPathList count]:0;
+    int nCount=[aPathList count]>0?[[NSNumber numberWithUnsignedLong:[aPathList count]] intValue]:0;
     if (nCount>0) {
         for (int i=0; i<[aPathList count]; i++) {
             aPath=[[Path alloc]initFromJson:[aPathList objectAtIndex:i]];

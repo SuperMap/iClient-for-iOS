@@ -165,7 +165,7 @@
 
 -(int)tileSideLength
 {
-	return tileProjection.tileSideLength;
+	return [[NSNumber numberWithUnsignedLong:tileProjection.tileSideLength] intValue];
 }
 
 - (void) setTileSideLength: (NSUInteger) aTileSideLength

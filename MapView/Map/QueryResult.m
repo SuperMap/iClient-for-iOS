@@ -19,7 +19,7 @@
     [NSJSONSerialization JSONObjectWithData: [strJson dataUsingEncoding:NSUTF8StringEncoding]
                                     options: NSJSONReadingMutableContainers
                                       error: &e];
-    //NSLog(@"%@",JSON);
+    
     totalCount = [[JSON objectForKey:@"totalCount"] intValue];
     currentCount = [[JSON objectForKey:@"totalCount"] intValue];
     customResponse = [JSON objectForKey:@"customResponse"];

@@ -179,7 +179,7 @@
 			capacity =  value;
 			minimalPurge = MAX(1,capacity / 10);
 		} else 
-			RMLog(@"illegal value for capacity: %d", value);
+			RMLog(@"illegal value for capacity: %ld",(long)value);
 	}
 	
 	NSString* strategyStr = [cfg objectForKey:@"strategy"];

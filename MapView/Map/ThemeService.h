@@ -48,7 +48,7 @@
  * //初始化专题图服务
  * ThemeService *service=[[ThemeService alloc]initWithURL:tileThing];
  * //监听专题图回调函数
- * [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedTheme:) name:@"processCompleted" object:nil];
+ * [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedTheme:) name:@"themeCompleted" object:nil];
  * //将客户端的专题图参数传递到服务端。
  * [service processAsync:param];
  * (end)
@@ -63,6 +63,7 @@
 /**
  * APIMethod: processAsync
  * 负责将客户端的专题图参数传递到服务端。
+ * 请求成功通知标识为"themeCompleted"，失败为"themeFailed"
  *
  * Parameters:
  * parameters - {<ThemeParameters>} 专题图参数类。
