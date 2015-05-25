@@ -31,7 +31,7 @@
 }
 
 /**
- * APIProperty: layerInfo
+ * APIProperty: layerInfoList
  * {NSArray} 图层信息列表。
  */
 @property (nonatomic,retain) NSArray  *layerInfoList;

@@ -31,7 +31,7 @@
 
 /**
  * APIProperty: suggestWalking
- * {NSMutableArray} 乘车方案集合。
+ * {BOOL} 当值为true时，建议用户步行前往。
  */
 @property(nonatomic) BOOL *suggestWalking;
 

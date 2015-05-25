@@ -11,6 +11,11 @@
 #import "RMSMLayerInfo.h"
 #import "RMSMTileProjection.h"
 #import "RMSMLayerInfo.h"
+
+/**
+ * Class: SMTianDiTuTileSource
+ * 对接天地图接口，用法参照案例sample目录下tianditu范例
+ */
 @interface SMTianDiTuTileSource:NSObject <RMTileSource>
 {
     NSString *url;
