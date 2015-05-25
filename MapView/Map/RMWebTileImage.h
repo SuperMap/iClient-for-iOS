@@ -62,6 +62,7 @@ extern NSString *RMWebTileImageNotificationErrorKey;
 	NSMutableData *data;
 }
 
++ (NSOperationQueue *)getInstanceQueue;
 - (id)initWithTile:(RMTile)tile FromURL:(NSString*)url;
 
 @end

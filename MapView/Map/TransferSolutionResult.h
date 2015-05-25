@@ -28,6 +28,13 @@
  * {NSMutableArray} 乘车方案集合。
  */
 @property(nonatomic,retain) NSMutableArray *transferSolution;
+
+/**
+ * APIProperty: suggestWalking
+ * {NSMutableArray} 乘车方案集合。
+ */
+@property(nonatomic) BOOL *suggestWalking;
+
 /**
  * Constructor: TransferSolutionResult
  *      换乘分析结果类。

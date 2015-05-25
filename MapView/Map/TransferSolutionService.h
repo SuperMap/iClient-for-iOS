@@ -38,7 +38,7 @@
   *       向服务器发送公交换乘分析的参数，并返回{<TransferSolutionResult>}类型数据
   *  Parameters:
   *     param - {<TransferSolutionParameter>}公交换乘方案参数类
-  *     finishBlock - 请求成功后执行的回调，block不处与主线程中，不能做ui更新处理
+  *     finishBlock - 请求成功后执行的回调
   *     failedBlock - 请求失败执行的回调,block不处与主线程中，不能做ui更新处理
   */
 -(void) processAsync4SolutionWithParam:(TransferSolutionParameter *) param finishBlock:(void(^)(TransferSolutionResult * transferSolutionResult))finishBlock failedBlock:(void(^)(NSError * connectionError))failedBlock;
@@ -49,7 +49,7 @@
  *  Parameters:
  *     points - 乘车方案的起始和终止点组成的数组，可以起始或终止点的地理坐标 即{<Point2D>}类型数组,也可以是站点id组成的Integer数组
  *     transferLines - 换乘分段数组，其中存放的元素为{<TransferLine>}对象。
- *     finishBlock - 请求成功后执行的回调，block不处与主线程中，不能做ui更新处理
+ *     finishBlock - 请求成功后执行的回调
  *     failedBlock - 请求失败执行的回调,block不处与主线程中，不能做ui更新处理
  */
 -(void) processAsync4PathWithPoints:(NSArray *) points transferLines:(NSArray *)transferLines finishBlock:(void(^)(TransferGuide * transferGuide))finishBlock failedBlock:(void(^)(NSError * connectionError))failedBlock;
@@ -60,7 +60,7 @@
  *  Parameters:
  *     keyWord - 站点查询关键字
  *     returnPosition - 是否返回查询站点的地理坐标
- *     finishBlock - 请求成功后执行的回调，block不处与主线程中，不能做ui更新处理
+ *     finishBlock - 请求成功后执行的回调
  *     failedBlock - 请求失败执行的回调,block不处与主线程中，不能做ui更新处理
  */
 -(void)ProcessAsync4StopsWithKeyWord:(NSString *)keyWord returnPosition:(BOOL)returnPosition finishBlock:(void(^)(NSArray * transferStopsInfo))finishBlock failedBlock:(void(^)(NSError * connectionError))failedBlock;

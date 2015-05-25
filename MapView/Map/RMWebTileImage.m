@@ -46,6 +46,10 @@ static NSOperationQueue *_queue = nil;
 
 @implementation RMWebTileImage
 
++ (NSOperationQueue *)getInstanceQueue{
+    return _queue;
+}
+
 + (void) initialize
 {
     _queue = [[NSOperationQueue alloc] init];

@@ -10,8 +10,11 @@
 
 #import "RMMarker.h"
 #import "RMMarkerManager.h"
+#import "RMMercatorToScreenProjection.h"
 
-@interface FirstViewController ()
+@interface FirstViewController (){
+    RMMarker* _marker;
+}
 
 @end
 
@@ -55,15 +58,15 @@
 - (void) singleTapOnMap:(RMMapView *)map At:(CGPoint)point
 {
     
-    if (calloutView.window){
-        [calloutView performSelector:@selector(dismissCalloutAnimated:) withObject:nil afterDelay:1.0/3.0];
-    }
+//    if (calloutView.window){
+//        [calloutView performSelector:@selector(dismissCalloutAnimated:) withObject:nil afterDelay:1.0/3.0];
+//    }
 }
 -(void)beforeMapMove:(RMMapView *)map
 {
-    if (calloutView.window){
-        [calloutView performSelector:@selector(dismissCalloutAnimated:) withObject:nil afterDelay:1.0/3.0];
-    }
+//    if (calloutView.window){
+//        [calloutView performSelector:@selector(dismissCalloutAnimated:) withObject:nil afterDelay:1.0/3.0];
+//    }
 }
 - (void) tapOnMarker: (RMMarker*) marker onMap: (RMMapView*) map
 {
@@ -74,12 +77,32 @@
     {        
         calloutView.titleView.text = @"SuperMap";
         calloutView.subtitleView.text = @"北京超图软件股份有限公司";
+        [calloutView setDelegate:self];
         [calloutView presentCalloutFromRect:marker.frame
                                      inView:mapView
                           constrainedToView:mapView
                    permittedArrowDirections:SMCalloutArrowDirectionDown
                                    animated:YES];
     }
+    _marker = marker;
 }
+//地图移动后重新计算marker的屏幕坐标
+-(void)afterMapMove:(RMMapView *)map{
+    
+//    [calloutView presentCalloutFromRect:_marker.frame
+//                                 inView:mapView
+//                      constrainedToView:mapView
+//               permittedArrowDirections:SMCalloutArrowDirectionDown
+//                               animated:YES];
+     [calloutView updateCalloutFromRect:_marker.frame inView:mapView constrainedToView:mapView permittedArrowDirections:SMCalloutArrowDirectionDown];
+}
+-(void)afterMapZoom:(RMMapView *)map byFactor:(float)zoomFactor near:(CGPoint)center{
 
+//    [calloutView presentCalloutFromRect:_marker.frame
+//                                 inView:mapView
+//                      constrainedToView:mapView
+//               permittedArrowDirections:SMCalloutArrowDirectionDown
+//                               animated:YES];
+    [calloutView updateCalloutFromRect:_marker.frame inView:mapView constrainedToView:mapView permittedArrowDirections:SMCalloutArrowDirectionDown];
+}
 @end

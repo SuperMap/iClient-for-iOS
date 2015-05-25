@@ -25,9 +25,9 @@
     [self setMapView:[[RMMapView alloc] initWithFrame:CGRectMake(0.0, 0.0, bounds.size.width, bounds.size.height)] ];
     self.view = mapView;
     
-    tileThing = @"http://192.168.18.143:8090/iserver/services/map-changchun/rest/maps/长春市区图";
+    tileThing = @"http://192.168.18.192:8090/iserver/services/map-changchun/rest/maps/长春市区图";
     //动态分段服务地址
-    tileThing2= @"http://192.168.18.143:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst";
+    tileThing2= @"http://192.168.18.192:8090/iserver/services/spatialanalyst-changchun/restjsr/spatialanalyst";
     
     info = [[RMSMLayerInfo alloc] initWithTile:@"Changchun" linkurl:tileThing];
     // 判断获取iServer服务配置信息失败，为NULL时失败
@@ -57,7 +57,7 @@
     //动态分段服务
     GenerateSpatialDataService *service=[[GenerateSpatialDataService alloc]initWithURL:tileThing2];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedGenerateSpatialData:) name:@"processCompleted" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedGenerateSpatialData:) name:@"generateSpatialCompleted" object:nil];
     //发送服务请求
     [service processAsync:param];
     
@@ -93,7 +93,7 @@
            //初始化单值专题图服务
             ThemeService *service=[[ThemeService alloc]initWithURL:tileThing];
             //监听专题图回调函数
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedTheme:) name:@"processCompleted" object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processCompletedTheme:) name:@"themeCompleted" object:nil];
             //将客户端的专题图参数传递到服务端。
             [service processAsync:param];
             

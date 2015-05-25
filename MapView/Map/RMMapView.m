@@ -41,6 +41,8 @@
 #import "RMSMMBTileSource.h"
 #import "RMMapRenderer.h"
 #import "MapView_Prefix.pch"
+#import "RMWebTileImage.h"
+
 
 @interface RMMapView (PrivateMethods)
 // methods for post-touch deceleration, ala UIScrollView
@@ -428,6 +430,12 @@
 	}
 	
 	if (_delegateHasBeforeMapZoomByFactor) [delegate beforeMapZoom: self byFactor: zoomFactor near: center];
+
+    // 当发送新的地图图片请求时，取消队列中的所有图片请求
+    @synchronized(self){
+        [[RMWebTileImage getInstanceQueue] cancelAllOperations];
+    }
+    
 	[self.contents zoomByFactor:zoomFactor near:center animated:animated withCallback:(animated && (_delegateHasAfterMapZoomByFactor || _delegateHasMapViewRegionDidChange))?self:nil];
 	if (!animated)
 	{

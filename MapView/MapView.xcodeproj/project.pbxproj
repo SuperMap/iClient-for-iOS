@@ -123,6 +123,10 @@
 		4474211C1302B60A004D6E8A /* RMWMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4474211A1302B60A004D6E8A /* RMWMS.m */; };
 		46B1C067117653930062018A /* GTMNSNumber+64Bit.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B1C066117653930062018A /* GTMNSNumber+64Bit.m */; };
 		46B1C075117653F10062018A /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B1C074117653F10062018A /* GTMObjC2Runtime.m */; };
+		47BBF18A1AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 47BBF1861AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.h */; };
+		47BBF18B1AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBF1871AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.m */; };
+		47BBF18C1AE632F8007CE2F8 /* SMTianDiTuTileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 47BBF1881AE632F8007CE2F8 /* SMTianDiTuTileSource.h */; };
+		47BBF18D1AE632F8007CE2F8 /* SMTianDiTuTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBF1891AE632F8007CE2F8 /* SMTianDiTuTileSource.m */; };
 		96492C400FA8AD3400EBA6D2 /* RMGlobalConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 96492C3F0FA8AD3400EBA6D2 /* RMGlobalConstants.h */; };
 		96FE8E360F72D01B00A11CF0 /* RMYahooMapSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 96FE8E340F72D01B00A11CF0 /* RMYahooMapSource.h */; };
 		96FE8E370F72D01B00A11CF0 /* RMYahooMapSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FE8E350F72D01B00A11CF0 /* RMYahooMapSource.m */; };
@@ -536,6 +540,10 @@
 		46B1C066117653930062018A /* GTMNSNumber+64Bit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GTMNSNumber+64Bit.m"; path = "GTM/GTMNSNumber+64Bit.m"; sourceTree = "<group>"; };
 		46B1C073117653F10062018A /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMObjC2Runtime.h; path = GTM/GTMObjC2Runtime.h; sourceTree = "<group>"; };
 		46B1C074117653F10062018A /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMObjC2Runtime.m; path = GTM/GTMObjC2Runtime.m; sourceTree = "<group>"; };
+		47BBF1861AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTianDiTu_cva_c_TileSource.h; sourceTree = "<group>"; };
+		47BBF1871AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTianDiTu_cva_c_TileSource.m; sourceTree = "<group>"; };
+		47BBF1881AE632F8007CE2F8 /* SMTianDiTuTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTianDiTuTileSource.h; sourceTree = "<group>"; };
+		47BBF1891AE632F8007CE2F8 /* SMTianDiTuTileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTianDiTuTileSource.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96492C3F0FA8AD3400EBA6D2 /* RMGlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGlobalConstants.h; sourceTree = "<group>"; };
 		966504690F6869810036562A /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
@@ -1050,6 +1058,10 @@
 		B83E64EB0E80E73F001663B6 /* Tile Source */ = {
 			isa = PBXGroup;
 			children = (
+				47BBF1861AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.h */,
+				47BBF1871AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.m */,
+				47BBF1881AE632F8007CE2F8 /* SMTianDiTuTileSource.h */,
+				47BBF1891AE632F8007CE2F8 /* SMTianDiTuTileSource.m */,
 				FE19279B17695657003B2E46 /* RMSMTileSource.h */,
 				FE19279C17695657003B2E46 /* RMSMTileSource.m */,
 				FE74F63D1785124C0063C6A2 /* RMCloudMapSource.h */,
@@ -1451,6 +1463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C974170E8A19B2007D16AD /* RMMercatorToScreenProjection.h in Headers */,
+				47BBF18C1AE632F8007CE2F8 /* SMTianDiTuTileSource.h in Headers */,
 				B8C974250E8A19B2007D16AD /* RMOpenStreetMapSource.h in Headers */,
 				B8C974190E8A19B2007D16AD /* RMMapRenderer.h in Headers */,
 				B8C9741D0E8A19B2007D16AD /* RMCoreAnimationRenderer.h in Headers */,
@@ -1487,6 +1500,7 @@
 				FEBFDDA219358D8B0015E999 /* TransportationAnalystResultSetting.h in Headers */,
 				B8F3FC640EA2E792004D8F85 /* RMMarker.h in Headers */,
 				B8474B9A0EB40094006A0BC1 /* FMDatabase.h in Headers */,
+				47BBF18A1AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.h in Headers */,
 				FE4162081A260F3B004607B2 /* GenerateSpatialDataService.h in Headers */,
 				B8474B9C0EB40094006A0BC1 /* FMDatabaseAdditions.h in Headers */,
 				B8474B9F0EB40094006A0BC1 /* FMResultSet.h in Headers */,
@@ -1878,6 +1892,7 @@
 				B8C974660E8A19EA007D16AD /* RMVirtualEarthSource.m in Sources */,
 				DFA6DCF31AB6D822000F15A2 /* Point2D.m in Sources */,
 				DFA6DCF91AB6D822000F15A2 /* TransferLine.m in Sources */,
+				47BBF18D1AE632F8007CE2F8 /* SMTianDiTuTileSource.m in Sources */,
 				B8C974680E8A19EB007D16AD /* RMWebTileImage.m in Sources */,
 				FE3ADE371A24B386009188F2 /* ServerStytle.m in Sources */,
 				FEBFDDA71935E1A60015E999 /* Path.m in Sources */,
@@ -1919,6 +1934,7 @@
 				DDA3E85713B00D9E004D861C /* RMMapQuestOSMSource.m in Sources */,
 				FE3ADE3D1A24B3FF009188F2 /* RMTileSourcesContainer.m in Sources */,
 				DFA6DCF51AB6D822000F15A2 /* TransferGuide.m in Sources */,
+				47BBF18B1AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.m in Sources */,
 				DDCD58D41406F8A400F59E0D /* RMTileStreamSource.m in Sources */,
 				F56554F9146E002B00623AC9 /* RMURLConnectionOperation.m in Sources */,
 				FE19279A1769563F003B2E46 /* RMSMTileProjection.m in Sources */,

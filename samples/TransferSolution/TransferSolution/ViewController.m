@@ -41,6 +41,7 @@
     ServerGeometry *guideGeo ;
     RMPath *path ;
     NSMutableArray *CALayers;
+    BOOL suggetstWalking;
 
 }
 
@@ -52,7 +53,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    tileThing = @"http://192.168.18.143:8090/iserver/services/map-changchun/rest/maps/长春市区图";
+    tileThing = @"http://192.168.18.192:8090/iserver/services/map-changchun/rest/maps/长春市区图";
     info = [[RMSMLayerInfo alloc] initWithTile:@"Changchun" linkurl:tileThing];
     // 判断获取iServer服务配置信息失败，为NULL时失败
     NSAssert(info != NULL,@"RMSMLayerInfo Connect fail");
@@ -68,7 +69,7 @@
     [newContents setCenterProjectedPoint:prjPnt];
     newContents.zoom = 1;
     
-    NSString *url =@"http://192.168.18.143:8090/iserver/services/traffictransferanalyst-sample/restjsr/traffictransferanalyst/Traffic-Changchun";
+    NSString *url =@"http://192.168.18.192:8090/iserver/services/traffictransferanalyst-sample/restjsr/traffictransferanalyst/Traffic-Changchun";
     
     // 给输入框添加监听，当文本内容发生改变是，从新请求站点
     [self.startTF addTarget:self action:@selector(textFieldValueDidChange:) forControlEvents:UIControlEventEditingChanged];
@@ -89,10 +90,16 @@
 }
 
 -(IBAction)solutionList:(UIButton *)sender{
+    NSString *notice = nil;
     if (transferSolutions) {
          [pupoListView show];
     }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"当前未查询换乘方案" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        if (suggetstWalking) {
+            notice = @"走路啦";
+        }else{
+            notice =@"当前未查询换乘方案" ;
+        }
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:notice delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
 }
@@ -117,7 +124,13 @@
          transferSolutions =[transferSolutionResult transferSolution];
          [pupoListView reloadData];
          NSMutableArray *items =  [guide transferGuideItems];
-         [self performSelectorOnMainThread:@selector(addLayer:) withObject:items waitUntilDone:YES ];
+//         [self performSelectorOnMainThread:@selector(addLayer:) withObject:items waitUntilDone:YES ];
+         if ([transferSolutionResult suggestWalking]) {
+             suggetstWalking = true;
+             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Suggest" message:@"走路过去啦" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+             [alert show];
+         }
+         [self addLayer:items];
          
      } failedBlock:^(NSError *connectionError) {
          
@@ -202,7 +215,8 @@
     [solutionService processAsync4PathWithPoints:arr transferLines:linesss finishBlock:^(TransferGuide *transferGuide) {
         NSMutableArray *items = [transferGuide transferGuideItems];
         // 在主线程中更新ui
-        [self performSelectorOnMainThread:@selector(addLayer:) withObject:items waitUntilDone:YES ];
+//        [self performSelectorOnMainThread:@selector(addLayer:) withObject:items waitUntilDone:YES ];
+        [self addLayer:items];
     } failedBlock:^(NSError *connectionError) {
         
     }];

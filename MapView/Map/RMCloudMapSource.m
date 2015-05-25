@@ -142,6 +142,7 @@
 			  @"%@ tried to retrieve tile with zoomLevel %d, outside source's defined range %f to %f",
 			  self, tile.zoom, self.minZoom, self.maxZoom);
 	return [NSString stringWithFormat:@"http://t0.supermapcloud.com/FileService/image?map=quanguo&type=web&x=%d&y=%d&z=%d",tile.x, tile.y,tile.zoom];
+    
 }
 
 - (void) networkOperationsNotification: (NSNotification*) notification
@@ -189,7 +190,7 @@
     double dWidth = 2.00375083427892E7*2;
     double dleft = -2.00375083427892E7;
     double dbottom = -2.00375083427892E7;
-    //    NSLog(@"%f,%f,%f,%f",dleft,dbottom,dWidth,dHeight);
+   // NSLog(@"%f,%f,%f,%f",dleft,dbottom,dWidth,dHeight);
     RMProjectedRect theBounds = RMMakeProjectedRect(dleft,dbottom,dWidth,dHeight);
     
     return [RMProjection smProjection:theBounds];

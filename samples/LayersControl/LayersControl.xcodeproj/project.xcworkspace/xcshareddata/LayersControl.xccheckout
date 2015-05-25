@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>52F64748-4853-4EB4-94D4-18643FAEC188</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LayersControl</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>14C053C2EE2D474F74F7350B616424E900CBFE02</key>
+		<string>https://github.com/SuperMap/iClient-for-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>samples/LayersControl/LayersControl.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>14C053C2EE2D474F74F7350B616424E900CBFE02</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SuperMap/iClient-for-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>14C053C2EE2D474F74F7350B616424E900CBFE02</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>14C053C2EE2D474F74F7350B616424E900CBFE02</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iClient-for-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

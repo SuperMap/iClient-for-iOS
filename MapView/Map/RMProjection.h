@@ -84,6 +84,7 @@
 + (RMProjection *) EPSGLatLong;
 + (RMProjection *) OSGB;
 + (RMProjection *) smProjection:(RMProjectedRect)bounds;
++(RMProjection*) userDefinedProjection;
 
 /// anybody know what the InBounds: parameter means?
 - (id) initWithString: (NSString*)params InBounds: (RMProjectedRect) projBounds;

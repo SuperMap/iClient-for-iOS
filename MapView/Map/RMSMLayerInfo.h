@@ -27,7 +27,44 @@
     float dpi;
     NSString *strParams;
     NSString * projection;
+    NSArray *layerInfoList;
 }
+
+/**
+ * APIProperty: layerInfo
+ * {NSArray} 图层信息列表。
+ */
+@property (nonatomic,retain) NSArray  *layerInfoList;
+
+/**
+ * APIProperty: isUseDisplayFilter
+ * {BOOL} 是否使用图层过滤。
+ */
+@property (nonatomic) BOOL  isUseDisplayFilter;
+
+/**
+ * APIProperty: tempLayerInfo
+ * {NSDictionary} 临时图层的json描述。
+ */
+@property (retain,nonatomic) NSDictionary *tempLayerInfo;
+
+/**
+ * APIProperty: tempLayerName
+ * {NSString} 临时图层的名称。
+ */
+@property (retain,nonatomic) NSString *tempLayerName;
+
+/**
+ * APIProperty: tempLayers
+ * {NSArray} 临时图层的子图层列表。
+ */
+@property (nonatomic,retain) NSArray *tempLayers;
+
+/**
+ * APIProperty: strLayersID
+ * {NSString} 需要显示的图层id拼接的字符串。
+ */
+@property (nonatomic,retain) NSString *strLayersID;
 
 /**
 * APIProperty: dWidth
@@ -60,6 +97,13 @@
  * {NSString} url的可选参数字符串。
  */
 @property (retain,readwrite) NSString *strParams;
+
+/**
+ * Property: urlParam
+ * {NSString} url的可选参数集合字典。
+ */
+@property (retain,nonatomic) NSMutableDictionary* urlParam;
+
  /**
  * Constructor: initWithTile
  * 所有SuperMap iServer 6R 分块动态 REST 图层。
@@ -103,6 +147,9 @@
 
 - (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url params:(NSMutableDictionary*)params;
 
+
+- (id)initWithTile:(NSString *)layerName linkurl:(NSString*)url params:(NSMutableDictionary*)params isUseDisplayFilter:(BOOL) isUseDisplayFilter;
+
 /**
 * APIMethod: calculateDpi
 * 计算当前地图服务DPI。
@@ -141,7 +188,68 @@
  * Returns:
  * {<NSString>}  当前地图分辨率。
  */
-
 -(NSString*) getResolutionFromScaleDpi:(double)dScale;
 
+/**
+ * APIMethod: initStrParams
+ * 初始化StrParams参数
+ *
+ * Parameters:
+ * params - {NSMutableDictionary} 服务器返回的地图参数字典
+ *
+ */
+- (void) initStrParams:(NSMutableDictionary*) params;
+
+/**
+ * APIMethod: createTempLayer
+ * 创建临时图层
+ *
+ *
+ * Returns:
+ * {<BOOL>}  临时图层创建是否成功。
+ */
+-(BOOL) createTempLayer;
+//-(NSArray *)tempLayerList;
+
+/**
+ * APIMethod: deleteTempLayer
+ * 根删除临时图层
+ *
+ * Returns:
+ * {<BOOL>}  是否删除成功。
+ */
+- (BOOL) deleteTempLayer;
+/**
+ * APIMethod: updateTempLayer
+ * 更新临时图层，用于临时图层子图层的内部对象显示控制。
+ *
+ * Parameters:
+ * dict - {NSDictionary} 以临时图层的子图层索引为key，过滤条件为value的字段，用于显示控制
+ *
+ * Returns:
+ * {<BOOL>}  地图信息更新是否成功。
+ */
+
+- (BOOL)updateTempLayer:(NSDictionary *)dict;
+/**
+ * APIMethod: setTempLayer
+ * 控制临时图层子图层的显示和隐藏。
+ *
+ * Parameters:
+ * layersID - {NSString} 子图层索引号的字符串
+ *
+ * Returns:
+ * {<BOOL>}  地图信息更新是否成功。
+ */
+
+- (BOOL)setTempLayer:(NSString *)layersID;
+/**
+ * APIMethod: layerInfo
+ * 临时图层信息，主要用于初始化tempLayerInfo变量。
+ *
+ * Returns:
+ * {<BOOL>}  获取临时图层信息是否成功。
+ */
+
+- (BOOL)layerInfo;
 @end

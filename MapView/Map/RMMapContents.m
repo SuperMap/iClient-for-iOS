@@ -44,6 +44,7 @@
 
 #import "RMLayerCollection.h"
 #import "RMMarkerManager.h"
+#import "SMTianDiTuTileSource.h"
 
 #import "RMMarker.h"
 
@@ -679,9 +680,6 @@ BOOL delegateHasRegionUpdate;
                     [renderer setNeedsDisplay];
                 }
             }
-            
-            
-            
         }
     }
     else
@@ -939,7 +937,7 @@ BOOL delegateHasRegionUpdate;
 }
 -(void) setProjectedBounds: (RMProjectedRect) boundsRect
 {
-    [mercatorToScreenProjection setProjectedBounds:boundsRect];
+    [mercatorToScreenProjection setProjectedBounds2:boundsRect];
 }
 
 -(RMTileRect) tileBounds
@@ -1142,10 +1140,15 @@ static BOOL _performExpensiveOperations = YES;
         RMProjectedRect zoomRect;
         RMProjectedPoint myOrigin = [projection latLongToPoint:sw];
         //Default is with scale = 2.0 mercators/pixel
+        
         zoomRect.size.width = [self screenBounds].size.width * 2.0;
         zoomRect.size.height = [self screenBounds].size.height * 2.0;
+        
+        
+        
         myOrigin.easting = myOrigin.easting - (zoomRect.size.width / 2);
         myOrigin.northing = myOrigin.northing - (zoomRect.size.height / 2);
+        
         zoomRect.origin = myOrigin;
         [self zoomWithRMMercatorRectBounds:zoomRect];
     }
@@ -1182,24 +1185,46 @@ static BOOL _performExpensiveOperations = YES;
                 zoomRect.size.height = [self screenBounds].size.height * (myPoint.easting / ([self screenBounds].size.width - pixelBuffer));
             }
         }
-        myOrigin.easting = myOrigin.easting - (zoomRect.size.width / 2);
-        myOrigin.northing = myOrigin.northing - (zoomRect.size.height / 2);
-//        RMLog(@"Origin is calculated at: %f, %f", [projection pointToLatLong:myOrigin].latitude, [projection pointToLatLong:myOrigin].longitude);
+
         /*It gets all messed up if our origin is lower than the lowest place on the map, so we check.
          if(myOrigin.northing < -19971868.880409)
          {
          myOrigin.northing = -19971868.880409;
          }*/
+
         zoomRect.origin = myOrigin;
-        [self zoomWithRMMercatorRectBounds:zoomRect];
+
+        float scaleX = myPoint.easting / [self screenBounds].size.width;
+        float scaleY = myPoint.northing / [self screenBounds].size.height;
+        
+        // 平均比例尺.
+        float fixScale = (scaleX + scaleY) /2;
+//        [self setScaledMetersPerPixel:fixScale * self.metersPerPixel];
+//        [self setScaledMetersPerPixel:fixScale ];
+        [self setCenterProjectedPoint:zoomRect.origin];
+        [self setMetersPerPixel:fixScale];
     }
 }
 
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds
 {
-    [self setProjectedBounds:bounds];
+//    [self setProjectedBounds:bounds];
+    
+    
+    float scaleX = bounds.size.width / [self screenBounds].size.width;
+    float scaleY = bounds.size.height / [self screenBounds].size.height;
+   
+    // I will pick a scale in between those two.
+  
+    [self setScaledMetersPerPixel:(scaleX + scaleY) / 2];
+    bounds.origin.easting = -116;
+    bounds.origin.northing = 39;
+    [self setCenterProjectedPoint:bounds.origin];
+    
+    
     [overlay correctPositionOfAllSublayers];
     
+    // 地图刷新
     if (tileLoaders&&[tileLoaders count]>0) {
         for(RMTileLoader* tileLoader in tileLoaders)
         {
@@ -1217,8 +1242,78 @@ static BOOL _performExpensiveOperations = YES;
     
     
 }
+-(void)refreshMap{
+    
+    for (id<RMTileSource> tileSources in [tileSourcesContainer tileSources]) {
+        [tileSources setIsUseCache:NO];
+    }
+    [overlay correctPositionOfAllSublayers];
+    
+    // 地图刷新TILE
+    if (tileLoaders&&[tileLoaders count]>0) {
+        for(RMTileLoader* tileLoader in tileLoaders)
+        {
+            [tileLoader clearLoadedBounds];
+            [tileLoader updateLoadedImages];
+        }
+    }
+    
+    if (renderers&&[renderers count]>0) {
+        for(RMMapRenderer* renderer in renderers)
+        {
+            [renderer setNeedsDisplay];
+        }
+    }
+}
 
+- (void)setLayerID:(NSString *) layerID forTileSource:(id <RMTileSource>)tileSource{
+    RMSMTileSource *smTileSource = tileSource;
+    // 如果启用tempLayer，则必须通过修改tempLayer的属性来控制图层的显示和隐藏
+    if ([smTileSource.m_Info isUseDisplayFilter]) {
+        [self setTempLayerID:layerID forTileSource:smTileSource];
+        return;
+    }
+    // 设置为不使用本地缓存
+    [smTileSource setIsUseCache:NO];
+    
+    [smTileSource.m_Info.urlParam setObject:[NSString stringWithFormat:@"%@",layerID] forKey:@"layersID"];
+    [smTileSource.m_Info initStrParams:smTileSource.m_Info.urlParam];
+    
+    //    delegateHasRegionUpdate = true;
+    [[tileSource tileLoader] updateLoadedImages];
+}
+ ///  [1,2,3]
+- (void)setLayerID:(NSString *) layerID forTileSourceAtIndex:(NSUInteger)index{
+    if (index >= [[tileSourcesContainer tileSources] count]){
+        NSLog(@"Index is out of bounds...");
+        return;
+    }
+    [self setLayerID:layerID forTileSource:[[tileSourcesContainer tileSources] objectAtIndex:index]];
+}
 
+- (void)setTempLayerID:(NSString *) layerID  forTileSource:(id<RMTileSource>)tileSource{
+    RMSMTileSource *smTileSource =tileSource;
+    // 后台执行图层控制请求
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        BOOL result = [smTileSource.m_Info setTempLayer:layerID];
+        if (result) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 设置为不使用本地缓存
+                [smTileSource setIsUseCache:NO];
+                [[tileSource tileLoader] updateLoadedImages];
+            });
+        }
+    });
+}
+/*
+- (void)setTempLayerID:(NSString *) layerID forTileSourceAtIndex:(NSUInteger)index{
+    if (index >= [[tileSourcesContainer tileSources] count]){
+        NSLog(@"Index is out of bounds...");
+        return;
+    }
+    [self setTempLayerID:layerID  forTileSource:[[tileSourcesContainer tileSources] objectAtIndex:index]];
+}
+*/
 #pragma mark Markers and overlays
 
 // Move overlays stuff here - at the moment overlay stuff is above...
@@ -1534,5 +1629,26 @@ static BOOL _performExpensiveOperations = YES;
   
 }
 
+-(void)setDisplayFilter:(NSDictionary *)displayFilter forTileSource:(id<RMTileSource>)tileSource{
+    
+    RMSMTileSource *smTileSource = tileSource;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        BOOL result = [[smTileSource m_Info] updateTempLayer:displayFilter];
+        if (result) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // 设置为不使用本地缓存
+                [smTileSource setIsUseCache:NO];
+                [[tileSource tileLoader] updateLoadedImages];
+            });
+        }
+    });
+}
 
+- (void)setDIsplayFilter:(NSDictionary *)displayFilter forTileSourceAtIndex:(NSUInteger)index{
+    if (index >= [[tileSourcesContainer tileSources] count]){
+        NSLog(@"Index is out of bounds...");
+        return;
+    }
+    [self setDisplayFilter:displayFilter forTileSource:[[tileSourcesContainer tileSources] objectAtIndex:index]];
+}
 @end

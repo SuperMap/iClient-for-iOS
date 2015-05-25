@@ -146,6 +146,7 @@
 
 - (RMProjectedRect) projectedBounds;
 - (void) setProjectedBounds: (RMProjectedRect) bounds;
+- (void) setProjectedBounds2: (RMProjectedRect) bounds;
 - (RMProjectedPoint) projectedCenter;
 - (void) setProjectedCenter: (RMProjectedPoint) aPoint;
 - (void) setScreenBounds:(CGRect)rect;

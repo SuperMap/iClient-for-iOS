@@ -116,7 +116,7 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
             aPoint.northing = planetBounds.origin.northing;
         else if (aPoint.northing > (planetBounds.origin.northing + planetBounds.size.height))
             aPoint.northing = planetBounds.origin.northing + planetBounds.size.height;
-        //NSLog(@"%f",planetBounds.size.width);
+        NSLog(@"planetBounds %f %f %f",planetBounds.origin.northing,planetBounds.origin.easting, planetBounds.size.width);
         return aPoint;
     }
     else
@@ -158,22 +158,19 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
             aLatLong.longitude,
             aLatLong.latitude,
         };
-        
         return result_pointSm;
     }
 	projUV uv = {
 		aLatLong.longitude * DEG_TO_RAD,
 		aLatLong.latitude * DEG_TO_RAD
 	};
-	
+    
 	projUV result = pj_fwd(uv, internalProjection);
-	
     
 	RMProjectedPoint result_point = {
 		result.u,
 		result.v,
 	};
-	
 	return result_point;
 }
 
@@ -198,6 +195,7 @@ static RMProjection* _google = nil;
 static RMProjection* _latlong = nil;
 static RMProjection* _osgb = nil;
 static RMProjection* _sm = nil;
+static RMProjection* _userDefined = nil;
 
 + (RMProjection*)googleProjection
 {
@@ -271,5 +269,22 @@ static RMProjection* _sm = nil;
 	}
 }
 
++(RMProjection*) userDefinedProjection{
+    if (_userDefined) {
+        return _userDefined;
+    }
+    double dHeight = 85.051128779806*2;
+    double dWidth = 180*2;
+    double dleft = -180;
+    double dbottom = -85.051128779806;
+    RMProjectedRect theBounds = RMMakeProjectedRect(dleft,dbottom,dWidth,dHeight);
+    
+    _userDefined = [[RMProjection alloc] initWithString:@"+title= Google Mercator EPSG:900913\
+           +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs"
+                                      InBounds: theBounds];
+    _userDefined.bIsSM = false;
+    
+    return _userDefined;
+}
 
 @end

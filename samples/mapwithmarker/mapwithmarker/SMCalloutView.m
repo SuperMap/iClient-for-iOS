@@ -162,6 +162,7 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
     return CGSizeMake(nudgeLeft ?: nudgeRight, nudgeTop ?: nudgeBottom);
 }
 
+// marker 点击时响应
 - (void)presentCalloutFromRect:(CGRect)rect inView:(UIView *)view constrainedToView:(UIView *)constrainedView permittedArrowDirections:(SMCalloutArrowDirection)arrowDirections animated:(BOOL)animated {
 
     // figure out the constrained view's rect in our popup view's coordinate system
@@ -208,8 +209,11 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
     if (anchorX > maxPointX) adjustX = anchorX - maxPointX;
 
     // add the callout to the given view
-    [view addSubview:self];
-
+    // 如果mapview中没有marker弹出框，则将它添加到mapView中
+    if (![[view subviews] containsObject:self]) {
+        [view addSubview:self];
+    }
+    
     CGPoint calloutOrigin = {
         .x = calloutX + adjustX,
         .y = bestDirection == SMCalloutArrowDirectionDown ? (anchorY - CALLOUT_HEIGHT + BOTTOM_ANCHOR_MARGIN) : anchorY
@@ -246,28 +250,101 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
     if (popupCancelled) return;
     
     // if we need to delay, we don't want to be visible while we're delaying, so hide us in preparation for our popup
-    self.hidden = YES;
+//    self.hidden = YES;
+    self.hidden = NO;
     
-    self.alpha = 1; // in case it's zero from fading out in -dismissCalloutAnimated
-    
+    self.alpha = 1;  // in case it's zero from fading out in -dismissCalloutAnimated
+ 
     CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
     CAMediaTimingFunction *easeInOut = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    
+        
     bounceAnimation.beginTime = CACurrentMediaTime() + delay;
     bounceAnimation.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0.05],
-                              [NSNumber numberWithFloat:1.11245],
-                              [NSNumber numberWithFloat:0.951807],
-                              [NSNumber numberWithFloat:1.0],nil];
-    bounceAnimation.keyTimes = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0], 
-                                [NSNumber numberWithFloat:4.0/9.0], 
-                                [NSNumber numberWithFloat:4.0/9.0+5.0/18.0], 
-                                [NSNumber numberWithFloat:1.0],nil];
+                                  [NSNumber numberWithFloat:1.11245],
+                                  [NSNumber numberWithFloat:0.951807],
+                                  [NSNumber numberWithFloat:1.0],nil];
+    bounceAnimation.keyTimes = [NSArray arrayWithObjects:[NSNumber numberWithFloat:0],
+                                    [NSNumber numberWithFloat:4.0/9.0],
+                                    [NSNumber numberWithFloat:4.0/9.0+5.0/18.0],
+                                    [NSNumber numberWithFloat:1.0],nil];
     bounceAnimation.duration = animated ? BOUNCE_ANIMATION_DURATION : 0;
     bounceAnimation.timingFunctions = [NSArray arrayWithObjects:easeInOut, easeInOut, easeInOut, easeInOut,nil];
     bounceAnimation.delegate = self;
-    
+        
     [self.layer addAnimation:bounceAnimation forKey:@"bounce"];
+//    [self.layer addAnimation:nil forKey:@"bounce"];
 }
+
+// marker 弹出框位置更新
+- (void)updateCalloutFromRect:(CGRect)rect inView:(UIView *)view constrainedToView:(UIView *)constrainedView permittedArrowDirections:(SMCalloutArrowDirection)arrowDirections{
+    
+    // figure out the constrained view's rect in our popup view's coordinate system
+    CGRect constrainedRect = [constrainedView convertRect:constrainedView.bounds toView:view];
+    
+    // size the callout to fit the width constraint as best as possible
+    self.$size = [self sizeThatFits:CGSizeMake(constrainedRect.size.width, CALLOUT_HEIGHT)];
+    
+    // how much room do we have in the constraint box, both above and below our target rect?
+    CGFloat topSpace = CGRectGetMinY(rect) - CGRectGetMinY(constrainedRect);
+    CGFloat bottomSpace = CGRectGetMaxY(constrainedRect) - CGRectGetMaxY(rect);
+    
+    // we prefer to point our arrow down.
+    SMCalloutArrowDirection bestDirection = SMCalloutArrowDirectionDown;
+    
+    // we'll point it up though if that's the only option you gave us.
+    if (arrowDirections == SMCalloutArrowDirectionUp)
+        bestDirection = SMCalloutArrowDirectionUp;
+    
+    // or, if we don't have enough space on the top and have more space on the bottom, and you
+    // gave us a choice, then pointing up is the better option.
+    if (arrowDirections == SMCalloutArrowDirectionAny && topSpace < CALLOUT_HEIGHT && bottomSpace > topSpace)
+        bestDirection = SMCalloutArrowDirectionUp;
+    
+    // show the correct anchor based on our decision
+    topAnchor.hidden = (bestDirection == SMCalloutArrowDirectionDown);
+    bottomAnchor.hidden = (bestDirection == SMCalloutArrowDirectionUp);
+    
+    // we want to point directly at the horizontal center of the given rect. calculate our "anchor point" in terms of our
+    // target view's coordinate system. make sure to offset the anchor point as requested if necessary.
+    CGFloat anchorX = self.calloutOffset.x + CGRectGetMidX(rect);
+    CGFloat anchorY = self.calloutOffset.y + (bestDirection == SMCalloutArrowDirectionDown ? CGRectGetMinY(rect) : CGRectGetMaxY(rect));
+    
+    // we prefer to sit in the exact center of our constrained view, so we have visually pleasing equal left/right margins.
+    CGFloat calloutX = roundf(CGRectGetMidX(constrainedRect) - self.$width / 2);
+    
+    // what's the farthest to the left and right that we could point to, given our background image constraints?
+    CGFloat minPointX = calloutX + ANCHOR_MARGIN;
+    CGFloat maxPointX = calloutX + self.$width - ANCHOR_MARGIN;
+    
+    // we may need to scoot over to the left or right to point at the correct spot
+    CGFloat adjustX = 0;
+    if (anchorX < minPointX) adjustX = anchorX - minPointX;
+    if (anchorX > maxPointX) adjustX = anchorX - maxPointX;
+    
+    
+    CGPoint calloutOrigin = {
+        .x = calloutX + adjustX,
+        .y = bestDirection == SMCalloutArrowDirectionDown ? (anchorY - CALLOUT_HEIGHT + BOTTOM_ANCHOR_MARGIN) : anchorY
+    };
+    
+    self.$origin = calloutOrigin;
+    
+    // now set the *actual* anchor point for our layer so that our "popup" animation starts from this point.
+    CGPoint anchorPoint = [view convertPoint:CGPointMake(anchorX, anchorY) toView:self];
+    anchorPoint.x /= self.$width;
+    anchorPoint.y /= self.$height;
+    self.layer.anchorPoint = anchorPoint;
+    
+    // setting the anchor point moves the view a bit, so we need to reset
+    self.$origin = calloutOrigin;
+    
+    // layout now so we can immediately start animating to the final position if needed
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+    
+}
+
+
 
 - (void)animationDidStart:(CAAnimation *)anim {
     // ok, animation is on, let's make ourselves visible!

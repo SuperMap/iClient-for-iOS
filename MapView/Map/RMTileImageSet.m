@@ -155,7 +155,7 @@
 	RMTileImage *dummyTile = [RMTileImage dummyTile:tile];
 	RMTileImage *tileImage = [images member:dummyTile];
 
-	if (tileImage != nil)
+	if (tileImage != nil  && [tileSource isUseCache] == YES)
 	{
 		[tileImage setScreenLocation:screenLocation];
 		[images addObject:dummyTile];
@@ -206,7 +206,13 @@
 		screenLocation.size.width = pixelsPerTile;
 		screenLocation.size.height = pixelsPerTile;
 		t.zoom = rect.origin.tile.zoom;
+        
+        // 在刷新或者重新加载当前tileSource时，清理已存在的tile图片
+        if ([tileSource isUseCache]==NO) {
+            [self removeAllTiles];
+        }
 
+        
 		for (t.x = roundedRect.origin.tile.x; t.x < roundedRect.origin.tile.x + tileRegionWidth; t.x++)
 		{
 			for (t.y = roundedRect.origin.tile.y; t.y < roundedRect.origin.tile.y + tileRegionHeight; t.y++)
@@ -223,7 +229,7 @@
 				[self addTile:normalisedTile At:screenLocation];
 			}
 		}
-
+        [tileSource setIsUseCache:YES];
 		// adjust rect for next zoom level down until we're at minimum
 		if (--rect.origin.tile.zoom <= minimumZoom)
 			break;

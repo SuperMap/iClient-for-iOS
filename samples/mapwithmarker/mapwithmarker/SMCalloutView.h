@@ -34,7 +34,7 @@ extern NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView;
 - (void)presentCalloutFromRect:(CGRect)rect inView:(UIView *)view constrainedToView:(UIView *)constrainedView permittedArrowDirections:(SMCalloutArrowDirection)arrowDirections animated:(BOOL)animated;
 
 - (void)dismissCalloutAnimated:(BOOL)animated;
-
+- (void)updateCalloutFromRect:(CGRect)rect inView:(UIView *)view constrainedToView:(UIView *)constrainedView permittedArrowDirections:(SMCalloutArrowDirection)arrowDirections;
 @end
 
 //

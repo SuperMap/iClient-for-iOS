@@ -27,11 +27,14 @@
     RMTileLoader* _tileLoader;
     RMMapRenderer* _renderer;
     BOOL _isBaseLayer;
+    BOOL _isUseCache;
 }
 //@property (nonatomic, assign) RMTileImageSet * imagesOnScreen;
 //@property (nonatomic, assign) RMTileLoader * tileLoader;
 //@property (nonatomic, assign) RMMapRenderer * renderer;
 @property (nonatomic,retain) RMSMLayerInfo* m_Info;
+//用于判断在加载地图是是否使用本地缓存
+@property (nonatomic) BOOL isUseCache;
 -(id) init;
 /**
  * Constructor: initWithInfo

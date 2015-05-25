@@ -48,14 +48,19 @@
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if (connectionError) {
              NSLog(@"Error:%@   Code:%ld",[connectionError localizedDescription],(long)[connectionError code]);
-            failedBlock(connectionError);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                failedBlock(connectionError);
+            });
+
         }else{
             NSError *e;
             NSDictionary *dict =[NSJSONSerialization JSONObjectWithData: data
                                                                 options: NSJSONWritingPrettyPrinted
                                                                   error: &e];
             TransferSolutionResult *transferSolutionResult = [[TransferSolutionResult alloc] initWithDict:dict];
-            finishBlock(transferSolutionResult);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                finishBlock(transferSolutionResult);
+            });
         }
     }];
 }
@@ -95,14 +100,20 @@
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         if (connectionError) {
             NSLog(@"Error:%@   Code:%ld",[connectionError localizedDescription],(long)[connectionError code]);
-            failedBlock(connectionError);
+            
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                failedBlock(connectionError);
+            });
         }else{
             NSError *e;
             NSDictionary *dict =[NSJSONSerialization JSONObjectWithData: data
                                                                   options: NSJSONWritingPrettyPrinted
                                                                   error: &e];
             TransferGuide *transferGuide = [[TransferGuide alloc] initWithDict:dict];
-            finishBlock(transferGuide);
+            
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                finishBlock(transferGuide);
+            });
         }
     }];
 }
@@ -130,7 +141,9 @@
         
         if (connectionError) {
             NSLog(@"Error:%@   Code:%ld",[connectionError localizedDescription],(long)[connectionError code]);
-            failedBlock(connectionError);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                failedBlock(connectionError);
+            });
         }else{
             NSError *e;
             NSArray *arr =[NSJSONSerialization JSONObjectWithData: data
@@ -141,7 +154,9 @@
                 TransferStopInfo *stopInfo = [[TransferStopInfo alloc] initWithDict:[arr objectAtIndex:i]];
                 [stopsInfo addObject:stopInfo];
             }
+            dispatch_sync(dispatch_get_main_queue(), ^{
                 finishBlock(stopsInfo);
+            });
         }
     }];
     

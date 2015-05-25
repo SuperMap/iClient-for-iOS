@@ -201,7 +201,7 @@
     {
         _projection = newProjection;
     }
-    
+    /*
     else if([_projection bIsSM] && [newProjection bIsSM] )
     {
         
@@ -216,7 +216,7 @@
             [_tileSourcesLock unlock];
             return NO;
     }
-    
+    */
     
     if ( ! _mercatorToTileProjection)
         _mercatorToTileProjection = newMercatorToTileProjection;

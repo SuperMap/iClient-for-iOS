@@ -11,8 +11,9 @@
 #import "RMTileImage.h"
 #import "RMTileLoader.h"
 #import "RMSMTileProjection.h"
-#import "RMTiledLayerController.h"
 #import "RMProjection.h"
+#import "RMTiledLayerController.h"
+
 #import "MapView_Prefix.pch"
 
 @implementation RMSMTileSource
@@ -23,10 +24,11 @@
         return nil;
     
     networkOperations = TRUE;
+    _isBaseLayer=NO;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMSuspendNetworkOperations object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMResumeNetworkOperations object:nil];
-    _isBaseLayer=NO;
+    [self setIsUseCache:YES];
     return self;
 }
 
@@ -39,16 +41,17 @@
     int height = rect_screen.size.height;
     self.m_Info = info;
     
-    m_dResolutions = [[NSMutableArray alloc] initWithCapacity:16];
-    m_dScales = [[NSMutableArray alloc] initWithCapacity:16];
+    m_dResolutions = [[NSMutableArray alloc] initWithCapacity:18];
+    m_dScales = [[NSMutableArray alloc] initWithCapacity:18];
     
     double wRes = self.m_Info.dWidth / width;
     double hRes = self.m_Info.dHeight / height;
     double maxResolution = wRes>hRes?wRes:hRes;
+    //maxResolution = 0.703125;
     double base = 2.0;
     NSString*  strScale;
     double dResolutions;
-    for(int i=0;i<16;++i)
+    for(int i=0;i<18;++i)
     {
         dResolutions = maxResolution/pow(base,i);
         [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
@@ -61,7 +64,7 @@
     smProjection=[[RMProjection alloc] initForSMProjection];
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:self.m_Info resolutions:m_dResolutions];
     
-    [self setMaxZoom:15];
+    [self setMaxZoom:[m_dResolutions count]-1];
     [self setMinZoom:0];
     return  self;
 }
@@ -181,9 +184,9 @@
 
 -(void) setM_dScales:(NSMutableArray*) scales
 {
-    [m_dScales release];
-    [m_dResolutions release];
-    [self getResolutionsFromScales:scales];
+    //[m_dScales release];
+    //[m_dResolutions release];
+    //[self getResolutionsFromScales:scales];
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dScales  count]-1 minZoom:0 info:self.m_Info resolutions:m_dResolutions];
     
     
@@ -278,10 +281,17 @@
     NSString* strScale = [m_dScales objectAtIndex:(int)tile.zoom];
     //float fScale = [result floatValue];
     //transparent=true&cacheEnabled=true&redirect=true&width=256&height=256&x=%d&y=%d&scale=%@
+    NSString* strUrl = nil;
+    if (self.m_Info.tempLayerName) {
+        // 使用临时图层
+        strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@&layersID=%@",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale,self.m_Info.tempLayerName];
+    }else{
+        strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale];
+    }
     
-    NSString* strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale];
-    //    NSLog(@"%@",self.m_Info.strParams);
-    
+//    NSLog(@"%@",self.m_Info.strParams);
+//    NSLog(@"%@",strUrl);
+//    NSLog(@"%d",tile.zoom);
     return strUrl;
 }
 

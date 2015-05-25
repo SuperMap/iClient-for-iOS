@@ -24,6 +24,7 @@
 // CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
+@class RMSMLayerInfo;
 #import <UIKit/UIKit.h>
 
 #import "RMFoundation.h"
@@ -428,6 +429,70 @@ enum {
 - (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)se;
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 
+/**
+ * APIMethod: refreshMap
+ * 刷新瓦片地图
+ *
+ */
+- (void)refreshMap;
+
+/**
+ * APIMethod: setLayerID:forTileSource:
+ * 控制tileSource图层的可见性
+ *
+ * Parameters:
+ * layerID - {NSString} 图层在tileSource中的索引，如[1,2,3]-表示tileSource中的索引为1，2，3的图层可见
+ * tileSource - {id <RMTileSource>} 需要控制的tileSource
+ *
+ */
+
+- (void)setLayerID:(NSString *) layerID forTileSource:(id <RMTileSource>)tileSource;
+
+/**
+ * APIMethod: setLayerID:forTileSourceAtIndex:
+ * 控制索引为index的tileSource中各个图层的可见性
+ *
+ * Parameters:
+ * layerID - {NSString} 图层在tileSource中的索引，如[1,2,3]-表示tileSource中的索引为1，2，3的图层可见
+ * index - {NSUInteger} tileSource在mapContents中的索引
+ *
+ */
+- (void)setLayerID:(NSString *) layerID forTileSourceAtIndex:(NSUInteger)index;
+
+/**
+ * APIMethod: setDisplayFilter:forTileSource:
+ * 设置过滤条件，控制图层内部对象显示
+ *
+ * Parameters:
+ * displayFilter - {NSDictionary} 图层显示过滤条件
+ * forTileSource - {id<RMTileSource>} 需要控制的tileSource
+ *
+ */
+- (void)setDisplayFilter:(NSDictionary *)displayFilter forTileSource:(id<RMTileSource>)tileSource;
+
+/**
+ * APIMethod: setDisplayFilter:forTileSourceAtIndex:
+ * 设置过滤条件，控制图层内部对象显示
+ *
+ * Parameters:
+ * displayFilter - {NSDictionary} 图层显示过滤条件
+ * index - {NSUInteger} tileSource在mapContents中的索引
+ *
+ */
+- (void)setDIsplayFilter:(NSDictionary *)displayFilter forTileSourceAtIndex:(NSUInteger)index;
+
+/**
+ * APIMethod: setTempLayerID:forTileSource:
+ * 用于控制临时图层的子图层的显示或隐藏
+ *
+ * Parameters:
+ * layerID - {NSString} 图层在tileSource中的索引，如[1,2,3]-表示tileSource中的索引为1，2，3的图层可见
+ * tileSource - {id<RMTileSource>} 需要控制的tileSource
+ *
+ */
+- (void)setTempLayerID:(NSString *) layerID forTileSource:(id<RMTileSource>)tileSource;
+
+//- (void)setTempLayerID:(NSString *) layerID forTileSourceAtIndex:(NSUInteger)index;
 /**
  * APIMethod: latitudeLongitudeBoundingBoxFor
  * 返回包含整个屏幕的最小边界框

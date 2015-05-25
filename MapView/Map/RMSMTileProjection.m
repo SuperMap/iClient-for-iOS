@@ -140,6 +140,7 @@
         tile.tile.y=0;
     }
     else {
+//        NSLog(@"%e",y);
         tile.tile.y =(uint32_t)y ;
     }
     //    NSLog(@"x %f",x);
@@ -147,6 +148,7 @@
         tile.tile.x=0;
     }
     else{
+//        NSLog(@"%e",x);
         tile.tile.x = (uint32_t)x;
     }
     
@@ -154,10 +156,10 @@
     tile.tile.zoom = zoom;
     tile.offset.x = (float)x - tile.tile.x;
     tile.offset.y = (float)y - tile.tile.y;
-    //    NSLog(@"tile.offset.x :%f",tile.offset.x);
-    //     NSLog(@"tile.tile.x :%u",tile.tile.x);
-    //    NSLog(@"tile.tile.y :%U",tile.tile.y);
-    //    NSLog(@"tile.offset.y :%f",tile.offset.y);
+//     NSLog(@"tile.offset.x :%f",tile.offset.x);
+//    NSLog(@"tile.tile.x :%u",tile.tile.x);
+//    NSLog(@"tile.tile.y :%U",tile.tile.y);
+//    NSLog(@"tile.offset.y :%f",tile.offset.y);
     
     return tile;
 }
@@ -207,9 +209,9 @@
     tileRect.size.width = aRect.size.width / limit;
     tileRect.size.height = aRect.size.height / limit;
     
-    //    NSLog(@"width is %f",tileRect.size.width);
-    //    NSLog(@"height is %f",tileRect.size.height);
-    //    NSLog(@"limit is %f",limit);
+//    NSLog(@"width is %f",tileRect.size.width);
+//    NSLog(@"height is %f",tileRect.size.height);
+//    NSLog(@"limit is %f",limit);
     //
     
     return tileRect;
@@ -238,7 +240,7 @@
     //       NSLog(@"%@",m_dResolutions);
     for (id value in m_dResolutions) {
         float fValue = [value floatValue];
-        //        NSLog(@"fValue %f",fValue);
+//                NSLog(@"fValue %f",fValue);
         if(zoom == 0)
             oldScale = fValue;
         
@@ -268,7 +270,7 @@
         zoom++;
         
     }
-    //  NSLog(@"zoom %d",zoom);
+    NSLog(@"zoom %d",zoom);
     return zoom;
 }
 
