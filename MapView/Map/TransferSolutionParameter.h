@@ -41,6 +41,30 @@
  * {NSString} 乘车偏好，在{<TransferPreference>}类中定义。
  */
 @property(nonatomic,retain) NSString *transferPreference;
+
+/**
+ * APIProperty: evadelLines
+ * {NSMutableArray} 避让线路ID集合，可选参数。
+ */
+@property(nonatomic,retain) NSMutableArray *evadelLines;
+
+/**
+ * APIProperty: evadelStops
+ * {NSMutableArray} 避让站点ID集合，可选参数。
+ */
+@property(nonatomic,retain) NSMutableArray *evadelStops;
+/**
+ * APIProperty: priorLines
+ * {NSMutableArray} 优先线路ID集合，可选参数。
+ */
+@property(nonatomic,retain) NSMutableArray *priorLines;
+
+/**
+ * APIProperty: priorStops
+ * {NSMutableArray} 优先站点ID集合，可选参数。
+ */
+@property(nonatomic,retain) NSMutableArray *priorStops;
+
 /**
  * Constructor: TransferSolutionParameter
  * 交通换乘方案类
@@ -49,7 +73,7 @@
  * points - {NSMutableArray} 乘车方案的起始和终止点组成的数组，可以起始或终止点的
  *           地理坐标即{<Point2D>}类型数组,也可以是站点id组成的Integer数组。
  *
- * solutionCount - {NSInteger}返回的乘车方案的数量。
+ * solutionCount - {NSInteger}返回的乘车方案的数量，默认值为5。
  *
  * walkingRatio - {double}步行与公交的消耗权重比，默认值为10。
  *
@@ -58,4 +82,5 @@
  * transferPreference - {NSString} 乘车偏好，在{<TransferPreference>}类中定义
  */
 -(id)initWithPoints:(NSArray *)points solutionCount:(NSInteger *)solutionCount walkingRatio:(double) walkingRatio transferTactic:(NSString *) transferTactic transferPreference:(NSString *)transferPreference;
+
 @end

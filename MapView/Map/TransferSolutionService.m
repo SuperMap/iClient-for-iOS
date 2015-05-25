@@ -32,8 +32,25 @@
     NSArray *arr = [self castPointsToArr:[param points]];
     
     NSString *strAnalystParameter=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
+    NSMutableString *endUrl = [NSMutableString stringWithFormat:@"%@solutions.json?points=%@&walkingRatio=%f&transferTactic=%@&solutionCount=%d&transferPreference=%@",_strSolutionUrl,strAnalystParameter,[param walkingRatio],[param transferTactic],[[NSNumber numberWithUnsignedLong:[param solutionCount]] intValue],[param transferPreference]];
     
-    NSString *endUrl = [NSString stringWithFormat:@"%@solutions.json?points=%@&walkingRatio=%f&transferTactic=%@&solutionCount=%d&transferPreference=%@",_strSolutionUrl,strAnalystParameter,[param walkingRatio],[param transferTactic],[[NSNumber numberWithUnsignedLong:[param solutionCount]] intValue],[param transferPreference]];
+    // 设置避让线路
+    if ([param evadelLines]) {
+        [endUrl appendFormat:@"&evadelLines=%@",[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:[param evadelLines] options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]];
+    }
+    // 设置避让站点
+    if ([param evadelStops]) {
+        [endUrl appendFormat:@"&evadelStops=%@",[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:[param evadelStops] options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]];
+    }
+    // 设置优先线路
+    if ([param priorLines]) {
+        [endUrl appendFormat:@"&priorLines=%@",[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:[param priorLines] options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]];
+    }
+    // 设置优先站点
+    if ([param priorStops]) {
+        [endUrl appendFormat:@"&priorStops=%@",[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:[param priorStops] options:
+                                                                   NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]];
+    }
     
     //第一步，创建url
     NSURL *url = [NSURL URLWithString:[endUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];

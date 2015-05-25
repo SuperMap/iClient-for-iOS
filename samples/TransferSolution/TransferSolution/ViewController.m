@@ -119,10 +119,14 @@
 //    NSArray *arr = [[NSArray alloc] initWithObjects:[startPoint position], [endPoint position],nil];
     // 设置换乘分析的参数
     TransferSolutionParameter *param = [[TransferSolutionParameter alloc] initWithPoints:points solutionCount:[@"6" integerValue] walkingRatio:10 transferTactic: LESS_TIME transferPreference:NONE];
+    // 设置避让站点。  避让线路，优先线路，优先站点设置类似
+    
+    [param setEvadelStops:[[NSMutableArray alloc] initWithObjects:@"93",@"94",@"88", nil]];
      [solutionService processAsync4SolutionWithParam:param finishBlock:^(TransferSolutionResult *transferSolutionResult){
          guide = [transferSolutionResult defaultGuide];
          transferSolutions =[transferSolutionResult transferSolution];
          [pupoListView reloadData];
+         NSLog(@"%@",[transferSolutionResult transferSolution]);
          NSMutableArray *items =  [guide transferGuideItems];
 //         [self performSelectorOnMainThread:@selector(addLayer:) withObject:items waitUntilDone:YES ];
          if ([transferSolutionResult suggestWalking]) {
