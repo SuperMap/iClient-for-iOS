@@ -8,29 +8,22 @@
         {href:"doc/index.html",text:"类参考"},     
     ];
 
-//所打开文档的地址
+    //所打开文档的地址
     var path=document.location.toString();
-
-    var regExpExam=/\S+\/help\/\S+\.html/;       //用于匹配在help目录下的文档的正则表达式
-    var regExpApidoc= /\S+\/doc\/\S+\.html/;       //用于匹配在doc目录下的文档的正则表达式
-
-    var commonPath="";
-
-//查看文档相对于包地址的起始位置
-    if(path.match(regExpExam))
-    {
-        var pos=path.search(/\/help\/\S+\.html/);
-    }
-    else if(path.match(regExpApidoc))
-    {
-        var pos=path.search(/\/doc\/\S+\.html/);
-    }
-    else
-    {
-        var pos=path.search(/\/index\.html/);
-    }
-//根目录地址
-    commonPath=path.substring(0,pos);
+ 
+    if( path.lastIndexOf("/doc/")!=-1){
+ 
+        var index =  path.lastIndexOf("/doc/");
+	}else if(path.lastIndexOf("/index.html")!=-1){
+ 
+        var index = path.lastIndexOf("/index.html");
+	}else{
+ 
+        var index = path.lastIndexOf("/help/");
+	}
+ 
+ //根目录地址
+	var commonPath=path.substring(0,index);
 
 
     var outer_head='<div class="navbar-inner">'+
