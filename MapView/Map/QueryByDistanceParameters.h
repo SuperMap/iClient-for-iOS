@@ -20,7 +20,7 @@
 @interface QueryByDistanceParameters : QueryParameters
 
 {
-    int distance;
+    double distance;
     RMPath* geometry;
     BOOL isNearest;
 }
@@ -33,10 +33,10 @@
 
 /**
  * APIProperty: distance
- * {int} 查询距离，默认为0，单位与所查询图层对应的数据集单位相同。
+ * {double} 查询距离，默认为0.0，单位与所查询图层对应的数据集单位相同。
  * 当查找最近地物时，该属性无效。
  */
-@property (readwrite) int distance;
+@property (readwrite) double distance;
 
 /**
  * APIProperty: isNearest
@@ -56,6 +56,6 @@
  * mGeometry - {RMPath} 用于查询的地理对象。
  * bNearest - {BOOL} 是否为最近距离查询。
 */
--(id) init:(int)dis mGeometry:(RMPath*)mGeometry bNearest:(BOOL)bNearest;
+-(id) init:(double)dis mGeometry:(RMPath*)mGeometry bNearest:(BOOL)bNearest;
 
 @end

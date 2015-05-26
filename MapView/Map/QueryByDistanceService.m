@@ -46,7 +46,7 @@
     NSString *strJsonParam = [[NSString alloc] initWithString:@"{"];
     strJsonParam = [strJsonParam stringByAppendingString:paramsByDistance.isNearest?@"'queryMode':'FindNearest','queryParameters':":@"'queryMode':'DistanceQuery','queryParameters':"];
     strJsonParam = [strJsonParam stringByAppendingString:jsonStringParams];
-    NSString* strDistance = [[NSString alloc] initWithFormat:@",'geometry':%@,'distance':%d",strGeoJson,paramsByDistance.distance];
+    NSString* strDistance = [[NSString alloc] initWithFormat:@",'geometry':%@,'distance':%f",strGeoJson,paramsByDistance.distance];
     strJsonParam = [strJsonParam stringByAppendingString:strDistance];
     strJsonParam = [strJsonParam stringByAppendingString:@"}"];
     

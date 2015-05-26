@@ -197,6 +197,12 @@
 {
 	LogMethod();
 	self.contents = nil;
+    
+    // 当mapView的实例被销毁时，cancel所有的tileIamge请求
+    if ([RMWebTileImage getInstanceQueue]) {
+        [[RMWebTileImage getInstanceQueue] cancelAllOperations];
+    }
+
 	[super dealloc];
 }
 
@@ -263,6 +269,7 @@
    	_delegateHasDidDragMarker = [(NSObject*) delegate respondsToSelector: @selector(mapView: didDragMarker: withEvent:)];
 	
 	_delegateHasDragMarkerPosition = [(NSObject*) delegate respondsToSelector: @selector(dragMarkerPosition: onMap: position:)];
+    _delegateHasLongTapOnMap = [(NSObject *)delegate respondsToSelector:@selector(longTapOnMap:At:)];
 }
 
 - (id<RMMapViewDelegate>) delegate
@@ -433,7 +440,9 @@
 
     // 当发送新的地图图片请求时，取消队列中的所有图片请求
     @synchronized(self){
-        [[RMWebTileImage getInstanceQueue] cancelAllOperations];
+        if ([RMWebTileImage getInstanceQueue]) {
+             [[RMWebTileImage getInstanceQueue] cancelAllOperations];
+        }
     }
     
 	[self.contents zoomByFactor:zoomFactor near:center animated:animated withCallback:(animated && (_delegateHasAfterMapZoomByFactor || _delegateHasMapViewRegionDidChange))?self:nil];
@@ -561,7 +570,7 @@
     
     }
    
-   
+    _pressTime = touch.timestamp;
     
     
 	//Check if the touch hit a RMMarker subclass and if so, forward the touch event on
@@ -712,8 +721,10 @@
                         [delegate tapOnLabelForMarker:(RMMarker*)[superlayer superlayer] onMap:self onLayer:hit];
                     }
 				} else if (_delegateHasSingleTapOnMap) {
-					[delegate singleTapOnMap: self At: [touch locationInView:self]];
-				}
+                   
+                   [delegate singleTapOnMap: self At: [touch locationInView:self]];
+                    
+                }
 			}
 		}
 		else if(!enableDragging && (lastGesture.numTouches == 1))
@@ -725,12 +736,16 @@
 	}
 	
 	if (_delegateHasAfterMapTouch) [delegate afterMapTouch: self];
+    if (_delegateHasLongTapOnMap && _pressTime != 0.0&&
+        (touch.timestamp - _pressTime) > 0.5) {
+        [delegate longTapOnMap:self At:[touch locationInView:self]];
+    }
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *touch = [[touches allObjects] objectAtIndex:0];
-	
+    _pressTime = 0.0;
 	//Check if the touch hit a RMMarker subclass and if so, forward the touch event on
 	//so it can be handled there
 	id furthestLayerDown = [self.contents.overlay hitTest:[touch locationInView:self]];

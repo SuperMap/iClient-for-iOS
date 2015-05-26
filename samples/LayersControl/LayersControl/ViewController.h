@@ -10,9 +10,9 @@
 @class RMSMLayerInfo;
 
 #import <UIKit/UIKit.h>
+#import "RMMapViewDelegate.h"
 
-
-@interface ViewController : UIViewController <UIAlertViewDelegate>{
+@interface ViewController : UIViewController <UIAlertViewDelegate,RMMapViewDelegate>{
     RMMapContents *mapContent;
     RMSMLayerInfo *info;
 }

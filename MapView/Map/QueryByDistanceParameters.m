@@ -12,7 +12,7 @@
 
 @synthesize distance,geometry,isNearest;
 
--(id) init:(int)dis mGeometry:(RMPath*)mGeometry bNearest:(BOOL)bNearest
+-(id) init:(double)dis mGeometry:(RMPath*)mGeometry bNearest:(BOOL)bNearest
 {
     if (![super init])
 		return nil;

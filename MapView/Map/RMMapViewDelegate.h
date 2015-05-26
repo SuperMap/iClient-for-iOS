@@ -61,6 +61,7 @@
 
 - (void) doubleTapOnMap: (RMMapView*) map At: (CGPoint) point;
 - (void) singleTapOnMap: (RMMapView*) map At: (CGPoint) point;
+- (void) longTapOnMap:(RMMapView *)map At:(CGPoint) point;
 
 - (void) tapOnMarker: (RMMarker*) marker onMap: (RMMapView*) map;
 - (void) tapOnLabelForMarker: (RMMarker*) marker onMap: (RMMapView*) map;

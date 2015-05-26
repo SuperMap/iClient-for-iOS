@@ -159,6 +159,7 @@ typedef struct {
 	BOOL _delegateHasShouldDragMarker;
 	BOOL _delegateHasDidDragMarker;
 	BOOL _delegateHasDragMarkerPosition;
+    BOOL _delegateHasLongTapOnMap;
 	
 	NSTimer *_decelerationTimer;
 	CGSize _decelerationDelta;
@@ -174,6 +175,7 @@ typedef struct {
 @property (nonatomic, retain) RMMapContents *contents;
 
 // View properties
+@property (readwrite) double pressTime;
 @property (readwrite) BOOL enableDragging;
 @property (readwrite) BOOL enableZoom;
 @property (readwrite) BOOL enableRotate;
