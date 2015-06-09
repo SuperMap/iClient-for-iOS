@@ -241,6 +241,8 @@
 		DFA6DD071AB6D822000F15A2 /* TransferStopInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA6DCEF1AB6D822000F15A2 /* TransferStopInfo.h */; };
 		DFA6DD081AB6D822000F15A2 /* TransferStopInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA6DCF01AB6D822000F15A2 /* TransferStopInfo.m */; };
 		DFA6DD091AB6D822000F15A2 /* TransferTactic.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA6DCF11AB6D822000F15A2 /* TransferTactic.h */; };
+		DFC2A8601B1BEAC6007C5DEB /* RMImageSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DFC2A85E1B1BEAC6007C5DEB /* RMImageSource.h */; };
+		DFC2A8611B1BEAC6007C5DEB /* RMImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC2A85F1B1BEAC6007C5DEB /* RMImageSource.m */; };
 		DFCAC40B1AC24E450005A832 /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D818500F6F67B90034598B /* libProj4.a */; };
 		F56554F8146E002B00623AC9 /* RMURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F56554F6146E002B00623AC9 /* RMURLConnectionOperation.h */; };
 		F56554F9146E002B00623AC9 /* RMURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F56554F7146E002B00623AC9 /* RMURLConnectionOperation.m */; };
@@ -665,6 +667,8 @@
 		DFA6DCEF1AB6D822000F15A2 /* TransferStopInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferStopInfo.h; sourceTree = "<group>"; };
 		DFA6DCF01AB6D822000F15A2 /* TransferStopInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferStopInfo.m; sourceTree = "<group>"; };
 		DFA6DCF11AB6D822000F15A2 /* TransferTactic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferTactic.h; sourceTree = "<group>"; };
+		DFC2A85E1B1BEAC6007C5DEB /* RMImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMImageSource.h; sourceTree = "<group>"; };
+		DFC2A85F1B1BEAC6007C5DEB /* RMImageSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMImageSource.m; sourceTree = "<group>"; };
 		F56554F6146E002B00623AC9 /* RMURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMURLConnectionOperation.h; sourceTree = "<group>"; };
 		F56554F7146E002B00623AC9 /* RMURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMURLConnectionOperation.m; sourceTree = "<group>"; };
 		F5C12D280F8A86CA00A894D2 /* RMGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGeoHash.h; sourceTree = "<group>"; };
@@ -1095,6 +1099,8 @@
 				DDA3E85513B00D9E004D861C /* RMMapQuestOSMSource.m */,
 				DDCD58D11406F8A300F59E0D /* RMTileStreamSource.h */,
 				DDCD58D21406F8A300F59E0D /* RMTileStreamSource.m */,
+				DFC2A85E1B1BEAC6007C5DEB /* RMImageSource.h */,
+				DFC2A85F1B1BEAC6007C5DEB /* RMImageSource.m */,
 			);
 			name = "Tile Source";
 			sourceTree = "<group>";
@@ -1462,6 +1468,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC2A8601B1BEAC6007C5DEB /* RMImageSource.h in Headers */,
 				B8C974170E8A19B2007D16AD /* RMMercatorToScreenProjection.h in Headers */,
 				47BBF18C1AE632F8007CE2F8 /* SMTianDiTuTileSource.h in Headers */,
 				B8C974250E8A19B2007D16AD /* RMOpenStreetMapSource.h in Headers */,
@@ -1902,6 +1909,7 @@
 				B8C974CB0E8A9C30007D16AD /* RMCachedTileSource.m in Sources */,
 				B8FA921A0E9315EC003A9FE6 /* RMLayerCollection.m in Sources */,
 				B8F3FC610EA2B382004D8F85 /* RMMapLayer.m in Sources */,
+				DFC2A8611B1BEAC6007C5DEB /* RMImageSource.m in Sources */,
 				B8F3FC650EA2E792004D8F85 /* RMMarker.m in Sources */,
 				B8474B9B0EB40094006A0BC1 /* FMDatabase.m in Sources */,
 				FE3ADE2F1A24B351009188F2 /* ThemeService.m in Sources */,

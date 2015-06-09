@@ -300,7 +300,6 @@
 {
     float scaleX = aRect.size.width / screenBounds.size.width;
     float scaleY = aRect.size.height / screenBounds.size.height;
-    NSLog(@"%f----%f",aRect.size.width,scaleX);
     // I will pick a scale in between those two.
     metersPerPixel = (scaleX + scaleY) / 2;
     origin = aRect.origin;

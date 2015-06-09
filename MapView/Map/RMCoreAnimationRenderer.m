@@ -125,7 +125,7 @@
 			max = pivot;
 		}
 	}
-
+ 
 	[tiles insertObject:image atIndex:min];
 	[layer insertSublayer:sublayer atIndex:[[NSNumber numberWithUnsignedLong:min] intValue]];
 }

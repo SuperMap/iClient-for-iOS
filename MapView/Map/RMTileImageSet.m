@@ -30,7 +30,7 @@
 #import "RMPixel.h"
 #import "RMTileSource.h"
 #import "MapView_Prefix.pch"
-
+#import "RMImageSource.h"
 // For notification strings
 #import "RMTileLoader.h"
 
@@ -173,7 +173,7 @@
 -(CGRect) addTiles: (RMTileRect)rect ToDisplayIn:(CGRect)bounds
 {
     //	RMLog(@"addTiles: %d %d - %f %f", rect.origin.tile.x, rect.origin.tile.y, rect.size.width, rect.size.height);
-////修改传进来的rect宽高为地图显示的切片数
+    //  修改传进来的rect宽高为地图显示的切片数
     RMTile t;
 	float pixelsPerTile = bounds.size.width / rect.size.width;
     //切片整数（width,height）
@@ -190,6 +190,8 @@
     //地图左上角点在屏幕
 	newLoadedBounds.origin.x = bounds.origin.x - (rect.origin.offset.x * pixelsPerTile);
 	newLoadedBounds.origin.y = bounds.origin.y - (rect.origin.offset.y * pixelsPerTile);
+//    NSLog(@"%f  ====  == %f",newLoadedBounds.origin.x,newLoadedBounds.origin.y);
+    
     //地图的偏移像素（整切片）
 	newLoadedBounds.size.width = tileRegionWidth * pixelsPerTile;
 	newLoadedBounds.size.height = tileRegionHeight * pixelsPerTile;
@@ -199,7 +201,7 @@
 	{
 		minimumZoom = alternateMinimum;
 	}
-
+    
 	for (;;)
 	{
 		CGRect screenLocation;
@@ -211,7 +213,6 @@
         if ([tileSource isUseCache]==NO) {
             [self removeAllTiles];
         }
-
         
 		for (t.x = roundedRect.origin.tile.x; t.x < roundedRect.origin.tile.x + tileRegionWidth; t.x++)
 		{
@@ -221,12 +222,14 @@
 
 				if (RMTileIsDummy(normalisedTile))
 					continue;
-
-				// this regrouping of terms is better for calculation precision (issue 128)		
+//                NSLog(@"%u,%u",t.x,t.y);
+				// this regrouping of terms is better for calculation precision (issue 128)
 				screenLocation.origin.x = bounds.origin.x + (t.x - rect.origin.tile.x - rect.origin.offset.x) * pixelsPerTile;		
 				screenLocation.origin.y = bounds.origin.y + (t.y - rect.origin.tile.y - rect.origin.offset.y) * pixelsPerTile;
 
 				[self addTile:normalisedTile At:screenLocation];
+                
+//                NSLog(@"%f++++++%f++++++%f++++++%f",screenLocation.origin.x,screenLocation.origin.y,screenLocation.size.width,screenLocation.size.height);
 			}
 		}
         [tileSource setIsUseCache:YES];
@@ -249,7 +252,6 @@
 		tileRegionWidth = (int)roundedRect.size.width;
 		tileRegionHeight = (int)roundedRect.size.height;
 	}
-
 	return newLoadedBounds;
 }
 

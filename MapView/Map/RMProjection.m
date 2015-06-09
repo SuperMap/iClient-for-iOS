@@ -116,7 +116,7 @@ NS_INLINE RMLatLong RMPixelPointAsLatLong(RMProjectedPoint xypoint) {
             aPoint.northing = planetBounds.origin.northing;
         else if (aPoint.northing > (planetBounds.origin.northing + planetBounds.size.height))
             aPoint.northing = planetBounds.origin.northing + planetBounds.size.height;
-        NSLog(@"planetBounds %f %f %f",planetBounds.origin.northing,planetBounds.origin.easting, planetBounds.size.width);
+//        NSLog(@"planetBounds %f %f %f",planetBounds.origin.northing,planetBounds.origin.easting, planetBounds.size.width);
         return aPoint;
     }
     else

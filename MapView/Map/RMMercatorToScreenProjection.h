@@ -143,7 +143,14 @@
 - (RMProjectedRect) projectScreenRectToXY: (CGRect) aRect;
 - (RMProjectedSize)projectScreenSizeToXY: (CGSize) aSize;
 - (RMProjectedPoint)projectScreenPointToXY: (CGPoint) aPixelPoint withMetersPerPixel:(float)aScale;
-
+/**
+ * APIMethod: projectedBounds
+ *  视图内地理范围
+ *
+ *
+ * Returns:
+ * {<RMProjectedRect>} 
+ */
 - (RMProjectedRect) projectedBounds;
 - (void) setProjectedBounds: (RMProjectedRect) bounds;
 - (void) setProjectedBounds2: (RMProjectedRect) bounds;

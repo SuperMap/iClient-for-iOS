@@ -289,7 +289,7 @@
         strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale];
     }
     
-//    NSLog(@"%@",self.m_Info.strParams);
+    
 //    NSLog(@"%@",strUrl);
 //    NSLog(@"%d",tile.zoom);
     return strUrl;

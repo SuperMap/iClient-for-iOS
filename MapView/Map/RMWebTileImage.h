@@ -31,7 +31,7 @@
 #import "RMURLConnectionOperation.h"
 
 static const NSUInteger kWebTileRetries = 30;
-static const NSUInteger kMaxConcurrentConnections = 5;
+static const NSUInteger kMaxConcurrentConnections = 5; // 最大并发线程数目
 
 extern NSString *RMWebTileImageErrorDomain;
 
@@ -58,11 +58,11 @@ extern NSString *RMWebTileImageNotificationErrorKey;
 
 	NSURL *url;
     RMURLConnectionOperation *connectionOp;
-
 	NSMutableData *data;
 }
 
 + (NSOperationQueue *)getInstanceQueue;
+
 - (id)initWithTile:(RMTile)tile FromURL:(NSString*)url;
 
 @end

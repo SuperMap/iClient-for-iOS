@@ -87,13 +87,13 @@ enum {
 {
 	/// This is the underlying UIView's layer.
 	CALayer *layer;
+    
     CALayer *superTileSouceLayer;
 	
     RMTileSourcesContainer *tileSourcesContainer;
-     NSMutableArray *earlyTileSources;
+    NSMutableArray *earlyTileSources;
     
     NSMutableArray *baseLayeScals;
-    
     
 	RMMarkerManager *markerManager;
 	/// subview for the image displayed while tiles are loading. Set its contents by providing your own "loading.png".
@@ -139,12 +139,22 @@ enum {
 
 @property (readwrite) CLLocationCoordinate2D mapCenter;
 @property (readwrite) RMProjectedPoint centerProjectedPoint;
+
+/**
+ * APIProperty: projectedBounds
+ *  视图内地理范围 origin:表示地图左下角的地理坐标，size：表示地图的横向和纵向地理坐标范围
+ *
+ * Returns:
+ * {<RMProjectedRect>}
+ */
 @property (readwrite) RMProjectedRect projectedBounds;
 @property (readonly)  RMTileRect tileBounds;
 @property (readonly)  CGRect screenBounds;
+
 @property (readwrite) float metersPerPixel;
+
 @property (readonly)  float scaledMetersPerPixel;
-@property (readonly)    NSMutableArray *baseLayerScales;
+@property (readonly)  NSMutableArray *baseLayerScales;
 
 @property (retain)  NSMutableArray *renderers;
 //zoom level is clamped to range (minZoom, maxZoom)
@@ -426,13 +436,23 @@ enum {
  * {CLLocationCoordinate2D}
  */
 - (CLLocationCoordinate2D)projectedPointToLatLong:(RMProjectedPoint)projectedPoint;
-- (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)se;
+
+/**
+ * APIMethod: zoomWithLatLngBoundsNorthEast:SouthWest
+ * 将地图缩放至指定经纬度范围内
+ *
+ * Parameters:
+ * ne - {CLLocationCoordinate2D} 缩放后显示范围东北点经纬度坐标
+ * sw - {CLLocationCoordinate2D} 缩放后显示范围西南点经纬度坐标
+ *
+ */
+- (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)sw;
+
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 
 /**
  * APIMethod: refreshMap
  * 刷新瓦片地图
- *
  */
 - (void)refreshMap;
 

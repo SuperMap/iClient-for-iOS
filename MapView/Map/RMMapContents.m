@@ -49,7 +49,7 @@
 #import "RMMarker.h"
 
 #import "MapView_Prefix.pch"
-
+#import "RMWebTileImage.h"
 
 
 
@@ -913,6 +913,7 @@ BOOL delegateHasRegionUpdate;
 
 - (void)setCenterProjectedPoint:(RMProjectedPoint)projectedPoint
 {
+    [[RMWebTileImage getInstanceQueue] cancelAllOperations];
     [mercatorToScreenProjection setProjectedCenter:projectedPoint];
     [overlay correctPositionOfAllSublayers];
     
@@ -937,11 +938,11 @@ BOOL delegateHasRegionUpdate;
 }
 -(void) setProjectedBounds: (RMProjectedRect) boundsRect
 {
-    [mercatorToScreenProjection setProjectedBounds2:boundsRect];
+    [mercatorToScreenProjection setProjectedBounds:boundsRect];
 }
 
 -(RMTileRect) tileBounds
-{//返回当前级别下地图的地理原点及切片x,y的个数 ，但对于叠加图层planetBounds 范围有错
+{   //返回当前级别下地图的地理原点及切片x,y的个数 ，但对于叠加图层planetBounds 范围有错
     return [mercatorToTileProjection projectRect:[mercatorToScreenProjection projectedBounds]
                                          atScale:[self scaledMetersPerPixel]];
 }
@@ -963,7 +964,8 @@ BOOL delegateHasRegionUpdate;
 {
     float zoomFactor = self.metersPerPixel / newMPP;
     CGPoint pivot = CGPointZero;
-    
+    // 缩放等级发生改变，清空请求队列
+    [[RMWebTileImage getInstanceQueue] cancelAllOperations];
     [mercatorToScreenProjection setMetersPerPixel:newMPP];
     
     if (imagesOnScreens&&[imagesOnScreens count]>0) {
@@ -1009,7 +1011,7 @@ BOOL delegateHasRegionUpdate;
 -(void)setMinZoom:(float)newMinZoom
 {
     minZoom = newMinZoom;
-    ////z
+    ////
     // NSAssert(!tileSource || (([tileSource minZoom] - minZoom) <= 1.0), @"Graphics & memory are overly taxed if [contents minZoom] is more than 1.5 smaller than [tileSource minZoom]");
 }
 
@@ -1032,7 +1034,7 @@ BOOL delegateHasRegionUpdate;
     zoom = (zoom < minZoom) ? minZoom : zoom;
     
     float scale = [mercatorToTileProjection calculateScaleFromZoom:zoom];
-    
+   
     [self setScaledMetersPerPixel:scale];
 }
 
@@ -1201,7 +1203,10 @@ static BOOL _performExpensiveOperations = YES;
         float fixScale = (scaleX + scaleY) /2;
 //        [self setScaledMetersPerPixel:fixScale * self.metersPerPixel];
 //        [self setScaledMetersPerPixel:fixScale ];
-        [self setCenterProjectedPoint:zoomRect.origin];
+//        [self setCenterProjectedPoint:zoomRect.origin];
+        
+        // 设置地图的中心的
+        [mercatorToScreenProjection setProjectedCenter:zoomRect.origin];
         [self setMetersPerPixel:fixScale];
     }
 }

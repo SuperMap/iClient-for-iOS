@@ -29,7 +29,6 @@
 #import "RMWebTileImage.h"
 #import <QuartzCore/CALayer.h>
 
-#import "RMMapContents.h"
 #import "RMTileLoader.h"
 #import "MapView_Prefix.pch"
 

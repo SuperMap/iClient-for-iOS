@@ -101,6 +101,8 @@
     url = @"http://t2.tianditu.com/DataServer?T=vec_c";
     NSString* strUrl;
     strUrl = [NSString stringWithFormat:@"%@&X=%d&Y=%d&L=%d",url,tile.x,tile.y,(int)tile.zoom+1];
+    
+//    NSLog(@"%u====%u====%u",tile.x,tile.y,tile.zoom+1);
     return strUrl;
 }
 -(RMTileImage *)tileImage:(RMTile)tile

@@ -62,9 +62,8 @@
         [dict setValue:@"SMID < 20" forKey:@"2"];
         [mapContent setDisplayFilter:dict forTileSource:smSource];
     }else{
-        
+     
     }
-
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

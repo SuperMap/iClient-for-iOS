@@ -68,9 +68,12 @@
     float normalised_zoom = roundf(zoom);
     
     if (normalised_zoom > maxZoom)
+    {
         normalised_zoom = maxZoom;
-    if (normalised_zoom < minZoom)
+    }
+    if (normalised_zoom < minZoom){
         normalised_zoom = minZoom;
+    }
     
     return normalised_zoom;
 }
@@ -176,6 +179,7 @@
 {
     
     /// \bug assignment of float to int, WTF?
+   
     int normalised_zoom = [self normaliseZoom:zoom];
     //一个切片的地理范围
     float limit = [self calculateScaleFromZoom:normalised_zoom] * self.tileSideLength;
@@ -235,7 +239,7 @@
 -(float) calculateZoomFromScale: (float) scale
 {
     int zoom = 0;
-    float oldScale;
+    float oldScale = 0.0;
     //    NSLog(@"scale %f",scale);
     //       NSLog(@"%@",m_dResolutions);
     for (id value in m_dResolutions) {
@@ -268,7 +272,6 @@
             }
         }
         zoom++;
-        
     }
     NSLog(@"zoom %d",zoom);
     return zoom;

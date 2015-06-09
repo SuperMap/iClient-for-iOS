@@ -422,11 +422,12 @@
 			zRect.origin = origin;
 			zRect.size.width = screenBounds.size.width * metersPerPixel;
 			zRect.size.height = screenBounds.size.height * metersPerPixel;
-			 
+            
 			//can zoom only if within bounds
 			canZoom= zoomDelta > 0 || !(zRect.origin.northing < SWconstraint.northing || zRect.origin.northing+zRect.size.height> NEconstraint.northing ||
 			  zRect.origin.easting < SWconstraint.easting || zRect.origin.easting+zRect.size.width > NEconstraint.easting);
-				
+			
+            
 		}
 		
 		if(!canZoom){
@@ -444,7 +445,7 @@
              [[RMWebTileImage getInstanceQueue] cancelAllOperations];
         }
     }
-    
+//    NSLog(@"%f====%f=====%f======%f",contents.projectedBounds.origin.easting,contents.projectedBounds.origin.northing,contents.projectedBounds.size.width,contents.projectedBounds.size.height);
 	[self.contents zoomByFactor:zoomFactor near:center animated:animated withCallback:(animated && (_delegateHasAfterMapZoomByFactor || _delegateHasMapViewRegionDidChange))?self:nil];
 	if (!animated)
 	{
