@@ -24,7 +24,7 @@
     double dHeight;
     NSString*  unit;
     int datumAxis;
-    float dpi;
+    double dpi;
     NSString *strParams;
     NSString * projection;
     NSArray *layerInfoList;
@@ -164,7 +164,7 @@
 * Returns:
 * {<int>}  当前地图DPI。
 */
-- (float)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
+- (double)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
 
 /**
 * APIMethod: getScaleFromResolutionDpi

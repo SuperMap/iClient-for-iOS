@@ -142,13 +142,13 @@
     
     viewbounds = [json objectForKey: @"viewBounds"];
     bottom = (NSString *)[viewbounds objectForKey: @"bottom"];
-    fbottom = [bottom floatValue];
+    fbottom = [bottom doubleValue];
     left = (NSString *)[viewbounds objectForKey: @"left"];
-    fleft = [left floatValue];
+    fleft = [left doubleValue];
     right = (NSString *)[viewbounds objectForKey: @"right"];
-    fright = [right floatValue];
+    fright = [right doubleValue];
     top = (NSString *)[viewbounds objectForKey: @"top"];
-    ftop = [top floatValue];
+    ftop = [top doubleValue];
     
     //NSLog(@"The dWidth is :%f",fright-fleft);
     //NSLog(@"The dHeight is :%f",ftop-fbottom);
@@ -212,7 +212,7 @@
 }
 
 
-- (float)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
+- (double)calculateDpi:(double)viewBoundsWidth rvbheight:(double)viewBoundsHeight rvWidth:(int)nWidth rcHeight:(int)nHeight scale:(double)dScale;
 {
     //NSLog(@"%.20f",dScale);
 
@@ -233,7 +233,7 @@
      //   NSLog(@"dTemp1: %.20f",dTemp1);
       //  NSLog(@"dTemp2: %.20f",dTemp2);
      //   NSLog(@"dTemp: %.20f",dTemp);
-        float nDpi = dTemp / dScale /ratio;
+        double nDpi = dTemp / dScale /ratio;
         
 //        NSLog(@"%f",viewBoundsWidth);
 //        NSLog(@"%f",viewBoundsHeight);
@@ -245,7 +245,7 @@
         return nDpi;
     } else {
         double resolution = viewBoundsWidth / (float)nWidth;
-        float nDpi = 0.0254 / resolution / dScale;
+        double nDpi = 0.0254 / resolution / dScale;
         return nDpi;
     }
 }
