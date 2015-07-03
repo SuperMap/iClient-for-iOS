@@ -51,11 +51,11 @@
     [mapView setContents:mapContents];
     
     // 瓦片地图上叠加图片
-//    RMProjectedRect projRect =   RMMakeProjectedRect(73.620048522949, 3.8537260781999, 61.148414611821, 49.700015376878);
-//    imageSource = [[RMImageSource alloc] initWithUrl:@"http://support.supermap.com.cn:8090/iserver/iClient/forJavaScript/examples/images/china.png" mapContents:mapContents imageBounds:chinaRect];
+    RMProjectedRect projRect =   RMMakeProjectedRect(73.620048522949, 3.8537260781999, 61.148414611821, 49.700015376878);
+    imageSource = [[RMImageSource alloc] initWithUrl:@"http://support.supermap.com.cn:8090/iserver/iClient/forJavaScript/examples/images/china.png" mapContents:mapContents imageBounds:projRect];
     
-     RMProjectedRect projRect =   RMMakeProjectedRect(-180, -90, 360, 180);
-     imageSource = [[RMImageSource alloc] initWithUrl:@"http://support.supermap.com.cn:8090/iserver/iClient/forJavaScript/examples/images/Day.jpg" mapContents:mapContents imageBounds:projRect];
+//     RMProjectedRect projRect =   RMMakeProjectedRect(-180, -90, 360, 180);
+//     imageSource = [[RMImageSource alloc] initWithUrl:@"http://support.supermap.com.cn:8090/iserver/iClient/forJavaScript/examples/images/Day.jpg" mapContents:mapContents imageBounds:projRect];
     
     CALayer *layer =   [mapView layer];
     subLayer = [[CALayer alloc] init];
@@ -66,7 +66,9 @@
     subLayer.position = [imageSource center];
     subLayer.bounds = [imageSource screenBounds];
     [subLayer setOpacity:0.4];
-    [layer addSublayer:subLayer];
+    
+     // 叠加图片
+//    [layer addSublayer:subLayer];
 
 }
 -(void)afterMapMove:(RMMapView *)map

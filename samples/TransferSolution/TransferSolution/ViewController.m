@@ -53,7 +53,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    tileThing = @"http://192.168.18.192:8090/iserver/services/map-changchun/rest/maps/长春市区图";
+    tileThing = @"http://support.supermap.com.cn:8090/iserver/services/map-changchun/rest/maps/长春市区图";
     info = [[RMSMLayerInfo alloc] initWithTile:@"Changchun" linkurl:tileThing];
     // 判断获取iServer服务配置信息失败，为NULL时失败
     NSAssert(info != NULL,@"RMSMLayerInfo Connect fail");
@@ -69,7 +69,7 @@
     [newContents setCenterProjectedPoint:prjPnt];
     newContents.zoom = 1;
     
-    NSString *url =@"http://192.168.18.192:8090/iserver/services/traffictransferanalyst-sample/restjsr/traffictransferanalyst/Traffic-Changchun";
+    NSString *url =@"http://support.supermap.com.cn:8090/iserver/services/traffictransferanalyst-sample/restjsr/traffictransferanalyst/Traffic-Changchun";
     
     // 给输入框添加监听，当文本内容发生改变是，从新请求站点
     [self.startTF addTarget:self action:@selector(textFieldValueDidChange:) forControlEvents:UIControlEventEditingChanged];

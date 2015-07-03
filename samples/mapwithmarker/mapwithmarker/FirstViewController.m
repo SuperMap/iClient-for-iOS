@@ -14,6 +14,7 @@
 
 @interface FirstViewController (){
     RMMarker* _marker;
+    RMSMLayerInfo *info;
 }
 
 @end
