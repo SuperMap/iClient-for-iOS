@@ -50,7 +50,7 @@
     NSString* strHttpUrl = [[NSString alloc] initWithString:strQueryUrl];
     if(params.retainCount == true)
     {
-        strHttpUrl = [strHttpUrl stringByAppendingString:@"returnContent=true"];
+        strHttpUrl = [strHttpUrl stringByAppendingString:@"returnContent=true&returnPostAction=true"];
     }else{
         strHttpUrl = [strHttpUrl stringByAppendingFormat:@"strHttpUrl=%@",params.returnCustomResult?@"true":@"false"];
     }

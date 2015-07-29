@@ -35,7 +35,7 @@
     
     
     NSString *strJsonParam = [[NSString alloc] initWithString:@"{"];
-    strJsonParam = [strJsonParam stringByAppendingString:@"'queryMode':'SqlQuery','queryParameters':"];
+    strJsonParam = [strJsonParam stringByAppendingString:@"\"queryMode\":\"SqlQuery\",\"queryParameters\":"];
     strJsonParam = [strJsonParam stringByAppendingString:jsonStringParams];    
     strJsonParam = [strJsonParam stringByAppendingString:@"}"];
     
