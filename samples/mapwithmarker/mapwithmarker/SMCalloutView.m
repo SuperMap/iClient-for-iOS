@@ -270,7 +270,8 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
     bounceAnimation.duration = animated ? BOUNCE_ANIMATION_DURATION : 0;
     bounceAnimation.timingFunctions = [NSArray arrayWithObjects:easeInOut, easeInOut, easeInOut, easeInOut,nil];
     bounceAnimation.delegate = self;
-        
+    
+    
     [self.layer addAnimation:bounceAnimation forKey:@"bounce"];
 //    [self.layer addAnimation:nil forKey:@"bounce"];
 }

@@ -30,6 +30,7 @@
     NSArray *layerInfoList;
 }
 
+@property (nonatomic,retain) NSMutableArray *scales;
 /**
  * APIProperty: layerInfoList
  * {NSArray} 图层信息列表。

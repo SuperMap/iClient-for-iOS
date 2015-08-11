@@ -25,7 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    tileThing = @"http://192.168.18.193:8090/iserver/services/map-World/rest/maps/layers_test%40China400";
+    tileThing = @"http://192.168.18.79:8090/iserver/services/map-china400/rest/maps/China";
+
     NSMutableDictionary* params=[[NSMutableDictionary alloc] init];
 //    [params setObject:@"e734aa481c2e45bfbad4ae78ce3d51b0_806d9c77e905471b8cc35014221c8fbf" forKey:@"layersID"];
     info = [[RMSMLayerInfo alloc] initWithTile:@"layers" linkurl:tileThing params:params];
@@ -37,6 +38,7 @@
     smSource = [[RMSMTileSource alloc] initWithInfo:info];
     mapContent = [[RMMapContents alloc] initWithView:_mapView tilesource:smSource];
     [_mapView setContents:mapContent];
+    
     alert = [[UIAlertView alloc] initWithTitle:@"临时图层" message:@"图层切换" delegate:self cancelButtonTitle:@"3 SMID < 10" otherButtonTitles:@"2.3 SMID < 10",@"2 SMID < 20", @"cancel", nil];
     [alert show];
     [info layerInfoList];
@@ -45,6 +47,7 @@
         NSLog(@"%@",[[[info layerInfoList]  objectAtIndex:i] objectForKey:@"name"]);
     }
     [_mapView setDelegate:self];
+    
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

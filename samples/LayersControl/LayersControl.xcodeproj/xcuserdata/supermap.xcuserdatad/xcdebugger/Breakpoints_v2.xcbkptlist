@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../MapView/Map/RMTileImage.m"
-            timestampString = "454409842.120492"
+            filePath = "../../MapView/Map/RMSMTileSource.m"
+            timestampString = "460969657.181413"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "-setScreenLocation:"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-initWithInfo:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

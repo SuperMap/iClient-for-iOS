@@ -41,8 +41,13 @@
     int height = rect_screen.size.height;
     self.m_Info = info;
     
-    m_dResolutions = [[NSMutableArray alloc] initWithCapacity:18];
-    m_dScales = [[NSMutableArray alloc] initWithCapacity:18];
+    int resolutionSize = 18;
+    BOOL isNull = self.m_Info.scales;
+    if (isNull) {
+        resolutionSize = [[NSNumber numberWithUnsignedLong:[self.m_Info.scales count]] intValue];
+    }
+    m_dResolutions = [[NSMutableArray alloc] initWithCapacity:resolutionSize];
+    m_dScales = [[NSMutableArray alloc] initWithCapacity:resolutionSize];
     
     double wRes = self.m_Info.dWidth / width;
     double hRes = self.m_Info.dHeight / height;
@@ -51,14 +56,20 @@
     double base = 2.0;
     NSString*  strScale;
     double dResolutions;
-    for(int i=0;i<18;++i)
+    for(int i=0;i<resolutionSize;++i)
     {
         dResolutions = maxResolution/pow(base,i);
         [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
-        strScale = [self.m_Info getScaleFromResolutionDpi:dResolutions];
-        //NSLog(@"%@",strScale);
-        [m_dScales addObject:strScale];
+        if (isNull) {
+            [m_dScales addObject:[NSString stringWithFormat:@"%@",[self.m_Info.scales objectAtIndex:i]]];
+        }else{
+            strScale = [self.m_Info getScaleFromResolutionDpi:dResolutions];
+            [m_dScales addObject:strScale];
+        }
+        
+        
     }
+  
     
     //NSLog(@"%@",m_dResolutions);
     smProjection=[[RMProjection alloc] initForSMProjection];
@@ -290,7 +301,7 @@
     }
     
     
-//    NSLog(@"%@",strUrl);
+    NSLog(@"%@",strUrl);
 //    NSLog(@"%d",tile.zoom);
     return strUrl;
 }

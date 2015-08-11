@@ -152,11 +152,10 @@
     
     //NSLog(@"The dWidth is :%f",fright-fleft);
     //NSLog(@"The dHeight is :%f",ftop-fbottom);
+   
+    self.scales = [json objectForKey:@"visibleScales"];
     
-    NSString* strScale;
-    strScale = (NSString*)[json objectForKey:@"scale"];
-    //NSLog(@"%@",strScale);
-    double dScale = [strScale doubleValue];
+    double dScale = [[json objectForKey:@"scale"] doubleValue];
     //NSLog(@"The scale is :%.20f",dScale);
     
     NSString* height,*width;
