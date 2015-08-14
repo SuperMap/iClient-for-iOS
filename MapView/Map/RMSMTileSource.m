@@ -44,10 +44,11 @@
     int resolutionSize = 18;
     BOOL isNull = self.m_Info.scales;
     if (isNull) {
-        resolutionSize = [[NSNumber numberWithUnsignedLong:[self.m_Info.scales count]] intValue];
+        [self getResolutionsFromScales:self.m_Info.scales];
+    }else{
+        m_dResolutions = [[NSMutableArray alloc] initWithCapacity:resolutionSize];
+        m_dScales = [[NSMutableArray alloc] initWithCapacity:resolutionSize];
     }
-    m_dResolutions = [[NSMutableArray alloc] initWithCapacity:resolutionSize];
-    m_dScales = [[NSMutableArray alloc] initWithCapacity:resolutionSize];
     
     double wRes = self.m_Info.dWidth / width;
     double hRes = self.m_Info.dHeight / height;
@@ -58,16 +59,12 @@
     double dResolutions;
     for(int i=0;i<resolutionSize;++i)
     {
-        dResolutions = maxResolution/pow(base,i);
-        [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
-        if (isNull) {
-            [m_dScales addObject:[NSString stringWithFormat:@"%@",[self.m_Info.scales objectAtIndex:i]]];
-        }else{
+        if (!isNull) {
+            dResolutions = maxResolution/pow(base,i);
             strScale = [self.m_Info getScaleFromResolutionDpi:dResolutions];
+            [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
             [m_dScales addObject:strScale];
         }
-        
-        
     }
   
     

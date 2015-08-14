@@ -164,6 +164,7 @@
     height = (NSString *)[viewSize objectForKey: @"height"];
     width = (NSString *)[viewSize objectForKey: @"width"];
     
+    
     dpi = [self calculateDpi:fright-fleft rvbheight:ftop-fbottom rvWidth:[width intValue] rcHeight:[height intValue] scale:dScale];    
     
     if (self.isUseDisplayFilter == true) {
@@ -228,19 +229,8 @@
         double dTemp1 = 0.0254 * ratio / resolution;
         double dTemp2 = (M_PI * 2 * datumAxis) / 360;
         double dTemp = dTemp1 / dTemp2;
-                         
-     //   NSLog(@"dTemp1: %.20f",dTemp1);
-      //  NSLog(@"dTemp2: %.20f",dTemp2);
-     //   NSLog(@"dTemp: %.20f",dTemp);
+        
         double nDpi = dTemp / dScale /ratio;
-        
-//        NSLog(@"%f",viewBoundsWidth);
-//        NSLog(@"%f",viewBoundsHeight);
-//        NSLog(@"%d",nWidth);
-//        NSLog(@"%d",nHeight);
-//        NSLog(@"%f",resolution);
-//        NSLog(@"nDpi:::::::%f",nDpi);
-        
         return nDpi;
     } else {
         double resolution = viewBoundsWidth / (float)nWidth;
