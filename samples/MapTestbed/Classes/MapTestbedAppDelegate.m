@@ -465,8 +465,7 @@ static void saveApplier(void* info, const CGPathElement* element)
 }
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
-    
-    [window addSubview:[rootViewController view]];
+    window.rootViewController = rootViewController;
     [window makeKeyAndVisible];
 	
 	[self performSelector:@selector(performTest) withObject:nil afterDelay:0.25f]; 
