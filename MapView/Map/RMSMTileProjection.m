@@ -157,8 +157,8 @@
     
     
     tile.tile.zoom = zoom;
-    tile.offset.x = (float)x - tile.tile.x;
-    tile.offset.y = (float)y - tile.tile.y;
+    tile.offset.x = (double)x - tile.tile.x;
+    tile.offset.y = (double)y - tile.tile.y;
 //     NSLog(@"tile.offset.x :%f",tile.offset.x);
 //    NSLog(@"tile.tile.x :%u",tile.tile.x);
 //    NSLog(@"tile.tile.y :%U",tile.tile.y);
