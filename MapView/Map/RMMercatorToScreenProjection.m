@@ -73,7 +73,7 @@
 	return aRect;
 }
 
-- (RMProjectedPoint)zoomPoint: (RMProjectedPoint)aPoint byFactor: (float)factor near:(CGPoint) aPixelPoint
+- (RMProjectedPoint)zoomPoint: (RMProjectedPoint)aPoint byFactor: (double)factor near:(CGPoint) aPixelPoint
 {
 	RMProjectedPoint XYPivot = [self projectScreenPointToXY:aPixelPoint];
 	RMProjectedPoint result = RMScaleProjectedPointAboutPoint(aPoint, factor, XYPivot);
@@ -82,7 +82,7 @@
 	return result;
 }
 
-- (RMProjectedRect)zoomRect: (RMProjectedRect)aRect byFactor: (float)factor near:(CGPoint) aPixelPoint
+- (RMProjectedRect)zoomRect: (RMProjectedRect)aRect byFactor: (double)factor near:(CGPoint) aPixelPoint
 {
 	RMProjectedPoint XYPivot = [self projectScreenPointToXY:aPixelPoint];
 	RMProjectedRect result = RMScaleProjectedRectAboutPoint(aRect, factor, XYPivot);
@@ -107,7 +107,7 @@
 //	RMLog(@"to %f %f", origin.easting, origin.y);
 }
 
-- (void) zoomScreenByFactor: (float) factor near:(CGPoint) aPixelPoint;
+- (void) zoomScreenByFactor: (double) factor near:(CGPoint) aPixelPoint;
 {
 	// The result of this function should be the same as this:
 	//RMMercatorPoint test = [self zoomPoint:origin ByFactor:1.0f / factor Near:pivot];
@@ -134,7 +134,7 @@
 
 }
 
-- (void)zoomBy: (float) factor
+- (void)zoomBy: (double) factor
 {
 	metersPerPixel *= factor;
 }
@@ -151,7 +151,7 @@
  
  Note: tested only with googleProjection
  */
-- (CGPoint) projectXYPoint:(RMProjectedPoint)aPoint withMetersPerPixel:(float)aScale
+- (CGPoint) projectXYPoint:(RMProjectedPoint)aPoint withMetersPerPixel:(double)aScale
 {
 	CGPoint	aPixelPoint = { 0, 0 };
 
@@ -202,15 +202,15 @@
 }
 
 /*
- - (CGPoint) projectXYPoint:(RMProjectedPoint)aPoint withMetersPerPixel:(float)aScale
+ - (CGPoint) projectXYPoint:(RMProjectedPoint)aPoint withMetersPerPixel:(double)aScale
  {
  CGPoint	aPixelPoint;
- CGFloat originX = origin.easting;
- CGFloat boundsWidth = [projection planetBounds].size.width;
- CGFloat pointX = aPoint.easting - boundsWidth/2;
- CGFloat left = sqrt((pointX - (originX - boundsWidth))*(pointX - (originX - boundsWidth)));
- CGFloat middle = sqrt((pointX - originX)*(pointX - originX));
- CGFloat right = sqrt((pointX - (originX + boundsWidth))*(pointX - (originX + boundsWidth)));
+ CGdouble originX = origin.easting;
+ CGdouble boundsWidth = [projection planetBounds].size.width;
+ CGdouble pointX = aPoint.easting - boundsWidth/2;
+ CGdouble left = sqrt((pointX - (originX - boundsWidth))*(pointX - (originX - boundsWidth)));
+ CGdouble middle = sqrt((pointX - originX)*(pointX - originX));
+ CGdouble right = sqrt((pointX - (originX + boundsWidth))*(pointX - (originX + boundsWidth)));
  
  //RMLog(@"left:%f middle:%f right:%f x:%f width:%f", left, middle, right, pointX, boundsWidth);//LK
  
@@ -243,7 +243,7 @@
 	return aPixelRect;
 }
 
-- (RMProjectedPoint)projectScreenPointToXY: (CGPoint) aPixelPoint withMetersPerPixel:(float)aScale
+- (RMProjectedPoint)projectScreenPointToXY: (CGPoint) aPixelPoint withMetersPerPixel:(double)aScale
 {
 	RMProjectedPoint aPoint;
 	aPoint.easting = origin.easting + aPixelPoint.x * aScale;
@@ -287,8 +287,8 @@
 
 -(void) setProjectedBounds: (RMProjectedRect) aRect
 {
-	float scaleX = aRect.size.width / screenBounds.size.width;
-	float scaleY = aRect.size.height / screenBounds.size.height;
+	double scaleX = aRect.size.width / screenBounds.size.width;
+	double scaleY = aRect.size.height / screenBounds.size.height;
 	
 	// I will pick a scale in between those two.
 	metersPerPixel = (scaleX + scaleY) / 2;
@@ -298,8 +298,8 @@
 //新加方法设置经纬度
 -(void) setProjectedBounds2: (RMProjectedRect) aRect
 {
-    float scaleX = aRect.size.width / screenBounds.size.width;
-    float scaleY = aRect.size.height / screenBounds.size.height;
+    double scaleX = aRect.size.width / screenBounds.size.width;
+    double scaleY = aRect.size.height / screenBounds.size.height;
     // I will pick a scale in between those two.
     metersPerPixel = (scaleX + scaleY) / 2;
     origin = aRect.origin;
@@ -335,12 +335,12 @@
 	return screenBounds;
 }
 
--(float) metersPerPixel
+-(double) metersPerPixel
 {
 	return metersPerPixel;
 }
 
--(void) setMetersPerPixel: (float) newMPP
+-(void) setMetersPerPixel: (double) newMPP
 {
 	// We need to adjust the origin - since the origin
 	// is in the corner, it will change when we change the scale.

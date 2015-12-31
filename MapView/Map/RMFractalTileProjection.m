@@ -78,9 +78,9 @@
 	maxZoom = aMaxZoom;
 }
 
-- (float) normaliseZoom: (float) zoom
+- (double) normaliseZoom: (double) zoom
 {
-	float normalised_zoom = roundf(zoom);
+	double normalised_zoom = roundf(zoom);
 
 	if (normalised_zoom > maxZoom)
 		normalised_zoom = maxZoom;
@@ -90,7 +90,7 @@
 	return normalised_zoom;
 }
 
-- (float) limitFromNormalisedZoom: (float) zoom
+- (double) limitFromNormalisedZoom: (double) zoom
 {
 	return exp2f(zoom);
 }
@@ -125,7 +125,7 @@
 	return aPoint;
 }
 
-- (RMTilePoint) projectInternal: (RMProjectedPoint)aPoint normalisedZoom:(float)zoom limit:(float) limit
+- (RMTilePoint) projectInternal: (RMProjectedPoint)aPoint normalisedZoom:(double)zoom limit:(double) limit
 {
 	RMTilePoint tile;
 	RMProjectedPoint newPoint = [self constrainPointHorizontally:aPoint];
@@ -142,25 +142,25 @@
 	tile.tile.x = (uint32_t)x;
 	tile.tile.y = (uint32_t)y;
 	tile.tile.zoom = zoom;
-	tile.offset.x = (float)x - tile.tile.x;
-	tile.offset.y = (float)y - tile.tile.y;
+	tile.offset.x = (double)x - tile.tile.x;
+	tile.offset.y = (double)y - tile.tile.y;
 	
 	return tile;
 }
 
-- (RMTilePoint) project: (RMProjectedPoint)aPoint atZoom:(float)zoom
+- (RMTilePoint) project: (RMProjectedPoint)aPoint atZoom:(double)zoom
 {
-	float normalised_zoom = [self normaliseZoom:zoom];
-	float limit = [self limitFromNormalisedZoom:normalised_zoom];
+	double normalised_zoom = [self normaliseZoom:zoom];
+	double limit = [self limitFromNormalisedZoom:normalised_zoom];
 	
 	return [self projectInternal:aPoint normalisedZoom:normalised_zoom limit:limit];
 }
 
-- (RMTileRect) projectRect: (RMProjectedRect)aRect atZoom:(float)zoom
+- (RMTileRect) projectRect: (RMProjectedRect)aRect atZoom:(double)zoom
 {
-	/// \bug assignment of float to int, WTF?
+	/// \bug assignment of double to int, WTF?
 	int normalised_zoom = [self normaliseZoom:zoom];
-	float limit = [self limitFromNormalisedZoom:normalised_zoom];
+	double limit = [self limitFromNormalisedZoom:normalised_zoom];
 
 	RMTileRect tileRect;
 	// The origin for projectInternal will have to be the top left instead of the bottom left.
@@ -174,11 +174,11 @@
 	return tileRect;
 }
 
--(RMTilePoint) project: (RMProjectedPoint)aPoint atScale:(float)scale
+-(RMTilePoint) project: (RMProjectedPoint)aPoint atScale:(double)scale
 {
 	return [self project:aPoint atZoom:[self calculateZoomFromScale:scale]];
 }
--(RMTileRect) projectRect: (RMProjectedRect)aRect atScale:(float)scale
+-(RMTileRect) projectRect: (RMProjectedRect)aRect atScale:(double)scale
 {
 	return [self projectRect:aRect atZoom:[self calculateZoomFromScale:scale]];
 }
@@ -188,17 +188,17 @@
 	return [self projectRect:[screen projectedBounds] atScale:[screen metersPerPixel]];
 }
 
--(float) calculateZoomFromScale: (float) scale
+-(double) calculateZoomFromScale: (double) scale
 {	// zoom = log2(bounds.width/tileSideLength) - log2(s)
 	return scaleFactor - log2(scale);
 }
 
--(float) calculateNormalisedZoomFromScale: (float) scale
+-(double) calculateNormalisedZoomFromScale: (double) scale
 {
 	return [self normaliseZoom:[self calculateZoomFromScale:scale]];
 }
 
--(float) calculateScaleFromZoom: (float) zoom
+-(double) calculateScaleFromZoom: (double) zoom
 {
 	return planetBounds.size.width / tileSideLength / exp2(zoom);	
 }

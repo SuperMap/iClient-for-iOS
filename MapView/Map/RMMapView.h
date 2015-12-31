@@ -105,8 +105,8 @@ SuperMap iClient for iOS更多内容和更新，可以访问Github项目
  */
 typedef struct {
 	CGPoint center;
-	CGFloat angle;
-	float averageDistanceFromCenter;
+	double angle;
+	double averageDistanceFromCenter;
 	int numTouches;
 } RMGestureDetails;
 
@@ -131,10 +131,10 @@ typedef struct {
 	BOOL enableZoom;
         BOOL enableRotate;
 	RMGestureDetails lastGesture;
-	float decelerationFactor;
+	double decelerationFactor;
 	BOOL deceleration;
-        CGFloat rotation;
-    float screenScale;
+        double rotation;
+    double screenScale;
     
     RMSMLayerInfo* m_info;
     RMSMTileSource* m_TileSource;
@@ -188,13 +188,13 @@ typedef struct {
 // do not retain the delegate so you can let the corresponding controller implement the
 // delegate without circular references
 @property (assign) id<RMMapViewDelegate> delegate;
-@property (readwrite) float decelerationFactor;
+@property (readwrite) double decelerationFactor;
 @property (readwrite) BOOL deceleration;
 
-@property (readonly) CGFloat rotation;
+@property (readonly) double rotation;
 
 - (id)initWithFrame:(CGRect)frame;
-- (id)initWithFrame:(CGRect)frame screenScale:(float)screenScale;
+- (id)initWithFrame:(CGRect)frame screenScale:(double)screenScale;
 - (id)initWithFrame:(CGRect)frame WithLocation:(CLLocationCoordinate2D)latlong;
 
 //recenter the map on #latlong, expressed as CLLocationCoordinate2D (latitude/longitude)
@@ -221,12 +221,12 @@ typedef struct {
 -(void)setConstraintsSW:(CLLocationCoordinate2D)sw NE:(CLLocationCoordinate2D)ne;
 - (void)setProjectedContraintsSW:(RMProjectedPoint)sw NE:(RMProjectedPoint)ne;
 
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) aPoint;
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) aPoint animated:(BOOL)animated;
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) aPoint;
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) aPoint animated:(BOOL)animated;
 
 - (void)didReceiveMemoryWarning;
 
-- (void)setRotation:(CGFloat)angle;
+- (void)setRotation:(double)angle;
 
 
 @end

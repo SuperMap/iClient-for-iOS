@@ -66,7 +66,7 @@ enum {
 
 @protocol RMMapContentsAnimationCallback <NSObject>
 @optional
-- (void)animationFinishedWithZoomFactor:(float)zoomFactor near:(CGPoint)p;
+- (void)animationFinishedWithZoomFactor:(double)zoomFactor near:(CGPoint)p;
 - (void)animationStepped;
 @end
 
@@ -126,13 +126,13 @@ enum {
     NSMutableArray *baseLayerScales;
 	/// minimum zoom number allowed for the view. #minZoom and #maxZoom must be within the limits of #tileSource but can be stricter; they are clamped to tilesource limits if needed.
     ///最小的缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
-	float minZoom;
+	double minZoom;
 	/// maximum zoom number allowed for the view. #minZoom and #maxZoom must be within the limits of #tileSource but can be stricter; they are clamped to tilesource limits if needed.
     ///最大的缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
-	float maxZoom;
+	double maxZoom;
     //设备的屏幕分辨率，屏幕类型（普通或者视网膜屏幕）不一样，相同尺寸的屏幕分辨率不一样
     //以iphone为例，若值为1，代表当前设备是320*480的分辨率（iphone4之前的设备），若值为2，是代表采用了名为Retina的显示技术后的分辨率，为640*960的分辨率。
-    float screenScale;
+    double screenScale;
 
 	id<RMTilesUpdateDelegate> tilesUpdateDelegate;
 }
@@ -151,22 +151,22 @@ enum {
 @property (readonly)  RMTileRect tileBounds;
 @property (readonly)  CGRect screenBounds;
 
-@property (readwrite) float metersPerPixel;
+@property (readwrite) double metersPerPixel;
 
-@property (readonly)  float scaledMetersPerPixel;
+@property (readonly)  double scaledMetersPerPixel;
 @property (readonly)  NSMutableArray *baseLayerScales;
 
 @property (retain)  NSMutableArray *renderers;
 //zoom level is clamped to range (minZoom, maxZoom)
 /**
  * APIProperty: zoom
- * {float} 缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
+ * {double} 缩放级别，其值必须在tileSource的缩放级别范围内，即其值必须不小0且不大于最大缩放级别数。
  */
-@property (readwrite) float zoom;
+@property (readwrite) double zoom;
 
-@property (nonatomic, readwrite) float minZoom, maxZoom;
+@property (nonatomic, readwrite) double minZoom, maxZoom;
 
-@property (nonatomic, readonly) float screenScale;
+@property (nonatomic, readonly) double screenScale;
 
 //@property (readonly)  RMTileImageSet *imagesOnScreen;
 //@property (readonly)  RMTileLoader *tileLoader;
@@ -213,9 +213,9 @@ enum {
  *
  * Parameters:
  * view - {UIView}  mapView。
- * screenScale - {float} 设备的屏幕分辨率的属性值
+ * screenScale - {double} 设备的屏幕分辨率的属性值
  */
-- (id)initWithView: (UIView*) view screenScale:(float)theScreenScale;
+- (id)initWithView: (UIView*) view screenScale:(double)theScreenScale;
 
 /**
  * Constructor: initWithView
@@ -234,9 +234,9 @@ enum {
  * Parameters:
  * view - {UIView}  mapView。
  * tilesource - {id<RMTileSource>} 地图服务，底图。
- * screenScale - {float} 设备的屏幕分辨率的属性值
+ * screenScale - {double} 设备的屏幕分辨率的属性值
  */
-- (id)initWithView: (UIView*) view tilesource:(id<RMTileSource>)newTilesource screenScale:(float)theScreenScale;
+- (id)initWithView: (UIView*) view tilesource:(id<RMTileSource>)newTilesource screenScale:(double)theScreenScale;
 
 /// designated initializer
 /**
@@ -247,20 +247,20 @@ enum {
  * view - {UIView}  mapView。
  * tilesource - {id<RMTileSource>} 地图服务，底图。
  * centerLatLon - {CLLocationCoordinate2D} 地图的中心点
- * zoomLevel - {float} 地图初始化时的缩放级别
- * maxZoomLevel - {float} 最大缩放级别
- * minZoomLevel - {float} 最小缩放级别
+ * zoomLevel - {double} 地图初始化时的缩放级别
+ * maxZoomLevel - {double} 最大缩放级别
+ * minZoomLevel - {double} 最小缩放级别
  * backgroundImage - {UIImage *} 
- * screenScale - {float} 设备的屏幕分辨率的属性值
+ * screenScale - {double} 设备的屏幕分辨率的属性值
  */
 - (id)initWithView:(UIView*)view
 		tilesource:(id<RMTileSource>)tilesource
 	  centerLatLon:(CLLocationCoordinate2D)initialCenter
-		 zoomLevel:(float)initialZoomLevel
-	  maxZoomLevel:(float)maxZoomLevel
-	  minZoomLevel:(float)minZoomLevel
+		 zoomLevel:(double)initialZoomLevel
+	  maxZoomLevel:(double)maxZoomLevel
+	  minZoomLevel:(double)minZoomLevel
    backgroundImage:(UIImage *)backgroundImage
-       screenScale:(float)theScreenScale;
+       screenScale:(double)theScreenScale;
 
 
 /**
@@ -330,20 +330,20 @@ enum {
  * 设置图层的透明度
  *
  * Parameters:
- * opacity - {float} 图层的透明度，其中在[0,1]区间内，默认为1，即不透明。
+ * opacity - {double} 图层的透明度，其中在[0,1]区间内，默认为1，即不透明。
  * tileSource - {id <RMTileSource>} 地图服务，所设置透明度的图层
  */
-- (void)setOpacity:(float)opacity forTileSource:(id <RMTileSource>)tileSource;
+- (void)setOpacity:(double)opacity forTileSource:(id <RMTileSource>)tileSource;
 
 /**
  * APIMethod: setOpacity
  * 设置图层的透明度
  *
  * Parameters:
- * opacity - {float} 图层的透明度，其中在[0,1]区间内，默认为1，即不透明。
+ * opacity - {double} 图层的透明度，其中在[0,1]区间内，默认为1，即不透明。
  * index - {NSUInteger} 所设置透明度的图层的索引值
  */
-- (void)setOpacity:(CGFloat)opacity forTileSourceAtIndex:(NSUInteger)index;
+- (void)setOpacity:(double)opacity forTileSourceAtIndex:(NSUInteger)index;
 
 
 /**
@@ -372,18 +372,18 @@ enum {
 - (void)moveToProjectedPoint: (RMProjectedPoint)aPoint;
 
 - (void)moveBy: (CGSize) delta;
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center;
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) center;
 - (void)zoomInToNextNativeZoomAt:(CGPoint) pivot animated:(BOOL) animated;
 - (void)zoomOutToNextNativeZoomAt:(CGPoint) pivot animated:(BOOL) animated; 
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center animated:(BOOL) animated;
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center animated:(BOOL) animated withCallback:(id<RMMapContentsAnimationCallback>)callback;
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) center animated:(BOOL) animated;
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) center animated:(BOOL) animated withCallback:(id<RMMapContentsAnimationCallback>)callback;
 
 - (void)zoomInToNextNativeZoomAt:(CGPoint) pivot;
 - (void)zoomOutToNextNativeZoomAt:(CGPoint) pivot; 
-- (float)adjustZoomForBoundingMask:(float)zoomFactor;
-- (void)adjustMapPlacementWithScale:(float)aScale;
-- (float)nextNativeZoomFactor;
-- (float)prevNativeZoomFactor;
+- (double)adjustZoomForBoundingMask:(double)zoomFactor;
+- (void)adjustMapPlacementWithScale:(double)aScale;
+- (double)nextNativeZoomFactor;
+- (double)prevNativeZoomFactor;
 
 - (void) drawRect: (CGRect) rect;
 
@@ -397,10 +397,10 @@ enum {
 + (void) setPerformExpensiveOperations: (BOOL)p;
 
 - (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong;
-- (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong withMetersPerPixel:(float)aScale;
-- (RMTilePoint)latLongToTilePoint:(CLLocationCoordinate2D)latlong withMetersPerPixel:(float)aScale;
+- (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong withMetersPerPixel:(double)aScale;
+- (RMTilePoint)latLongToTilePoint:(CLLocationCoordinate2D)latlong withMetersPerPixel:(double)aScale;
 - (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel;
-- (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel withMetersPerPixel:(float)aScale;
+- (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel withMetersPerPixel:(double)aScale;
 
 /**
  * APIMethod: latLongToProjectedPoint
@@ -533,7 +533,7 @@ enum {
  */
 - (RMSphericalTrapezium) latitudeLongitudeBoundingBoxFor:(CGRect) rect;
 
-- (void)setRotation:(float)angle;
+- (void)setRotation:(double)angle;
 
 - (void) tilesUpdatedRegion:(CGRect)region;
 
@@ -562,20 +562,20 @@ enum {
 - (void)moveToProjectedPoint: (RMProjectedPoint)aPoint;
 
 - (void)moveBy: (CGSize) delta;
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center;
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) center;
 - (void)zoomInToNextNativeZoomAt:(CGPoint) pivot animated:(BOOL) animated;
 - (void)zoomOutToNextNativeZoomAt:(CGPoint) pivot animated:(BOOL) animated; 
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center animated:(BOOL) animated;
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) center animated:(BOOL) animated;
 
 - (void)zoomInToNextNativeZoomAt:(CGPoint) pivot;
 - (void)zoomOutToNextNativeZoomAt:(CGPoint) pivot; 
-- (float)adjustZoomForBoundingMask:(float)zoomFactor;
-- (void)adjustMapPlacementWithScale:(float)aScale;
+- (double)adjustZoomForBoundingMask:(double)zoomFactor;
+- (void)adjustMapPlacementWithScale:(double)aScale;
 
 - (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong;
-- (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong withMetersPerPixel:(float)aScale;
+- (CGPoint)latLongToPixel:(CLLocationCoordinate2D)latlong withMetersPerPixel:(double)aScale;
 - (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel;
-- (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel withMetersPerPixel:(float)aScale;
+- (CLLocationCoordinate2D)pixelToLatLong:(CGPoint)aPixel withMetersPerPixel:(double)aScale;
 - (void)zoomWithLatLngBoundsNorthEast:(CLLocationCoordinate2D)ne SouthWest:(CLLocationCoordinate2D)se;
 - (void)zoomWithRMMercatorRectBounds:(RMProjectedRect)bounds;
 

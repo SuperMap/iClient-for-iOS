@@ -63,9 +63,9 @@
 {
     isBaseLayer=bIsBaseLayer;
 }
-- (float) normaliseZoom: (float) zoom
+- (double) normaliseZoom: (double) zoom
 {
-    float normalised_zoom = roundf(zoom);
+    double normalised_zoom = roundf(zoom);
     
     if (normalised_zoom > maxZoom)
     {
@@ -78,7 +78,7 @@
     return normalised_zoom;
 }
 
-- (float) limitFromNormalisedZoom: (float) zoom
+- (double) limitFromNormalisedZoom: (double) zoom
 {
     return exp2f(zoom);
 }
@@ -118,13 +118,13 @@
     return aPoint;
 }
 
-- (RMTilePoint) projectInternal: (RMProjectedPoint)aPoint normalisedZoom:(float)zoom limit:(float) limit
+- (RMTilePoint) projectInternal: (RMProjectedPoint)aPoint normalisedZoom:(double)zoom limit:(double) limit
 {
     RMTilePoint tile;
     //矫正左上角点的easting
     RMProjectedPoint newPoint = [self constrainPointHorizontally:aPoint];
     
-    float fMeterPerTile = limit;// * tileSideLength;
+    double fMeterPerTile = limit;// * tileSideLength;
     //NSLog(@"limit %f",limit);
     //NSLog(@"tileSideLength %d",tileSideLength);
     //NSLog(@"fmeter %f",fMeterPerTile);
@@ -167,22 +167,22 @@
     return tile;
 }
 
-- (RMTilePoint) project: (RMProjectedPoint)aPoint atZoom:(float)zoom
+- (RMTilePoint) project: (RMProjectedPoint)aPoint atZoom:(double)zoom
 {
-    float normalised_zoom = [self normaliseZoom:zoom];
-    float limit = [self limitFromNormalisedZoom:normalised_zoom];
+    double normalised_zoom = [self normaliseZoom:zoom];
+    double limit = [self limitFromNormalisedZoom:normalised_zoom];
     
     return [self projectInternal:aPoint normalisedZoom:normalised_zoom limit:limit];
 }
 ////aRect:视图内地理范围
-- (RMTileRect) projectRect: (RMProjectedRect)aRect atZoom:(float)zoom
+- (RMTileRect) projectRect: (RMProjectedRect)aRect atZoom:(double)zoom
 {
     
-    /// \bug assignment of float to int, WTF?
+    /// \bug assignment of double to int, WTF?
    
     int normalised_zoom = [self normaliseZoom:zoom];
     //一个切片的地理范围
-    float limit = [self calculateScaleFromZoom:normalised_zoom] * self.tileSideLength;
+    double limit = [self calculateScaleFromZoom:normalised_zoom] * self.tileSideLength;
     //NSLog(@"limit is %f",limit);
     RMTileRect tileRect;
     
@@ -221,12 +221,12 @@
     return tileRect;
 }
 
--(RMTilePoint) project: (RMProjectedPoint)aPoint atScale:(float)scale
+-(RMTilePoint) project: (RMProjectedPoint)aPoint atScale:(double)scale
 {
     return [self project:aPoint atZoom:[self calculateZoomFromScale:scale]];
 }
 //返回当前级别下地图的地理原点及切片x,y的个数
--(RMTileRect) projectRect: (RMProjectedRect)aRect atScale:(float)scale
+-(RMTileRect) projectRect: (RMProjectedRect)aRect atScale:(double)scale
 {
     return [self projectRect:aRect atZoom:[self calculateZoomFromScale:scale]];
 }
@@ -236,14 +236,14 @@
     return [self projectRect:[screen projectedBounds] atScale:[screen metersPerPixel]];
 }
 
--(float) calculateZoomFromScale: (float) scale
+-(double) calculateZoomFromScale: (double) scale
 {
     int zoom = 0;
-    float oldScale = 0.0;
+    double oldScale = 0.0;
     //    NSLog(@"scale %f",scale);
     //       NSLog(@"%@",m_dResolutions);
     for (id value in m_dResolutions) {
-        float fValue = [value floatValue];
+        double fValue = [value doubleValue];
 //                NSLog(@"fValue %f",fValue);
         if(zoom == 0)
             oldScale = fValue;
@@ -256,8 +256,8 @@
             if(zoom == 0)
                 return zoom;
             else{
-                float d1 = scale - fValue;
-                float d2 = oldScale - scale;
+                double d1 = scale - fValue;
+                double d2 = oldScale - scale;
                 if(d1<d2)
                 {
                     //                    NSLog(@"zoom %d",zoom);
@@ -273,19 +273,19 @@
         }
         zoom++;
     }
-    NSLog(@"zoom %d",zoom);
+   // NSLog(@"zoom %d",zoom);
     return zoom;
 }
 
--(float) calculateNormalisedZoomFromScale: (float) scale
+-(double) calculateNormalisedZoomFromScale: (double) scale
 {
     return [self normaliseZoom:[self calculateZoomFromScale:scale]];
 }
 
--(float) calculateScaleFromZoom: (float) zoom
+-(double) calculateScaleFromZoom: (double) zoom
 {
     id result = [m_dResolutions objectAtIndex:(int)zoom];
-    return [result floatValue];
+    return [result doubleValue];
 }
 
 @end

@@ -39,22 +39,22 @@
  */
 @protocol RMMercatorToTileProjection<NSObject>
 
--(RMTilePoint) project: (RMProjectedPoint)aPoint atZoom:(float)zoom;
--(RMTileRect) projectRect: (RMProjectedRect)aRect atZoom:(float)zoom;
+-(RMTilePoint) project: (RMProjectedPoint)aPoint atZoom:(double)zoom;
+-(RMTileRect) projectRect: (RMProjectedRect)aRect atZoom:(double)zoom;
 
--(RMTilePoint) project: (RMProjectedPoint)aPoint atScale:(float)scale;
--(RMTileRect) projectRect: (RMProjectedRect)aRect atScale:(float)scale;
+-(RMTilePoint) project: (RMProjectedPoint)aPoint atScale:(double)scale;
+-(RMTileRect) projectRect: (RMProjectedRect)aRect atScale:(double)scale;
 - (void) setIsBaseLayer:(BOOL)bIsBaseLayer;
 /// This is a helper for projectRect above. Much simpler for the caller.
 -(RMTileRect) project: (RMMercatorToScreenProjection*)screen;
 
 -(RMTile) normaliseTile: (RMTile) tile;
 
--(float) normaliseZoom: (float) zoom;
+-(double) normaliseZoom: (double) zoom;
 
--(float) calculateZoomFromScale: (float) scale;
--(float) calculateNormalisedZoomFromScale: (float) scale;
--(float) calculateScaleFromZoom: (float) zoom;
+-(double) calculateZoomFromScale: (double) scale;
+-(double) calculateNormalisedZoomFromScale: (double) scale;
+-(double) calculateScaleFromZoom: (double) zoom;
 
 /**
  * APIProperty: planetBounds

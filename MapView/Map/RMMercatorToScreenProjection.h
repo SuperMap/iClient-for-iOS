@@ -50,7 +50,7 @@
 	CGRect screenBounds;
 
 	/// \brief meters per pixel
-	float metersPerPixel;}
+	double metersPerPixel;}
 
 - (id) initFromProjection: (RMProjection*) projection ToScreenBounds: (CGRect)aScreenBounds;
 
@@ -88,7 +88,7 @@
  * Returns:
  * {<RMProjectedPoint>}
  */
-- (RMProjectedPoint)zoomPoint: (RMProjectedPoint)aPoint byFactor: (float)factor near:(CGPoint) pivot;
+- (RMProjectedPoint)zoomPoint: (RMProjectedPoint)aPoint byFactor: (double)factor near:(CGPoint) pivot;
  
 /**
  * APIMethod: zoomRect
@@ -100,7 +100,7 @@
  * Returns:
  * {<RMProjectedRect>}
  */
-- (RMProjectedRect)zoomRect: (RMProjectedRect)aRect byFactor: (float)factor near:(CGPoint) pivot;
+- (RMProjectedRect)zoomRect: (RMProjectedRect)aRect byFactor: (double)factor near:(CGPoint) pivot;
 
 /**
  * APIMethod: moveScreenBy
@@ -110,7 +110,7 @@
  * delta - {<CGSize>} 
  */
 - (void) moveScreenBy: (CGSize) delta;
-- (void) zoomScreenByFactor: (float) factor near:(CGPoint) aPoint;
+- (void) zoomScreenByFactor: (double) factor near:(CGPoint) aPoint;
 
 /**
  * APIMethod: projectXYPoint
@@ -122,7 +122,7 @@
  * Returns:
  * {<CGPoint>}
  */
-- (CGPoint)projectXYPoint:(RMProjectedPoint)aPoint withMetersPerPixel:(float)aScale;
+- (CGPoint)projectXYPoint:(RMProjectedPoint)aPoint withMetersPerPixel:(double)aScale;
 
 /// Project -> screen coordinates.
 - (CGPoint) projectXYPoint: (RMProjectedPoint) aPoint;
@@ -142,7 +142,7 @@
 - (RMProjectedPoint) projectScreenPointToXY: (CGPoint) aPoint;
 - (RMProjectedRect) projectScreenRectToXY: (CGRect) aRect;
 - (RMProjectedSize)projectScreenSizeToXY: (CGSize) aSize;
-- (RMProjectedPoint)projectScreenPointToXY: (CGPoint) aPixelPoint withMetersPerPixel:(float)aScale;
+- (RMProjectedPoint)projectScreenPointToXY: (CGPoint) aPixelPoint withMetersPerPixel:(double)aScale;
 /**
  * APIMethod: projectedBounds
  *  视图内地理范围
@@ -159,7 +159,7 @@
 - (void) setScreenBounds:(CGRect)rect;
 - (CGRect) screenBounds;
 
-@property (assign, readwrite) float metersPerPixel;
+@property (assign, readwrite) double metersPerPixel;
 @property (assign, readwrite) RMProjectedPoint origin;
 @property (nonatomic,readonly) RMProjection *projection;
 -(void)deepCopy:(RMMercatorToScreenProjection *)copy;

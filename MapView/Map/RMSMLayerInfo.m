@@ -68,7 +68,7 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
-                                                       timeoutInterval:3];
+                                                       timeoutInterval:30];
     
     
     [request setHTTPMethod:@"GET"];
@@ -280,12 +280,12 @@
             //NSLog(@"unit degree");
             
             resolution = 0.0254 / dpi / dScale / ((M_PI * 2 * datumAxis) / 360);
-            NSString* strResolution = [NSString stringWithFormat:@"%e",resolution];
+            NSString* strResolution = [NSString stringWithFormat:@"%.14f",resolution];
             //NSLog(@"%@",strResolution);
             return strResolution;
         } else {
             resolution = 0.0254 / dpi / dScale ;
-            NSString* strResolution = [NSString stringWithFormat:@"%e",resolution];
+            NSString* strResolution = [NSString stringWithFormat:@"%.14f",resolution];
             return strResolution;
         }
     }

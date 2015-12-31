@@ -107,7 +107,7 @@
     return [self initWithFrame:frame screenScale:0.0];
 }
 
-- (id)initWithFrame:(CGRect)frame screenScale:(float)theScreenScale
+- (id)initWithFrame:(CGRect)frame screenScale:(double)theScreenScale
 {
 	LogMethod();
 	if (self = [super initWithFrame:frame]) {
@@ -355,19 +355,19 @@
 	if (_delegateHasMapViewRegionDidChange) [delegate mapViewRegionDidChange:self];
 }
  
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) center
 {
 	[self zoomByFactor:zoomFactor near:center animated:NO];
 }
-- (void)zoomByFactor: (float) zoomFactor near:(CGPoint) center animated:(BOOL)animated
+- (void)zoomByFactor: (double) zoomFactor near:(CGPoint) center animated:(BOOL)animated
 {
 	if ( _constrainMovement ) 
 	{
 		//判断缩放后地图是否超出范围
         //the logic is copued from the method zoomByFactor,
-		float _zoomFactor = [self.contents adjustZoomForBoundingMask:zoomFactor];
-		float zoomDelta = log2f(_zoomFactor);
-		float targetZoom = zoomDelta + [self.contents zoom];
+		double _zoomFactor = [self.contents adjustZoomForBoundingMask:zoomFactor];
+		double zoomDelta = log2f(_zoomFactor);
+		double targetZoom = zoomDelta + [self.contents zoom];
 		BOOL canZoom=NO;
 		if (targetZoom == [self.contents zoom]){
 			//OK... . I could even do a return here.. but it will hamper with future logic..
@@ -400,7 +400,7 @@
 			
 			//get copies of mercatorRoScreenProjection's data
 			RMProjectedPoint origin=[mtsp origin];
-			float metersPerPixel=mtsp.metersPerPixel;
+			double metersPerPixel=mtsp.metersPerPixel;
 			CGRect screenBounds=[mtsp screenBounds];
 			
 			//tjis is copied from [RMMercatorToScreenBounds zoomScreenByFactor]
@@ -457,7 +457,7 @@
 
 #pragma mark RMMapContentsAnimationCallback methods
 
-- (void)animationFinishedWithZoomFactor:(float)zoomFactor near:(CGPoint)p
+- (void)animationFinishedWithZoomFactor:(double)zoomFactor near:(CGPoint)p
 {
 	if (_delegateHasAfterMapZoomByFactor)
 		[delegate afterMapZoom: self byFactor: zoomFactor near: p];
@@ -517,8 +517,8 @@
 		CGPoint location = [touch locationInView: self];
 		
 		//		RMLog(@"For touch at %.0f, %.0f:", location.x, location.y);
-		float dx = location.x - gesture.center.x;
-		float dy = location.y - gesture.center.y;
+		double dx = location.x - gesture.center.x;
+		double dy = location.y - gesture.center.y;
 		//		RMLog(@"delta = %.0f, %.0f  distance = %f", dx, dy, sqrtf((dx*dx) + (dy*dy)));
 		gesture.averageDistanceFromCenter += sqrtf((dx*dx) + (dy*dy));
 	}
@@ -531,8 +531,8 @@
 	{
 		CGPoint first = [[[touches allObjects] objectAtIndex:0] locationInView:[self superview]];
 		CGPoint second = [[[touches allObjects] objectAtIndex:1] locationInView:[self superview]];
-		CGFloat height = second.y - first.y;
-        CGFloat width = first.x - second.x;
+		double height = second.y - first.y;
+        double width = first.x - second.x;
         gesture.angle = atan2(height,width);
 	}
 	
@@ -668,7 +668,7 @@
 			[delegate doubleTapOnMap: self At: lastGesture.center];
 		} else {
 			// Default behaviour matches built in maps.app
-			float nextZoomFactor = [self.contents nextNativeZoomFactor];
+			double nextZoomFactor = [self.contents nextNativeZoomFactor];
 			if (nextZoomFactor != 0)
 				[self zoomByFactor:nextZoomFactor near:[touch locationInView:self] animated:YES];
 		}
@@ -730,7 +730,7 @@
 		}
 		else if(!enableDragging && (lastGesture.numTouches == 1))
 		{
-			float prevZoomFactor = [self.contents prevNativeZoomFactor];
+			double prevZoomFactor = [self.contents prevNativeZoomFactor];
 			if (prevZoomFactor != 0)
 				[self zoomByFactor:prevZoomFactor near:[touch locationInView:self] animated:YES];
 		}
@@ -779,8 +779,8 @@
 	{
           if(newGesture.numTouches == 2)
           {
-		CGFloat angleDiff = lastGesture.angle - newGesture.angle;
-		CGFloat newAngle = self.rotation + angleDiff;
+		double angleDiff = lastGesture.angle - newGesture.angle;
+		double newAngle = self.rotation + angleDiff;
 		
 		[self setRotation:newAngle];
           }
@@ -903,12 +903,12 @@
   }
 }
 
-- (void)setRotation:(CGFloat)angle
+- (void)setRotation:(double)angle
 {
  	if (_delegateHasBeforeMapRotate) [delegate beforeMapRotate: self fromAngle: rotation];
 
 	[CATransaction begin];
-	[CATransaction setValue:[NSNumber numberWithFloat:0.0f] forKey:kCATransactionAnimationDuration];
+	[CATransaction setValue:[NSNumber numberWithdouble:0.0f] forKey:kCATransactionAnimationDuration];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	
 	rotation = angle;

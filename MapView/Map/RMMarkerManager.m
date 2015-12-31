@@ -59,6 +59,9 @@
 /// place the (new created) marker onto the map at projected point and take ownership of it
 - (void)addMarker:(RMMarker *)marker atProjectedPoint:(RMProjectedPoint)projectedPoint {
 
+    RMProjectedPoint projectedPointTmp;
+    projectedPointTmp.easting = projectedPoint.easting+9.2;
+    projectedPointTmp.northing = projectedPoint.northing;
 	// only set the AffineTransform if the marker has rotation enabled
     //只有当marker的rotation为YES时才调用AffineTransform（放射变换）
 	if (marker.enableRotation) {
@@ -66,8 +69,8 @@
 	} else {
 		[marker setAffineTransform:CGAffineTransformMakeRotation(0.0f)];
 	}
-	[marker setProjectedLocation:projectedPoint];
-	[marker setPosition:[[contents mercatorToScreenProjection] projectXYPoint:projectedPoint]];
+	[marker setProjectedLocation:projectedPointTmp];
+	[marker setPosition:[[contents mercatorToScreenProjection] projectXYPoint:projectedPointTmp]];
 	[[contents overlay] addSublayer:marker];
 }
 

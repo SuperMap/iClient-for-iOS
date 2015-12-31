@@ -34,8 +34,8 @@
 @interface RMTileSourcesContainer : NSObject
 
 // These are the minimum and maximum zoom levels across all tile sources.
-@property (nonatomic, assign) float minZoom;
-@property (nonatomic, assign) float maxZoom;
+@property (nonatomic, assign) double minZoom;
+@property (nonatomic, assign) double maxZoom;
 @property (nonatomic, assign)  NSMutableArray *baseLayerScales;
 // These properties are (and have to be) equal across all tile sources
 @property (nonatomic, readonly) int tileSideLength;

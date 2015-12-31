@@ -40,7 +40,7 @@
     
     RMSphericalTrapezium _latitudeLongitudeBoundingBox;
     
-    float _minZoom, _maxZoom;
+    double _minZoom, _maxZoom;
     int _tileSideLength;
      NSMutableArray *_baseLayerScales;
 }
@@ -389,12 +389,12 @@
     return _projection;
 }
 
-- (float)minZoom
+- (double)minZoom
 {
     return _minZoom;
 }
 
-- (void)setMinZoom:(float)minZoom
+- (void)setMinZoom:(double)minZoom
 {
     if (minZoom < kRMTileSourcesContainerMinZoom)
         minZoom = kRMTileSourcesContainerMinZoom;
@@ -402,12 +402,12 @@
     _minZoom = minZoom;
 }
 
-- (float)maxZoom
+- (double)maxZoom
 {
     return _maxZoom;
 }
 
-- (void)setMaxZoom:(float)maxZoom
+- (void)setMaxZoom:(double)maxZoom
 {
     if (maxZoom > kRMTileSourcesContainerMaxZoom)
         maxZoom = kRMTileSourcesContainerMaxZoom;
