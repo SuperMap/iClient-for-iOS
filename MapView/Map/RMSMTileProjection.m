@@ -144,7 +144,7 @@
     }
     else {
 //        NSLog(@"%e",y);
-        tile.tile.y =(uint32_t)y ;
+        tile.tile.y =(uint32_t)(y+0.5) ;
     }
     //    NSLog(@"x %f",x);
     if (x<=-1) {
@@ -152,7 +152,7 @@
     }
     else{
 //        NSLog(@"%e",x);
-        tile.tile.x = (uint32_t)x;
+        tile.tile.x = (uint32_t)(x+0.5);
     }
     
     
@@ -189,6 +189,7 @@
     // The origin for projectInternal will have to be the top left instead of the bottom left.
     //左上角 视图的左上角地理坐标
     RMProjectedPoint topLeft = aRect.origin;
+    topLeft.easting += 9.2;
     topLeft.northing += aRect.size.height;
     
     
