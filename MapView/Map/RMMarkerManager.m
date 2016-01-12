@@ -60,7 +60,7 @@
 - (void)addMarker:(RMMarker *)marker atProjectedPoint:(RMProjectedPoint)projectedPoint {
 
     RMProjectedPoint projectedPointTmp;
-    projectedPointTmp.easting = projectedPoint.easting+9.2;
+    projectedPointTmp.easting = projectedPoint.easting;
     projectedPointTmp.northing = projectedPoint.northing;
 	// only set the AffineTransform if the marker has rotation enabled
     //只有当marker的rotation为YES时才调用AffineTransform（放射变换）
