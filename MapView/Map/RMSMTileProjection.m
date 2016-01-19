@@ -189,7 +189,8 @@
     // The origin for projectInternal will have to be the top left instead of the bottom left.
     //左上角 视图的左上角地理坐标
     RMProjectedPoint topLeft = aRect.origin;
-    topLeft.easting += 9.2;
+    if( !((topLeft.easting>=-180&&topLeft.easting<=180)&&(topLeft.northing>=-90&&topLeft.northing<=90)) )
+        topLeft.easting += 9.2;
     topLeft.northing += aRect.size.height;
     
     
