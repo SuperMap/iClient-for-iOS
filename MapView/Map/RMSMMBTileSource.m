@@ -12,7 +12,13 @@
 #import "RMProjection.h"
 #import "RMTileImage.h"
 #import "MapView_Prefix.pch"
+#import "RMSMTileProjection_inner.h"
 
+@interface RMSMMBTileSource()
+{
+    NSMutableDictionary* mResolutionXY;
+}
+@end
 @implementation RMSMMBTileSource
 
 - (id)initWithTileSetURL:(NSString *)tileSetURL
@@ -44,6 +50,7 @@
     }
     NSLog(@"%d",nresult);
      */
+   // mOrinX = mOrinY = 0;
     db = [[FMDatabase databaseWithPath:tileSetURL] retain];
     if([tileSetURL hasSuffix:@".mbtiles"]){
 		file_extension = @"mbtiles";
@@ -55,6 +62,7 @@
     if ( ! [db open])
         return nil;
 
+    
     FMResultSet *results = [db executeQuery:@"select name,value from metadata"];
     
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
@@ -69,11 +77,20 @@
     //NSLog(@"re is :%@",resolutions);
     NSArray *reArray = [resolutions componentsSeparatedByString: @","];
     m_dResolutions = [[NSMutableArray alloc] init];
+    
+    mResolutionXY = [[NSMutableDictionary alloc]initWithCapacity:5];
+    int key = 0;
     for (NSString* res in reArray)
     {        
         [m_dResolutions addObject:res];
+        results = [db executeQuery:[NSString stringWithFormat:@"select tile_column,tile_row from map where resolution == %@ limit 1", res]];
+        [results next];
+        NSString* column = [results stringForColumn:@"tile_column"];
+        NSString* row = [results stringForColumn:@"tile_row"];
+        
+        [mResolutionXY setObject:@[column,row] forKey:[[NSNumber alloc] initWithInt:key++]];
     }
-
+    //FMResultSet* resultsXY = [db executeQuery:@"select tile_id from map"];
     
     NSString *scales =  (NSString*)[dict objectForKey:@"scales"];
     //NSLog(@"%@",    scales);
@@ -146,7 +163,7 @@
     [m_config setObject:compatible forKey:@"compatible"];
     //NSLog(@"%@",m_config);
     tileProjection = [[RMSMTileProjection alloc] initFromProjection:[self projection] tileSideLength:256 maxZoom:[m_dResolutions count]-1 minZoom:0 info:nil resolutions:m_dResolutions];
-    
+    tileProjection.orinXY = mResolutionXY;
     [self setMaxZoom:[m_dResolutions count]-1];
 	[self setMinZoom:0];
     _isBaseLayer=NO;
@@ -310,6 +327,7 @@
 {
 	return nil;
 }
+
 
 -(float) numberZoomLevels
 {

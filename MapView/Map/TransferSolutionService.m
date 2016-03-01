@@ -52,6 +52,10 @@
                                                                    NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]];
     }
     
+    // 设置出行时间
+    if ([param travelTime]) {
+        [endUrl appendFormat:@"&travelTime=%@",[param travelTime]];
+    }
     //第一步，创建url
     NSURL *url = [NSURL URLWithString:[endUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     //第二步，创建请求

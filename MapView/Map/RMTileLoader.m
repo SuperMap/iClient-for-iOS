@@ -128,7 +128,14 @@
     //RMTileRect newTileRect = [content tileBounds];
     //[mercatorToTileProjection projectRect:[mercatorToScreenProjection projectedBounds]atScale:[self scaledMetersPerPixel]];
     
-    RMTileRect newTileRect =[[tileSource mercatorToTileProjection]projectRect:[[content mercatorToScreenProjection] projectedBounds]atScale:[content scaledMetersPerPixel]];
+    RMProjectedRect aRect = [[content mercatorToScreenProjection] projectedBounds];
+    RMProjectedPoint topLeft = aRect.origin;
+    if( tileSource.isRectify && !((topLeft.easting>=-180&&topLeft.easting<=180)&&(topLeft.northing>=-90&&topLeft.northing<=90)) ){
+        topLeft.easting += 9.2;
+        aRect.origin = topLeft;
+    }
+    
+    RMTileRect newTileRect =[[tileSource mercatorToTileProjection]projectRect:aRect atScale:[content scaledMetersPerPixel]];
     
     
     

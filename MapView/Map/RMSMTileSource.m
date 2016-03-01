@@ -18,6 +18,7 @@
 
 @implementation RMSMTileSource
 @synthesize tileLoader=_tileLoader,imagesOnScreen=_imagesOnScreen,renderer=_renderer;
+@synthesize isRectify;
 -(id) init
 {
     if (![super init])
@@ -29,6 +30,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMSuspendNetworkOperations object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMResumeNetworkOperations object:nil];
     [self setIsUseCache:YES];
+    self.isRectify = NO;
     return self;
 }
 
@@ -113,7 +115,6 @@
     [self init];
     
     self.m_Info = info;
-    
     [self getResolutionsFromScales:scales];
     
     smProjection=[[RMProjection alloc] initForSMProjection];

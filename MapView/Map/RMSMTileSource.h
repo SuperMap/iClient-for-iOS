@@ -39,6 +39,9 @@
  * {BOOL} 用于判断在加载地图是是否使用本地缓存
  */
 @property (nonatomic) BOOL isUseCache;
+
+//是否纠偏
+@property(nonatomic)BOOL isRectify;
 -(id) init;
 /**
  * Constructor: initWithInfo

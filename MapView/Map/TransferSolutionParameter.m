@@ -9,7 +9,7 @@
 #import "TransferSolutionParameter.h"
 
 @implementation TransferSolutionParameter
-
+@synthesize travelTime;
 -(id)init{
     if (self = [super init]) {
         _points = nil;
@@ -21,6 +21,7 @@
         _evadelStops = nil;
         _priorLines = nil;
         _priorStops = nil;
+        self.travelTime = nil;
     }
     return self;
 }

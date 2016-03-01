@@ -66,6 +66,10 @@
 @property(nonatomic,retain) NSMutableArray *priorStops;
 
 /**
+ * 出行时间，如:早上八点半--"8:30"。设置了该参数，分析时，会考虑线路的首末班车时间的限制。过滤掉运行时间不包含出行时间的线路。
+ */
+@property(nonatomic,retain)NSString* travelTime;
+/**
  * Constructor: TransferSolutionParameter
  * 交通换乘方案类
  *

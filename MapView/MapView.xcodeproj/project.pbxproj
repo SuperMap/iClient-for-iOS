@@ -33,6 +33,7 @@
 
 /* Begin PBXBuildFile section */
 		090FE3140ECD71A500035FBC /* RMTilesUpdateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 090FE3130ECD71A500035FBC /* RMTilesUpdateDelegate.h */; };
+		0AA859711C858170005798F7 /* RMSMTileProjection_inner.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA859701C858170005798F7 /* RMSMTileProjection_inner.h */; };
 		126693040EB76C0B00E002D5 /* RMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 126692A00EB75C0A00E002D5 /* RMConfiguration.m */; };
 		17157D88133BBC8300E28941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		17157D89133BBC8300E28941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -475,6 +476,7 @@
 		090C948B0EC23FCD003AEE25 /* RMMarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMarkerManager.h; sourceTree = "<group>"; };
 		090C948C0EC23FCD003AEE25 /* RMMarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMarkerManager.m; sourceTree = "<group>"; };
 		090FE3130ECD71A500035FBC /* RMTilesUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTilesUpdateDelegate.h; sourceTree = "<group>"; };
+		0AA859701C858170005798F7 /* RMSMTileProjection_inner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMTileProjection_inner.h; sourceTree = "<group>"; };
 		1266929F0EB75C0A00E002D5 /* RMConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMConfiguration.h; sourceTree = "<group>"; };
 		126692A00EB75C0A00E002D5 /* RMConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMConfiguration.m; sourceTree = "<group>"; };
 		12F2031E0EBB65E9003D7B6B /* RMMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMapViewDelegate.h; sourceTree = "<group>"; };
@@ -1047,6 +1049,7 @@
 			isa = PBXGroup;
 			children = (
 				FE1927971769563F003B2E46 /* RMSMTileProjection.h */,
+				0AA859701C858170005798F7 /* RMSMTileProjection_inner.h */,
 				FE1927981769563F003B2E46 /* RMSMTileProjection.m */,
 				B8C974B20E8A1FED007D16AD /* Proj4 wrapper */,
 				B83E64E90E80E73F001663B6 /* RMFractalTileProjection.h */,
@@ -1525,6 +1528,7 @@
 				2B5682720F68E36000E8DF40 /* RMOpenAerialMapSource.h in Headers */,
 				96FE8E360F72D01B00A11CF0 /* RMYahooMapSource.h in Headers */,
 				F5C12D2A0F8A86CA00A894D2 /* RMGeoHash.h in Headers */,
+				0AA859711C858170005798F7 /* RMSMTileProjection_inner.h in Headers */,
 				96492C400FA8AD3400EBA6D2 /* RMGlobalConstants.h in Headers */,
 				B144DEFE0FD989C3003F3368 /* RMTileMapServiceSource.h in Headers */,
 				FEC0BFF41934903F00A23971 /* FindPathParameters.h in Headers */,

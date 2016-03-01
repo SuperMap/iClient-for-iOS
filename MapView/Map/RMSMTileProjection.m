@@ -9,6 +9,7 @@
 #import "RMSMTileProjection.h"
 #import "RMMercatorToScreenProjection.h"
 #import "RMProjection.h"
+#import "RMSMTileProjection_inner.h"
 #import <math.h>
 
 @implementation RMSMTileProjection
@@ -16,7 +17,7 @@
 @synthesize maxZoom, minZoom;
 @synthesize tileSideLength;
 @synthesize planetBounds;
-
+@synthesize orinXY;
 -(id) initFromProjection:(RMProjection*)projection tileSideLength:(NSUInteger)aTileSideLength maxZoom: (NSUInteger) aMaxZoom minZoom: (NSUInteger) aMinZoom info:(RMSMLayerInfo*) info resolutions:(NSMutableArray*) dResolutions
 {
     if (![super init])
@@ -159,11 +160,14 @@
     tile.tile.zoom = zoom;
     tile.offset.x = (double)x - tile.tile.x;
     tile.offset.y = (double)y - tile.tile.y;
-//     NSLog(@"tile.offset.x :%f",tile.offset.x);
-//    NSLog(@"tile.tile.x :%u",tile.tile.x);
-//    NSLog(@"tile.tile.y :%U",tile.tile.y);
-//    NSLog(@"tile.offset.y :%f",tile.offset.y);
-    
+    if(self.orinXY!=nil){
+        NSArray* resultArr = self.orinXY[[[NSNumber alloc] initWithInt:zoom]];
+        NSString* strX = resultArr[0];
+        NSString* strY = resultArr[1];
+        tile.tile.x += [strX integerValue];
+        tile.tile.y += [strY integerValue];
+    }
+   
     return tile;
 }
 
@@ -174,6 +178,7 @@
     
     return [self projectInternal:aPoint normalisedZoom:normalised_zoom limit:limit];
 }
+
 ////aRect:视图内地理范围
 - (RMTileRect) projectRect: (RMProjectedRect)aRect atZoom:(double)zoom
 {
@@ -189,8 +194,6 @@
     // The origin for projectInternal will have to be the top left instead of the bottom left.
     //左上角 视图的左上角地理坐标
     RMProjectedPoint topLeft = aRect.origin;
-    if( !((topLeft.easting>=-180&&topLeft.easting<=180)&&(topLeft.northing>=-90&&topLeft.northing<=90)) )
-        topLeft.easting += 9.2;
     topLeft.northing += aRect.size.height;
     
     
