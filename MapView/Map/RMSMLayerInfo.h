@@ -73,6 +73,10 @@
 */
 @property (readwrite) double dWidth;
 
+//缓存路径
+@property(nonatomic,strong)NSString* cachePath;
+
+
 @property (retain,readonly) NSString * projection;
 
 /**

@@ -136,7 +136,11 @@
     if ( !image ) {
         return NO;
     }
-       [self updateImageUsingImage:image];
+    
+    //need add save to local
+    //UIImage* img = [UIImage imageWithData:newData];
+    [UIImageJPEGRepresentation(image, 0.66) writeToFile:self.cachePath atomically:1];
+    [self updateImageUsingImage:image];
 
        NSDictionary *d = [NSDictionary dictionaryWithObject:data forKey:@"data"];
        [[NSNotificationCenter defaultCenter] postNotificationName:RMMapImageLoadedNotification object:self userInfo:d];

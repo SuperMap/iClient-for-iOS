@@ -90,5 +90,5 @@ typedef NSImage UIImage;
 @property (readonly, assign) RMTile tile;
 @property (readonly) CALayer *layer;
 @property (readonly) NSDate *lastUsedTime;
-
+@property(nonatomic,strong)NSString* cachePath;
 @end

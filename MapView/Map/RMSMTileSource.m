@@ -13,12 +13,13 @@
 #import "RMSMTileProjection.h"
 #import "RMProjection.h"
 #import "RMTiledLayerController.h"
+#import "ToolKit.h"
 
 #import "MapView_Prefix.pch"
 
 @implementation RMSMTileSource
 @synthesize tileLoader=_tileLoader,imagesOnScreen=_imagesOnScreen,renderer=_renderer;
-@synthesize isRectify;
+@synthesize isRectify,cachePath;
 -(id) init
 {
     if (![super init])
@@ -222,7 +223,10 @@
 
 -(NSString*) tileFile: (RMTile) tile
 {
-    return nil;
+    
+    [ToolKit createFileDirectories:[NSString stringWithFormat:@"%@/%i",self.m_Info.cachePath,tile.zoom]];
+    
+    return [NSString stringWithFormat:@"%@/%i/%i_%i.png",self.m_Info.cachePath,tile.zoom,tile.x,tile.y];
 }
 
 -(NSString*) tilePath
@@ -246,6 +250,7 @@
     else if(networkOperations)
     {
         image = [RMTileImage imageForTile:tile withURL:[self tileURL:tile]];
+        image.cachePath = file;
     }
     else
     {

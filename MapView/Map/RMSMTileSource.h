@@ -40,6 +40,8 @@
  */
 @property (nonatomic) BOOL isUseCache;
 
+@property(nonatomic,strong)NSString* cachePath;
+
 //是否纠偏
 @property(nonatomic)BOOL isRectify;
 -(id) init;
