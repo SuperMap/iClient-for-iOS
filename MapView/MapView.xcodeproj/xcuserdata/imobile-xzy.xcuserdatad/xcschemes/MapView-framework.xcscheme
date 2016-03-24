@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8C974130E8A19B2007D16AD"
-               BuildableName = "libMapView.a"
-               BlueprintName = "MapView"
+               BlueprintIdentifier = "386676D40F6B73AC00C56B17"
+               BuildableName = "MapView-framework"
+               BlueprintName = "MapView-framework"
                ReferencedContainer = "container:MapView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B8C974130E8A19B2007D16AD"
-            BuildableName = "libMapView.a"
-            BlueprintName = "MapView"
+            BlueprintIdentifier = "386676D40F6B73AC00C56B17"
+            BuildableName = "MapView-framework"
+            BlueprintName = "MapView-framework"
             ReferencedContainer = "container:MapView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B8C974130E8A19B2007D16AD"
-            BuildableName = "libMapView.a"
-            BlueprintName = "MapView"
+            BlueprintIdentifier = "386676D40F6B73AC00C56B17"
+            BuildableName = "MapView-framework"
+            BlueprintName = "MapView-framework"
             ReferencedContainer = "container:MapView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
