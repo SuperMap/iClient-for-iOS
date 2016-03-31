@@ -145,7 +145,7 @@
     }
     else {
 //        NSLog(@"%e",y);
-        tile.tile.y =(uint32_t)(y+0.5) ;
+        tile.tile.y =(uint32_t)(y) ;
     }
     //    NSLog(@"x %f",x);
     if (x<=-1) {
@@ -153,7 +153,7 @@
     }
     else{
 //        NSLog(@"%e",x);
-        tile.tile.x = (uint32_t)(x+0.5);
+        tile.tile.x = (uint32_t)(x);
     }
     
     
