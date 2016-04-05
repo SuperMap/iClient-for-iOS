@@ -130,10 +130,11 @@
     
     RMProjectedRect aRect = [[content mercatorToScreenProjection] projectedBounds];
     RMProjectedPoint topLeft = aRect.origin;
-    if( tileSource.isRectify && !((topLeft.easting>=-180&&topLeft.easting<=180)&&(topLeft.northing>=-90&&topLeft.northing<=90)) ){
-        topLeft.easting += 9.2;
-        aRect.origin = topLeft;
-    }
+    
+    topLeft.easting += content.redressValue.width;
+    topLeft.northing += content.redressValue.height;
+    aRect.origin = topLeft;
+
     
     RMTileRect newTileRect =[[tileSource mercatorToTileProjection]projectRect:aRect atScale:[content scaledMetersPerPixel]];
     

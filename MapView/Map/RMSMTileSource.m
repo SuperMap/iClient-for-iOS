@@ -19,7 +19,7 @@
 
 @implementation RMSMTileSource
 @synthesize tileLoader=_tileLoader,imagesOnScreen=_imagesOnScreen,renderer=_renderer;
-@synthesize isRectify,cachePath;
+@synthesize cachePath;
 -(id) init
 {
     if (![super init])
@@ -31,7 +31,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMSuspendNetworkOperations object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMResumeNetworkOperations object:nil];
     [self setIsUseCache:YES];
-    self.isRectify = NO;
     return self;
 }
 
@@ -223,8 +222,8 @@
 
 -(NSString*) tileFile: (RMTile) tile
 {
-    
-    [ToolKit createFileDirectories:[NSString stringWithFormat:@"%@/%i",self.m_Info.cachePath,tile.zoom]];
+    if(self.m_Info.cachePath!=nil)
+        [ToolKit createFileDirectories:[NSString stringWithFormat:@"%@/%i",self.m_Info.cachePath,tile.zoom]];
     
     return [NSString stringWithFormat:@"%@/%i/%i_%i.png",self.m_Info.cachePath,tile.zoom,tile.x,tile.y];
 }
@@ -259,7 +258,13 @@
     
     return image;
 }
-
+-(void)clearCache{
+    NSError* error;
+    BOOL res = [[NSFileManager defaultManager] removeItemAtPath:self.m_Info.cachePath error:&error];
+    if(!res){
+        NSLog(@"%@",error);
+    }
+}
 -(id<RMMercatorToTileProjection>) mercatorToTileProjection
 {
     return [[tileProjection retain] autorelease];

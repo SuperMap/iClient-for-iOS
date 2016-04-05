@@ -69,7 +69,7 @@ BOOL delegateHasRegionUpdate;
 @synthesize screenScale;
 @synthesize markerManager;
 @synthesize renderers;
-
+@synthesize redressValue;
 #pragma mark --- begin constants ----
 #define kZoomAnimationStepTime 0.03f
 #define kZoomAnimationAnimationTime 0.1f
@@ -1437,10 +1437,12 @@ static BOOL _performExpensiveOperations = YES;
     
     [superTileSouceLayer removeFromSuperlayer];  superTileSouceLayer = nil;
     
-    for (__strong  CALayer* tiledLayer in layer.sublayers)
-    {
+    int count = layer.sublayers.count;
+    for(int i=0;i<count;i++){
+        CALayer* tiledLayer = layer.sublayers[i];
         tiledLayer.contents = nil;
-        [tiledLayer removeFromSuperlayer];  tiledLayer = nil;
+        [tiledLayer removeFromSuperlayer];
+        tiledLayer = nil;
     }
     
     //    NSUInteger tileSideLength = [tileSourcesContainer tileSideLength];

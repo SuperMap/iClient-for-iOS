@@ -42,8 +42,6 @@
 
 @property(nonatomic,strong)NSString* cachePath;
 
-//是否纠偏
-@property(nonatomic)BOOL isRectify;
 -(id) init;
 /**
  * Constructor: initWithInfo
@@ -121,6 +119,7 @@
  */
 -(void) setTileSideLength: (NSUInteger) aTileSideLength;
 
+-(void)clearCache;
 
 /**
  * APIProperty: minZoom

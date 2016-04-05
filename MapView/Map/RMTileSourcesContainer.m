@@ -371,12 +371,12 @@
 
 - (void)cancelAllDownloads
 {
-//    [_tileSourcesLock lock];
-//    
-//    for (id <RMTileSource>tileSource in _tileSources)
-//        [tileSource removeAllCachedImages];
-//    
-//    [_tileSourcesLock unlock];
+    [_tileSourcesLock lock];
+    
+    for (id <RMTileSource>tileSource in _tileSources)
+        [tileSource removeAllCachedImages];
+    
+    [_tileSourcesLock unlock];
 }
 
 - (id<RMMercatorToTileProjection> )mercatorToTileProjection

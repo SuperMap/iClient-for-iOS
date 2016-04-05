@@ -140,6 +140,7 @@ enum {
 @property (readwrite) CLLocationCoordinate2D mapCenter;
 @property (readwrite) RMProjectedPoint centerProjectedPoint;
 
+@property(nonatomic)CGSize redressValue;
 /**
  * APIProperty: projectedBounds
  *  视图内地理范围 origin:表示地图左下角的地理坐标，size：表示地图的横向和纵向地理坐标范围
