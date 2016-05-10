@@ -139,7 +139,8 @@ enum {
 
 @property (readwrite) CLLocationCoordinate2D mapCenter;
 @property (readwrite) RMProjectedPoint centerProjectedPoint;
-
+@property (readwrite) CGPoint zoomCenter;
+//新增纠偏接口，用户传入纠偏量， 用于纠正底图与叠加层偏移
 @property(nonatomic)CGSize redressValue;
 /**
  * APIProperty: projectedBounds
@@ -346,7 +347,7 @@ enum {
  */
 - (void)setOpacity:(double)opacity forTileSourceAtIndex:(NSUInteger)index;
 
-
+-(void) setZoom2: (NSUInteger) zoom;
 /**
  *subject to removal at any moment after 0.5 is released
  *发布了版本0.5后，此方法会被弃用。

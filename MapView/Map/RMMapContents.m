@@ -70,6 +70,7 @@ BOOL delegateHasRegionUpdate;
 @synthesize markerManager;
 @synthesize renderers;
 @synthesize redressValue;
+@synthesize zoomCenter;
 #pragma mark --- begin constants ----
 #define kZoomAnimationStepTime 0.03f
 #define kZoomAnimationAnimationTime 0.1f
@@ -115,7 +116,7 @@ BOOL delegateHasRegionUpdate;
 - (id)initWithView: (UIView*) view
         tilesource:(id<RMTileSource>)newTilesource
 {
-    return [self initWithView:view tilesource:newTilesource screenScale:0.0];
+    return [self initWithView:view tilesource:newTilesource screenScale:1.33];
 }
 
 -(id)initWithView:(UIView *)view tilesource:(id<RMTileSource>)newTilesource screenScale:(double)theScreenScale
@@ -960,10 +961,8 @@ BOOL delegateHasRegionUpdate;
     return [mercatorToScreenProjection metersPerPixel];
 }
 
--(void) setMetersPerPixel: (double) newMPP
-{
+-(void) setMetersPerPixel: (double) newMPP povot:(CGPoint)pivot{
     double zoomFactor = self.metersPerPixel / newMPP;
-    CGPoint pivot = CGPointZero;
     // 缩放等级发生改变，清空请求队列
     [[RMWebTileImage getInstanceQueue] cancelAllOperations];
     [mercatorToScreenProjection setMetersPerPixel:newMPP];
@@ -990,8 +989,11 @@ BOOL delegateHasRegionUpdate;
             [renderer setNeedsDisplay];
         }
     }
-    
-    
+}
+-(void) setMetersPerPixel: (double) newMPP
+{
+    CGPoint pivot = CGPointZero;
+    [self setMetersPerPixel:newMPP povot:pivot];
 }
 
 -(double) scaledMetersPerPixel
@@ -1038,6 +1040,22 @@ BOOL delegateHasRegionUpdate;
     [self setScaledMetersPerPixel:scale];
 }
 
+static NSUInteger oldZoom;
+-(void) setZoom2: (NSUInteger) zoom{
+    
+   
+   
+    
+    if(oldZoom==zoom)
+        return;
+    zoom = (zoom > maxZoom) ? maxZoom : zoom;
+    zoom = (zoom < minZoom) ? minZoom : zoom;
+    oldZoom = zoom;
+    NSLog(@"~~~~~zoom %i",zoom);
+    double scale = [mercatorToTileProjection calculateScaleFromZoom:zoom];
+    [self setMetersPerPixel:scale*screenScale povot:self.zoomCenter];
+    
+}
 //-(RMTileImageSet*) imagesOnScreen
 //{
 //	return [[imagesOnScreen retain] autorelease];

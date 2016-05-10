@@ -14,7 +14,7 @@
 
 @implementation RMSMTileProjection
 
-@synthesize maxZoom, minZoom;
+@synthesize maxZoom, minZoom,curZoom,curScale;
 @synthesize tileSideLength;
 @synthesize planetBounds;
 @synthesize orinXY;
@@ -244,41 +244,21 @@
 -(double) calculateZoomFromScale: (double) scale
 {
     int zoom = 0;
-    double oldScale = 0.0;
-    //    NSLog(@"scale %f",scale);
-    //       NSLog(@"%@",m_dResolutions);
     for (id value in m_dResolutions) {
         double fValue = [value doubleValue];
-//                NSLog(@"fValue %f",fValue);
-        if(zoom == 0)
-            oldScale = fValue;
-        
+
         if(fabs(fValue-scale)<0.00000001)
-            return zoom;
+            break ;
         
         if(scale>fValue)
         {
-            if(zoom == 0)
-                return zoom;
-            else{
-                double d1 = scale - fValue;
-                double d2 = oldScale - scale;
-                if(d1<d2)
-                {
-                    //                    NSLog(@"zoom %d",zoom);
-                    return zoom;
-                }
-                
-                else
-                {
-                    //                    NSLog(@"zoom %d",zoom);
-                    return zoom;
-                }
-            }
+            break;
         }
         zoom++;
     }
-   // NSLog(@"zoom %d",zoom);
+    curZoom = zoom;
+    curScale = scale;
+  //  NSLog(@"zoom %d",zoom);
     return zoom;
 }
 

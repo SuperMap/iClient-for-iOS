@@ -35,6 +35,8 @@
 		090FE3140ECD71A500035FBC /* RMTilesUpdateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 090FE3130ECD71A500035FBC /* RMTilesUpdateDelegate.h */; };
 		0A76B3881CA376A10068E451 /* ToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A76B3861CA376A10068E451 /* ToolKit.h */; };
 		0A76B3891CA376A10068E451 /* ToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A76B3871CA376A10068E451 /* ToolKit.m */; };
+		0A9A1E4C1CE20F6700711DBA /* RMMapTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9A1E4A1CE20F6700711DBA /* RMMapTap.h */; };
+		0A9A1E4D1CE20F6700711DBA /* RMMapTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A1E4B1CE20F6700711DBA /* RMMapTap.m */; };
 		0AA859711C858170005798F7 /* RMSMTileProjection_inner.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA859701C858170005798F7 /* RMSMTileProjection_inner.h */; };
 		126693040EB76C0B00E002D5 /* RMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 126692A00EB75C0A00E002D5 /* RMConfiguration.m */; };
 		17157D88133BBC8300E28941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -480,6 +482,8 @@
 		090FE3130ECD71A500035FBC /* RMTilesUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTilesUpdateDelegate.h; sourceTree = "<group>"; };
 		0A76B3861CA376A10068E451 /* ToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolKit.h; sourceTree = "<group>"; };
 		0A76B3871CA376A10068E451 /* ToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolKit.m; sourceTree = "<group>"; };
+		0A9A1E4A1CE20F6700711DBA /* RMMapTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMapTap.h; sourceTree = "<group>"; };
+		0A9A1E4B1CE20F6700711DBA /* RMMapTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMapTap.m; sourceTree = "<group>"; };
 		0AA859701C858170005798F7 /* RMSMTileProjection_inner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSMTileProjection_inner.h; sourceTree = "<group>"; };
 		1266929F0EB75C0A00E002D5 /* RMConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMConfiguration.h; sourceTree = "<group>"; };
 		126692A00EB75C0A00E002D5 /* RMConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMConfiguration.m; sourceTree = "<group>"; };
@@ -858,6 +862,8 @@
 		175701DB1323C2CF00A5D314 /* iOS Additions */ = {
 			isa = PBXGroup;
 			children = (
+				0A9A1E4A1CE20F6700711DBA /* RMMapTap.h */,
+				0A9A1E4B1CE20F6700711DBA /* RMMapTap.m */,
 				175701DC1323C2E900A5D314 /* NSUserDefaults+RouteMe.h */,
 				175701DD1323C2E900A5D314 /* NSUserDefaults+RouteMe.m */,
 			);
@@ -1479,6 +1485,7 @@
 			files = (
 				DFC2A8601B1BEAC6007C5DEB /* RMImageSource.h in Headers */,
 				B8C974170E8A19B2007D16AD /* RMMercatorToScreenProjection.h in Headers */,
+				0A9A1E4C1CE20F6700711DBA /* RMMapTap.h in Headers */,
 				47BBF18C1AE632F8007CE2F8 /* SMTianDiTuTileSource.h in Headers */,
 				B8C974250E8A19B2007D16AD /* RMOpenStreetMapSource.h in Headers */,
 				B8C974190E8A19B2007D16AD /* RMMapRenderer.h in Headers */,
@@ -1893,6 +1900,7 @@
 				B8C9743F0E8A19B2007D16AD /* RMTileImage.m in Sources */,
 				DFA6DCFB1AB6D822000F15A2 /* TransferLines.m in Sources */,
 				FE4162111A260F82004607B2 /* DataReturnOption.m in Sources */,
+				0A9A1E4D1CE20F6700711DBA /* RMMapTap.m in Sources */,
 				B8C974400E8A19B2007D16AD /* RMTile.c in Sources */,
 				B8C974410E8A19B2007D16AD /* RMOpenStreetMapSource.m in Sources */,
 				B8C974420E8A19B2007D16AD /* RMMemoryCache.m in Sources */,

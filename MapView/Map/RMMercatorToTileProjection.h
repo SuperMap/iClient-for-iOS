@@ -72,6 +72,8 @@
  * {NSUInteger} Minimum zoom for which we have tile images 
  */ 
 @property(readonly, nonatomic) NSUInteger minZoom;
+@property(readonly, nonatomic) NSUInteger curZoom;
+@property(readonly, nonatomic) CGFloat curScale;
 /**
  * APIProperty: tileSideLength
  * {NSUInteger} Tile side length in pixels

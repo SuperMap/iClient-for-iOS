@@ -119,6 +119,7 @@
  */
 -(void) setTileSideLength: (NSUInteger) aTileSideLength;
 
+//清除本地缓存
 -(void)clearCache;
 
 /**

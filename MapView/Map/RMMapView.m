@@ -28,6 +28,7 @@
 #import "RMMapView.h"
 #import "RMMapContents.h"
 #import "RMMapViewDelegate.h"
+#import "RMMapTap.h"
 
 #import "RMTileLoader.h"
 
@@ -44,6 +45,12 @@
 #import "RMWebTileImage.h"
 
 
+@interface RMMapView()
+{
+    NSUInteger oldZoom;
+    CGFloat factor;
+}
+@end
 @interface RMMapView (PrivateMethods)
 // methods for post-touch deceleration, ala UIScrollView
 - (void)startDecelerationWithDelta:(CGSize)delta;
@@ -113,6 +120,7 @@
 	if (self = [super initWithFrame:frame]) {
 		[self performInitialSetup];
         screenScale = theScreenScale;
+        oldZoom = -1;
 	}
 	return self;
 }
@@ -592,7 +600,8 @@
 	
 	//	RMLog(@"touchesBegan %d", [[event allTouches] count]);
 	lastGesture = [self gestureDetails:[event allTouches]];
-
+    factor = 1.0;
+    [RMMapTap touch:lastGesture Type:1];
 	if(deceleration)
 	{
 		if (_decelerationTimer != nil) {
@@ -601,6 +610,9 @@
 	}
 	
 	[self delayedResumeExpensiveOperations];
+    if(oldZoom==-1){
+        oldZoom = self.contents.mercatorToTileProjection.curZoom;
+    }
 }
 
 /// \bug touchesCancelled should clean up, not pass event to markers
@@ -660,7 +672,7 @@
 	
 	// Calculate the gesture.
 	lastGesture = [self gestureDetails:[event allTouches]];
-
+    [RMMapTap touch:lastGesture Type:3];
     BOOL decelerating = NO;
 	if (touch.tapCount >= 2)
 	{
@@ -736,6 +748,8 @@
 		}
 	}
 	
+    [self webTapSkip];
+    
 	if (_delegateHasAfterMapTouch) [delegate afterMapTouch: self];
     if (_delegateHasLongTapOnMap && _pressTime != 0.0&&
         (touch.timestamp - _pressTime) > 0.5) {
@@ -774,7 +788,7 @@
 	}
 	
 	RMGestureDetails newGesture = [self gestureDetails:[event allTouches]];
-	
+	 [RMMapTap touch:newGesture Type:2];
 	if(enableRotate && (newGesture.numTouches == lastGesture.numTouches))
 	{
           if(newGesture.numTouches == 2)
@@ -814,9 +828,10 @@
 					  @"Distance from center is zero despite >1 touches on the screen");
 			
 			double zoomFactor = newGesture.averageDistanceFromCenter / lastGesture.averageDistanceFromCenter;
-			
+            factor+= (zoomFactor-1.0);
 			[self moveBy:delta];
 			[self zoomByFactor: zoomFactor near: newGesture.center];
+            self.contents.zoomCenter = newGesture.center;
             if (zoomFactor>1.0) {
                 bZoomOut = true;
             }else{
@@ -835,6 +850,42 @@
         [self delayedResumeExpensiveOperations];
     }
 
+}
+
+-(void)webTapSkip{
+    static double preTime=0.0,srcTime=0.0;
+    if([RMMapTap getCurGestureState]==1)
+    {
+        double nowtime = [[NSDate date] timeIntervalSince1970]*1000000;
+        double dSumCostTime = nowtime-srcTime;
+        double dCostTime = nowtime-preTime;
+        
+        if(dCostTime<200000 && dSumCostTime < 200000*5){
+            NSLog(@"too quick!!!");
+            preTime = nowtime;
+            return;
+        }
+        preTime = nowtime;
+        srcTime = nowtime;
+        
+        NSUInteger zoom =  self.contents.mercatorToTileProjection.curZoom;
+        
+        if(factor>1.0){
+            if(zoom > oldZoom){
+                [self.contents setZoom2:zoom];
+            }else
+                [self.contents setZoom2:++zoom];
+            
+        }else if (factor<1.0){
+            if(zoom < oldZoom){
+                [self.contents setZoom2:zoom];
+            }else
+                [self.contents setZoom2:--zoom];
+        }else{
+            [self.contents setZoom2:oldZoom];
+        }
+        oldZoom = zoom;
+    }
 }
 
 // first responder needed to use UIMenuController
