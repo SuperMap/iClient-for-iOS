@@ -116,7 +116,7 @@ BOOL delegateHasRegionUpdate;
 - (id)initWithView: (UIView*) view
         tilesource:(id<RMTileSource>)newTilesource
 {
-    return [self initWithView:view tilesource:newTilesource screenScale:1.33];
+    return [self initWithView:view tilesource:newTilesource screenScale:0];
 }
 
 -(id)initWithView:(UIView *)view tilesource:(id<RMTileSource>)newTilesource screenScale:(double)theScreenScale
