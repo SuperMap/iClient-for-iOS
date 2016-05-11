@@ -1042,16 +1042,13 @@ BOOL delegateHasRegionUpdate;
 
 static NSUInteger oldZoom;
 -(void) setZoom2: (NSUInteger) zoom{
-    
-   
-   
-    
+  
     if(oldZoom==zoom)
         return;
     zoom = (zoom > maxZoom) ? maxZoom : zoom;
     zoom = (zoom < minZoom) ? minZoom : zoom;
     oldZoom = zoom;
-    NSLog(@"~~~~~zoom %i",zoom);
+   // NSLog(@"~~~~~zoom %i",zoom);
     double scale = [mercatorToTileProjection calculateScaleFromZoom:zoom];
     [self setMetersPerPixel:scale*screenScale povot:self.zoomCenter];
     

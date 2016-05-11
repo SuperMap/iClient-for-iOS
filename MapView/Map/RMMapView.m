@@ -861,7 +861,7 @@
         double dCostTime = nowtime-preTime;
         
         if(dCostTime<200000 && dSumCostTime < 200000*5){
-            NSLog(@"too quick!!!");
+            //NSLog(@"too quick!!!");
             preTime = nowtime;
             return;
         }
