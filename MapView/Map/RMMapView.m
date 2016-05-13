@@ -682,7 +682,7 @@
 			// Default behaviour matches built in maps.app
 			double nextZoomFactor = [self.contents nextNativeZoomFactor];
 			if (nextZoomFactor != 0)
-				[self zoomByFactor:nextZoomFactor near:[touch locationInView:self] animated:YES];
+				[self zoomByFactor:nextZoomFactor near:[touch locationInView:self] animated:NO];
 		}
 	} else if (lastTouches == 1 && touch.tapCount != 1) {
 		// deceleration

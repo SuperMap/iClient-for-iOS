@@ -116,7 +116,12 @@ BOOL delegateHasRegionUpdate;
 - (id)initWithView: (UIView*) view
         tilesource:(id<RMTileSource>)newTilesource
 {
-    return [self initWithView:view tilesource:newTilesource screenScale:0];
+    double deviceScale = [UIScreen mainScreen].scale;
+    if(deviceScale==3.0)
+        deviceScale=1.0;
+    else
+        deviceScale=0.8;
+    return [self initWithView:view tilesource:newTilesource screenScale:deviceScale];
 }
 
 -(id)initWithView:(UIView *)view tilesource:(id<RMTileSource>)newTilesource screenScale:(double)theScreenScale
