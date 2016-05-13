@@ -884,6 +884,8 @@
         }else{
             [self.contents setZoom2:oldZoom];
         }
+		zoom = (zoom > self.contents.maxZoom) ? self.contents.maxZoom : zoom;
+		zoom = (zoom < self.contents.minZoom) ? self.contents.minZoom : zoom;
         oldZoom = zoom;
     }
 }
