@@ -282,6 +282,7 @@
 	aRect.origin = origin;
 	aRect.size.width = screenBounds.size.width * metersPerPixel;
 	aRect.size.height = screenBounds.size.height * metersPerPixel;
+    //NSLog(@"%.12f&&&&&&&&",metersPerPixel);
 	return aRect;
 }
 

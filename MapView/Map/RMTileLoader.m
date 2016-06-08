@@ -131,16 +131,12 @@
     RMProjectedRect aRect = [[content mercatorToScreenProjection] projectedBounds];
     RMProjectedPoint topLeft = aRect.origin;
     
-    topLeft.easting += content.redressValue.width;
-    topLeft.northing += content.redressValue.height;
+    topLeft.easting = topLeft.easting + content.redressValue.width + tileSource.redressValue.width;
+    topLeft.northing = topLeft.northing + content.redressValue.height + tileSource.redressValue.height;
     aRect.origin = topLeft;
 
     
     RMTileRect newTileRect =[[tileSource mercatorToTileProjection]projectRect:aRect atScale:[content scaledMetersPerPixel]];
-    
-    
-    
-    
     
     RMTileImageSet *images = [tileSource imagesOnScreen];
     images.zoom = newTileRect.origin.tile.zoom;

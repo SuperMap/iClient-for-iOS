@@ -49,7 +49,7 @@
 @property (nonatomic, assign) RMMapRenderer * renderer;
 @property (nonatomic, assign) NSMutableArray* m_dScales;
 @property (nonatomic) BOOL isUseCache;
-
+@property (nonatomic,assign)CGSize redressValue;
 
 -(NSString *) tileURL: (RMTile) tile;
 -(NSString *) tileFile: (RMTile) tile;

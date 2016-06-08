@@ -33,6 +33,8 @@
 
 /* Begin PBXBuildFile section */
 		090FE3140ECD71A500035FBC /* RMTilesUpdateDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 090FE3130ECD71A500035FBC /* RMTilesUpdateDelegate.h */; };
+		0A1DD4351D07AA68001223E0 /* SMBaiduTileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A1DD4331D07AA68001223E0 /* SMBaiduTileSource.h */; };
+		0A1DD4361D07AA68001223E0 /* SMBaiduTileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1DD4341D07AA68001223E0 /* SMBaiduTileSource.m */; };
 		0A76B3881CA376A10068E451 /* ToolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A76B3861CA376A10068E451 /* ToolKit.h */; };
 		0A76B3891CA376A10068E451 /* ToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A76B3871CA376A10068E451 /* ToolKit.m */; };
 		0A9A1E4C1CE20F6700711DBA /* RMMapTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9A1E4A1CE20F6700711DBA /* RMMapTap.h */; };
@@ -480,6 +482,8 @@
 		090C948B0EC23FCD003AEE25 /* RMMarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMarkerManager.h; sourceTree = "<group>"; };
 		090C948C0EC23FCD003AEE25 /* RMMarkerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMarkerManager.m; sourceTree = "<group>"; };
 		090FE3130ECD71A500035FBC /* RMTilesUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMTilesUpdateDelegate.h; sourceTree = "<group>"; };
+		0A1DD4331D07AA68001223E0 /* SMBaiduTileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBaiduTileSource.h; sourceTree = "<group>"; };
+		0A1DD4341D07AA68001223E0 /* SMBaiduTileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBaiduTileSource.m; sourceTree = "<group>"; };
 		0A76B3861CA376A10068E451 /* ToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolKit.h; sourceTree = "<group>"; };
 		0A76B3871CA376A10068E451 /* ToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolKit.m; sourceTree = "<group>"; };
 		0A9A1E4A1CE20F6700711DBA /* RMMapTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMapTap.h; sourceTree = "<group>"; };
@@ -1075,6 +1079,8 @@
 		B83E64EB0E80E73F001663B6 /* Tile Source */ = {
 			isa = PBXGroup;
 			children = (
+				0A1DD4331D07AA68001223E0 /* SMBaiduTileSource.h */,
+				0A1DD4341D07AA68001223E0 /* SMBaiduTileSource.m */,
 				47BBF1861AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.h */,
 				47BBF1871AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.m */,
 				47BBF1881AE632F8007CE2F8 /* SMTianDiTuTileSource.h */,
@@ -1521,6 +1527,7 @@
 				B8FA92190E9315EC003A9FE6 /* RMLayerCollection.h in Headers */,
 				DFA6DD011AB6D822000F15A2 /* TransferSolutionParameter.h in Headers */,
 				FEBFDDA219358D8B0015E999 /* TransportationAnalystResultSetting.h in Headers */,
+				0A1DD4351D07AA68001223E0 /* SMBaiduTileSource.h in Headers */,
 				B8F3FC640EA2E792004D8F85 /* RMMarker.h in Headers */,
 				B8474B9A0EB40094006A0BC1 /* FMDatabase.h in Headers */,
 				47BBF18A1AE632F8007CE2F8 /* SMTianDiTu_cva_c_TileSource.h in Headers */,
@@ -1909,6 +1916,7 @@
 				B8C974460E8A19B2007D16AD /* RMFileTileImage.m in Sources */,
 				B8C974480E8A19B2007D16AD /* RMTileCache.m in Sources */,
 				FE3ADE311A24B351009188F2 /* ThemeUnique.m in Sources */,
+				0A1DD4361D07AA68001223E0 /* SMBaiduTileSource.m in Sources */,
 				B8C9744A0E8A19B2007D16AD /* RMProjection.m in Sources */,
 				B8C9744C0E8A19B2007D16AD /* RMAbstractMercatorWebSource.m in Sources */,
 				B8C9745D0E8A19E6007D16AD /* RMTileImageSet.m in Sources */,

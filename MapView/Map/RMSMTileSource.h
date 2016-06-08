@@ -39,7 +39,8 @@
  * {BOOL} 用于判断在加载地图是是否使用本地缓存
  */
 @property (nonatomic) BOOL isUseCache;
-
+//用于用户和第三方地图叠加，自定义纠偏
+@property (nonatomic,assign)CGSize redressValue;
 @property(nonatomic,strong)NSString* cachePath;
 
 -(id) init;

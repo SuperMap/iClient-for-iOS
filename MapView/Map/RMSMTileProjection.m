@@ -86,6 +86,7 @@
 
 - (RMTile) normaliseTile: (RMTile) tile
 {
+   // tile.y = tile.sliceCountH - tile.y;
     return  tile;
     // The mask contains a 1 for every valid x-coordinate bit.
     uint32_t mask = 1;
@@ -131,6 +132,7 @@
     //NSLog(@"fmeter %f",fMeterPerTile);
     
     //左上角与地图范围原点x 偏差的切片值
+    double sliceCountW = (planetBounds.origin.easting+planetBounds.size.width) / fMeterPerTile;
     double x = (newPoint.easting - planetBounds.origin.easting) / fMeterPerTile;
     //NSLog(@"easting %f",newPoint.easting);
     //NSLog(@"planetBounds.origin.easting %f",planetBounds.origin.easting);
@@ -138,6 +140,7 @@
     // Unfortunately, y is indexed from the bottom left.. hence we have to translate it.
     
     //左上角与地图范围原点y 偏差的切片值
+    double sliceCountH = (planetBounds.origin.northing + planetBounds.size.height) / fMeterPerTile - 1;
     double y = ((planetBounds.origin.northing + planetBounds.size.height - newPoint.northing) / fMeterPerTile);
     //    NSLog(@"y %f",y);
     if (y<=-1) {
@@ -155,7 +158,8 @@
 //        NSLog(@"%e",x);
         tile.tile.x = (uint32_t)(x);
     }
-    
+    tile.tile.sliceCountH = sliceCountH;
+    tile.tile.sliceCountW = sliceCountW;
     
     tile.tile.zoom = zoom;
     tile.offset.x = (double)x - tile.tile.x;

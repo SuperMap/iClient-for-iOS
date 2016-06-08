@@ -139,7 +139,9 @@
     
     //need add save to local
     //UIImage* img = [UIImage imageWithData:newData];
-    [UIImageJPEGRepresentation(image, 0.66) writeToFile:self.cachePath atomically:1];
+    NSData* imageData = UIImageJPEGRepresentation(image, 0.66);
+    if(imageData.length>2000)
+        [imageData writeToFile:self.cachePath atomically:1];
     [self updateImageUsingImage:image];
 
        NSDictionary *d = [NSDictionary dictionaryWithObject:data forKey:@"data"];

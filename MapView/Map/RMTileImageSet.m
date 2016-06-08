@@ -219,17 +219,19 @@
 			for (t.y = roundedRect.origin.tile.y; t.y < roundedRect.origin.tile.y + tileRegionHeight; t.y++)
 			{
 				RMTile normalisedTile = [proj normaliseTile: t];
-
+                normalisedTile.sliceCountH = rect.origin.tile.sliceCountH;
+                normalisedTile.sliceCountW = rect.origin.tile.sliceCountW;
+              //  NSLog(@"tileRegionHeight=%i, normalisedTile.y = %i",tileRegionHeight,normalisedTile.y);
+               // normalisedTile.y = (tileRegionHeight+1)-normalisedTile.y;
 				if (RMTileIsDummy(normalisedTile))
 					continue;
 //                NSLog(@"%u,%u",t.x,t.y);
 				// this regrouping of terms is better for calculation precision (issue 128)
 				screenLocation.origin.x = bounds.origin.x + (t.x - rect.origin.tile.x - rect.origin.offset.x) * pixelsPerTile;		
 				screenLocation.origin.y = bounds.origin.y + (t.y - rect.origin.tile.y - rect.origin.offset.y) * pixelsPerTile;
-
 				[self addTile:normalisedTile At:screenLocation];
                 
-//                NSLog(@"%f++++++%f++++++%f++++++%f",screenLocation.origin.x,screenLocation.origin.y,screenLocation.size.width,screenLocation.size.height);
+             //   NSLog(@"%f++++++%f++++++%f++++++%f",screenLocation.origin.x,screenLocation.origin.y,screenLocation.size.width,screenLocation.size.height);
 			}
 		}
         [tileSource setIsUseCache:YES];

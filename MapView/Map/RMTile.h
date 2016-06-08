@@ -39,7 +39,7 @@
  This is a 3-field number. If you want the image associated with an RMTile, you're looking for RMTileImage
  */
 typedef struct{
-	uint32_t x, y;
+	int x, y,sliceCountH,sliceCountW;
 	short zoom;
 } RMTile;
 

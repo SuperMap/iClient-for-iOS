@@ -63,9 +63,9 @@
     {
         if (!isNull) {
             dResolutions = maxResolution/pow(base,i);
-            strScale = [self.m_Info getScaleFromResolutionDpi:dResolutions];
+          //  strScale = [self.m_Info getScaleFromResolutionDpi:dResolutions];
             [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
-            [m_dScales addObject:strScale];
+          //  [m_dScales addObject:strScale];
         }
     }
   
@@ -124,6 +124,7 @@
     [self setMinZoom:0];
     return  self;
 }
+
 
 
 -(void)getResolutionsFromScales:(NSMutableArray *) newScales
@@ -223,9 +224,9 @@
 -(NSString*) tileFile: (RMTile) tile
 {
     if(self.m_Info.cachePath!=nil)
-        [ToolKit createFileDirectories:[NSString stringWithFormat:@"%@/%i",self.m_Info.cachePath,tile.zoom]];
+        [ToolKit createFileDirectories:[NSString stringWithFormat:@"%@/SMMap/%i",self.m_Info.cachePath,tile.zoom]];
     
-    return [NSString stringWithFormat:@"%@/%i/%i_%i.png",self.m_Info.cachePath,tile.zoom,tile.x,tile.y];
+    return [NSString stringWithFormat:@"%@/SMMap/%i/%i_%i.png",self.m_Info.cachePath,tile.zoom,tile.x,tile.y];
 }
 
 -(NSString*) tilePath
@@ -303,13 +304,13 @@
     NSString* strUrl = nil;
     if (self.m_Info.tempLayerName) {
         // 使用临时图层
-        strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@&layersID=%@",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale,self.m_Info.tempLayerName];
+        strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@&layersID=%@&transparent=true",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale,self.m_Info.tempLayerName];
     }else{
-        strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale];
+        strUrl = [NSString stringWithFormat:@"%@/tileImage.png?%@&width=256&height=256&x=%d&y=%d&scale=%@&transparent=true",self.m_Info.smurl,self.m_Info.strParams,tile.x, tile.y,strScale];
     }
     
     
-  //  NSLog(@"%@",strUrl);
+//    NSLog(@"%@",strUrl);
 //    NSLog(@"%d",tile.zoom);
     return strUrl;
 }

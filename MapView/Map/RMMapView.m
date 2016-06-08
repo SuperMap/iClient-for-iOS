@@ -861,7 +861,7 @@
         double dCostTime = nowtime-preTime;
         
         if(dCostTime<200000 && dSumCostTime < 200000*5){
-            //NSLog(@"too quick!!!");
+           // NSLog(@"too quick!!!");
             preTime = nowtime;
             return;
         }
@@ -884,8 +884,8 @@
         }else{
             [self.contents setZoom2:oldZoom];
         }
-		zoom = (zoom > self.contents.maxZoom) ? self.contents.maxZoom : zoom;
-		zoom = (zoom < self.contents.minZoom) ? self.contents.minZoom : zoom;
+        zoom = (zoom > self.contents.maxZoom) ? self.contents.maxZoom : zoom;
+        zoom = (zoom < self.contents.minZoom) ? self.contents.minZoom : zoom;
         oldZoom = zoom;
     }
 }

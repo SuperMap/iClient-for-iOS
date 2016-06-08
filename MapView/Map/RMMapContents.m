@@ -120,7 +120,7 @@ BOOL delegateHasRegionUpdate;
     if(deviceScale==3.0)
         deviceScale=1.0;
     else
-        deviceScale=0.8;
+        deviceScale=1.0;
     return [self initWithView:view tilesource:newTilesource screenScale:deviceScale];
 }
 
@@ -258,9 +258,6 @@ BOOL delegateHasRegionUpdate;
     
     
     RMLog(@"Map contents initialised. view: %@ tileSource %@", newView, newTilesource);
-    
-    
-    
     
 }
 
@@ -445,6 +442,9 @@ BOOL delegateHasRegionUpdate;
         }
     }
     if (tileLoaders&&[tileLoaders count]>0) {
+//        for(int i=0;i<1;i++){
+//            [tileLoaders[i] moveBy:delta];
+//        }
         for(RMTileLoader* tileLoader in tileLoaders)
         {
             [tileLoader moveBy:delta];
@@ -978,6 +978,7 @@ BOOL delegateHasRegionUpdate;
             [imagesOnScreen zoomByFactor:zoomFactor near:pivot];
         }
     }
+    //return;
     if (tileLoaders&&[tileLoaders count]>0) {
         for(RMTileLoader* tileLoader in tileLoaders)
         {
@@ -1047,7 +1048,10 @@ BOOL delegateHasRegionUpdate;
 
 static NSUInteger oldZoom;
 -(void) setZoom2: (NSUInteger) zoom{
-  
+    
+   
+   
+    
     if(oldZoom==zoom)
         return;
     zoom = (zoom > maxZoom) ? maxZoom : zoom;
@@ -1513,7 +1517,8 @@ static BOOL _performExpensiveOperations = YES;
     RMCachedTileSource *newCachedTileSource = [RMCachedTileSource cachedTileSourceWithSource:newTileSource];
     id<RMTileSource> tileSource = [newCachedTileSource tileSource];
     
-    NSAssert(([tileSource minZoom] - minZoom) <= 1.0, @"Graphics & memory are overly taxed if [contents minZoom] is more than 1.5 smaller than [tileSource minZoom]");
+    float minZoomTmp= [tileSource minZoom];
+    NSAssert((minZoomTmp - minZoom) <= 1.0, @"Graphics & memory are overly taxed if [contents minZoom] is more than 1.5 smaller than [tileSource minZoom]");
     
     
     ////加入并调整tileSourcesContainer
