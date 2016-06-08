@@ -1,8 +1,4 @@
 
-*.pbxproj
-
-samples/simplemap/simplemap.xcodeproj/project.pbxproj
-
 *.xcuserstate
 
 samples/simplemap/simplemap.xcodeproj/project.xcworkspace/xcuserdata/iclient.xcuserdatad/UserInterfaceState.xcuserstate

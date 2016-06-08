@@ -120,7 +120,7 @@ BOOL delegateHasRegionUpdate;
     if(deviceScale==3.0)
         deviceScale=1.0;
     else
-        deviceScale=1.0;
+        deviceScale=0.85;
     return [self initWithView:view tilesource:newTilesource screenScale:deviceScale];
 }
 
