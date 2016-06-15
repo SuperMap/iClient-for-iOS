@@ -44,31 +44,29 @@
     self.m_Info = info;
     
     int resolutionSize = 18;
-    BOOL isNull = self.m_Info.scales;
-    if (isNull) {
+    BOOL isNull = self.m_Info.scales.count>0?NO:YES;
+    if (!isNull) {
         [self getResolutionsFromScales:self.m_Info.scales];
     }else{
         m_dResolutions = [[NSMutableArray alloc] initWithCapacity:resolutionSize];
         m_dScales = [[NSMutableArray alloc] initWithCapacity:resolutionSize];
+        double wRes = self.m_Info.dWidth / width;
+        double hRes = self.m_Info.dHeight / height;
+        double maxResolution = wRes>hRes?wRes:hRes;
+        //maxResolution = 0.703125;
+        double base = 2.0;
+        NSString*  strScale;
+        double dResolutions;
+        for(int i=0;i<resolutionSize;++i){
+            dResolutions = maxResolution/pow(base,i);
+            [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
+            strScale = [self.m_Info getScaleFromResolutionDpi:dResolutions];
+            [m_dScales addObject:strScale];
+        }
+
     }
     
-    double wRes = self.m_Info.dWidth / width;
-    double hRes = self.m_Info.dHeight / height;
-    double maxResolution = wRes>hRes?wRes:hRes;
-    //maxResolution = 0.703125;
-    double base = 2.0;
-    NSString*  strScale;
-    double dResolutions;
-    for(int i=0;i<resolutionSize;++i)
-    {
-        if (!isNull) {
-            dResolutions = maxResolution/pow(base,i);
-          //  strScale = [self.m_Info getScaleFromResolutionDpi:dResolutions];
-            [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
-          //  [m_dScales addObject:strScale];
-        }
-    }
-  
+    
     
     //NSLog(@"%@",m_dResolutions);
     smProjection=[[RMProjection alloc] initForSMProjection];
