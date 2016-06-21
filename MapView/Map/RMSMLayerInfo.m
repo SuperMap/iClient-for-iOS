@@ -219,8 +219,8 @@
     //用户自定义地图的Options时，若未指定该参数的值，则系统默认为6378137米，即WGS84参考系的椭球体长半轴。
     //nDatumAxis = nDatumAxis || 6378137;
     if ([unit isEqualToString:@"degree"] || [unit isEqualToString:@"degrees"] || [unit isEqualToString:@"dd"]) {
-        double num1 = viewBoundsWidth / (float)nWidth;
-        double num2 = viewBoundsHeight / (float)nHeight;
+        double num1 = viewBoundsWidth / (double)nWidth;
+        double num2 = viewBoundsHeight / (double)nHeight;
         double resolution = num1 > num2 ? num1 : num2;
        // NSLog(@"resolution:::%f",resolution);
         //10000是0.1毫米与1米的转换,用以提高精度
@@ -233,7 +233,7 @@
         double nDpi = dTemp / dScale /ratio;
         return nDpi;
     } else {
-        double resolution = viewBoundsWidth / (float)nWidth;
+        double resolution = viewBoundsWidth / (double)nWidth;
         double nDpi = 0.0254 / resolution / dScale;
         return nDpi;
     }
@@ -280,12 +280,12 @@
             //NSLog(@"unit degree");
             
             resolution = 0.0254 / dpi / dScale / ((M_PI * 2 * datumAxis) / 360);
-            NSString* strResolution = [NSString stringWithFormat:@"%.14f",resolution];
+            NSString* strResolution = [NSString stringWithFormat:@"%.20f",resolution];
             //NSLog(@"%@",strResolution);
             return strResolution;
         } else {
             resolution = 0.0254 / dpi / dScale ;
-            NSString* strResolution = [NSString stringWithFormat:@"%.14f",resolution];
+            NSString* strResolution = [NSString stringWithFormat:@"%.20f",resolution];
             return strResolution;
         }
     }

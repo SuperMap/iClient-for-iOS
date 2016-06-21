@@ -142,7 +142,7 @@
         dScale = [scalesAscending objectAtIndex:(int)i];
         strResoltion = [self.m_Info getResolutionFromScaleDpi:[dScale doubleValue]];
         [m_dResolutions addObject:strResoltion];
-        strScale =[NSString stringWithFormat:@"%.14f",[dScale doubleValue]];
+        strScale =[NSString stringWithFormat:@"%.20f",[dScale doubleValue]];
         [m_dScales addObject:strScale];
     }
     
