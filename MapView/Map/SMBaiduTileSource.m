@@ -68,6 +68,8 @@
         [m_dResolutions addObject:[NSNumber numberWithDouble:dResolutions]];
 
     }
+	[m_dResolutions addObject:@(1.0)];
+	[m_dResolutions addObject:@(0.5)];
     /*
      this.crs.unit = "meter";
      this.crs.wkid = 3857;
