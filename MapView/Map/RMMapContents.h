@@ -209,15 +209,6 @@ enum {
  */
 - (id)initWithView: (UIView*) view;
 
-/**
- * Constructor: initWithView
- * 用于初始化RMMapContents
- *
- * Parameters:
- * view - {UIView}  mapView。
- * screenScale - {double} 设备的屏幕分辨率的属性值
- */
-- (id)initWithView: (UIView*) view screenScale:(double)theScreenScale;
 
 /**
  * Constructor: initWithView

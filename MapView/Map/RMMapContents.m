@@ -57,6 +57,13 @@
 - (void)animatedZoomStep:(NSTimer *)timer;
 @end
 
+@interface RMMapContents()
+{
+    BOOL m_bDatasource;
+    double m_dTheScreenScale;
+    UIView* m_view;
+}
+@end
 @implementation RMMapContents (Internal)
 BOOL delegateHasRegionUpdate;
 @end
@@ -80,54 +87,41 @@ BOOL delegateHasRegionUpdate;
 
 #pragma mark Initialisation
 
+
 - (id)initWithView: (UIView*) view
 {
     LogMethod();
-    CLLocationCoordinate2D here;
-    here.latitude = kDefaultInitialLatitude;
-    here.longitude = kDefaultInitialLongitude;
     
-    return [self initWithView:view
-                   tilesource:[[RMOpenStreetMapSource alloc] init]
-                 centerLatLon:here
-                    zoomLevel:kDefaultInitialZoomLevel
-                 maxZoomLevel:kDefaultMaximumZoomLevel
-                 minZoomLevel:kDefaultMinimumZoomLevel
-              backgroundImage:nil
-                  screenScale:0];
+    if(self=[super init]){
+        m_bDatasource = NO;
+        m_view = view;
+    }
+
+    return self;
 }
 
-- (id)initWithView: (UIView*) view screenScale:(double)theScreenScale {
-    LogMethod();
-    CLLocationCoordinate2D here;
-    here.latitude = kDefaultInitialLatitude;
-    here.longitude = kDefaultInitialLongitude;
-    
-    return [self initWithView:view
-                   tilesource:[[RMOpenStreetMapSource alloc] init]
-                 centerLatLon:here
-                    zoomLevel:kDefaultInitialZoomLevel
-                 maxZoomLevel:kDefaultMaximumZoomLevel
-                 minZoomLevel:kDefaultMinimumZoomLevel
-              backgroundImage:nil
-                  screenScale:theScreenScale];
-}
 
 - (id)initWithView: (UIView*) view
         tilesource:(id<RMTileSource>)newTilesource
 {
+    if(newTilesource){
+        m_bDatasource = YES;
+    }
     double deviceScale = [UIScreen mainScreen].scale;
     if(deviceScale==3.0)
-        deviceScale=1.0;
+        m_dTheScreenScale=1.0;
     else
-        deviceScale=0.85;
-    return [self initWithView:view tilesource:newTilesource screenScale:deviceScale];
+        m_dTheScreenScale=0.85;
+    return [self initWithView:view tilesource:newTilesource screenScale:m_dTheScreenScale];
 }
 
 -(id)initWithView:(UIView *)view tilesource:(id<RMTileSource>)newTilesource screenScale:(double)theScreenScale
 {
     LogMethod();
-    
+    if(newTilesource){
+        m_bDatasource = YES;
+    }
+    m_dTheScreenScale = theScreenScale;
     double maximumZoomLevel=[newTilesource numberZoomLevels];
     
     CLLocationCoordinate2D here;
@@ -154,9 +148,12 @@ BOOL delegateHasRegionUpdate;
        screenScale:(double)theScreenScale                  ///设备的屏幕分辨率的属性值
 {
     LogMethod();
-    if (!newTilesource || ![super init])
+    if(newTilesource){
+        m_bDatasource = YES;
+    }
+    if (!newTilesource || ![super init]){
         return nil;
-    
+    }
     NSAssert1([newView isKindOfClass:[RMMapView class]], @"view %@ must be a subclass of RMMapView", newView);
     [(RMMapView *)newView setContents:self];
     
@@ -822,8 +819,8 @@ BOOL delegateHasRegionUpdate;
     //	CGRect rect = [self screenBounds];
     //	RMLog(@"%f %f %f %f", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
     // [[newRenderer layer] setFrame:[self screenBounds]];
-    [superTileSouceLayer addSublayer:[newRenderer layer]];
-    
+   // [superTileSouceLayer addSublayer:[newRenderer layer]];
+    [superTileSouceLayer insertSublayer:[newRenderer layer] atIndex:index];
     [tileLoader setSuppressLoading:YES];
 }
 
@@ -1459,7 +1456,8 @@ static BOOL _performExpensiveOperations = YES;
         [tiledLayer removeFromSuperlayer];  tiledLayer = nil;
     }
     
-    [superTileSouceLayer removeFromSuperlayer];  superTileSouceLayer = nil;
+    [superTileSouceLayer removeFromSuperlayer];
+    superTileSouceLayer = nil;
     
     int count = layer.sublayers.count;
     for(int i=0;i<count;i++){
@@ -1501,6 +1499,12 @@ static BOOL _performExpensiveOperations = YES;
 
 - (void)addTileSource:(id<RMTileSource>)newTileSource atIndex:(NSUInteger)index
 {
+    
+    if(!m_bDatasource){
+        if(![self initWithView:m_view tilesource:newTileSource])
+            return;
+    }
+    
     if ( ! tileSourcesContainer)
     {
         // If we've reached this point, it's because our scroll view etc.

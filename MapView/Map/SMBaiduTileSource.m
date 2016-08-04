@@ -20,10 +20,16 @@
 
 -(NSString *) tileURL: (RMTile) tile
 {
-     //http://online1.map.bdimg.com/onlinelabel/?qt=tile&x=707&y=218&z=12&styles=pl&udt=20160519&scaler=1&p=0
-    url = @"http://online1.map.bdimg.com/onlinelabel/?qt=tile";
-    NSString* strUrl;
-    strUrl = [NSString stringWithFormat:@"%@&x=%d&y=%d&z=%d",url,tile.x-tile.sliceCountW,tile.sliceCountH - tile.y,(int)tile.zoom];
+ 
+     NSString* strUrl;
+    if(self.isUseSatelliteMap){
+        url = @"http://shangetu1.map.bdimg.com/it/u=";
+        strUrl = [NSString stringWithFormat:@"%@x=%d;y=%d;z=%d;v=009;type=sate&fm=46",url,tile.x-tile.sliceCountW,tile.sliceCountH - tile.y,(int)tile.zoom];
+    }else{
+        url = @"http://online1.map.bdimg.com/onlinelabel/?qt=tile";
+        strUrl = [NSString stringWithFormat:@"%@&x=%d&y=%d&z=%d",url,tile.x-tile.sliceCountW,tile.sliceCountH - tile.y,(int)tile.zoom];
+    }
+    
    // NSLog(@"%@",strUrl);
     return strUrl;
 }
@@ -46,6 +52,13 @@
     
     return image;
 }
+-(void)clearCache{
+    NSError* error;
+    BOOL res = [[NSFileManager defaultManager] removeItemAtPath:self.m_Info.cachePath error:&error];
+    if(!res){
+        NSLog(@"%@",error);
+    }
+}
 -(id) init
 {
     if (![super init])
@@ -56,7 +69,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkOperationsNotification:) name:RMResumeNetworkOperations object:nil];
     _isBaseLayer=NO;
     [self setIsUseCache:YES];
-    
+    self.isUseSatelliteMap = YES;
     ////
     m_dResolutions = [[NSMutableArray alloc] initWithCapacity:18];
 //    m_dScales = [[NSMutableArray alloc] initWithCapacity:18];
