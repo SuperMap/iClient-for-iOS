@@ -15,11 +15,15 @@
     
     _endStopIndex = [[dict objectForKey:@"endStopIndex"] integerValue];
     _endStopName = [dict objectForKey:@"endStopName"];
+    _endStopAliasName = [dict objectForKey:@"endStopAliasName"];
     _lineID = [[dict objectForKey:@"lineID"] integerValue];
     _lineName = [dict objectForKey:@"lineName"];
+    _lineAliasName = [dict objectForKey:@"lineAliasName"];
     _startStopIndex = [[dict objectForKey:@"startStopIndex"] integerValue];
     _startStopName = [dict objectForKey:@"startStopName"];
-
+    _startStopAliasName= [dict objectForKey:@"startStopAliasName"];
+    
+    
     return self;
 }
 -(NSMutableDictionary *)castToDict{

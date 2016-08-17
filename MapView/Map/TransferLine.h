@@ -26,6 +26,12 @@
  * {NSString} 下车站点名称。
  */
 @property(nonatomic,retain) NSString *endStopName;
+
+/**
+ * APIProperty: endStopName
+ * {NSString} 下车站点名称别名。
+ */
+@property(nonatomic,retain) NSString *endStopAliasName;
 /**
  * APIProperty: lineID
  * {long} 乘车线路id。
@@ -36,6 +42,12 @@
  * {NSString} 乘车线路名称。
  */
 @property(nonatomic,retain) NSString *lineName;
+
+/**
+ * APIProperty: lineName
+ * {NSString} 乘车线路名称别名。
+ */
+@property(nonatomic,retain) NSString *lineAliasName;
 /**
  * APIProperty: startStopIndex
  * {NSInteger} 上车站点在本公交线路中的索引。
@@ -46,6 +58,12 @@
  * {NSString} 上车站点名称。
  */
 @property(nonatomic,retain) NSString *startStopName;
+
+/**
+ * APIProperty: lineName
+ * {NSString} 乘车线路名称别名。
+ */
+@property(nonatomic,retain) NSString *startStopAliasName;
 /**
  * Constructor: TransferLine
  *  换乘线路信息类。
