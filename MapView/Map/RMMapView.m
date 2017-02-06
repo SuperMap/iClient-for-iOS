@@ -49,6 +49,7 @@
 {
     NSUInteger oldZoom;
     CGFloat factor;
+    CGPoint _firstTouchPoint;
 }
 @end
 @interface RMMapView (PrivateMethods)
@@ -581,7 +582,7 @@
    
     _pressTime = touch.timestamp;
     
-    
+    _firstTouchPoint = [[touches anyObject] locationInView:self];
 	//Check if the touch hit a RMMarker subclass and if so, forward the touch event on
     //判断是否点击了一个marker，如果是，则响应对应的事件
 	//so it can be handled there
@@ -751,16 +752,21 @@
     [self webTapSkip];
     
 	if (_delegateHasAfterMapTouch) [delegate afterMapTouch: self];
-    if (_delegateHasLongTapOnMap && _pressTime != 0.0&&
-        (touch.timestamp - _pressTime) > 0.5) {
+    if (_delegateHasLongTapOnMap && _pressTime != 0.0 && (touch.timestamp - _pressTime) > 0.5) {
         [delegate longTapOnMap:self At:[touch locationInView:self]];
+    }else{
+        
     }
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *touch = [[touches allObjects] objectAtIndex:0];
-    _pressTime = 0.0;
+    CGPoint tmpPoint = [[touches anyObject] locationInView:self];
+    
+    double dTel = sqrt((_firstTouchPoint.x-tmpPoint.x)*(_firstTouchPoint.x-tmpPoint.x)+(_firstTouchPoint.y-tmpPoint.y)*(_firstTouchPoint.y-tmpPoint.y));
+    if(dTel > 5.0)
+        _pressTime = 0.0;
 	//Check if the touch hit a RMMarker subclass and if so, forward the touch event on
 	//so it can be handled there
 	id furthestLayerDown = [self.contents.overlay hitTest:[touch locationInView:self]];
