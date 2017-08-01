@@ -56,6 +56,11 @@
     if ([param travelTime]) {
         [endUrl appendFormat:@"&travelTime=%@",[param travelTime]];
     }
+	
+	endUrl=[endUrl stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+    endUrl=[endUrl stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    endUrl=[endUrl stringByReplacingOccurrencesOfString:@" " withString:@""];
+
     //第一步，创建url
     NSURL *url = [NSURL URLWithString:[endUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     //第二步，创建请求
