@@ -182,6 +182,7 @@
     ////修改传进来的rect宽高为地图显示的切片数
 	int tileRegionWidth = (int)roundedRect.size.width;
 	int tileRegionHeight = (int)roundedRect.size.height;
+    
 	id<RMMercatorToTileProjection> proj = [tileSource mercatorToTileProjection];
 	short minimumZoom = [tileSource minZoom], alternateMinimum;
 
@@ -196,6 +197,9 @@
 	newLoadedBounds.size.width = tileRegionWidth * pixelsPerTile;
 	newLoadedBounds.size.height = tileRegionHeight * pixelsPerTile;
 
+    if(tileRegionWidth<0||tileRegionHeight<0||tileRegionWidth>10||tileRegionHeight>10)
+        return newLoadedBounds;
+    
 	alternateMinimum = zoom - tileDepth - 1;
 	if (minimumZoom < alternateMinimum)
 	{
