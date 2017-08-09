@@ -127,7 +127,7 @@ static NSOperationQueue *_queue = nil;
 
 - (void)startLoading:(NSTimer *)timer
 {
-	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:5.0];
 
     connectionOp = [[RMURLConnectionOperation alloc] initWithRequest:request delegate:self];
     
@@ -188,7 +188,7 @@ static NSOperationQueue *_queue = nil;
 	else {  // Other Error
         //RMLog(@"didReceiveResponse %@ %d", _connection, statusCode);
 
-		BOOL retry = FALSE;
+		BOOL retry = true;
 		
 		switch(statusCode) {
                 /// \bug magic number
