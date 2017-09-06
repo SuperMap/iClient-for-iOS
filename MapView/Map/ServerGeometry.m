@@ -65,7 +65,23 @@
     //NSString* strParts = [[NSString alloc] initWithString:[JSON objectForKey:@"parts"]];
     return  self;
 }
-
+-(CGPoint)getCentroid{
+    NSArray* arr = self.points;
+    int n=0;
+    double dx=0,dy=0;
+    for(id i in arr){
+       CGPoint point = ((NSValue*)i).CGPointValue;
+        dx += point.x;
+        dy += point.y;
+        n++;
+        NSLog(@"%@",i);
+    }
+    
+    dx = dx/n;
+    dy = dy/n;
+    
+    return CGPointMake(dx,dy);
+}
 - (id) fromRMPath:(RMPath*)path
 {
     int nPointsCount = [[NSNumber numberWithUnsignedLong:[path.points count]] intValue];

@@ -75,4 +75,6 @@
  */
 @property (copy,readwrite) NSString* type;
 
+//获取中心点
+-(CGPoint)getCentroid;
 @end
