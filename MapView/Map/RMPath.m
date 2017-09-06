@@ -126,6 +126,17 @@
 	return nil;
 }
 
+-(RMProjectedPoint)getCentroid{
+    
+    int i = 0;
+    double dy=0,dx=0;
+    for(NSValue* value in points){
+        i++;
+        dx += value.CGPointValue.x;
+        dy += value.CGPointValue.y;
+    }
+    return RMMakeProjectedPoint(dx/i,dy/i);
+}
 - (void) moveToXY: (RMProjectedPoint) point {
     nTempParts++;
     CGPoint pnt = {point.easting,point.northing,};

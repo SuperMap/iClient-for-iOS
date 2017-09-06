@@ -141,7 +141,8 @@
  */
 - (void) closePath;
 
-
+//获取中心
+-(RMProjectedPoint)getCentroid;
 /**
  * APIProperty: lineCap
  * {<CGLineCap>} 线的端点显示类型
