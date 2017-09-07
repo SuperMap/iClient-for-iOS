@@ -80,7 +80,28 @@
     dx = dx/n;
     dy = dy/n;
     
-    return CGPointMake(dx,dy);
+    double dLen = 0;
+    CGPoint g ;
+    for(id i in arr){
+        CGPoint point = ((NSValue*)i).CGPointValue;
+        double dxTmp = point.x;
+        double dyTmp = point.y;
+        double dLenTmp = sqrt( (dx-dxTmp)*(dx-dxTmp)+(dy-dyTmp)*(dy-dyTmp) );
+        
+        if(dLen==0){
+            dLen = dLenTmp;
+            g = point;
+        }
+        
+        if(dLen>dLenTmp){
+            dLen = dLenTmp;
+            g = point;
+        }
+        
+       // NSLog(@"%@",i);
+    }
+    
+    return g;
 }
 - (id) fromRMPath:(RMPath*)path
 {
