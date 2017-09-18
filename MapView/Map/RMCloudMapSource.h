@@ -22,6 +22,9 @@
 //    NSMutableArray* m_dScales;
 //    BOOL _isBaseLayer;
 }
+
+@property (nonatomic)BOOL isHidden;
+
 /**
  * Constructor: init
  * RMCloudMapSource用于在iOS上加载云地图服务，方便的将iServer发布的地图服务显示在地图框架中

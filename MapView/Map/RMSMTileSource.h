@@ -42,7 +42,7 @@
 //用于用户和第三方地图叠加，自定义纠偏
 @property (nonatomic,assign)CGSize redressValue;
 @property(nonatomic,strong)NSString* cachePath;
-
+@property (nonatomic)BOOL isHidden;
 -(id) init;
 /**
  * Constructor: initWithInfo

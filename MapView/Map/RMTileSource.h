@@ -50,7 +50,7 @@
 @property (nonatomic, assign) NSMutableArray* m_dScales;
 @property (nonatomic) BOOL isUseCache;
 @property (nonatomic,assign)CGSize redressValue;
-
+@property (nonatomic)BOOL isHidden;
 -(NSString *) tileURL: (RMTile) tile;
 -(NSString *) tileFile: (RMTile) tile;
 -(NSString *) tilePath;

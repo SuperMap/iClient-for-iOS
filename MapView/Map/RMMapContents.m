@@ -1621,6 +1621,7 @@ static BOOL _performExpensiveOperations = YES;
      {
          if (tileSource == currentTileSource)
          {
+             currentTileSource.isHidden = isHidden;
              [self setHidden:isHidden forTileSourceAtIndex:index];
              *stop = YES;
          }
@@ -1634,7 +1635,9 @@ static BOOL _performExpensiveOperations = YES;
 {
     if (index >= [superTileSouceLayer.sublayers count])
         return;
-    
+    NSArray *tileSources = [tileSourcesContainer tileSources];
+    id <RMTileSource> currentTileSource = tileSources[index];
+    currentTileSource.isHidden = isHidden;
     ((CALayer *)[superTileSouceLayer.sublayers objectAtIndex:index]).hidden = isHidden;
     
 }

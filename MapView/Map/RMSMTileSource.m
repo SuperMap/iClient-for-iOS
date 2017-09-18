@@ -36,6 +36,8 @@
 
 -(id) initWithInfo:(RMSMLayerInfo*) info
 {
+    if(info==nil)
+        return nil;
     [self init];
     
     CGRect rect_screen = [[UIScreen mainScreen] bounds];
@@ -235,6 +237,9 @@
 -(RMTileImage *)tileImage:(RMTile)tile
 {
     RMTileImage *image;
+    
+    if(self.isHidden)
+        return nil;
     
     tile = [tileProjection normaliseTile:tile];
     

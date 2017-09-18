@@ -36,7 +36,8 @@
 -(RMTileImage *)tileImage:(RMTile)tile
 {
     RMTileImage *image;
-    
+    if(self.isHidden)
+        return nil;
     tile = [tileProjection normaliseTile:tile];
     //NSLog(@"x :%d y:%d,z:%d",tile.x,tile.y,tile.zoom+1);
     NSString *file = [self tileFile:tile];
